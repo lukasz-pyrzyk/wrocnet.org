@@ -1,0 +1,18 @@
+season: "2026/2027"
+venue:
+  name: "Pub Wędrówki"
+  address: "ul. Podwale 37/38, 50-040 Wrocław"
+  maps_url: "https://www.google.com/maps/place/Kultowy+Klub+W%C4%99dr%C3%B3wki+-+Wroc%C5%82awski+Klub+Eventowy/@51.1041779,17.0275416,17z/data=!3m1!4b1!4m6!3m5!1s0x470fc2723345522f:0x6370851a1853229c!8m2!3d51.1041779!4d17.0301165!16s%2Fg%2F11cn8pv6vt?entry=ttu&g_ep=EgoyMDI2MDYxMy4wIKXMDSoASAFQAw%3D%3D"
+
+dates:
+  - "2026-06-16"
+  - "2026-09-22"
+  - "2026-10-20"
+  - "2026-11-17"
+  - "2026-12-15"
+  - "2027-01-19"
+  - "2027-02-16"
+  - "2027-03-16"
+  - "2027-04-20"
+  - "2027-05-18"
+  - "2027-06-15"

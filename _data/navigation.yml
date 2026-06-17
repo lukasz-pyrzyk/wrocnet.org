@@ -1,0 +1,11 @@
+main:
+  - title: "Strona główna"
+    url: /
+  - title: "Spotkania"
+    url: /year-archive/
+  - title: "Organizatorzy"
+    url: /organizatorzy/
+  - title: "O grupie"
+    url: /about/
+  - title: "Meetup"
+    url: https://www.meetup.com/wrocnet/

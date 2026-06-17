@@ -1,0 +1,125 @@
+remote_theme: "mmistakes/minimal-mistakes@4.28.0"
+minimal_mistakes_skin: "wrocnet"
+
+locale: "pl"
+title: "Wroc.NET"
+subtitle: "Wrocławska Grupa .NET"
+name: "Wroc.NET"
+description: >-
+  Wrocławska Grupa .NET – miesięczne spotkania pasjonatów technologii .NET
+  z Wrocławia i okolic. Otwarte, bezpłatne, z prelekcjami i warsztatami.
+url: "https://wrocnet.github.io"
+baseurl: ""
+repository: "wrocnet/wrocnet.github.io"
+logo: "/assets/images/logo.png"
+
+twitter:
+  username: "wrocnet"
+
+facebook:
+  username: "WrocNET"
+
+social:
+  type: Organization
+  name: "Wrocław .NET User Group"
+  links:
+    - "https://twitter.com/wrocnet"
+    - "https://www.facebook.com/WrocNET"
+    - "https://www.linkedin.com/company/wroclaw-net-user-group"
+    - "https://www.meetup.com/wrocnet/"
+
+search: true
+
+author:
+  name: "Łukasz Pyrzyk"
+  avatar: "/assets/images/bio-photo.jpg"
+  bio: "Organizator Wrocławskiej Grupy .NET"
+  location: "Wrocław, Polska"
+  links:
+    - label: "Meetup"
+      icon: "fas fa-fw fa-users"
+      url: "https://www.meetup.com/wrocnet/"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/wrocnet"
+    - label: "Twitter/X"
+      icon: "fab fa-fw fa-square-x-twitter"
+      url: "https://twitter.com/wrocnet"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/company/wroclaw-net-user-group"
+    - label: "Facebook"
+      icon: "fab fa-fw fa-facebook"
+      url: "https://www.facebook.com/WrocNET"
+
+footer:
+  since: "2012"
+  links:
+    - label: "Meetup"
+      icon: "fas fa-fw fa-users"
+      url: "https://www.meetup.com/wrocnet/"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/wrocnet"
+    - label: "Twitter/X"
+      icon: "fab fa-fw fa-square-x-twitter"
+      url: "https://twitter.com/wrocnet"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/company/wroclaw-net-user-group"
+    - label: "Facebook"
+      icon: "fab fa-fw fa-facebook"
+      url: "https://www.facebook.com/WrocNET"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+encoding: utf-8
+timezone: Europe/Warsaw
+
+permalink: /:year/:month/:day/:title/
+
+paginate: 10
+paginate_path: /page:num/
+
+include:
+  - _pages
+
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  - jekyll-include-cache
+  - jekyll-remote-theme
+
+category_archive:
+  type: liquid
+  path: /categories/
+tag_archive:
+  type: liquid
+  path: /tags/
+
+compress_html:
+  clippings: all
+  ignore:
+    envs: development
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      show_date: true
+      read_time: true
+      share: true
+      related: true
+      categories: spotkania
+  - scope:
+      path: "_pages"
+      type: pages
+    values:
+      layout: single
+      author_profile: false

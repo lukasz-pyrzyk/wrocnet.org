@@ -1,0 +1,6 @@
+# Byli organizatorzy Wrocławskiej Grupy .NET
+# Każdy wpis: name, photo, bio (opcjonalne), linkedin (opcjonalne)
+- name: "Mirosław Pragłowski"
+  photo: "/assets/images/organizers/miroslaw-praglowski.jpg"
+  bio: ""
+  linkedin: "https://www.linkedin.com/in/mpraglowski/"

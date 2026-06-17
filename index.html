@@ -1,0 +1,126 @@
+---
+layout: splash
+title: "Wroc.NET - Wrocławska Grupa .NET"
+header:
+  title: "Wroc.NET"
+  overlay_color: "#641e78"
+  overlay_filter: 0.5
+  actions:
+    - label: "Dołącz do nas na Meetup"
+      url: "https://www.meetup.com/wrocnet/"
+    - label: "Zobacz spotkania"
+      url: "/categories/spotkania/"
+excerpt: "Wrocławska społeczność programistów .NET. Spotykamy się od 2012 roku, żeby dzielić się wiedzą i doświadczeniami z ekosystemu Microsoft."
+---
+
+{% assign months_pl = "stycznia,lutego,marca,kwietnia,maja,czerwca,lipca,sierpnia,września,października,listopada,grudnia" | split: "," %}
+{% assign today_ts = 'now' | date: '%s' | plus: 0 %}
+
+<div class="home-grid">
+  <div class="feature-card">
+    <h2>Regularne spotkania</h2>
+    <p>Organizujemy spotkania kilka razy w roku z prelekcjami o .NET, Azure, architekturze i nie tylko.</p>
+    <a href="/categories/spotkania/" class="btn btn--primary">Historia spotkań</a>
+  </div>
+
+  <div class="feature-card">
+    <h2>Dołącz do nas</h2>
+    <p>Zapisz się na Meetup, żeby być na bieżąco z kolejnymi wydarzeniami.</p>
+    <a href="https://www.meetup.com/wrocnet/" class="btn btn--primary" target="_blank" rel="noopener noreferrer">Meetup.com</a>
+  </div>
+
+  <div class="feature-card feature-card--schedule">
+    <h2>Sezon {{ site.data.schedule.season }}</h2>
+    <p class="schedule-venue">
+      <i class="fas fa-map-marker-alt"></i>
+      <a href="{{ site.data.schedule.venue.maps_url }}" target="_blank" rel="noopener noreferrer">
+        {{ site.data.schedule.venue.name }}, {{ site.data.schedule.venue.address }}
+      </a>
+    </p>
+    <ul class="schedule-list">
+      {% for date_str in site.data.schedule.dates %}
+        {% assign meeting_ts = date_str | date: '%s' | plus: 0 %}
+        {% if meeting_ts >= today_ts %}
+          {% assign m_idx = date_str | date: "%-m" | minus: 1 %}
+          {% assign day = date_str | date: "%-d" %}
+          {% assign year = date_str | date: "%Y" %}
+          <li class="schedule-item schedule-item--upcoming">
+            <span class="schedule-date">{{ day }} {{ months_pl[m_idx] }} {{ year }}</span>
+            <a href="https://www.meetup.com/wrocnet/events/" target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--x-small">Zapisz się</a>
+          </li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </div>
+</div>
+
+<style>
+.home-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr) 1.2fr;
+  gap: 1.5rem;
+  margin: 2.5rem 0;
+  align-items: start;
+}
+@media (max-width: 720px) {
+  .home-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 560px) {
+  .home-grid { grid-template-columns: 1fr; }
+}
+.feature-card {
+  padding: 1.5rem;
+  border: 1px solid #e0d5e8;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(100,30,120,0.07);
+}
+.feature-card h2 {
+  color: #641e78;
+  font-size: 1.1rem;
+  margin-top: 0;
+  border-bottom: 2px solid #641e78;
+  padding-bottom: 0.4rem;
+  margin-bottom: 0.75rem;
+}
+.feature-card p { font-size: 0.9rem; color: #444; }
+.schedule-venue {
+  font-size: 0.78rem;
+  color: #777;
+  margin-bottom: 0.75rem;
+}
+.schedule-venue a { color: #641e78; }
+.schedule-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.schedule-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.35rem 0.5rem;
+  border-radius: 4px;
+  margin-bottom: 0.2rem;
+  font-size: 0.8rem;
+}
+.schedule-item--upcoming {
+  background: #f7f0fb;
+  font-weight: 600;
+  color: #1e1428;
+}
+.schedule-item--upcoming:first-of-type {
+  background: #641e78;
+  color: #fff;
+}
+.schedule-item--upcoming:first-of-type .schedule-date { color: #fff; }
+.schedule-item--past {
+  color: #bbb;
+  text-decoration: line-through;
+}
+.schedule-date { flex: 1; }
+.btn--x-small {
+  padding: 0.15em 0.55em;
+  font-size: 0.7rem;
+  white-space: nowrap;
+}
+</style>
