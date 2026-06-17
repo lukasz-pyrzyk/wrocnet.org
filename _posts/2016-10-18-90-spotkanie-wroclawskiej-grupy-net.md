@@ -1,0 +1,12 @@
+---
+layout: single
+title: '90\. spotkanie - GraphQL, Code Crime Scene'
+---
+
+#### GraphQL - następca REST API? - [Bartosz Sypytkowski](https://twitter.com/horusiath)
+* Prezentacja: [reveal.js](/assets/graphql/index.html)
+* Wideo: {% include video id="z92i1vgQxRI" provider="youtube" %}
+
+#### Code Crime Scene - [Paweł Klimczyk](https://twitter.com/pwlklm)
+* Prezentacja: [pptx](/assets/CodeCrimeScene.pptx)
+* Wideo: {% include video id="IeGDyr5MoK8" provider="youtube" %}

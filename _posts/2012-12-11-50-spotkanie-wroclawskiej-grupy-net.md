@@ -1,0 +1,12 @@
+---
+layout: single
+title: '50\. spotkanie - Continous Delivery; Continuous Deployment'
+---
+
+#### Continous delivery story with FIFA - [Mirosław Jedynak]()
+* Prezentacja: [Continous Delivery]({{BASE_PATH}}/assets/2012.12.11.Wroc.Net%20-%20Continous%20Delivery.pdf)
+* Wideo: {% include video id="D0k1vdqeMlo" provider="youtube" %}
+
+#### Deployment automation & Continous deployment - Szymon Pobiega
+* Prezentacja: [Continous deployment]({{BASE_PATH}}/assets/continuousdelivery-novideo-121210225256-phpapp01.pptx)
+* Wideo: {% include video id="borthuiofW8" provider="youtube" %}
