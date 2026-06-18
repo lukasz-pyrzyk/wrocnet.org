@@ -1,6 +1,6 @@
 ---
 title: "Spotkania"
 layout: category
-permalink: /categories/spotkania/
+permalink: /kategorie/spotkania/
 taxonomy: spotkania
 ---

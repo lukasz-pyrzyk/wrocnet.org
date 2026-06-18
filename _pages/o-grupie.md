@@ -1,6 +1,6 @@
 ---
 title: "O Grupie"
-permalink: /about/
+permalink: /o-grupie/
 ---
 
 ## Wrocławska Grupa .NET

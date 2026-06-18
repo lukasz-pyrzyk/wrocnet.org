@@ -1,5 +1,5 @@
 ---
 title: "Spotkania"
 layout: posts
-permalink: /year-archive/
+permalink: /spotkania/
 ---

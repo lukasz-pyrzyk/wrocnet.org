@@ -2,12 +2,12 @@ main:
   - title: "Strona główna"
     url: /
   - title: "Spotkania"
-    url: /year-archive/
+    url: /spotkania/
   - title: "Organizatorzy"
     url: /organizatorzy/
   - title: "Zostań prelegentem"
     url: /zostan-prelegentem/
   - title: "O grupie"
-    url: /about/
+    url: /o-grupie/
   - title: "Mentoring"
     url: /mentorzy/

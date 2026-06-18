@@ -95,10 +95,10 @@ plugins:
 
 category_archive:
   type: liquid
-  path: /categories/
+  path: /kategorie/
 tag_archive:
   type: liquid
-  path: /tags/
+  path: /tagi/
 
 compress_html:
   clippings: all
