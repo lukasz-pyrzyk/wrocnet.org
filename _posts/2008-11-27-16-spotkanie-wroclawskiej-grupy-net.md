@@ -1,6 +1,6 @@
 ---
 layout: single
-title: '16. spotkanie Wrocławskiej Grupy .NET (+ IV spotkanie PLSSUG Wrocław)'
+title: '16\. spotkanie Wrocławskiej Grupy .NET (+ IV spotkanie PLSSUG Wrocław)'
 categories: spotkania
 date: 2008-11-27
 ---

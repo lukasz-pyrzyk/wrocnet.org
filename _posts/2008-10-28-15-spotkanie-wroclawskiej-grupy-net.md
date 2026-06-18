@@ -1,6 +1,6 @@
 ---
 layout: single
-title: '15. spotkanie Wrocławskiej Grupy .NET'
+title: '15\. spotkanie Wrocławskiej Grupy .NET'
 categories: spotkania
 date: 2008-10-28
 ---
