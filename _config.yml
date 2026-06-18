@@ -12,6 +12,7 @@ url: "https://wrocnet.pyrzyk.net"
 baseurl: ""
 repository: "wrocnet/wrocnet.github.io"
 logo: "/assets/images/logo.png"
+speaker_form_url: "https://google.com"
 
 twitter:
   username: "wrocnet"
@@ -31,10 +32,9 @@ social:
 search: true
 
 author:
-  name: "Łukasz Pyrzyk"
-  avatar: "/assets/images/bio-photo.jpg"
-  bio: "Organizator Wrocławskiej Grupy .NET"
-  location: "Wrocław, Polska"
+  name: "Wroc.NET"
+  avatar: "/assets/images/logo.png"
+  bio: "Wrocławska społeczność pasjonatów .NET, spotykamy się od 2008 r."
   links:
     - label: "Meetup"
       icon: "fas fa-fw fa-users"
@@ -122,4 +122,4 @@ defaults:
       type: pages
     values:
       layout: single
-      author_profile: false
+      author_profile: true

@@ -9,7 +9,7 @@ header:
     - label: "Dołącz do nas na Meetup"
       url: "https://www.meetup.com/wrocnet/"
     - label: "Zobacz spotkania"
-      url: "/categories/spotkania/"
+      url: "/year-archive/"
 excerpt: "Wrocławska społeczność programistów .NET. Spotykamy się od 2008 roku, żeby dzielić się wiedzą i doświadczeniami z ekosystemu Microsoft."
 ---
 
@@ -20,13 +20,13 @@ excerpt: "Wrocławska społeczność programistów .NET. Spotykamy się od 2008 
   <div class="feature-card">
     <h2>Regularne spotkania</h2>
     <p>Organizujemy spotkania kilka razy w roku z prelekcjami o .NET, Azure, architekturze i nie tylko.</p>
-    <a href="/categories/spotkania/" class="btn btn--primary">Historia spotkań</a>
+    <a href="/year-archive/" class="btn btn--primary">Historia spotkań</a>
   </div>
 
   <div class="feature-card">
-    <h2>Dołącz do nas</h2>
-    <p>Zapisz się na Meetup, żeby być na bieżąco z kolejnymi wydarzeniami.</p>
-    <a href="https://www.meetup.com/wrocnet/" class="btn btn--primary" target="_blank" rel="noopener noreferrer">Meetup.com</a>
+    <h2>Zostań prelegentem</h2>
+    <p>Masz temat, którym chcesz się podzielić? Zgłoś się – pokrywamy koszty dojazdu i noclegu.</p>
+    <a href="/zostan-prelegentem/" class="btn btn--primary">Zgłoś się</a>
   </div>
 
   <div class="feature-card feature-card--schedule">
@@ -123,4 +123,77 @@ excerpt: "Wrocławska społeczność programistów .NET. Spotykamy się od 2008 
   font-size: 0.7rem;
   white-space: nowrap;
 }
+
+/* Partners */
+.partners-section {
+  margin: 3rem 0 1rem;
+}
+.partners-section h2 {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #9a8aaa;
+  margin-bottom: 1.5rem;
+}
+.partners-strategic {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+.partner-strategic-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  transition: opacity 0.2s;
+}
+.partner-strategic-link:hover {
+  opacity: 0.85;
+}
+.partner-strategic-link img {
+  max-height: 200px;
+  max-width: 500px;
+  object-fit: contain;
+}
+.partners-supporting {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.partner-supporting-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.5rem;
+  opacity: 0.85;
+  transition: opacity 0.2s;
+}
+.partner-supporting-link:hover { opacity: 1; }
+.partner-supporting-link img {
+  max-height: 120px;
+  max-width: 350px;
+  object-fit: contain;
+}
 </style>
+
+<div class="partners-section">
+  <h2>Partner strategiczny</h2>
+  <div class="partners-strategic">
+    {% for p in site.data.partners.strategic %}
+      <a href="{{ p.url }}" target="_blank" rel="noopener noreferrer" class="partner-strategic-link" title="{{ p.name }}">
+        <img src="{{ p.logo }}" alt="{{ p.name }}">
+      </a>
+    {% endfor %}
+  </div>
+
+  <h2>Partnerzy</h2>
+  <div class="partners-supporting">
+    {% for p in site.data.partners.supporting %}
+      <a href="{{ p.url }}" target="_blank" rel="noopener noreferrer" class="partner-supporting-link" title="{{ p.name }}">
+        <img src="{{ p.logo }}" alt="{{ p.name }}">
+      </a>
+    {% endfor %}
+  </div>
+</div>

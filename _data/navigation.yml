@@ -5,7 +5,9 @@ main:
     url: /year-archive/
   - title: "Organizatorzy"
     url: /organizatorzy/
+  - title: "Mentorzy"
+    url: /mentorzy/
+  - title: "Zostań prelegentem"
+    url: /zostan-prelegentem/
   - title: "O grupie"
     url: /about/
-  - title: "Meetup"
-    url: https://www.meetup.com/wrocnet/

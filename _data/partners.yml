@@ -1,0 +1,12 @@
+strategic:
+  - name: "devstyle"
+    url: "https://devstyle.pl/"
+    logo: "/assets/images/partners/devstyle.jpg"
+
+supporting:
+  - name: "Helion"
+    url: "https://helion.pl/"
+    logo: "/assets/images/partners/helion.jpg"
+  - name: "hued.me"
+    url: "https://hued.me/"
+    logo: "/assets/images/partners/hued-me.png"
