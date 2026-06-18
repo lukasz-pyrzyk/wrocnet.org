@@ -1,6 +1,7 @@
 ---
 layout: single
 title: '90\. spotkanie - GraphQL, Code Crime Scene'
+date: 2016-10-18
 ---
 
 #### GraphQL - następca REST API? - [Bartosz Sypytkowski](https://twitter.com/horusiath)

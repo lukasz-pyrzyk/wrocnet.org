@@ -1,6 +1,7 @@
 ---
 layout: single
 title: '80\. spotkanie - Stanowe aplikacje webowe, Git'
+date: 2015-10-20
 ---
 
 #### Stanowe aplikacje webowe - [Bartosz Spytkowski](https://twitter.com/Horusiath)

@@ -1,6 +1,7 @@
 ---
 layout: single
 title: '120\. spotkanie - DDD, Lambda.NET'
+date: 2019-10-15
 ---
 
 #### Czysty model domenowy: Domain-Driven Design taktycznie i praktycznie - [Kamil Grzybek](https://twitter.com/kamgrzybek)

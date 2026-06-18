@@ -1,6 +1,7 @@
 ---
 layout: single
 title: '74\. spotkanie - F#, Azure Web Jobs'
+date: 2015-02-20
 ---
 
 #### Jak nauczyliśmy się progrmować funkcyjnie nic o tym nie wiedząc  - [Marcin Malinowski](https://twitter.com/orientman)

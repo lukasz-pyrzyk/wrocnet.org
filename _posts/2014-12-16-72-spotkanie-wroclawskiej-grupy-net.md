@@ -1,6 +1,7 @@
 ---
 layout: single
 title: '72\. spotkanie - NoSQL, F#'
+date: 2014-12-16
 ---
 
 #### Break relations - not only SQL  - [Paweł Sawicz](http://twitter.com/sawiczpawel)

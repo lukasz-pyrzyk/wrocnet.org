@@ -1,6 +1,7 @@
 ---
 layout: single
 title: '116\. spotkanie - pre-WROC#'
+date: 2019-03-28
 ---
 
 #### IL — między piekłem a niebem - [Krzysztof Owsiany](https://devsi.pl/developer/krzysztof-owsiany)

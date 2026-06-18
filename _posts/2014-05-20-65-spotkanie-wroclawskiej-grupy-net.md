@@ -1,6 +1,7 @@
 ---
 layout: single
 title: '65\. spotkanie - Zarządzani pamięcią; ServiceStack'
+date: 2014-05-20
 ---
 
 #### Wprowadzenie do zarządzania pamięcią w .NET - [Remigiusz Cieślak](emailto:remigiusz.cieslak@gmail.com)

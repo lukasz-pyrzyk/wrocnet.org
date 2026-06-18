@@ -1,6 +1,7 @@
 ---
 layout: single
 title: '109\. spotkanie - Microsoft Flow, Amazon Alexa'
+date: 2018-05-15
 ---
 
 #### Microsoft Flow - get things connected - [Marcin Tyborowski](https://www.linkedin.com/in/marcin-tyborowski-a6604a129/)

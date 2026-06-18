@@ -1,6 +1,7 @@
 ---
 layout: single
 title: '119\. spotkanie - Legacy, Anchor Modeling'
+date: 2019-09-17
 ---
 
 #### Oswoić Spuściznę (Legacy) - [Rafał Chalimoniuk](https://twitter.com/RChalimoniuk)

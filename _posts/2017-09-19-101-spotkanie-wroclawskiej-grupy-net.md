@@ -1,6 +1,7 @@
 ---
 layout: single
 title: '101\. spotkanie - Continuous Integration, UI in F# '
+date: 2017-09-19
 ---
 
 #### Continous Integration w duzej skali - Marcin Skrobiranda

@@ -1,6 +1,7 @@
 ---
 layout: single
 title: '93\. spotkanie - OzCode, Stress, Nauka'
+date: 2017-01-17
 ---
 
 #### OzCode - [Łukasz Kurzyniec](http://kurzyniec.pl)

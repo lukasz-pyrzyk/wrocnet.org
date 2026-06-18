@@ -1,6 +1,7 @@
 ---
 layout: single
 title: '92\. spotkanie - Opytmalizacja SQL, ITAN'
+date: 2016-12-13
 ---
 
 #### Optymalizacja zapytań - [Roman Czarko-Wasiutycz](https://www.linkedin.com/in/romanczarko)

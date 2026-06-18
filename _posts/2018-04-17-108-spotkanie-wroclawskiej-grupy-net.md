@@ -1,6 +1,7 @@
 ---
 layout: single
 title: '108\. spotkanie - Reactive Extensions, Azure Service Fabric '
+date: 2018-04-17
 ---
 
 #### Reactive Extensions - wzorzec obserwatora, czyli programowanie sterowane zdarzeniami - [Krzysztof Owsiany](https://twitter.com/k_owsiany) 

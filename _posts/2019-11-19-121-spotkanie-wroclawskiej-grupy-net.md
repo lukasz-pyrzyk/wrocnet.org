@@ -1,6 +1,7 @@
 ---
 layout: single
 title: '121\. spotkanie - Microservices, Azure Sphere, Multi-tenant Azure'
+date: 2019-11-19
 ---
 
 #### Clean up this mess – API Gateway and Service Discovery in .NET - [Marcin Tyborowski](https://twitter.com/mtyborowski09)

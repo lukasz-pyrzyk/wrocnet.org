@@ -1,6 +1,7 @@
 ---
 layout: single
 title: '114\. spotkanie - Loosely coupled architecture, SpecFlow'
+date: 2019-01-15
 ---
 
 #### Loosely coupled architecture - jak pozbyć się efektu domina - [Radosław Maziarka](https://radekmaziarka.pl/)

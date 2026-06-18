@@ -1,6 +1,7 @@
 ---
 layout: single
 title: '122\. spotkanie - Azure Congnitive Services, Azure Sphere, Multi-tenant Azure'
+date: 2019-12-17
 ---
 
 #### Azure Congnitive Services - [Michał Jankowski](https://www.jankowskimichal.pl)

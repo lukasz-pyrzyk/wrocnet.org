@@ -1,6 +1,7 @@
 ---
 layout: single
 title: '86\. spotkanie - Microservices, Lightning talki'
+date: 2016-03-09
 ---
 
 #### Mikroserwisy, pierwsze kroczki - [Jarosław Stadnicki](http://jaroslawstadnicki.pl/), Tomasz Kielar

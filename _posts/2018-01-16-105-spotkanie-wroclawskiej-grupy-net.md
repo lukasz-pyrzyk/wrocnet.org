@@ -1,6 +1,7 @@
 ---
 layout: single
 title: '105\. spotkanie - struktury, systemy rozproszone'
+date: 2018-01-16
 ---
 
 #### Ile (nie) wiesz o strukturach w .NET - [Łukasz Pyrzyk](https://pyrzyk.net/)

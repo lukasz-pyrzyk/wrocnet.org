@@ -1,6 +1,7 @@
 ---
 layout: single
 title: '87\. spotkanie - .NET Core, Xamarin'
+date: 2016-04-12
 ---
 
 #### .NET Core - [Łukasz Pyrzyk](https://github.com/lukasz-pyrzyk/)

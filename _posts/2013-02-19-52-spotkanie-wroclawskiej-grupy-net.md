@@ -1,6 +1,7 @@
 ---
 layout: single
 title: '52\. spotkanie - Algorytmy Genetyczne'
+date: 2013-02-19
 ---
 
 #### Genetic Algorithms - Solving by evolving - [Paweł Drozdowski]()

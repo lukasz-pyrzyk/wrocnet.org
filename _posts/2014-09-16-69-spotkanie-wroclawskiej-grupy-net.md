@@ -1,6 +1,7 @@
 ---
 layout: single
 title: '69\. spotkanie - Literate programming, mBank'
+date: 2014-09-16
 ---
 
 #### Literate programming? - [Luca Bolognese](http://lucabolognese.wordpress.com/)

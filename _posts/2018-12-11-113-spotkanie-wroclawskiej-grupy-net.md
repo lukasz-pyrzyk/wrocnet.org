@@ -1,6 +1,7 @@
 ---
 layout: single
 title: '113\. spotkanie - Microservices, Command Handler'
+date: 2018-12-11
 ---
 
 #### Microservices lifecycle - [Sebastian Fyda](https://twitter.com/sebastianfyda?lang=en)

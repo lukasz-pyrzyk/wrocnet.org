@@ -1,6 +1,7 @@
 ---
 layout: single
 title: '84\. spotkanie - Promises, ASP.NET 5 galore'
+date: 2016-01-19
 ---
 
 #### javascript: Promise to never callback - Karol Tomaszewski

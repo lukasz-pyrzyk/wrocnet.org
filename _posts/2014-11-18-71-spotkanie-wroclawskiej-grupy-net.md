@@ -1,6 +1,7 @@
 ---
 layout: single
 title: '71\. spotkanie - Git versioning, GitLink'
+date: 2014-11-18
 ---
 
 #### Git versioning  - [Tomasz Pluskiewicz](http://t-code.pl)

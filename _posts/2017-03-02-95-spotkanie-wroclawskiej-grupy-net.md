@@ -1,6 +1,7 @@
 ---
 layout: single
 title: '95\. spotkanie - Multithreading'
+date: 2017-03-02
 ---
 
 #### Open the lock - [Marcin Dudek](http://oskar-dudycz.pl)

@@ -1,6 +1,7 @@
 ---
 layout: single
 title: '104\. spotkanie - "zasiedzenie", automatyka'
+date: 2017-12-19
 ---
 
 #### Jak nie zasiedzieć się na śmierć - Marek Stój

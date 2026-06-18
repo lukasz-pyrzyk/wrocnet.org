@@ -1,6 +1,7 @@
 ---
 layout: single
 title: '75\. spotkanie - CQRS w trzech odsłonach'
+date: 2015-03-11
 ---
 
 #### CQRS – moje własne podejście  - [Jakub Gutkowski](https://twitter.com/gutek)

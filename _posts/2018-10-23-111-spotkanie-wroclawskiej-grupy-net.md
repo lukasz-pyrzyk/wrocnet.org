@@ -1,6 +1,7 @@
 ---
 layout: single
 title: '111\. spotkanie - Machine Learning, Kursy Udemy'
+date: 2018-10-23
 ---
 
 #### Machine Learning w .NET - czyli podróż tam i z powrotem - [Maciej Jędrzejewski](http://twitter.com/mjjedmac)

@@ -1,6 +1,7 @@
 ---
 layout: single
 title: '96\. spotkanie - .NET Core, Unity3D'
+date: 2017-03-21
 ---
 
 #### .NET Core w 2017 - [Łukasz Pyrzyk](https://pyrzyk.net/)

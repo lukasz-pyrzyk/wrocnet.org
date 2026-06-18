@@ -1,6 +1,7 @@
 ---
 layout: single
 title: '66\. spotkanie - Architektura; Scheduling'
+date: 2014-06-18
 ---
 
 #### Focus on Architecture: Does great power come with great responsibility? - [Barbara Fusińska](http://twitter.com/basiafusinska)

@@ -1,6 +1,7 @@
 ---
 layout: single
 title: '83\. spotkanie - Testy mutacyjne, frameworki'
+date: 2015-12-15
 ---
 
 #### Mutuj swój kod i sprawdź prawdziwe pokrycie swoich testów! - [Paweł Sawicz](https://twitter.com/sawiczpawel)

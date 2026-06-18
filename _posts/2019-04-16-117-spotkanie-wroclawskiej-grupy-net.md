@@ -1,6 +1,7 @@
 ---
 layout: single
 title: '117\. spotkanie - Autofac, GitHub'
+date: 2019-04-16
 ---
 
 #### Best practices Autofac – examples - [Piotr Walacik](https://www.linkedin.com/in/piotr-walacik-6baa4a102/)

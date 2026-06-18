@@ -1,6 +1,7 @@
 ---
 layout: single
 title: '100\. spotkanie - TPL Dataflow, Pamięć w .NET'
+date: 2017-06-20
 ---
 
 #### How I stopped worrying and learned to love parallel processing - [Szymon Warda](https://twitter.com/maklipsa)

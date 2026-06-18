@@ -1,6 +1,7 @@
 ---
 layout: single
 title: '77\. spotkanie - Mikroserwisy'
+date: 2015-05-19
 ---
 
 #### Mikro-serwisy  - [Adrian Ciura](https://twitter.com/adrianciura)

@@ -1,6 +1,7 @@
 ---
 layout: single
 title: '85\. spotkanie - Heroku, Unit testing'
+date: 2016-02-16
 ---
 
 #### Heroku - chmura przyjazna programiście - [Łukasz Gąsior](http://twitter.com/lukaszgasior)

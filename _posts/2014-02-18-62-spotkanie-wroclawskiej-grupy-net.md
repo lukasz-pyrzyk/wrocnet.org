@@ -1,6 +1,7 @@
 ---
 layout: single
 title: '62\. spotkanie - NancyFx; JavaScript'
+date: 2014-02-18
 ---
 
 #### Randka z Nancy - [Maciej Aniserowicz](http://maciejaniserowicz.com)

@@ -1,6 +1,7 @@
 ---
 layout: single
 title: '48\. spotkanie - BDD'
+date: 2012-10-16
 ---
 
 #### BDD - [Mirosław Pragłowski](https://twitter.com/mpraglowski)

@@ -1,6 +1,7 @@
 ---
 layout: single
 title: '64\. spotkanie - Python'
+date: 2014-04-15
 ---
 
 #### Python in a .NET world - [Maciej Talaśka](http://notonlyzeroesandones.site40.net)

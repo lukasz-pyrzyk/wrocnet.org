@@ -1,6 +1,7 @@
 ---
 layout: single
 title: '61\. spotkanie - Knockout.js; Zdalna firma'
+date: 2014-01-21
 ---
 
 

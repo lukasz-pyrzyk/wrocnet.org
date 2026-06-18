@@ -1,6 +1,7 @@
 ---
 layout: single
 title: '58\. spotkanie - Twitter; GUI; Specification by Example'
+date: 2013-10-15
 ---
 
 #### Social Media - @Twitter - Gosia Borzęcka

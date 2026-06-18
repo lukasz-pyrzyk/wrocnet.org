@@ -1,6 +1,7 @@
 ---
 layout: single
 title: '60\. spotkanie - Fody'
+date: 2013-12-17
 ---
 
 #### Fody - [Tomasz Pluskiewicz]()

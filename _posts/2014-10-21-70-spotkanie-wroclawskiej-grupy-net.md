@@ -1,6 +1,7 @@
 ---
 layout: single
 title: '70\. spotkanie - Good programming practices, Unconstrained isolation'
+date: 2014-10-21
 ---
 
 #### Good programming practices  - [Jarosław Stadnicki]()

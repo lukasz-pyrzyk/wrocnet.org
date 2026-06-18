@@ -1,6 +1,7 @@
 ---
 layout: single
 title: '76\. spotkanie - Big Data, edge.js'
+date: 2015-04-21
 ---
 
 #### Big Data - should you care?  - [Marek Stój](https://twitter.com/marekstoj)

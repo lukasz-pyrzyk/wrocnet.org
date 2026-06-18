@@ -1,6 +1,7 @@
 ---
 layout: single
 title: '106\. spotkanie - CQRS, osobowości inżynierów oprogramowania'
+date: 2018-02-20
 ---
 
 #### CQRS w 4 krokach - [Radosław Maziarka](http://radblog.pl)

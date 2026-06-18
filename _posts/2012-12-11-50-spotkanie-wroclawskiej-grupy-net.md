@@ -1,6 +1,7 @@
 ---
 layout: single
 title: '50\. spotkanie - Continous Delivery; Continuous Deployment'
+date: 2012-12-11
 ---
 
 #### Continous delivery story with FIFA - [Mirosław Jedynak]()

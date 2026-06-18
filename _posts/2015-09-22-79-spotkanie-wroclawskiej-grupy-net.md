@@ -1,6 +1,7 @@
 ---
 layout: single
 title: '79\. spotkanie - Paket, VS Debugger, WebSharper'
+date: 2015-09-22
 ---
 
 #### Paket Package manager - [Tomasz Pluskiewicz](http://twitter.com/tpluscode)

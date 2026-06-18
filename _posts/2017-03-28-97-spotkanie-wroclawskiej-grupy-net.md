@@ -1,6 +1,7 @@
 ---
 layout: single
 title: '97\. spotkanie - JSON w SQL Server, Microsoft Cognitive API'
+date: 2017-03-28
 ---
 
 #### SQL Server coraz bliższy programistom .NET, czyli JSON w Microsoft SQL Server 2016 - Beata Zalewa

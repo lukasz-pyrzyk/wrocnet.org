@@ -1,6 +1,7 @@
 ---
 layout: single
 title: '73\. spotkanie - CSRF w ASP.NET MVC, ASP.NET vNext'
+date: 2015-01-20
 ---
 
 #### Sea-surfing in ASP.NET MVC  - [Bartosz Lenar](https://twitter.com/bartoszlenar)

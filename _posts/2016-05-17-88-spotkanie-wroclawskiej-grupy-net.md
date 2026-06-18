@@ -1,6 +1,7 @@
 ---
 layout: single
 title: '88\. spotkanie - Dobre CV, RampUpNet - ekstremalna współbieżność w .NET'
+date: 2016-05-17
 ---
 
 #### Do IT right - what (not) to put on your resume - [Ewelina Dańczuk](https://twitter.com/ewelinadanczuk)

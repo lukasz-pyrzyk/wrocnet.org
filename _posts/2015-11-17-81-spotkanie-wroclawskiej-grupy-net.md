@@ -1,6 +1,7 @@
 ---
 layout: single
 title: '81\. spotkanie - SOLID, Aplikacje SPA'
+date: 2015-11-17
 ---
 
 #### Bądź SOLID - [Jarosaw Stadnicki](https://twitter.com/j_stadnicki)
