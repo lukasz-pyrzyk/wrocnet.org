@@ -5,7 +5,7 @@ date: 2016-10-18
 ---
 
 #### GraphQL - następca REST API? - [Bartosz Sypytkowski](https://twitter.com/horusiath)
-* Prezentacja: [reveal.js](/assets/graphql/index.html)
+* Prezentacja: [reveal.js (zip)](/assets/graphql.zip)
 * Wideo: {% include video id="z92i1vgQxRI" provider="youtube" %}
 
 #### Code Crime Scene - [Paweł Klimczyk](https://twitter.com/pwlklm)
