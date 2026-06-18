@@ -13,7 +13,7 @@ Zapraszamy wszystkich zainteresowanych do przyłączenia się oraz brania aktywn
 
 ## Historia
 
-Grupa działa od **2012 roku** i odbyła już ponad 169 spotkań. Przez lata prelegenci dzielili się wiedzą z dziedzin takich jak:
+Grupa działa od **2008 roku** i odbyła już ponad 169 spotkań. Przez lata prelegenci dzielili się wiedzą z dziedzin takich jak:
 
 - .NET Core / ASP.NET / C#
 - Azure i usługi chmurowe
