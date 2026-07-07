@@ -30,7 +30,6 @@ classes: wide
     <img src="{{ person.photo | default: '/assets/images/organizers/placeholder.png' }}" alt="{{ person.name }}" class="organizer-photo organizer-photo--former">
     <div class="organizer-info">
       <h3 class="organizer-name">{{ person.name }}</h3>
-      {% if person.bio and person.bio != "" %}<p class="organizer-bio">{{ person.bio }}</p>{% endif %}
       {% if person.linkedin %}
         <a href="{{ person.linkedin }}" target="_blank" rel="noopener noreferrer" class="btn btn--inverse btn--small">
           <i class="fab fa-linkedin"></i> LinkedIn
