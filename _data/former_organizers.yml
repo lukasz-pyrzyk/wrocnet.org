@@ -1,31 +1,25 @@
 # Byli organizatorzy Wrocławskiej Grupy .NET
-# Każdy wpis: name, photo, bio (opcjonalne), linkedin (opcjonalne)
+# Każdy wpis: name, photo, linkedin (opcjonalne)
 - name: "Mirosław Pragłowski"
   photo: "/assets/images/organizers/miroslaw-praglowski.jpg"
-  bio: ""
   linkedin: "https://www.linkedin.com/in/mpraglowski/"
 
 - name: "Paweł Klimczyk"
   photo: "/assets/images/organizers/pawel-klimczyk.jpg"
-  bio: "GEMOTIAL Software Studio"
   linkedin: "https://www.linkedin.com/in/pawel-klimczyk/"
 
 - name: "Paweł Łukasik"
   photo: "/assets/images/organizers/pawel-lukasik.jpg"
-  bio: "Octal Solutions | C#/.NET | RE"
   linkedin: "https://pl.linkedin.com/in/plukasik"
 
 - name: "Radek Maziarka"
   photo: "/assets/images/organizers/radek-maziarka.jpg"
-  bio: "Engineering Consultant | Fractional CTO"
   linkedin: "https://www.linkedin.com/in/radek-maziarka/"
 
 - name: "Tomek Pawluszkiewicz"
   photo: "/assets/images/organizers/tomek-pawluszkiewicz.jpg"
-  bio: ".NET Software Engineer with affinity for Web APIs and Web"
   linkedin: "https://www.linkedin.com/in/tpluskiewicz/"
 
 - name: "Weronika Mularczyk"
   photo: "/assets/images/organizers/weronika-mularczyk.jpg"
-  bio: "Senior Consultant/Tech lead"
   linkedin: "https://www.linkedin.com/in/weronika-tobor/"
