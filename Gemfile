@@ -11,3 +11,7 @@ group :jekyll_plugins do
   gem "jekyll-include-cache"
   gem "jekyll-remote-theme"
 end
+
+group :development do
+  gem "html-proofer", "~> 5.0"
+end
