@@ -115,10 +115,10 @@ pl: &DEFAULT_PL
   back_to_top                : "Wróć na górę"
   countdown_eyebrow          : "Następne spotkanie za:"
   countdown_aria_label       : "Odliczanie do najbliższego spotkania"
-  countdown_days_label       : "dni"
-  countdown_hours_label      : "godziny"
-  countdown_minutes_label    : "minuty"
-  countdown_seconds_label    : "sekundy"
+  countdown_days_label       : "d"
+  countdown_hours_label      : "h"
+  countdown_minutes_label    : "min"
+  countdown_seconds_label    : "s"
   countdown_month_names      : "stycznia,lutego,marca,kwietnia,maja,czerwca,lipca,sierpnia,września,października,listopada,grudnia"
 
 pl-PL:
