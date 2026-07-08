@@ -50,6 +50,13 @@ en: &DEFAULT_EN
   search_algolia_no_results  : "No results"
   results_found              : "Result(s) found"
   back_to_top                : "Back to top"
+  countdown_eyebrow          : "Next meeting starts in:"
+  countdown_aria_label       : "Countdown to the next meeting"
+  countdown_days_label       : "days"
+  countdown_hours_label      : "hours"
+  countdown_minutes_label    : "minutes"
+  countdown_seconds_label    : "seconds"
+  countdown_month_names      : "January,February,March,April,May,June,July,August,September,October,November,December"
 
 en-US:
   <<: *DEFAULT_EN
@@ -106,6 +113,13 @@ pl: &DEFAULT_PL
   search_algolia_no_results  : "Brak wyników"
   results_found              : "Znalezione wyniki"
   back_to_top                : "Wróć na górę"
+  countdown_eyebrow          : "Następne spotkanie za:"
+  countdown_aria_label       : "Odliczanie do najbliższego spotkania"
+  countdown_days_label       : "dni"
+  countdown_hours_label      : "godziny"
+  countdown_minutes_label    : "minuty"
+  countdown_seconds_label    : "sekundy"
+  countdown_month_names      : "stycznia,lutego,marca,kwietnia,maja,czerwca,lipca,sierpnia,września,października,listopada,grudnia"
 
 pl-PL:
   <<: *DEFAULT_PL

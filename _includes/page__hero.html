@@ -20,13 +20,16 @@
 {% assign image_description = image_description | markdownify | strip_html | strip_newlines | escape_once %}
 {% assign default_start_time = site.data.schedule.default_start_time | default: "18:00:00" %}
 {% assign now_ts = 'now' | date: '%s' | plus: 0 %}
+{% assign ui_text = site.data.ui-text[locale] %}
 
 {% if page.url == "/" and site.data.schedule and site.data.schedule.dates %}
-  {% assign months_pl = "stycznia,lutego,marca,kwietnia,maja,czerwca,lipca,sierpnia,września,października,listopada,grudnia" | split: "," %}
+  {% assign month_names_csv = ui_text.countdown_month_names | default: "January,February,March,April,May,June,July,August,September,October,November,December" %}
+  {% assign month_names = month_names_csv | split: "," %}
+  {% assign sorted_dates = site.data.schedule.dates | sort %}
   {% assign next_meeting_time_display = default_start_time | slice: 0, 5 %}
   {% assign next_meeting_date = nil %}
   {% assign next_meeting_ts = nil %}
-  {% for date_str in site.data.schedule.dates %}
+  {% for date_str in sorted_dates %}
     {% capture meeting_at %}{{ date_str }} {{ default_start_time }}{% endcapture %}
     {% assign meeting_ts = meeting_at | date: '%s' | plus: 0 %}
     {% if meeting_ts >= now_ts %}
@@ -37,7 +40,7 @@
   {% endfor %}
   {% if next_meeting_date %}
     {% assign next_month_idx = next_meeting_date | date: "%-m" | minus: 1 %}
-    {% capture next_meeting_display %}{{ next_meeting_date | date: "%-d" }} {{ months_pl[next_month_idx] }} {{ next_meeting_date | date: "%Y" }}{% endcapture %}
+    {% capture next_meeting_display %}{{ next_meeting_date | date: "%-d" }} {{ month_names[next_month_idx] }} {{ next_meeting_date | date: "%Y" }}{% endcapture %}
   {% endif %}
 {% endif %}
 
@@ -70,28 +73,28 @@
       </div>
       {% if next_meeting_date and next_meeting_ts %}
         <aside class="next-meeting-card" data-target-ts="{{ next_meeting_ts }}">
-          <p class="next-meeting-card__eyebrow">Następne spotkanie za:</p>
-          <div class="next-meeting-card__countdown" aria-label="Odliczanie do najbliższego spotkania">
+          <p class="next-meeting-card__eyebrow">{{ ui_text.countdown_eyebrow | default: "Next meeting starts in:" }}</p>
+          <div class="next-meeting-card__countdown" aria-label="{{ ui_text.countdown_aria_label | default: "Countdown to the next meeting" }}">
             <div class="next-meeting-card__days-row">
               <div class="next-meeting-card__unit next-meeting-card__unit--days">
                 <span data-unit="days">00</span>
-                <small>dni</small>
+                <small>{{ ui_text.countdown_days_label | default: "days" }}</small>
               </div>
             </div>
             <div class="next-meeting-card__time-row">
               <div class="next-meeting-card__unit">
                 <span data-unit="hours">00</span>
-                <small>godziny</small>
+                <small>{{ ui_text.countdown_hours_label | default: "hours" }}</small>
               </div>
               <div class="next-meeting-card__separator">:</div>
               <div class="next-meeting-card__unit">
                 <span data-unit="minutes">00</span>
-                <small>minuty</small>
+                <small>{{ ui_text.countdown_minutes_label | default: "minutes" }}</small>
               </div>
               <div class="next-meeting-card__separator">:</div>
               <div class="next-meeting-card__unit">
                 <span data-unit="seconds">00</span>
-                <small>sekundy</small>
+                <small>{{ ui_text.countdown_seconds_label | default: "seconds" }}</small>
               </div>
             </div>
           </div>
