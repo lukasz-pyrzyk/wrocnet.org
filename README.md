@@ -53,6 +53,8 @@ The site will be available at [http://localhost:4000](http://localhost:4000).
 
 To run the same checks as CI before opening a PR:
 
+Prerequisite for step 1: install `yamllint` (for example: `python -m pip install yamllint`).
+
 1. Lint YAML files:
 
    ```bash

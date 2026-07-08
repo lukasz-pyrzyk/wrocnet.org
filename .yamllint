@@ -4,5 +4,8 @@ rules:
   line-length:
     max: 180
     level: warning
+  # Allow aligned key formatting used in _data/ui-text.yml.
+  colons:
+    max-spaces-before: 30
   document-start: disable
   comments-indentation: disable
