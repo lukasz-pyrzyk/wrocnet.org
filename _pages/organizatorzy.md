@@ -2,6 +2,7 @@
 title: "Organizatorzy"
 layout: single
 permalink: /organizatorzy/
+excerpt: "Poznaj zespół organizatorów Wrocławskiej Grupy .NET – pasjonatów, którzy od lat wspierają lokalną społeczność programistyczną."
 classes: wide
 ---
 

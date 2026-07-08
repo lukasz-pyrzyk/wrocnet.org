@@ -10,6 +10,7 @@ group :jekyll_plugins do
   gem "jekyll-gist"
   gem "jekyll-include-cache"
   gem "jekyll-remote-theme"
+  gem "jekyll-seo-tag"
 end
 
 group :development do
