@@ -118,6 +118,7 @@
         dateList = JSON.parse(card.getAttribute('data-dates') || '[]');
         monthNames = JSON.parse(card.getAttribute('data-month-names') || '[]');
       } catch (e) {
+        card.style.display = 'none';
         return;
       }
 
