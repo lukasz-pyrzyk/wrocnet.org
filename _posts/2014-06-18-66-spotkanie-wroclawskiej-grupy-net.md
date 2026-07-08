@@ -5,7 +5,7 @@ date: 2014-06-18
 ---
 
 #### Focus on Architecture: Does great power come with great responsibility? - [Barbara Fusińska](http://twitter.com/basiafusinska)
-* Prezentacja: [Architektura.pptx]({{BASE_PATH}}/assets/Architektura.pptx)
+* Prezentacja: [Architektura.pptx](/slides/Architektura.zip)
 * Wideo: {% include video id="3O9OvB996q0" provider="youtube" %}
 
 

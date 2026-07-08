@@ -5,7 +5,7 @@ date: 2017-10-17
 ---
 
 #### Full stack TypeScript dla programisty .NET - Marcin Najder
-* Prezentacja: [PDF](/assets/ts4csharp.pdf)
+* Prezentacja: [PDF](/slides/ts4csharp.zip)
 * Wideo: {% include video id="lDnPDzaCpJ8" provider="youtube" %}
 
 #### Mac dla programistów .NET - Michał Szafrański

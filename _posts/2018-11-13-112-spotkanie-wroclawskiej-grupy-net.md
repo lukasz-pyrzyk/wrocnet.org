@@ -9,6 +9,6 @@ date: 2018-11-13
 * Wideo: {% include video id="Zx4MxvR_IYg" provider="youtube" %}
 
 #### CI / CD – Co to? Po co? Jak? - [Jerzy Wickowski](https://jerzywickowski.pl)
-* Prezentacja: [PDF](/assets/wickowski-cicd.pdf)
+* Prezentacja: [PDF](/slides/wickowski-cicd.zip)
 * Materiały: [https://jerzywickowski.pl/prelekcje/cicd-co-to-po-co-jak/](https://jerzywickowski.pl/prelekcje/cicd-co-to-po-co-jak/)
 * Wideo: {% include video id="rZNJJ3DU75c" provider="youtube" %}

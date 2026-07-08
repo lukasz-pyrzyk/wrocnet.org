@@ -8,5 +8,5 @@ date: 2019-04-16
 * Wideo: {% include video id="DXPEnl1vVtA" provider="youtube" %}
 
 #### GitHub jako ścieżka (do) kariery - [Tomasz Pluskiewicz](https://twitter.com/tpluscode)
-* Prezentacja: [PDF](/assets/github_career.pdf)
+* Prezentacja: [PDF](/slides/github_career.zip)
 * Wideo: {% include video id="rISdu7A4JH8" provider="youtube" %}

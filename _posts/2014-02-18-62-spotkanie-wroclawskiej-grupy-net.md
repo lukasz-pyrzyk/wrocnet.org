@@ -5,9 +5,9 @@ date: 2014-02-18
 ---
 
 #### Randka z Nancy - [Maciej Aniserowicz](http://maciejaniserowicz.com)
-* Prezentacja: [Nancy.pdf]({{BASE_PATH}}/assets/maniserowicz-nancy.pdf)
+* Prezentacja: [Nancy.pdf](/slides/maniserowicz-nancy.zip)
 * Wideo: {% include video id="RcIUzb5m0FU" provider="youtube" %}
 
 #### Jakub Gutkowski: 'Tak' + 'Tak' == false?  - [Jakub Gutkowski](http://blog.gutek.pl)
-* Prezentacja: [Tak Tak.pptx]({{BASE_PATH}}/assets/tak%20tak.pptx)
+* Prezentacja: [Tak Tak.pptx](/slides/tak%20tak.zip)
 * Wideo: {% include video id="37igw8l52Ho" provider="youtube" %}

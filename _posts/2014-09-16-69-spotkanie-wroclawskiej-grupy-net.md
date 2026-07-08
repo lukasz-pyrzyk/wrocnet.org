@@ -6,7 +6,7 @@ date: 2014-09-16
 
 #### Literate programming? - [Luca Bolognese](http://lucabolognese.wordpress.com/)
 * Wpis na blogu: [Literate programming](http://lucabolognese.wordpress.com/2012/12/14/llite-language-friendly-literate-programming/  )
-* Prezentacja: [Literate programming](/assets/LiterateProgramming.pptx)
+* Prezentacja: [Literate programming](/slides/LiterateProgramming.zip)
 * Wideo: {% include video id="XH7Cqo-Pk1E" provider="youtube" %}
 
 #### about.mBank - [Piotr Stapp](https://twitter.com/ptrstpp950)

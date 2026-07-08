@@ -5,10 +5,10 @@ date: 2017-03-21
 ---
 
 #### .NET Core w 2017 - [Łukasz Pyrzyk](https://pyrzyk.net/)
-* Prezentacja: [pptx](/assets/NET-Core-2017.pptx)
+* Prezentacja: [pptx](/slides/NET-Core-2017.zip)
 * Wideo: {% include video id="wa-JyqRkla4" provider="youtube" %}
 
 #### Jak zacząć swoją przygodę z Unity3D - [Piotr Wandycz](http://piotr-wandycz.pl/)
-* Prezentacja: [pdf](/assets/unity3d_wandycz.pdf)
+* Prezentacja: [pdf](/slides/unity3d_wandycz.zip)
 * Przykładowy kod: [GitHub](https://github.com/PiotrWandycz/Unity3D_Wrocnet)
 * Wideo: {% include video id="Kcq2afmqZ7c" provider="youtube" %}

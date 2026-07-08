@@ -5,7 +5,7 @@ date: 2017-03-28
 ---
 
 #### SQL Server coraz bliższy programistom .NET, czyli JSON w Microsoft SQL Server 2016 - Beata Zalewa
-* Prezentacja: [pptx](/assets/JSON-SQLServer2016.pptx)
+* Prezentacja: [pptx](/slides/JSON-SQLServer2016.zip)
 * Wideo: wkrótce
 
 #### Microsoft Cognitive API "Put intelligence APIs to work" - [Paweł Łukasik](https://twitter.com/pawel_lukasik)

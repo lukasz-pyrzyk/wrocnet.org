@@ -5,7 +5,7 @@ date: 2019-03-28
 ---
 
 #### IL — między piekłem a niebem - [Krzysztof Owsiany](https://devsi.pl/developer/krzysztof-owsiany)
-* Prezentacja: [ODP](/assets/IL - między piekłem a niebem.odp)
+* Prezentacja: [ODP](/slides/IL - między piekłem a niebem.zip)
 * Wideo: {% include video id="7cXH1xaUfmc" provider="youtube" %}
 
 #### Napisz swój własny GC - po co i jak? - [Konrad Kokosa](https://github.com/kkokosa)
@@ -13,5 +13,5 @@ date: 2019-03-28
 * Wideo: wkrótce
 
 #### Hexagonal Architecture Explained - [Waldemar Mękal](https://github.com/wmekal)
-* Prezentacja: [PPTX](/assets/hexagonal_PreWroc.pptx)
+* Prezentacja: [PPTX](/slides/hexagonal_PreWroc.zip)
 * Wideo: wkrótce

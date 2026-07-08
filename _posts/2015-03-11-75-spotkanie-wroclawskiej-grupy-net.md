@@ -5,7 +5,7 @@ date: 2015-03-11
 ---
 
 #### CQRS – moje własne podejście  - [Jakub Gutkowski](https://twitter.com/gutek)
-* Prezentacja: [PDF](/assets/Jakub_Gutkowski_CQRS.pdf)
+* Prezentacja: [PDF](/slides/Jakub_Gutkowski_CQRS.zip)
 * Wideo: {% include video id="0oEYDS1hIpc" provider="youtube" %}
 
 #### CQRS dla każdego - [Maciej Aniserowicz](https://twitter.com/maniserowicz)
