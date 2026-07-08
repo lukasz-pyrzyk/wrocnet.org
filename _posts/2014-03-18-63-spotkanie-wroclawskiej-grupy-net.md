@@ -5,5 +5,5 @@ date: 2014-03-18
 ---
 
 #### Programowanie w Windows Phone - niby .Net a jednak... - [Basia Fusińska](http://barbarafusinska.com)
-* Prezentacja: [WindowsPhone.pptx]({{BASE_PATH}}/assets/WindowsPhone.pptx)
+* Prezentacja: [WindowsPhone.pptx](/slides/WindowsPhone.zip)
 * Wideo: {% include video id="W04Qc8hdjY4" provider="youtube" %}

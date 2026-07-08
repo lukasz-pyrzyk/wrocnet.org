@@ -5,7 +5,7 @@ date: 2019-11-19
 ---
 
 #### Clean up this mess – API Gateway and Service Discovery in .NET - [Marcin Tyborowski](https://twitter.com/mtyborowski09)
-* Prezentacja: [PDF](/assets/cleanupthismessv3-191120171921.pdf)
+* Prezentacja: [PDF](/slides/cleanupthismessv3-191120171921.zip)
 * Wideo: {% include video id="Zs_sbbrYX1o" provider="youtube" %}
 
 #### C# + AzureSphere = ??? - Bartosz Szczepański

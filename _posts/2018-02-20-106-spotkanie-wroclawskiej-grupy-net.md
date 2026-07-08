@@ -5,7 +5,7 @@ date: 2018-02-20
 ---
 
 #### CQRS w 4 krokach - [Radosław Maziarka](http://radblog.pl)
-* Prezentacja: [PowerPoint](/assets/cqrs-in-4-steps-rmaziarka.pptx)
+* Prezentacja: [PowerPoint](/slides/cqrs-in-4-steps-rmaziarka.zip)
 * Wideo: {% include video id="i0wCilZ0QdY" provider="youtube" %}
 
 #### 7 osobowości inżyniera oprogramowania - [Paweł Klimczyk](https://blog.klimczyk.pl/)

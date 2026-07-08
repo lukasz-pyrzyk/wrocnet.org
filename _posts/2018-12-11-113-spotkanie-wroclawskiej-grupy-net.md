@@ -9,6 +9,6 @@ date: 2018-12-11
 * Wideo: wkrótce
 
 #### Budowanie webAPI przy użyciu wzorca command handler - [Krzysztof Zawistowski](https://github.com/krzyzaw)
-* Prezentacja: [PPTX](/assets/Budowanie webAPI przy użyciu wzorca command handler.pptx)
+* Prezentacja: [PPTX](/slides/Budowanie webAPI przy użyciu wzorca command handler.zip)
 * Materiały: [https://github.com/krzyzaw/Prezentacje/tree/master/CommandHandler](https://github.com/krzyzaw/Prezentacje/tree/master/CommandHandler)
 * Wideo: {% include video id="kXIxw9Dxa1s" provider="youtube" %}

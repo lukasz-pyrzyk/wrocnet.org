@@ -9,5 +9,5 @@ date: 2017-06-20
 * Wideo: {% include video id="wfrqdFdA_48" provider="youtube" %}
 
 #### Pamięć w .NET - czyli nie po to kodzę w C# by się tym przejmować - [Grzesiek Siemoniak](https://twitter.com/gzaxx)
-* Prezentacja: [Reveal.js](/assets/net-memory/)
+* Prezentacja: [Reveal.js](/slides/net-memory.zip)
 * Wideo: {% include video id="S1Ob3tgy9as" provider="youtube" %}

@@ -5,11 +5,11 @@ date: 2016-03-09
 ---
 
 #### Mikroserwisy, pierwsze kroczki - [Jarosław Stadnicki](http://jaroslawstadnicki.pl/), Tomasz Kielar
-* Prezentacja: [pptx](/assets/microservices.pptx)
+* Prezentacja: [pptx](/slides/microservices.zip)
 * Wideo: {% include video id="D0XLC-tHUHM" provider="youtube" %}
 
 #### [LT] .NET Developer na froncie - Grzegorz Oronowicz
-* Prezentacja: [pdf](/assets/NET_Developer_na_froncie.pdf)
+* Prezentacja: [pdf](/slides/NET_Developer_na_froncie.zip)
 * Wideo: {% include video id="iUmFBHeoM7U" provider="youtube" %}
 
 #### [LT] AppVeyor - [Tomasz Pluskiewicz](http://twitter.com/tpluscode)

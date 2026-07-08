@@ -5,9 +5,9 @@ date: 2015-11-17
 ---
 
 #### Bądź SOLID - [Jarosaw Stadnicki](https://twitter.com/j_stadnicki)
-* Prezentacja: [PowerPoint](/assets/solid.pptx)
+* Prezentacja: [PowerPoint](/slides/solid.zip)
 * Wideo: {% include video id="3ioO9zYftqU" provider="youtube" %}
 
 #### Własny salon SPA (Single Page Application) - [Bartosz Lenar](https://twitter.com/bartoszlenar)
-* Prezentacja: [PowerPoint](/assets/SPA.pptx)
+* Prezentacja: [PowerPoint](/slides/SPA.zip)
 * Wideo: {% include video id="8PVYTV\_jT2M" provider="youtube" %}
