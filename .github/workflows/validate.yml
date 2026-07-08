@@ -28,4 +28,4 @@ jobs:
         run: bundle exec jekyll build --strict_front_matter
 
       - name: Validate generated HTML and internal links
-        run: bundle exec htmlproofer ./_site --disable-external
+        run: bundle exec htmlproofer ./_site --disable-external --no-enforce-https

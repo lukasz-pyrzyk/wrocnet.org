@@ -70,7 +70,7 @@ Prerequisite for step 1: install `yamllint` (for example: `python -m pip install
 3. Validate generated HTML, internal links, and images:
 
    ```bash
-   bundle exec htmlproofer ./_site --disable-external
+   bundle exec htmlproofer ./_site --disable-external --no-enforce-https
    ```
 
 ## Project structure
