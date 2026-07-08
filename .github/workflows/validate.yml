@@ -1,0 +1,31 @@
+name: Validate Jekyll Site
+
+on:
+  pull_request:
+
+jobs:
+  validate:
+    name: Lint and Build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Lint YAML
+        uses: ibiqlik/action-yamllint@2576378a8e339169678f9939646ee3ee325e845c # v3
+        with:
+          file_or_dir: _data _config.yml
+          config_file: .yamllint
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.2"
+          bundler-cache: true
+
+      - name: Build Jekyll (strict front matter)
+        run: bundle exec jekyll build --strict_front_matter
+
+      - name: Validate generated HTML and internal links
+        run: bundle exec htmlproofer ./_site --disable-external --no-enforce-https

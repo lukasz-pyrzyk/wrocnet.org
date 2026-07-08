@@ -4,7 +4,7 @@ title: '70\. spotkanie - Good programming practices, Unconstrained isolation'
 date: 2014-10-21
 ---
 
-#### Good programming practices  - [Jarosław Stadnicki]()
+#### Good programming practices  - Jarosław Stadnicki
 * Prezentacja: [Good programming practices](/slides/good_practices.zip)
 * Wideo: {% include video id="Pb2m-McZ-So" provider="youtube" %}
 

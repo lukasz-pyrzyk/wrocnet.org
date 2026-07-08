@@ -49,6 +49,30 @@ Built with [Jekyll](https://jekyllrb.com/) and the [Minimal Mistakes](https://mm
 
 The site will be available at [http://localhost:4000](http://localhost:4000).
 
+## CI validation checks (local)
+
+To run the same checks as CI before opening a PR:
+
+Prerequisite for step 1: install `yamllint` (for example: `python -m pip install yamllint`).
+
+1. Lint YAML files:
+
+   ```bash
+   yamllint -c .yamllint _data _config.yml
+   ```
+
+2. Build Jekyll in strict front matter mode:
+
+   ```bash
+   bundle exec jekyll build --strict_front_matter
+   ```
+
+3. Validate generated HTML, internal links, and images:
+
+   ```bash
+   bundle exec htmlproofer ./_site --disable-external --no-enforce-https
+   ```
+
 ## Project structure
 
 | Path | Description |
