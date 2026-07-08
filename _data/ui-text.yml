@@ -52,10 +52,10 @@ en: &DEFAULT_EN
   back_to_top                : "Back to top"
   countdown_eyebrow          : "Next meeting starts in:"
   countdown_aria_label       : "Countdown to the next meeting"
-  countdown_days_label       : "days"
-  countdown_hours_label      : "hours"
-  countdown_minutes_label    : "minutes"
-  countdown_seconds_label    : "seconds"
+  countdown_days_label       : "d"
+  countdown_hours_label      : "h"
+  countdown_minutes_label    : "min"
+  countdown_seconds_label    : "s"
   countdown_month_names      : "January,February,March,April,May,June,July,August,September,October,November,December"
 
 en-US:
