@@ -41,6 +41,7 @@ Run from repository root.
 - Keep aligned colons in _data/ui-text.yml. The lint config intentionally allows extra spaces before colons.
 - If adding links/images in old posts, avoid empty markdown links and missing local assets because htmlproofer runs in CI.
 - Prefer preserving Polish content style and existing URL/permalink patterns.
+- **Images/Photos**: Do not use external URLs for profile photos. Download the image to `assets/images/organizers/`, ensure it's in JPG/PNG format, and resize it to a reasonable size (e.g., 400x400px) before committing.
 
 ## Change Strategy For Agents
 - Link, do not duplicate: if details exist in README or workflow files, reference them.
