@@ -18,31 +18,84 @@
 {% endif %}
 
 {% assign image_description = image_description | markdownify | strip_html | strip_newlines | escape_once %}
+{% assign default_start_time = site.data.schedule.default_start_time | default: "18:00:00" %}
+{% assign ui_text = site.data.ui-text[locale] %}
+{% assign has_countdown = false %}
+
+{% if page.url == "/" and site.data.schedule and site.data.schedule.dates and site.data.schedule.dates.size > 0 %}
+  {% assign month_names_csv = ui_text.countdown_month_names | default: "January,February,March,April,May,June,July,August,September,October,November,December" %}
+  {% assign month_names = month_names_csv | split: "," %}
+  {% assign sorted_dates = site.data.schedule.dates | sort %}
+  {% capture meeting_timestamps_csv %}{% for date_str in sorted_dates %}{% capture meeting_at %}{{ date_str }} {{ default_start_time }}{% endcapture %}{{ meeting_at | date: '%s' }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
+  {% assign meeting_timestamps_csv = meeting_timestamps_csv | strip_newlines | strip %}
+  {% assign next_meeting_time_display = default_start_time | slice: 0, 5 %}
+  {% assign first_meeting_date = sorted_dates[0] %}
+  {% assign first_month_idx = first_meeting_date | date: "%-m" | minus: 1 %}
+  {% capture first_meeting_display %}{{ first_meeting_date | date: "%-d" }} {{ month_names[first_month_idx] }} {{ first_meeting_date | date: "%Y" }}{% endcapture %}
+  {% assign has_countdown = true %}
+{% endif %}
 
 <div class="page__hero{% if page.header.overlay_color or page.header.overlay_image %}--overlay{% endif %}"
   style="{% if page.header.overlay_color %}background-color: {{ page.header.overlay_color | default: 'transparent' }};{% endif %} {% if overlay_img_path %}background-image: {% if overlay_filter %}{{ overlay_filter }}, {% endif %}url('{{ overlay_img_path }}');{% endif %}"
 >
   {% if page.header.overlay_color or page.header.overlay_image %}
-    <div class="wrapper">
-      <h1 id="page-title" class="page__title" itemprop="headline">
-        {% if paginator and site.paginate_show_page_num %}
-          {{ site.title }}{% unless paginator.page == 1 %} {{ site.data.ui-text[locale].page | default: "Page" }} {{ paginator.page }}{% endunless %}
-        {% else %}
-          {{ page.header.title | default: page.title | default: site.title | markdownify | remove: "<p>" | remove: "</p>" }}
+    <div class="wrapper{% if has_countdown %} hero-home{% endif %}">
+      <div class="hero-home__content">
+        <h1 id="page-title" class="page__title" itemprop="headline">
+          {% if paginator and site.paginate_show_page_num %}
+            {{ site.title }}{% unless paginator.page == 1 %} {{ site.data.ui-text[locale].page | default: "Page" }} {{ paginator.page }}{% endunless %}
+          {% else %}
+            {{ page.header.title | default: page.title | default: site.title | markdownify | remove: "<p>" | remove: "</p>" }}
+          {% endif %}
+        </h1>
+        {% if page.tagline %}
+          <p class="page__lead">{{ page.tagline | markdownify | remove: "<p>" | remove: "</p>" }}</p>
+        {% elsif page.header.show_overlay_excerpt != false and page.excerpt %}
+          <p class="page__lead">{{ page.excerpt | markdownify | remove: "<p>" | remove: "</p>" }}</p>
         {% endif %}
-      </h1>
-      {% if page.tagline %}
-        <p class="page__lead">{{ page.tagline | markdownify | remove: "<p>" | remove: "</p>" }}</p>
-      {% elsif page.header.show_overlay_excerpt != false and page.excerpt %}
-        <p class="page__lead">{{ page.excerpt | markdownify | remove: "<p>" | remove: "</p>" }}</p>
-      {% endif %}
-      {% include page__meta.html locale=locale %}
-      {% if page.header.actions %}
-        <p>
-        {% for action in page.header.actions %}
-          <a href="{{ action.url | relative_url }}" class="btn btn--light-outline btn--large">{{ action.label | default: site.data.ui-text[locale].more_label | default: "Learn More" }}</a>
-        {% endfor %}
-        </p>
+        {% include page__meta.html locale=locale %}
+        {% if page.header.actions %}
+          <p>
+          {% for action in page.header.actions %}
+            <a href="{{ action.url | relative_url }}" class="btn btn--light-outline btn--large">{{ action.label | default: site.data.ui-text[locale].more_label | default: "Learn More" }}</a>
+          {% endfor %}
+          </p>
+        {% endif %}
+      </div>
+      {% if has_countdown %}
+        <aside class="next-meeting-card" data-dates='{{ sorted_dates | jsonify }}' data-targets='[{{ meeting_timestamps_csv }}]' data-start-time="{{ default_start_time }}" data-month-names='{{ month_names | jsonify }}'>
+          <p class="next-meeting-card__eyebrow">{{ ui_text.countdown_eyebrow | default: "Next meeting starts in:" }}</p>
+          <div class="next-meeting-card__countdown" role="timer" aria-live="polite" aria-atomic="true" aria-label="{{ ui_text.countdown_aria_label | default: "Countdown to the next meeting" }}">
+            <div class="next-meeting-card__days-row">
+              <div class="next-meeting-card__unit next-meeting-card__unit--days">
+                <span data-unit="days">00</span>
+                <small>{{ ui_text.countdown_days_label | default: "days" }}</small>
+              </div>
+            </div>
+            <div class="next-meeting-card__time-row">
+              <div class="next-meeting-card__unit">
+                <span data-unit="hours">00</span>
+                <small>{{ ui_text.countdown_hours_label | default: "hours" }}</small>
+              </div>
+              <div class="next-meeting-card__separator">:</div>
+              <div class="next-meeting-card__unit">
+                <span data-unit="minutes">00</span>
+                <small>{{ ui_text.countdown_minutes_label | default: "minutes" }}</small>
+              </div>
+              <div class="next-meeting-card__separator">:</div>
+              <div class="next-meeting-card__unit">
+                <span data-unit="seconds">00</span>
+                <small>{{ ui_text.countdown_seconds_label | default: "seconds" }}</small>
+              </div>
+            </div>
+          </div>
+          <div class="next-meeting-card__meta">
+            <p class="next-meeting-card__date" data-role="meeting-date">{{ first_meeting_display }}, {{ next_meeting_time_display }}</p>
+            {% if site.data.schedule.venue.name %}
+              <p class="next-meeting-card__venue">{{ site.data.schedule.venue.name }}</p>
+            {% endif %}
+          </div>
+        </aside>
       {% endif %}
     </div>
   {% else %}
@@ -52,3 +105,120 @@
     <span class="page__hero-caption">{{ page.header.caption | markdownify | remove: "<p>" | remove: "</p>" }}</span>
   {% endif %}
 </div>
+
+{% if has_countdown %}
+  <script>
+    (function () {
+      var card = document.querySelector('.next-meeting-card[data-dates]');
+      if (!card) {
+        return;
+      }
+
+      var dateList = [];
+      var targetList = [];
+      var monthNames = [];
+      try {
+        dateList = JSON.parse(card.getAttribute('data-dates') || '[]');
+        targetList = JSON.parse(card.getAttribute('data-targets') || '[]');
+        monthNames = JSON.parse(card.getAttribute('data-month-names') || '[]');
+      } catch (e) {
+        card.style.display = 'none';
+        return;
+      }
+
+      if (!dateList.length || dateList.length !== targetList.length) {
+        card.style.display = 'none';
+        return;
+      }
+
+      for (var n = 0; n < targetList.length; n += 1) {
+        targetList[n] = Number(targetList[n]) * 1000;
+      }
+
+      var timeRaw = card.getAttribute('data-start-time') || '18:00:00';
+      var timeParts = timeRaw.split(':');
+      var timeHours = Number(timeParts[0] || 0);
+      var timeMinutes = Number(timeParts[1] || 0);
+      var timeSeconds = Number(timeParts[2] || 0);
+      var timeLabel = String(timeHours).padStart(2, '0') + ':' + String(timeMinutes).padStart(2, '0');
+
+      var dateLabel = card.querySelector('[data-role="meeting-date"]');
+      var targetTs = 0;
+
+      var units = {
+        days: card.querySelector('[data-unit="days"]'),
+        hours: card.querySelector('[data-unit="hours"]'),
+        minutes: card.querySelector('[data-unit="minutes"]'),
+        seconds: card.querySelector('[data-unit="seconds"]')
+      };
+
+      function pad(value) {
+        return String(value).padStart(2, '0');
+      }
+
+      function findNextMeeting(afterTs) {
+        for (var i = 0; i < targetList.length; i += 1) {
+          if (targetList[i] >= afterTs) {
+            return {
+              dateStr: dateList[i],
+              targetTs: targetList[i]
+            };
+          }
+        }
+        return null;
+      }
+
+      function formatMeetingLabel(dateStr) {
+        var parts = dateStr.split('-');
+        var year = Number(parts[0]);
+        var monthIndex = Number(parts[1]) - 1;
+        var day = Number(parts[2]);
+        var monthName = monthNames[monthIndex] || String(monthIndex + 1);
+        return day + ' ' + monthName + ' ' + year + ', ' + timeLabel;
+      }
+
+      function selectCurrentMeeting() {
+        var nextMeeting = findNextMeeting(Date.now());
+        if (!nextMeeting) {
+          card.style.display = 'none';
+          return false;
+        }
+
+        targetTs = nextMeeting.targetTs;
+        if (dateLabel) {
+          dateLabel.textContent = formatMeetingLabel(nextMeeting.dateStr);
+        }
+
+        return true;
+      }
+
+      function renderCountdown() {
+        if (!targetTs || Date.now() > targetTs) {
+          if (!selectCurrentMeeting()) {
+            window.clearInterval(intervalId);
+            return;
+          }
+        }
+
+        var delta = Math.max(0, targetTs - Date.now());
+        var totalSeconds = Math.floor(delta / 1000);
+        var days = Math.floor(totalSeconds / 86400);
+        var hours = Math.floor((totalSeconds % 86400) / 3600);
+        var minutes = Math.floor((totalSeconds % 3600) / 60);
+        var seconds = totalSeconds % 60;
+
+        units.days.textContent = pad(days);
+        units.hours.textContent = pad(hours);
+        units.minutes.textContent = pad(minutes);
+        units.seconds.textContent = pad(seconds);
+      }
+
+      if (!selectCurrentMeeting()) {
+        return;
+      }
+
+      renderCountdown();
+      var intervalId = window.setInterval(renderCountdown, 1000);
+    })();
+  </script>
+{% endif %}
