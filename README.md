@@ -78,9 +78,9 @@ Prerequisite for step 1: install `yamllint` (for example: `python -m pip install
 | Path | Description |
 |---|---|
 | `_config.yml` | Main Jekyll and theme configuration |
-| `_data/` | Static data: navigation, organizers, schedule, mentors |
+| `_data/` | Static data: navigation, organizers, schedule |
 | `_posts/` | Meeting posts (format: `YYYY-MM-DD-NR-spotkanie-*.md`) |
-| `_pages/` | Static pages (about, organizers, mentors, etc.) |
+| `_pages/` | Static pages (about, organizers, etc.) |
 | `_includes/` | Overridden theme partials (masthead, hero) |
 | `_sass/` | Custom color skin (`_wrocnet.scss`) |
 | `assets/` | Images, logo, presentation files (PDF/PPTX) |
