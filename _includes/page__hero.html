@@ -65,7 +65,7 @@
       {% if has_countdown %}
         <aside class="next-meeting-card" data-dates='{{ sorted_dates | jsonify }}' data-targets='[{{ meeting_timestamps_csv }}]' data-start-time="{{ default_start_time }}" data-month-names='{{ month_names | jsonify }}'>
           <p class="next-meeting-card__eyebrow">{{ ui_text.countdown_eyebrow | default: "Next meeting starts in:" }}</p>
-          <div class="next-meeting-card__countdown" aria-label="{{ ui_text.countdown_aria_label | default: "Countdown to the next meeting" }}">
+          <div class="next-meeting-card__countdown" role="timer" aria-live="polite" aria-atomic="true" aria-label="{{ ui_text.countdown_aria_label | default: "Countdown to the next meeting" }}">
             <div class="next-meeting-card__days-row">
               <div class="next-meeting-card__unit next-meeting-card__unit--days">
                 <span data-unit="days">00</span>
