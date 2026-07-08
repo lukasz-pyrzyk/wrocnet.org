@@ -19,36 +19,25 @@
 
 {% assign image_description = image_description | markdownify | strip_html | strip_newlines | escape_once %}
 {% assign default_start_time = site.data.schedule.default_start_time | default: "18:00:00" %}
-{% assign now_ts = 'now' | date: '%s' | plus: 0 %}
 {% assign ui_text = site.data.ui-text[locale] %}
+{% assign has_countdown = false %}
 
-{% if page.url == "/" and site.data.schedule and site.data.schedule.dates %}
+{% if page.url == "/" and site.data.schedule and site.data.schedule.dates and site.data.schedule.dates.size > 0 %}
   {% assign month_names_csv = ui_text.countdown_month_names | default: "January,February,March,April,May,June,July,August,September,October,November,December" %}
   {% assign month_names = month_names_csv | split: "," %}
   {% assign sorted_dates = site.data.schedule.dates | sort %}
   {% assign next_meeting_time_display = default_start_time | slice: 0, 5 %}
-  {% assign next_meeting_date = nil %}
-  {% assign next_meeting_ts = nil %}
-  {% for date_str in sorted_dates %}
-    {% capture meeting_at %}{{ date_str }} {{ default_start_time }}{% endcapture %}
-    {% assign meeting_ts = meeting_at | date: '%s' | plus: 0 %}
-    {% if meeting_ts >= now_ts %}
-      {% assign next_meeting_date = date_str %}
-      {% assign next_meeting_ts = meeting_ts %}
-      {% break %}
-    {% endif %}
-  {% endfor %}
-  {% if next_meeting_date %}
-    {% assign next_month_idx = next_meeting_date | date: "%-m" | minus: 1 %}
-    {% capture next_meeting_display %}{{ next_meeting_date | date: "%-d" }} {{ month_names[next_month_idx] }} {{ next_meeting_date | date: "%Y" }}{% endcapture %}
-  {% endif %}
+  {% assign first_meeting_date = sorted_dates[0] %}
+  {% assign first_month_idx = first_meeting_date | date: "%-m" | minus: 1 %}
+  {% capture first_meeting_display %}{{ first_meeting_date | date: "%-d" }} {{ month_names[first_month_idx] }} {{ first_meeting_date | date: "%Y" }}{% endcapture %}
+  {% assign has_countdown = true %}
 {% endif %}
 
 <div class="page__hero{% if page.header.overlay_color or page.header.overlay_image %}--overlay{% endif %}"
   style="{% if page.header.overlay_color %}background-color: {{ page.header.overlay_color | default: 'transparent' }};{% endif %} {% if overlay_img_path %}background-image: {% if overlay_filter %}{{ overlay_filter }}, {% endif %}url('{{ overlay_img_path }}');{% endif %}"
 >
   {% if page.header.overlay_color or page.header.overlay_image %}
-    <div class="wrapper{% if page.url == "/" and next_meeting_date %} hero-home{% endif %}">
+    <div class="wrapper{% if has_countdown %} hero-home{% endif %}">
       <div class="hero-home__content">
         <h1 id="page-title" class="page__title" itemprop="headline">
           {% if paginator and site.paginate_show_page_num %}
@@ -71,8 +60,8 @@
           </p>
         {% endif %}
       </div>
-      {% if next_meeting_date and next_meeting_ts %}
-        <aside class="next-meeting-card" data-target-ts="{{ next_meeting_ts }}">
+      {% if has_countdown %}
+        <aside class="next-meeting-card" data-dates='{{ sorted_dates | jsonify }}' data-start-time="{{ default_start_time }}" data-month-names='{{ month_names | jsonify }}'>
           <p class="next-meeting-card__eyebrow">{{ ui_text.countdown_eyebrow | default: "Next meeting starts in:" }}</p>
           <div class="next-meeting-card__countdown" aria-label="{{ ui_text.countdown_aria_label | default: "Countdown to the next meeting" }}">
             <div class="next-meeting-card__days-row">
@@ -99,7 +88,7 @@
             </div>
           </div>
           <div class="next-meeting-card__meta">
-            <p class="next-meeting-card__date">{{ next_meeting_display }}, {{ next_meeting_time_display }}</p>
+            <p class="next-meeting-card__date" data-role="meeting-date">{{ first_meeting_display }}, {{ next_meeting_time_display }}</p>
             {% if site.data.schedule.venue.name %}
               <p class="next-meeting-card__venue">{{ site.data.schedule.venue.name }}</p>
             {% endif %}
@@ -115,18 +104,38 @@
   {% endif %}
 </div>
 
-{% if page.url == "/" and next_meeting_date and next_meeting_ts %}
+{% if has_countdown %}
   <script>
     (function () {
-      var card = document.querySelector('.next-meeting-card[data-target-ts]');
+      var card = document.querySelector('.next-meeting-card[data-dates]');
       if (!card) {
         return;
       }
 
-      var targetTs = Number(card.getAttribute('data-target-ts')) * 1000;
-      if (!targetTs) {
+      var dateList = [];
+      var monthNames = [];
+      try {
+        dateList = JSON.parse(card.getAttribute('data-dates') || '[]');
+        monthNames = JSON.parse(card.getAttribute('data-month-names') || '[]');
+      } catch (e) {
         return;
       }
+
+      if (!dateList.length) {
+        return;
+      }
+
+      dateList.sort();
+
+      var timeRaw = card.getAttribute('data-start-time') || '18:00:00';
+      var timeParts = timeRaw.split(':');
+      var timeHours = Number(timeParts[0] || 0);
+      var timeMinutes = Number(timeParts[1] || 0);
+      var timeSeconds = Number(timeParts[2] || 0);
+      var timeLabel = String(timeHours).padStart(2, '0') + ':' + String(timeMinutes).padStart(2, '0');
+
+      var dateLabel = card.querySelector('[data-role="meeting-date"]');
+      var targetTs = 0;
 
       var units = {
         days: card.querySelector('[data-unit="days"]'),
@@ -139,7 +148,52 @@
         return String(value).padStart(2, '0');
       }
 
+      function meetingDate(dateStr) {
+        var parts = dateStr.split('-');
+        var year = Number(parts[0]);
+        var month = Number(parts[1]) - 1;
+        var day = Number(parts[2]);
+        return new Date(year, month, day, timeHours, timeMinutes, timeSeconds);
+      }
+
+      function findNextMeeting(afterTs) {
+        for (var i = 0; i < dateList.length; i += 1) {
+          var candidate = meetingDate(dateList[i]);
+          if (candidate.getTime() >= afterTs) {
+            return candidate;
+          }
+        }
+        return null;
+      }
+
+      function formatMeetingLabel(meeting) {
+        var monthName = monthNames[meeting.getMonth()] || String(meeting.getMonth() + 1);
+        return meeting.getDate() + ' ' + monthName + ' ' + meeting.getFullYear() + ', ' + timeLabel;
+      }
+
+      function selectCurrentMeeting() {
+        var nextMeeting = findNextMeeting(Date.now());
+        if (!nextMeeting) {
+          card.style.display = 'none';
+          return false;
+        }
+
+        targetTs = nextMeeting.getTime();
+        if (dateLabel) {
+          dateLabel.textContent = formatMeetingLabel(nextMeeting);
+        }
+
+        return true;
+      }
+
       function renderCountdown() {
+        if (!targetTs || Date.now() > targetTs) {
+          if (!selectCurrentMeeting()) {
+            window.clearInterval(intervalId);
+            return;
+          }
+        }
+
         var delta = Math.max(0, targetTs - Date.now());
         var totalSeconds = Math.floor(delta / 1000);
         var days = Math.floor(totalSeconds / 86400);
@@ -151,10 +205,10 @@
         units.hours.textContent = pad(hours);
         units.minutes.textContent = pad(minutes);
         units.seconds.textContent = pad(seconds);
+      }
 
-        if (delta <= 0) {
-          window.clearInterval(intervalId);
-        }
+      if (!selectCurrentMeeting()) {
+        return;
       }
 
       renderCountdown();
