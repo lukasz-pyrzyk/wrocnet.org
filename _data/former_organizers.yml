@@ -1,9 +1,5 @@
 # Byli organizatorzy Wrocławskiej Grupy .NET
 # Każdy wpis: name, photo, linkedin (opcjonalne)
-- name: "Mirosław Pragłowski"
-  photo: "/assets/images/organizers/miroslaw-praglowski.jpg"
-  linkedin: "https://www.linkedin.com/in/mpraglowski/"
-
 - name: "Paweł Klimczyk"
   photo: "/assets/images/organizers/pawel-klimczyk.jpg"
   linkedin: "https://www.linkedin.com/in/pawel-klimczyk/"
@@ -16,10 +12,18 @@
   photo: "/assets/images/organizers/radek-maziarka.jpg"
   linkedin: "https://www.linkedin.com/in/radek-maziarka/"
 
+- name: "Weronika Mularczyk"
+  photo: "/assets/images/organizers/weronika-mularczyk.jpg"
+  linkedin: "https://www.linkedin.com/in/weronika-tobor/"
+
 - name: "Tomek Pawluszkiewicz"
   photo: "/assets/images/organizers/tomek-pawluszkiewicz.jpg"
   linkedin: "https://www.linkedin.com/in/tpluskiewicz/"
 
-- name: "Weronika Mularczyk"
-  photo: "/assets/images/organizers/weronika-mularczyk.jpg"
-  linkedin: "https://www.linkedin.com/in/weronika-tobor/"
+- name: "Mirosław Pragłowski"
+  photo: "/assets/images/organizers/miroslaw-praglowski.jpg"
+  linkedin: "https://www.linkedin.com/in/mpraglowski/"
+
+- name: "Bartłomiej Rodak"
+  photo: "/assets/images/organizers/bartlomiej-rodak.jpg"
+  linkedin: "https://www.linkedin.com/in/bartlomiejrodak/"
