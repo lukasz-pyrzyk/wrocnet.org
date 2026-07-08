@@ -2,6 +2,7 @@
 title: "Zostań prelegentem"
 layout: single
 permalink: /zostan-prelegentem/
+excerpt: "Chcesz wystąpić na Wrocławskiej Grupie .NET? Szukamy prelegentów chętnych do podzielenia się wiedzą. Zgłoś swój temat już dzisiaj!"
 author_profile: true
 ---
 

@@ -8,14 +8,17 @@ name: "Wroc.NET"
 description: >-
   Wrocławska Grupa .NET – miesięczne spotkania pasjonatów technologii .NET
   z Wrocławia i okolic. Otwarte, bezpłatne, z prelekcjami i warsztatami.
-url: "https://wrocnet.pyrzyk.net"
+url: "https://wrocnet.org"
 baseurl: ""
 repository: "wrocnet/wrocnet.github.io"
 logo: "/assets/images/logo.png"
+image: "/assets/images/logo.png"
 speaker_form_url: "https://google.com"
 
 twitter:
   username: "wrocnet"
+  site: "@wrocnet"
+  card: "summary_large_image"
 
 facebook:
   username: "WrocNET"
@@ -92,6 +95,7 @@ plugins:
   - jekyll-feed
   - jekyll-include-cache
   - jekyll-remote-theme
+  - jekyll-seo-tag
 
 category_archive:
   type: liquid
