@@ -26,6 +26,8 @@
   {% assign month_names_csv = ui_text.countdown_month_names | default: "January,February,March,April,May,June,July,August,September,October,November,December" %}
   {% assign month_names = month_names_csv | split: "," %}
   {% assign sorted_dates = site.data.schedule.dates | sort %}
+  {% capture meeting_timestamps_csv %}{% for date_str in sorted_dates %}{% capture meeting_at %}{{ date_str }} {{ default_start_time }}{% endcapture %}{{ meeting_at | date: '%s' }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
+  {% assign meeting_timestamps_csv = meeting_timestamps_csv | strip_newlines | strip %}
   {% assign next_meeting_time_display = default_start_time | slice: 0, 5 %}
   {% assign first_meeting_date = sorted_dates[0] %}
   {% assign first_month_idx = first_meeting_date | date: "%-m" | minus: 1 %}
@@ -61,7 +63,7 @@
         {% endif %}
       </div>
       {% if has_countdown %}
-        <aside class="next-meeting-card" data-dates='{{ sorted_dates | jsonify }}' data-start-time="{{ default_start_time }}" data-month-names='{{ month_names | jsonify }}'>
+        <aside class="next-meeting-card" data-dates='{{ sorted_dates | jsonify }}' data-targets='[{{ meeting_timestamps_csv }}]' data-start-time="{{ default_start_time }}" data-month-names='{{ month_names | jsonify }}'>
           <p class="next-meeting-card__eyebrow">{{ ui_text.countdown_eyebrow | default: "Next meeting starts in:" }}</p>
           <div class="next-meeting-card__countdown" aria-label="{{ ui_text.countdown_aria_label | default: "Countdown to the next meeting" }}">
             <div class="next-meeting-card__days-row">
@@ -113,21 +115,25 @@
       }
 
       var dateList = [];
+      var targetList = [];
       var monthNames = [];
       try {
         dateList = JSON.parse(card.getAttribute('data-dates') || '[]');
+        targetList = JSON.parse(card.getAttribute('data-targets') || '[]');
         monthNames = JSON.parse(card.getAttribute('data-month-names') || '[]');
       } catch (e) {
         card.style.display = 'none';
         return;
       }
 
-      if (!dateList.length) {
+      if (!dateList.length || dateList.length !== targetList.length) {
         card.style.display = 'none';
         return;
       }
 
-      dateList.sort();
+      for (var n = 0; n < targetList.length; n += 1) {
+        targetList[n] = Number(targetList[n]) * 1000;
+      }
 
       var timeRaw = card.getAttribute('data-start-time') || '18:00:00';
       var timeParts = timeRaw.split(':');
@@ -150,27 +156,25 @@
         return String(value).padStart(2, '0');
       }
 
-      function meetingDate(dateStr) {
-        var parts = dateStr.split('-');
-        var year = Number(parts[0]);
-        var month = Number(parts[1]) - 1;
-        var day = Number(parts[2]);
-        return new Date(year, month, day, timeHours, timeMinutes, timeSeconds);
-      }
-
       function findNextMeeting(afterTs) {
-        for (var i = 0; i < dateList.length; i += 1) {
-          var candidate = meetingDate(dateList[i]);
-          if (candidate.getTime() >= afterTs) {
-            return candidate;
+        for (var i = 0; i < targetList.length; i += 1) {
+          if (targetList[i] >= afterTs) {
+            return {
+              dateStr: dateList[i],
+              targetTs: targetList[i]
+            };
           }
         }
         return null;
       }
 
-      function formatMeetingLabel(meeting) {
-        var monthName = monthNames[meeting.getMonth()] || String(meeting.getMonth() + 1);
-        return meeting.getDate() + ' ' + monthName + ' ' + meeting.getFullYear() + ', ' + timeLabel;
+      function formatMeetingLabel(dateStr) {
+        var parts = dateStr.split('-');
+        var year = Number(parts[0]);
+        var monthIndex = Number(parts[1]) - 1;
+        var day = Number(parts[2]);
+        var monthName = monthNames[monthIndex] || String(monthIndex + 1);
+        return day + ' ' + monthName + ' ' + year + ', ' + timeLabel;
       }
 
       function selectCurrentMeeting() {
@@ -180,9 +184,9 @@
           return false;
         }
 
-        targetTs = nextMeeting.getTime();
+        targetTs = nextMeeting.targetTs;
         if (dateLabel) {
-          dateLabel.textContent = formatMeetingLabel(nextMeeting);
+          dateLabel.textContent = formatMeetingLabel(nextMeeting.dateStr);
         }
 
         return true;
