@@ -18,31 +18,90 @@
 {% endif %}
 
 {% assign image_description = image_description | markdownify | strip_html | strip_newlines | escape_once %}
+{% assign default_start_time = site.data.schedule.default_start_time | default: "18:00:00" %}
+{% assign now_ts = 'now' | date: '%s' | plus: 0 %}
+
+{% if page.url == "/" and site.data.schedule and site.data.schedule.dates %}
+  {% assign months_pl = "stycznia,lutego,marca,kwietnia,maja,czerwca,lipca,sierpnia,września,października,listopada,grudnia" | split: "," %}
+  {% assign next_meeting_time_display = default_start_time | slice: 0, 5 %}
+  {% assign next_meeting_date = nil %}
+  {% assign next_meeting_ts = nil %}
+  {% for date_str in site.data.schedule.dates %}
+    {% capture meeting_at %}{{ date_str }} {{ default_start_time }}{% endcapture %}
+    {% assign meeting_ts = meeting_at | date: '%s' | plus: 0 %}
+    {% if meeting_ts >= now_ts %}
+      {% assign next_meeting_date = date_str %}
+      {% assign next_meeting_ts = meeting_ts %}
+      {% break %}
+    {% endif %}
+  {% endfor %}
+  {% if next_meeting_date %}
+    {% assign next_month_idx = next_meeting_date | date: "%-m" | minus: 1 %}
+    {% capture next_meeting_display %}{{ next_meeting_date | date: "%-d" }} {{ months_pl[next_month_idx] }} {{ next_meeting_date | date: "%Y" }}{% endcapture %}
+  {% endif %}
+{% endif %}
 
 <div class="page__hero{% if page.header.overlay_color or page.header.overlay_image %}--overlay{% endif %}"
   style="{% if page.header.overlay_color %}background-color: {{ page.header.overlay_color | default: 'transparent' }};{% endif %} {% if overlay_img_path %}background-image: {% if overlay_filter %}{{ overlay_filter }}, {% endif %}url('{{ overlay_img_path }}');{% endif %}"
 >
   {% if page.header.overlay_color or page.header.overlay_image %}
-    <div class="wrapper">
-      <h1 id="page-title" class="page__title" itemprop="headline">
-        {% if paginator and site.paginate_show_page_num %}
-          {{ site.title }}{% unless paginator.page == 1 %} {{ site.data.ui-text[locale].page | default: "Page" }} {{ paginator.page }}{% endunless %}
-        {% else %}
-          {{ page.header.title | default: page.title | default: site.title | markdownify | remove: "<p>" | remove: "</p>" }}
+    <div class="wrapper{% if page.url == "/" and next_meeting_date %} hero-home{% endif %}">
+      <div class="hero-home__content">
+        <h1 id="page-title" class="page__title" itemprop="headline">
+          {% if paginator and site.paginate_show_page_num %}
+            {{ site.title }}{% unless paginator.page == 1 %} {{ site.data.ui-text[locale].page | default: "Page" }} {{ paginator.page }}{% endunless %}
+          {% else %}
+            {{ page.header.title | default: page.title | default: site.title | markdownify | remove: "<p>" | remove: "</p>" }}
+          {% endif %}
+        </h1>
+        {% if page.tagline %}
+          <p class="page__lead">{{ page.tagline | markdownify | remove: "<p>" | remove: "</p>" }}</p>
+        {% elsif page.header.show_overlay_excerpt != false and page.excerpt %}
+          <p class="page__lead">{{ page.excerpt | markdownify | remove: "<p>" | remove: "</p>" }}</p>
         {% endif %}
-      </h1>
-      {% if page.tagline %}
-        <p class="page__lead">{{ page.tagline | markdownify | remove: "<p>" | remove: "</p>" }}</p>
-      {% elsif page.header.show_overlay_excerpt != false and page.excerpt %}
-        <p class="page__lead">{{ page.excerpt | markdownify | remove: "<p>" | remove: "</p>" }}</p>
-      {% endif %}
-      {% include page__meta.html locale=locale %}
-      {% if page.header.actions %}
-        <p>
-        {% for action in page.header.actions %}
-          <a href="{{ action.url | relative_url }}" class="btn btn--light-outline btn--large">{{ action.label | default: site.data.ui-text[locale].more_label | default: "Learn More" }}</a>
-        {% endfor %}
-        </p>
+        {% include page__meta.html locale=locale %}
+        {% if page.header.actions %}
+          <p>
+          {% for action in page.header.actions %}
+            <a href="{{ action.url | relative_url }}" class="btn btn--light-outline btn--large">{{ action.label | default: site.data.ui-text[locale].more_label | default: "Learn More" }}</a>
+          {% endfor %}
+          </p>
+        {% endif %}
+      </div>
+      {% if next_meeting_date and next_meeting_ts %}
+        <aside class="next-meeting-card" data-target-ts="{{ next_meeting_ts }}">
+          <p class="next-meeting-card__eyebrow">Następne spotkanie za:</p>
+          <div class="next-meeting-card__countdown" aria-label="Odliczanie do najbliższego spotkania">
+            <div class="next-meeting-card__days-row">
+              <div class="next-meeting-card__unit next-meeting-card__unit--days">
+                <span data-unit="days">00</span>
+                <small>dni</small>
+              </div>
+            </div>
+            <div class="next-meeting-card__time-row">
+              <div class="next-meeting-card__unit">
+                <span data-unit="hours">00</span>
+                <small>godziny</small>
+              </div>
+              <div class="next-meeting-card__separator">:</div>
+              <div class="next-meeting-card__unit">
+                <span data-unit="minutes">00</span>
+                <small>minuty</small>
+              </div>
+              <div class="next-meeting-card__separator">:</div>
+              <div class="next-meeting-card__unit">
+                <span data-unit="seconds">00</span>
+                <small>sekundy</small>
+              </div>
+            </div>
+          </div>
+          <div class="next-meeting-card__meta">
+            <p class="next-meeting-card__date">{{ next_meeting_display }}, {{ next_meeting_time_display }}</p>
+            {% if site.data.schedule.venue.name %}
+              <p class="next-meeting-card__venue">{{ site.data.schedule.venue.name }}</p>
+            {% endif %}
+          </div>
+        </aside>
       {% endif %}
     </div>
   {% else %}
@@ -52,3 +111,201 @@
     <span class="page__hero-caption">{{ page.header.caption | markdownify | remove: "<p>" | remove: "</p>" }}</span>
   {% endif %}
 </div>
+
+{% if page.url == "/" and next_meeting_date and next_meeting_ts %}
+  <style>
+    .hero-home {
+      display: grid;
+      grid-template-columns: minmax(0, 1.15fr) minmax(320px, 420px);
+      gap: 2.5rem;
+      align-items: center;
+    }
+
+    .hero-home__content {
+      min-width: 0;
+    }
+
+    .next-meeting-card {
+      padding: 1.5rem;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: 18px;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.09), rgba(255, 255, 255, 0.05));
+      box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.06) inset, 0 24px 48px rgba(10, 5, 20, 0.28), 0 0 30px rgba(216, 151, 255, 0.18);
+      backdrop-filter: blur(10px);
+      color: #fff;
+      text-align: center;
+    }
+
+    .next-meeting-card__eyebrow {
+      margin: 0 0 1.15rem;
+      font-size: 0.9rem;
+      font-weight: 700;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+    }
+
+    .next-meeting-card__countdown {
+      display: grid;
+      gap: 0.85rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .next-meeting-card__days-row,
+    .next-meeting-card__time-row {
+      display: grid;
+      justify-content: center;
+      align-items: end;
+    }
+
+    .next-meeting-card__days-row {
+      grid-template-columns: minmax(0, 1fr);
+    }
+
+    .next-meeting-card__time-row {
+      grid-template-columns: repeat(5, auto);
+      gap: 0.35rem;
+    }
+
+    .next-meeting-card__unit {
+      min-width: 0;
+      text-align: center;
+    }
+
+    .next-meeting-card__unit--days span {
+      font-size: clamp(3rem, 6vw, 4.6rem);
+    }
+
+    .next-meeting-card__unit--days small {
+      font-size: 0.82rem;
+    }
+
+    .next-meeting-card__unit span {
+      display: block;
+      font-size: clamp(1.85rem, 3.5vw, 2.9rem);
+      line-height: 1;
+      font-weight: 800;
+      text-shadow: 0 3px 12px rgba(0, 0, 0, 0.25);
+      font-variant-numeric: tabular-nums;
+    }
+
+    .next-meeting-card__unit small {
+      display: block;
+      margin-top: 0.3rem;
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.82);
+    }
+
+    .next-meeting-card__separator {
+      font-size: 1.75rem;
+      line-height: 1.1;
+      font-weight: 700;
+      opacity: 0.62;
+      align-self: start;
+      margin-top: 0.2rem;
+    }
+
+    .next-meeting-card__meta {
+      margin: 0.15rem 0 0;
+    }
+
+    .next-meeting-card__date,
+    .next-meeting-card__venue {
+      margin: 0;
+      font-size: 0.96rem;
+      color: rgba(255, 255, 255, 0.92);
+    }
+
+    .next-meeting-card__venue {
+      margin-top: 0.45rem;
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 0.78rem;
+      font-weight: 600;
+      text-transform: none;
+      letter-spacing: 0.02em;
+    }
+
+    @media (max-width: 960px) {
+      .hero-home {
+        grid-template-columns: 1fr;
+        gap: 1.75rem;
+      }
+
+      .next-meeting-card {
+        max-width: 40rem;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .next-meeting-card {
+        padding: 1.1rem;
+      }
+
+      .next-meeting-card__countdown {
+        gap: 0.75rem;
+      }
+
+      .next-meeting-card__unit--days span {
+        font-size: clamp(2.7rem, 12vw, 4rem);
+      }
+
+      .next-meeting-card__unit span {
+        font-size: clamp(1.7rem, 8vw, 2.4rem);
+      }
+
+      .next-meeting-card__unit small {
+        font-size: 0.62rem;
+      }
+
+      .next-meeting-card__separator {
+        font-size: 1.3rem;
+      }
+    }
+  </style>
+  <script>
+    (function () {
+      var card = document.querySelector('.next-meeting-card[data-target-ts]');
+      if (!card) {
+        return;
+      }
+
+      var targetTs = Number(card.getAttribute('data-target-ts')) * 1000;
+      if (!targetTs) {
+        return;
+      }
+
+      var units = {
+        days: card.querySelector('[data-unit="days"]'),
+        hours: card.querySelector('[data-unit="hours"]'),
+        minutes: card.querySelector('[data-unit="minutes"]'),
+        seconds: card.querySelector('[data-unit="seconds"]')
+      };
+
+      function pad(value) {
+        return String(value).padStart(2, '0');
+      }
+
+      function renderCountdown() {
+        var delta = Math.max(0, targetTs - Date.now());
+        var totalSeconds = Math.floor(delta / 1000);
+        var days = Math.floor(totalSeconds / 86400);
+        var hours = Math.floor((totalSeconds % 86400) / 3600);
+        var minutes = Math.floor((totalSeconds % 3600) / 60);
+        var seconds = totalSeconds % 60;
+
+        units.days.textContent = pad(days);
+        units.hours.textContent = pad(hours);
+        units.minutes.textContent = pad(minutes);
+        units.seconds.textContent = pad(seconds);
+
+        if (delta <= 0) {
+          window.clearInterval(intervalId);
+        }
+      }
+
+      renderCountdown();
+      var intervalId = window.setInterval(renderCountdown, 1000);
+    })();
+  </script>
+{% endif %}
