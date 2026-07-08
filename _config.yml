@@ -12,7 +12,7 @@ url: "https://wrocnet.org"
 baseurl: ""
 repository: "wrocnet/wrocnet.github.io"
 logo: "/assets/images/logo.png"
-image: "/assets/images/logo.png"
+image: "/assets/images/page.png"
 speaker_form_url: "https://google.com"
 
 twitter:
