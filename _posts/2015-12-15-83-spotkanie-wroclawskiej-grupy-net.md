@@ -9,5 +9,5 @@ date: 2015-12-15
 * Wideo: {% include video id="ufpDliAjSP8" provider="youtube" %}
 
 #### Nie palcie frameworków! - [Szymon Pobiega](https://twitter.com/SzymonPobiega)
-* Prezentacja: [odp](/assets/dont-burn-frameworks.odp)
+* Prezentacja: [odp](/slides/dont-burn-frameworks.zip)
 * Wideo: {% include video id="N-iHyJg9xvs" provider="youtube" %}

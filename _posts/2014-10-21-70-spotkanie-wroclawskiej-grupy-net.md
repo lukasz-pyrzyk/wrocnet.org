@@ -5,7 +5,7 @@ date: 2014-10-21
 ---
 
 #### Good programming practices  - [Jarosław Stadnicki]()
-* Prezentacja: [Good programming practices](/assets/good_practices.pptx)
+* Prezentacja: [Good programming practices](/slides/good_practices.zip)
 * Wideo: {% include video id="Pb2m-McZ-So" provider="youtube" %}
 
 #### Constrained and unconstrained isolation frameworks - [Paweł Klimczyk](http://blog.klimczyk.pl)

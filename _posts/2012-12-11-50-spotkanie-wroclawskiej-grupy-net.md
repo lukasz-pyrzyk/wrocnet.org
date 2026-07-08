@@ -5,9 +5,9 @@ date: 2012-12-11
 ---
 
 #### Continous delivery story with FIFA - [Mirosław Jedynak]()
-* Prezentacja: [Continous Delivery]({{BASE_PATH}}/assets/2012.12.11.Wroc.Net%20-%20Continous%20Delivery.pdf)
+* Prezentacja: [Continous Delivery](/slides/2012.12.11.Wroc.Net%20-%20Continous%20Delivery.zip)
 * Wideo: {% include video id="D0k1vdqeMlo" provider="youtube" %}
 
 #### Deployment automation & Continous deployment - Szymon Pobiega
-* Prezentacja: [Continous deployment]({{BASE_PATH}}/assets/continuousdelivery-novideo-121210225256-phpapp01.pptx)
+* Prezentacja: [Continous deployment](/slides/continuousdelivery-novideo-121210225256-phpapp01.zip)
 * Wideo: {% include video id="borthuiofW8" provider="youtube" %}

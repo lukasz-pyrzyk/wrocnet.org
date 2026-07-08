@@ -9,5 +9,5 @@ date: 2017-05-16
 * Wideo: {% include video id="xWkcwLvmBBg" provider="youtube" %}
 
 #### Elm - "no runtime exceptions technology" - [Łukasz Gąsior](https://twitter.com/lukaszgasior)
-* Prezentacja: [pptx](/assets/Elm.pptx)
+* Prezentacja: [pptx](/slides/Elm.zip)
 * Wideo: {% include video id="ytDGphHICWk" provider="youtube" %}

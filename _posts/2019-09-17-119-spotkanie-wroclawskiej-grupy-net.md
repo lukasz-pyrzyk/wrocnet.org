@@ -5,8 +5,8 @@ date: 2019-09-17
 ---
 
 #### Oswoić Spuściznę (Legacy) - [Rafał Chalimoniuk](https://twitter.com/RChalimoniuk)
-* Prezentacja: [PowerPoint](/assets/OswoicLegacy.pptx)
+* Prezentacja: [PowerPoint](/slides/OswoicLegacy.zip)
 * Wideo: wkrótce
 
 #### Anchor Modeling – maintain highly normalized data model that can be changed anytime - [Rafał Hryniewski](https://twitter.com/r_hryniewski)
-* Prezentacja: [PDF](/assets/anchormodeling-190916080011.pdf)
+* Prezentacja: [PDF](/slides/anchormodeling-190916080011.zip)

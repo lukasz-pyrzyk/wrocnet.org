@@ -10,6 +10,6 @@ date: 2015-04-21
 * Wideo: {% include video id="GnLQPKwJ4FQ" provider="youtube" %}
 
 #### Żyjąc na krawędzi, czyli jak wykorzystać kod .NETowy z poziomu JavaScript i przetrwać - [Rafał Legiędź](https://twitter.com/rafek)
-* Prezentacja: [.pptx](/assets/edgejs.pptx)
+* Prezentacja: [.pptx](/slides/edgejs.ppts.zip)
 * Wideo: {% include video id="RSlWyPf-o2A" provider="youtube" %}
 

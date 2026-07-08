@@ -5,10 +5,10 @@ date: 2019-01-15
 ---
 
 #### Loosely coupled architecture - jak pozbyć się efektu domina - [Radosław Maziarka](https://radekmaziarka.pl/)
-* Prezentacja: [Loosely-Coupled-Architecture.pptx](/assets/Loosely-Coupled-Architecture.pptx)
+* Prezentacja: [Loosely-Coupled-Architecture.pptx](/slides/Loosely-Coupled-Architecture.zip)
 * Materiały: [https://radekmaziarka.pl/2019/01/15/loosely-coupled-architecture/](https://radekmaziarka.pl/2019/01/15/loosely-coupled-architecture/)
 * Wideo: {% include video id="1iB87A1W0SA" provider="youtube" %}
 
 #### SpecFlow - testy BDD - [Melchior Kozar](https://github.com/melchiork)
-* Prezentacja: [SpecFlow-intro-pl.pptx](/assets/SpecFlow-intro-pl.pptx)
+* Prezentacja: [SpecFlow-intro-pl.pptx](/slides/SpecFlow-intro-pl.zip)
 * Wideo: {% include video id="dsFOg6Psp6M" provider="youtube" %}
