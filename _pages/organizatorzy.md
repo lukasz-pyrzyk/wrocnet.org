@@ -102,4 +102,27 @@ classes: wide
   opacity: 0.8;
   border-color: #ccc;
 }
+
+@media (max-width: 1024px) {
+  .organizers-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.25rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .organizers-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .organizer-card {
+    padding: 1rem;
+  }
+
+  .organizer-photo {
+    width: 104px;
+    height: 104px;
+  }
+}
 </style>
