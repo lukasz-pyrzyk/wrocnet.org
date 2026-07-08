@@ -44,7 +44,7 @@ classes: wide
 <style>
 .organizers-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 2rem;
   margin-top: 1.5rem;
 }
@@ -81,6 +81,7 @@ classes: wide
 .organizer-name {
   margin: 0 0 0.5rem;
   color: #641e78;
+  word-wrap: break-word;
 }
 .organizer-bio {
   font-size: 0.9em;
