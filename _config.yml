@@ -10,7 +10,7 @@ description: >-
   z Wrocławia i okolic. Otwarte, bezpłatne, z prelekcjami i warsztatami.
 url: "https://wrocnet.org"
 baseurl: ""
-repository: "wrocnet/wrocnet.github.io"
+repository: "lukasz-pyrzyk/wrocnet.org"
 logo: "/assets/images/logo.png"
 image: "/assets/images/logo.png"
 speaker_form_url: "https://google.com"
@@ -39,6 +39,9 @@ author:
   avatar: "/assets/images/logo.png"
   bio: "Wrocławska społeczność pasjonatów .NET, spotykamy się od 2008 r."
   links:
+    - label: "Kod źródłowy strony"
+      icon: "fas fa-fw fa-code"
+      url: "https://github.com/lukasz-pyrzyk/wrocnet.org"
     - label: "Meetup"
       icon: "fas fa-fw fa-users"
       url: "https://www.meetup.com/wrocnet/"
@@ -58,6 +61,9 @@ author:
 footer:
   since: "2012"
   links:
+    - label: "Kod źródłowy strony"
+      icon: "fas fa-fw fa-code"
+      url: "https://github.com/lukasz-pyrzyk/wrocnet.org"
     - label: "Meetup"
       icon: "fas fa-fw fa-users"
       url: "https://www.meetup.com/wrocnet/"
