@@ -1,5 +1,9 @@
 # Byli organizatorzy Wrocławskiej Grupy .NET
 # Każdy wpis: name, photo, linkedin (opcjonalne)
+- name: "Łukasz Gąsior"
+  photo: "/assets/images/organizers/lukasz-gasior.jpg"
+  linkedin: "https://www.linkedin.com/in/lukaszgasior/"
+
 - name: "Paweł Hofman"
   photo: "/assets/images/organizers/pawel-hofman.jpg"
   linkedin: "https://www.linkedin.com/in/pawelhofman/"
