@@ -1,5 +1,9 @@
 # Byli organizatorzy Wrocławskiej Grupy .NET
 # Każdy wpis: name, photo, linkedin (opcjonalne)
+- name: "Paweł Hofman"
+  photo: "/assets/images/organizers/pawel-hofman.jpg"
+  linkedin: "https://www.linkedin.com/in/pawelhofman/"
+
 - name: "Paweł Klimczyk"
   photo: "/assets/images/organizers/pawel-klimczyk.jpg"
   linkedin: "https://www.linkedin.com/in/pawel-klimczyk/"
@@ -15,6 +19,10 @@
 - name: "Weronika Mularczyk"
   photo: "/assets/images/organizers/weronika-mularczyk.jpg"
   linkedin: "https://www.linkedin.com/in/weronika-tobor/"
+
+- name: "Michał Nikołajuk"
+  photo: "/assets/images/organizers/michal-nikolajuk.jpg"
+  linkedin: "https://www.linkedin.com/in/ACoAAAI9-M4BraURQU2RLXFda5jfzMaIDEJqjto"
 
 - name: "Tomek Pawluszkiewicz"
   photo: "/assets/images/organizers/tomek-pawluszkiewicz.jpg"
