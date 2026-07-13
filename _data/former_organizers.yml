@@ -1,8 +1,24 @@
 # Byli organizatorzy Wrocławskiej Grupy .NET
 # Każdy wpis: name, photo, linkedin (opcjonalne)
+- name: "Bartłomiej Legiędź"
+  photo: "/assets/images/organizers/bartlomiej-legiedz.jpg"
+  linkedin: "https://www.linkedin.com/in/ACoAAAC4hOUBqmlrgaFwX8_XefAVaBsi5GIaCPk"
+
+- name: "Bartłomiej Rodak"
+  photo: "/assets/images/organizers/bartlomiej-rodak.jpg"
+  linkedin: "https://www.linkedin.com/in/bartlomiejrodak/"
+
 - name: "Łukasz Gąsior"
   photo: "/assets/images/organizers/lukasz-gasior.jpg"
   linkedin: "https://www.linkedin.com/in/lukaszgasior/"
+
+- name: "Michał Nikołajuk"
+  photo: "/assets/images/organizers/michal-nikolajuk.jpg"
+  linkedin: "https://www.linkedin.com/in/ACoAAAI9-M4BraURQU2RLXFda5jfzMaIDEJqjto"
+
+- name: "Mirosław Pragłowski"
+  photo: "/assets/images/organizers/miroslaw-praglowski.jpg"
+  linkedin: "https://www.linkedin.com/in/mpraglowski/"
 
 - name: "Paweł Hofman"
   photo: "/assets/images/organizers/pawel-hofman.jpg"
@@ -20,22 +36,11 @@
   photo: "/assets/images/organizers/radek-maziarka.jpg"
   linkedin: "https://www.linkedin.com/in/radek-maziarka/"
 
-- name: "Weronika Mularczyk"
-  photo: "/assets/images/organizers/weronika-mularczyk.jpg"
-  linkedin: "https://www.linkedin.com/in/weronika-tobor/"
-
-- name: "Michał Nikołajuk"
-  photo: "/assets/images/organizers/michal-nikolajuk.jpg"
-  linkedin: "https://www.linkedin.com/in/ACoAAAI9-M4BraURQU2RLXFda5jfzMaIDEJqjto"
-
 - name: "Tomek Pawluszkiewicz"
   photo: "/assets/images/organizers/tomek-pawluszkiewicz.jpg"
   linkedin: "https://www.linkedin.com/in/tpluskiewicz/"
 
-- name: "Mirosław Pragłowski"
-  photo: "/assets/images/organizers/miroslaw-praglowski.jpg"
-  linkedin: "https://www.linkedin.com/in/mpraglowski/"
+- name: "Weronika Mularczyk"
+  photo: "/assets/images/organizers/weronika-mularczyk.jpg"
+  linkedin: "https://www.linkedin.com/in/weronika-tobor/"
 
-- name: "Bartłomiej Rodak"
-  photo: "/assets/images/organizers/bartlomiej-rodak.jpg"
-  linkedin: "https://www.linkedin.com/in/bartlomiejrodak/"
