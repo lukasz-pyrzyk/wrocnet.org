@@ -87,7 +87,7 @@ Ogromne podziękowania dla Maćka Aniserowicza i całego zespołu devstyle za za
 ## Tips
 
 - **Post-meetup:** Pisz ciepło, dziękuj konkretnym osobom, podkreślaj atmosferę
-- **Announcements:** Zacznij od problemu / pytania, pokaż prelegentę, zawrzyj CTA
+- **Announcements:** Zacznij od problemu / pytania, pokaż prelegenta, zawrzyj CTA
 - **Partnerships:** Pokaż korzyść dla społeczności, nie „firma płaci za reklamę"
 - **Hashtagi:** Maksymalnie 5-6, relevantne do branży i lokalizacji
 - **Emojis:** Stonowanie – kilka strategicznych, nie overspamowanie
