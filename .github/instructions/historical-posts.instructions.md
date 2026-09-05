@@ -1,3 +1,7 @@
+---
+description: "Use when tworzenie lub czyszczenie postów historycznych (sprzed 2012) w _posts/ na podstawie niekompletnych źródeł archiwalnych — anonimizacja danych, front matter, formatowanie agendy i prelekcji."
+applyTo: "_posts/**"
+---
 # Tworzenie postów historycznych (Spotkania Wroc.NET)
 
 Instrukcja dla agentów AI dotycząca procesowania archiwalnych danych spotkań i konferencji.
