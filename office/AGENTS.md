@@ -73,7 +73,7 @@ Wroc.NET powinien być kojarzony z:
 - czytelnym, nowoczesnym layoutem;
 - charakterem społeczności developerów, a nie generycznym marketingiem korporacyjnym.
 
-Grafiki referencyjne znajdują się w `docs/brand/examples/`. Przed proponowaniem nowej grafiki sprawdź dostępne przykłady, jeśli narzędzia danego środowiska pozwalają na odczyt plików. Traktuj je jako źródło prawdy dla stylu, kompozycji, kolorystyki i poziomu „tech”.
+Grafiki referencyjne znajdują się w `office/content/brand/examples/`. Przed proponowaniem nowej grafiki sprawdź dostępne przykłady, jeśli narzędzia danego środowiska pozwalają na odczyt plików. Traktuj je jako źródło prawdy dla stylu, kompozycji, kolorystyki i poziomu „tech”.
 
 ## Zasady dla grafik
 
@@ -82,7 +82,7 @@ Grafiki referencyjne znajdują się w `docs/brand/examples/`. Przed proponowanie
 - Nie upychaj pełnego opisu wydarzenia na obrazie — najważniejsze: nazwa wydarzenia, data lub jedno hasło.
 - Nie twórz generycznych stockowych grafik biznesowych.
 - Nie dodawaj logotypów ani nazw partnerów, jeśli użytkownik ich nie podał.
-- Do generacji AI: prompt zgodny z referencjami z `docs/brand/examples/`, styl retro-tech/neon, kolory violet/purple, format 1920x1080 (social) lub 1200x600 (banner).
+- Do generacji AI: prompt zgodny z referencjami z `office/content/brand/examples/`, styl retro-tech/neon, kolory violet/purple, format 1920x1080 (social) lub 1200x600 (banner).
 - 50% grafik robimy w AI (szybkie koncepty, iteracje), 50% manualnie w Figma/Canva (precyzyjny design, finalne tweaki).
 - Speaker photos: raw w `assets/images/speakers/raw/`, finalne (~400x400px, JPG/PNG) w `assets/images/speakers/`.
 
@@ -150,7 +150,7 @@ Gotowe przykłady i szablony do adaptacji: [office/content/samples/](content/sam
 ## Workflow dla agenta
 
 1. Sprawdź `office/content/samples/` po podobny przykład zanim zaczniesz pisać od zera.
-2. Sprawdź `docs/brand/examples/` jeśli chodzi o grafikę.
+2. Sprawdź `office/content/brand/examples/` jeśli chodzi o grafikę.
 3. Zapisuj gotową treść do odpowiedniego katalogu w `office/content/`.
 4. Nie modyfikuj grafik referencyjnych bez wyraźnej prośby.
 5. Jeśli dodajesz post Jekyll, zweryfikuj build zgodnie z głównym `AGENTS.md`.
