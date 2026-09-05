@@ -14,7 +14,7 @@ Wroc.NET rośnie – i razem z nami rośnie pragnienie świeżych perspektyw i d
 
 Prelekcja przed społecznością developerów to nie tylko dzielenie wiedzy. To budowanie wizerunku, poznawanie ludzi, którzy pracują nad podobnymi problemami, i – szczerze mówiąc – powód do dumy. 🔥
 
-Mamy 2400+ członków we Wrocławiu i okolicach. Mogą być Twoim audytorem.
+Mamy 2400+ członków we Wrocławiu i okolicach. Mogą być Twoim audytorium.
 
 **Co można przedstawić?**
 
