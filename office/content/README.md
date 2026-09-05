@@ -29,7 +29,7 @@ Przykłady:
 
 Grafiki w `images/`:
 - `brand-*` — referencje stylu marki (np. `brand-meetup-details-1.jpg`)
-- `YYYY-MM-DD-opis.jpg/png` — gotowe grafiki konkretnej kampanii (np. `2026-09-05-call-for-speakers-hero.jpeg`)
+- `YYYY-MM-DD-opis.jpg/png/jpeg` — gotowe grafiki konkretnej kampanii (np. `2026-09-05-call-for-speakers-hero.jpeg`)
 
 ## Workflow
 
