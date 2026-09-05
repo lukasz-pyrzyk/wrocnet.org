@@ -199,4 +199,4 @@ Wroc.NET
 Zapisz gotowe grafiki w `office/content/images/`:
 - `2026-09-05-call-for-speakers-square-1080x1080.jpg` (Twitter)
 - `2026-09-05-call-for-speakers-banner-1200x600.jpg` (LinkedIn)
-- `2026-09-05-call-for-speakers-hero-1920x1080.jpg` (Meetup Newsletter) — już gotowe, patrz [images/2026-09-05-call-for-speakers-hero.jpeg](images/2026-09-05-call-for-speakers-hero.jpeg)
+- `2026-09-05-call-for-speakers-hero.jpeg` (Meetup Newsletter) — już gotowe, patrz [images/2026-09-05-call-for-speakers-hero.jpeg](images/2026-09-05-call-for-speakers-hero.jpeg)
