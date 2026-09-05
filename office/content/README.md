@@ -78,7 +78,7 @@ Dla `announcement` z wieloma kanałami dodaj nagłówek `##` per kanał (LinkedI
 To ułatwia:
 - Wyszukiwanie po dacie, typie, kanale
 - Śledzenie co zostało opublikowane
-- Szybkie znalezienie starych postów do reuzytkalizacji
+- Szybkie znalezienie starych postów do reużycia
 
 ## Git Workflow
 
@@ -99,7 +99,7 @@ git commit -m "Add [TYPE]: [description]"
 ## Tips
 
 - **Keep samples clean** — samples to szablony, gotowa treść żyje płasko w `office/content/`
-- **Metadata matters** — zawsze dodaj date, channel, status; szukanie będzie łatwiejsze
+- **Metadata matters** — zawsze dodaj datę, channel, status; szukanie będzie łatwiejsze
 - **Reuse aggressively** — jeśli znalazłeś pracujący post, zrób go template
 - **Update samples** — co się nauczysz (czemu coś działało/nie), dodaj do README w samples/
 - **Short descriptions** — krótki filename, ale descriptive
