@@ -124,7 +124,7 @@ Warianty formatu (zamień `[INSERT DIMENSION HERE]`):
 2. `Horizontal 1200x600px (LinkedIn banner)`
 3. `Widescreen 1920x1080px (Meetup newsletter header)`
 
-### Alternatywne warianty stylistyczne (tekst dodany po w Canva/Photoshop)
+### Alternatywne warianty stylistyczne (tekst dodany po wygenerowaniu w Canva/Photoshop)
 
 **Wariant A — Pixel-Art Community Network:**
 ```
