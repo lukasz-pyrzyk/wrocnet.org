@@ -46,7 +46,7 @@ Kilka minut – i będziemy w kontakcie. Wszystko inne – logistyka, slajdy, te
 Zamiast "Szukamy Waszych głosów" użyj: "Sezon [jesień/wiosna] – otwieramy rejestrację dla prelegentów!"
 
 ### Wersja krótka (jeśli limit słów)
-Szukamy prelegentek i prelegentów! 🎤 Masz temu coś interesującego do powiedzenia o .NET? Zgłoś się – pomagamy w przygotowaniu, mamy estradę, mamy audytorię (2400+ developerów). Formularz: [LINK]  
+Szukamy prelegentek i prelegentów! 🎤 Masz coś interesującego do powiedzenia o .NET? Zgłoś się – pomagamy w przygotowaniu, mamy estradę, mamy audytorię (2400+ developerów). Formularz: [LINK]  
 #dotnet #wroclaw #wrocnet
 
 ---
