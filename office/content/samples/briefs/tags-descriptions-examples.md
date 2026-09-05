@@ -83,8 +83,8 @@
 - "Jutro! [Prelegent] + [Temat] — daj się zaskoczyć"
 
 **Post-meetup:**
-- "[NR]. Wroc.NET — dziękujesz byli wspaniałe"
-- "Jeszcze żyję — i to gratuluję Wam!
+- "[NR]. Wroc.NET — dziękujemy, byliście świetni"
+- "Jeszcze żyję — i to dzięki Wam!"
 
 **Seasonal:**
 - "Nowy sezon Wroc.NET — See you [Date]"
