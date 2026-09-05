@@ -94,7 +94,7 @@ Avoid: Real people, photorealism, anything too corporate or generic.
 
 ### Dla każdej grafiki:
 - **Iteracja:** Wygeneruj wariant, sprawdź czy kolory to violet/purple i czy styl to retro-tech/minimal
-- **Text:** Dodaj tekst w Canva/Photoshop po wygenerowaniu obrazu, nie próbuj w promjpcie (AI ma problemy z tekstem)
+- **Text:** Dodaj tekst w Canva/Photoshop po wygenerowaniu obrazu, nie próbuj w prompcie (AI ma problemy z tekstem)
 - **Dimensions:** Zawsze pytaj o 1920x1080 dla social media lub 1200x600 dla bannerów
 - **Style refs:** Powtórz "retro-tech", "neon", "pixel-art" jeśli chcesz konsystencji
 
