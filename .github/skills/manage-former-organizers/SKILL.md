@@ -1,13 +1,7 @@
-<!--
-{
-  "name": "manage-former-organizers",
-  "description": "How to add and manage former organizers in the wrocnet.org project.",
-  "applyTo": [
-    "_data/former_organizers.yml",
-    "assets/images/organizers/*"
-  ]
-}
--->
+---
+name: manage-former-organizers
+description: "How to add and manage former organizers in the wrocnet.org project. Use when adding entries to _data/former_organizers.yml or organizer photos in assets/images/organizers/."
+---
 
 # Managing Former Organizers
 
