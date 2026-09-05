@@ -67,9 +67,9 @@ Każdy plik powinien zaczynać się od bloku metadata:
 Przykład:
 ```markdown
 # [ANNOUNCEMENT] 2026-06-16 - Post-Meetup Celebration
-# Context: After 169. Wroc.NET | LinkedIn | 200+ likes expected
-# Status: published
-# Channel: LinkedIn
+**Context:** After 169. Wroc.NET | LinkedIn | 200+ likes expected  
+**Status:** published  
+**Channel:** LinkedIn
 ---
 ```
 
