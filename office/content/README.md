@@ -11,7 +11,7 @@ office/content/
 ├── posts/               # Archiwum postów (LinkedIn, Twitter, itp.)
 ├── newsletters/         # Newslettery Meetup.com
 ├── briefs/              # Krótkie hasła, tagi, opisy do grafik
-└── samples/             # Szablony i przykłady do reuzytkalizacji
+└── samples/             # Szablony i przykłady do reużycia
     ├── README.md        # Jak używać samples
     ├── emails/          # Email templates
     ├── posts/           # Post templates + examples
