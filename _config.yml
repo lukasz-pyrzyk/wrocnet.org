@@ -13,7 +13,7 @@ baseurl: ""
 repository: "lukasz-pyrzyk/wrocnet.org"
 logo: "/assets/images/logo.png"
 image: "/assets/images/page.png"
-speaker_form_url: "https://google.com"
+speaker_form_url: "https://forms.cloud.microsoft/e/QGBMw8zevT"
 
 twitter:
   username: "wrocnet"

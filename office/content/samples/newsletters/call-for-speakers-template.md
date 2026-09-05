@@ -30,7 +30,7 @@ Praktycznie wszystko, co ma związek z .NET i jest wartościowe dla naszej społ
 
 ## Jak się zgłosić?
 
-Wypełnij ten formularz: [PLACEHOLDER — URL do Google Forms]
+Wypełnij ten formularz: https://forms.cloud.microsoft/e/QGBMw8zevT
 
 Wystarczy kilka szczegółów:
 - Twoje imię i kontakt

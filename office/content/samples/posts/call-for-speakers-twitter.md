@@ -8,7 +8,7 @@
 
 ## Wersja 1: Pojedynczy tweet
 
-Szukamy głosów! 🎤 Masz coś wartościowego o .NET do powiedzenia? Prelekcja, demo, case study, hot take – wszystko bierze. Społeczność czeka. Zgłoś się: [PLACEHOLDER — URL do formularza]
+Szukamy głosów! 🎤 Masz coś wartościowego o .NET do powiedzenia? Prelekcja, demo, case study, hot take – wszystko bierze. Społeczność czeka. Zgłoś się: https://forms.cloud.microsoft/e/QGBMw8zevT
 
 #dotnet #wroclaw #wrocnet #speakers
 
@@ -29,7 +29,7 @@ Nie musisz być "ekspertem". Wystarczy doświadczenie i chęć dzielenia się. P
 Mamy 2400+ developerów, którzy chcą Cię słuchać.
 
 **Tweet 3:**
-Zainteresowany? Zgłoś się tu: [PLACEHOLDER — URL do formularza]
+Zainteresowany? Zgłoś się tu: https://forms.cloud.microsoft/e/QGBMw8zevT
 
 W kilka minut – i będziemy w kontakcie. 🔥
 
@@ -39,7 +39,7 @@ W kilka minut – i będziemy w kontakcie. 🔥
 
 ## Wersja 3: Meme-owa (bardziej casual)
 
-Jeśli wiedza nie boli, może już pora się nią podzielić? 😄 Szukamy nowych głosów na estradzie Wroc.NET. Prelekcja, demo, cokolwiek – [LINK]
+Jeśli wiedza nie boli, może już pora się nią podzielić? 😄 Szukamy nowych głosów na estradzie Wroc.NET. Prelekcja, demo, cokolwiek – https://forms.cloud.microsoft/e/QGBMw8zevT
 
 #wrocnet #dotnet
 

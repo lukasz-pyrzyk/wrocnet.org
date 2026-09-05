@@ -30,7 +30,7 @@ Prawie wszystko:
 
 **Zainteresowany?**
 
-Wyślij nam formularz: [PLACEHOLDER — URL do Google Forms]
+Wyślij nam formularz: https://forms.cloud.microsoft/e/QGBMw8zevT
 
 Kilka minut – i będziemy w kontakcie. Wszystko inne – logistyka, slajdy, tech-check – załatwimy z Tobą razem.
 
@@ -46,7 +46,7 @@ Kilka minut – i będziemy w kontakcie. Wszystko inne – logistyka, slajdy, te
 Zamiast "Szukamy Waszych głosów" użyj: "Sezon [jesień/wiosna] – otwieramy rejestrację dla prelegentów!"
 
 ### Wersja krótka (jeśli limit słów)
-Szukamy prelegentek i prelegentów! 🎤 Masz coś interesującego do powiedzenia o .NET? Zgłoś się – pomagamy w przygotowaniu, mamy estradę, mamy audytorię (2400+ developerów). Formularz: [LINK]  
+Szukamy prelegentek i prelegentów! 🎤 Masz coś interesującego do powiedzenia o .NET? Zgłoś się – pomagamy w przygotowaniu, mamy estradę, mamy audytorię (2400+ developerów). Formularz: https://forms.cloud.microsoft/e/QGBMw8zevT  
 #dotnet #wroclaw #wrocnet
 
 ---

@@ -118,7 +118,7 @@ Avoid: Real people, photorealism, anything too corporate or generic.
 SZUKAMY PRELEGENTÓW
 Twoja wiedza, nasza scena.
 ↓ Zgłoś się teraz
-[formularz link]
+https://forms.cloud.microsoft/e/QGBMw8zevT
 ```
 
 Or shorter for Twitter card:
