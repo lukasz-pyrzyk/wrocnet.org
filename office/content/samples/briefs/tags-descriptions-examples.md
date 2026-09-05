@@ -11,7 +11,7 @@
 - "Stabilność. Planowanie. Większy kaliber."
 - "Wroc.NET x Devstyle — partnerstwo, które zmienia grę"
 
-**AI tema:**
+**AI temat:**
 - "Od vibe'u do specyfikacji"
 - "AI w praktyce — nie hype, robota"
 - "Mniej kodu, więcej decyzji"
