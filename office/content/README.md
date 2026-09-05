@@ -1,24 +1,35 @@
 # office/content — Content Archive & Workflow
 
-Scentralizowany katalog dla wszystkich treści Wroc.NET — emails, posty, newslettery, briefy i szablony.
+Scentralizowany katalog dla wszystkich treści Wroc.NET — emaile i ogłoszenia (LinkedIn, Twitter/X, newsletter, grafiki). Jeden płaski folder, typ i data w nazwie pliku (nie w strukturze folderów).
 
 ## Struktura
 
 ```
 office/content/
 ├── README.md (ten plik)
-├── emails/              # Archiwum wysłanych/gotowych maili
-├── posts/               # Archiwum postów (LinkedIn, Twitter, itp.)
-├── newsletters/         # Newslettery Meetup.com
-├── briefs/              # Krótkie hasła, tagi, opisy do grafik
-├── brand/               # Referencyjne grafiki marki (README.md + examples/)
-└── samples/             # Szablony i przykłady do reużycia
-    ├── README.md        # Jak używać samples
-    ├── emails/          # Email templates
-    ├── posts/           # Post templates + examples
-    ├── newsletters/     # Newsletter templates
-    └── briefs/          # Briefs templates + tags
+├── YYYY-MM-DD-TYPE-opis.md   # cała gotowa/robocza treść (email, announcement)
+├── images/                   # wszystkie grafiki (brand-* referencje + gotowe grafiki kampanii)
+│   └── README.md
+└── samples/                  # szablony i przykłady do reużycia (osobno, patrz samples/README.md)
 ```
+
+## Konwencja nazewnictwa
+
+Wszystkie pliki treści leżą płasko bezpośrednio w `office/content/`:
+
+`YYYY-MM-DD-TYPE-opis.md`
+
+gdzie `TYPE` to jedno z: `email`, `announcement`.
+
+`announcement` to jeden plik na temat/kampanię, zawierający sekcje dla każdego kanału (LinkedIn, Twitter/X, Newsletter) oraz sekcję z promptami do grafik (DALL-E/Midjourney) — nie rozbijaj tego na osobne pliki per kanał.
+
+Przykłady:
+- `2026-06-16-announcement-post-meetup-celebration.md`
+- `2026-09-05-announcement-call-for-speakers.md`
+
+Grafiki w `images/`:
+- `brand-*` — referencje stylu marki (np. `brand-meetup-details-1.jpg`)
+- `YYYY-MM-DD-opis.jpg/png/jpeg` — gotowe grafiki konkretnej kampanii (np. `2026-09-05-call-for-speakers-hero.jpeg`)
 
 ## Workflow
 
@@ -31,7 +42,7 @@ office/content/
 
 ### 2. Po wysłaniu/opublikowaniu
 
-- **Przenieś finał** do odpowiedniego folderu (`emails/`, `posts/`, itp.)
+- **Zapisz/zaktualizuj plik** bezpośrednio w `office/content/` z nazwą `YYYY-MM-DD-TYPE-opis.md`
 - **Zachowaj metadata** (data, kanał, rezultat)
 - **Commituj do Git** — historia jest ważna
 
@@ -41,43 +52,33 @@ office/content/
 - **Linkuj do starych wersji** jeśli adaptujesz stary post
 - **Dokumentuj wzory** — co działało, co nie
 
-## Konwencje nazewnictwa
-
-### Samples
-- `linkedin-examples.md` — przykłady postów LinkedIn
-- `pre-meetup-examples.md` — przykłady newsletterów pre-meetup
-- `email-templates.md` — szablony maili
-- `tags-descriptions-examples.md` — briefs, hashtagi, opisy
-
-### Archiwum (emails/, posts/, newsletters/)
-- `YYYY-MM-DD-brief-description.md` — pełny tekst + metadata
-- Przykład: `2026-06-16-post-post-meetup-celebration.md`
-
 ## Metadane w plikach
 
 Każdy plik powinien zaczynać się od bloku metadata:
 
 ```markdown
 # [TYPE] [DATE] - [TITLE]
-# Context: [who/when/channel/notes]
-# Status: [template/draft/sent/published]
-# Channel: [LinkedIn/Email/Meetup/Twitter/etc]
+**Context:** [who/when/channel/notes]
+**Status:** [template/draft/sent/published]
+**Channel:** [LinkedIn/Email/Meetup/Twitter/etc]
 ---
 ```
 
 Przykład:
 ```markdown
-# [POST] 2026-06-16 - Post-Meetup Celebration
-# Context: After 169. Wroc.NET | LinkedIn | 200+ likes expected
-# Status: published
-# Channel: LinkedIn
+# [ANNOUNCEMENT] 2026-06-16 - Post-Meetup Celebration
+**Context:** After 169. Wroc.NET | LinkedIn | 200+ likes expected  
+**Status:** published  
+**Channel:** LinkedIn
 ---
 ```
+
+Dla `announcement` z wieloma kanałami dodaj nagłówek `##` per kanał (LinkedIn, Twitter/X, Newsletter, Grafiki / AI Prompts) zamiast osobnych plików.
 
 To ułatwia:
 - Wyszukiwanie po dacie, typie, kanale
 - Śledzenie co zostało opublikowane
-- Szybkie znalezienie starych postów do reuzytkalizacji
+- Szybkie znalezienie starych postów do reużycia
 
 ## Git Workflow
 
@@ -88,17 +89,17 @@ git add office/content/samples/[TYPE]/filename.md
 git commit -m "Add [TYPE] template: [description]"
 ```
 
-### Finał do archiwum (po wysłaniu)
+### Finał treści
 ```bash
-# Przenieś z draftu, commituj z datą
-git add office/content/[TYPE]/YYYY-MM-DD-description.md
-git commit -m "Archive: [TYPE] published on [DATE] - [description]"
+# Commituj z datą w nazwie pliku
+git add office/content/YYYY-MM-DD-TYPE-opis.md
+git commit -m "Add [TYPE]: [description]"
 ```
 
 ## Tips
 
-- **Keep samples clean** — nie zaśmiecaj je archiwum; archived files idą do `emails/`, `posts/`, etc.
-- **Metadata matters** — zawsze dodaj date, channel, status; szukanie będzie łatwiejsze
+- **Keep samples clean** — samples to szablony, gotowa treść żyje płasko w `office/content/`
+- **Metadata matters** — zawsze dodaj datę, channel, status; szukanie będzie łatwiejsze
 - **Reuse aggressively** — jeśli znalazłeś pracujący post, zrób go template
 - **Update samples** — co się nauczysz (czemu coś działało/nie), dodaj do README w samples/
 - **Short descriptions** — krótki filename, ale descriptive
