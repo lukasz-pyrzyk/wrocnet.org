@@ -8,6 +8,12 @@ author_profile: true
 
 Szukamy prelegentów, którzy chcą podzielić się wiedzą z wrocławską społecznością .NET!
 
+<a href="{{ site.speaker_form_url }}" class="btn btn--primary btn--large" target="_blank" rel="noopener noreferrer">
+  Zgłoś temat teraz →
+</a>
+
+---
+
 ## Czego szukamy?
 
 Interesują nas tematy związane z ekosystemem Microsoft i okolicami:

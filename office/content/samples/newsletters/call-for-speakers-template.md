@@ -30,7 +30,7 @@ Praktycznie wszystko, co ma związek z .NET i jest wartościowe dla naszej społ
 
 ## Jak się zgłosić?
 
-Wypełnij ten formularz: [PLACEHOLDER — URL do Google Forms]
+Zgłoś się tutaj: https://wrocnet.org/zostan-prelegentem/
 
 Wystarczy kilka szczegółów:
 - Twoje imię i kontakt
