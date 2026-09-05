@@ -37,7 +37,7 @@ W kilka minut – i będziemy w kontakcie. 🔥
 
 ---
 
-## Wersja 3: Meme-owa (bardziej causal)
+## Wersja 3: Meme-owa (bardziej casual)
 
 Jeśli wiedza nie boli, może już pora się nią podzielić? 😄 Szukamy nowych głosów na estradzie Wroc.NET. Prelekcja, demo, cokolwiek – [LINK]
 
