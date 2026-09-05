@@ -13,7 +13,7 @@ Jeden temat, jeden plik — kopiuj sekcję dla każdego kanału zamiast szukać 
 
 Szukamy Waszych głosów! 🎤
 
-Wroc.NET rośnie – i razem z nami rośnie pragnienie świeżych perspektyw i doświadczeń. Jeśli masz coś ciekawego do powiedzenia o .NET, toolach, architekturze, doświadczeniach z projektów albo po prostu nauce z porażek – znaleźliśmy dla Ciebie estradę.
+Wroc.NET rośnie – i razem z nami rośnie pragnienie świeżych perspektyw i doświadczeń. Jeśli masz coś ciekawego do powiedzenia o .NET, narzędziach, architekturze, doświadczeniach z projektów albo po prostu nauce z porażek – znaleźliśmy dla Ciebie estradę.
 
 **➜ Zgłoś się tutaj: https://wrocnet.org/zostan-prelegentem/**
 

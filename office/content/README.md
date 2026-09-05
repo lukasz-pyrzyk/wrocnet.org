@@ -58,9 +58,9 @@ Każdy plik powinien zaczynać się od bloku metadata:
 
 ```markdown
 # [TYPE] [DATE] - [TITLE]
-# Context: [who/when/channel/notes]
-# Status: [template/draft/sent/published]
-# Channel: [LinkedIn/Email/Meetup/Twitter/etc]
+**Context:** [who/when/channel/notes]
+**Status:** [template/draft/sent/published]
+**Channel:** [LinkedIn/Email/Meetup/Twitter/etc]
 ---
 ```
 

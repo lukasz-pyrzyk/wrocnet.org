@@ -11,7 +11,7 @@
 
 Szukamy Waszych głosów! 🎤
 
-Wroc.NET rośnie – i razem z nami rośnie pragnienie świeżych perspektyw i doświadczeń. Jeśli masz coś ciekawego do powiedzenia o .NET, toolach, architekturze, doświadczeniach z projektów albo po prostu nauce z porażek – znaleźliśmy dla Ciebie estradę.
+Wroc.NET rośnie – i razem z nami rośnie pragnienie świeżych perspektyw i doświadczeń. Jeśli masz coś ciekawego do powiedzenia o .NET, narzędziach, architekturze, doświadczeniach z projektów albo po prostu nauce z porażek – znaleźliśmy dla Ciebie estradę.
 
 **➜ Zgłoś się tutaj: https://wrocnet.org/zostan-prelegentem/**
 
@@ -112,7 +112,7 @@ TEXT OVERLAY (integrate into image, not post-production):
 
 TEXT PLACEMENT RULE: All text positioned at the TOP portion of image for mobile visibility.
 
-Format: [INSERT DIMENSION HERE — see variants below]
+Format: [INSERT DIMENSION HERE]
 
 Ensure text is readable on all devices.
 
@@ -124,7 +124,7 @@ Warianty formatu (zamień `[INSERT DIMENSION HERE]`):
 2. `Horizontal 1200x600px (LinkedIn banner)`
 3. `Widescreen 1920x1080px (Meetup newsletter header)`
 
-### Alternatywne warianty stylistyczne (tekst dodany po wygenerowaniu w Canva/Photoshop)
+### Alternatywne warianty stylistyczne (tekst dodany po wygenerowaniu w Canvie/Photoshopie)
 
 **Wariant A — Pixel-Art Community Network:**
 ```
@@ -182,7 +182,7 @@ Wroc.NET
 ### Tips dla generacji
 
 - **Iteracja:** Wygeneruj wariant, sprawdź czy kolory to violet/purple i czy styl to retro-tech/minimal
-- **Text:** Jeśli AI ma problem z tekstem w prompcie, dodaj go w Canva/Photoshop po wygenerowaniu
+- **Text:** Jeśli AI ma problem z tekstem w prompcie, dodaj go w Canvie/Photoshopie po wygenerowaniu
 - **Style refs:** Powtórz "retro-tech", "neon", "pixel-art" jeśli chcesz konsystencji
 - **Post-generacja:** pobierz PNG → Canva/Figma/Photoshop → dodaj tekst i logo Wroc.NET → eksportuj JPG (max 2MB)
 

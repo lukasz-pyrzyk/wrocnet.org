@@ -11,7 +11,7 @@
 
 Cześć!
 
-Już za [X dni] spotykamy się na [NR]. spotkaniu Wrocławskiej Grupy .NET. Czeka nas co najmniej jedno [liczba] interesujące tematy, których nie warto przegapić.
+Już za [X dni] spotykamy się na [NR]. spotkaniu Wrocławskiej Grupy .NET. Czeka nas co najmniej [liczba] interesujących tematów, których nie warto przegapić.
 
 ## 🔊 Temat 1: [TYTUŁ PRELEKCJI]
 
@@ -61,20 +61,20 @@ Cześć!
 
 Już za kilka dni zamykamy sezon — i będzie to spotkanie trochę inne niż wszystkie do tej pory.
 
-Dostaniecie preview nowej formuły, którą będziemy pracować w kolejnym sezonie. Wroc.NET wraca do korzeni i wchodzi na wyższy poziom!
+Dostaniecie preview nowej formuły, nad którą będziemy pracować w kolejnym sezonie. Wroc.NET wraca do korzeni i wchodzi na wyższy poziom!
 
 ## 🔊 Nie strzel sobie w stopę — Karol Rogowski
 
 Czy planujesz rozmowę kwalifikacyjną na nowe stanowisko? Czy zastanawiasz się, co Cię powstrzymało w ostatniej próbie?
 
-Karol pokazze Ci błędy w rozmowach technicznych — ale nie te techniczne. To są te niewidoczne, które robią różnicę.
+Karol pokaże Ci błędy w rozmowach technicznych — ale nie te techniczne. To są te niewidoczne, które robią różnicę.
 
 **Karol Rogowski**  
 Head of Engineering at SoftwareHut. Prowadził dziesiątki rozmów kwalifikacyjnych. Autor książek i artykułów. Fan H.P. Lovecrafta.
 
 ## 🔊 Podstawy cybersecurity w CI/CD — Mateusz Konicki
 
-Cyberbezpieczeństwo nie musi być skomplikowane. Mateusz pokaże, jak wpleść je bezpośrednio w Twój pipeline — zamiast czekać na audit na koniec projektu.
+Cyberbezpieczeństwo nie musi być skomplikowane. Mateusz pokaże, jak wpleść je bezpośrednio w Twój pipeline — zamiast czekać na audyt na koniec projektu.
 
 **Mateusz Konicki**  
 Architekt oprogramowania. Specjalista Azure/AWS. Med-tech to jego specjalność.
@@ -97,7 +97,7 @@ Architekt oprogramowania. Specjalista Azure/AWS. Med-tech to jego specjalność.
 
 Na spotkaniu zawsze robimy kilka zdjęć na nasze social media — biorąc udział, akceptujesz, że możesz się na nich znaleźć 📸
 
-Do zobaczenia już w wtorek! 🚀
+Do zobaczenia już we wtorek! 🚀
 
 ---
 
