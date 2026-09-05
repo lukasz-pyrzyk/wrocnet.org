@@ -10,6 +10,8 @@ Szukamy Waszych głosów! 🎤
 
 Wroc.NET rośnie – i razem z nami rośnie pragnienie świeżych perspektyw i doświadczeń. Jeśli masz coś ciekawego do powiedzenia o .NET, toolach, architekturze, doświadczeniach z projektów albo po prostu nauce z porażek – znaleźliśmy dla Ciebie estradę.
 
+**➜ Zgłoś się tutaj: https://wrocnet.org/zostan-prelegentem/**
+
 **Dlaczego warto?**
 
 Prelekcja przed społecznością developerów to nie tylko dzielenie wiedzy. To budowanie wizerunku, poznawanie ludzi, którzy pracują nad podobnymi problemami, i – szczerze mówiąc – powód do dumy. 🔥
@@ -28,26 +30,11 @@ Prawie wszystko:
 
 **Nie musisz być "ekspertem"** – wystarczy, że masz doświadczenie i chęć dzielenia się.
 
-**Zainteresowany?**
-
-Zgłoś się tutaj: https://wrocnet.org/zostan-prelegentem/
-
-Kilka minut – i będziemy w kontakcie. Wszystko inne – logistyka, slajdy, tech-check – załatwimy z Tobą razem.
-
 ---
 
 **#dotnet #wroclaw #wrocnet #community #speakers #meetup**
 
----
 
-## Warianty dla różnych sezonów
-
-### Wersja "Na jesień/wiosnę"
-Zamiast "Szukamy Waszych głosów" użyj: "Sezon [jesień/wiosna] – otwieramy rejestrację dla prelegentów!"
-
-### Wersja krótka (jeśli limit słów)
-Szukamy prelegentek i prelegentów! 🎤 Masz coś interesującego do powiedzenia o .NET? Zgłoś się – pomagamy w przygotowaniu, mamy estradę, mamy audytorię (2400+ developerów). Zgłoś się: https://wrocnet.org/zostan-prelegentem/  
-#dotnet #wroclaw #wrocnet
 
 ---
 

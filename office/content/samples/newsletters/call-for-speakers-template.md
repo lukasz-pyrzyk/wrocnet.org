@@ -11,6 +11,8 @@ Cześć!
 
 Wroc.NET rośnie, a razem z nami rośnie też głód świeżych perspektyw. Szukamy ludzi, którzy chcą podzielić się swoją wiedzą lub doświadczeniem z lokalną społecznością .NET.
 
+**➜ Zgłoś się tutaj: https://wrocnet.org/zostan-prelegentem/**
+
 ## Dlaczego warto przemawiać?
 
 - **Wzmocnisz swoją pozycję** w branży — prelekcja to jeden z najlepszych sposobów na budowanie wizerunku.
@@ -29,8 +31,6 @@ Praktycznie wszystko, co ma związek z .NET i jest wartościowe dla naszej społ
 - cokolwiek innego, o czym mówisz z pasją!
 
 ## Jak się zgłosić?
-
-Zgłoś się tutaj: https://wrocnet.org/zostan-prelegentem/
 
 Wystarczy kilka szczegółów:
 - Twoje imię i kontakt
