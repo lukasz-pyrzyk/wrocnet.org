@@ -4,7 +4,7 @@
 
 **Status:** sent (after 169. Wroc.NET)  
 **Channel:** LinkedIn  
-**Context:** Podsumowanie spotkania, dziękięcia dla uczestników i partnerów
+**Context:** Podsumowanie spotkania, podziękowania dla uczestników i partnerów
 
 ---
 
