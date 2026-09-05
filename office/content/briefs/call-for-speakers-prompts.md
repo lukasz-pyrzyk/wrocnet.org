@@ -118,7 +118,7 @@ Avoid: Real people, photorealism, anything too corporate or generic.
 SZUKAMY PRELEGENTÓW
 Twoja wiedza, nasza scena.
 ↓ Zgłoś się teraz
-https://forms.cloud.microsoft/e/QGBMw8zevT
+https://wrocnet.org/zostan-prelegentem/
 ```
 
 Or shorter for Twitter card:
