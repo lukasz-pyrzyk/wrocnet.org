@@ -3,7 +3,7 @@
 Rzeczywiste przykłady treści Wroc.NET, podzielone tematycznie. Użyj ich jako punktu wyjścia zamiast pisać od zera.
 
 - **emails/** — maile do społeczności, prelegentów, partnerów
-- **announcements/** — ogłoszenia multi-channel: LinkedIn, Twitter/X, Newsletter i prompty do grafik w jednym pliku na temat
+- **announcements/** — ogłoszenia i szablony (preferuj multi-channel: LinkedIn, Twitter/X, Newsletter + prompty do grafik w jednym pliku na temat)
 - **briefs/** — hasła, tagi, opisy do grafik
 
 ## Jak używać
