@@ -7,6 +7,6 @@ date: 2008-11-27
 
 Miejsce: Capgemini, Quattro Forum, ul. Legnicka 51-53, Wrocław
 
-#### "SQL Server User-Defined Functions — The Good, The Bad, The Ugly" — Maciej Pilecki
+#### "SQL Server User-Defined Functions — The Good, The Bad, The Ugly" — {% include speaker.html id="maciej-pilecki" %}
 
-#### "Programowanie GUI — Wzorce, komunikacja i organizacja kodu" — Marcin Gołębiowski
+#### "Programowanie GUI — Wzorce, komunikacja i organizacja kodu" — {% include speaker.html id="marcin-golebiowski" %}

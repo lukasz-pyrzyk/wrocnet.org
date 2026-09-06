@@ -8,8 +8,8 @@ tags:
 
 158. spotkanie Wrocławskiej Grupy .NET odbyło się 28.05.2024 r. w **Avanade, ul. Piotra Skargi 1, Wrocław**.
 
-**Fullstack 2.0: Jak AI i ML zmieniają rolę programisty** — Kasper Stasiak
+**Fullstack 2.0: Jak AI i ML zmieniają rolę programisty** — {% include speaker.html id="kasper-stasiak" %}
 
-**Transition from Event Storming to Event Modeling** — Daniel Kowalski
+**Transition from Event Storming to Event Modeling** — {% include speaker.html id="daniel-kowalski" %}
 
 *Więcej informacji: [Meetup](https://www.meetup.com/wrocnet/)*

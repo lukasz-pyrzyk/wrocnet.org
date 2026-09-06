@@ -8,6 +8,6 @@ tags:
 
 164. spotkanie Wrocławskiej Grupy .NET odbyło się 09.12.2025 r. w **Ultranet, ul. Strzegomska 138, Wrocław**.
 
-**Tech Lead 2.0 - jak GenAI zmienia zasady gry** — Radek Maziarka
+**Tech Lead 2.0 - jak GenAI zmienia zasady gry** — {% include speaker.html id="radoslaw-maziarka" %}
 
 *Więcej informacji: [Meetup](https://www.meetup.com/wrocnet/)*

@@ -8,8 +8,8 @@ tags:
 
 131. spotkanie Wrocławskiej Grupy .NET odbyło się 24.11.2020 r..
 
-**Praktyczne zastosowanie EventModelingu w tworzeniu Modularnego Monolitu** — Krzysztof Owsiany
+**Praktyczne zastosowanie EventModelingu w tworzeniu Modularnego Monolitu** — {% include speaker.html id="krzysztof-owsiany" %}
 
-**Różne style prowadzenia Code Review w twoim zespole** — Krzysztof Morcinek
+**Różne style prowadzenia Code Review w twoim zespole** — {% include speaker.html id="krzysztof-morcinek" %}
 
 *Więcej informacji: [Meetup](https://www.meetup.com/wrocnet/)*

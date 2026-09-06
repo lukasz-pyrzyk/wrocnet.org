@@ -8,8 +8,8 @@ tags:
 
 141. spotkanie Wrocławskiej Grupy .NET odbyło się 18.01.2022 r..
 
-**Blazor WASM: Hot or not** — Kajetan Duszyński
+**Blazor WASM: Hot or not** — {% include speaker.html id="kajetan-duszynski" %}
 
-**Od LINQ do F#** — Marcin Kern
+**Od LINQ do F#** — {% include speaker.html id="marcin-kern" %}
 
 *Więcej informacji: [Meetup](https://www.meetup.com/wrocnet/)*

@@ -4,9 +4,9 @@ title: '102\. spotkanie - Full stack TypeScript, Mac dla .NET'
 date: 2017-10-17
 ---
 
-#### Full stack TypeScript dla programisty .NET - Marcin Najder
+#### Full stack TypeScript dla programisty .NET - {% include speaker.html id="marcin-najder" %}
 * Prezentacja: [PDF](/slides/ts4csharp.zip)
 * Wideo: {% include video id="lDnPDzaCpJ8" provider="youtube" %}
 
-#### Mac dla programistów .NET - Michał Szafrański
+#### Mac dla programistów .NET - {% include speaker.html id="michal-szafranski" %}
 * Wideo: niestety brak

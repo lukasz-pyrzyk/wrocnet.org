@@ -8,8 +8,8 @@ tags:
 
 166. spotkanie Wrocławskiej Grupy .NET odbyło się 24.03.2026 r. w **Ultranet, ul. Strzegomska 138, Wrocław**.
 
-**.NET MAUI + GitHub Copilot - rób mniej, dostarczaj więcej** — Michał Pobuta
+**.NET MAUI + GitHub Copilot - rób mniej, dostarczaj więcej** — {% include speaker.html id="michal-pobuta" %}
 
-**Toadie z Claude Code - czyli jak stworzyłem swojego personalnego multi-device bota** — Michał Franc
+**Toadie z Claude Code - czyli jak stworzyłem swojego personalnego multi-device bota** — {% include speaker.html id="michal-franc" %}
 
 *Więcej informacji: [Meetup](https://www.meetup.com/wrocnet/)*

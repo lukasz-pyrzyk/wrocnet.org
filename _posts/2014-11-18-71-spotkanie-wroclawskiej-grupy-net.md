@@ -4,10 +4,10 @@ title: '71\. spotkanie - Git versioning, GitLink'
 date: 2014-11-18
 ---
 
-#### Git versioning  - [Tomasz Pluskiewicz](http://t-code.pl)
+#### Git versioning  - {% include speaker.html id="tomasz-pluskiewicz" %}
 * Prezentacja: [Versioning .NET projects](http://git-versioning.t-code.pl)
 * Wideo: {% include video id="aQzWlVbiAzA" provider="youtube" %}
 
-#### GitLink - [Tomasz Pluskiewicz](http://t-code.pl)
+#### GitLink - {% include speaker.html id="tomasz-pluskiewicz" %}
 * Prezentacja: [GitLink](https://http://gitlink.t-code.pl/)
 * Wideo:  {% include video id="P8uWy7ZmMpM" provider="youtube" %}

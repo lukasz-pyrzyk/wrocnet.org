@@ -8,8 +8,8 @@ tags:
 
 148. spotkanie Wrocławskiej Grupy .NET odbyło się 18.10.2022 r. w **Avanade, ul. Piotra Skargi 1, Wrocław**.
 
-**Chmurowa niezawodność w Azure dla programistów** — Łukasz Kałużny
+**Chmurowa niezawodność w Azure dla programistów** — {% include speaker.html id="lukasz-kaluzny" %}
 
-**Record about Records** — Maciej Mokrzycki
+**Record about Records** — {% include speaker.html id="maciej-mokrzycki" %}
 
 *Więcej informacji: [Meetup](https://www.meetup.com/wrocnet/)*

@@ -8,6 +8,6 @@ tags:
 
 157. spotkanie Wrocławskiej Grupy .NET odbyło się 23.04.2024 r. w **Avanade, ul. Piotra Skargi 1, Wrocław**.
 
-**Szybko czy dobrze? Poproszę oba** — Radek Maziarka
+**Szybko czy dobrze? Poproszę oba** — {% include speaker.html id="radoslaw-maziarka" %}
 
 *Więcej informacji: [Meetup](https://www.meetup.com/wrocnet/)*

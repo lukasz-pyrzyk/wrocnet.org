@@ -4,7 +4,7 @@ title: '95\. spotkanie - Multithreading'
 date: 2017-03-02
 ---
 
-#### Open the lock - [Marcin Dudek](http://oskar-dudycz.pl)
+#### Open the lock - {% include speaker.html id="marcin-dudek" %}
 * Prezentacja: [Slajdy](https://marcin-dudek.github.io/p/open-the-lock/#/)
 * Wideo: {% include video id="dPj\_-Enbv1E" provider="youtube" %}
 
