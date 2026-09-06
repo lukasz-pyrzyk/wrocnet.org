@@ -4,12 +4,19 @@ date: 2022-02-15
 categories: spotkania
 tags:
   - .NET
+talks:
+- title: Cosmos DB - meh czy wow?
+  speaker_ids:
+  - piotr-stapp
+- title: Azure Data Explorer w zastosowaniach
+  speaker_ids:
+  - marek-gawryszewski
 ---
 
 142. spotkanie Wrocławskiej Grupy .NET odbyło się 15.02.2022 r..
 
-**Cosmos DB - meh czy wow?** — {% include speaker.html id="piotr-stapp" %}
+{% include talk.html index=0 %}
 
-**Azure Data Explorer w zastosowaniach** — {% include speaker.html id="marek-gawryszewski" %}
+{% include talk.html index=1 %}
 
 *Więcej informacji: [Meetup](https://www.meetup.com/wrocnet/)*

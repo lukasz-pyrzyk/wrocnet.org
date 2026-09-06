@@ -4,12 +4,19 @@ date: 2021-11-16
 categories: spotkania
 tags:
   - .NET
+talks:
+- title: Fix your technical debt and improve your architecture with NDepend
+  speaker_ids:
+  - patrick-smacchia
+- title: Date & Time in C#
+  speaker_ids:
+  - weronika-sabiniewicz
 ---
 
 139. spotkanie Wrocławskiej Grupy .NET odbyło się 16.11.2021 r..
 
-**Fix your technical debt and improve your architecture with NDepend** — {% include speaker.html id="patrick-smacchia" %}
+{% include talk.html index=0 %}
 
-**Date & Time in C#** — {% include speaker.html id="weronika-sabiniewicz" %}
+{% include talk.html index=1 %}
 
 *Więcej informacji: [Meetup](https://www.meetup.com/wrocnet/)*

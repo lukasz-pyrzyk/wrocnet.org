@@ -2,9 +2,13 @@
 layout: single
 title: '95\. spotkanie - Multithreading'
 date: 2017-03-02
+talks:
+- title: Open the lock
+  speaker_ids:
+  - marcin-dudek
 ---
 
-#### Open the lock - {% include speaker.html id="marcin-dudek" %}
+{% include talk.html index=0 %}
 * Prezentacja: [Slajdy](https://marcin-dudek.github.io/p/open-the-lock/#/)
 * Wideo: {% include video id="dPj\_-Enbv1E" provider="youtube" %}
 

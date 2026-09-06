@@ -4,14 +4,24 @@ date: 2023-06-22
 categories: spotkania
 tags:
   - .NET
+talks:
+- title: Umbraco - .NET-owy CMS
+  speaker_ids:
+  - bartosz-dudek
+- title: Unit Tests - you do it wrong!
+  speaker_ids:
+  - andrzej-nowik
+- title: Journey from Discovery to Delivery with Event Modeling
+  speaker_ids:
+  - daniel-kowalski
 ---
 
 155. spotkanie Wrocławskiej Grupy .NET odbyło się 22.06.2023 r. w **Klubokawiarnia Mleczarnia, ul. Pawła Włodkowica 5, Wrocław**.
 
-**Umbraco - .NET-owy CMS** — {% include speaker.html id="bartosz-dudek" %}
+{% include talk.html index=0 %}
 
-**Unit Tests - you do it wrong!** — {% include speaker.html id="andrzej-nowik" %}
+{% include talk.html index=1 %}
 
-**Journey from Discovery to Delivery with Event Modeling** — {% include speaker.html id="daniel-kowalski" %}
+{% include talk.html index=2 %}
 
 *Więcej informacji: [Meetup](https://www.meetup.com/wrocnet/)*
