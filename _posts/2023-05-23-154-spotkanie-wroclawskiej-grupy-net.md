@@ -8,7 +8,7 @@ tags:
 
 154. spotkanie Wrocławskiej Grupy .NET odbyło się 23.05.2023 r. w **Avanade, ul. Piotra Skargi 1, Wrocław**.
 
-**Prompt engineering - jak rozmawiać z chatGPT?** — Kasper Stasiak
+**Prompt engineering - jak rozmawiać z chatGPT?** — {% include speaker.html id="kasper-stasiak" %}
 
 **Panel dyskusyjny**
 

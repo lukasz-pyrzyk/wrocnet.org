@@ -8,8 +8,8 @@ tags:
 
 143. spotkanie Wrocławskiej Grupy .NET odbyło się 22.03.2022 r..
 
-**Proste triki testerskie, które polepszą jakość Twojej historyjki** — Maciej Wyrodek
+**Proste triki testerskie, które polepszą jakość Twojej historyjki** — {% include speaker.html id="maciej-wyrodek" %}
 
-**Performance mistakes in EF** — Mikołaj Korbanek
+**Performance mistakes in EF** — {% include speaker.html id="mikolaj-korbanek" %}
 
 *Więcej informacji: [Meetup](https://www.meetup.com/wrocnet/)*

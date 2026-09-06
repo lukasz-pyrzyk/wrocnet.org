@@ -8,8 +8,8 @@ tags:
 
 147. spotkanie Wrocławskiej Grupy .NET odbyło się 20.09.2022 r. w **Avanade, ul. Piotra Skargi 1, Wrocław**.
 
-**Programowanie Embedded Devices "bare bones" - łatwiejsze niż myślisz** — Tomasz Jastrzębski
+**Programowanie Embedded Devices "bare bones" - łatwiejsze niż myślisz** — {% include speaker.html id="tomasz-jastrzebski" %}
 
-**Co nowego w .NET 6?** — Oleg Kyrylchuk
+**Co nowego w .NET 6?** — {% include speaker.html id="oleg-kyrylchuk" %}
 
 *Więcej informacji: [Meetup](https://www.meetup.com/wrocnet/)*

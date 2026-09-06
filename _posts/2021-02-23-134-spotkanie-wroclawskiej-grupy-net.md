@@ -8,8 +8,8 @@ tags:
 
 134. spotkanie Wrocławskiej Grupy .NET odbyło się 23.02.2021 r..
 
-**Low Code - hit czy kit??** — Michał Guzowski
+**Low Code - hit czy kit??** — {% include speaker.html id="michal-guzowski" %}
 
-**Azure DevOps – budowanie i wdrażanie aplikacji w środowisku Azure** — Michał Jankowski
+**Azure DevOps – budowanie i wdrażanie aplikacji w środowisku Azure** — {% include speaker.html id="michal-jankowski" %}
 
 *Więcej informacji: [Meetup](https://www.meetup.com/wrocnet/)*

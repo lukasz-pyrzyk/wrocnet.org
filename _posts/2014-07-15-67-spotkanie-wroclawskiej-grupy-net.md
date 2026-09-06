@@ -4,7 +4,7 @@ title: '67\. spotkanie - Testy metod prywatnych i Maybe monad'
 date: 2014-07-15
 ---
 
-#### Testy metod prywatnych oraz "Chained null checks and the Maybe monad" - Przemysław Pogorzelec
+#### Testy metod prywatnych oraz "Chained null checks and the Maybe monad" - {% include speaker.html id="przemyslaw-pogorzelec" %}
 * Prezentacja: [prezentacja.pdf](/slides/prezentacja.zip)
 * Przykłady: [Test Private Method And Monad.rar](/slides/Test%20Private%20Method%20And%20Monad.zip)
 * Linki: 

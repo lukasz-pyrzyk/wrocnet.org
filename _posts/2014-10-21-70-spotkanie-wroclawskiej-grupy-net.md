@@ -4,10 +4,10 @@ title: '70\. spotkanie - Good programming practices, Unconstrained isolation'
 date: 2014-10-21
 ---
 
-#### Good programming practices  - Jarosław Stadnicki
+#### Good programming practices  - {% include speaker.html id="jaroslaw-stadnicki" %}
 * Prezentacja: [Good programming practices](/slides/good_practices.zip)
 * Wideo: {% include video id="Pb2m-McZ-So" provider="youtube" %}
 
-#### Constrained and unconstrained isolation frameworks - [Paweł Klimczyk](http://blog.klimczyk.pl)
+#### Constrained and unconstrained isolation frameworks - {% include speaker.html id="pawel-klimczyk" %}
 * Prezentacja: [Constrained and Unconstrained Isolation Frameworks](https://github.com/pawelklimczyk/Presentations/tree/master/Constrained%20And%20Unconstrained%20Isolation%20Frameworks%20in%20.NET/2014-10-21%20WrocNET)
 * Wideo:  {% include video id="P\_xmND3sdsY" provider="youtube" %}

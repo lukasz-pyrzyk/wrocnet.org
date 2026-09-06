@@ -8,8 +8,8 @@ tags:
 
 145. spotkanie Wrocławskiej Grupy .NET odbyło się 24.05.2022 r..
 
-**Nigdy więcej nie trać danych, czyli Event Sourcing na ratunek!** — Oskar Dudycz
+**Nigdy więcej nie trać danych, czyli Event Sourcing na ratunek!** — {% include speaker.html id="oskar-dudycz" %}
 
-**Dyskusja: Tworzenie kursów w IT** — Weronika Mularczyk, Adam Kamizelich
+**Dyskusja: Tworzenie kursów w IT** — {% include speaker.html id="weronika-mularczyk" %}, {% include speaker.html id="adam-kamizelich" %}
 
 *Więcej informacji: [Meetup](https://www.meetup.com/wrocnet/)*

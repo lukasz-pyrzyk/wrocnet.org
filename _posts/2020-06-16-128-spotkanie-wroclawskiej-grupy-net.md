@@ -8,7 +8,7 @@ tags:
 
 128. spotkanie Wrocławskiej Grupy .NET odbyło się 16.06.2020 r..
 
-**Multi-Stage Pipelines w Azure DevOps** — Patryk Lotzwi
+**Multi-Stage Pipelines w Azure DevOps** — {% include speaker.html id="patryk-lotzwi" %}
 
 **Panel dyskusyjny: DevOps – teoria i praktyka**
 

@@ -1,0 +1,2 @@
+{%- assign speaker = site.data.speakers | where: "id", include.id | first -%}
+{%- if speaker.link -%}[{{ speaker.imie }} {{ speaker.nazwisko }}]({{ speaker.link }}){%- else -%}{{ speaker.imie }} {{ speaker.nazwisko }}{%- endif -%}

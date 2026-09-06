@@ -8,8 +8,8 @@ tags:
 
 142. spotkanie Wrocławskiej Grupy .NET odbyło się 15.02.2022 r..
 
-**Cosmos DB - meh czy wow?** — Piotr Stapp
+**Cosmos DB - meh czy wow?** — {% include speaker.html id="piotr-stapp" %}
 
-**Azure Data Explorer w zastosowaniach** — Marek Gawryszewski
+**Azure Data Explorer w zastosowaniach** — {% include speaker.html id="marek-gawryszewski" %}
 
 *Więcej informacji: [Meetup](https://www.meetup.com/wrocnet/)*

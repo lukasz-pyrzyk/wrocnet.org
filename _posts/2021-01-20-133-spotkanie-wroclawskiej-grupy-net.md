@@ -8,8 +8,8 @@ tags:
 
 133. spotkanie Wrocławskiej Grupy .NET odbyło się 20.01.2021 r..
 
-**Async – największy błąd C#?** — Adam Furmanek
+**Async – największy błąd C#?** — {% include speaker.html id="adam-furmanek" %}
 
-**Synergy between TDD and BDD. Integration and unit tests as Executable Specification** — Kamil Grzybek
+**Synergy between TDD and BDD. Integration and unit tests as Executable Specification** — {% include speaker.html id="kamil-grzybek" %}
 
 *Więcej informacji: [Meetup](https://www.meetup.com/wrocnet/)*
