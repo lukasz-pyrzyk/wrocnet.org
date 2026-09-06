@@ -9,7 +9,8 @@ classes: wide
 {% assign rendered_speaker_ids = "" | split: "" %}
 {% assign total_sessions = 0 %}
 {% for post in site.posts %}
-  {% assign total_sessions = total_sessions | plus: post.talks.size %}
+  {% assign talk_count = post.talks | size %}
+  {% assign total_sessions = total_sessions | plus: talk_count %}
 {% endfor %}
 <section class="speakers-summary" aria-labelledby="speakers-summary-title">
   <div class="speakers-summary__intro">
