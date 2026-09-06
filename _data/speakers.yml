@@ -1,851 +1,539 @@
 # Prelegenci spotkań Wrocławskiej Grupy .NET
-# Każdy wpis: id, imie, nazwisko, ostatnie wystąpienie, ostatni post, link (opcjonalne)
+# Każdy wpis: id, imie, nazwisko, link (opcjonalne)
 - id: adam-furmanek
   imie: Adam
   nazwisko: Furmanek
-  ostatnie_wystapienie: "2021-01-20"
-  ostatni_post: /2021/01/20/133-spotkanie-wroclawskiej-grupy-net/
 - id: adam-kamizelich
   imie: Adam
   nazwisko: Kamizelich
-  ostatnie_wystapienie: "2022-05-24"
-  ostatni_post: /2022/05/24/145-spotkanie-wroclawskiej-grupy-net/
 - id: adam-kruszewski
   imie: Adam
   nazwisko: Kruszewski
-  ostatnie_wystapienie: "2016-11-22"
-  ostatni_post: /2016/11/22/91-spotkanie-wroclawskiej-grupy-net/
   link: https://www.revdebug.com/
 - id: adam-obrebski
   imie: Adam
   nazwisko: Obrębski
-  ostatnie_wystapienie: "2021-12-14"
-  ostatni_post: /2021/12/14/140-spotkanie-wroclawskiej-grupy-net/
 - id: adam-sitnik
   imie: Adam
   nazwisko: Sitnik
-  ostatnie_wystapienie: "2017-04-18"
-  ostatni_post: /2017/04/18/98-spotkanie-wroclawskiej-grupy-net/
   link: https://twitter.com/SitnikAdam
 - id: adrian-ciura
   imie: Adrian
   nazwisko: Ciura
-  ostatnie_wystapienie: "2015-09-22"
-  ostatni_post: /2015/09/22/79-spotkanie-wroclawskiej-grupy-net/
   link: https://twitter.com/adrianciura
 - id: adrian-stefaniak
   imie: Adrian
   nazwisko: Stefaniak
-  ostatnie_wystapienie: "2017-01-17"
-  ostatni_post: /2017/01/17/93-spotkanie-wroclawskiej-grupy-net/
   link: https://www.linkedin.com/in/adrian-stefaniak/
 - id: aleksander-telecki
   imie: Aleksander
   nazwisko: Telecki
-  ostatnie_wystapienie: "2026-05-26"
-  ostatni_post: /2026/05/26/168-spotkanie-wroclawskiej-grupy-net/
 - id: aleksandr-riabov
   imie: Aleksandr
   nazwisko: Riabov
-  ostatnie_wystapienie: "2018-04-17"
-  ostatni_post: /2018/04/17/108-spotkanie-wroclawskiej-grupy-net/
   link: https://www.linkedin.com/in/aleksandr-riabov-25ab6a45/
 - id: andrzej-krzywda
   imie: Andrzej
   nazwisko: Krzywda
-  ostatnie_wystapienie: "2014-01-21"
-  ostatni_post: /2014/01/21/61-spotkanie-wroclawskiej-grupy-net/
   link: https://twitter.com/andrzejkrzywda
 - id: andrzej-mroczek
   imie: Andrzej
   nazwisko: Mroczek
-  ostatnie_wystapienie: "2026-04-21"
-  ostatni_post: /2026/04/21/167-spotkanie-wroclawskiej-grupy-net/
 - id: andrzej-nowik
   imie: Andrzej
   nazwisko: Nowik
-  ostatnie_wystapienie: "2023-06-22"
-  ostatni_post: /2023/06/22/155-spotkanie-wroclawskiej-grupy-net/
 - id: arek-benedykt
   imie: Arek
   nazwisko: Benedykt
-  ostatnie_wystapienie: "2020-01-21"
-  ostatni_post: /2020/01/21/123-spotkanie-wroclawskiej-grupy-net/
 - id: arkadiusz-makosa
   imie: Arkadiusz
   nazwisko: Mąkosa
-  ostatnie_wystapienie: "2025-03-25"
-  ostatni_post: /2025/03/25/161-spotkanie-wroclawskiej-grupy-net/
 - id: artur-tadrala
   imie: Artur
   nazwisko: Tadrała
-  ostatnie_wystapienie: "2017-09-19"
-  ostatni_post: /2017/09/19/101-spotkanie-wroclawskiej-grupy-net/
   link: https://twitter.com/atadrala
 - id: barbara-fusinska
   imie: Barbara
   nazwisko: Fusińska
-  ostatnie_wystapienie: "2014-06-18"
-  ostatni_post: /2014/06/18/66-spotkanie-wroclawskiej-grupy-net/
   link: http://barbarafusinska.com
 - id: bartek-szczepanski
   imie: Bartek
   nazwisko: Szczepański
-  ostatnie_wystapienie: "2023-03-21"
-  ostatni_post: /2023/03/21/152-spotkanie-wroclawskiej-grupy-net/
 - id: bartosz-dudek
   imie: Bartosz
   nazwisko: Dudek
-  ostatnie_wystapienie: "2024-03-26"
-  ostatni_post: /2024/03/26/156-spotkanie-wroclawskiej-grupy-net/
 - id: bartosz-kuczynski
   imie: Bartosz
   nazwisko: Kuczyński
-  ostatnie_wystapienie: "2020-05-19"
-  ostatni_post: /2020/05/19/127-spotkanie-wroclawskiej-grupy-net/
 - id: bartosz-lenar
   imie: Bartosz
   nazwisko: Lenar
-  ostatnie_wystapienie: "2015-11-17"
-  ostatni_post: /2015/11/17/81-spotkanie-wroclawskiej-grupy-net/
   link: https://twitter.com/bartoszlenar
 - id: bartosz-sypytkowski
   imie: Bartosz
   nazwisko: Sypytkowski
-  ostatnie_wystapienie: "2016-10-18"
-  ostatni_post: /2016/10/18/90-spotkanie-wroclawskiej-grupy-net/
   link: https://twitter.com/Horusiath
 - id: bartosz-szczepanski
   imie: Bartosz
   nazwisko: Szczepański
-  ostatnie_wystapienie: "2019-11-19"
-  ostatni_post: /2019/11/19/121-spotkanie-wroclawskiej-grupy-net/
 - id: bartosz-zaremba
   imie: Bartosz
   nazwisko: Zaremba
-  ostatnie_wystapienie: "2015-02-20"
-  ostatni_post: /2015/02/20/74-spotkanie-wroclawskiej-grupy-net/
 - id: beata-zalewa
   imie: Beata
   nazwisko: Zalewa
-  ostatnie_wystapienie: "2017-03-28"
-  ostatni_post: /2017/03/28/97-spotkanie-wroclawskiej-grupy-net/
 - id: cezary-piatek
   imie: Cezary
   nazwisko: Piątek
-  ostatnie_wystapienie: "2019-02-19"
-  ostatni_post: /2019/02/19/115-spotkanie-wroclawskiej-grupy-net/
   link: https://cezarypiatek.github.io
 - id: cezary-walenciuk
   imie: Cezary
   nazwisko: Walenciuk
-  ostatnie_wystapienie: "2020-09-22"
-  ostatni_post: /2020/09/22/129-spotkanie-wroclawskiej-grupy-net/
   link: https://cezarywalenciuk.pl
 - id: damian-jarosch
   imie: Damian
   nazwisko: Jarosch
-  ostatnie_wystapienie: "2017-04-18"
-  ostatni_post: /2017/04/18/98-spotkanie-wroclawskiej-grupy-net/
   link: https://twitter.com/flatplanet_pl
 - id: damian-wolan
   imie: Damian
   nazwisko: Wolan
-  ostatnie_wystapienie: "2017-12-19"
-  ostatni_post: /2017/12/19/104-spotkanie-wroclawskiej-grupy-net/
 - id: dan-hanan
   imie: Dan
   nazwisko: Hanan
-  ostatnie_wystapienie: "2015-12-08"
-  ostatni_post: /2015/12/08/82-spotkanie-wroclawskiej-grupy-net/
 - id: daniel-kowalski
   imie: Daniel
   nazwisko: Kowalski
-  ostatnie_wystapienie: "2024-05-28"
-  ostatni_post: /2024/05/28/158-spotkanie-wroclawskiej-grupy-net/
 - id: dariusz-pawlukiewicz
   imie: Dariusz
   nazwisko: Pawlukiewicz
-  ostatnie_wystapienie: "2017-11-21"
-  ostatni_post: /2017/11/21/103-spotkanie-wroclawskiej-grupy-net/
   link: https://twitter.com/d_pawlukiewicz
 - id: ewelina-danczuk
   imie: Ewelina
   nazwisko: Dańczuk
-  ostatnie_wystapienie: "2016-05-17"
-  ostatni_post: /2016/05/17/88-spotkanie-wroclawskiej-grupy-net/
   link: https://twitter.com/ewelinadanczuk
 - id: gosia-borzecka
   imie: Gosia
   nazwisko: Borzęcka
-  ostatnie_wystapienie: "2013-10-15"
-  ostatni_post: /2013/10/15/58-spotkanie-wroclawskiej-grupy-net/
 - id: grzegorz-glonek
   imie: Grzegorz
   nazwisko: Glonek
-  ostatnie_wystapienie: "2011-06-21"
-  ostatni_post: /2011/06/21/36-spotkanie-wroclawskiej-grupy-net/
 - id: grzegorz-godlewski
   imie: Grzegorz
   nazwisko: Godlewski
-  ostatnie_wystapienie: "2021-12-14"
-  ostatni_post: /2021/12/14/140-spotkanie-wroclawskiej-grupy-net/
 - id: grzegorz-oronowicz
   imie: Grzegorz
   nazwisko: Oronowicz
-  ostatnie_wystapienie: "2016-03-09"
-  ostatni_post: /2016/03/09/86-spotkanie-wroclawskiej-grupy-net/
 - id: grzegorz-wilczura
   imie: Grzegorz
   nazwisko: Wilczura
-  ostatnie_wystapienie: "2025-10-28"
-  ostatni_post: /2025/10/28/163-spotkanie-wroclawskiej-grupy-net/
 - id: grzesiek-siemoniak
   imie: Grzesiek
   nazwisko: Siemoniak
-  ostatnie_wystapienie: "2017-06-20"
-  ostatni_post: /2017/06/20/100-spotkanie-wroclawskiej-grupy-net/
   link: https://twitter.com/gzaxx
 - id: idan-shatz
   imie: Idan
   nazwisko: Shatz
-  ostatnie_wystapienie: "2021-04-20"
-  ostatni_post: /2021/04/20/136-spotkanie-wroclawskiej-grupy-net/
 - id: jacek-kolonko
   imie: Jacek
   nazwisko: Kolonko
-  ostatnie_wystapienie: "2017-11-21"
-  ostatni_post: /2017/11/21/103-spotkanie-wroclawskiej-grupy-net/
   link: https://twitter.com/jkolonko
 - id: jakub-gutkowski
   imie: Jakub
   nazwisko: Gutkowski
-  ostatnie_wystapienie: "2020-12-16"
-  ostatni_post: /2020/12/16/132-spotkanie-wroclawskiej-grupy-net/
   link: http://blog.gutek.pl
 - id: jaroslaw-stadnicki
   imie: Jarosław
   nazwisko: Stadnicki
-  ostatnie_wystapienie: "2016-12-13"
-  ostatni_post: /2016/12/13/92-spotkanie-wroclawskiej-grupy-net/
   link: http://jaroslawstadnicki.pl/
 - id: jerzy-wickowski
   imie: Jerzy
   nazwisko: Wickowski
-  ostatnie_wystapienie: "2018-11-13"
-  ostatni_post: /2018/11/13/112-spotkanie-wroclawskiej-grupy-net/
   link: https://jerzywickowski.pl
 - id: kacper-swislocki
   imie: Kacper
   nazwisko: Świsłocki
-  ostatnie_wystapienie: "2019-11-19"
-  ostatni_post: /2019/11/19/121-spotkanie-wroclawskiej-grupy-net/
   link: https://twitter.com/kacperswislocki
 - id: kajetan-duszynski
   imie: Kajetan
   nazwisko: Duszyński
-  ostatnie_wystapienie: "2022-01-18"
-  ostatni_post: /2022/01/18/141-spotkanie-wroclawskiej-grupy-net/
 - id: kamil-grzybek
   imie: Kamil
   nazwisko: Grzybek
-  ostatnie_wystapienie: "2021-01-20"
-  ostatni_post: /2021/01/20/133-spotkanie-wroclawskiej-grupy-net/
   link: https://twitter.com/kamgrzybek
 - id: kamil-radlak
   imie: Kamil
   nazwisko: Radlak
-  ostatnie_wystapienie: "2016-01-19"
-  ostatni_post: /2016/01/19/84-spotkanie-wroclawskiej-grupy-net/
 - id: karol-rogowski
   imie: Karol
   nazwisko: Rogowski
-  ostatnie_wystapienie: "2026-06-16"
-  ostatni_post: /2026/06/16/169-spotkanie-wroclawskiej-grupy-net/
   link: https://sessionize.com/karol-rogowski
 - id: karol-tomaszewski
   imie: Karol
   nazwisko: Tomaszewski
-  ostatnie_wystapienie: "2016-01-19"
-  ostatni_post: /2016/01/19/84-spotkanie-wroclawskiej-grupy-net/
 - id: kasper-stasiak
   imie: Kasper
   nazwisko: Stasiak
-  ostatnie_wystapienie: "2024-05-28"
-  ostatni_post: /2024/05/28/158-spotkanie-wroclawskiej-grupy-net/
 - id: kinga-gazdzinska
   imie: Kinga
   nazwisko: Gaździńska
-  ostatnie_wystapienie: "2021-03-24"
-  ostatni_post: /2021/03/24/135-spotkanie-wroclawskiej-grupy-net/
 - id: konrad-kokosa
   imie: Konrad
   nazwisko: Kokosa
-  ostatnie_wystapienie: "2021-05-18"
-  ostatni_post: /2021/05/18/137-spotkanie-wroclawskiej-grupy-net/
   link: https://github.com/kkokosa
 - id: krzysztof-morcinek
   imie: Krzysztof
   nazwisko: Morcinek
-  ostatnie_wystapienie: "2020-11-24"
-  ostatni_post: /2020/11/24/131-spotkanie-wroclawskiej-grupy-net/
   link: https://krzysztofmorcinek.wordpress.com/
 - id: krzysztof-owsiany
   imie: Krzysztof
   nazwisko: Owsiany
-  ostatnie_wystapienie: "2020-11-24"
-  ostatni_post: /2020/11/24/131-spotkanie-wroclawskiej-grupy-net/
   link: https://devsi.pl/developer/krzysztof-owsiany
 - id: krzysztof-poprawa
   imie: Krzysztof
   nazwisko: Poprawa
-  ostatnie_wystapienie: "2021-06-23"
-  ostatni_post: /2021/06/23/138-spotkanie-wroclawskiej-grupy-net/
 - id: krzysztof-seroka
   imie: Krzysztof
   nazwisko: Seroka
-  ostatnie_wystapienie: "2019-02-19"
-  ostatni_post: /2019/02/19/115-spotkanie-wroclawskiej-grupy-net/
   link: http://chrisseroka.wordpress.com
 - id: krzysztof-wlazlik
   imie: Krzysztof
   nazwisko: Wlaźlik
-  ostatnie_wystapienie: "2020-09-22"
-  ostatni_post: /2020/09/22/129-spotkanie-wroclawskiej-grupy-net/
 - id: krzysztof-zawistowski
   imie: Krzysztof
   nazwisko: Zawistowski
-  ostatnie_wystapienie: "2018-12-11"
-  ostatni_post: /2018/12/11/113-spotkanie-wroclawskiej-grupy-net/
   link: https://github.com/krzyzaw
 - id: luca-bolognese
   imie: Luca
   nazwisko: Bolognese
-  ostatnie_wystapienie: "2014-09-16"
-  ostatni_post: /2014/09/16/69-spotkanie-wroclawskiej-grupy-net/
   link: http://lucabolognese.wordpress.com/
 - id: lukasz-gasior
   imie: Łukasz
   nazwisko: Gąsior
-  ostatnie_wystapienie: "2017-05-16"
-  ostatni_post: /2017/05/16/99-spotkanie-wroclawskiej-grupy-net/
   link: https://twitter.com/lukaszgasior
 - id: lukasz-kaluzny
   imie: Łukasz
   nazwisko: Kałużny
-  ostatnie_wystapienie: "2022-10-18"
-  ostatni_post: /2022/10/18/148-spotkanie-wroclawskiej-grupy-net/
 - id: lukasz-kurzyniec
   imie: Łukasz
   nazwisko: Kurzyniec
-  ostatnie_wystapienie: "2017-01-17"
-  ostatni_post: /2017/01/17/93-spotkanie-wroclawskiej-grupy-net/
   link: http://kurzyniec.pl
 - id: lukasz-olbromski
   imie: Łukasz
   nazwisko: Olbromski
-  ostatnie_wystapienie: "2026-05-26"
-  ostatni_post: /2026/05/26/168-spotkanie-wroclawskiej-grupy-net/
   link: https://twitter.com/lukaszolbromski
 - id: lukasz-pyrzyk
   imie: Łukasz
   nazwisko: Pyrzyk
-  ostatnie_wystapienie: "2018-01-16"
-  ostatni_post: /2018/01/16/105-spotkanie-wroclawskiej-grupy-net/
   link: https://pyrzyk.net/
 - id: maciej-aniserowicz
   imie: Maciej
   nazwisko: Aniserowicz
-  ostatnie_wystapienie: "2015-03-11"
-  ostatni_post: /2015/03/11/75-spotkanie-wroclawskiej-grupy-net/
   link: http://maciejaniserowicz.com
 - id: maciej-jedrzejewski
   imie: Maciej
   nazwisko: Jędrzejewski
-  ostatnie_wystapienie: "2018-10-23"
-  ostatni_post: /2018/10/23/111-spotkanie-wroclawskiej-grupy-net/
   link: https://twitter.com/mjjedmac
 - id: maciej-mokrzycki
   imie: Maciej
   nazwisko: Mokrzycki
-  ostatnie_wystapienie: "2022-10-18"
-  ostatni_post: /2022/10/18/148-spotkanie-wroclawskiej-grupy-net/
 - id: maciej-pilecki
   imie: Maciej
   nazwisko: Pilecki
-  ostatnie_wystapienie: "2008-11-27"
-  ostatni_post: /2008/11/27/16-spotkanie-wroclawskiej-grupy-net/
 - id: maciej-szymczyk
   imie: Maciej
   nazwisko: Szymczyk
-  ostatnie_wystapienie: "2020-12-16"
-  ostatni_post: /2020/12/16/132-spotkanie-wroclawskiej-grupy-net/
 - id: maciej-talaska
   imie: Maciej
   nazwisko: Talaśka
-  ostatnie_wystapienie: "2014-08-19"
-  ostatni_post: /2014/08/19/68-spotkanie-wroclawskiej-grupy-net/
   link: http://notonlyzeroesandones.site40.net
 - id: maciej-wyrodek
   imie: Maciej
   nazwisko: Wyrodek
-  ostatnie_wystapienie: "2025-01-28"
-  ostatni_post: /2025/01/28/160-spotkanie-wroclawskiej-grupy-net/
 - id: marcin-czyzowski
   imie: Marcin
   nazwisko: Czyżowski
-  ostatnie_wystapienie: "2013-10-15"
-  ostatni_post: /2013/10/15/58-spotkanie-wroclawskiej-grupy-net/
 - id: marcin-dudek
   imie: Marcin
   nazwisko: Dudek
-  ostatnie_wystapienie: "2017-03-02"
-  ostatni_post: /2017/03/02/95-spotkanie-wroclawskiej-grupy-net/
 - id: marcin-giemza
   imie: Marcin
   nazwisko: Giemza
-  ostatnie_wystapienie: "2023-01-24"
-  ostatni_post: /2023/01/24/150-spotkanie-wroclawskiej-grupy-net/
 - id: marcin-golebiowski
   imie: Marcin
   nazwisko: Gołębiowski
-  ostatnie_wystapienie: "2008-11-27"
-  ostatni_post: /2008/11/27/16-spotkanie-wroclawskiej-grupy-net/
 - id: marcin-kern
   imie: Marcin
   nazwisko: Kern
-  ostatnie_wystapienie: "2025-03-25"
-  ostatni_post: /2025/03/25/161-spotkanie-wroclawskiej-grupy-net/
 - id: marcin-kostuch
   imie: Marcin
   nazwisko: Kostuch
-  ostatnie_wystapienie: "2016-11-22"
-  ostatni_post: /2016/11/22/91-spotkanie-wroclawskiej-grupy-net/
   link: http://www.homebook.pl/
 - id: marcin-malinowski
   imie: Marcin
   nazwisko: Malinowski
-  ostatnie_wystapienie: "2015-02-20"
-  ostatni_post: /2015/02/20/74-spotkanie-wroclawskiej-grupy-net/
   link: https://twitter.com/orientman
 - id: marcin-najder
   imie: Marcin
   nazwisko: Najder
-  ostatnie_wystapienie: "2017-10-17"
-  ostatni_post: /2017/10/17/102-spotkanie-wroclawskiej-grupy-net/
 - id: marcin-skrobiranda
   imie: Marcin
   nazwisko: Skrobiranda
-  ostatnie_wystapienie: "2018-01-16"
-  ostatni_post: /2018/01/16/105-spotkanie-wroclawskiej-grupy-net/
 - id: marcin-tyborowski
   imie: Marcin
   nazwisko: Tyborowski
-  ostatnie_wystapienie: "2019-11-19"
-  ostatni_post: /2019/11/19/121-spotkanie-wroclawskiej-grupy-net/
   link: https://twitter.com/mtyborowski09
 - id: marek-gawryszewski
   imie: Marek
   nazwisko: Gawryszewski
-  ostatnie_wystapienie: "2022-02-15"
-  ostatni_post: /2022/02/15/142-spotkanie-wroclawskiej-grupy-net/
 - id: marek-stoj
   imie: Marek
   nazwisko: Stój
-  ostatnie_wystapienie: "2017-12-19"
-  ostatni_post: /2017/12/19/104-spotkanie-wroclawskiej-grupy-net/
   link: https://twitter.com/marekstoj
 - id: mariusz-bojkowski
   imie: Mariusz
   nazwisko: Bojkowski
-  ostatnie_wystapienie: "2018-09-18"
-  ostatni_post: /2018/09/18/110-spotkanie-wroclawskiej-grupy-net/
   link: https://twitter.com/csharptoday
 - id: mateusz-abramczyk
   imie: Mateusz
   nazwisko: Abramczyk
-  ostatnie_wystapienie: "2022-06-21"
-  ostatni_post: /2022/06/21/146-spotkanie-wroclawskiej-grupy-net/
 - id: mateusz-konicki
   imie: Mateusz
   nazwisko: Konicki
-  ostatnie_wystapienie: "2026-06-16"
-  ostatni_post: /2026/06/16/169-spotkanie-wroclawskiej-grupy-net/
 - id: matthias-koch
   imie: Matthias
   nazwisko: Koch
-  ostatnie_wystapienie: "2024-11-19"
-  ostatni_post: /2024/11/19/159-spotkanie-wroclawskiej-grupy-net/
 - id: melchior-kozar
   imie: Melchior
   nazwisko: Kozar
-  ostatnie_wystapienie: "2019-01-15"
-  ostatni_post: /2019/01/15/114-spotkanie-wroclawskiej-grupy-net/
   link: https://github.com/melchiork
 - id: michal-barylinski
   imie: Michał
   nazwisko: Baryliński
-  ostatnie_wystapienie: "2019-10-15"
-  ostatni_post: /2019/10/15/120-spotkanie-wroclawskiej-grupy-net/
   link: https://www.linkedin.com/in/michał-baryliński-51639a2a
 - id: michal-bogdanski
   imie: Michał
   nazwisko: Bogdański
-  ostatnie_wystapienie: "2020-01-21"
-  ostatni_post: /2020/01/21/123-spotkanie-wroclawskiej-grupy-net/
 - id: michal-franc
   imie: Michał
   nazwisko: Franc
-  ostatnie_wystapienie: "2026-03-24"
-  ostatni_post: /2026/03/24/166-spotkanie-wroclawskiej-grupy-net/
   link: http://www.mfranc.com/
 - id: michal-gellert
   imie: Michał
   nazwisko: Gellert
-  ostatnie_wystapienie: "2018-10-23"
-  ostatni_post: /2018/10/23/111-spotkanie-wroclawskiej-grupy-net/
   link: https://www.michalgellert.pl
 - id: michal-guzowski
   imie: Michał
   nazwisko: Guzowski
-  ostatnie_wystapienie: "2021-02-23"
-  ostatni_post: /2021/02/23/134-spotkanie-wroclawskiej-grupy-net/
 - id: michal-jankowski
   imie: Michał
   nazwisko: Jankowski
-  ostatnie_wystapienie: "2021-02-23"
-  ostatni_post: /2021/02/23/134-spotkanie-wroclawskiej-grupy-net/
   link: https://www.jankowskimichal.pl
 - id: michal-lusiak
   imie: Michał
   nazwisko: Łusiak
-  ostatnie_wystapienie: "2015-06-16"
-  ostatni_post: /2015/06/16/78-spotkanie-wroclawskiej-grupy-net/
   link: http://twitter.com/mlusiak
 - id: michal-malecki
   imie: Michał
   nazwisko: Małecki
-  ostatnie_wystapienie: "2016-09-20"
-  ostatni_post: /2016/09/20/89-spotkanie-wroclawskiej-grupy-net/
 - id: michal-pobuta
   imie: Michał
   nazwisko: Pobuta
-  ostatnie_wystapienie: "2026-03-24"
-  ostatni_post: /2026/03/24/166-spotkanie-wroclawskiej-grupy-net/
 - id: michal-sliwon
   imie: Michał
   nazwisko: Śliwoń
-  ostatnie_wystapienie: "2013-11-19"
-  ostatni_post: /2013/11/19/59-spotkanie-wroclawskiej-grupy-net/
 - id: michal-szafranski
   imie: Michał
   nazwisko: Szafrański
-  ostatnie_wystapienie: "2017-10-17"
-  ostatni_post: /2017/10/17/102-spotkanie-wroclawskiej-grupy-net/
 - id: mikolaj-korbanek
   imie: Mikołaj
   nazwisko: Korbanek
-  ostatnie_wystapienie: "2022-03-22"
-  ostatni_post: /2022/03/22/143-spotkanie-wroclawskiej-grupy-net/
 - id: miroslaw-jedynak
   imie: Mirosław
   nazwisko: Jedynak
-  ostatnie_wystapienie: "2012-12-11"
-  ostatni_post: /2012/12/11/50-spotkanie-wroclawskiej-grupy-net/
 - id: miroslaw-praglowski
   imie: Mirosław
   nazwisko: Pragłowski
-  ostatnie_wystapienie: "2015-03-11"
-  ostatni_post: /2015/03/11/75-spotkanie-wroclawskiej-grupy-net/
   link: https://twitter.com/mpraglowski
 - id: oleg-kyrylchuk
   imie: Oleg
   nazwisko: Kyrylchuk
-  ostatnie_wystapienie: "2022-09-20"
-  ostatni_post: /2022/09/20/147-spotkanie-wroclawskiej-grupy-net/
 - id: oskar-dudycz
   imie: Oskar
   nazwisko: Dudycz
-  ostatnie_wystapienie: "2024-11-19"
-  ostatni_post: /2024/11/19/159-spotkanie-wroclawskiej-grupy-net/
   link: http://oskar-dudycz.pl
 - id: patrick-smacchia
   imie: Patrick
   nazwisko: Smacchia
-  ostatnie_wystapienie: "2021-11-16"
-  ostatni_post: /2021/11/16/139-spotkanie-wroclawskiej-grupy-net/
 - id: patryk-lotzwi
   imie: Patryk
   nazwisko: Lotzwi
-  ostatnie_wystapienie: "2020-06-16"
-  ostatni_post: /2020/06/16/128-spotkanie-wroclawskiej-grupy-net/
 - id: pawel-baranowski
   imie: Paweł
   nazwisko: Baranowski
-  ostatnie_wystapienie: "2022-11-22"
-  ostatni_post: /2022/11/22/149-spotkanie-wroclawskiej-grupy-net/
 - id: pawel-drozdowski
   imie: Paweł
   nazwisko: Drozdowski
-  ostatnie_wystapienie: "2013-02-19"
-  ostatni_post: /2013/02/19/52-spotkanie-wroclawskiej-grupy-net/
 - id: pawel-hofman
   imie: Paweł
   nazwisko: Hofman
-  ostatnie_wystapienie: "2008-10-28"
-  ostatni_post: /2008/10/28/15-spotkanie-wroclawskiej-grupy-net/
 - id: pawel-klimczyk
   imie: Paweł
   nazwisko: Klimczyk
-  ostatnie_wystapienie: "2018-02-20"
-  ostatni_post: /2018/02/20/106-spotkanie-wroclawskiej-grupy-net/
   link: http://blog.klimczyk.pl
 - id: pawel-lukasik
   imie: Paweł
   nazwisko: Łukasik
-  ostatnie_wystapienie: "2026-04-21"
-  ostatni_post: /2026/04/21/167-spotkanie-wroclawskiej-grupy-net/
   link: https://twitter.com/pawel_lukasik
 - id: pawel-mrowczynski
   imie: Paweł
   nazwisko: Mrówczyński
-  ostatnie_wystapienie: "2020-02-18"
-  ostatni_post: /2020/02/18/124-spotkanie-wroclawskiej-grupy-net/
 - id: pawel-muraczewski
   imie: Paweł
   nazwisko: Muraczewski
-  ostatnie_wystapienie: "2026-02-24"
-  ostatni_post: /2026/02/24/165-spotkanie-wroclawskiej-grupy-net/
 - id: pawel-sawicz
   imie: Paweł
   nazwisko: Sawicz
-  ostatnie_wystapienie: "2015-12-15"
-  ostatni_post: /2015/12/15/83-spotkanie-wroclawskiej-grupy-net/
   link: http://twitter.com/sawiczpawel
 - id: pawel-wichary
   imie: Paweł
   nazwisko: Wichary
-  ostatnie_wystapienie: "2020-03-17"
-  ostatni_post: /2020/03/17/125-spotkanie-wroclawskiej-grupy-net/
 - id: pawel-zukowski
   imie: Paweł
   nazwisko: Żukowski
-  ostatnie_wystapienie: "2025-04-15"
-  ostatni_post: /2025/04/15/162-spotkanie-wroclawskiej-grupy-net/
 - id: piotr-gankiewicz
   imie: Piotr
   nazwisko: Gankiewicz
-  ostatnie_wystapienie: "2016-09-20"
-  ostatni_post: /2016/09/20/89-spotkanie-wroclawskiej-grupy-net/
   link: http://piotrgankiewicz.com/blog
 - id: piotr-kaminski
   imie: Piotr
   nazwisko: Kamiński
-  ostatnie_wystapienie: "2016-01-19"
-  ostatni_post: /2016/01/19/84-spotkanie-wroclawskiej-grupy-net/
 - id: piotr-klys
   imie: Piotr
   nazwisko: Kłys
-  ostatnie_wystapienie: "2024-03-26"
-  ostatni_post: /2024/03/26/156-spotkanie-wroclawskiej-grupy-net/
 - id: piotr-stapp
   imie: Piotr
   nazwisko: Stapp
-  ostatnie_wystapienie: "2022-02-15"
-  ostatni_post: /2022/02/15/142-spotkanie-wroclawskiej-grupy-net/
   link: https://twitter.com/ptrstpp950
 - id: piotr-wachulec
   imie: Piotr
   nazwisko: Wachulec
-  ostatnie_wystapienie: "2023-04-25"
-  ostatni_post: /2023/04/25/153-spotkanie-wroclawskiej-grupy-net/
 - id: piotr-walacik
   imie: Piotr
   nazwisko: Walacik
-  ostatnie_wystapienie: "2019-04-16"
-  ostatni_post: /2019/04/16/117-spotkanie-wroclawskiej-grupy-net/
   link: https://www.linkedin.com/in/piotr-walacik-6baa4a102/
 - id: piotr-wandycz
   imie: Piotr
   nazwisko: Wandycz
-  ostatnie_wystapienie: "2017-03-21"
-  ostatni_post: /2017/03/21/96-spotkanie-wroclawskiej-grupy-net/
   link: http://piotr-wandycz.pl/
 - id: przemyslaw-pogorzelec
   imie: Przemysław
   nazwisko: Pogorzelec
-  ostatnie_wystapienie: "2018-03-20"
-  ostatni_post: /2018/03/20/107-spotkanie-wroclawskiej-grupy-net/
 - id: radoslaw-maziarka
   imie: Radosław
   nazwisko: Maziarka
-  ostatnie_wystapienie: "2025-12-09"
-  ostatni_post: /2025/12/09/164-spotkanie-wroclawskiej-grupy-net/
   link: http://radblog.pl
 - id: rafal-chalimoniuk
   imie: Rafał
   nazwisko: Chalimoniuk
-  ostatnie_wystapienie: "2019-09-17"
-  ostatni_post: /2019/09/17/119-spotkanie-wroclawskiej-grupy-net/
   link: https://twitter.com/RChalimoniuk
 - id: rafal-hryniewski
   imie: Rafał
   nazwisko: Hryniewski
-  ostatnie_wystapienie: "2020-10-21"
-  ostatni_post: /2020/10/21/130-spotkanie-wroclawskiej-grupy-net/
   link: https://hryniewski.net/
 - id: rafal-legiedz
   imie: Rafał
   nazwisko: Legiędź
-  ostatnie_wystapienie: "2015-04-21"
-  ostatni_post: /2015/04/21/76-spotkanie-wroclawskiej-grupy-net/
   link: https://twitter.com/rafek
 - id: rafal-pienkowski
   imie: Rafał
   nazwisko: Pieńkowski
-  ostatnie_wystapienie: "2025-04-15"
-  ostatni_post: /2025/04/15/162-spotkanie-wroclawskiej-grupy-net/
 - id: rafal-zieba
   imie: Rafał
   nazwisko: Zięba
-  ostatnie_wystapienie: "2025-03-25"
-  ostatni_post: /2025/03/25/161-spotkanie-wroclawskiej-grupy-net/
 - id: remigiusz-cieslak
   imie: Remigiusz
   nazwisko: Cieślak
-  ostatnie_wystapienie: "2014-05-20"
-  ostatni_post: /2014/05/20/65-spotkanie-wroclawskiej-grupy-net/
 - id: roman-czarko-wasiutycz
   imie: Roman
   nazwisko: Czarko-Wasiutycz
-  ostatnie_wystapienie: "2016-12-13"
-  ostatni_post: /2016/12/13/92-spotkanie-wroclawskiej-grupy-net/
   link: https://www.linkedin.com/in/romanczarko
 - id: roman-jendrusz
   imie: Roman
   nazwisko: Jendrusz
-  ostatnie_wystapienie: "2008-10-28"
-  ostatni_post: /2008/10/28/15-spotkanie-wroclawskiej-grupy-net/
 - id: rustam-ashurov
   imie: Rustam
   nazwisko: Ashurov
-  ostatnie_wystapienie: "2019-12-17"
-  ostatni_post: /2019/12/17/122-spotkanie-wroclawskiej-grupy-net/
   link: https://www.linkedin.com/in/rustam-ashurov-87a307126
 - id: sebastian-belczyk
   imie: Sebastian
   nazwisko: Bełczyk
-  ostatnie_wystapienie: "2013-05-21"
-  ostatni_post: /2013/05/21/55-spotkanie-wroclawskiej-grupy-net/
 - id: sebastian-fyda
   imie: Sebastian
   nazwisko: Fyda
-  ostatnie_wystapienie: "2018-12-11"
-  ostatni_post: /2018/12/11/113-spotkanie-wroclawskiej-grupy-net/
   link: https://twitter.com/sebastianfyda?lang=en
 - id: slawomir-moriak
   imie: Sławomir
   nazwisko: Moriak
-  ostatnie_wystapienie: "2020-02-18"
-  ostatni_post: /2020/02/18/124-spotkanie-wroclawskiej-grupy-net/
 - id: stanislav-ivanov
   imie: Stanislav
   nazwisko: Ivanov
-  ostatnie_wystapienie: "2022-04-26"
-  ostatni_post: /2022/04/26/144-spotkanie-wroclawskiej-grupy-net/
 - id: steve-billogan
   imie: Steve
   nazwisko: Billogan
-  ostatnie_wystapienie: "2021-03-24"
-  ostatni_post: /2021/03/24/135-spotkanie-wroclawskiej-grupy-net/
 - id: szymon-kobalczyk
   imie: Szymon
   nazwisko: Kobalczyk
-  ostatnie_wystapienie: "2011-06-21"
-  ostatni_post: /2011/06/21/36-spotkanie-wroclawskiej-grupy-net/
 - id: szymon-kulec
   imie: Szymon
   nazwisko: Kulec
-  ostatnie_wystapienie: "2025-10-28"
-  ostatni_post: /2025/10/28/163-spotkanie-wroclawskiej-grupy-net/
   link: https://blog.scooletz.com/
 - id: szymon-pobiega
   imie: Szymon
   nazwisko: Pobiega
-  ostatnie_wystapienie: "2015-12-15"
-  ostatni_post: /2015/12/15/83-spotkanie-wroclawskiej-grupy-net/
   link: https://twitter.com/SzymonPobiega
 - id: szymon-warda
   imie: Szymon
   nazwisko: Warda
-  ostatnie_wystapienie: "2017-06-20"
-  ostatni_post: /2017/06/20/100-spotkanie-wroclawskiej-grupy-net/
   link: https://twitter.com/maklipsa
 - id: tim-huckaby
   imie: Tim
   nazwisko: Huckaby
-  ostatnie_wystapienie: "2015-12-08"
-  ostatni_post: /2015/12/08/82-spotkanie-wroclawskiej-grupy-net/
 - id: tomasz-jastrzebski
   imie: Tomasz
   nazwisko: Jastrzębski
-  ostatnie_wystapienie: "2022-09-20"
-  ostatni_post: /2022/09/20/147-spotkanie-wroclawskiej-grupy-net/
 - id: tomasz-kielar
   imie: Tomasz
   nazwisko: Kielar
-  ostatnie_wystapienie: "2016-03-09"
-  ostatni_post: /2016/03/09/86-spotkanie-wroclawskiej-grupy-net/
 - id: tomasz-laszkiewicz
   imie: Tomasz
   nazwisko: Łaszkiewicz
-  ostatnie_wystapienie: "2024-03-26"
-  ostatni_post: /2024/03/26/156-spotkanie-wroclawskiej-grupy-net/
 - id: tomasz-pluskiewicz
   imie: Tomasz
   nazwisko: Pluskiewicz
-  ostatnie_wystapienie: "2019-04-16"
-  ostatni_post: /2019/04/16/117-spotkanie-wroclawskiej-grupy-net/
   link: http://t-code.pl
 - id: tomek-masternak
   imie: Tomek
   nazwisko: Masternak
-  ostatnie_wystapienie: "2021-06-23"
-  ostatni_post: /2021/06/23/138-spotkanie-wroclawskiej-grupy-net/
 - id: waldemar-mekal
   imie: Waldemar
   nazwisko: Mękal
-  ostatnie_wystapienie: "2019-03-28"
-  ostatni_post: /2019/03/28/116-spotkanie-wroclawskiej-grupy-net/
   link: https://github.com/wmekal
 - id: weronika-labaj
   imie: Weronika
   nazwisko: Łabaj
-  ostatnie_wystapienie: "2013-10-15"
-  ostatni_post: /2013/10/15/58-spotkanie-wroclawskiej-grupy-net/
 - id: weronika-mularczyk
   imie: Weronika
   nazwisko: Mularczyk
-  ostatnie_wystapienie: "2023-04-25"
-  ostatni_post: /2023/04/25/153-spotkanie-wroclawskiej-grupy-net/
 - id: weronika-sabiniewicz
   imie: Weronika
   nazwisko: Sabiniewicz
-  ostatnie_wystapienie: "2021-11-16"
-  ostatni_post: /2021/11/16/139-spotkanie-wroclawskiej-grupy-net/
 - id: wojciech-gomola
   imie: Wojciech
   nazwisko: Gomoła
-  ostatnie_wystapienie: "2020-10-21"
-  ostatni_post: /2020/10/21/130-spotkanie-wroclawskiej-grupy-net/
 - id: wojciech-warwas
   imie: Wojciech
   nazwisko: Warwas
-  ostatnie_wystapienie: "2026-02-24"
-  ostatni_post: /2026/02/24/165-spotkanie-wroclawskiej-grupy-net/
 - id: zygfryd-wieszok
   imie: Zygfryd
   nazwisko: Wieszok
-  ostatnie_wystapienie: "2018-09-18"
-  ostatni_post: /2018/09/18/110-spotkanie-wroclawskiej-grupy-net/
   link: https://twitter.com/zygfrydwieszok

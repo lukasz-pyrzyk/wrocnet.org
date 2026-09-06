@@ -1,0 +1,2 @@
+{% assign talk = page.talks[include.index] %}
+#### {{ talk.title }} — {% for speaker_id in talk.speaker_ids %}{% include speaker.html id=speaker_id %}{% unless forloop.last %}, {% endunless %}{% endfor %}

@@ -4,12 +4,19 @@ date: 2022-04-26
 categories: spotkania
 tags:
   - .NET
+talks:
+- title: Running a Perfect (C#/.NET) Technical Interview
+  speaker_ids:
+  - stanislav-ivanov
+- title: Domain modelling w C# i F#
+  speaker_ids:
+  - marcin-kern
 ---
 
 144. spotkanie Wrocławskiej Grupy .NET odbyło się 26.04.2022 r..
 
-**Running a Perfect (C#/.NET) Technical Interview** — {% include speaker.html id="stanislav-ivanov" %}
+{% include talk.html index=0 %}
 
-**Domain modelling w C# i F#** — {% include speaker.html id="marcin-kern" %}
+{% include talk.html index=1 %}
 
 *Więcej informacji: [Meetup](https://www.meetup.com/wrocnet/)*

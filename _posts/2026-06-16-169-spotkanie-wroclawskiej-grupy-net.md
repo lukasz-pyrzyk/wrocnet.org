@@ -4,6 +4,13 @@ date: 2026-06-16
 categories: spotkania
 header:
   teaser: /assets/images/spotkania-teaser.jpg
+talks:
+- title: Nie strzel sobie w stopę.
+  speaker_ids:
+  - karol-rogowski
+- title: Podstawy cybersecurity w CI/CD, czyli bezpieczeństwo bez wymówek
+  speaker_ids:
+  - mateusz-konicki
 ---
 
 🚀 **ZAKOŃCZENIE SEZONU!** 169. spotkanie Wroc.NET
@@ -16,7 +23,7 @@ Dwie prelekcje – na pierwszy ogień temat rekrutacji w prelekcji **"Nie strzel
 
 Stałym partnerem strategicznym wydarzenia jest [devstyle](https://devstyle.pl/). Sponsorem nagród jest [Księgarnia internetowa i wydawnictwo Helion](https://helion.pl/), a wspiera nas [Hued.me](http://hued.me/).
 
-**🔊[PL] Nie strzel sobie w stopę.**
+{% include talk.html index=0 %}
 
 Czy planujesz rozmowę kwalifikacyjną na nowe stanowisko? Czy kiedykolwiek brałeś udział w rozmowie kwalifikacyjnej na tę idealną pracę, tylko po to, by zastanawiać się, co Cię powstrzymało?
 
@@ -26,7 +33,7 @@ To nie jest tylko odkrywcza prezentacja błędów, które zauważyłem. To zapro
 
 **👨🏼‍🎓{% include speaker.html id="karol-rogowski" %}**
 
-**🔊[PL] Podstawy cybersecurity w CI/CD, czyli bezpieczeństwo bez wymówek**
+{% include talk.html index=1 %}
 
 Cyberbezpieczeństwo to dziś obowiązkowy punkt na liście każdego projektu IT — czy tego chcemy, czy nie. A coraz nowsze regulacje potrafią skutecznie uprzykrzyć życie każdemu w branży, niezależnie od tego, czy piszesz kod, zarządzasz infrastrukturą, czy "tylko" spinasz projekt.
 

@@ -7,6 +7,21 @@
 @import "minimal-mistakes/skins/wrocnet";
 @import "minimal-mistakes";
 
+.greedy-nav .hidden-links {
+  background: #fff;
+  border: 1px solid #d9d0e0;
+}
+
+.greedy-nav .hidden-links a {
+  color: #1e1428;
+}
+
+.greedy-nav .hidden-links a:hover,
+.greedy-nav .hidden-links a:focus {
+  background: #641e78;
+  color: #fff;
+}
+
 .site-logo img {
   max-height: 48px;
   width: auto;
