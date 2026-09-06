@@ -7,13 +7,40 @@ classes: wide
 ---
 
 {% assign rendered_speaker_ids = "" | split: "" %}
+{% assign total_sessions = 0 %}
+{% for post in site.posts %}
+  {% assign total_sessions = total_sessions | plus: post.talks.size %}
+{% endfor %}
+<section class="speakers-summary" aria-labelledby="speakers-summary-title">
+  <div class="speakers-summary__intro">
+    <p class="speakers-summary__eyebrow">Wroc.NET w liczbach</p>
+    <h2 id="speakers-summary-title">Ludzie i idee, które budują naszą społeczność.</h2>
+  </div>
+  <div class="speakers-summary__stats">
+    <div class="speakers-summary__stat">
+      <strong>{{ site.data.speakers.size }}</strong>
+      <span>prelegentów</span>
+    </div>
+    <div class="speakers-summary__stat">
+      <strong>{{ total_sessions }}</strong>
+      <span>sesji</span>
+    </div>
+  </div>
+</section>
+
+<p class="speakers-intro">Poniżej znajdziesz listę prelegentów posortowaną od najnowszych wystąpień.</p>
+<label class="speaker-search" for="speaker-search-input">
+  <span>Znajdź prelegenta</span>
+  <input id="speaker-search-input" type="search" placeholder="Imię lub nazwisko" autocomplete="off">
+</label>
+
 <div class="speakers-grid">
 {% for post in site.posts %}
   {% for talk in post.talks %}
     {% for speaker_id in talk.speaker_ids %}
       {% unless rendered_speaker_ids contains speaker_id %}
         {% assign speaker = site.data.speakers | where: "id", speaker_id | first %}
-  <div class="speaker-card">
+  <div class="speaker-card" id="speaker-{{ speaker.id }}" data-speaker-name="{{ speaker.imie }} {{ speaker.nazwisko | downcase }}">
     <div class="speaker-info">
       <h3 class="speaker-name">
         {% if speaker.link %}<a href="{{ speaker.link }}" target="_blank" rel="noopener noreferrer">{{ speaker.imie }} {{ speaker.nazwisko }}</a>{% else %}{{ speaker.imie }} {{ speaker.nazwisko }}{% endif %}
@@ -39,12 +66,110 @@ classes: wide
 {% endfor %}
 </div>
 
+<script>
+  const speakerSearch = document.getElementById('speaker-search-input');
+  const speakerCards = Array.from(document.querySelectorAll('.speaker-card'));
+
+  speakerSearch.addEventListener('input', (event) => {
+    const query = event.target.value.trim().toLocaleLowerCase();
+    const matches = speakerCards.filter((card) => card.dataset.speakerName.toLocaleLowerCase().includes(query));
+
+    speakerCards.forEach((card) => {
+      card.hidden = query !== '' && !matches.includes(card);
+    });
+
+    if (query !== '' && matches.length > 0) {
+      const speakerId = matches[0].id;
+      window.history.replaceState(null, '', `#${speakerId}`);
+      matches[0].scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  });
+</script>
+
 <style>
+.speakers-summary {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 2.5rem;
+  align-items: center;
+  margin: 1rem 0 2.25rem;
+  padding: 1.5rem 0;
+  border-top: 1px solid #d9d0e0;
+  border-bottom: 1px solid #d9d0e0;
+}
+.speakers-summary__eyebrow {
+  margin: 0 0 0.35rem;
+  color: #641e78;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.speakers-summary h2 {
+  max-width: 780px;
+  margin: 0;
+  color: #1e1428;
+  font-size: 1.35rem;
+  line-height: 1.25;
+}
+.speakers-summary__stats {
+  display: flex;
+  gap: 1.5rem;
+  min-width: 110px;
+  padding-left: 1.5rem;
+  border-left: 1px solid #d9d0e0;
+}
+.speakers-summary__stat {
+  padding: 0;
+}
+.speakers-summary__stat strong,
+.speakers-summary__stat span {
+  display: block;
+}
+.speakers-summary__stat strong {
+  color: #641e78;
+  font-size: 2.1rem;
+  line-height: 1;
+}
+.speakers-summary__stat span {
+  margin-top: 0.35rem;
+  color: #6b5f75;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
 .speakers-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1.5rem;
   margin-top: 1.5rem;
+}
+.speakers-intro {
+  margin: 0 0 1rem;
+  color: #6b5f75;
+}
+.speaker-search {
+  display: block;
+  max-width: 420px;
+  margin-bottom: 1.5rem;
+  color: #1e1428;
+  font-weight: 700;
+}
+.speaker-search input {
+  display: block;
+  width: 100%;
+  margin-top: 0.4rem;
+  padding: 0.7rem 0.85rem;
+  border: 1px solid #d9d0e0;
+  border-radius: 4px;
+  background: #fff;
+  color: #1e1428;
+  font: inherit;
+}
+.speaker-search input:focus {
+  border-color: #641e78;
+  box-shadow: 0 0 0 2px rgba(100, 30, 120, 0.16);
+  outline: 0;
 }
 .speaker-card {
   display: flex;
@@ -94,6 +219,24 @@ classes: wide
 }
 
 @media (max-width: 640px) {
+  .speakers-summary {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    padding: 1.25rem 0;
+  }
+
+  .speakers-summary h2 {
+    font-size: 1.25rem;
+  }
+
+  .speakers-summary__stats {
+    display: flex;
+    gap: 1.5rem;
+    padding: 0;
+    border-left: 0;
+  }
+
   .speakers-grid {
     grid-template-columns: 1fr;
     gap: 1rem;
