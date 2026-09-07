@@ -107,7 +107,7 @@ classes: wide
       const countValue = countFilter.value;
       const visibleCards = [];
 
-      speakerCards.forEach((card) => {
+      Array.from(speakersGrid.children).forEach((card) => {
         const nameMatches = query === '' || normalize(card.dataset.speakerName || '').includes(query);
         const count = Number(card.dataset.appearanceCount || 0);
         const countMatches = countValue === 'all' || (countValue === '4+' ? count >= 4 : count === Number(countValue));
