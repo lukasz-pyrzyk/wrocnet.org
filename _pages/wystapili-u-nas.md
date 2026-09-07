@@ -59,10 +59,15 @@ classes: wide
       {% unless rendered_speaker_ids contains speaker_id %}
         {% assign speaker = site.data.speakers | where: "id", speaker_id | first %}
         {% assign speaker_appearance_count = 0 %}
+        {% assign speaker_last_timestamp = 0 %}
         {% capture speaker_appearances_html %}
         {% for appearance_post in site.posts %}
+          {% assign appearance_timestamp = appearance_post.date | date: '%s' | plus: 0 %}
           {% for appearance_talk in appearance_post.talks %}
             {% if appearance_talk.speaker_ids contains speaker.id %}
+              {% if appearance_timestamp > speaker_last_timestamp %}
+                {% assign speaker_last_timestamp = appearance_timestamp %}
+              {% endif %}
               {% assign speaker_appearance_count = speaker_appearance_count | plus: 1 %}
               <li>
                 <a href="{{ appearance_post.url }}">{{ appearance_post.date | date: "%d.%m.%Y" }}</a>
@@ -72,7 +77,7 @@ classes: wide
           {% endfor %}
         {% endfor %}
         {% endcapture %}
-  <div class="speaker-card" id="speaker-{{ speaker.id }}" data-speaker-name="{{ speaker.imie }} {{ speaker.nazwisko | downcase }}" data-appearance-count="{{ speaker_appearance_count }}" data-last-date="{{ post.date | date: '%s' }}">
+  <div class="speaker-card" id="speaker-{{ speaker.id }}" data-speaker-name="{{ speaker.imie }} {{ speaker.nazwisko | downcase }}" data-appearance-count="{{ speaker_appearance_count }}" data-last-date="{{ speaker_last_timestamp }}">
     <div class="speaker-info">
       <h3 class="speaker-name">
         {% if speaker.link %}<a href="{{ speaker.link }}" target="_blank" rel="noopener noreferrer">{{ speaker.imie }} {{ speaker.nazwisko }}</a>{% else %}{{ speaker.imie }} {{ speaker.nazwisko }}{% endif %}
