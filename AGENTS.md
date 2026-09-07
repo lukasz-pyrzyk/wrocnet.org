@@ -31,6 +31,7 @@ See [README.md](README.md) for install, local dev server, and CI validation comm
 - Prefer preserving Polish content style and existing URL/permalink patterns.
 - **Images/Photos**: Do not use external URLs for profile photos. Download the image to `assets/images/organizers/`, ensure it's in JPG/PNG format, and resize it to a reasonable size (e.g., 400x400px) before committing.
 - **Historical posts** (pre-2012, archival data): see [.github/instructions/historical-posts.instructions.md](.github/instructions/historical-posts.instructions.md) for anonymization and formatting rules.
+- **Local build environment (macOS)**: system Ruby (2.6.x) is too old for the `bundler` version pinned in `Gemfile.lock` (requires Ruby >= 3.2). Fix: `brew install ruby@3.2`, then prefix commands with `export PATH="/opt/homebrew/opt/ruby@3.2/bin:$PATH"` before running `gem install bundler:<version>` and `bundle install`/`bundle exec jekyll ...`. This is a one-time environment fix, not a repo issue.
 
 ## Change Strategy For Agents
 - Link, do not duplicate: if details exist in README or workflow files, reference them.

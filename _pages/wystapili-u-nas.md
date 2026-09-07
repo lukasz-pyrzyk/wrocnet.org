@@ -30,7 +30,26 @@ classes: wide
       <input id="speaker-search-input" type="search" placeholder="Imię lub nazwisko" autocomplete="off">
     </span>
   </label>
-  <span id="speaker-search-status" class="speaker-search__status" aria-live="polite"></span>
+  <div class="speakers-toolbar__controls">
+    <label class="speaker-filter" for="speaker-count-filter">
+      <span class="speaker-filter__label">Liczba wystąpień</span>
+      <select id="speaker-count-filter">
+        <option value="all">Wszystkie</option>
+        <option value="1">1 sesja</option>
+        <option value="2">2 sesje</option>
+        <option value="3">3 sesje</option>
+        <option value="4+">4 i więcej</option>
+      </select>
+    </label>
+    <label class="speaker-sort" for="speaker-sort-select">
+      <span class="speaker-sort__label">Sortuj wg ostatniego wystąpienia</span>
+      <select id="speaker-sort-select">
+        <option value="date-desc">Od najnowszych</option>
+        <option value="date-asc">Od najstarszych</option>
+      </select>
+    </label>
+    <span id="speaker-search-status" class="speaker-search__status" aria-live="polite"></span>
+  </div>
 </div>
 
 <div class="speakers-grid">
@@ -39,23 +58,26 @@ classes: wide
     {% for speaker_id in talk.speaker_ids %}
       {% unless rendered_speaker_ids contains speaker_id %}
         {% assign speaker = site.data.speakers | where: "id", speaker_id | first %}
-  <div class="speaker-card" id="speaker-{{ speaker.id }}" data-speaker-name="{{ speaker.imie }} {{ speaker.nazwisko | downcase }}">
+        {% assign speaker_appearance_count = 0 %}
+        {% capture speaker_appearances_html %}
+        {% for appearance_post in site.posts %}
+          {% for appearance_talk in appearance_post.talks %}
+            {% if appearance_talk.speaker_ids contains speaker.id %}
+              {% assign speaker_appearance_count = speaker_appearance_count | plus: 1 %}
+              <li>
+                <a href="{{ appearance_post.url }}">{{ appearance_post.date | date: "%d.%m.%Y" }}</a>
+                <span>{{ appearance_talk.title }}</span>
+              </li>
+            {% endif %}
+          {% endfor %}
+        {% endfor %}
+        {% endcapture %}
+  <div class="speaker-card" id="speaker-{{ speaker.id }}" data-speaker-name="{{ speaker.imie }} {{ speaker.nazwisko | downcase }}" data-appearance-count="{{ speaker_appearance_count }}" data-last-date="{{ post.date | date: '%s' }}">
     <div class="speaker-info">
       <h3 class="speaker-name">
         {% if speaker.link %}<a href="{{ speaker.link }}" target="_blank" rel="noopener noreferrer">{{ speaker.imie }} {{ speaker.nazwisko }}</a>{% else %}{{ speaker.imie }} {{ speaker.nazwisko }}{% endif %}
       </h3>
-      <ul class="speaker-appearances">
-      {% for appearance_post in site.posts %}
-        {% for appearance_talk in appearance_post.talks %}
-          {% if appearance_talk.speaker_ids contains speaker.id %}
-            <li>
-              <a href="{{ appearance_post.url }}">{{ appearance_post.date | date: "%d.%m.%Y" }}</a>
-              <span>{{ appearance_talk.title }}</span>
-            </li>
-          {% endif %}
-        {% endfor %}
-      {% endfor %}
-      </ul>
+      <ul class="speaker-appearances">{{ speaker_appearances_html }}</ul>
     </div>
   </div>
         {% assign rendered_speaker_ids = rendered_speaker_ids | push: speaker_id %}
@@ -68,25 +90,52 @@ classes: wide
 <script>
   (() => {
     const speakerSearch = document.getElementById('speaker-search-input');
+    const countFilter = document.getElementById('speaker-count-filter');
+    const sortSelect = document.getElementById('speaker-sort-select');
     const searchStatus = document.getElementById('speaker-search-status');
+    const speakersGrid = document.querySelector('.speakers-grid');
     const speakerCards = Array.from(document.querySelectorAll('.speaker-card'));
     const normalize = (value) => value.trim().toLocaleLowerCase();
 
-    speakerSearch.addEventListener('input', (event) => {
-      const query = normalize(event.target.value);
-      const matches = speakerCards.filter((card) => normalize(card.dataset.speakerName || '').includes(query));
+    const applyFilters = () => {
+      const query = normalize(speakerSearch.value);
+      const countValue = countFilter.value;
+      const visibleCards = [];
 
       speakerCards.forEach((card) => {
-        card.hidden = query !== '' && !matches.includes(card);
+        const nameMatches = query === '' || normalize(card.dataset.speakerName || '').includes(query);
+        const count = Number(card.dataset.appearanceCount || 0);
+        const countMatches = countValue === 'all' || (countValue === '4+' ? count >= 4 : count === Number(countValue));
+        const visible = nameMatches && countMatches;
+        card.hidden = !visible;
+        if (visible) visibleCards.push(card);
       });
-      searchStatus.textContent = query === '' ? '' : `${matches.length} wyników`;
 
-      if (query !== '' && matches.length > 0) {
-        const speakerId = matches[0].id;
+      searchStatus.textContent = (query !== '' || countValue !== 'all') ? `${visibleCards.length} wyników` : '';
+
+      if (query !== '' && visibleCards.length > 0) {
+        const speakerId = visibleCards[0].id;
         window.history.replaceState(null, '', `#${speakerId}`);
-        matches[0].scrollIntoView({ behavior: 'smooth', block: 'center' });
+        visibleCards[0].scrollIntoView({ behavior: 'smooth', block: 'center' });
       }
-    });
+    };
+
+    const applySort = () => {
+      const order = sortSelect.value;
+      const sorted = [...speakerCards].sort((a, b) => {
+        const dateA = Number(a.dataset.lastDate || 0);
+        const dateB = Number(b.dataset.lastDate || 0);
+        return order === 'date-asc' ? dateA - dateB : dateB - dateA;
+      });
+      sorted.forEach((card) => speakersGrid.appendChild(card));
+    };
+
+    speakerSearch.addEventListener('input', applyFilters);
+    countFilter.addEventListener('change', applyFilters);
+    sortSelect.addEventListener('change', applySort);
+
+    applySort();
+    applyFilters();
   })();
 </script>
 
@@ -139,6 +188,9 @@ classes: wide
   text-transform: uppercase;
 }
 .speakers-toolbar {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
   max-width: 640px;
   margin: 0 auto 1.75rem;
 }
@@ -152,6 +204,43 @@ classes: wide
   display: block;
   width: 100%;
   margin: 0;
+}
+.speakers-toolbar__controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 1rem;
+}
+.speaker-filter,
+.speaker-sort {
+  display: block;
+  margin: 0;
+  flex: 1 1 200px;
+}
+.speaker-filter__label,
+.speaker-sort__label {
+  display: block;
+  margin-bottom: 0.45rem;
+  color: #1e1428;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+.speaker-filter select,
+.speaker-sort select {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border: 1px solid #d9d0e0;
+  border-radius: 6px;
+  background: #fff;
+  color: #1e1428;
+  font: inherit;
+  font-size: 0.88rem;
+}
+.speaker-filter select:focus,
+.speaker-sort select:focus {
+  border-color: #641e78;
+  box-shadow: 0 0 0 2px rgba(100, 30, 120, 0.16);
+  outline: 0;
 }
 .speaker-search__label {
   display: block;
@@ -191,6 +280,7 @@ classes: wide
 }
 .speaker-search__status {
   display: block;
+  flex-basis: 100%;
   min-height: 1rem;
   margin-top: 0.35rem;
   color: #641e78;
@@ -267,8 +357,18 @@ classes: wide
   }
 
   .speakers-toolbar {
+    flex-direction: column;
+    align-items: stretch;
     max-width: none;
     margin-bottom: 1.25rem;
+  }
+
+  .speakers-toolbar__controls {
+    flex-direction: column;
+  }
+
+  .speaker-search__status {
+    flex-basis: auto;
   }
 
   .speakers-grid {
