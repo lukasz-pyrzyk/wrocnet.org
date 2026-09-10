@@ -35,6 +35,7 @@ See [README.md](README.md) for install, local dev server, and CI validation comm
 - **New meeting date/venue/number**: don't guess or ask the user if avoidable — check [_data/schedule.yml](_data/schedule.yml) first (`dates` list gives the next unused date, `venue` gives the current location). The meeting number is the previous post's number + 1 (check the latest file in `_posts/`).
 - **Existing speakers**: check [_data/speakers.yml](_data/speakers.yml) for an existing `id` before adding a new speaker entry; reuse it in front matter `speaker_ids` and in body via `{% include speaker.html id="..." %}`.
 - **Multiple speakers per talk**: `speaker_ids` in a talk's front matter accepts a list; [_includes/talk.html](_includes/talk.html) renders all of them comma-separated automatically — no extra template work needed.
+- **Missing organizer photo**: [_pages/organizatorzy.md](_pages/organizatorzy.md) falls back to `/assets/images/organizers/placeholder.png` via Liquid's `default` filter when `photo` is `""`. That asset must exist locally (create with e.g. `sips` or Pillow) or htmlproofer fails the build. Omit the `linkedin` key entirely (don't set it to `""`) when unknown — Liquid treats empty strings as truthy, so `{% if person.linkedin %}` would render a broken empty link.
 - **Running locally**: `bundle exec jekyll serve` skips posts dated after the current date (e.g. next month's meeting). Add `--future` to the serve/build command to include them while previewing.
 
 ## Change Strategy For Agents

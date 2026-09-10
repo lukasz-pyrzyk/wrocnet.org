@@ -16,6 +16,10 @@
   photo: "/assets/images/organizers/pawel-klimczyk.jpg"
   linkedin: "https://www.linkedin.com/in/pawel-klimczyk/"
 
+- name: "Robert Krzaczyński"
+  photo: ""
+  linkedin: "https://www.linkedin.com/in/robert-krzaczynski/"
+
 - name: "Bartłomiej Legiędź"
   photo: "/assets/images/organizers/bartlomiej-legiedz.jpg"
   linkedin: "https://www.linkedin.com/in/ACoAAAC4hOUBqmlrgaFwX8_XefAVaBsi5GIaCPk"
@@ -55,6 +59,10 @@
 - name: "Bartłomiej Rodak"
   photo: "/assets/images/organizers/bartlomiej-rodak.jpg"
   linkedin: "https://www.linkedin.com/in/bartlomiejrodak/"
+
+- name: "Weronika Sabiniewicz"
+  photo: "/assets/images/organizers/weronika-sabiniewicz.jpg"
+  linkedin: "https://www.linkedin.com/in/weronika-sabiniewicz-5063b0143/"
 
 - name: "Kamil Szostak"
   photo: "/assets/images/organizers/kamil-szostak.jpg"
