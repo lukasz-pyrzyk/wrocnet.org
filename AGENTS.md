@@ -32,6 +32,10 @@ See [README.md](README.md) for install, local dev server, and CI validation comm
 - **Images/Photos**: Do not use external URLs for profile photos. Download the image to `assets/images/organizers/`, ensure it's in JPG/PNG format, and resize it to a reasonable size (e.g., 400x400px) before committing.
 - **Historical posts** (pre-2012, archival data): see [.github/instructions/historical-posts.instructions.md](.github/instructions/historical-posts.instructions.md) for anonymization and formatting rules.
 - **Local build environment (macOS)**: system Ruby (2.6.x) is too old for the `bundler` version pinned in `Gemfile.lock` (requires Ruby >= 3.2). Fix: `brew install ruby@3.2`, then prefix commands with `export PATH="/opt/homebrew/opt/ruby@3.2/bin:$PATH"` before running `gem install bundler:<version>` and `bundle install`/`bundle exec jekyll ...`. This is a one-time environment fix, not a repo issue.
+- **New meeting date/venue/number**: don't guess or ask the user if avoidable — check [_data/schedule.yml](_data/schedule.yml) first (`dates` list gives the next unused date, `venue` gives the current location). The meeting number is the previous post's number + 1 (check the latest file in `_posts/`).
+- **Existing speakers**: check [_data/speakers.yml](_data/speakers.yml) for an existing `id` before adding a new speaker entry; reuse it in front matter `speaker_ids` and in body via `{% include speaker.html id="..." %}`.
+- **Multiple speakers per talk**: `speaker_ids` in a talk's front matter accepts a list; [_includes/talk.html](_includes/talk.html) renders all of them comma-separated automatically — no extra template work needed.
+- **Running locally**: `bundle exec jekyll serve` skips posts dated after the current date (e.g. next month's meeting). Add `--future` to the serve/build command to include them while previewing.
 
 ## Change Strategy For Agents
 - Link, do not duplicate: if details exist in README or workflow files, reference them.
