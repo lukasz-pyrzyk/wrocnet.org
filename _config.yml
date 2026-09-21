@@ -94,7 +94,19 @@ paginate_path: /page:num/
 include:
   - _pages
 
+# NOTE: setting `exclude` replaces Jekyll's built-in default list rather than
+# extending it, so the defaults are repeated here alongside our additions.
 exclude:
+  - .sass-cache
+  - .jekyll-cache
+  - gemfiles
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
   - AGENTS.md
   - office
   - .github
