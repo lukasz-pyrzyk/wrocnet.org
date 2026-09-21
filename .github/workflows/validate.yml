@@ -29,3 +29,15 @@ jobs:
 
       - name: Validate generated HTML and internal links
         run: bundle exec htmlproofer ./_site --disable-external --no-enforce-https
+
+      # Uses the same gem/action as the real GitHub Pages deployment, which
+      # differs from the local Gemfile (e.g. renders front-matter-less .md
+      # files via Liquid) and can fail even when the step above succeeds.
+      - name: Build with GitHub Pages (production parity)
+        uses: actions/jekyll-build-pages@v1
+        with:
+          source: ./
+          destination: ./_site_pages_parity
+          verbose: true
+          token: ${{ secrets.GITHUB_TOKEN }}
+
