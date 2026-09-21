@@ -131,6 +131,7 @@ Wysyłamy przed każdym spotkaniem (2-3 dni wcześniej). Zawartość: powitanie,
 - Zrzuty ekranu strony rób prawdziwym headless Chrome (`google chrome --headless=new --screenshot=...`), nie ręcznie rysowanymi makietami przeglądarki — wygląda wiarygodniej i nie trzeba zgadywać layoutu.
 - Do podglądu wygenerowanego `.pptx` (brak innego rendera w tym środowisku) otwórz plik i wyeksportuj slajdy do PNG przez Keynote/`osascript`, potem obejrzyj obrazy — to jedyny sposób realnej weryfikacji wizualnej przed oddaniem.
 - Grafiki AI do slajdów (tło paneli, ikony) trzymaj się stylu z `office/content/images/brand-*` (fiolet/róż, retro-tech, bez tekstu/logotypów w obrazie) i archiwizuj wygenerowane pliki tam po zaakceptowaniu.
+- Po sfinalizowaniu prezentacji zawsze wygeneruj też `.pdf` obok `.pptx` w tym samym folderze `slides/<numer-spotkania>/` (ten sam eksport przez Keynote/`osascript`, tylko `as PDF` zamiast `as slide images`) — PDF jest wygodniejszy do szybkiego podglądu i wysyłki bez PowerPointa/Keynote.
 
 ## Bezpieczeństwo faktów
 
