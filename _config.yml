@@ -29,8 +29,9 @@ social:
   links:
     - "https://twitter.com/wrocnet"
     - "https://www.facebook.com/WrocNET"
-    - "https://www.linkedin.com/company/wroclaw-net-user-group"
+    - "https://www.linkedin.com/company/wroc%C5%82aw-net-user-group/"
     - "https://www.meetup.com/wrocnet/"
+    - "https://chat.whatsapp.com/IuNxnWN3a9rLTEIkzOXe6g"
 
 search: true
 
@@ -53,7 +54,10 @@ author:
       url: "https://twitter.com/wrocnet"
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
-      url: "https://www.linkedin.com/company/wroclaw-net-user-group"
+      url: "https://www.linkedin.com/company/wroc%C5%82aw-net-user-group/"
+    - label: "WhatsApp"
+      icon: "fab fa-fw fa-whatsapp"
+      url: "/whatsapp/"
     - label: "Facebook"
       icon: "fab fa-fw fa-facebook"
       url: "https://www.facebook.com/WrocNET"
@@ -75,7 +79,10 @@ footer:
       url: "https://twitter.com/wrocnet"
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
-      url: "https://www.linkedin.com/company/wroclaw-net-user-group"
+      url: "https://www.linkedin.com/company/wroc%C5%82aw-net-user-group/"
+    - label: "WhatsApp"
+      icon: "fab fa-fw fa-whatsapp"
+      url: "/whatsapp/"
     - label: "Facebook"
       icon: "fab fa-fw fa-facebook"
       url: "https://www.facebook.com/WrocNET"
