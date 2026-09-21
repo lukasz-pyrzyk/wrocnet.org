@@ -122,6 +122,16 @@ Jeśli mówi „mocniej”, zwiększ klarowność i siłę przekazu, nie dodawaj
 
 Wysyłamy przed każdym spotkaniem (2-3 dni wcześniej). Zawartość: powitanie, prelekcje (tytuł, abstrakt, bio prelegenta), partner/sponsorzy, CTA z linkiem do rejestracji, zasada o zdjęciach. Ton: bliski, konkretny, bez sztywności.
 
+## Prezentacje (PowerPoint)
+
+- Pliki prezentacji na dane spotkanie żyją w `slides/<numer-spotkania>/` (np. `slides/170/`) — generator, wynikowy `.pptx` i obrazy specyficzne dla tej prezentacji trzymamy razem w jednym folderze, żeby były samowystarczalne.
+- Nie ma zainstalowanego `pptxgenjs` ani podobnej biblioteki — generator to czysty skrypt Ruby budujący archiwum OOXML/ZIP ręcznie (bez zależności). Kopiuj i adaptuj istniejący generator zamiast pisać od zera.
+- Czcionka: używaj `Arial` (nie `Aptos`) — Aptos to nowa domyślna czcionka Microsoftu i bywa niedostępna na macOS/starszych instalacjach Office, przez co PowerPoint/Keynote podmienia ją na coś innego. Arial jest bezpieczna na macOS i Windows.
+- Identyfikatory relacji obrazów (`r:id`) muszą być unikalne w całym pliku, nie tylko w obrębie pojedynczego slajdu — powtarzające się `rId2` na różnych slajdach potrafiły powodować, że Keynote/PowerPoint pokazywał złe zdjęcie na złym slajdzie. Nadawaj nazwom plików mediów hash z zawartości (np. `Digest::SHA256`), żeby uniknąć też kolizji cache przy podmianie obrazu na inny o tej samej nazwie.
+- Zrzuty ekranu strony rób prawdziwym headless Chrome (`google chrome --headless=new --screenshot=...`), nie ręcznie rysowanymi makietami przeglądarki — wygląda wiarygodniej i nie trzeba zgadywać layoutu.
+- Do podglądu wygenerowanego `.pptx` (brak innego rendera w tym środowisku) otwórz plik i wyeksportuj slajdy do PNG przez Keynote/`osascript`, potem obejrzyj obrazy — to jedyny sposób realnej weryfikacji wizualnej przed oddaniem.
+- Grafiki AI do slajdów (tło paneli, ikony) trzymaj się stylu z `office/content/images/brand-*` (fiolet/róż, retro-tech, bez tekstu/logotypów w obrazie) i archiwizuj wygenerowane pliki tam po zaakceptowaniu.
+
 ## Bezpieczeństwo faktów
 
 Nigdy nie:
