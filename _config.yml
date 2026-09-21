@@ -94,6 +94,11 @@ paginate_path: /page:num/
 include:
   - _pages
 
+exclude:
+  - AGENTS.md
+  - office
+  - .github
+
 plugins:
   - jekyll-paginate
   - jekyll-sitemap
