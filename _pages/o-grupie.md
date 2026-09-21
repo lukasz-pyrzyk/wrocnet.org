@@ -31,7 +31,8 @@ Grupa działa od **2008 roku** i odbyła już ponad 169 spotkań. Przez lata pre
 | **GitHub** | [github.com/wrocnet](https://github.com/wrocnet) |
 | **Kod źródłowy strony** | [github.com/lukasz-pyrzyk/wrocnet.org](https://github.com/lukasz-pyrzyk/wrocnet.org) |
 | **Twitter/X** | [@wrocnet](https://twitter.com/wrocnet) |
-| **LinkedIn** | [Wrocław .NET User Group](https://www.linkedin.com/company/wroclaw-net-user-group) |
+| **LinkedIn** | [Wrocław .NET User Group](https://www.linkedin.com/company/wroc%C5%82aw-net-user-group/) |
+| **WhatsApp** | [Dołącz do grupy](/whatsapp/) |
 | **Facebook** | [facebook.com/WrocNET](https://www.facebook.com/WrocNET) |
 
 ## Kontakt
