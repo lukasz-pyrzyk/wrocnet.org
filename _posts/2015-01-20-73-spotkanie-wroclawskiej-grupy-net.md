@@ -8,7 +8,7 @@ talks:
   - bartosz-lenar
 - title: ASP.NET vNext
   speaker_ids:
-  - michal-franc
+  - lukasz-gasior
 ---
 
 {% include talk.html index=0 %}
