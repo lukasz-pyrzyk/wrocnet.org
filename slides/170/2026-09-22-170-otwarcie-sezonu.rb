@@ -244,11 +244,18 @@ slides << [slide_xml(s), []]
 s = base(5, "Partner strategiczny", "Wspiera nas Devstyle")
 s << text(10, "DZIĘKUJEMY ZA WSPARCIE\nWROC.NET", 0.78, 2.17, 5.60, 1.02, size: 27, color: COLORS[:violet], bold: true, valign: "t")
 s << text(11, "Devstyle jest partnerem strategicznym\nnaszej społeczności.", 0.78, 3.60, 5.72, 0.92, size: 19, color: COLORS[:ink], valign: "t")
-s << text(13, "https://devstyle.pl/", 0.78, 5.58, 5.60, 0.42, size: 16, color: COLORS[:violet], bold: true)
 s << rect(14, 7.28, 2.00, 4.96, 4.15, fill: COLORS[:panel])
 slide_images = []
 devstyle_rid = add_image(images, slide_images, "assets/images/partners/devstyle.jpg")
 s << picture(15, devstyle_rid, 7.69, 2.19, 4.14, 3.73, "Logo Devstyle")
+s << text(16, "PARTNERZY WSPIERAJĄCY", 0.78, 4.50, 5.60, 0.28, size: 11, color: COLORS[:muted], bold: true)
+helion_rid = add_image(images, slide_images, "assets/images/partners/helion.jpg")
+hued_rid = add_image(images, slide_images, "assets/images/partners/hued-me.png")
+s << picture(17, helion_rid, 0.78, 4.85, 1.60, 0.53, "Logo Helion")
+s << text(18, "partner nagród", 0.78, 5.40, 1.90, 0.26, size: 10, color: COLORS[:muted])
+s << picture(19, hued_rid, 2.63, 4.89, 0.46, 0.46, "Logo hued.me")
+s << text(20, "hued.me — partner medialny", 2.63, 5.40, 2.60, 0.26, size: 10, color: COLORS[:muted])
+s << text(13, "https://devstyle.pl/", 0.78, 5.85, 5.60, 0.42, size: 16, color: COLORS[:violet], bold: true)
 slides << [slide_xml(s), slide_images]
 
 # 6. Website overview
