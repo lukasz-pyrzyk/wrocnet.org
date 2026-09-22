@@ -136,6 +136,7 @@ Wysyłamy przed każdym spotkaniem (2-3 dni wcześniej). Zawartość: powitanie,
 - Do podglądu wygenerowanego `.pptx` (brak innego rendera w tym środowisku) otwórz plik i wyeksportuj slajdy do PNG przez Keynote/`osascript`, potem obejrzyj obrazy — to jedyny sposób realnej weryfikacji wizualnej przed oddaniem.
 - Grafiki AI do slajdów (tło paneli, ikony) trzymaj się stylu z `office/content/images/brand-*` (fiolet/róż, retro-tech, bez tekstu/logotypów w obrazie) i archiwizuj wygenerowane pliki tam po zaakceptowaniu.
 - Po sfinalizowaniu prezentacji zawsze wygeneruj też `.pdf` obok `.pptx` w tym samym folderze `slides/<numer-spotkania>/` (ten sam eksport przez Keynote/`osascript`, tylko `as PDF` zamiast `as slide images`) — PDF jest wygodniejszy do szybkiego podglądu i wysyłki bez PowerPointa/Keynote.
+- Zanim oddasz plik `.pptx` do użytkownika, zrób dodatkowy przelot przez prawdziwego zapisywacza OOXML: otwórz plik w Keynote i wyeksportuj go ponownie `as Microsoft PowerPoint` (nadpisując ten sam plik), zamiast oddawać surowy wynik ręcznego generatora ZIP-a. Nasz ręczny writer bywa strukturalnie poprawny (ZIP i XML walidują się offline), a mimo to realny PowerPoint potrafi zgłosić „plik jest uszkodzony, trzeba go naprawić" — re-eksport przez Keynote naprawia to niezawodnie, bo używa sprawdzonego, w pełni zgodnego z PowerPointem zapisu.
 
 ## Bezpieczeństwo faktów
 
