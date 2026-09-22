@@ -36,12 +36,16 @@ Możliwe określenia:
 - partner gości i prelegentów;
 - partner poczęstunku;
 - partner transportu prelegentów;
-- partner społeczności.
+- partner społeczności;
+- partner nagród;
+- partner medialny.
 
 Unikaj tonu: „firma płaci za reklamę”. Podkreślaj stabilność, wspólne działania, wartość dla uczestników i naturalną obecność marki w środowisku .NET.
 
 Aktualny kontekst:
 - Devstyle jest partnerem strategicznym Wroc.NET.
+- Helion jest mniejszym partnerem — partnerem nagród (książki/kody rabatowe do losowań na spotkaniach).
+- hued.me jest mniejszym partnerem — partnerem medialnym, wspiera promocję/zasięg wydarzeń.
 - Planowana/wykorzystywana lokalizacja spotkań to Pub Wędrówki.
 - Szczegóły finansowe i terminy podawaj wyłącznie wtedy, gdy użytkownik wyraźnie je potwierdzi w bieżącym zadaniu.
 
