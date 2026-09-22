@@ -59,6 +59,9 @@
 - id: bartek-szczepanski
   imie: Bartek
   nazwisko: Szczepański
+- id: bartlomiej-szafraniec
+  imie: Bartłomiej
+  nazwisko: Szafraniec
 - id: bartosz-dudek
   imie: Bartosz
   nazwisko: Dudek
@@ -188,6 +191,9 @@
   imie: Krzysztof
   nazwisko: Owsiany
   link: https://devsi.pl/developer/krzysztof-owsiany
+- id: krzysztof-parjaszewski
+  imie: Krzysztof
+  nazwisko: Parjaszewski
 - id: krzysztof-poprawa
   imie: Krzysztof
   nazwisko: Poprawa
@@ -480,6 +486,9 @@
 - id: steve-billogan
   imie: Steve
   nazwisko: Billogan
+- id: sylwester-lewandowski
+  imie: Sylwester
+  nazwisko: Lewandowski
 - id: szymon-kobalczyk
   imie: Szymon
   nazwisko: Kobalczyk
@@ -498,6 +507,9 @@
 - id: tim-huckaby
   imie: Tim
   nazwisko: Huckaby
+- id: tobiasz-koprowski
+  imie: Tobiasz
+  nazwisko: Koprowski
 - id: tomasz-jastrzebski
   imie: Tomasz
   nazwisko: Jastrzębski
