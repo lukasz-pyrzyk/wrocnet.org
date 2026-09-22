@@ -486,6 +486,9 @@
 - id: steve-billogan
   imie: Steve
   nazwisko: Billogan
+- id: sylwester-lewandowski
+  imie: Sylwester
+  nazwisko: Lewandowski
 - id: szymon-kobalczyk
   imie: Szymon
   nazwisko: Kobalczyk

@@ -9,4 +9,8 @@ talks:
   - lukasz-gasior
 ---
 
+Miejsce: Capgemini Polska, ul. Legnicka 51-53, sala RaumGroß, Wrocław
+
+Spotkanie rozpoczęło się o godzinie 18:00. Tematem przewodnim był panel dyskusyjny „AJAX”. Wśród uczestników rozlosowano licencję dodatku **ReSharper** Personal Edition do **Visual Studio 2005** oraz książkę.
+
 {% include talk.html index=0 %}
