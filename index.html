@@ -50,19 +50,19 @@ excerpt: "Wrocławska społeczność programistów .NET. Spotykamy się od 2007 
     <dl class="community-stats">
       <div class="community-stat">
         <dt>lat społeczności</dt>
-        <dd>{{ community_years }}</dd>
+          <dd>{{ community_years }}</dd>
       </div>
       <div class="community-stat">
         <dt>spotkań</dt>
-        <dd>{{ meeting_count }}</dd>
+          <dd>{{ meeting_count }}</dd>
       </div>
       <div class="community-stat">
         <dt>prelegentów i prelegentek</dt>
-        <dd>{{ site.data.speakers | size }}</dd>
+          <dd>{{ site.data.speakers | size }}</dd>
       </div>
       <div class="community-stat">
         <dt>prezentacji</dt>
-        <dd>{{ total_sessions }}</dd>
+          <dd>{{ total_sessions }}</dd>
       </div>
     </dl>
   </div>
@@ -151,6 +151,8 @@ excerpt: "Wrocławska społeczność programistów .NET. Spotykamy się od 2007 
   margin: 0;
 }
 .community-stat {
+    display: grid;
+    grid-template-rows: 2rem auto;
   min-width: 0;
   padding: 0 1rem;
   border-left: 1px solid #d9d0e0;
@@ -165,7 +167,7 @@ excerpt: "Wrocławska społeczność programistów .NET. Spotykamy się od 2007 
   line-height: 1;
 }
 .community-stat dt {
-  margin-top: 0.45rem;
+   margin: 0;
   color: #6b5f75;
   font-size: 0.68rem;
   font-weight: 600;
@@ -279,15 +281,52 @@ excerpt: "Wrocławska społeczność programistów .NET. Spotykamy się od 2007 
   .schedule-item--next { flex-basis: 14rem; }
 }
 @media (max-width: 520px) {
-  .home-overview { margin-top: 1rem; }
-  .community-stats {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 1rem 0;
+  .home-overview {
+    gap: 0.75rem;
+    margin: 0.75rem 0 2rem;
   }
-  .community-stat { padding: 0 0.6rem; }
-  .community-stat:nth-child(odd) { padding-left: 0; border-left: 0; }
-  .community-stat dd { font-size: 1.7rem; }
-  .community-stat dt { font-size: 0.58rem; }
+  .community-summary {
+    gap: 0.75rem;
+    padding: 0.5rem 0 0.85rem;
+  }
+  .community-summary__intro > p:last-child { display: none; }
+  .community-stats {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 0;
+  }
+  .community-stat,
+  .community-stat:nth-child(odd) {
+    grid-template-rows: 1.45rem auto;
+    padding: 0 0.35rem;
+    border-left: 1px solid #d9d0e0;
+    text-align: center;
+  }
+  .community-stat:first-child { padding-left: 0; border-left: 0; }
+  .community-stat dd {
+    font-size: 1.45rem;
+  }
+  .community-stat dt {
+    margin: 0;
+    font-size: 0.5rem;
+  }
+  .season-panel { padding: 0.85rem; }
+  .season-panel__header { margin-bottom: 0.65rem; }
+  .season-panel h2 { font-size: 1rem; }
+  .schedule-venue {
+    font-size: 0.66rem;
+    line-height: 1.35;
+  }
+  .schedule-list {
+    margin-right: -0.85rem;
+    padding-right: 0.85rem;
+  }
+  .schedule-item { flex-basis: 8.75rem; }
+  .schedule-item--next { flex-basis: 10.5rem; }
+  .schedule-link {
+    min-height: 2.65rem;
+    padding: 0.42rem 0.55rem;
+    font-size: 0.64rem;
+  }
 }
 
 /* Partners */
@@ -329,8 +368,8 @@ excerpt: "Wrocławska społeczność programistów .NET. Spotykamy się od 2007 
 }
 .partner-strategic-link {
   display: grid;
-  grid-template-columns: 11rem 1fr;
-  width: min(100%, 25rem);
+  grid-template-columns: 15rem 1fr;
+  width: min(100%, 30rem);
   gap: 1.25rem;
   align-items: center;
   padding: 0.65rem 0;
@@ -342,7 +381,7 @@ excerpt: "Wrocławska społeczność programistów .NET. Spotykamy się od 2007 
   text-decoration: none;
 }
 .partner-strategic-link img {
-  width: 11rem;
+  width: 15rem;
   height: 8.5rem;
   max-width: 100%;
   object-fit: contain;
@@ -396,13 +435,17 @@ excerpt: "Wrocławska społeczność programistów .NET. Spotykamy się od 2007 
     grid-template-columns: 1fr;
     gap: 2rem;
   }
-  .partner-strategic-link { width: min(100%, 25rem); }
+  .partner-strategic-link {
+    grid-template-columns: 13rem 1fr;
+    width: min(100%, 28rem);
+  }
+  .partner-strategic-link img { width: 13rem; }
 }
 @media (max-width: 420px) {
-  .partner-strategic-link { grid-template-columns: 8rem 1fr; }
+  .partner-strategic-link { grid-template-columns: 10rem 1fr; }
   .partner-strategic-link img {
-    width: 8rem;
-    height: 7rem;
+    width: 10rem;
+    height: 6rem;
   }
   .partner-supporting-link { grid-template-columns: 8rem 1fr; }
   .partner-supporting-logo { width: 8rem; }

@@ -246,8 +246,8 @@ s << text(10, "DZIĘKUJEMY ZA WSPARCIE\nWROC.NET", 0.78, 2.17, 5.60, 1.02, size:
 s << text(11, "Devstyle jest partnerem strategicznym\nnaszej społeczności.", 0.78, 3.60, 5.72, 0.92, size: 19, color: COLORS[:ink], valign: "t")
 s << rect(14, 7.28, 2.00, 4.96, 4.15, fill: COLORS[:panel])
 slide_images = []
-devstyle_rid = add_image(images, slide_images, "assets/images/partners/devstyle.jpg")
-s << picture(15, devstyle_rid, 7.69, 2.19, 4.14, 3.73, "Logo Devstyle")
+devstyle_rid = add_image(images, slide_images, "assets/images/partners/devstyle.png")
+s << picture(15, devstyle_rid, 7.69, 3.37, 4.14, 0.83, "Logo Devstyle")
 s << text(16, "PARTNERZY WSPIERAJĄCY", 0.78, 4.50, 5.60, 0.28, size: 11, color: COLORS[:muted], bold: true)
 helion_rid = add_image(images, slide_images, "assets/images/partners/helion.jpg")
 hued_rid = add_image(images, slide_images, "assets/images/partners/hued-me.png")
