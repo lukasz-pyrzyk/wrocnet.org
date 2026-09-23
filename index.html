@@ -127,74 +127,156 @@ excerpt: "Wrocławska społeczność programistów .NET. Spotykamy się od 2008 
 
 /* Partners */
 .partners-section {
-  margin: 3rem 0 1rem;
+  margin: 3.5rem 0 1rem;
+  padding-top: 2rem;
+  border-top: 1px solid #e0d5e8;
 }
-.partners-section h2 {
+.partners-heading {
+  margin-bottom: 1.75rem;
+}
+.partners-heading h2 {
+  margin: 0 0 0.35rem;
+  color: #1e1428;
+  font-size: 1.35rem;
+}
+.partners-heading p {
+  margin: 0;
+  color: #776c7d;
   font-size: 0.85rem;
+}
+.partners-layout {
+  display: grid;
+  grid-template-columns: minmax(18rem, 1.2fr) minmax(20rem, 1fr);
+  gap: 2.5rem;
+  align-items: start;
+}
+.partner-group-label {
+  display: block;
+  margin-bottom: 0.75rem;
+  color: #776c7d;
+  font-size: 0.72rem;
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: #9a8aaa;
-  margin-bottom: 1.5rem;
+  letter-spacing: 0.06em;
 }
 .partners-strategic {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 2rem;
+  min-width: 0;
 }
 .partner-strategic-link {
-  display: inline-flex;
+  display: grid;
+  grid-template-columns: 11rem 1fr;
+  width: min(100%, 25rem);
+  gap: 1.25rem;
   align-items: center;
-  justify-content: center;
-  padding: 0.5rem 1rem;
-  border-radius: 10px;
-  transition: opacity 0.2s;
+  padding: 0.65rem 0;
+  color: #1e1428;
+  text-decoration: none;
 }
 .partner-strategic-link:hover {
-  opacity: 0.85;
+  color: #641e78;
+  text-decoration: none;
 }
 .partner-strategic-link img {
-  max-height: 200px;
-  max-width: 500px;
+  width: 11rem;
+  height: 8.5rem;
+  max-width: 100%;
   object-fit: contain;
 }
 .partners-supporting {
-  display: flex;
-  gap: 2rem;
-  justify-content: center;
-  flex-wrap: wrap;
+  min-width: 0;
 }
 .partner-supporting-link {
-  display: inline-flex;
+  display: grid;
+  grid-template-columns: 10rem 1fr;
+  gap: 1rem;
+  align-items: center;
+  padding: 0.65rem 0;
+  color: #1e1428;
+  text-decoration: none;
+}
+.partner-supporting-link + .partner-supporting-link {
+  border-top: 1px solid #eee7f1;
+}
+.partner-supporting-link:hover {
+  color: #641e78;
+  text-decoration: none;
+}
+.partner-supporting-logo {
+  display: flex;
+  width: 10rem;
+  height: 4.5rem;
   align-items: center;
   justify-content: center;
-  padding: 0.75rem 1.5rem;
-  opacity: 0.85;
-  transition: opacity 0.2s;
 }
-.partner-supporting-link:hover { opacity: 1; }
-.partner-supporting-link img {
-  max-height: 120px;
-  max-width: 350px;
+.partner-supporting-logo img {
+  max-width: 100%;
+  max-height: 100%;
   object-fit: contain;
+}
+.partner-name,
+.partner-role { display: block; }
+.partner-name {
+  margin-bottom: 0.2rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+.partner-role {
+  color: #776c7d;
+  font-size: 0.75rem;
+  line-height: 1.4;
+}
+@media (max-width: 720px) {
+  .partners-layout {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .partner-strategic-link { width: min(100%, 25rem); }
+}
+@media (max-width: 420px) {
+  .partner-strategic-link { grid-template-columns: 8rem 1fr; }
+  .partner-strategic-link img {
+    width: 8rem;
+    height: 7rem;
+  }
+  .partner-supporting-link { grid-template-columns: 8rem 1fr; }
+  .partner-supporting-logo { width: 8rem; }
 }
 </style>
 
-<div class="partners-section">
-  <h2>Partner strategiczny</h2>
-  <div class="partners-strategic">
-    {% for p in site.data.partners.strategic %}
-      <a href="{{ p.url }}" target="_blank" rel="noopener noreferrer" class="partner-strategic-link" title="{{ p.name }}">
-        <img src="{{ p.logo }}" alt="{{ p.name }}">
-      </a>
-    {% endfor %}
-  </div>
+<section class="partners-section" aria-labelledby="partners-title">
+  <header class="partners-heading">
+    <h2 id="partners-title">Wspierają Wroc.NET</h2>
+    <p>Dzięki nim możemy regularnie spotykać się i rozwijać wrocławską społeczność .NET.</p>
+  </header>
 
-  <h2>Partnerzy</h2>
-  <div class="partners-supporting">
-    {% for p in site.data.partners.supporting %}
-      <a href="{{ p.url }}" target="_blank" rel="noopener noreferrer" class="partner-supporting-link" title="{{ p.name }}">
-        <img src="{{ p.logo }}" alt="{{ p.name }}">
-      </a>
-    {% endfor %}
+  <div class="partners-layout">
+    <div class="partners-strategic">
+      <span class="partner-group-label">Partner strategiczny</span>
+      {% for p in site.data.partners.strategic %}
+        <a href="{{ p.url }}" target="_blank" rel="noopener noreferrer" class="partner-strategic-link" title="{{ p.name }}">
+          <img src="{{ p.logo }}" alt="{{ p.name }}">
+          <span>
+            <span class="partner-name">{{ p.name }}</span>
+            <span class="partner-role">{{ p.role }}</span>
+          </span>
+        </a>
+      {% endfor %}
+    </div>
+
+    <div class="partners-supporting">
+      <span class="partner-group-label">Partnerzy wspierający</span>
+      {% for p in site.data.partners.supporting %}
+        <a href="{{ p.url }}" target="_blank" rel="noopener noreferrer" class="partner-supporting-link" title="{{ p.name }}">
+          <span class="partner-supporting-logo">
+            <img src="{{ p.logo }}" alt="{{ p.name }}">
+          </span>
+          <span>
+            <span class="partner-name">{{ p.name }}</span>
+            <span class="partner-role">{{ p.role }}</span>
+          </span>
+        </a>
+      {% endfor %}
+    </div>
   </div>
-</div>
+</section>
