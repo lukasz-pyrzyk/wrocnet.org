@@ -26,16 +26,19 @@ excerpt: "Wrocławska społeczność programistów .NET. Spotykamy się od 2007 
   {% assign community_years = community_years | minus: 1 %}
 {% endif %}
 {% assign meeting_count = 0 %}
+{% assign additional_event_count = 0 %}
 {% assign total_sessions = 0 %}
 {% for post in site.posts %}
   {% assign talk_count = post.talks | size %}
   {% assign total_sessions = total_sessions | plus: talk_count %}
-  {% if post.path contains '-spotkanie-' %}
+  {% if post.path contains '-spotkanie-wroclawskiej-grupy-net' %}
     {% assign filename_parts = post.path | split: '/' | last | split: '-' %}
     {% assign post_meeting_number = filename_parts[3] | plus: 0 %}
     {% if post_meeting_number > meeting_count %}
       {% assign meeting_count = post_meeting_number %}
     {% endif %}
+  {% else %}
+    {% assign additional_event_count = additional_event_count | plus: 1 %}
   {% endif %}
 {% endfor %}
 
@@ -54,7 +57,10 @@ excerpt: "Wrocławska społeczność programistów .NET. Spotykamy się od 2007 
       </div>
       <div class="community-stat">
         <dt>spotkań</dt>
-          <dd>{{ meeting_count }}</dd>
+          <dd>
+            {{ meeting_count }}
+            <small class="community-stat__detail">+ {{ additional_event_count }} dodatkowych wydarzeń</small>
+          </dd>
       </div>
       <div class="community-stat">
         <dt>prelegentów i prelegentek</dt>
@@ -172,6 +178,14 @@ excerpt: "Wrocławska społeczność programistów .NET. Spotykamy się od 2007 
   font-size: 0.68rem;
   font-weight: 600;
   line-height: 1.3;
+}
+.community-stat__detail {
+  display: block;
+  margin-top: 0.35rem;
+  color: #6b5f75;
+  font-size: 0.58rem;
+  font-weight: 600;
+  line-height: 1.25;
 }
 .season-panel {
   padding: 1.25rem;
@@ -318,6 +332,10 @@ excerpt: "Wrocławska społeczność programistów .NET. Spotykamy się od 2007 
   .community-stat dt {
     margin: 0;
     font-size: 0.5rem;
+  }
+  .community-stat__detail {
+    margin-top: 0.25rem;
+    font-size: 0.48rem;
   }
   .season-panel { padding: 0.85rem; }
   .season-panel__header { margin-bottom: 0.65rem; }
