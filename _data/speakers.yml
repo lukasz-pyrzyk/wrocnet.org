@@ -115,6 +115,9 @@
 - id: dan-hanan
   imie: Dan
   nazwisko: Hanan
+- id: daniel-dudek
+  imie: Daniel
+  nazwisko: Dudek
 - id: daniel-kowalski
   imie: Daniel
   nazwisko: Kowalski
@@ -126,6 +129,9 @@
   imie: Ewelina
   nazwisko: Dańczuk
   link: https://twitter.com/ewelinadanczuk
+- id: gael-fraiteur
+  imie: Gael
+  nazwisko: Fraiteur
 - id: gosia-borzecka
   imie: Gosia
   nazwisko: Borzęcka
@@ -191,6 +197,9 @@
 - id: karol-tomaszewski
   imie: Karol
   nazwisko: Tomaszewski
+- id: karol-tyl
+  imie: Karol
+  nazwisko: Tyl
 - id: kasper-stasiak
   imie: Kasper
   nazwisko: Stasiak
@@ -362,6 +371,9 @@
   imie: Michał
   nazwisko: Łusiak
   link: http://twitter.com/mlusiak
+- id: michal-mac
+  imie: Michał
+  nazwisko: Mac
 - id: michal-malecki
   imie: Michał
   nazwisko: Małecki
@@ -430,6 +442,9 @@
 - id: pawel-zukowski
   imie: Paweł
   nazwisko: Żukowski
+- id: pieter-joos-van-de-sande
+  imie: Pieter
+  nazwisko: Joos van de Sande
 - id: piotr-gankiewicz
   imie: Piotr
   nazwisko: Gankiewicz
@@ -440,6 +455,9 @@
 - id: piotr-klys
   imie: Piotr
   nazwisko: Kłys
+- id: piotr-owsiak
+  imie: Piotr
+  nazwisko: Owsiak
 - id: piotr-stapp
   imie: Piotr
   nazwisko: Stapp
@@ -569,6 +587,12 @@
 - id: weronika-sabiniewicz
   imie: Weronika
   nazwisko: Sabiniewicz
+- id: wiktor-zychla
+  imie: Wiktor
+  nazwisko: Zychla
+- id: wojciech-gebczyk
+  imie: Wojciech
+  nazwisko: Gębczyk
 - id: wojciech-gomola
   imie: Wojciech
   nazwisko: Gomoła
