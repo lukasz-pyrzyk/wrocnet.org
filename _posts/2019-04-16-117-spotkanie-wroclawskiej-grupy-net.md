@@ -11,6 +11,8 @@ talks:
   - tomasz-pluskiewicz
 ---
 
+[Archiwalna strona wydarzenia na Meetup](https://www.meetup.com/wrocnet/events/260253723/)
+
 {% include talk.html index=0 %}
 * Wideo: {% include video id="DXPEnl1vVtA" provider="youtube" %}
 

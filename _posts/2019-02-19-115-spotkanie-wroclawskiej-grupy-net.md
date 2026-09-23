@@ -11,6 +11,8 @@ talks:
   - krzysztof-seroka
 ---
 
+[Archiwalna strona wydarzenia na Meetup](https://www.meetup.com/wrocnet/events/258708692/)
+
 {% include talk.html index=0 %}
 * Prezentacja: [PDF](/slides/How_to_improve_software_development_proces_with_roslyn.zip)
 * Materiały: [https://github.com/cezarypiatek/Presentations/blob/master/RoslynLinks.md](https://github.com/cezarypiatek/Presentations/blob/master/RoslynLinks.md)

@@ -11,6 +11,8 @@ talks:
   - pawel-klimczyk
 ---
 
+[Archiwalna strona wydarzenia na Meetup](https://www.meetup.com/wrocnet/events/234445398/)
+
 {% include talk.html index=0 %}
 * Prezentacja: [reveal.js (zip)](/slides/graphql.zip)
 * Wideo: {% include video id="z92i1vgQxRI" provider="youtube" %}

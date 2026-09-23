@@ -19,4 +19,4 @@ talks:
 
 {% include talk.html index=1 %}
 
-*Więcej informacji: [Meetup](https://www.meetup.com/wrocnet/)*
+*Więcej informacji: [Meetup](https://www.meetup.com/wrocnet/events/283024353/)*

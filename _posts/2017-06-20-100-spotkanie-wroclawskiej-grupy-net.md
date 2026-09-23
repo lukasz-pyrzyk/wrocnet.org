@@ -11,6 +11,8 @@ talks:
   - grzesiek-siemoniak
 ---
 
+[Archiwalna strona wydarzenia na Meetup](https://www.meetup.com/wrocnet/events/240108521/)
+
 {% include talk.html index=0 %}
 * Prezentacja: [slajdy](https://github.com/maklipsa/donetconfpl_tpldataflow)
 * Wideo: {% include video id="wfrqdFdA_48" provider="youtube" %}

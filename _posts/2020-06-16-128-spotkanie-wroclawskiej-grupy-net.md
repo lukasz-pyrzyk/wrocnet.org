@@ -16,4 +16,4 @@ talks:
 
 **Panel dyskusyjny: DevOps – teoria i praktyka**
 
-*Więcej informacji: [Meetup](https://www.meetup.com/wrocnet/)*
+*Więcej informacji: [Meetup](https://www.meetup.com/wrocnet/events/268145715/)*

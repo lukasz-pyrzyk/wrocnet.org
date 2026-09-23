@@ -11,6 +11,8 @@ talks:
   - jacek-kolonko
 ---
 
+[Archiwalna strona wydarzenia na Meetup](https://www.meetup.com/wrocnet/events/244834446/)
+
 {% include talk.html index=0 %}
 * Wideo: {% include video id="FJIOL63LpII" provider="youtube" %}
 

@@ -11,6 +11,8 @@ talks:
   - michal-szafranski
 ---
 
+[Archiwalna strona wydarzenia na Meetup](https://www.meetup.com/wrocnet/events/244076164/)
+
 {% include talk.html index=0 %}
 * Prezentacja: [PDF](/slides/ts4csharp.zip)
 * Wideo: {% include video id="lDnPDzaCpJ8" provider="youtube" %}

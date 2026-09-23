@@ -11,6 +11,8 @@ talks:
   - przemyslaw-pogorzelec
 ---
 
+[Archiwalna strona wydarzenia na Meetup](https://www.meetup.com/wrocnet/events/248674425/)
+
 {% include talk.html index=0 %}
 * Prezentacja: wkrótce
 * Wideo: wkrótce

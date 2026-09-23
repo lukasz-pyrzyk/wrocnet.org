@@ -14,6 +14,8 @@ talks:
 
 Miejsce: Mleczarnia, ul. Włodkowica 5, Wrocław
 
+[Archiwalna strona wydarzenia na Meetup](https://www.meetup.com/wrocnet/events/260971332/)
+
 Spotkanie zorganizowane w ramach GeekWeekWro.
 
 ### Agenda

@@ -16,4 +16,4 @@ talks:
 
 **Panel dyskusyjny**
 
-*Więcej informacji: [Meetup](https://www.meetup.com/wrocnet/)*
+*Więcej informacji: [Meetup](https://www.meetup.com/wrocnet/events/293492975/)*

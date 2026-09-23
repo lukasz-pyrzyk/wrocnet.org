@@ -11,6 +11,8 @@ talks:
   - marcin-skrobiranda
 ---
 
+[Archiwalna strona wydarzenia na Meetup](https://www.meetup.com/wrocnet/events/246444014/)
+
 {% include talk.html index=0 %}
 * Prezentacja: wkrótce
 * Wideo: wkrótce

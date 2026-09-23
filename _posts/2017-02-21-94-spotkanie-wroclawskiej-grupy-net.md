@@ -8,6 +8,8 @@ talks:
   - oskar-dudycz
 ---
 
+[Archiwalna strona wydarzenia na Meetup](https://www.meetup.com/wrocnet/events/237406855/)
+
 {% include talk.html index=0 %}
 * Prezentacja: [PowerPoint](/slides/DDDudycz.zip)
 * Materiały: [GitHub](https://github.com/oskardudycz/EventSourcing.NetCore)

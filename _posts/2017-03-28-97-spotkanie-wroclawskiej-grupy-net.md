@@ -11,6 +11,8 @@ talks:
   - pawel-lukasik
 ---
 
+[Archiwalna strona wydarzenia na Meetup](https://www.meetup.com/wrocnet/events/238594125/)
+
 {% include talk.html index=0 %}
 * Prezentacja: [pptx](/slides/JSON-SQLServer2016.zip)
 * Wideo: wkrótce

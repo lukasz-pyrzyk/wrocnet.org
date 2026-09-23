@@ -14,6 +14,8 @@ talks:
   - waldemar-mekal
 ---
 
+[Archiwalna strona wydarzenia na Meetup](https://www.meetup.com/wrocnet/events/259682524/)
+
 {% include talk.html index=0 %}
 * Prezentacja: [ODP](/slides/IL - między piekłem a niebem.zip)
 * Wideo: {% include video id="7cXH1xaUfmc" provider="youtube" %}

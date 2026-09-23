@@ -14,6 +14,8 @@ talks:
   - kacper-swislocki
 ---
 
+[Archiwalna strona wydarzenia na Meetup](https://www.meetup.com/wrocnet/events/266004172/)
+
 {% include talk.html index=0 %}
 * Prezentacja: [PDF](/slides/cleanupthismessv3-191120171921.zip)
 * Wideo: {% include video id="Zs_sbbrYX1o" provider="youtube" %}
