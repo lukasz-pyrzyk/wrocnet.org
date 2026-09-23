@@ -11,6 +11,8 @@ talks:
   - marcin-kostuch
 ---
 
+[Archiwalna strona wydarzenia na Meetup](https://www.meetup.com/wrocnet/events/234369009/)
+
 {% include talk.html index=0 %}
 * Prezentacja: [PDF](/slides/RevDeBug.zip)
 * Wideo: {% include video id="8IYZuKlp2mY" provider="youtube" %}

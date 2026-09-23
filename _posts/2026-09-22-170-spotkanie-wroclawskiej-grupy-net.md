@@ -16,6 +16,8 @@ talks:
 
 🚀 **OTWARCIE SEZONU 2026/2027!** 170. spotkanie Wroc.NET odbędzie się w **Pub Wędrówki, ul. Podwale 37/38, 50-040 Wrocław**.
 
+*Więcej informacji: [Meetup](https://www.meetup.com/wrocnet/events/316514489/)*
+
 Wracamy po wakacyjnej przerwie! Na start sezonu {% include speaker.html id="lukasz-pyrzyk" %} przywita wszystkich, opowie o planach na nadchodzące miesiące i przekaże najważniejsze wiadomości organizacyjne.
 
 {% include talk.html index=0 %}

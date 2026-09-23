@@ -11,6 +11,8 @@ talks:
   - jerzy-wickowski
 ---
 
+[Archiwalna strona wydarzenia na Meetup](https://www.meetup.com/wrocnet/events/255976365/)
+
 {% include talk.html index=0 %}
 * Prezentacja: wkrótce
 * Wideo: {% include video id="Zx4MxvR_IYg" provider="youtube" %}

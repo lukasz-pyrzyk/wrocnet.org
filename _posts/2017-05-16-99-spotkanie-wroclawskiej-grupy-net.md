@@ -11,6 +11,8 @@ talks:
   - lukasz-gasior
 ---
 
+[Archiwalna strona wydarzenia na Meetup](https://www.meetup.com/wrocnet/events/239659155/)
+
 {% include talk.html index=0 %}
 * Prezentacja: [http://presentations.scooletz.com/KISSS/](http://presentations.scooletz.com/KISSS/)
 * Wideo: {% include video id="xWkcwLvmBBg" provider="youtube" %}

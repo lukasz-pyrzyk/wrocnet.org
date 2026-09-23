@@ -11,6 +11,8 @@ talks:
   - piotr-wandycz
 ---
 
+[Archiwalna strona wydarzenia na Meetup](https://www.meetup.com/wrocnet/events/238167141/)
+
 {% include talk.html index=0 %}
 * Prezentacja: [pptx](/slides/NET-Core-2017.zip)
 * Wideo: {% include video id="wa-JyqRkla4" provider="youtube" %}

@@ -14,6 +14,8 @@ talks:
   - rafal-hryniewski
 ---
 
+[Archiwalna strona wydarzenia na Meetup](https://www.meetup.com/wrocnet/events/250296388/)
+
 {% include talk.html index=0 %}
 * Prezentacja: [SlideShare](https://www.slideshare.net/MarcinTyborowski1/microsoft-flow-108264021)
 * Wideo: {% include video id="BthQt_LiXw0" provider="youtube" %}

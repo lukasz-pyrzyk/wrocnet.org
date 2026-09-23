@@ -14,6 +14,8 @@ talks:
   - pawel-klimczyk
 ---
 
+[Archiwalna strona wydarzenia na Meetup](https://www.meetup.com/wrocnet/events/236795560/)
+
 {% include talk.html index=0 %}
 * Prezentacja: [OzCode.pdf](/slides/OzCode.zip)
 * Wideo: {% include video id="pAJ7YD54ZMA" provider="youtube" %}

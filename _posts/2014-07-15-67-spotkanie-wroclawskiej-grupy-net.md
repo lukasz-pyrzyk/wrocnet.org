@@ -8,7 +8,14 @@ talks:
   - przemyslaw-pogorzelec
 ---
 
+Miejsce: AIP Business Link, ul. Rzeźnicza 28, Wrocław
+
+[Archiwalna strona wydarzenia na Meetup](https://www.meetup.com/wrocnet/events/194216132/)
+
 {% include talk.html index=0 %}
+
+Czy warto testować metody prywatne? Omówienie zalet i wad takiego podejścia oraz wprowadzenie do eliminowania łańcuchów sprawdzeń wartości `null` za pomocą monady Maybe.
+
 * Prezentacja: [prezentacja.pdf](/slides/prezentacja.zip)
 * Przykłady: [Test Private Method And Monad.rar](/slides/Test%20Private%20Method%20And%20Monad.zip)
 * Linki: 

@@ -11,6 +11,8 @@ talks:
   - damian-jarosch
 ---
 
+[Archiwalna strona wydarzenia na Meetup](https://www.meetup.com/wrocnet/events/239015139/)
+
 {% include talk.html index=0 %}
 * Prezentacja: [pptx](/slides/OSS_Wroclaw.zip)
 * Wideo: {% include video id="5IhRQlwrZhY" provider="youtube" %}

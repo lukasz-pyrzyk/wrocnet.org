@@ -11,6 +11,8 @@ talks:
   - artur-tadrala
 ---
 
+[Archiwalna strona wydarzenia na Meetup](https://www.meetup.com/wrocnet/events/242593966/)
+
 {% include talk.html index=0 %}
 * Wideo: {% include video id="EcWfr2gS1C8" provider="youtube" %}
 

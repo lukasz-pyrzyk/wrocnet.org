@@ -11,6 +11,8 @@ talks:
   - pawel-klimczyk
 ---
 
+[Archiwalna strona wydarzenia na Meetup](https://www.meetup.com/wrocnet/events/247642624/)
+
 {% include talk.html index=0 %}
 * Prezentacja: [PowerPoint](/slides/cqrs-in-4-steps-rmaziarka.zip)
 * Wideo: {% include video id="i0wCilZ0QdY" provider="youtube" %}

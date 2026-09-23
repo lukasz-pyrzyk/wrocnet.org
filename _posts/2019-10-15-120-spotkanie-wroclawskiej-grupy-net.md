@@ -11,6 +11,8 @@ talks:
   - michal-barylinski
 ---
 
+[Archiwalna strona wydarzenia na Meetup](https://www.meetup.com/wrocnet/events/265064792/)
+
 {% include talk.html index=0 %}
 * Prezentacja: [PPTX](/slides/CZYSTY-MODEL-DOMENOWY.zip)
 * Wideo: {% include video id="hcsyZKh9gd0" provider="youtube" %}

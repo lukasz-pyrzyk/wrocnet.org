@@ -11,6 +11,8 @@ talks:
   - aleksandr-riabov
 ---
 
+[Archiwalna strona wydarzenia na Meetup](https://www.meetup.com/wrocnet/events/248796910/)
+
 {% include talk.html index=0 %}
 * Prezentacja: wkrótce
 * Wideo: wkrótce

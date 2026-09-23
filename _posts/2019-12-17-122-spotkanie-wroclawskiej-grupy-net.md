@@ -11,6 +11,8 @@ talks:
   - rustam-ashurov
 ---
 
+[Archiwalna strona wydarzenia na Meetup](https://www.meetup.com/wrocnet/events/266952547/)
+
 {% include talk.html index=0 %}
 * Prezentacja: wkrótce
 * Wideo: {% include video id="MYFAVbItSTE" provider="youtube" %}

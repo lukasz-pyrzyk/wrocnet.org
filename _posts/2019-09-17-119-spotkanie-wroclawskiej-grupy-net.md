@@ -11,6 +11,8 @@ talks:
   - rafal-hryniewski
 ---
 
+[Archiwalna strona wydarzenia na Meetup](https://www.meetup.com/wrocnet/events/264284277/)
+
 {% include talk.html index=0 %}
 * Prezentacja: [PowerPoint](/slides/OswoicLegacy.zip)
 * Wideo: wkrótce

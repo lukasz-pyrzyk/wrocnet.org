@@ -11,6 +11,8 @@ talks:
   - zygfryd-wieszok
 ---
 
+[Archiwalna strona wydarzenia na Meetup](https://www.meetup.com/wrocnet/events/254383905/)
+
 {% include talk.html index=0 %}
 * Prezentacja: wkrótce
 * Wideo: wkrótce
