@@ -1,13 +1,14 @@
 main:
-  - title: "Strona główna"
+  - title: '<i class="fas fa-fw fa-house-chimney" aria-hidden="true"></i><span class="visually-hidden">Strona główna</span>'
     url: /
+    description: "Strona główna"
   - title: "Spotkania"
     url: /spotkania/
   - title: "Organizatorzy"
     url: /organizatorzy/
   - title: "Zostań prelegentem"
     url: /zostan-prelegentem/
-  - title: "O grupie"
-    url: /o-grupie/
   - title: "Wystąpili u nas"
     url: /wystapili-u-nas/
+  - title: "O grupie"
+    url: /o-grupie/

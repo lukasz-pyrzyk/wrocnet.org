@@ -44,6 +44,7 @@ See [README.md](README.md) for install, local dev server, and CI validation comm
 
 ## Change Strategy For Agents
 - Link, do not duplicate: if details exist in README or workflow files, reference them.
+- Do not modify `_includes/masthead.html`. Keep it compatible with theme updates; implement navigation and header changes through `_data/navigation.yml`, configuration, or local styles. If that is not feasible, discuss the trade-off before editing the include.
 - Verify with lint/build/proofer when changing content, data files, or templates.
 - Avoid broad formatting rewrites in historical posts unless explicitly requested.
 - Keep includes and data schema changes backward-compatible with existing pages.
