@@ -145,6 +145,9 @@
 - id: idan-shatz
   imie: Idan
   nazwisko: Shatz
+- id: ireneusz-patalas
+  imie: Ireneusz
+  nazwisko: Patalas
 - id: jacek-kolonko
   imie: Jacek
   nazwisko: Kolonko
@@ -161,6 +164,9 @@
   imie: Jerzy
   nazwisko: Wickowski
   link: https://jerzywickowski.pl
+- id: joanna-lamch
+  imie: Joanna
+  nazwisko: Lamch
 - id: kacper-swislocki
   imie: Kacper
   nazwisko: Świsłocki
