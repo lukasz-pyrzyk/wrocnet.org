@@ -11,6 +11,8 @@ talks:
 
 Miejsce: Politechnika Wrocławska, budynek C3, sala 23, Wrocław
 
+[Archiwalna strona spotkania w Wayback Machine](https://web.archive.org/web/20081121124830/http://wrocnet.org/blogs/meetings/archive/2008/06/08/xi-spotkanie-wroc-awskiej-grupy-net.aspx)
+
 Spotkanie rozpoczęło się o godzinie 19:00. Od tego spotkania rejestracja odbywała się przez portal GoldenLine.
 
 {% include talk.html index=0 %}
