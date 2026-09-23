@@ -38,7 +38,7 @@ search: true
 author:
   name: "Wroc.NET"
   avatar: "/assets/images/logo.png"
-  bio: "Wrocławska społeczność pasjonatów .NET, spotykamy się od 2008 r."
+  bio: "Wrocławska społeczność pasjonatów .NET, spotykamy się od 2007 r."
   links:
     - label: "Kod źródłowy strony"
       icon: "fas fa-fw fa-code"

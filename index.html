@@ -11,13 +11,20 @@ header:
       url: "https://www.meetup.com/wrocnet/"
     - label: "Zobacz spotkania"
       url: "/spotkania/"
-excerpt: "Wrocławska społeczność programistów .NET. Spotykamy się od 2008 roku, żeby dzielić się wiedzą i doświadczeniami z ekosystemu Microsoft."
+excerpt: "Wrocławska społeczność programistów .NET. Spotykamy się od 2007 roku, żeby dzielić się wiedzą i doświadczeniami z ekosystemu Microsoft."
 ---
 
 {% assign months_pl = "stycznia,lutego,marca,kwietnia,maja,czerwca,lipca,sierpnia,września,października,listopada,grudnia" | split: "," %}
 {% assign today_ts = 'now' | date: '%s' | plus: 0 %}
 {% assign current_year = 'now' | date: '%Y' | plus: 0 %}
-{% assign community_years = current_year | minus: 2008 %}
+{% assign current_month_day = 'now' | date: '%m%d' | plus: 0 %}
+{% assign oldest_post = site.posts | last %}
+{% assign founding_year = oldest_post.date | date: '%Y' | plus: 0 %}
+{% assign founding_month_day = oldest_post.date | date: '%m%d' | plus: 0 %}
+{% assign community_years = current_year | minus: founding_year %}
+{% if current_month_day < founding_month_day %}
+  {% assign community_years = community_years | minus: 1 %}
+{% endif %}
 {% assign meeting_count = 0 %}
 {% assign total_sessions = 0 %}
 {% for post in site.posts %}
@@ -35,7 +42,7 @@ excerpt: "Wrocławska społeczność programistów .NET. Spotykamy się od 2008 
 <section class="home-overview" aria-labelledby="community-heading">
   <div class="community-summary">
     <div class="community-summary__intro">
-      <p class="section-eyebrow">Od 2008 roku</p>
+      <p class="section-eyebrow">Od {{ founding_year }} roku</p>
       <h2 id="community-heading">Wroc.NET w liczbach</h2>
       <p>Spotykamy się, żeby wymieniać doświadczenia z prawdziwych projektów.</p>
     </div>
