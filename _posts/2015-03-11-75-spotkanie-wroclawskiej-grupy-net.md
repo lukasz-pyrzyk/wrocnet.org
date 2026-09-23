@@ -14,6 +14,10 @@ talks:
   - miroslaw-praglowski
 ---
 
+Miejsce: Pub Włodkowica 21, ul. Włodkowica 21, Wrocław
+
+[Archiwalna strona wydarzenia na Meetup](https://www.meetup.com/wrocnet/events/220582435/)
+
 {% include talk.html index=0 %}
 * Prezentacja: [PDF](/slides/Jakub_Gutkowski_CQRS.zip)
 * Wideo: {% include video id="0oEYDS1hIpc" provider="youtube" %}

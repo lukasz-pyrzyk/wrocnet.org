@@ -24,6 +24,12 @@ talks:
   - krzysztof-morcinek
 ---
 
+Miejsce: Pub Włodkowica 21, ul. Włodkowica 21, Wrocław
+
+[Archiwalna strona wydarzenia na Meetup](https://www.meetup.com/wrocnet/events/229093666/)
+
+Specjalne spotkanie zorganizowane z okazji konferencji WROC#, poświęcone mikroserwisom i krótkim lightning talkom.
+
 {% include talk.html index=0 %}
 * Prezentacja: [pptx](/slides/microservices.zip)
 * Wideo: {% include video id="D0XLC-tHUHM" provider="youtube" %}
