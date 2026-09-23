@@ -85,7 +85,7 @@ classes: wide
   word-wrap: break-word;
 }
 .organizer-bio {
-  font-size: 0.9em;
+  font-size: 0.8em;
   color: #555;
   margin-bottom: 1rem;
 }
