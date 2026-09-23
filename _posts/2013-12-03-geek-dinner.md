@@ -1,6 +1,6 @@
 ---
 layout: single
-title: 'Geek Diner'
+title: 'Geek Dinner'
 categories: spotkania
 date: 2013-12-03
 ---
