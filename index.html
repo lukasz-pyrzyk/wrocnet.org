@@ -16,113 +16,271 @@ excerpt: "Wrocławska społeczność programistów .NET. Spotykamy się od 2008 
 
 {% assign months_pl = "stycznia,lutego,marca,kwietnia,maja,czerwca,lipca,sierpnia,września,października,listopada,grudnia" | split: "," %}
 {% assign today_ts = 'now' | date: '%s' | plus: 0 %}
+{% assign current_year = 'now' | date: '%Y' | plus: 0 %}
+{% assign community_years = current_year | minus: 2008 %}
+{% assign meeting_count = 0 %}
+{% assign total_sessions = 0 %}
+{% for post in site.posts %}
+  {% assign talk_count = post.talks | size %}
+  {% assign total_sessions = total_sessions | plus: talk_count %}
+  {% if post.path contains '-spotkanie-' %}
+    {% assign filename_parts = post.path | split: '/' | last | split: '-' %}
+    {% assign post_meeting_number = filename_parts[3] | plus: 0 %}
+    {% if post_meeting_number > meeting_count %}
+      {% assign meeting_count = post_meeting_number %}
+    {% endif %}
+  {% endif %}
+{% endfor %}
 
-<div class="home-grid">
-  <div class="feature-card">
-    <h2>Regularne spotkania</h2>
-    <p>Organizujemy spotkania kilka razy w roku z prelekcjami o .NET, Azure, architekturze i nie tylko.</p>
-    <a href="/spotkania/" class="btn btn--primary">Historia spotkań</a>
+<section class="home-overview" aria-labelledby="community-heading">
+  <div class="community-summary">
+    <div class="community-summary__intro">
+      <p class="section-eyebrow">Od 2008 roku</p>
+      <h2 id="community-heading">Wroc.NET w liczbach</h2>
+      <p>Spotykamy się, żeby wymieniać doświadczenia z prawdziwych projektów.</p>
+    </div>
+
+    <dl class="community-stats">
+      <div class="community-stat">
+        <dt>lat społeczności</dt>
+        <dd>{{ community_years }}</dd>
+      </div>
+      <div class="community-stat">
+        <dt>spotkań</dt>
+        <dd>{{ meeting_count }}</dd>
+      </div>
+      <div class="community-stat">
+        <dt>prelegentów i prelegentek</dt>
+        <dd>{{ site.data.speakers | size }}</dd>
+      </div>
+      <div class="community-stat">
+        <dt>prezentacji</dt>
+        <dd>{{ total_sessions }}</dd>
+      </div>
+    </dl>
   </div>
 
-  <div class="feature-card">
-    <h2>Zostań prelegentem</h2>
-    <p>Masz temat, którym chcesz się podzielić? Zgłoś się – pokrywamy koszty dojazdu i noclegu.</p>
-    <a href="/zostan-prelegentem/" class="btn btn--primary">Zgłoś się</a>
-  </div>
-
-  <div class="feature-card feature-card--schedule">
-    <h2>Sezon {{ site.data.schedule.season }}</h2>
-    <p class="schedule-venue">
-      <i class="fas fa-map-marker-alt"></i>
-      <a href="{{ site.data.schedule.venue.maps_url }}" target="_blank" rel="noopener noreferrer">
-        {{ site.data.schedule.venue.name }}, {{ site.data.schedule.venue.address }}
-      </a>
-    </p>
+  <aside class="season-panel" aria-labelledby="season-heading">
+    <div class="season-panel__header">
+      <div>
+        <p class="section-eyebrow">Kalendarz</p>
+        <h2 id="season-heading">Sezon {{ site.data.schedule.season }}</h2>
+      </div>
+      <p class="schedule-venue">
+        <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+        <a href="{{ site.data.schedule.venue.maps_url }}" target="_blank" rel="noopener noreferrer">
+          {{ site.data.schedule.venue.name }}, {{ site.data.schedule.venue.address }}
+        </a>
+      </p>
+    </div>
     <ul class="schedule-list">
+      {% assign upcoming_index = 0 %}
       {% for date_str in site.data.schedule.dates %}
         {% assign meeting_ts = date_str | date: '%s' | plus: 0 %}
         {% if meeting_ts >= today_ts %}
           {% assign m_idx = date_str | date: "%-m" | minus: 1 %}
           {% assign day = date_str | date: "%-d" %}
           {% assign year = date_str | date: "%Y" %}
-          <li class="schedule-item schedule-item--upcoming">
-            <span class="schedule-date">{{ day }} {{ months_pl[m_idx] }} {{ year }}</span>
-            <a href="https://www.meetup.com/wrocnet/events/" target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--x-small">Zapisz się</a>
+          <li class="schedule-item{% if upcoming_index == 0 %} schedule-item--next{% endif %}">
+            <a href="https://www.meetup.com/wrocnet/events/" target="_blank" rel="noopener noreferrer" class="schedule-link" aria-label="{{ day }} {{ months_pl[m_idx] }} {{ year }} — wydarzenia Wroc.NET na Meetup">
+              <span>
+                {% if upcoming_index == 0 %}<small>Najbliższe</small>{% endif %}
+                <strong>{{ day }} {{ months_pl[m_idx] }}</strong>
+                <span class="schedule-year">{{ year }}</span>
+              </span>
+              <i class="fas fa-arrow-right" aria-hidden="true"></i>
+            </a>
           </li>
+          {% assign upcoming_index = upcoming_index | plus: 1 %}
         {% endif %}
       {% endfor %}
     </ul>
-  </div>
-</div>
+  </aside>
+</section>
 
 <style>
-.home-grid {
+.home-overview {
   display: grid;
-  grid-template-columns: repeat(2, 1fr) 1.2fr;
-  gap: 1.5rem;
-  margin: 2.5rem 0;
-  align-items: start;
+  gap: 1.25rem;
+  margin: 1.25rem 0 3rem;
 }
-@media (max-width: 720px) {
-  .home-grid { grid-template-columns: 1fr 1fr; }
+.section-eyebrow {
+  margin: 0 0 0.5rem;
+  color: #8e24aa;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
 }
-@media (max-width: 560px) {
-  .home-grid { grid-template-columns: 1fr; }
+.community-summary {
+  display: grid;
+  grid-template-columns: minmax(16rem, 0.85fr) minmax(0, 1.15fr);
+  gap: 2rem;
+  align-items: center;
+  padding: 0.75rem 0 1.25rem;
+  border-bottom: 1px solid #d9d0e0;
 }
-.feature-card {
-  padding: 1.5rem;
-  border: 1px solid #e0d5e8;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(100,30,120,0.07);
+.community-summary h2,
+.season-panel h2 {
+  margin: 0;
+  padding: 0;
+  border-bottom: 0;
+  color: #1e1428;
 }
-.feature-card h2 {
+.community-summary h2 {
+  font-size: 1.45rem;
+  line-height: 1.15;
+}
+.community-summary__intro > p:last-child {
+  margin: 0.5rem 0 0;
+  color: #5f5568;
+  font-size: 0.76rem;
+  line-height: 1.5;
+}
+.community-stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.25rem;
+  margin: 0;
+}
+.community-stat {
+  min-width: 0;
+  padding: 0 1rem;
+  border-left: 1px solid #d9d0e0;
+}
+.community-stat:first-child { padding-left: 0; border-left: 0; }
+.community-stat dd {
+  margin: 0;
   color: #641e78;
-  font-size: 1.1rem;
-  margin-top: 0;
-  border-bottom: 2px solid #641e78;
-  padding-bottom: 0.4rem;
-  margin-bottom: 0.75rem;
+  font-size: 2.1rem;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+  line-height: 1;
 }
-.feature-card p { font-size: 0.9rem; color: #444; }
+.community-stat dt {
+  margin-top: 0.45rem;
+  color: #6b5f75;
+  font-size: 0.68rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+.season-panel {
+  padding: 1.25rem;
+  border: 1px solid #ebe4ef;
+  border-radius: 8px;
+  background: #faf8fb;
+}
+.season-panel__header {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+}
+.season-panel h2 {
+  font-size: 1.15rem;
+}
 .schedule-venue {
+  max-width: 24rem;
   font-size: 0.78rem;
-  color: #777;
-  margin-bottom: 0.75rem;
+  color: #6b5f75;
+  margin: 0;
+  text-align: right;
 }
 .schedule-venue a { color: #641e78; }
 .schedule-list {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 0.5rem;
   list-style: none;
   padding: 0;
   margin: 0;
 }
 .schedule-item {
+  min-width: 0;
+}
+.schedule-link {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.35rem 0.5rem;
-  border-radius: 4px;
-  margin-bottom: 0.2rem;
-  font-size: 0.8rem;
-}
-.schedule-item--upcoming {
-  background: #f7f0fb;
-  font-weight: 600;
+  min-height: 3.1rem;
+  padding: 0.55rem 0.7rem;
+  border: 1px solid #e8e1eb;
+  border-radius: 6px;
+  background: #fff;
   color: #1e1428;
+  font-size: 0.72rem;
+  line-height: 1.15;
+  text-decoration: none;
+  transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
 }
-.schedule-item--upcoming:first-of-type {
+.schedule-link:hover {
+  border-color: #8e24aa;
+  box-shadow: 0 4px 12px rgba(30,20,40,0.07);
+  color: #641e78;
+  transform: translateY(-1px);
+}
+.schedule-link strong { font-weight: 700; }
+.schedule-year { color: #786d80; }
+.schedule-link > i {
+  opacity: 0.35;
+  transition: opacity 0.2s, transform 0.2s;
+}
+.schedule-link:hover > i {
+  opacity: 1;
+  transform: translateX(2px);
+}
+.schedule-item--next { grid-column: span 2; }
+.schedule-item--next .schedule-link {
+  border-color: #641e78;
   background: #641e78;
   color: #fff;
 }
-.schedule-item--upcoming:first-of-type .schedule-date { color: #fff; }
-.schedule-item--past {
-  color: #bbb;
-  text-decoration: line-through;
+.schedule-item--next .schedule-link:hover { color: #fff; }
+.schedule-item--next .schedule-year { color: #eadced; }
+.schedule-item--next .schedule-link > i { opacity: 1; }
+.schedule-link small {
+  display: block;
+  margin-bottom: 0.18rem;
+  font-size: 0.52rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
-.schedule-date { flex: 1; }
-.btn--x-small {
-  padding: 0.15em 0.55em;
-  font-size: 0.7rem;
-  white-space: nowrap;
+@media (max-width: 700px) {
+  .community-summary {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+  .season-panel__header {
+    align-items: start;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .schedule-venue { text-align: left; }
+  .schedule-list {
+    display: flex;
+    margin-right: -1.25rem;
+    padding-right: 1.25rem;
+    overflow-x: auto;
+    scroll-snap-type: x proximity;
+  }
+  .schedule-item {
+    flex: 0 0 11rem;
+    scroll-snap-align: start;
+  }
+  .schedule-item--next { flex-basis: 14rem; }
+}
+@media (max-width: 520px) {
+  .home-overview { margin-top: 1rem; }
+  .community-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem 0;
+  }
+  .community-stat { padding: 0 0.6rem; }
+  .community-stat:nth-child(odd) { padding-left: 0; border-left: 0; }
+  .community-stat dd { font-size: 1.7rem; }
+  .community-stat dt { font-size: 0.58rem; }
 }
 
 /* Partners */
