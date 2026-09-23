@@ -1,6 +1,6 @@
 ---
 layout: single
-title: '3. Plażowe spotkanie grupy .NET'
+title: '3\. Plażowe spotkanie grupy .NET'
 categories: spotkania
 date: 2018-08-21
 ---

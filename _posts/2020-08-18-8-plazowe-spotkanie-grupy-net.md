@@ -1,6 +1,6 @@
 ---
 layout: single
-title: '8. Plażowe spotkanie grupy .NET'
+title: '8\. Plażowe spotkanie grupy .NET'
 categories: spotkania
 date: 2020-08-18
 ---
