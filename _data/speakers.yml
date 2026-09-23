@@ -42,12 +42,18 @@
 - id: andrzej-nowik
   imie: Andrzej
   nazwisko: Nowik
+- id: andrzej-piotrowski
+  imie: Andrzej
+  nazwisko: Piotrowski
 - id: arek-benedykt
   imie: Arek
   nazwisko: Benedykt
 - id: arkadiusz-makosa
   imie: Arkadiusz
   nazwisko: Mąkosa
+- id: arkadiusz-wasniewski
+  imie: Arkadiusz
+  nazwisko: Waśniewski
 - id: artur-tadrala
   imie: Artur
   nazwisko: Tadrała
@@ -85,6 +91,9 @@
 - id: beata-zalewa
   imie: Beata
   nazwisko: Zalewa
+- id: bogdan-sajewicz
+  imie: Bogdan
+  nazwisko: Sajewicz
 - id: cezary-piatek
   imie: Cezary
   nazwisko: Piątek
@@ -183,6 +192,9 @@
   imie: Konrad
   nazwisko: Kokosa
   link: https://github.com/kkokosa
+- id: konrad-weiske
+  imie: Konrad
+  nazwisko: Weiske
 - id: krzysztof-morcinek
   imie: Krzysztof
   nazwisko: Morcinek
@@ -420,6 +432,9 @@
   imie: Piotr
   nazwisko: Stapp
   link: https://twitter.com/ptrstpp950
+- id: piotr-szura
+  imie: Piotr
+  nazwisko: Szura
 - id: piotr-wachulec
   imie: Piotr
   nazwisko: Wachulec
@@ -431,6 +446,9 @@
   imie: Piotr
   nazwisko: Wandycz
   link: http://piotr-wandycz.pl/
+- id: piotr-wlodek
+  imie: Piotr
+  nazwisko: Włodek
 - id: przemyslaw-pogorzelec
   imie: Przemysław
   nazwisko: Pogorzelec
