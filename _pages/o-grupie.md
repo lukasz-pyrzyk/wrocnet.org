@@ -1,7 +1,7 @@
 ---
 title: "O Grupie"
 permalink: /o-grupie/
-excerpt: "Wrocławska Grupa .NET to inicjatywa pasjonatów technologii Microsoft z Wrocławia. Spotykamy się od 2008 roku, by dzielić się wiedzą i doświadczeniem."
+excerpt: "Wrocławska Grupa .NET to inicjatywa pasjonatów technologii Microsoft z Wrocławia. Spotykamy się od 2007 roku, by dzielić się wiedzą i doświadczeniem."
 ---
 
 ## Wrocławska Grupa .NET
@@ -14,7 +14,7 @@ Zapraszamy wszystkich zainteresowanych do przyłączenia się oraz brania aktywn
 
 ## Historia
 
-Grupa działa od **2008 roku** i odbyła już ponad 169 spotkań. Przez lata prelegenci dzielili się wiedzą z dziedzin takich jak:
+Grupa działa od **2007 roku** i odbyła już ponad 169 spotkań. Przez lata prelegenci dzielili się wiedzą z dziedzin takich jak:
 
 - .NET Core / ASP.NET / C#
 - Azure i usługi chmurowe
