@@ -1,6 +1,6 @@
 ---
 layout: single
-title: '1. spotkanie Wrocławskiej Grupy .NET'
+title: '1\. spotkanie Wrocławskiej Grupy .NET'
 categories: spotkania
 date: 2007-11-29
 date_estimated: true
