@@ -1,6 +1,6 @@
 ---
 layout: single
-title: '3. spotkanie Wrocławskiej Grupy .NET'
+title: '3\. spotkanie Wrocławskiej Grupy .NET'
 categories: spotkania
 date: 2008-01-10
 ---
