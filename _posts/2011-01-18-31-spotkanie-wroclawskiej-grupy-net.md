@@ -11,6 +11,8 @@ talks:
 
 Miejsce: Wrocław
 
+[Historyczny link do strony spotkania](http://bit.ly/fCSXJZ)
+
 Tematami spotkania były F# oraz Azure.
 
 {% include talk.html index=0 %}

@@ -14,6 +14,8 @@ talks:
 
 Miejsce: Wrocław
 
+[Archiwalna strona spotkania](http://wss.pl/group-130/CalendareventList/1,19042/asc.aspx) · [Kopia w Wayback Machine](https://web.archive.org/web/20110321025510/http://wss.pl/group-130/CalendareventList/1,19042/asc.aspx)
+
 Spotkanie odbyło się w ramach wydarzenia **Geeks on Tour** i trwało od 18:30 do 21:00.
 
 {% include talk.html index=0 %}

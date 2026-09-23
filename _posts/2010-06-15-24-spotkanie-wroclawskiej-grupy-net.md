@@ -11,6 +11,8 @@ talks:
 
 Miejsce: Wrocław
 
+[Archiwalna strona spotkania](http://ms-groups.pl/wroc.net/24.spotkanie/default.aspx)
+
 {% include talk.html index=0 %}
 
 Planowana sesja Pawła Palucha „W krainie map: porównanie MS Ajax SDK, MS Silverlight SDK i Telerik RadMap” została odwołana. Pozostałą część wieczoru przeznaczono na networking.

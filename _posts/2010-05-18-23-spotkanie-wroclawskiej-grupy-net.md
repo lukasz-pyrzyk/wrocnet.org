@@ -14,6 +14,8 @@ talks:
 
 Miejsce: Instytut Informatyki Uniwersytetu Wrocławskiego, ul. Joliot-Curie 15, Wrocław
 
+[Archiwalna strona spotkania](http://ms-groups.pl/wroc.net/23.spotkanie/default.aspx)
+
 {% include talk.html index=0 %}
 
 {% include talk.html index=1 %}

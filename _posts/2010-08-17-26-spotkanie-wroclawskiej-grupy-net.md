@@ -14,6 +14,8 @@ talks:
 
 Miejsce: Instytut Informatyki Uniwersytetu Wrocławskiego, ul. Joliot-Curie 15, Wrocław
 
+[Historyczny link do materiałów ze spotkania](http://bit.ly/cNSNoV)
+
 {% include talk.html index=0 %}
 
 {% include talk.html index=1 %}

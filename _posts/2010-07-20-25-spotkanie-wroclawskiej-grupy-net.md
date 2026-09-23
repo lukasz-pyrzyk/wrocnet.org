@@ -14,6 +14,8 @@ talks:
 
 Miejsce: Wrocław
 
+[Archiwalna strona spotkania](http://ms-groups.pl/wroc.net/25.spotkanie/default.aspx)
+
 {% include talk.html index=0 %}
 
 {% include talk.html index=1 %}

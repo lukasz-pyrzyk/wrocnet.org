@@ -14,6 +14,8 @@ talks:
 
 Miejsce: Wrocław
 
+[Archiwalna strona spotkania](http://wss.pl/group-130/CalendareventList/1,20110/asc.aspx)
+
 {% include talk.html index=0 %}
 
 {% include talk.html index=1 %}

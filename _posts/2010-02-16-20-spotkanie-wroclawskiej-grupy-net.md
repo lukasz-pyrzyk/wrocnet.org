@@ -14,6 +14,8 @@ talks:
 
 Miejsce: Instytut Informatyki Uniwersytetu Wrocławskiego, ul. Joliot-Curie 15, Wrocław
 
+[Archiwalna strona spotkania](http://ms-groups.pl/wroc.net/20.spotkanie/default.aspx) · [Kopia w Wayback Machine](https://web.archive.org/web/20101024165252/http://ms-groups.pl/wroc.net/20.spotkanie/default.aspx)
+
 Spotkanie rozpoczęło się o godzinie 18:00.
 
 {% include talk.html index=0 %}

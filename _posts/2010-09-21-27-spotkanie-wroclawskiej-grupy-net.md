@@ -14,6 +14,8 @@ talks:
 
 Miejsce: Wrocław
 
+[Archiwalna strona spotkania](http://codeguru.pl/group-130/CalendareventList/1,18749/@2010-9/asc.aspx) · [Kopia w Wayback Machine](https://web.archive.org/web/20100914181750/http://codeguru.pl/group-130/CalendareventList/1,18749/@2010-9/asc.aspx)
+
 Spotkanie trwało od 18:30 do 21:30.
 
 {% include talk.html index=0 %}
