@@ -7,6 +7,8 @@ date: 2008-01-22
 
 Miejsce: Uniwersytet Wrocławski, ul. Joliot-Curie 15, Wrocław
 
+[Archiwalna strona wydarzenia](http://wroc.net.isvclub.com/content/vs2008installfest.aspx) · [Kopia w Wayback Machine](https://web.archive.org/web/20080221094237/http://wroc.net.isvclub.com/content/vs2008installfest.aspx)
+
 Wydarzenie zorganizowane wspólnie przez Wrocławską Grupę .NET, Grupę .NET Wydziału Elektroniki Politechniki Wrocławskiej oraz Grupę .NET Uniwersytetu Wrocławskiego, wzorowane na krakowskiej edycji Visual Studio 2008 Install Fest. Celem było przybliżenie jak najszerszemu gronu odbiorców środowiska **Visual Studio 2008** i pomoc przy stawianiu w nim pierwszych kroków.
 
 ### Kluczowe informacje

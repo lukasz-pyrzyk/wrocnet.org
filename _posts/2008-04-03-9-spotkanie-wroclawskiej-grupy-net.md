@@ -7,6 +7,8 @@ date: 2008-04-03
 
 Miejsce: Capgemini, Quattro Forum, II piętro, ul. Legnicka 51-53, Wrocław
 
+[Archiwalna strona spotkania w Wayback Machine](https://web.archive.org/web/20090107060146/http://wrocnet.org/blogs/meetings/archive/2008/04/01/ix-spotkanie-wroc-net-i-plssug.aspx)
+
 Spotkanie odbyło się w godzinach 18:00 - 20:30 i było poświęcone nowym możliwościom języka C# związanym z **LINQ**.
 
 ### Agenda

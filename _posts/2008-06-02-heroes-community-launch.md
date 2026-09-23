@@ -69,4 +69,4 @@ Stowarzyszenie Coworking Kraków zostało powołane w celu popularyzacji idei co
 
 ---
 
-Więcej informacji: [http://wroc.net.isvclub.com](http://wroc.net.isvclub.com) oraz [http://heroes.wroclaw.pl](http://heroes.wroclaw.pl)
+Więcej informacji: [http://wroc.net.isvclub.com](http://wroc.net.isvclub.com) oraz [http://heroes.wroclaw.pl](http://heroes.wroclaw.pl) · [Kopia strony wydarzenia w Wayback Machine](https://web.archive.org/web/20080411231140/http://www.heroes.wroclaw.pl/pl/Event/About.aspx)
