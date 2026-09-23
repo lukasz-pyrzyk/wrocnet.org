@@ -29,6 +29,7 @@ See [README.md](README.md) for install, local dev server, and CI validation comm
 - Keep aligned colons in _data/ui-text.yml. The lint config intentionally allows extra spaces before colons.
 - If adding links/images in old posts, avoid empty markdown links and missing local assets because htmlproofer runs in CI.
 - Prefer preserving Polish content style and existing URL/permalink patterns.
+- **Numbered post titles**: Minimal Mistakes passes titles through Markdown in archive views, so a title starting with `9. Meeting` is interpreted as an ordered-list item and may render as `1. Meeting`. Escape the first period in single-quoted YAML, for example `title: '9\. Meeting'`.
 - **Images/Photos**: Do not use external URLs for profile photos. Download the image to `assets/images/organizers/`, ensure it's in JPG/PNG format, and resize it to a reasonable size (e.g., 400x400px) before committing.
 - **Historical posts** (pre-2012, archival data): see [.github/instructions/historical-posts.instructions.md](.github/instructions/historical-posts.instructions.md) for anonymization and formatting rules.
 - **Local build environment (macOS)**: system Ruby (2.6.x) is too old for the `bundler` version pinned in `Gemfile.lock` (requires Ruby >= 3.2). Fix: `brew install ruby@3.2`, then prefix commands with `export PATH="/opt/homebrew/opt/ruby@3.2/bin:$PATH"` before running `gem install bundler:<version>` and `bundle install`/`bundle exec jekyll ...`. This is a one-time environment fix, not a repo issue.
