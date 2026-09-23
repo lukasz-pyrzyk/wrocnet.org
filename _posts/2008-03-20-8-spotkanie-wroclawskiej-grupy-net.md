@@ -9,7 +9,7 @@ talks:
   - pawel-hofman
 ---
 
-Miejsce: siedziba firmy Capgemini, Wrocław
+Miejsce: siedziba firmy Capgemini, ul. Legnicka 51-53, Wrocław
 
 [Archiwalna strona spotkania w Wayback Machine](https://web.archive.org/web/20080323052240/http://wroc.net.isvclub.com/content/Meetings.aspx)
 
