@@ -11,11 +11,15 @@ talks:
 
 Miejsce: siedziba firmy Capgemini, ul. Legnicka 51-53, Wrocław
 
-[Archiwalna strona spotkania w Wayback Machine](https://web.archive.org/web/20080323052240/http://wroc.net.isvclub.com/content/Meetings.aspx)
+[Archiwalna strona spotkania w Wayback Machine](https://web.archive.org/web/20080323052240/http://wroc.net.isvclub.com/content/Meetings.aspx) · [Archiwalne rozstrzygnięcie konkursu marcowego](https://web.archive.org/web/20090110055410/http://wrocnet.org/forums/tags/konkurs/default.aspx?SectionID=46)
 
 Wspólne spotkanie Wrocławskiej Grupy .NET i **PLSSUG** rozpoczęło się o godzinie 18:00.
 
+Sesja Pawła Hofmana zwyciężyła w marcowym konkursie na najlepszą sesję Wroc.NET.
+
 {% include talk.html index=0 %}
+
+[Archiwalna prezentacja „Narzędzia Współczesnego Programisty”](https://web.archive.org/web/20080530202527/http://wrocnet.org/files/folders/documents/entry1623.aspx)
 
 ### Agenda
 

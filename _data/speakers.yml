@@ -21,6 +21,9 @@
   imie: Adrian
   nazwisko: Ciura
   link: https://twitter.com/adrianciura
+- id: adrian-ilewicz
+  imie: Adrian
+  nazwisko: Ilewicz
 - id: adrian-stefaniak
   imie: Adrian
   nazwisko: Stefaniak
@@ -360,6 +363,9 @@
 - id: michal-bogdanski
   imie: Michał
   nazwisko: Bogdański
+- id: michal-chaniewski
+  imie: Michał
+  nazwisko: Chaniewski
 - id: michal-franc
   imie: Michał
   nazwisko: Franc
