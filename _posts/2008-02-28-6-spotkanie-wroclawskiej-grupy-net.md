@@ -5,8 +5,8 @@ categories: spotkania
 date: 2008-02-28
 ---
 
-Miejsce: Capgemini Polska, ul. Legnicka 51-53, sala RaumGroß, Wrocław
+Miejsce: Uniwersytet Trzeciego Wieku, Wrocław
 
-[Archiwalna strona spotkania](http://wroc.net.isvclub.com/blogs/meetings/archive/2008/02/24/ii-vi-spotkanie-plssug-i-wroc-awskiej-grupy-net.aspx) · [Historyczna lista spotkań w Wayback Machine](https://web.archive.org/web/20080403062254/http://wroc.net.isvclub.com/meetings.aspx?sectionId=47)
+[Archiwalna relacja ze spotkania](https://web.archive.org/web/20080323053428/http://wroc.net.isvclub.com/blogs/default.aspx?GroupID=4) · [Historyczna lista spotkań w Wayback Machine](https://web.archive.org/web/20080403062254/http://wroc.net.isvclub.com/meetings.aspx?sectionId=47)
 
-Spotkanie rozpoczęło się o godzinie 18:00. Agenda nie została opublikowana przed spotkaniem i nie zachowała się w archiwach strony grupy.
+Spotkanie rozpoczęło się o godzinie 18:00 i miało nietypowy, mniej techniczny charakter. Uczestnicy poznali działalność Uniwersytetu Trzeciego Wieku. Pełna agenda nie zachowała się w archiwach strony grupy.
