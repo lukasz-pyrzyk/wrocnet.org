@@ -23,3 +23,5 @@ Spotkanie rozpoczęło się o godzinie 19:00. Od tego spotkania rejestracja odby
 2. **MSBuild**: wymagania, właściwości, elementy, scenariusze, sposób działania (przebieg kompilacji), rozszerzalność, wykorzystanie, wsparcie ze strony oprogramowania innych firm
 3. Przykład rozwiązania praktycznego problemu
 4. Pytania
+
+W komentarzu do zapowiedzi Krzysztof Andrzej Parjaszewski deklarował, że jeśli dotrze na spotkanie, po sesji Pawła opowie krótko o projekcie Sunrise. Archiwalne źródło nie potwierdza, czy ta dodatkowa prezentacja się odbyła.
