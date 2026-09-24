@@ -11,6 +11,8 @@ talks:
 
 Miejsce: Wydział Informatyki Uniwersytetu Wrocławskiego, ul. Joliot-Curie 15, sala 119, Wrocław
 
+[Archiwalne kalendarium grupy](https://web.archive.org/web/20110907095204/http://wrocnet.org/calendar.aspx)
+
 Spotkanie rozpoczęło się o godzinie 18:30 i zostało zorganizowane w ramach 3. edycji **Geeks on Tour** - wspólnego przedsięwzięcia trzech społeczności: Wroc.NET, ŚRGM oraz PG.NET. Trzy spotkania odbyły się między 18 a 20 kwietnia 2011, kolejno w Katowicach, Wrocławiu i Poznaniu.
 
 {% include talk.html index=0 %}

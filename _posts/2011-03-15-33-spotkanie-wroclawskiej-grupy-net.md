@@ -12,6 +12,10 @@ talks:
   - bogdan-sajewicz
 ---
 
+Miejsce: Instytut Informatyki Uniwersytetu Wrocławskiego, ul. Joliot-Curie 15, sala 119, Wrocław
+
+[Archiwalne kalendarium grupy](https://web.archive.org/web/20110907095204/http://wrocnet.org/calendar.aspx)
+
 Spotkanie rozpoczęło się o godzinie 18:30.
 
 {% include talk.html index=0 %}

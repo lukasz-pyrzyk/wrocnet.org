@@ -17,7 +17,7 @@ talks:
 
 Miejsce: Politechnika Wrocławska, budynek C13, sala 1.13, Wrocław
 
-[Archiwalna zapowiedź spotkania](https://web.archive.org/web/20090208104004/http://www.wrocnet.org/)
+[Archiwalna zapowiedź spotkania](https://web.archive.org/web/20090208104004/http://www.wrocnet.org/) · [Archiwalna galeria spotkania](https://web.archive.org/web/20090814210521/http://wrocnet.org/media/g/xvii_spotkanie/default.aspx)
 
 Gościnnie wystąpił Tobiasz Koprowski reprezentujący PLSSUG Wrocław.
 

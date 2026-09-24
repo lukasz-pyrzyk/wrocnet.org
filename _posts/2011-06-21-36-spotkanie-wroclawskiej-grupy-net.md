@@ -14,6 +14,10 @@ talks:
 
 Miejsce: Wydział Informatyki Uniwersytetu Wrocławskiego, ul. Joliot-Curie 15, sala 119, Wrocław
 
+[Archiwalne kalendarium grupy](https://web.archive.org/web/20110907095204/http://wrocnet.org/calendar.aspx)
+
+Spotkanie rozpoczęło się o godzinie 18:30.
+
 {% include talk.html index=0 %}
 
 Sensor Kinect dla konsoli Xbox360 okazał się komercyjnym hitem Microsoftu w 2010r. Ale czy jest to tylko zabawka do gier i rozrywki? Podczas sesji zobaczymy jak wygląda Kinect od środka i co sprawia że jego kamera widzi też głębokość obrazu. Następnie sprawdzimy jak te możliwości zostały wykorzystane w grach na Xbox 360. Opowiem również w jaki sposób możemy podłączyć Kinect do PC, jakie informacje otrzymujemy i jak je wykorzystać we własnych projektach. Na koniec chciałbym pokazać kilka ciekawych zastosowań które zostały opublikowane w ciągu ostatnich miesięcy.

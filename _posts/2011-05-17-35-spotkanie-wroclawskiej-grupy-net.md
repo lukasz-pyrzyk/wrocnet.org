@@ -4,9 +4,9 @@ title: '35\. spotkanie Wrocławskiej Grupy .NET'
 categories: spotkania
 date: 2011-05-17
 talks:
-- title: 'Programowanie reaktywne raz jeszcze'
+- title: 'O tym, jak sobie node.js z ASP.NET MVC ucięło pogawędkę'
   speaker_ids:
-  - marcin-najder
+  - michal-chaniewski
 - title: 'End-to-End: Rola QA we współczesnych procesach wytwarzania oprogramowania'
   speaker_ids:
   - konrad-weiske
@@ -14,11 +14,13 @@ talks:
 
 Miejsce: Wydział Informatyki Uniwersytetu Wrocławskiego, ul. Joliot-Curie 15, sala 119, Wrocław
 
+[Archiwalne kalendarium grupy](https://web.archive.org/web/20110907095204/http://wrocnet.org/calendar.aspx)
+
 Spotkanie rozpoczęło się o godzinie 18:30.
 
 {% include talk.html index=0 %}
 
-Podczas sesji przedstawione zostało, czym jest i jak działa pod spodem **Async CTP** oraz jak może on zmienić sposób pisania gier na platformie **XNA**. Choć na pierwszy rzut oka Async CTP jest kopią workflow z języka F#, pod spodem działa zupełnie inaczej — jednym z ciekawych zastosowań jest "Observable Workflow", czyli połączenie Reactive Framework z workflow F#.
+Sesja przedstawiała zdarzeniowe programowanie serwerowe w **node.js** oraz wykorzystanie pakietu **now.js** do zbudowania działającej w czasie rzeczywistym aplikacji typu chat, współpracującej z ASP.NET MVC.
 
 {% include talk.html index=1 %}
 
