@@ -12,7 +12,7 @@ talks:
   - lukasz-olbromski
 ---
 
-Miejsce: Uniwersytet Wrocławski, Wydział Matematyki i Informatyki, ul. Joliot Curie 15, Wrocław
+Miejsce: Uniwersytet Wrocławski, Wydział Matematyki i Informatyki, ul. Joliot-Curie 15, Wrocław
 
 [Archiwalna zapowiedź i relacja ze spotkania](https://web.archive.org/web/20080530202635/http://wrocnet.org/meetings.aspx?sectionId=47) · [Historyczna lista spotkań w Wayback Machine](https://web.archive.org/web/20080403062254/http://wroc.net.isvclub.com/meetings.aspx?sectionId=47) · [Archiwalna ankieta wymieniająca sesję i prelegenta](https://web.archive.org/web/20091001035838/http://wrocnet.org/forums/p/1045/1741.aspx)
 
@@ -24,7 +24,7 @@ Spotkanie rozpoczęło się o godzinie 18:00. Było jednocześnie pierwszym spot
 | :--- | :--- |
 | 18:00 – 18:05 | Powitanie |
 | 18:05 – 18:15 | Sprawy organizacyjne |
-| 18:15 – 19:15 | Wprowadzenie do indeksów w SQL Server 2005 |
+| 18:15 – 19:15 | Wprowadzenie do indeksów w **SQL Server 2005** |
 | 19:15 – 19:25 | Przerwa |
 | 19:25 – 20:25 | Web Client Software Factory |
 

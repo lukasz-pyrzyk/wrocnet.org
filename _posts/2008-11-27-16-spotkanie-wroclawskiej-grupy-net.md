@@ -23,7 +23,7 @@ Ze względu na politykę bezpieczeństwa Capgemini rejestracja była obowiązkow
 
 | Czas | Wydarzenie |
 | :--- | :--- |
-| 18:35 – 19:35 | SQL Server User-Defined Functions — The Good, The Bad, The Ugly |
+| 18:35 – 19:35 | **SQL Server** User-Defined Functions — The Good, The Bad, The Ugly |
 | 19:35 – 20:30 | Programowanie GUI — Wzorce, komunikacja i organizacja kodu |
 
 {% include talk.html index=0 %}
