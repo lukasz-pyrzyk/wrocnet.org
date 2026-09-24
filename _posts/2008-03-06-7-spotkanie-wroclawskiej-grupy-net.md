@@ -3,13 +3,17 @@ layout: single
 title: '7\. spotkanie Wrocławskiej Grupy .NET'
 categories: spotkania
 date: 2008-03-06
-date_estimated: true
 ---
 
-Miejsce: brak zachowanych informacji
+Miejsce: Capgemini Polska, Wrocław
 
-Szacowana data spotkania: **6 marca 2008**. Galerię spotkania zaktualizowano tego dnia, który przypadał w czwartek — regularny dzień spotkań grupy.
+[Archiwalna zapowiedź i relacja ze spotkania](https://web.archive.org/web/20080323053428/http://wroc.net.isvclub.com/blogs/default.aspx?GroupID=4) · [Archiwalny indeks galerii w Wayback Machine](https://web.archive.org/web/20080323053439/http://wroc.net.isvclub.com/photos/)
 
-[Archiwalny indeks galerii w Wayback Machine](https://web.archive.org/web/20080323053439/http://wroc.net.isvclub.com/photos/)
+Spotkanie odbyło się 6 marca 2008 roku o godzinie 18:00. Rozpoczęło się od prawie godzinnej rozmowy o bieżących projektach Wrocławskiej Grupy .NET i PLSSUG, w tym o portalu dla Uniwersytetu Trzeciego Wieku oraz organizacji wydarzenia **Heroes {Community} Launch**. Osoby zaangażowane w realizację portalu wybrały kierownika projektu; jego nazwisko nie zachowało się w dostępnej migawce.
 
-Zachowana migawka potwierdza numer spotkania, ale nie zawiera informacji o agendzie ani prelegentach.
+| Czas | Wydarzenie |
+| :--- | :--- |
+| 18:00 – 18:05 | Powitanie |
+| 18:05 – 18:55 | Dyskusja na temat projektu dla Uniwersytetu Trzeciego Wieku |
+
+Dalsza część agendy i lista prelegentów nie zachowały się w dostępnej migawce.

@@ -3,13 +3,18 @@ layout: single
 title: '1\. spotkanie Wrocławskiej Grupy .NET'
 categories: spotkania
 date: 2007-11-29
-date_estimated: true
+talks:
+- title: Visual Studio 2008
+  speaker_ids:
+  - wojtek-obst
 ---
-
-Szacowana data spotkania: **29 listopada 2007**. Termin był już ustalony 23 listopada, plan opublikowano 26 listopada, zdjęcia 3 grudnia, a regularne spotkania grupy odbywały się w czwartki.
 
 Miejsce: Capgemini Polska, ul. Legnicka 51-53, sala RaumGroß, Wrocław
 
-[Archiwalna dyskusja o terminie](https://web.archive.org/web/20080126101340/http://wroc.net.isvclub.com/tags/tematy/default.aspx) · [Archiwalny plan spotkania](https://web.archive.org/web/20080126101330/http://wroc.net.isvclub.com/blogs/news/archive/2007/11/26/plan-i-spotkania.aspx) · [Archiwalne wpisy i zdjęcia](https://web.archive.org/web/20080126101335/http://wroc.net.isvclub.com/tags/spotkania/default.aspx)
+[Archiwalna zapowiedź spotkania](https://web.archive.org/web/20071123011837/http://wroc.net.isvclub.com/blogs/news/archive/2007/11.aspx) · [Archiwalna relacja po spotkaniu](https://web.archive.org/web/20080202054249/http://wroc.net.isvclub.com/blogs/faf/archive/2007/11.aspx) · [Archiwalny plan spotkania](https://web.archive.org/web/20080126101330/http://wroc.net.isvclub.com/blogs/news/archive/2007/11/26/plan-i-spotkania.aspx) · [Archiwalne wpisy i zdjęcia](https://web.archive.org/web/20080126101335/http://wroc.net.isvclub.com/tags/spotkania/default.aspx)
 
-Plan obejmował panel dyskusyjny poświęcony określeniu kierunku rozwoju Wrocławskiej Grupy .NET. Zachowana galeria dokumentuje również dyskusję o korzystaniu z **Visual Studio 2008**.
+Spotkanie odbyło się 29 listopada 2007 roku o godzinie 18:00. Pierwsza część była poświęcona poznaniu uczestników, kierunkom rozwoju grupy oraz ustaleniu tematów i formy kolejnych spotkań.
+
+{% include talk.html index=0 %}
+
+Zachowana galeria dokumentuje również dyskusję o tym, czy warto już korzystać z **Visual Studio 2008**.
