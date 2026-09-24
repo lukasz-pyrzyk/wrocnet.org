@@ -3,11 +3,15 @@ layout: single
 title: 'Visual Studio 2008 Install Fest'
 categories: spotkania
 date: 2008-01-22
+talks:
+- title: Rozszerzenia Visual Studio
+  speaker_ids:
+  - pawel-hofman
 ---
 
 Miejsce: Uniwersytet Wrocławski, ul. Joliot-Curie 15, Wrocław
 
-[Archiwalna strona wydarzenia](http://wroc.net.isvclub.com/content/vs2008installfest.aspx) · [Kopia w Wayback Machine](https://web.archive.org/web/20080221094237/http://wroc.net.isvclub.com/content/vs2008installfest.aspx)
+[Archiwalna strona wydarzenia](http://wroc.net.isvclub.com/content/vs2008installfest.aspx) · [Kopia w Wayback Machine](https://web.archive.org/web/20080221094237/http://wroc.net.isvclub.com/content/vs2008installfest.aspx) · [Archiwalna ankieta wymieniająca sesję i prelegenta](https://web.archive.org/web/20091001035838/http://wrocnet.org/forums/p/1045/1741.aspx)
 
 Wydarzenie zorganizowane wspólnie przez Wrocławską Grupę .NET, Grupę .NET Wydziału Elektroniki Politechniki Wrocławskiej oraz Grupę .NET Uniwersytetu Wrocławskiego, wzorowane na krakowskiej edycji Visual Studio 2008 Install Fest. Celem było przybliżenie jak najszerszemu gronu odbiorców środowiska **Visual Studio 2008** i pomoc przy stawianiu w nim pierwszych kroków.
 
@@ -30,3 +34,5 @@ Wydarzenie zorganizowane wspólnie przez Wrocławską Grupę .NET, Grupę .NET W
 | 20:00 – 20:45 | Przerwa na jedzenie i rozmowy |
 | 20:45 – 21:45 | Konkursy: PowerBall i turniej XBOX |
 | 21:45 | Zamknięcie spotkania |
+
+{% include talk.html index=0 %}

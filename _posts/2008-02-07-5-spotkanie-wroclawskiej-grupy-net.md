@@ -8,11 +8,13 @@ talks:
   speaker_ids:
   - sylwester-lewandowski
 - title: Web Client Software Factory
+  speaker_ids:
+  - lukasz-olbromski
 ---
 
 Miejsce: Uniwersytet Wrocławski, Wydział Matematyki i Informatyki, ul. Joliot Curie 15, Wrocław
 
-[Archiwalna zapowiedź i relacja ze spotkania](https://web.archive.org/web/20080530202635/http://wrocnet.org/meetings.aspx?sectionId=47) · [Historyczna lista spotkań w Wayback Machine](https://web.archive.org/web/20080403062254/http://wroc.net.isvclub.com/meetings.aspx?sectionId=47)
+[Archiwalna zapowiedź i relacja ze spotkania](https://web.archive.org/web/20080530202635/http://wrocnet.org/meetings.aspx?sectionId=47) · [Historyczna lista spotkań w Wayback Machine](https://web.archive.org/web/20080403062254/http://wroc.net.isvclub.com/meetings.aspx?sectionId=47) · [Archiwalna ankieta wymieniająca sesję i prelegenta](https://web.archive.org/web/20091001035838/http://wrocnet.org/forums/p/1045/1741.aspx)
 
 Spotkanie rozpoczęło się o godzinie 18:00. Było jednocześnie pierwszym spotkaniem PLSSUG we Wrocławiu.
 
@@ -29,5 +31,3 @@ Spotkanie rozpoczęło się o godzinie 18:00. Było jednocześnie pierwszym spot
 {% include talk.html index=0 %}
 
 {% include talk.html index=1 %}
-
-Nazwisko osoby prowadzącej drugą sesję nie zachowało się w dostępnych źródłach.
