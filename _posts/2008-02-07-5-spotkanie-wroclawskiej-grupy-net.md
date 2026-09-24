@@ -7,6 +7,7 @@ talks:
 - title: Wprowadzenie do indeksów w SQL Server 2005
   speaker_ids:
   - sylwester-lewandowski
+- title: Web Client Software Factory
 ---
 
 Miejsce: Capgemini Polska, ul. Legnicka 51-53, sala RaumGroß, Wrocław
@@ -16,3 +17,7 @@ Miejsce: Capgemini Polska, ul. Legnicka 51-53, sala RaumGroß, Wrocław
 Spotkanie rozpoczęło się o godzinie 18:00. Było jednocześnie pierwszym spotkaniem PLSSUG we Wrocławiu.
 
 {% include talk.html index=0 %}
+
+{% include talk.html index=1 %}
+
+Nazwisko osoby prowadzącej drugą sesję nie zachowało się w dostępnych źródłach.
