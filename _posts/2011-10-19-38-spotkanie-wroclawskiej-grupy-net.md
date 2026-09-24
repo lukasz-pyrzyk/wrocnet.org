@@ -14,6 +14,8 @@ talks:
 
 Miejsce: Wydział Informatyki Uniwersytetu Wrocławskiego, ul. Joliot-Curie 15, sala 119, Wrocław
 
+[Archiwalna zapowiedź spotkania](https://web.archive.org/web/20111205014522/http://wrocnet.org/post/38-spotkanie-Wrocc582awskiej-Grupy-NET.aspx)
+
 Spotkanie rozpoczęło się o godzinie 18:30.
 
 {% include talk.html index=0 %}
