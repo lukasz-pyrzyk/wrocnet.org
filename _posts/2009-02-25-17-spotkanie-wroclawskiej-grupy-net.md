@@ -17,6 +17,8 @@ talks:
 
 Miejsce: Politechnika Wrocławska, budynek C13, sala 1.13, Wrocław
 
+[Archiwalna zapowiedź spotkania](https://web.archive.org/web/20090208104004/http://www.wrocnet.org/)
+
 Gościnnie wystąpił Tobiasz Koprowski reprezentujący PLSSUG Wrocław.
 
 ### Agenda

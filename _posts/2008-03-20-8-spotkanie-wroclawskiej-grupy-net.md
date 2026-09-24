@@ -17,6 +17,8 @@ Wspólne spotkanie Wrocławskiej Grupy .NET i **PLSSUG** rozpoczęło się o god
 
 {% include talk.html index=0 %}
 
+[Archiwalna prezentacja „Narzędzia Współczesnego Programisty”](https://web.archive.org/web/20080530202527/http://wrocnet.org/files/folders/documents/entry1623.aspx)
+
 ### Agenda
 
 * rozszerzanie **Visual Studio** i zapotrzebowanie na narzędzia wspierające programistów
