@@ -11,7 +11,7 @@ talks:
 
 Miejsce: siedziba firmy Capgemini, ul. Legnicka 51-53, Wrocław
 
-[Archiwalna strona spotkania w Wayback Machine](https://web.archive.org/web/20080323052240/http://wroc.net.isvclub.com/content/Meetings.aspx) · [Archiwalna ankieta na najlepszą sesję](https://web.archive.org/web/20091001035838/http://wrocnet.org/forums/p/1045/1741.aspx)
+[Archiwalna strona spotkania w Wayback Machine](https://web.archive.org/web/20080323052240/http://wroc.net.isvclub.com/content/Meetings.aspx) · [Archiwalne rozstrzygnięcie konkursu marcowego](https://web.archive.org/web/20090110055410/http://wrocnet.org/forums/tags/konkurs/default.aspx?SectionID=46)
 
 Wspólne spotkanie Wrocławskiej Grupy .NET i **PLSSUG** rozpoczęło się o godzinie 18:00.
 
