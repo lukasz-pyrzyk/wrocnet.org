@@ -2,6 +2,8 @@
 layout: single
 title: '85\. spotkanie - Heroku, Unit testing'
 date: 2016-02-16
+tags:
+  - offline
 talks:
 - title: Heroku - chmura przyjazna programiście
   speaker_ids:

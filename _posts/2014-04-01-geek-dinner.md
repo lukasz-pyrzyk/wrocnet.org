@@ -2,6 +2,8 @@
 layout: single
 title: 'Geek Dinner'
 categories: spotkania
+tags:
+  - inne
 date: 2014-04-01
 ---
 

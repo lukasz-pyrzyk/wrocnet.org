@@ -2,6 +2,8 @@
 layout: single
 title: '107\. spotkanie - .NET Core - lokalizowanie, docker'
 date: 2018-03-20
+tags:
+  - offline
 talks:
 - title: Lokalizowalne aplikacje w .NET Core
   speaker_ids:

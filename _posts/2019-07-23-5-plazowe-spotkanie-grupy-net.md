@@ -2,6 +2,8 @@
 layout: single
 title: '5\. Plażowe spotkanie grupy .NET'
 categories: spotkania
+tags:
+  - inne
 date: 2019-07-23
 ---
 

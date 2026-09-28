@@ -2,6 +2,8 @@
 layout: single
 title: '50\. spotkanie - Continous Delivery; Continuous Deployment'
 date: 2012-12-11
+tags:
+  - offline
 talks:
 - title: Continous delivery story with FIFA
   speaker_ids:

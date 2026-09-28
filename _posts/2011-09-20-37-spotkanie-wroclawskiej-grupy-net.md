@@ -2,6 +2,8 @@
 layout: single
 title: '37\. spotkanie Wrocławskiej Grupy .NET'
 categories: spotkania
+tags:
+  - offline
 date: 2011-09-20
 talks:
 - title: 'Mono.Cecil'

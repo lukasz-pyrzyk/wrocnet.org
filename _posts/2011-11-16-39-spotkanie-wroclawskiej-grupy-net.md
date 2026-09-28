@@ -2,6 +2,8 @@
 layout: single
 title: '39\. spotkanie Wrocławskiej Grupy .NET'
 categories: spotkania
+tags:
+  - offline
 date: 2011-11-16
 talks:
 - title: 'Konstrukcje funkcyjne w języku C#'

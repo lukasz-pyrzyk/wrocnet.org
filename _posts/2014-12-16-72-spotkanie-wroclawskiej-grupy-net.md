@@ -2,6 +2,8 @@
 layout: single
 title: '72\. spotkanie - NoSQL, F#'
 date: 2014-12-16
+tags:
+  - offline
 talks:
 - title: Break relations - not only SQL
   speaker_ids:

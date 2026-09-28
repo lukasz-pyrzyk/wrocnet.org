@@ -2,6 +2,8 @@
 layout: single
 title: '59\. spotkanie - Knockout.js; iOS dla programisty .NET'
 date: 2013-11-19
+tags:
+  - offline
 talks:
 - title: Knock the jQuery out!
   speaker_ids:

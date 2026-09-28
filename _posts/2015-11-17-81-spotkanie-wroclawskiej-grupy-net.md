@@ -2,6 +2,8 @@
 layout: single
 title: '81\. spotkanie - SOLID, Aplikacje SPA'
 date: 2015-11-17
+tags:
+  - offline
 talks:
 - title: Bądź SOLID
   speaker_ids:

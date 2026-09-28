@@ -2,6 +2,8 @@
 layout: single
 title: '84\. spotkanie - Promises, ASP.NET 5 galore'
 date: 2016-01-19
+tags:
+  - offline
 talks:
 - title: 'javascript: Promise to never callback'
   speaker_ids:

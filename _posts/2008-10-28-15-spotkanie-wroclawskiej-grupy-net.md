@@ -2,6 +2,8 @@
 layout: single
 title: '15\. spotkanie Wrocławskiej Grupy .NET'
 categories: spotkania
+tags:
+  - offline
 date: 2008-10-28
 talks:
 - title: '"Continuous Integration rozwiązaniem na codzienne problemy programisty"'

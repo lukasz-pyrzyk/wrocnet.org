@@ -3,7 +3,7 @@ title: '141\. spotkanie Wrocławskiej Grupy .NET ONLINE'
 date: 2022-01-18
 categories: spotkania
 tags:
-  - .NET
+  - online
 talks:
 - title: 'Blazor WASM: Hot or not'
   speaker_ids:

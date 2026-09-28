@@ -3,7 +3,7 @@ title: '131\. spotkanie Wrocławskiej Grupy .NET ONLINE'
 date: 2020-11-24
 categories: spotkania
 tags:
-  - .NET
+  - online
 talks:
 - title: Praktyczne zastosowanie EventModelingu w tworzeniu Modularnego Monolitu
   speaker_ids:

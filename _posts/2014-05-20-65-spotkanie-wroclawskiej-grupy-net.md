@@ -2,6 +2,8 @@
 layout: single
 title: '65\. spotkanie - Zarządzani pamięcią; ServiceStack'
 date: 2014-05-20
+tags:
+  - offline
 talks:
 - title: Wprowadzenie do zarządzania pamięcią w .NET
   speaker_ids:

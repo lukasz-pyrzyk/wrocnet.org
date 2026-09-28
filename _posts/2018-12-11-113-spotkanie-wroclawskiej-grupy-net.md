@@ -2,6 +2,8 @@
 layout: single
 title: '113\. spotkanie - Microservices, Command Handler'
 date: 2018-12-11
+tags:
+  - offline
 talks:
 - title: Microservices lifecycle
   speaker_ids:

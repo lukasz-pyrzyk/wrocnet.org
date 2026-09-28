@@ -2,6 +2,8 @@
 layout: single
 title: '49\. spotkanie Wrocławskiej Grupy .NET'
 categories: spotkania
+tags:
+  - offline
 date: 2012-11-20
 talks:
 - title: Kanban

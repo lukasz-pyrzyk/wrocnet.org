@@ -3,7 +3,7 @@ title: '123\. spotkanie Wrocławskiej Grupy .NET'
 date: 2020-01-21
 categories: spotkania
 tags:
-  - .NET
+  - offline
 talks:
 - title: 'Wytwarzanie Oprogramowania+++: 3 elementy, których potrzebujesz, aby wznieść się na wyższy poziom'
   speaker_ids:

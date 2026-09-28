@@ -2,6 +2,8 @@
 layout: single
 title: '55\. spotkanie - Unity 3D; Web API'
 date: 2013-05-21
+tags:
+  - offline
 talks:
 - title: Od 0 do 3D bohatera z Unity 3D
   speaker_ids:

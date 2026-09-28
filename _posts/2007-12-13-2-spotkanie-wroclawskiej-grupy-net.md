@@ -2,6 +2,8 @@
 layout: single
 title: '2\. spotkanie Wrocławskiej Grupy .NET'
 categories: spotkania
+tags:
+  - offline
 date: 2007-12-13
 talks:
 - title: AJAX — wykorzystanie w ASP.NET

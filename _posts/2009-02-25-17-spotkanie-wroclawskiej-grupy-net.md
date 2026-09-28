@@ -2,6 +2,8 @@
 layout: single
 title: '17\. spotkanie Wrocławskiej Grupy .NET'
 categories: spotkania
+tags:
+  - offline
 date: 2009-02-25
 talks:
 - title: Microsoft dla Nauki — ośrodek badawczy Microsoft Research

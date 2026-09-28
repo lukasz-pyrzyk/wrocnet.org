@@ -2,6 +2,8 @@
 layout: single
 title: '11\. spotkanie Wrocławskiej Grupy .NET'
 categories: spotkania
+tags:
+  - offline
 date: 2008-06-18
 talks:
 - title: 'Kompilacja automatyczna: MSBuild'

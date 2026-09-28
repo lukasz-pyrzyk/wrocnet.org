@@ -2,6 +2,8 @@
 layout: single
 title: '29\. spotkanie Wrocławskiej Grupy .NET - Geeks On Tour 2'
 categories: spotkania
+tags:
+  - offline
 date: 2010-11-23
 talks:
 - title: AOP oraz PostSharp

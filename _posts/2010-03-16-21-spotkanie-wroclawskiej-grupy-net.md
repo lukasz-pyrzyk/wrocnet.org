@@ -2,6 +2,8 @@
 layout: single
 title: '21\. spotkanie Wrocławskiej Grupy .NET'
 categories: spotkania
+tags:
+  - offline
 date: 2010-03-16
 talks:
 - title: Optymalizacja kodu z wykorzystaniem pakietu RedGate .NET Developer Bundle

@@ -2,6 +2,8 @@
 layout: single
 title: '9\. spotkanie Wrocławskiej Grupy .NET (+ spotkanie PLSSUG)'
 categories: spotkania
+tags:
+  - offline
 date: 2008-04-03
 talks:
 - title: LINQ i nowe możliwości C# 3.0

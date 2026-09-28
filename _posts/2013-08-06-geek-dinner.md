@@ -2,6 +2,8 @@
 layout: single
 title: 'Geek Dinner'
 categories: spotkania
+tags:
+  - inne
 date: 2013-08-06
 ---
 

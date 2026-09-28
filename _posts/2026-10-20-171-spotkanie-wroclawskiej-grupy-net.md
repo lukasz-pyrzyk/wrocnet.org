@@ -2,6 +2,8 @@
 title: '171\. spotkanie Wrocławskiej Grupy .NET – Result Pattern i AI Software Engineering'
 date: 2026-10-20
 categories: spotkania
+tags:
+  - offline
 header:
   teaser: /assets/images/spotkania-teaser.jpg
 talks:

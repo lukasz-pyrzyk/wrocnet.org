@@ -2,6 +2,8 @@
 layout: single
 title: '120\. spotkanie - DDD, Lambda.NET'
 date: 2019-10-15
+tags:
+  - offline
 talks:
 - title: 'Czysty model domenowy: Domain-Driven Design taktycznie i praktycznie'
   speaker_ids:

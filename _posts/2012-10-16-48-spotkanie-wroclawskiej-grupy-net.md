@@ -2,6 +2,8 @@
 layout: single
 title: '48\. spotkanie - BDD'
 date: 2012-10-16
+tags:
+  - offline
 talks:
 - title: BDD
   speaker_ids:

@@ -2,6 +2,8 @@
 layout: single
 title: '33\. spotkanie Wrocławskiej Grupy .NET'
 categories: spotkania
+tags:
+  - offline
 date: 2011-03-15
 talks:
 - title: 'Wykorzystanie biblioteki Knockout.js w aplikacjach ASP.NET MVC'

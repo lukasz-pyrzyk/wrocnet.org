@@ -3,7 +3,7 @@ title: '134\. spotkanie Wrocławskiej Grupy .NET ONLINE'
 date: 2021-02-23
 categories: spotkania
 tags:
-  - .NET
+  - online
 talks:
 - title: Low Code - hit czy kit??
   speaker_ids:

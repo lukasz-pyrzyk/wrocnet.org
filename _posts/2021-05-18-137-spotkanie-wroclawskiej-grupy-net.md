@@ -3,7 +3,7 @@ title: '137\. spotkanie Wrocławskiej Grupy .NET ONLINE'
 date: 2021-05-18
 categories: spotkania
 tags:
-  - .NET
+  - online
 talks:
 - title: CQRS jest łatwiejszy niż myślisz z C# 9 i .NET 5
   speaker_ids:

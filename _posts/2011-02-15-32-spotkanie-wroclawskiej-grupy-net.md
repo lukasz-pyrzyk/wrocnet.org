@@ -2,6 +2,8 @@
 layout: single
 title: '32\. spotkanie Wrocławskiej Grupy .NET'
 categories: spotkania
+tags:
+  - offline
 date: 2011-02-15
 talks:
 - title: Kontenery DI/IoC

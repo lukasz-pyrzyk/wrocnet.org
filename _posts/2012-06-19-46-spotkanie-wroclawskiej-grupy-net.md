@@ -2,6 +2,8 @@
 layout: single
 title: '46\. spotkanie Wrocławskiej Grupy .NET'
 categories: spotkania
+tags:
+  - offline
 date: 2012-06-19
 ---
 

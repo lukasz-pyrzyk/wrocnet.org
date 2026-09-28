@@ -3,7 +3,7 @@ title: '136\. spotkanie Wrocławskiej Grupy .NET ONLINE'
 date: 2021-04-20
 categories: spotkania
 tags:
-  - .NET
+  - online
 talks:
 - title: Becoming a productive .NET developer with JetBrains Rider
   speaker_ids:

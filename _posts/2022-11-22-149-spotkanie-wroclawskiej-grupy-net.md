@@ -3,7 +3,7 @@ title: '149\. spotkanie Wrocławskiej Grupy .NET'
 date: 2022-11-22
 categories: spotkania
 tags:
-  - .NET
+  - offline
 talks:
 - title: IConfiguration bez tajemnic
   speaker_ids:

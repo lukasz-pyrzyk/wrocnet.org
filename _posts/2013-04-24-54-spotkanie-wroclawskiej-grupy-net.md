@@ -2,6 +2,8 @@
 layout: single
 title: '54\. spotkanie - F#'
 date: 2013-04-24
+tags:
+  - offline
 talks:
 - title: 'F#: functional programming in .NET'
   speaker_ids:

@@ -2,6 +2,8 @@
 layout: single
 title: '91\. spotkanie - RevDeBug, Azure na produkcji'
 date: 2016-11-22
+tags:
+  - offline
 talks:
 - title: RevDeBug, a new reverse debugger for .NET
   speaker_ids:

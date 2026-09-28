@@ -2,6 +2,8 @@
 layout: single
 title: '63\. spotkanie - Windows Phone; ServiceStack'
 date: 2014-03-18
+tags:
+  - offline
 talks:
 - title: Programowanie w Windows Phone - niby .Net a jednak...
   speaker_ids:

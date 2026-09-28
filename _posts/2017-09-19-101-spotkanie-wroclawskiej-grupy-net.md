@@ -2,6 +2,8 @@
 layout: single
 title: '101\. spotkanie - Continuous Integration, UI in F# '
 date: 2017-09-19
+tags:
+  - offline
 talks:
 - title: Continous Integration w duzej skali
   speaker_ids:

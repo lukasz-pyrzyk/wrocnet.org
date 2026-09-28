@@ -2,6 +2,8 @@
 layout: single
 title: '58\. spotkanie - Twitter; GUI; Specification by Example'
 date: 2013-10-15
+tags:
+  - offline
 talks:
 - title: Social Media - @Twitter
   speaker_ids:

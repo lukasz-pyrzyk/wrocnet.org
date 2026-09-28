@@ -2,6 +2,8 @@
 layout: single
 title: '10\. spotkanie Wrocławskiej Grupy .NET'
 categories: spotkania
+tags:
+  - offline
 date: 2008-04-17
 date_estimated: true
 talks:

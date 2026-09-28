@@ -2,6 +2,8 @@
 layout: single
 title: '108\. spotkanie - Reactive Extensions, Azure Service Fabric '
 date: 2018-04-17
+tags:
+  - offline
 talks:
 - title: Reactive Extensions - wzorzec obserwatora, czyli programowanie sterowane zdarzeniami
   speaker_ids:

@@ -2,6 +2,8 @@
 layout: single
 title: '119\. spotkanie - Legacy, Anchor Modeling'
 date: 2019-09-17
+tags:
+  - offline
 talks:
 - title: Oswoić Spuściznę (Legacy)
   speaker_ids:

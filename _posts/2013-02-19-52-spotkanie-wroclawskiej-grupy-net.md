@@ -2,6 +2,8 @@
 layout: single
 title: '52\. spotkanie - Algorytmy Genetyczne'
 date: 2013-02-19
+tags:
+  - offline
 talks:
 - title: Genetic Algorithms - Solving by evolving
   speaker_ids:

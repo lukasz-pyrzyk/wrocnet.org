@@ -2,6 +2,8 @@
 layout: single
 title: '87\. spotkanie - .NET Core, Xamarin'
 date: 2016-04-12
+tags:
+  - offline
 talks:
 - title: .NET Core - Future of multi-platform development
   speaker_ids:

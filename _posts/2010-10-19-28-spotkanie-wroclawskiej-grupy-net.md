@@ -2,6 +2,8 @@
 layout: single
 title: '28\. spotkanie Wrocławskiej Grupy .NET - Geeks on Tour'
 categories: spotkania
+tags:
+  - offline
 date: 2010-10-19
 talks:
 - title: Wzorzec MVVM - łagodne wprowadzenie

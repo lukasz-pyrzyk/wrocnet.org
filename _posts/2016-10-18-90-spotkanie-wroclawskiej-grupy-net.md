@@ -2,6 +2,8 @@
 layout: single
 title: '90\. spotkanie - GraphQL, Code Crime Scene'
 date: 2016-10-18
+tags:
+  - offline
 talks:
 - title: GraphQL - następca REST API?
   speaker_ids:

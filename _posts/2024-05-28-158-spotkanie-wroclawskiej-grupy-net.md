@@ -3,7 +3,7 @@ title: '158\. spotkanie Wrocławskiej Grupy .NET'
 date: 2024-05-28
 categories: spotkania
 tags:
-  - .NET
+  - offline
 talks:
 - title: 'Fullstack 2.0: Jak AI i ML zmieniają rolę programisty'
   speaker_ids:

@@ -2,6 +2,8 @@
 layout: single
 title: '69\. spotkanie - Literate programming, mBank'
 date: 2014-09-16
+tags:
+  - offline
 talks:
 - title: Literate programming?
   speaker_ids:

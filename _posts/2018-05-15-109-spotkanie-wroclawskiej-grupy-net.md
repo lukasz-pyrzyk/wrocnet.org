@@ -2,6 +2,8 @@
 layout: single
 title: '109\. spotkanie - Microsoft Flow, Amazon Alexa'
 date: 2018-05-15
+tags:
+  - offline
 talks:
 - title: Microsoft Flow - get things connected
   speaker_ids:

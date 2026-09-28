@@ -2,6 +2,8 @@
 layout: single
 title: '62\. spotkanie - NancyFx; JavaScript'
 date: 2014-02-18
+tags:
+  - offline
 talks:
 - title: Randka z Nancy
   speaker_ids:

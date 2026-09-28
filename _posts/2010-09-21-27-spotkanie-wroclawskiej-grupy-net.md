@@ -2,6 +2,8 @@
 layout: single
 title: '27\. spotkanie Wrocławskiej Grupy .NET'
 categories: spotkania
+tags:
+  - offline
 date: 2010-09-21
 talks:
 - title: Programowanie reaktywne - nowy paradygmat programowania

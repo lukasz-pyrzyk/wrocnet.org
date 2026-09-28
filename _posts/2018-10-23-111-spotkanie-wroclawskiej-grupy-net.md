@@ -2,6 +2,8 @@
 layout: single
 title: '111\. spotkanie - Machine Learning, Kursy Udemy'
 date: 2018-10-23
+tags:
+  - offline
 talks:
 - title: Machine Learning w .NET - czyli podróż tam i z powrotem
   speaker_ids:

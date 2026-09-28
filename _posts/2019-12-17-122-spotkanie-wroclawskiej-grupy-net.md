@@ -2,6 +2,8 @@
 layout: single
 title: '122\. spotkanie - Azure Congnitive Services, Azure Sphere, Multi-tenant Azure'
 date: 2019-12-17
+tags:
+  - offline
 talks:
 - title: Azure Congnitive Services
   speaker_ids:

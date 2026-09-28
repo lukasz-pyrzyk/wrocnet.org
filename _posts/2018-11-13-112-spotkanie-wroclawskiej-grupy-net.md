@@ -2,6 +2,8 @@
 layout: single
 title: '112\. spotkanie - Przemawianie, CI/CD'
 date: 2018-11-13
+tags:
+  - offline
 talks:
 - title: Jak przemawiać jako programista i wykorzystać networking
   speaker_ids:

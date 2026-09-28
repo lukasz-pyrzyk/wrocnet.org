@@ -2,6 +2,8 @@
 layout: single
 title: '8\. spotkanie Wrocławskiej Grupy .NET i 4. spotkanie PLSSUG'
 categories: spotkania
+tags:
+  - offline
 date: 2008-03-20
 talks:
 - title: Narzędzia współczesnego programisty

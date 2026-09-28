@@ -3,7 +3,7 @@ title: '138\. spotkanie Wrocławskiej Grupy .NET ONLINE'
 date: 2021-06-23
 categories: spotkania
 tags:
-  - .NET
+  - online
 talks:
 - title: Tworzenie gier mobilnych - crash course
   speaker_ids:

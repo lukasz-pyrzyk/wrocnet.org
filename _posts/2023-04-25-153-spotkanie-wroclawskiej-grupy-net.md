@@ -3,7 +3,7 @@ title: '153\. spotkanie Wrocławskiej Grupy .NET'
 date: 2023-04-25
 categories: spotkania
 tags:
-  - .NET
+  - offline
 talks:
 - title: Małe wielkie rzeczy w pracy z Azure DevOps i nie tylko
   speaker_ids:

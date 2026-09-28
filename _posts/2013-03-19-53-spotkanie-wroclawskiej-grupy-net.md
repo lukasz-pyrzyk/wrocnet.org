@@ -2,6 +2,8 @@
 layout: single
 title: '53\. spotkanie Wrocławskiej Grupy .NET'
 categories: spotkania
+tags:
+  - offline
 date: 2013-03-19
 talks:
 - title: Tworzenie klientów mobilnych w oparciu o Sync Framework

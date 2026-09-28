@@ -3,7 +3,7 @@ title: '162\. spotkanie Wrocławskiej Grupy .NET'
 date: 2025-04-15
 categories: spotkania
 tags:
-  - .NET
+  - offline
 talks:
 - title: OpenTelemetry w .NET - jak to w zasadzie działa?
   speaker_ids:

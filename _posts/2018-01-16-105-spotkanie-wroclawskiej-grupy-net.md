@@ -2,6 +2,8 @@
 layout: single
 title: '105\. spotkanie - struktury, systemy rozproszone'
 date: 2018-01-16
+tags:
+  - offline
 talks:
 - title: Ile (nie) wiesz o strukturach w .NET
   speaker_ids:

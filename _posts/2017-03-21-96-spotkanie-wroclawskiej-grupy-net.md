@@ -2,6 +2,8 @@
 layout: single
 title: '96\. spotkanie - .NET Core, Unity3D'
 date: 2017-03-21
+tags:
+  - offline
 talks:
 - title: .NET Core w 2017
   speaker_ids:

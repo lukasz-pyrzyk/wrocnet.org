@@ -2,6 +2,8 @@
 layout: single
 title: '103\. spotkanie - async/await, boty'
 date: 2017-11-21
+tags:
+  - offline
 talks:
 - title: It's all about the state, czyli co skrywa async/await w C#?
   speaker_ids:

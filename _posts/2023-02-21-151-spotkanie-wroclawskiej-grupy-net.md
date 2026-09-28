@@ -3,7 +3,7 @@ title: '151\. spotkanie Wrocławskiej Grupy .NET'
 date: 2023-02-21
 categories: spotkania
 tags:
-  - .NET
+  - offline
 talks:
 - title: Rozproszone procesy w praktyce
   speaker_ids:

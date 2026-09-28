@@ -2,6 +2,8 @@
 layout: single
 title: 'Visual Studio 2008 Install Fest'
 categories: spotkania
+tags:
+  - inne
 date: 2008-01-22
 talks:
 - title: Rozszerzenia Visual Studio

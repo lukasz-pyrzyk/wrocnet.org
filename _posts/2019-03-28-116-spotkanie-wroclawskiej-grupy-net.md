@@ -2,6 +2,8 @@
 layout: single
 title: '116\. spotkanie - pre-WROC#'
 date: 2019-03-28
+tags:
+  - offline
 talks:
 - title: IL — między piekłem a niebem
   speaker_ids:

@@ -3,7 +3,7 @@ title: '168\. spotkanie Wrocławskiej Grupy .NET'
 date: 2026-05-26
 categories: spotkania
 tags:
-  - .NET
+  - offline
 talks:
 - title: Od vibe codingu do spec-driven development
   speaker_ids:

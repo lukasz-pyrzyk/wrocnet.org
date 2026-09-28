@@ -3,7 +3,7 @@ title: '130\. spotkanie Wrocławskiej Grupy .NET ONLINE'
 date: 2020-10-21
 categories: spotkania
 tags:
-  - .NET
+  - online
 talks:
 - title: Droga do Reactive Extensions
   speaker_ids:

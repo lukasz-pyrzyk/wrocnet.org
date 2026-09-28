@@ -3,7 +3,7 @@ title: '148\. spotkanie Wrocławskiej Grupy .NET'
 date: 2022-10-18
 categories: spotkania
 tags:
-  - .NET
+  - offline
 talks:
 - title: Chmurowa niezawodność w Azure dla programistów
   speaker_ids:

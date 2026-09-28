@@ -3,7 +3,7 @@ title: '147\. spotkanie Wrocławskiej Grupy .NET'
 date: 2022-09-20
 categories: spotkania
 tags:
-  - .NET
+  - offline
 talks:
 - title: Programowanie Embedded Devices "bare bones" - łatwiejsze niż myślisz
   speaker_ids:

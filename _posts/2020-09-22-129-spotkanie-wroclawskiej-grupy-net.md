@@ -3,7 +3,7 @@ title: '129\. spotkanie Wrocławskiej Grupy .NET ONLINE'
 date: 2020-09-22
 categories: spotkania
 tags:
-  - .NET
+  - online
 talks:
 - title: Wprowadzenie do RabbitMQ
   speaker_ids:

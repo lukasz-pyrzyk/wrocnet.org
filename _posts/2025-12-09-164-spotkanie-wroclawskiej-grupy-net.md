@@ -3,7 +3,7 @@ title: '164\. spotkanie Wrocławskiej Grupy .NET'
 date: 2025-12-09
 categories: spotkania
 tags:
-  - .NET
+  - offline
 talks:
 - title: Tech Lead 2.0 - jak GenAI zmienia zasady gry
   speaker_ids:

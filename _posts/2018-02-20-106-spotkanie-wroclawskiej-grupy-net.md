@@ -2,6 +2,8 @@
 layout: single
 title: '106\. spotkanie - CQRS, osobowości inżynierów oprogramowania'
 date: 2018-02-20
+tags:
+  - offline
 talks:
 - title: CQRS w 4 krokach
   speaker_ids:

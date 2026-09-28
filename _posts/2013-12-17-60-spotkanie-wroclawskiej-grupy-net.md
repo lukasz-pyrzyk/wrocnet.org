@@ -2,6 +2,8 @@
 layout: single
 title: '60\. spotkanie - Fody'
 date: 2013-12-17
+tags:
+  - offline
 talks:
 - title: Fody
   speaker_ids:

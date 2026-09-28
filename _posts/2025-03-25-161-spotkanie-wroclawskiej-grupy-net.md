@@ -3,7 +3,7 @@ title: '161\. spotkanie Wrocławskiej Grupy .NET'
 date: 2025-03-25
 categories: spotkania
 tags:
-  - .NET
+  - offline
 talks:
 - title: LLM Local Awareness - naucz AI kodować jak Twój zespół!
   speaker_ids:

@@ -2,6 +2,8 @@
 title: '170\. spotkanie Wrocławskiej Grupy .NET – Otwarcie sezonu 2026/2027'
 date: 2026-09-22
 categories: spotkania
+tags:
+  - offline
 header:
   teaser: /assets/images/spotkania-teaser.jpg
 talks:

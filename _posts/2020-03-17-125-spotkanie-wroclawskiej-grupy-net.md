@@ -3,7 +3,7 @@ title: '125\. spotkanie Wrocławskiej Grupy .NET'
 date: 2020-03-17
 categories: spotkania
 tags:
-  - .NET
+  - online
 talks:
 - title: Protocol buffers oraz gRPC
   speaker_ids:
@@ -13,7 +13,7 @@ talks:
   - weronika-mularczyk
 ---
 
-125. spotkanie Wrocławskiej Grupy .NET odbyło się 17.03.2020 r. w **Klubokawiarnia Mleczarnia, ul. Pawła Włodkowica 5, Wrocław**.
+125. spotkanie Wrocławskiej Grupy .NET odbyło się 17.03.2020 r. **online** - było transmitowane na żywo na kanale YouTube grupy.
 
 {% include talk.html index=0 %}
 

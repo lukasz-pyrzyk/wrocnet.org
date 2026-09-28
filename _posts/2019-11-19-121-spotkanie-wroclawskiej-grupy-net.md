@@ -2,6 +2,8 @@
 layout: single
 title: '121\. spotkanie - Microservices, Azure Sphere, Multi-tenant Azure'
 date: 2019-11-19
+tags:
+  - offline
 talks:
 - title: Clean up this mess – API Gateway and Service Discovery in .NET
   speaker_ids:

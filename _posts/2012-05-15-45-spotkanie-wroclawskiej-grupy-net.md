@@ -2,6 +2,8 @@
 layout: single
 title: '45\. spotkanie Wrocławskiej Grupy .NET'
 categories: spotkania
+tags:
+  - offline
 date: 2012-05-15
 ---
 

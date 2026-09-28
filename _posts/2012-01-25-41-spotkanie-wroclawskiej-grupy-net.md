@@ -2,6 +2,8 @@
 layout: single
 title: '41\. spotkanie Wrocławskiej Grupy .NET'
 categories: spotkania
+tags:
+  - offline
 date: 2012-01-25
 talks:
 - title: 'VS Debugger — Tips & Tricks'

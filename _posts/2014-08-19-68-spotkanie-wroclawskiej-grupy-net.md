@@ -2,6 +2,8 @@
 layout: single
 title: '68\. spotkanie - BITS'
 date: 2014-08-19
+tags:
+  - offline
 talks:
 - title: Co to jest BITS i do czego mógłbym go użyć?
   speaker_ids:

@@ -3,7 +3,7 @@ title: '140\. spotkanie Wrocławskiej Grupy .NET ONLINE'
 date: 2021-12-14
 categories: spotkania
 tags:
-  - .NET
+  - online
 talks:
 - title: C# Security Vulnerabilities
   speaker_ids:

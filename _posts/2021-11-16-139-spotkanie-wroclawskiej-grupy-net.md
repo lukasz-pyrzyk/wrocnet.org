@@ -3,7 +3,7 @@ title: '139\. spotkanie Wrocławskiej Grupy .NET ONLINE'
 date: 2021-11-16
 categories: spotkania
 tags:
-  - .NET
+  - online
 talks:
 - title: Fix your technical debt and improve your architecture with NDepend
   speaker_ids:

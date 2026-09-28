@@ -3,7 +3,7 @@ title: '132\. spotkanie Wrocławskiej Grupy .NET ONLINE'
 date: 2020-12-16
 categories: spotkania
 tags:
-  - .NET
+  - online
 talks:
 - title: Kubernetes dla Programistów
   speaker_ids:

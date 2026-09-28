@@ -2,6 +2,8 @@
 layout: single
 title: '117\. spotkanie - Autofac, GitHub'
 date: 2019-04-16
+tags:
+  - offline
 talks:
 - title: Best practices Autofac – examples
   speaker_ids:

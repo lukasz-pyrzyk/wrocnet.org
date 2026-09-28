@@ -2,6 +2,8 @@
 layout: single
 title: '61\. spotkanie - Knockout.js; Zdalna firma'
 date: 2014-01-21
+tags:
+  - offline
 talks:
 - title: Knock the jQuery out!
   speaker_ids:

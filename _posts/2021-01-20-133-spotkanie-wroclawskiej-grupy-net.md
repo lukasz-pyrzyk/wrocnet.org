@@ -3,7 +3,7 @@ title: '133\. spotkanie Wrocławskiej Grupy .NET ONLINE'
 date: 2021-01-20
 categories: spotkania
 tags:
-  - .NET
+  - online
 talks:
 - title: Async – największy błąd C#?
   speaker_ids:

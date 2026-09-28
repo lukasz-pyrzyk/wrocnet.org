@@ -2,6 +2,8 @@
 layout: single
 title: '42\. spotkanie Wrocławskiej Grupy .NET'
 categories: spotkania
+tags:
+  - offline
 date: 2012-02-15
 talks:
 - title: 'Windows 8 — Hot or Not, poziom 200'

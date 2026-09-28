@@ -3,7 +3,7 @@ title: '128\. spotkanie Wrocławskiej Grupy .NET ONLINE'
 date: 2020-06-16
 categories: spotkania
 tags:
-  - .NET
+  - online
 talks:
 - title: Multi-Stage Pipelines w Azure DevOps
   speaker_ids:

@@ -2,6 +2,8 @@
 layout: single
 title: '99\. spotkanie - Azure Simple Storage, Elm'
 date: 2017-05-16
+tags:
+  - offline
 talks:
 - title: Keep Its Storage Simple Stupid
   speaker_ids:
