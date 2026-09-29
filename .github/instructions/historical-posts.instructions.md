@@ -22,9 +22,13 @@ Zawsze używamy layoutu `single` i kategorii `spotkania`.
 layout: single
 title: 'NR. spotkanie Wrocławskiej Grupy .NET' # lub nazwa eventu
 categories: spotkania
+tags:
+  - offline # online dla spotkania zdalnego, inne dla wydarzenia specjalnego
 date: YYYY-MM-DD
 ---
 ```
+
+Każdy post musi mieć dokładnie jeden tag formatu: `offline` dla regularnego spotkania stacjonarnego, `online` dla regularnego spotkania zdalnego albo `inne` dla wydarzenia specjalnego bez numeru. Nie używamy tagu `.NET`.
 
 ## 3. Czyszczenie treści (Kluczowe)
 Podczas przenoszenia tekstu z plików tekstowych/maili:

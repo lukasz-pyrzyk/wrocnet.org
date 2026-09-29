@@ -30,6 +30,7 @@ See [README.md](README.md) for install, local dev server, and CI validation comm
 - If adding links/images in old posts, avoid empty markdown links and missing local assets because htmlproofer runs in CI.
 - Prefer preserving Polish content style and existing URL/permalink patterns.
 - **Numbered post titles**: Minimal Mistakes passes titles through Markdown in archive views, so a title starting with `9. Meeting` is interpreted as an ordered-list item and may render as `1. Meeting`. Escape the first period in single-quoted YAML, for example `title: '9\. Meeting'`.
+- **Post format tags**: Every post must have exactly one format tag: `offline` for regular in-person meetings, `online` for regular online meetings, or `inne` for special/non-numbered events. Do not use `.NET` as a tag; every event on the site is already .NET-related.
 - **Images/Photos**: Do not use external URLs for profile photos. Download the image to `assets/images/organizers/`, ensure it's in JPG/PNG format, and resize it to a reasonable size (e.g., 400x400px) before committing.
 - **Historical posts** (pre-2012, archival data): see [.github/instructions/historical-posts.instructions.md](.github/instructions/historical-posts.instructions.md) for anonymization and formatting rules.
 - **Wayback Machine rate limits**: archive.org may return HTTP 429 while researching historical posts. Do not retry immediately; record the URL and return to it later.
