@@ -88,7 +88,8 @@ excerpt: "Wrocławska społeczność programistów .NET. Spotykamy się od 2007 
     </div>
     <ul class="schedule-list">
       {% assign upcoming_index = 0 %}
-      {% for date_str in site.data.schedule.dates %}
+      {% for meeting in site.data.schedule.dates %}
+        {% assign date_str = meeting.date %}
         {% assign meeting_ts = date_str | date: '%s' | plus: 0 %}
         {% if meeting_ts >= today_ts %}
           {% assign m_idx = date_str | date: "%-m" | minus: 1 %}

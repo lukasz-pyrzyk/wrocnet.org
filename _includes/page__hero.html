@@ -18,18 +18,18 @@
 {% endif %}
 
 {% assign image_description = image_description | markdownify | strip_html | strip_newlines | escape_once %}
-{% assign default_start_time = site.data.schedule.default_start_time | default: "18:00:00" %}
 {% assign ui_text = site.data.ui-text[locale] %}
 {% assign has_countdown = false %}
 
 {% if page.url == "/" and site.data.schedule and site.data.schedule.dates and site.data.schedule.dates.size > 0 %}
   {% assign month_names_csv = ui_text.countdown_month_names | default: "January,February,March,April,May,June,July,August,September,October,November,December" %}
   {% assign month_names = month_names_csv | split: "," %}
-  {% assign sorted_dates = site.data.schedule.dates | sort %}
-  {% capture meeting_timestamps_csv %}{% for date_str in sorted_dates %}{% capture meeting_at %}{{ date_str }} {{ default_start_time }}{% endcapture %}{{ meeting_at | date: '%s' }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
+  {% assign sorted_meetings = site.data.schedule.dates | sort: "date" %}
+  {% capture meeting_timestamps_csv %}{% for meeting in sorted_meetings %}{% capture meeting_at %}{{ meeting.date }} {{ meeting.time }}{% endcapture %}{{ meeting_at | date: '%s' }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
   {% assign meeting_timestamps_csv = meeting_timestamps_csv | strip_newlines | strip %}
-  {% assign next_meeting_time_display = default_start_time | slice: 0, 5 %}
-  {% assign first_meeting_date = sorted_dates[0] %}
+  {% assign first_meeting = sorted_meetings[0] %}
+  {% assign first_meeting_date = first_meeting.date %}
+  {% assign next_meeting_time_display = first_meeting.time | slice: 0, 5 %}
   {% assign first_month_idx = first_meeting_date | date: "%-m" | minus: 1 %}
   {% capture first_meeting_display %}{{ first_meeting_date | date: "%-d" }} {{ month_names[first_month_idx] }} {{ first_meeting_date | date: "%Y" }}{% endcapture %}
   {% assign has_countdown = true %}
@@ -63,7 +63,7 @@
         {% endif %}
       </div>
       {% if has_countdown %}
-        <aside class="next-meeting-card" data-dates='{{ sorted_dates | jsonify }}' data-targets='[{{ meeting_timestamps_csv }}]' data-start-time="{{ default_start_time }}" data-month-names='{{ month_names | jsonify }}'>
+        <aside class="next-meeting-card" data-meetings='{{ sorted_meetings | jsonify }}' data-targets='[{{ meeting_timestamps_csv }}]' data-month-names='{{ month_names | jsonify }}'>
           <p class="next-meeting-card__eyebrow">{{ ui_text.countdown_eyebrow | default: "Next meeting starts in:" }}</p>
           <div class="next-meeting-card__countdown" role="timer" aria-live="polite" aria-atomic="true" aria-label="{{ ui_text.countdown_aria_label | default: "Countdown to the next meeting" }}">
             <div class="next-meeting-card__days-row">
@@ -109,16 +109,16 @@
 {% if has_countdown %}
   <script>
     (function () {
-      var card = document.querySelector('.next-meeting-card[data-dates]');
+      var card = document.querySelector('.next-meeting-card[data-meetings]');
       if (!card) {
         return;
       }
 
-      var dateList = [];
+      var meetingList = [];
       var targetList = [];
       var monthNames = [];
       try {
-        dateList = JSON.parse(card.getAttribute('data-dates') || '[]');
+        meetingList = JSON.parse(card.getAttribute('data-meetings') || '[]');
         targetList = JSON.parse(card.getAttribute('data-targets') || '[]');
         monthNames = JSON.parse(card.getAttribute('data-month-names') || '[]');
       } catch (e) {
@@ -126,7 +126,7 @@
         return;
       }
 
-      if (!dateList.length || dateList.length !== targetList.length) {
+      if (!meetingList.length || meetingList.length !== targetList.length) {
         card.style.display = 'none';
         return;
       }
@@ -134,13 +134,6 @@
       for (var n = 0; n < targetList.length; n += 1) {
         targetList[n] = Number(targetList[n]) * 1000;
       }
-
-      var timeRaw = card.getAttribute('data-start-time') || '18:00:00';
-      var timeParts = timeRaw.split(':');
-      var timeHours = Number(timeParts[0] || 0);
-      var timeMinutes = Number(timeParts[1] || 0);
-      var timeSeconds = Number(timeParts[2] || 0);
-      var timeLabel = String(timeHours).padStart(2, '0') + ':' + String(timeMinutes).padStart(2, '0');
 
       var dateLabel = card.querySelector('[data-role="meeting-date"]');
       var targetTs = 0;
@@ -160,7 +153,7 @@
         for (var i = 0; i < targetList.length; i += 1) {
           if (targetList[i] >= afterTs) {
             return {
-              dateStr: dateList[i],
+              meeting: meetingList[i],
               targetTs: targetList[i]
             };
           }
@@ -168,12 +161,13 @@
         return null;
       }
 
-      function formatMeetingLabel(dateStr) {
-        var parts = dateStr.split('-');
+      function formatMeetingLabel(meeting) {
+        var parts = meeting.date.split('-');
         var year = Number(parts[0]);
         var monthIndex = Number(parts[1]) - 1;
         var day = Number(parts[2]);
         var monthName = monthNames[monthIndex] || String(monthIndex + 1);
+        var timeLabel = meeting.time.slice(0, 5);
         return day + ' ' + monthName + ' ' + year + ', ' + timeLabel;
       }
 
@@ -186,7 +180,7 @@
 
         targetTs = nextMeeting.targetTs;
         if (dateLabel) {
-          dateLabel.textContent = formatMeetingLabel(nextMeeting.dateStr);
+          dateLabel.textContent = formatMeetingLabel(nextMeeting.meeting);
         }
 
         return true;
