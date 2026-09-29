@@ -99,7 +99,12 @@ Minimal front matter:
 ---
 title: "NR. spotkanie Wrocławskiej Grupy .NET"
 date: YYYY-MM-DD
+categories: spotkania
+tags:
+   - offline
 header:
   teaser: /assets/images/logo.png
 ---
 ```
+
+Every post must have exactly one format tag: `offline` for regular in-person meetings, `online` for regular online meetings, or `inne` for special/non-numbered events.
