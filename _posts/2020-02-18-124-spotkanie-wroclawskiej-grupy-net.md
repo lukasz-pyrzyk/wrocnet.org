@@ -3,7 +3,7 @@ title: '124\. spotkanie Wrocławskiej Grupy .NET'
 date: 2020-02-18
 categories: spotkania
 tags:
-  - .NET
+  - offline
 talks:
 - title: GraphQL w .NET
   speaker_ids:

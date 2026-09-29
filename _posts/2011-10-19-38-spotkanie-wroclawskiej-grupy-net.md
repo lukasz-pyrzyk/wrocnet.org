@@ -2,6 +2,8 @@
 layout: single
 title: '38\. spotkanie Wrocławskiej Grupy .NET'
 categories: spotkania
+tags:
+  - offline
 date: 2011-10-19
 talks:
 - title: 'jQuery Mobile i ASP.NET MVC4'

@@ -2,6 +2,8 @@
 layout: single
 title: '92\. spotkanie - Opytmalizacja SQL, ITAN'
 date: 2016-12-13
+tags:
+  - offline
 talks:
 - title: Optymalizacja zapytań
   speaker_ids:

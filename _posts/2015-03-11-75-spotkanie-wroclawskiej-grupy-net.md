@@ -2,6 +2,8 @@
 layout: single
 title: '75\. spotkanie - CQRS w trzech odsłonach'
 date: 2015-03-11
+tags:
+  - offline
 talks:
 - title: CQRS – moje własne podejście
   speaker_ids:

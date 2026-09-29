@@ -2,6 +2,8 @@
 layout: single
 title: '102\. spotkanie - Full stack TypeScript, Mac dla .NET'
 date: 2017-10-17
+tags:
+  - offline
 talks:
 - title: Full stack TypeScript dla programisty .NET
   speaker_ids:

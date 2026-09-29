@@ -2,6 +2,8 @@
 layout: single
 title: '26\. spotkanie Wrocławskiej Grupy .NET'
 categories: spotkania
+tags:
+  - offline
 date: 2010-08-17
 talks:
 - title: 'Web Matrix — nowe środowisko programistyczne od Microsoftu'

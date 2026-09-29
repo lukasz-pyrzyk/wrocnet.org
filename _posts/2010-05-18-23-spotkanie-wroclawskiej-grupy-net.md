@@ -2,6 +2,8 @@
 layout: single
 title: '23\. spotkanie Wrocławskiej Grupy .NET'
 categories: spotkania
+tags:
+  - offline
 date: 2010-05-18
 talks:
 - title: Jak dotknąć Windows

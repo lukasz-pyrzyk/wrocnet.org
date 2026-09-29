@@ -2,6 +2,8 @@
 layout: single
 title: '9\. Plażowe spotkanie grupy .NET'
 categories: spotkania
+tags:
+  - inne
 date: 2022-07-26
 ---
 

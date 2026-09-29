@@ -2,6 +2,8 @@
 layout: single
 title: '67\. spotkanie - Testy metod prywatnych i Maybe monad'
 date: 2014-07-15
+tags:
+  - offline
 talks:
 - title: Testy metod prywatnych oraz "Chained null checks and the Maybe monad"
   speaker_ids:

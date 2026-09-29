@@ -3,7 +3,7 @@ title: '144\. spotkanie Wrocławskiej Grupy .NET ONLINE'
 date: 2022-04-26
 categories: spotkania
 tags:
-  - .NET
+  - online
 talks:
 - title: Running a Perfect (C#/.NET) Technical Interview
   speaker_ids:

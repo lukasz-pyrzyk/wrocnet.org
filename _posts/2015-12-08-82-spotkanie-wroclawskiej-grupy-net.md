@@ -2,6 +2,8 @@
 layout: single
 title: '82\. spotkanie - Natural User Interface (en)'
 date: 2015-12-08
+tags:
+  - offline
 talks:
 - title: 'The Next Generation of Software: Leveraging Natural User Interface Technology to Deliver Improved User Experience'
   speaker_ids:

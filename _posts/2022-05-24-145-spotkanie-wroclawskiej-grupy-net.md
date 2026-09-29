@@ -3,7 +3,7 @@ title: '145\. spotkanie Wrocławskiej Grupy .NET ONLINE'
 date: 2022-05-24
 categories: spotkania
 tags:
-  - .NET
+  - online
 talks:
 - title: Nigdy więcej nie trać danych, czyli Event Sourcing na ratunek!
   speaker_ids:

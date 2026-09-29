@@ -3,7 +3,7 @@ title: '135\. spotkanie Wrocławskiej Grupy .NET ONLINE'
 date: 2021-03-24
 categories: spotkania
 tags:
-  - .NET
+  - online
 talks:
 - title: Windows UI and Open-source Uno Platform
   speaker_ids:

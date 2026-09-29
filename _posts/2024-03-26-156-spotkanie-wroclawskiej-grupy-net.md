@@ -3,7 +3,7 @@ title: '156\. spotkanie Wrocławskiej Grupy .NET'
 date: 2024-03-26
 categories: spotkania
 tags:
-  - .NET
+  - offline
 talks:
 - title: GitHub Copilot - Narzędzie przyszłości?
   speaker_ids:

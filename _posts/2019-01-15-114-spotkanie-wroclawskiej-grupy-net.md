@@ -2,6 +2,8 @@
 layout: single
 title: '114\. spotkanie - Loosely coupled architecture, SpecFlow'
 date: 2019-01-15
+tags:
+  - offline
 talks:
 - title: Loosely coupled architecture - jak pozbyć się efektu domina
   speaker_ids:

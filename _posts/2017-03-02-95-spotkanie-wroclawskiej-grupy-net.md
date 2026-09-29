@@ -2,6 +2,8 @@
 layout: single
 title: '95\. spotkanie Wrocławskiej Grupy .NET - pre-WROC#'
 date: 2017-03-02
+tags:
+  - offline
 talks:
 - title: Open the lock
   speaker_ids:

@@ -2,6 +2,8 @@
 layout: single
 title: '30\. spotkanie Wrocławskiej Grupy .NET - DevDay'
 categories: spotkania
+tags:
+  - offline
 date: 2010-12-07
 ---
 

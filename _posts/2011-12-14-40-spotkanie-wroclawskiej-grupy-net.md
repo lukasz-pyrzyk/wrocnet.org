@@ -2,6 +2,8 @@
 layout: single
 title: '40\. spotkanie Wrocławskiej Grupy .NET'
 categories: spotkania
+tags:
+  - offline
 date: 2011-12-14
 talks:
 - title: 'Raven DB'

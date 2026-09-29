@@ -2,6 +2,8 @@
 layout: single
 title: '86\. spotkanie - Microservices, Lightning talki'
 date: 2016-03-09
+tags:
+  - offline
 talks:
 - title: Mikroserwisy, pierwsze kroczki
   speaker_ids:

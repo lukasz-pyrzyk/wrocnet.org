@@ -2,6 +2,8 @@
 layout: single
 title: '56\. spotkanie - REST API'
 date: 2013-06-18
+tags:
+  - offline
 talks:
 - title: Projektowanie API zgodnie z zasadami REST
   speaker_ids:

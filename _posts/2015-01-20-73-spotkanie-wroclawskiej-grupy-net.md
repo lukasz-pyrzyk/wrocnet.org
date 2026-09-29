@@ -2,6 +2,8 @@
 layout: single
 title: '73\. spotkanie - CSRF w ASP.NET MVC, ASP.NET vNext'
 date: 2015-01-20
+tags:
+  - offline
 talks:
 - title: Sea-surfing in ASP.NET MVC
   speaker_ids:

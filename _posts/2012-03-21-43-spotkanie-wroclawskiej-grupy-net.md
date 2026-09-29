@@ -2,6 +2,8 @@
 layout: single
 title: '43\. spotkanie Wrocławskiej Grupy .NET'
 categories: spotkania
+tags:
+  - offline
 date: 2012-03-21
 talks:
 - title: 'Team Foundation Server to nie SVN'

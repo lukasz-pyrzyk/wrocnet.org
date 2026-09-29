@@ -2,6 +2,8 @@
 layout: single
 title: '31\. spotkanie Wrocławskiej Grupy .NET'
 categories: spotkania
+tags:
+  - offline
 date: 2011-01-18
 talks:
 - title: 'Windows Azure AppFabric Platform: Access Control i Service Bus'

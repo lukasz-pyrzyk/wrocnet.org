@@ -2,6 +2,8 @@
 layout: single
 title: '34\. spotkanie Wrocławskiej Grupy .NET'
 categories: spotkania
+tags:
+  - offline
 date: 2011-04-19
 talks:
 - title: MEF oraz MefContrib

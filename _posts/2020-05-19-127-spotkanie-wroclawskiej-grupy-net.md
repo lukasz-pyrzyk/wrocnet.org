@@ -3,7 +3,7 @@ title: '127\. spotkanie Wrocławskiej Grupy .NET ONLINE'
 date: 2020-05-19
 categories: spotkania
 tags:
-  - .NET
+  - online
 talks:
 - title: Zarządzanie infrastrukturą w chmurze za pomocą Terraform
   speaker_ids:

@@ -2,6 +2,8 @@
 layout: single
 title: '5\. spotkanie Wrocławskiej Grupy .NET (+ I spotkanie PLSSUG Wrocław)'
 categories: spotkania
+tags:
+  - offline
 date: 2008-02-07
 talks:
 - title: Wprowadzenie do indeksów w SQL Server 2005

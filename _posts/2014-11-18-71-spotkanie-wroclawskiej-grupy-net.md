@@ -2,6 +2,8 @@
 layout: single
 title: '71\. spotkanie - NuGet debugging; Git versioning'
 date: 2014-11-18
+tags:
+  - offline
 talks:
 - title: Debuggable NuGet packages
   speaker_ids:

@@ -2,6 +2,8 @@
 layout: single
 title: '94\. spotkanie - EventSourcing, CQRS'
 date: 2017-02-21
+tags:
+  - offline
 talks:
 - title: Przygody z EventSourcing i CQRS, czyli jak to sie w praktyce robi w świecie dotNet Core
   speaker_ids:

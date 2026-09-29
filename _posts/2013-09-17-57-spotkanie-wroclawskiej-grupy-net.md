@@ -2,6 +2,8 @@
 layout: single
 title: '57\. spotkanie - Anatomia debuggera'
 date: 2013-09-17
+tags:
+  - offline
 talks:
 - title: Anatomia debuggera
   speaker_ids:

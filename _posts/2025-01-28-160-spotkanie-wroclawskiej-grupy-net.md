@@ -3,7 +3,7 @@ title: '160\. spotkanie Wrocławskiej Grupy .NET'
 date: 2025-01-28
 categories: spotkania
 tags:
-  - .NET
+  - offline
 talks:
 - title: Przegląd narzędzi workflow oraz wykorzystanie w .NET
   speaker_ids:

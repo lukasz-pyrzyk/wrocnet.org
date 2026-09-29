@@ -3,7 +3,7 @@ title: '150\. spotkanie Wrocławskiej Grupy .NET'
 date: 2023-01-24
 categories: spotkania
 tags:
-  - .NET
+  - offline
 talks:
 - title: The art of maintaining a castle, czyli jak efektywnie pracować z systemami legacy
   speaker_ids:

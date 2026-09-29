@@ -2,6 +2,8 @@
 layout: single
 title: '78\. spotkanie - F# Type Providers'
 date: 2015-06-16
+tags:
+  - offline
 talks:
 - title: Making world statically typed with F# Type Providers
   speaker_ids:

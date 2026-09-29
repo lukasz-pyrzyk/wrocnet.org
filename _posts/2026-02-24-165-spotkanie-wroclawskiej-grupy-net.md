@@ -3,7 +3,7 @@ title: '165\. spotkanie Wrocławskiej Grupy .NET'
 date: 2026-02-24
 categories: spotkania
 tags:
-  - .NET
+  - offline
 talks:
 - title: Inteligentny dom po swojemu - czyli jak w .NET z Azure zarządzać zdalnie domem
   speaker_ids:

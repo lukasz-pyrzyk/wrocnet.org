@@ -2,6 +2,8 @@
 layout: single
 title: '77\. spotkanie - Mikroserwisy'
 date: 2015-05-19
+tags:
+  - offline
 talks:
 - title: Mikro-serwisy
   speaker_ids:

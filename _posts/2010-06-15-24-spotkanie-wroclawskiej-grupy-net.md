@@ -2,6 +2,8 @@
 layout: single
 title: '24\. spotkanie Wrocławskiej Grupy .NET'
 categories: spotkania
+tags:
+  - offline
 date: 2010-06-15
 talks:
 - title: Architektura aplikacji Silverlight

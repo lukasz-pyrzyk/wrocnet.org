@@ -2,6 +2,8 @@
 layout: single
 title: '98\. spotkanie - Open Source, Kinect'
 date: 2017-04-18
+tags:
+  - offline
 talks:
 - title: Moja niesamowita przygoda z Open Source
   speaker_ids:

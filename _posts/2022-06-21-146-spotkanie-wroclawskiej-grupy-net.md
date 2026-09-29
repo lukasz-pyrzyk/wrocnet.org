@@ -3,7 +3,7 @@ title: '146\. spotkanie Wrocławskiej Grupy .NET ONLINE'
 date: 2022-06-21
 categories: spotkania
 tags:
-  - .NET
+  - online
 talks:
 - title: How to DEVELOP cloud infrastructure for your project? GitOps tooling on Azure
   speaker_ids:

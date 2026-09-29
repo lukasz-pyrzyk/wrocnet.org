@@ -2,6 +2,8 @@
 layout: single
 title: '66\. spotkanie - Architektura; Scheduling'
 date: 2014-06-17
+tags:
+  - offline
 talks:
 - title: 'Focus on Architecture: Does great power come with great responsibility?'
   speaker_ids:

@@ -2,6 +2,8 @@
 layout: single
 title: '83\. spotkanie - Testy mutacyjne, frameworki'
 date: 2015-12-15
+tags:
+  - offline
 talks:
 - title: Mutuj swój kod i sprawdź prawdziwe pokrycie swoich testów!
   speaker_ids:

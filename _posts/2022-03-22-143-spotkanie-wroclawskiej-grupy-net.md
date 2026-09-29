@@ -3,7 +3,7 @@ title: '143\. spotkanie Wrocławskiej Grupy .NET ONLINE'
 date: 2022-03-22
 categories: spotkania
 tags:
-  - .NET
+  - online
 talks:
 - title: Proste triki testerskie, które polepszą jakość Twojej historyjki
   speaker_ids:

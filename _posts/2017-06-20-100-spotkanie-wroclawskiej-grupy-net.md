@@ -2,6 +2,8 @@
 layout: single
 title: '100\. spotkanie - TPL Dataflow, Pamięć w .NET'
 date: 2017-06-20
+tags:
+  - offline
 talks:
 - title: How I stopped worrying and learned to love parallel processing
   speaker_ids:

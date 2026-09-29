@@ -2,6 +2,8 @@
 title: '169\. spotkanie Wrocławskiej Grupy .NET – Zakończenie sezonu'
 date: 2026-06-16
 categories: spotkania
+tags:
+  - offline
 header:
   teaser: /assets/images/spotkania-teaser.jpg
 talks:

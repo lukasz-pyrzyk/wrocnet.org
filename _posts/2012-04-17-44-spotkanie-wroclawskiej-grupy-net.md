@@ -2,6 +2,8 @@
 layout: single
 title: '44\. spotkanie Wrocławskiej Grupy .NET'
 categories: spotkania
+tags:
+  - offline
 date: 2012-04-17
 talks:
 - title: 'DVCS na przykładzie Mercuriala'

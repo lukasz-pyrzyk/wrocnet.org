@@ -2,6 +2,8 @@
 layout: single
 title: '64\. spotkanie - Python'
 date: 2014-04-15
+tags:
+  - offline
 talks:
 - title: Python in a .NET world
   speaker_ids:

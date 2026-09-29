@@ -2,6 +2,8 @@
 layout: single
 title: '118\. spotkanie Wrocławskiej Grupy .NET'
 categories: spotkania
+tags:
+  - offline
 date: 2019-05-21
 talks:
 - title: WebAssembly & .NET

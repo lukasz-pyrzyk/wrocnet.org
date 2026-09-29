@@ -3,7 +3,7 @@ title: '154\. spotkanie Wrocławskiej Grupy .NET'
 date: 2023-05-23
 categories: spotkania
 tags:
-  - .NET
+  - offline
 talks:
 - title: Prompt engineering - jak rozmawiać z chatGPT?
   speaker_ids:

@@ -2,6 +2,8 @@
 layout: single
 title: '25\. spotkanie Wrocławskiej Grupy .NET'
 categories: spotkania
+tags:
+  - offline
 date: 2010-07-20
 talks:
 - title: Rozpocznij przygodę z Windows Phone 7 oczami programisty Windows Mobile

@@ -2,6 +2,8 @@
 layout: single
 title: '22\. spotkanie Wrocławskiej Grupy .NET'
 categories: spotkania
+tags:
+  - offline
 date: 2010-04-19
 ---
 

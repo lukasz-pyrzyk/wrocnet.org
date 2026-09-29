@@ -2,6 +2,8 @@
 layout: single
 title: '70\. spotkanie - Code reviews; Isolation frameworks'
 date: 2014-10-21
+tags:
+  - offline
 talks:
 - title: Code reviews
   speaker_ids:

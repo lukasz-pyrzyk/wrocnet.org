@@ -2,6 +2,8 @@
 layout: single
 title: '16\. spotkanie Wrocławskiej Grupy .NET (+ IV spotkanie PLSSUG Wrocław)'
 categories: spotkania
+tags:
+  - offline
 date: 2008-11-27
 talks:
 - title: '"SQL Server User-Defined Functions — The Good, The Bad, The Ugly"'

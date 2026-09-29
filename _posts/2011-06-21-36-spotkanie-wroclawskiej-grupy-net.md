@@ -2,6 +2,8 @@
 layout: single
 title: '36\. spotkanie Wrocławskiej Grupy .NET'
 categories: spotkania
+tags:
+  - offline
 date: 2011-06-21
 talks:
 - title: Hackowanie Kinect'a

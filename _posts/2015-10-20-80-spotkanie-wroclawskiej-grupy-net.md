@@ -2,6 +2,8 @@
 layout: single
 title: '80\. spotkanie - Stanowe aplikacje webowe, Git'
 date: 2015-10-20
+tags:
+  - offline
 talks:
 - title: Stanowe aplikacje webowe
   speaker_ids:

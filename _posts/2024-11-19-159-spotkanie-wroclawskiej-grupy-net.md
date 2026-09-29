@@ -3,7 +3,7 @@ title: '159\. spotkanie Wrocławskiej Grupy .NET'
 date: 2024-11-19
 categories: spotkania
 tags:
-  - .NET
+  - offline
 talks:
 - title: JetBrains Rider – Tips & Tricks
   speaker_ids:

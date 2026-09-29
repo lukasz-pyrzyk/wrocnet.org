@@ -2,6 +2,8 @@
 layout: single
 title: '115\. spotkanie - Roslyn analyzers, Azure Service Fabric'
 date: 2019-02-19
+tags:
+  - offline
 talks:
 - title: Jak usprawnić proces wytwarzania oprogramowania przy pomocy Roslyn
   speaker_ids:

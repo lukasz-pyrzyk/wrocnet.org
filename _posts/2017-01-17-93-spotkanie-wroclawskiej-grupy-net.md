@@ -2,6 +2,8 @@
 layout: single
 title: '93\. spotkanie - OzCode, Stress, Nauka'
 date: 2017-01-17
+tags:
+  - offline
 talks:
 - title: OzCode
   speaker_ids:

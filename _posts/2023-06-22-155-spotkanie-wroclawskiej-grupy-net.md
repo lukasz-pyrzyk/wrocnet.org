@@ -3,7 +3,7 @@ title: '155\. spotkanie Wrocławskiej Grupy .NET'
 date: 2023-06-22
 categories: spotkania
 tags:
-  - .NET
+  - offline
 talks:
 - title: Umbraco - .NET-owy CMS
   speaker_ids:

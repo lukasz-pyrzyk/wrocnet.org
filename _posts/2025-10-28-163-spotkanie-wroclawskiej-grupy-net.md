@@ -3,7 +3,7 @@ title: '163\. spotkanie Wrocławskiej Grupy .NET'
 date: 2025-10-28
 categories: spotkania
 tags:
-  - .NET
+  - offline
 talks:
 - title: Async Reloaded
   speaker_ids:

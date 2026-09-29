@@ -2,6 +2,8 @@
 layout: single
 title: '74\. spotkanie - Programowanie funkcyjne; Azure WebJobs'
 date: 2015-02-17
+tags:
+  - offline
 talks:
 - title: Jak nauczyliśmy się programować funkcyjnie nic o tym nie wiedząc
   speaker_ids:

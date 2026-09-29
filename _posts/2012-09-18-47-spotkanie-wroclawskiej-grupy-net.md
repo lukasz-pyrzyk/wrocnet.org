@@ -2,6 +2,8 @@
 layout: single
 title: '47\. spotkanie Wrocławskiej Grupy .NET'
 categories: spotkania
+tags:
+  - offline
 date: 2012-09-18
 talks:
 - title: 'SQL Server Source Control'

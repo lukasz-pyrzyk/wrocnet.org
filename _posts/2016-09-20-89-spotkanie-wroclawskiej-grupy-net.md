@@ -2,6 +2,8 @@
 layout: single
 title: '89\. spotkanie - Warden, perfView'
 date: 2016-09-20
+tags:
+  - offline
 talks:
 - title: Warden
   speaker_ids:

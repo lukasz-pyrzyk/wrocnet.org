@@ -2,6 +2,8 @@
 layout: single
 title: '1\. spotkanie Wrocławskiej Grupy .NET'
 categories: spotkania
+tags:
+  - offline
 date: 2007-11-29
 talks:
 - title: Visual Studio 2008

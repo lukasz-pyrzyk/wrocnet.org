@@ -3,7 +3,7 @@ title: '142\. spotkanie Wrocławskiej Grupy .NET ONLINE'
 date: 2022-02-15
 categories: spotkania
 tags:
-  - .NET
+  - online
 talks:
 - title: Cosmos DB - meh czy wow?
   speaker_ids:

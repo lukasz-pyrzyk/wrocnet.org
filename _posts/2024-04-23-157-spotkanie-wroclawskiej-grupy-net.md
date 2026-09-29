@@ -3,7 +3,7 @@ title: '157\. spotkanie Wrocławskiej Grupy .NET'
 date: 2024-04-23
 categories: spotkania
 tags:
-  - .NET
+  - offline
 talks:
 - title: Szybko czy dobrze? Poproszę oba
   speaker_ids:

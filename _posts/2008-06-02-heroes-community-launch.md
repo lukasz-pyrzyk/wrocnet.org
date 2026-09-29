@@ -2,6 +2,8 @@
 layout: single
 title: 'Heroes {Community} Launch'
 categories: spotkania
+tags:
+  - inne
 date: 2008-06-02
 ---
 

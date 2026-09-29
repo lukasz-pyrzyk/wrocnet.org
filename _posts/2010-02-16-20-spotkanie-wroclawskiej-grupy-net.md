@@ -2,6 +2,8 @@
 layout: single
 title: '20\. spotkanie Wrocławskiej Grupy .NET'
 categories: spotkania
+tags:
+  - offline
 date: 2010-02-16
 talks:
 - title: 'SaaS - Architektura multitenant'

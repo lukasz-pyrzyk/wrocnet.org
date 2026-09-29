@@ -2,6 +2,8 @@
 layout: single
 title: '35\. spotkanie Wrocławskiej Grupy .NET'
 categories: spotkania
+tags:
+  - offline
 date: 2011-05-17
 talks:
 - title: 'O tym, jak sobie node.js z ASP.NET MVC ucięło pogawędkę'

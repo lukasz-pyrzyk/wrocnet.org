@@ -2,6 +2,8 @@
 layout: single
 title: '51\. spotkanie - Semantic Web'
 date: 2013-01-15
+tags:
+  - offline
 talks:
 - title: Introduction to the Semantic Web
   speaker_ids:

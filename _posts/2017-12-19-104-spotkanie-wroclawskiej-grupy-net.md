@@ -2,6 +2,8 @@
 layout: single
 title: '104\. spotkanie - "zasiedzenie", automatyka'
 date: 2017-12-19
+tags:
+  - offline
 talks:
 - title: Jak nie zasiedzieć się na śmierć
   speaker_ids:

@@ -2,6 +2,8 @@
 layout: single
 title: '18\. spotkanie Wrocławskiej Grupy .NET'
 categories: spotkania
+tags:
+  - offline
 date: 2009-04-02
 talks:
 - title: Test Driven Development — dlaczego warto?

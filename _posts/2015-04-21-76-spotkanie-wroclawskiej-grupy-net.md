@@ -2,6 +2,8 @@
 layout: single
 title: '76\. spotkanie - Big Data, edge.js'
 date: 2015-04-21
+tags:
+  - offline
 talks:
 - title: Big Data - should you care?
   speaker_ids:

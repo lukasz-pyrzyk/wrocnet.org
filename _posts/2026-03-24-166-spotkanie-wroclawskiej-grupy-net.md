@@ -3,7 +3,7 @@ title: '166\. spotkanie Wrocławskiej Grupy .NET'
 date: 2026-03-24
 categories: spotkania
 tags:
-  - .NET
+  - offline
 talks:
 - title: .NET MAUI + GitHub Copilot - rób mniej, dostarczaj więcej
   speaker_ids:

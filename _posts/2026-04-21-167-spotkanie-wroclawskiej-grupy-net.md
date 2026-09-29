@@ -3,7 +3,7 @@ title: '167\. spotkanie Wrocławskiej Grupy .NET'
 date: 2026-04-21
 categories: spotkania
 tags:
-  - .NET
+  - offline
 talks:
 - title: Microsoft Presidio jako narzędzie do ochrony i anonimizacji danych
   speaker_ids:

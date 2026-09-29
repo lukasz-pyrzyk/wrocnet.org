@@ -2,6 +2,8 @@
 layout: single
 title: '7\. Plażowe spotkanie grupy .NET'
 categories: spotkania
+tags:
+  - inne
 date: 2020-07-21
 ---
 
