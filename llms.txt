@@ -4,7 +4,7 @@ permalink: /llms.txt
 sitemap: false
 ---
 {%- assign months_pl = "stycznia,lutego,marca,kwietnia,maja,czerwca,lipca,sierpnia,września,października,listopada,grudnia" | split: "," -%}
-{%- assign today_ts = 'now' | date: '%s' | plus: 0 -%}
+{%- assign today_ts = 'now' | date: '%Y-%m-%d' | date: '%s' | plus: 0 -%}
 {%- assign current_year = 'now' | date: '%Y' | plus: 0 -%}
 {%- assign current_month_day = 'now' | date: '%m%d' | plus: 0 -%}
 {%- assign oldest_post = site.posts | last -%}
