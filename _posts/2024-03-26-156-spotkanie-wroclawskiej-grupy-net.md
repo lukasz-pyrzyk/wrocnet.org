@@ -1,5 +1,5 @@
 ---
-title: '156\. spotkanie Wrocławskiej Grupy .NET'
+title: '156\. spotkanie Wroc.NET (Łaszkiewicz, Dudek, Kłys)'
 date: 2024-03-26
 categories: spotkania
 tags:

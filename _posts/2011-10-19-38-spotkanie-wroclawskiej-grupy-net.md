@@ -1,6 +1,6 @@
 ---
 layout: single
-title: '38\. spotkanie Wrocławskiej Grupy .NET'
+title: '38\. spotkanie Wroc.NET (Gąsior, Łukasik)'
 categories: spotkania
 tags:
   - offline

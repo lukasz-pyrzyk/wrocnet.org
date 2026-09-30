@@ -1,6 +1,6 @@
 ---
 layout: single
-title: '35\. spotkanie Wrocławskiej Grupy .NET'
+title: '35\. spotkanie Wroc.NET (Chaniewski, Najder, Weiske)'
 categories: spotkania
 tags:
   - offline

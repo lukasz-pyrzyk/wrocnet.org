@@ -1,6 +1,6 @@
 ---
 layout: single
-title: '113\. spotkanie - Microservices, Command Handler'
+title: '113\. spotkanie Wroc.NET - Microservices, Command Handler (Fyda, Zawistowski)'
 date: 2018-12-11
 tags:
   - offline

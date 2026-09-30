@@ -1,5 +1,5 @@
 ---
-title: '167\. spotkanie Wrocławskiej Grupy .NET'
+title: '167\. spotkanie Wroc.NET (Mroczek, Łukasik)'
 date: 2026-04-21
 categories: spotkania
 tags:

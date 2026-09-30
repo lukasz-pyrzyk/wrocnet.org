@@ -1,6 +1,6 @@
 ---
 layout: single
-title: '69\. spotkanie - Literate programming, mBank'
+title: '69\. spotkanie Wroc.NET - Literate programming, mBank (Bolognese, Stapp)'
 date: 2014-09-16
 tags:
   - offline

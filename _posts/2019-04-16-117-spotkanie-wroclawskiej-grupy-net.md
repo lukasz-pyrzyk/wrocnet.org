@@ -1,6 +1,6 @@
 ---
 layout: single
-title: '117\. spotkanie - Autofac, GitHub'
+title: '117\. spotkanie Wroc.NET - Autofac, GitHub (Walacik, Pluskiewicz)'
 date: 2019-04-16
 tags:
   - offline

@@ -1,5 +1,5 @@
 ---
-title: '160\. spotkanie Wrocławskiej Grupy .NET'
+title: '160\. spotkanie Wroc.NET (Muraczewski, Wyrodek)'
 date: 2025-01-28
 categories: spotkania
 tags:

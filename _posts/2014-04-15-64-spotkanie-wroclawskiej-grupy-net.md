@@ -1,6 +1,6 @@
 ---
 layout: single
-title: '64\. spotkanie - Python'
+title: '64\. spotkanie Wroc.NET - Python (Talaśka)'
 date: 2014-04-15
 tags:
   - offline

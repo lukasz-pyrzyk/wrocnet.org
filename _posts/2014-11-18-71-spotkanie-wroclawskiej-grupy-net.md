@@ -1,6 +1,6 @@
 ---
 layout: single
-title: '71\. spotkanie - NuGet debugging; Git versioning'
+title: '71\. spotkanie Wroc.NET - NuGet debugging; Git versioning (Pluskiewicz)'
 date: 2014-11-18
 tags:
   - offline

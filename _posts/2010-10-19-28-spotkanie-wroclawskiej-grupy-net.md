@@ -1,6 +1,6 @@
 ---
 layout: single
-title: '28\. spotkanie Wrocławskiej Grupy .NET - Geeks on Tour'
+title: '28\. spotkanie Wroc.NET - Geeks on Tour (Tadrała, Joos van de Sande)'
 categories: spotkania
 tags:
   - offline

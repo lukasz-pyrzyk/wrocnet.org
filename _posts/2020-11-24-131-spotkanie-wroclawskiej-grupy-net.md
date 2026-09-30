@@ -1,5 +1,5 @@
 ---
-title: '131\. spotkanie Wrocławskiej Grupy .NET ONLINE'
+title: '131\. spotkanie Wroc.NET ONLINE (Owsiany, Morcinek)'
 date: 2020-11-24
 categories: spotkania
 tags:

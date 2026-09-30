@@ -1,6 +1,6 @@
 ---
 layout: single
-title: '82\. spotkanie - Natural User Interface (en)'
+title: '82\. spotkanie Wroc.NET - Natural User Interface (en) (Hanan, Huckaby)'
 date: 2015-12-08
 tags:
   - offline

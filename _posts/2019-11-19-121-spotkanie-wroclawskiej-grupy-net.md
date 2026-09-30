@@ -1,6 +1,6 @@
 ---
 layout: single
-title: '121\. spotkanie - Microservices, Azure Sphere, Multi-tenant Azure'
+title: '121\. spotkanie Wroc.NET - Microservices, Azure Sphere, Multi-tenant Azure (Tyborowski, Szczepański, Świsłocki)'
 date: 2019-11-19
 tags:
   - offline

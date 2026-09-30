@@ -1,6 +1,6 @@
 ---
 layout: single
-title: '79\. spotkanie - Paket, VS Debugger, WebSharper'
+title: '79\. spotkanie Wroc.NET - Paket, VS Debugger, WebSharper (Pluskiewicz, Łukasik, Ciura)'
 date: 2015-09-22
 tags:
   - offline

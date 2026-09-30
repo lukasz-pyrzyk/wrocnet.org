@@ -1,6 +1,6 @@
 ---
 layout: single
-title: '100\. spotkanie - TPL Dataflow, Pamięć w .NET'
+title: '100\. spotkanie Wroc.NET - TPL Dataflow, Pamięć w .NET (Warda, Siemoniak)'
 date: 2017-06-20
 tags:
   - offline

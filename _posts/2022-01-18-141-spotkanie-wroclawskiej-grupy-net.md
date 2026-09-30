@@ -1,5 +1,5 @@
 ---
-title: '141\. spotkanie Wrocławskiej Grupy .NET ONLINE'
+title: '141\. spotkanie Wroc.NET ONLINE (Duszyński, Kern)'
 date: 2022-01-18
 categories: spotkania
 tags:

@@ -1,6 +1,6 @@
 ---
 layout: single
-title: '44\. spotkanie Wrocławskiej Grupy .NET'
+title: '44\. spotkanie Wroc.NET (Pluskiewicz)'
 categories: spotkania
 tags:
   - offline

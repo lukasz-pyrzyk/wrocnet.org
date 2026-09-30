@@ -1,5 +1,5 @@
 ---
-title: '128\. spotkanie Wrocławskiej Grupy .NET ONLINE'
+title: '128\. spotkanie Wroc.NET ONLINE (Lotzwi)'
 date: 2020-06-16
 categories: spotkania
 tags:

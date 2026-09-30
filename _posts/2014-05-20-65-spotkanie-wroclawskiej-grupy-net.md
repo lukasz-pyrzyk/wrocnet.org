@@ -1,6 +1,6 @@
 ---
 layout: single
-title: '65\. spotkanie - Zarządzani pamięcią; ServiceStack'
+title: '65\. spotkanie Wroc.NET - Zarządzani pamięcią; ServiceStack (Cieślak, Gąsior)'
 date: 2014-05-20
 tags:
   - offline

@@ -1,5 +1,5 @@
 ---
-title: '150\. spotkanie Wrocławskiej Grupy .NET'
+title: '150\. spotkanie Wroc.NET (Pieńkowski, Giemza)'
 date: 2023-01-24
 categories: spotkania
 tags:

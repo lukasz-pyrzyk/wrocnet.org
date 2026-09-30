@@ -1,6 +1,6 @@
 ---
 layout: single
-title: '106\. spotkanie - CQRS, osobowości inżynierów oprogramowania'
+title: '106\. spotkanie Wroc.NET - CQRS, osobowości inżynierów oprogramowania (Maziarka, Klimczyk)'
 date: 2018-02-20
 tags:
   - offline

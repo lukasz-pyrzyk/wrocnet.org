@@ -1,6 +1,6 @@
 ---
 layout: single
-title: '1\. spotkanie Wrocławskiej Grupy .NET'
+title: '1\. spotkanie Wroc.NET (Obst)'
 categories: spotkania
 tags:
   - offline

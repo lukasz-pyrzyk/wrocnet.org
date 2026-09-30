@@ -1,6 +1,6 @@
 ---
 layout: single
-title: '109\. spotkanie - Microsoft Flow, Amazon Alexa'
+title: '109\. spotkanie Wroc.NET - Microsoft Flow, Amazon Alexa (Tyborowski, Świsłocki, Hryniewski)'
 date: 2018-05-15
 tags:
   - offline

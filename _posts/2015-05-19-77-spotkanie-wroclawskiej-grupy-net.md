@@ -1,6 +1,6 @@
 ---
 layout: single
-title: '77\. spotkanie - Mikroserwisy'
+title: '77\. spotkanie Wroc.NET - Mikroserwisy (Ciura)'
 date: 2015-05-19
 tags:
   - offline

@@ -1,6 +1,6 @@
 ---
 layout: single
-title: '84\. spotkanie - Promises, ASP.NET 5 galore'
+title: '84\. spotkanie Wroc.NET - Promises, ASP.NET 5 galore (Tomaszewski, Kamiński, Radlak, Stadnicki)'
 date: 2016-01-19
 tags:
   - offline

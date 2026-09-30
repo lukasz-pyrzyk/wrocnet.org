@@ -1,5 +1,5 @@
 ---
-title: '136\. spotkanie Wrocławskiej Grupy .NET ONLINE'
+title: '136\. spotkanie Wroc.NET ONLINE (Koch, Shatz)'
 date: 2021-04-20
 categories: spotkania
 tags:

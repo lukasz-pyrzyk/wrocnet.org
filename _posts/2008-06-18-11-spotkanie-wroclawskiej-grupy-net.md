@@ -1,6 +1,6 @@
 ---
 layout: single
-title: '11\. spotkanie Wrocławskiej Grupy .NET'
+title: '11\. spotkanie Wroc.NET (Hofman)'
 categories: spotkania
 tags:
   - offline

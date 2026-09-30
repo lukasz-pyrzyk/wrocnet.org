@@ -1,6 +1,6 @@
 ---
 layout: single
-title: '119\. spotkanie - Legacy, Anchor Modeling'
+title: '119\. spotkanie Wroc.NET - Legacy, Anchor Modeling (Chalimoniuk, Hryniewski)'
 date: 2019-09-17
 tags:
   - offline

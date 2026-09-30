@@ -1,6 +1,6 @@
 ---
 layout: single
-title: '61\. spotkanie - Knockout.js; Zdalna firma'
+title: '61\. spotkanie Wroc.NET - Knockout.js; Zdalna firma (Lenar, Krzywda)'
 date: 2014-01-21
 tags:
   - offline

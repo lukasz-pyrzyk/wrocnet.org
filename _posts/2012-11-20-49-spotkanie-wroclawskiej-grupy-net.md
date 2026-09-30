@@ -1,6 +1,6 @@
 ---
 layout: single
-title: '49\. spotkanie Wrocławskiej Grupy .NET'
+title: '49\. spotkanie Wroc.NET (Talaśka, Cieślak)'
 categories: spotkania
 tags:
   - offline

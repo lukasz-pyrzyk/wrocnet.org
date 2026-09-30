@@ -1,5 +1,5 @@
 ---
-title: '142\. spotkanie Wrocławskiej Grupy .NET ONLINE'
+title: '142\. spotkanie Wroc.NET ONLINE (Stapp, Gawryszewski)'
 date: 2022-02-15
 categories: spotkania
 tags:

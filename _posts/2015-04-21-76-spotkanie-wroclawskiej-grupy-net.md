@@ -1,6 +1,6 @@
 ---
 layout: single
-title: '76\. spotkanie - Big Data, edge.js'
+title: '76\. spotkanie Wroc.NET - Big Data, edge.js (Stój, Legiędź)'
 date: 2015-04-21
 tags:
   - offline

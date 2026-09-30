@@ -1,6 +1,6 @@
 ---
 layout: single
-title: '57\. spotkanie - Anatomia debuggera'
+title: '57\. spotkanie Wroc.NET - Anatomia debuggera (Płotnicki-Chudyk)'
 date: 2013-09-17
 tags:
   - offline

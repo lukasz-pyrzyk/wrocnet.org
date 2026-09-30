@@ -1,5 +1,5 @@
 ---
-title: '130\. spotkanie Wrocławskiej Grupy .NET ONLINE'
+title: '130\. spotkanie Wroc.NET ONLINE (Gomoła, Hryniewski)'
 date: 2020-10-21
 categories: spotkania
 tags:

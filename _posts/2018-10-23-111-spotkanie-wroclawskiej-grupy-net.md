@@ -1,6 +1,6 @@
 ---
 layout: single
-title: '111\. spotkanie - Machine Learning, Kursy Udemy'
+title: '111\. spotkanie Wroc.NET - Machine Learning, Kursy Udemy (Jędrzejewski, Gellert)'
 date: 2018-10-23
 tags:
   - offline

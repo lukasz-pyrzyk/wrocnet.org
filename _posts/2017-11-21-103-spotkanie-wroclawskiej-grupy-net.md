@@ -1,6 +1,6 @@
 ---
 layout: single
-title: '103\. spotkanie - async/await, boty'
+title: '103\. spotkanie Wroc.NET - async/await, boty (Pawlukiewicz, Kolonko)'
 date: 2017-11-21
 tags:
   - offline

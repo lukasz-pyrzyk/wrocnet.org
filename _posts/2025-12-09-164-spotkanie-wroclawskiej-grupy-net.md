@@ -1,5 +1,5 @@
 ---
-title: '164\. spotkanie Wrocławskiej Grupy .NET'
+title: '164\. spotkanie Wroc.NET (Maziarka)'
 date: 2025-12-09
 categories: spotkania
 tags:

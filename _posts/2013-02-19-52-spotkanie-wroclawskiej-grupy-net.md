@@ -1,6 +1,6 @@
 ---
 layout: single
-title: '52\. spotkanie - Algorytmy Genetyczne'
+title: '52\. spotkanie Wroc.NET - Algorytmy Genetyczne (Drozdowski)'
 date: 2013-02-19
 tags:
   - offline

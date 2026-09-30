@@ -1,6 +1,6 @@
 ---
 layout: single
-title: '89\. spotkanie - Warden, perfView'
+title: '89\. spotkanie Wroc.NET - Warden, perfView (Gankiewicz, Małecki)'
 date: 2016-09-20
 tags:
   - offline

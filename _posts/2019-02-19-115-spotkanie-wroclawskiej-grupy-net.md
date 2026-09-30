@@ -1,6 +1,6 @@
 ---
 layout: single
-title: '115\. spotkanie - Roslyn analyzers, Azure Service Fabric'
+title: '115\. spotkanie Wroc.NET - Roslyn analyzers, Azure Service Fabric (Piątek, Seroka)'
 date: 2019-02-19
 tags:
   - offline

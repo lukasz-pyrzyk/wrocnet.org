@@ -1,6 +1,6 @@
 ---
 layout: single
-title: '48\. spotkanie - BDD'
+title: '48\. spotkanie Wroc.NET - BDD (Pragłowski)'
 date: 2012-10-16
 tags:
   - offline

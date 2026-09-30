@@ -1,5 +1,5 @@
 ---
-title: '162\. spotkanie Wrocławskiej Grupy .NET'
+title: '162\. spotkanie Wroc.NET (Żukowski, Pieńkowski)'
 date: 2025-04-15
 categories: spotkania
 tags:

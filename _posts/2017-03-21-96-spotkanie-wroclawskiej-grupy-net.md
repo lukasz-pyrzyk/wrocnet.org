@@ -1,6 +1,6 @@
 ---
 layout: single
-title: '96\. spotkanie - .NET Core, Unity3D'
+title: '96\. spotkanie Wroc.NET - .NET Core, Unity3D (Pyrzyk, Wandycz)'
 date: 2017-03-21
 tags:
   - offline

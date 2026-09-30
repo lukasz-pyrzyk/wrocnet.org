@@ -1,6 +1,6 @@
 ---
 layout: single
-title: '22\. spotkanie Wrocławskiej Grupy .NET'
+title: '22\. spotkanie Wroc.NET'
 categories: spotkania
 tags:
   - offline

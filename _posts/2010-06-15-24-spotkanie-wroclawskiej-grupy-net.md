@@ -1,6 +1,6 @@
 ---
 layout: single
-title: '24\. spotkanie Wrocławskiej Grupy .NET'
+title: '24\. spotkanie Wroc.NET (Zychla)'
 categories: spotkania
 tags:
   - offline

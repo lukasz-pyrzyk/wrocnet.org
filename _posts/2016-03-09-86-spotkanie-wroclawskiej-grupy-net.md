@@ -1,6 +1,6 @@
 ---
 layout: single
-title: '86\. spotkanie - Microservices, Lightning talki'
+title: '86\. spotkanie Wroc.NET - Microservices, Lightning talki (Stadnicki, Kielar, Oronowicz, Pluskiewicz, Pyrzyk, Olbromski, Morcinek)'
 date: 2016-03-09
 tags:
   - offline

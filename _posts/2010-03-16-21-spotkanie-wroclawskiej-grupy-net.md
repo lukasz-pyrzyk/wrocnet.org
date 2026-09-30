@@ -1,6 +1,6 @@
 ---
 layout: single
-title: '21\. spotkanie Wrocławskiej Grupy .NET'
+title: '21\. spotkanie Wroc.NET (Gąsior)'
 categories: spotkania
 tags:
   - offline

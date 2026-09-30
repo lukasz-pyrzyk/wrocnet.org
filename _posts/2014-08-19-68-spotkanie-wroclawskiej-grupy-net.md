@@ -1,6 +1,6 @@
 ---
 layout: single
-title: '68\. spotkanie - BITS'
+title: '68\. spotkanie Wroc.NET - BITS (Talaśka)'
 date: 2014-08-19
 tags:
   - offline

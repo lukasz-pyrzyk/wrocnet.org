@@ -1,5 +1,5 @@
 ---
-title: '161\. spotkanie Wrocławskiej Grupy .NET'
+title: '161\. spotkanie Wroc.NET (Mąkosa, Kern, Zięba)'
 date: 2025-03-25
 categories: spotkania
 tags:

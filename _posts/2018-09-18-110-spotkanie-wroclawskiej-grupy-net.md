@@ -1,6 +1,6 @@
 ---
 layout: single
-title: '110\. spotkanie - C# Evolution, łączenie C++ i C#'
+title: '110\. spotkanie Wroc.NET - C# Evolution, łączenie C++ i C# (Bojkowski, Wieszok)'
 date: 2018-09-18
 tags:
   - offline

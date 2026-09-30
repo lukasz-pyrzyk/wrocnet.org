@@ -1,6 +1,6 @@
 ---
 layout: single
-title: '81\. spotkanie - SOLID, Aplikacje SPA'
+title: '81\. spotkanie Wroc.NET - SOLID, Aplikacje SPA (Stadnicki, Lenar)'
 date: 2015-11-17
 tags:
   - offline

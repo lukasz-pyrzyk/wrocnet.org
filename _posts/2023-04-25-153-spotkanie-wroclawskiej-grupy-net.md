@@ -1,5 +1,5 @@
 ---
-title: '153\. spotkanie Wrocławskiej Grupy .NET'
+title: '153\. spotkanie Wroc.NET (Mularczyk, Wachulec)'
 date: 2023-04-25
 categories: spotkania
 tags:

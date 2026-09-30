@@ -1,6 +1,6 @@
 ---
 layout: single
-title: '85\. spotkanie - Heroku, Unit testing'
+title: '85\. spotkanie Wroc.NET - Heroku, Unit testing (Gąsior, Jędrzejewski)'
 date: 2016-02-16
 tags:
   - offline

@@ -1,5 +1,5 @@
 ---
-title: '135\. spotkanie Wrocławskiej Grupy .NET ONLINE'
+title: '135\. spotkanie Wroc.NET ONLINE (Billogan, Gaździńska)'
 date: 2021-03-24
 categories: spotkania
 tags:

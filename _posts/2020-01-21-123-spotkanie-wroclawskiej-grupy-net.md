@@ -1,5 +1,5 @@
 ---
-title: '123\. spotkanie Wrocławskiej Grupy .NET'
+title: '123\. spotkanie Wroc.NET (Bogdański, Benedykt)'
 date: 2020-01-21
 categories: spotkania
 tags:

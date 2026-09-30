@@ -1,6 +1,6 @@
 ---
 layout: single
-title: '31\. spotkanie Wrocławskiej Grupy .NET'
+title: '31\. spotkanie Wroc.NET (Ilewicz, Najder)'
 categories: spotkania
 tags:
   - offline

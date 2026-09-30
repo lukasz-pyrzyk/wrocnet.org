@@ -1,5 +1,5 @@
 ---
-title: '149\. spotkanie Wrocławskiej Grupy .NET'
+title: '149\. spotkanie Wroc.NET (Baranowski, Maziarka)'
 date: 2022-11-22
 categories: spotkania
 tags:

@@ -1,5 +1,5 @@
 ---
-title: '148\. spotkanie Wrocławskiej Grupy .NET'
+title: '148\. spotkanie Wroc.NET (Kałużny, Mokrzycki)'
 date: 2022-10-18
 categories: spotkania
 tags:

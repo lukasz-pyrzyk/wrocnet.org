@@ -1,6 +1,6 @@
 ---
 layout: single
-title: '104\. spotkanie - "zasiedzenie", automatyka'
+title: '104\. spotkanie Wroc.NET - "zasiedzenie", automatyka (Stój, Wolan)'
 date: 2017-12-19
 tags:
   - offline

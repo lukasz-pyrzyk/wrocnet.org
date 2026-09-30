@@ -1,6 +1,6 @@
 ---
 layout: single
-title: '118\. spotkanie Wrocławskiej Grupy .NET'
+title: '118\. spotkanie Wroc.NET (Lamch, Patalas)'
 categories: spotkania
 tags:
   - offline

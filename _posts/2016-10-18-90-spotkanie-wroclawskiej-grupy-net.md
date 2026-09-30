@@ -1,6 +1,6 @@
 ---
 layout: single
-title: '90\. spotkanie - GraphQL, Code Crime Scene'
+title: '90\. spotkanie Wroc.NET - GraphQL, Code Crime Scene (Sypytkowski, Klimczyk)'
 date: 2016-10-18
 tags:
   - offline

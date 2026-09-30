@@ -1,5 +1,5 @@
 ---
-title: '165\. spotkanie Wrocławskiej Grupy .NET'
+title: '165\. spotkanie Wroc.NET (Muraczewski, Warwas)'
 date: 2026-02-24
 categories: spotkania
 tags:

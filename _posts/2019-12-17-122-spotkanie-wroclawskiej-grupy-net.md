@@ -1,6 +1,6 @@
 ---
 layout: single
-title: '122\. spotkanie - Azure Congnitive Services, Azure Sphere, Multi-tenant Azure'
+title: '122\. spotkanie Wroc.NET - Azure Congnitive Services, Azure Sphere, Multi-tenant Azure (Jankowski, Ashurov)'
 date: 2019-12-17
 tags:
   - offline

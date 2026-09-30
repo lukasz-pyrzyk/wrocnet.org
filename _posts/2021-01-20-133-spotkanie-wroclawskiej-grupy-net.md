@@ -1,5 +1,5 @@
 ---
-title: '133\. spotkanie Wrocławskiej Grupy .NET ONLINE'
+title: '133\. spotkanie Wroc.NET ONLINE (Furmanek, Grzybek)'
 date: 2021-01-20
 categories: spotkania
 tags:

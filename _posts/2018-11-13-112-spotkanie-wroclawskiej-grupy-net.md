@@ -1,6 +1,6 @@
 ---
 layout: single
-title: '112\. spotkanie - Przemawianie, CI/CD'
+title: '112\. spotkanie Wroc.NET - Przemawianie, CI/CD (Walenciuk, Wickowski)'
 date: 2018-11-13
 tags:
   - offline

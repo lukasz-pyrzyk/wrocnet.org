@@ -1,6 +1,6 @@
 ---
 layout: single
-title: '67\. spotkanie - Testy metod prywatnych i Maybe monad'
+title: '67\. spotkanie Wroc.NET - Testy metod prywatnych i Maybe monad (Pogorzelec)'
 date: 2014-07-15
 tags:
   - offline

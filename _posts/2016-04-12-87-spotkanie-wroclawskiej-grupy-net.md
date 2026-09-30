@@ -1,6 +1,6 @@
 ---
 layout: single
-title: '87\. spotkanie - .NET Core, Xamarin'
+title: '87\. spotkanie Wroc.NET - .NET Core, Xamarin (Pyrzyk, Jarosch)'
 date: 2016-04-12
 tags:
   - offline

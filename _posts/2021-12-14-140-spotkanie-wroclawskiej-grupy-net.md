@@ -1,5 +1,5 @@
 ---
-title: '140\. spotkanie Wrocławskiej Grupy .NET ONLINE'
+title: '140\. spotkanie Wroc.NET ONLINE (Obrębski, Godlewski)'
 date: 2021-12-14
 categories: spotkania
 tags:

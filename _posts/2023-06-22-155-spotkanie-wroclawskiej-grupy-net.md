@@ -1,5 +1,5 @@
 ---
-title: '155\. spotkanie Wrocławskiej Grupy .NET'
+title: '155\. spotkanie Wroc.NET (Dudek, Nowik, Kowalski)'
 date: 2023-06-22
 categories: spotkania
 tags:

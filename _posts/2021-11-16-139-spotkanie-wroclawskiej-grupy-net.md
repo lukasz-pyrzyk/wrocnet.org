@@ -1,5 +1,5 @@
 ---
-title: '139\. spotkanie Wrocławskiej Grupy .NET ONLINE'
+title: '139\. spotkanie Wroc.NET ONLINE (Smacchia, Sabiniewicz)'
 date: 2021-11-16
 categories: spotkania
 tags:

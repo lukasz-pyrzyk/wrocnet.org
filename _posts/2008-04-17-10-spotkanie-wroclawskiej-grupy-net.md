@@ -1,6 +1,6 @@
 ---
 layout: single
-title: '10\. spotkanie Wrocławskiej Grupy .NET'
+title: '10\. spotkanie Wroc.NET (Lewandowski)'
 categories: spotkania
 tags:
   - offline

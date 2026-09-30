@@ -1,6 +1,6 @@
 ---
 layout: single
-title: '75\. spotkanie - CQRS w trzech odsłonach'
+title: '75\. spotkanie Wroc.NET - CQRS w trzech odsłonach (Gutkowski, Aniserowicz, Pragłowski)'
 date: 2015-03-11
 tags:
   - offline

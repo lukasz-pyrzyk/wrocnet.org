@@ -1,6 +1,6 @@
 ---
 layout: single
-title: '107\. spotkanie - .NET Core - lokalizowanie, docker'
+title: '107\. spotkanie Wroc.NET - .NET Core - lokalizowanie, docker (Olbromski, Pogorzelec)'
 date: 2018-03-20
 tags:
   - offline

@@ -1,6 +1,6 @@
 ---
 layout: single
-title: '34\. spotkanie Wrocławskiej Grupy .NET'
+title: '34\. spotkanie Wroc.NET (Włodek)'
 categories: spotkania
 tags:
   - offline

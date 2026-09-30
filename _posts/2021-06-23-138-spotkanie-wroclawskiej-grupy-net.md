@@ -1,5 +1,5 @@
 ---
-title: '138\. spotkanie Wrocławskiej Grupy .NET ONLINE'
+title: '138\. spotkanie Wroc.NET ONLINE (Poprawa, Masternak)'
 date: 2021-06-23
 categories: spotkania
 tags:

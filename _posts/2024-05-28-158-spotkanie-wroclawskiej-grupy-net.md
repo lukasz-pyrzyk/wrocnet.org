@@ -1,5 +1,5 @@
 ---
-title: '158\. spotkanie Wrocławskiej Grupy .NET'
+title: '158\. spotkanie Wroc.NET (Stasiak, Kowalski)'
 date: 2024-05-28
 categories: spotkania
 tags:

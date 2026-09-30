@@ -1,5 +1,5 @@
 ---
-title: '132\. spotkanie Wrocławskiej Grupy .NET ONLINE'
+title: '132\. spotkanie Wroc.NET ONLINE (Gutkowski, Szymczyk)'
 date: 2020-12-16
 categories: spotkania
 tags:

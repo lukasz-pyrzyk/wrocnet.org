@@ -1,5 +1,5 @@
 ---
-title: '163\. spotkanie Wrocławskiej Grupy .NET'
+title: '163\. spotkanie Wroc.NET (Kulec, Wilczura)'
 date: 2025-10-28
 categories: spotkania
 tags:

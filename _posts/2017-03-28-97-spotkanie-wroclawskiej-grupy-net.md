@@ -1,6 +1,6 @@
 ---
 layout: single
-title: '97\. spotkanie - JSON w SQL Server, Microsoft Cognitive API'
+title: '97\. spotkanie Wroc.NET - JSON w SQL Server, Microsoft Cognitive API (Zalewa, Łukasik)'
 date: 2017-03-28
 tags:
   - offline

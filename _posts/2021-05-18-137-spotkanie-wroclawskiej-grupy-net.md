@@ -1,5 +1,5 @@
 ---
-title: '137\. spotkanie Wrocławskiej Grupy .NET ONLINE'
+title: '137\. spotkanie Wroc.NET ONLINE (Dudycz, Kokosa)'
 date: 2021-05-18
 categories: spotkania
 tags:

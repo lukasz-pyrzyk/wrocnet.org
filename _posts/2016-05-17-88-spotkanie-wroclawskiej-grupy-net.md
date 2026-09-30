@@ -1,6 +1,6 @@
 ---
 layout: single
-title: '88\. spotkanie - Dobre CV, RampUpNet - ekstremalna współbieżność w .NET'
+title: '88\. spotkanie Wroc.NET - Dobre CV, RampUpNet - ekstremalna współbieżność w .NET (Dańczuk, Kulec)'
 date: 2016-05-17
 tags:
   - offline
