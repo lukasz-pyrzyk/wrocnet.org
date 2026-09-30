@@ -20,13 +20,13 @@ sitemap: false
 {%- for post in site.posts -%}
   {%- assign talk_count = post.talks | size -%}
   {%- assign total_sessions = total_sessions | plus: talk_count -%}
-  {%- if post.path contains '-spotkanie-wroclawskiej-grupy-net' -%}
+  {%- if post.tags contains 'offline' or post.tags contains 'online' -%}
     {%- assign filename_parts = post.path | split: '/' | last | split: '-' -%}
     {%- assign post_meeting_number = filename_parts[3] | plus: 0 -%}
     {%- if post_meeting_number > meeting_count -%}
       {%- assign meeting_count = post_meeting_number -%}
     {%- endif -%}
-  {%- else -%}
+  {%- elsif post.tags contains 'inne' -%}
     {%- assign additional_event_count = additional_event_count | plus: 1 -%}
   {%- endif -%}
 {%- endfor -%}
@@ -36,12 +36,14 @@ sitemap: false
 
 Plik wygenerowany automatycznie podczas builda strony ({{ site.time | date: "%Y-%m-%d %H:%M %z" }}), zgodny z konwencją [llms.txt](https://llmstxt.org). Zawiera aktualne dane o społeczności, wydarzeniach i prelegentach do wykorzystania przez agentów AI.
 
-## Statystyki społeczności
+**Statystyki społeczności:**
 
 - Lata działalności: {{ community_years }} (od {{ founding_year }} roku)
 - Liczba spotkań numerowanych: {{ meeting_count }} (+ {{ additional_event_count }} dodatkowych wydarzeń specjalnych)
 - Liczba prelegentów i prelegentek: {{ site.data.speakers | size }}
 - Liczba wygłoszonych prezentacji: {{ total_sessions }}
+
+**Call for Papers:** szukamy prelegentów chętnych podzielić się wiedzą z ekosystemu Microsoft: .NET/C#, Azure i chmura, architektura (DDD, CQRS, mikroserwisy, event sourcing), AI/ML, DevOps oraz tematy miękkie (kariera, produktywność, praca zespołowa). Dla prelegentów spoza Wrocławia staramy się gwarantować pokrycie kosztów transportu i noclegu. Prezentacje odbywają się na żywo podczas comiesięcznych spotkań. Formularz zgłoszeniowy: {{ site.speaker_form_url }}. Kontakt: kontakt@wrocnet.org.
 
 ## O grupie
 
@@ -50,43 +52,38 @@ Plik wygenerowany automatycznie podczas builda strony ({{ site.time | date: "%Y-
 - [Wystąpili u nas]({{ '/wystapili-u-nas/' | absolute_url }}): przeszukiwalna lista prelegentów i ich wystąpień
 - [Zostań prelegentem]({{ '/zostan-prelegentem/' | absolute_url }}): call for papers, warunki i formularz zgłoszeniowy
 
-## Call for Papers
-
-Szukamy prelegentów chętnych podzielić się wiedzą z ekosystemu Microsoft: .NET/C#, Azure i chmura, architektura (DDD, CQRS, mikroserwisy, event sourcing), AI/ML, DevOps oraz tematy miękkie (kariera, produktywność, praca zespołowa). Dla prelegentów spoza Wrocławia staramy się gwarantować pokrycie kosztów transportu i noclegu. Prezentacje odbywają się na żywo podczas comiesięcznych spotkań.
-
-- Formularz zgłoszeniowy: {{ site.speaker_form_url }}
-- Kontakt: kontakt@wrocnet.org
-
 ## Miejsce spotkań i kontakt
 
-- Miejsce: {{ site.data.schedule.venue.name }}, {{ site.data.schedule.venue.address }} ({{ site.data.schedule.venue.maps_url }})
-- Meetup: https://www.meetup.com/wrocnet/
+- [{{ site.data.schedule.venue.name }}, {{ site.data.schedule.venue.address }}]({{ site.data.schedule.venue.maps_url }}): miejsce spotkań
+- [Meetup](https://www.meetup.com/wrocnet/): profil grupy na Meetup
 {%- for link in site.author.links %}
-- {{ link.label }}: {{ link.url | absolute_url }}
+- [{{ link.label }}]({{ link.url | absolute_url }})
 {%- endfor %}
 
 ## Nadchodzące wydarzenia (sezon {{ site.data.schedule.season }})
 {%- assign has_upcoming = false -%}
 {% for meeting in site.data.schedule.dates %}{% assign meeting_ts = meeting.date | date: '%s' | plus: 0 %}{% if meeting_ts >= today_ts %}{% assign has_upcoming = true %}{% assign m_idx = meeting.date | date: "%-m" | minus: 1 %}
-- {{ meeting.date | date: "%-d" }} {{ months_pl[m_idx] }} {{ meeting.date | date: "%Y" }}, godz. {{ meeting.time | slice: 0, 5 }}: https://www.meetup.com/wrocnet/events/{% endif %}{% endfor %}
+- [{{ meeting.date | date: "%-d" }} {{ months_pl[m_idx] }} {{ meeting.date | date: "%Y" }}, godz. {{ meeting.time | slice: 0, 5 }}](https://www.meetup.com/wrocnet/events/){% endif %}{% endfor %}
 {%- unless has_upcoming %}
-- Brak zaplanowanych dat, sprawdź https://www.meetup.com/wrocnet/events/
+- [Brak zaplanowanych dat — sprawdź terminarz na Meetup](https://www.meetup.com/wrocnet/events/)
 {%- endunless %}
 
 ## Organizatorzy
 
 {%- for person in site.data.organizers -%}
-  {%- if person.name and person.name != "" %}
-- {{ person.name }}{% if person.linkedin %} ({{ person.linkedin }}){% endif %}
+  {%- if person.name and person.name != "" and person.linkedin and person.linkedin != "" %}
+- [{{ person.name }}]({{ person.linkedin }})
   {%- endif -%}
 {%- endfor %}
 
 {%- if site.data.former_organizers and site.data.former_organizers.size > 0 %}
 
-### Byli organizatorzy
+## Byli organizatorzy
 
-{%- for person in site.data.former_organizers %}
-- {{ person.name }}{% if person.linkedin %} ({{ person.linkedin }}){% endif %}
+{%- for person in site.data.former_organizers -%}
+  {%- if person.name and person.name != "" and person.linkedin and person.linkedin != "" %}
+- [{{ person.name }}]({{ person.linkedin }})
+  {%- endif -%}
 {%- endfor -%}
 {%- endif %}
 
@@ -95,3 +92,4 @@ Szukamy prelegentów chętnych podzielić się wiedzą z ekosystemu Microsoft: .
 {%- for post in site.posts %}
 - {{ post.date | date: "%Y-%m-%d" }} — [{{ post.title | replace: '\.', '.' }}]({{ post.url | absolute_url }}){% if post.talks and post.talks.size > 0 %}: {% for talk in post.talks %}{{ talk.title }}{% if talk.speaker_ids %} — {% for speaker_id in talk.speaker_ids %}{% assign speaker = site.data.speakers | where: "id", speaker_id | first %}{{ speaker.imie }} {{ speaker.nazwisko }}{% unless forloop.last %}, {% endunless %}{% endfor %}{% endif %}{% unless forloop.last %}; {% endunless %}{% endfor %}{% endif %}
 {%- endfor %}
+
