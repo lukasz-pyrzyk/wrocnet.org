@@ -21,15 +21,16 @@
 {% assign ui_text = site.data.ui-text[locale] %}
 {% assign has_countdown = false %}
 
-{% if page.url == "/" and site.data.schedule and site.data.schedule.dates and site.data.schedule.dates.size > 0 %}
+{% assign upcoming_meeting_posts = site.posts | where_exp: "post", "post.date >= site.time" | sort: "date" %}
+{% if page.url == "/" and upcoming_meeting_posts.size > 0 %}
   {% assign month_names_csv = ui_text.countdown_month_names | default: "January,February,March,April,May,June,July,August,September,October,November,December" %}
   {% assign month_names = month_names_csv | split: "," %}
-  {% assign sorted_meetings = site.data.schedule.dates | sort: "date" %}
-  {% capture meeting_timestamps_csv %}{% for meeting in sorted_meetings %}{% capture meeting_at %}{{ meeting.date }} {{ meeting.time }}{% endcapture %}{{ meeting_at | date: '%s' }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
+  {% capture meetings_json %}[{% for post in upcoming_meeting_posts %}{"date":"{{ post.date | date: '%Y-%m-%d' }}","time":"{{ post.time | default: '18:30:00' }}"}{% unless forloop.last %},{% endunless %}{% endfor %}]{% endcapture %}
+  {% capture meeting_timestamps_csv %}{% for post in upcoming_meeting_posts %}{% capture meeting_at %}{{ post.date | date: '%Y-%m-%d' }} {{ post.time | default: '18:30:00' }}{% endcapture %}{{ meeting_at | date: '%s' }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
   {% assign meeting_timestamps_csv = meeting_timestamps_csv | strip_newlines | strip %}
-  {% assign first_meeting = sorted_meetings[0] %}
+  {% assign first_meeting = upcoming_meeting_posts | first %}
   {% assign first_meeting_date = first_meeting.date %}
-  {% assign next_meeting_time_display = first_meeting.time | slice: 0, 5 %}
+  {% assign next_meeting_time_display = first_meeting.time | default: '18:30:00' | slice: 0, 5 %}
   {% assign first_month_idx = first_meeting_date | date: "%-m" | minus: 1 %}
   {% capture first_meeting_display %}{{ first_meeting_date | date: "%-d" }} {{ month_names[first_month_idx] }} {{ first_meeting_date | date: "%Y" }}{% endcapture %}
   {% assign has_countdown = true %}
@@ -63,7 +64,7 @@
         {% endif %}
       </div>
       {% if has_countdown %}
-        <aside class="next-meeting-card" data-meetings='{{ sorted_meetings | jsonify }}' data-targets='[{{ meeting_timestamps_csv }}]' data-month-names='{{ month_names | jsonify }}'>
+        <aside class="next-meeting-card" data-meetings='{{ meetings_json }}' data-targets='[{{ meeting_timestamps_csv }}]' data-month-names='{{ month_names | jsonify }}'>
           <p class="next-meeting-card__eyebrow">{{ ui_text.countdown_eyebrow | default: "Next meeting starts in:" }}</p>
           <div class="next-meeting-card__countdown" role="timer" aria-live="polite" aria-atomic="true" aria-label="{{ ui_text.countdown_aria_label | default: "Countdown to the next meeting" }}">
             <div class="next-meeting-card__days-row">
@@ -91,8 +92,8 @@
           </div>
           <div class="next-meeting-card__meta">
             <p class="next-meeting-card__date" data-role="meeting-date">{{ first_meeting_display }}, {{ next_meeting_time_display }}</p>
-            {% if site.data.schedule.venue.name %}
-              <p class="next-meeting-card__venue">{{ site.data.schedule.venue.name }}</p>
+            {% if site.data.location.venue.name %}
+              <p class="next-meeting-card__venue">{{ site.data.location.venue.name }}</p>
             {% endif %}
           </div>
         </aside>

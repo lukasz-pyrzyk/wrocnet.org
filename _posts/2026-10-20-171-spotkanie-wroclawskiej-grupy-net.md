@@ -1,6 +1,7 @@
 ---
 title: '171\. spotkanie Wroc.NET – AI Retrofit i Tańczący z Agentami (Kubryński, Aniserowicz)'
 date: 2026-10-20
+time: "18:00:00"
 categories: spotkania
 tags:
   - offline

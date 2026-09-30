@@ -15,7 +15,6 @@ excerpt: "Wrocławska społeczność programistów .NET. Spotykamy się od 2007 
 ---
 
 {% assign months_pl = "stycznia,lutego,marca,kwietnia,maja,czerwca,lipca,sierpnia,września,października,listopada,grudnia" | split: "," %}
-{% assign today_ts = 'now' | date: '%s' | plus: 0 %}
 {% assign current_year = 'now' | date: '%Y' | plus: 0 %}
 {% assign current_month_day = 'now' | date: '%m%d' | plus: 0 %}
 {% assign oldest_post = site.posts | last %}
@@ -29,16 +28,18 @@ excerpt: "Wrocławska społeczność programistów .NET. Spotykamy się od 2007 
 {% assign additional_event_count = 0 %}
 {% assign total_sessions = 0 %}
 {% for post in site.posts %}
-  {% assign talk_count = post.talks | size %}
-  {% assign total_sessions = total_sessions | plus: talk_count %}
-  {% if post.tags contains 'offline' or post.tags contains 'online' %}
-    {% assign filename_parts = post.path | split: '/' | last | split: '-' %}
-    {% assign post_meeting_number = filename_parts[3] | plus: 0 %}
-    {% if post_meeting_number > meeting_count %}
-      {% assign meeting_count = post_meeting_number %}
+  {% if post.date <= site.time %}
+    {% assign talk_count = post.talks | size %}
+    {% assign total_sessions = total_sessions | plus: talk_count %}
+    {% if post.tags contains 'offline' or post.tags contains 'online' %}
+      {% assign filename_parts = post.path | split: '/' | last | split: '-' %}
+      {% assign post_meeting_number = filename_parts[3] | plus: 0 %}
+      {% if post_meeting_number > meeting_count %}
+        {% assign meeting_count = post_meeting_number %}
+      {% endif %}
+    {% elsif post.tags contains 'inne' %}
+      {% assign additional_event_count = additional_event_count | plus: 1 %}
     {% endif %}
-  {% elsif post.tags contains 'inne' %}
-    {% assign additional_event_count = additional_event_count | plus: 1 %}
   {% endif %}
 {% endfor %}
 
@@ -76,37 +77,34 @@ excerpt: "Wrocławska społeczność programistów .NET. Spotykamy się od 2007 
   <aside class="season-panel" aria-labelledby="season-heading">
     <div class="season-panel__header">
       <div>
-        <p class="section-eyebrow">Kalendarz</p>
-        <h2 id="season-heading">Sezon {{ site.data.schedule.season }}</h2>
+        <p class="section-eyebrow" id="season-heading">Kalendarz</p>
       </div>
       <p class="schedule-venue">
         <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
-        <a href="{{ site.data.schedule.venue.maps_url }}" target="_blank" rel="noopener noreferrer">
-          {{ site.data.schedule.venue.name }}, {{ site.data.schedule.venue.address }}
+        <a href="{{ site.data.location.venue.maps_url }}" target="_blank" rel="noopener noreferrer">
+          {{ site.data.location.venue.name }}, {{ site.data.location.venue.address }}
         </a>
       </p>
     </div>
     <ul class="schedule-list">
       {% assign upcoming_index = 0 %}
-      {% for meeting in site.data.schedule.dates %}
-        {% assign date_str = meeting.date %}
-        {% assign meeting_ts = date_str | date: '%s' | plus: 0 %}
-        {% if meeting_ts >= today_ts %}
-          {% assign m_idx = date_str | date: "%-m" | minus: 1 %}
-          {% assign day = date_str | date: "%-d" %}
-          {% assign year = date_str | date: "%Y" %}
-          <li class="schedule-item{% if upcoming_index == 0 %} schedule-item--next{% endif %}">
-            <a href="https://www.meetup.com/wrocnet/events/" target="_blank" rel="noopener noreferrer" class="schedule-link" aria-label="{{ day }} {{ months_pl[m_idx] }} {{ year }} — wydarzenia Wroc.NET na Meetup">
-              <span>
-                {% if upcoming_index == 0 %}<small>Najbliższe</small>{% endif %}
-                <strong>{{ day }} {{ months_pl[m_idx] }}</strong>
-                <span class="schedule-year">{{ year }}</span>
-              </span>
-              <i class="fas fa-arrow-right" aria-hidden="true"></i>
-            </a>
-          </li>
-          {% assign upcoming_index = upcoming_index | plus: 1 %}
-        {% endif %}
+      {% assign upcoming_meeting_posts = site.posts | where_exp: "post", "post.date >= site.time" | sort: "date" %}
+      {% for post in upcoming_meeting_posts %}
+        {% assign date_str = post.date %}
+        {% assign m_idx = date_str | date: "%-m" | minus: 1 %}
+        {% assign day = date_str | date: "%-d" %}
+        {% assign year = date_str | date: "%Y" %}
+        <li class="schedule-item{% if upcoming_index == 0 %} schedule-item--next{% endif %}">
+          <a href="https://www.meetup.com/wrocnet/events/" target="_blank" rel="noopener noreferrer" class="schedule-link" aria-label="{{ day }} {{ months_pl[m_idx] }} {{ year }} — wydarzenia Wroc.NET na Meetup">
+            <span>
+              {% if upcoming_index == 0 %}<small>Najbliższe</small>{% endif %}
+              <strong>{{ day }} {{ months_pl[m_idx] }}</strong>
+              <span class="schedule-year">{{ year }}</span>
+            </span>
+            <i class="fas fa-arrow-right" aria-hidden="true"></i>
+          </a>
+        </li>
+        {% assign upcoming_index = upcoming_index | plus: 1 %}
       {% endfor %}
     </ul>
   </aside>
@@ -134,8 +132,7 @@ excerpt: "Wrocławska społeczność programistów .NET. Spotykamy się od 2007 
   padding: 0.75rem 0 1.25rem;
   border-bottom: 1px solid #d9d0e0;
 }
-.community-summary h2,
-.season-panel h2 {
+.community-summary h2 {
   margin: 0;
   padding: 0;
   border-bottom: 0;
@@ -200,9 +197,6 @@ excerpt: "Wrocławska społeczność programistów .NET. Spotykamy się od 2007 
   justify-content: space-between;
   gap: 1.5rem;
   margin-bottom: 1rem;
-}
-.season-panel h2 {
-  font-size: 1.15rem;
 }
 .schedule-venue {
   max-width: 24rem;
@@ -340,7 +334,6 @@ excerpt: "Wrocławska społeczność programistów .NET. Spotykamy się od 2007 
   }
   .season-panel { padding: 0.85rem; }
   .season-panel__header { margin-bottom: 0.65rem; }
-  .season-panel h2 { font-size: 1rem; }
   .schedule-venue {
     font-size: 0.66rem;
     line-height: 1.35;

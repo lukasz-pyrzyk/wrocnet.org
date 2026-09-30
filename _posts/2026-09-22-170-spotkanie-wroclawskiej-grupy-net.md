@@ -1,6 +1,7 @@
 ---
 title: '170\. spotkanie Wroc.NET – Otwarcie sezonu 2026/2027 (Pyrzyk, Olbromski)'
 date: 2026-09-22
+time: "18:30:00"
 categories: spotkania
 tags:
   - offline
