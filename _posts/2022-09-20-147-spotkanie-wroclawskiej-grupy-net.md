@@ -1,5 +1,5 @@
 ---
-title: '147\. spotkanie Wrocławskiej Grupy .NET'
+title: '147\. spotkanie Wroc.NET (Jastrzębski, Kyrylchuk)'
 date: 2022-09-20
 categories: spotkania
 tags:

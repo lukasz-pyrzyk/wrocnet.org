@@ -1,6 +1,6 @@
 ---
 layout: single
-title: '55\. spotkanie - Unity 3D; Web API'
+title: '55\. spotkanie Wroc.NET - Unity 3D; Web API (Ciura, Bełczyk)'
 date: 2013-05-21
 tags:
   - offline

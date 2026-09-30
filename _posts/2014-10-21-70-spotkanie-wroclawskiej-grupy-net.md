@@ -1,6 +1,6 @@
 ---
 layout: single
-title: '70\. spotkanie - Code reviews; Isolation frameworks'
+title: '70\. spotkanie Wroc.NET - Code reviews; Isolation frameworks (Stadnicki, Klimczyk)'
 date: 2014-10-21
 tags:
   - offline

@@ -1,6 +1,6 @@
 ---
 layout: single
-title: '18\. spotkanie Wrocławskiej Grupy .NET'
+title: '18\. spotkanie Wroc.NET (Jendrusz)'
 categories: spotkania
 tags:
   - offline

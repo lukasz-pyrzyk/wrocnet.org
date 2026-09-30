@@ -1,5 +1,5 @@
 ---
-title: '126\. spotkanie Wrocławskiej Grupy .NET ONLINE'
+title: '126\. spotkanie Wroc.NET ONLINE'
 date: 2020-04-21
 categories: spotkania
 tags:

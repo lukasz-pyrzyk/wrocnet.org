@@ -1,5 +1,5 @@
 ---
-title: '169\. spotkanie Wrocławskiej Grupy .NET – Zakończenie sezonu'
+title: '169\. spotkanie Wroc.NET – Zakończenie sezonu (Rogowski, Konicki)'
 date: 2026-06-16
 categories: spotkania
 tags:

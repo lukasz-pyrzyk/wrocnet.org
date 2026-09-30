@@ -1,5 +1,5 @@
 ---
-title: '129\. spotkanie Wrocławskiej Grupy .NET ONLINE'
+title: '129\. spotkanie Wroc.NET ONLINE (Wlaźlik, Walenciuk)'
 date: 2020-09-22
 categories: spotkania
 tags:

@@ -1,6 +1,6 @@
 ---
 layout: single
-title: '80\. spotkanie - Stanowe aplikacje webowe, Git'
+title: '80\. spotkanie Wroc.NET - Stanowe aplikacje webowe, Git (Sypytkowski, Morcinek)'
 date: 2015-10-20
 tags:
   - offline

@@ -1,6 +1,6 @@
 ---
 layout: single
-title: '95\. spotkanie Wrocławskiej Grupy .NET - pre-WROC#'
+title: '95\. spotkanie Wroc.NET - pre-WROC# (Dudek, Aniserowicz)'
 date: 2017-03-02
 tags:
   - offline

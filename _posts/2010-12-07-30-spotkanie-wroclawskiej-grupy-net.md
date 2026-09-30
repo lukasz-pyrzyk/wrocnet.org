@@ -1,6 +1,6 @@
 ---
 layout: single
-title: '30\. spotkanie Wrocławskiej Grupy .NET - DevDay'
+title: '30\. spotkanie Wroc.NET - DevDay'
 categories: spotkania
 tags:
   - offline

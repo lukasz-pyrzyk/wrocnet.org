@@ -1,6 +1,6 @@
 ---
 layout: single
-title: '58\. spotkanie - Twitter; GUI; Specification by Example'
+title: '58\. spotkanie Wroc.NET - Twitter; GUI; Specification by Example (Borzęcka, Czyżowski, Łabaj)'
 date: 2013-10-15
 tags:
   - offline

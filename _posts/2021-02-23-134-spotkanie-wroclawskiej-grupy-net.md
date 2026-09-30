@@ -1,5 +1,5 @@
 ---
-title: '134\. spotkanie Wrocławskiej Grupy .NET ONLINE'
+title: '134\. spotkanie Wroc.NET ONLINE (Guzowski, Jankowski)'
 date: 2021-02-23
 categories: spotkania
 tags:

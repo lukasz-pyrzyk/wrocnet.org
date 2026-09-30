@@ -1,6 +1,6 @@
 ---
 layout: single
-title: '92\. spotkanie - Opytmalizacja SQL, ITAN'
+title: '92\. spotkanie Wroc.NET - Opytmalizacja SQL, ITAN (Czarko-Wasiutycz, Stadnicki)'
 date: 2016-12-13
 tags:
   - offline

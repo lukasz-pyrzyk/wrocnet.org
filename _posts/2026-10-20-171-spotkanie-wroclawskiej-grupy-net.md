@@ -1,5 +1,5 @@
 ---
-title: '171\. spotkanie Wrocławskiej Grupy .NET – AI Retrofit i Tańczący z Agentami'
+title: '171\. spotkanie Wroc.NET – AI Retrofit i Tańczący z Agentami (Kubryński, Aniserowicz)'
 date: 2026-10-20
 categories: spotkania
 tags:

@@ -1,6 +1,6 @@
 ---
 layout: single
-title: '66\. spotkanie - Architektura; Scheduling'
+title: '66\. spotkanie Wroc.NET - Architektura; Scheduling (Fusińska, Pragłowski)'
 date: 2014-06-17
 tags:
   - offline

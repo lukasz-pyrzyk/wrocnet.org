@@ -1,6 +1,6 @@
 ---
 layout: single
-title: '74\. spotkanie - Programowanie funkcyjne; Azure WebJobs'
+title: '74\. spotkanie Wroc.NET - Programowanie funkcyjne; Azure WebJobs (Malinowski, Zaremba)'
 date: 2015-02-17
 tags:
   - offline

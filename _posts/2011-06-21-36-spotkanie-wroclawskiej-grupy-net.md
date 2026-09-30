@@ -1,6 +1,6 @@
 ---
 layout: single
-title: '36\. spotkanie Wrocławskiej Grupy .NET'
+title: '36\. spotkanie Wroc.NET (Kobalczyk, Glonek)'
 categories: spotkania
 tags:
   - offline

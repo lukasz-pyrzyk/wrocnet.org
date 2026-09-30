@@ -1,6 +1,6 @@
 ---
 layout: single
-title: '59\. spotkanie - Knockout.js; iOS dla programisty .NET'
+title: '59\. spotkanie Wroc.NET - Knockout.js; iOS dla programisty .NET (Lenar, Śliwoń)'
 date: 2013-11-19
 tags:
   - offline

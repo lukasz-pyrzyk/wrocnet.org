@@ -1,5 +1,5 @@
 ---
-title: '151\. spotkanie Wrocławskiej Grupy .NET'
+title: '151\. spotkanie Wroc.NET (Dudycz)'
 date: 2023-02-21
 categories: spotkania
 tags:

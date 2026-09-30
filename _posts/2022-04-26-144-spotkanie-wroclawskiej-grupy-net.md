@@ -1,5 +1,5 @@
 ---
-title: '144\. spotkanie Wrocławskiej Grupy .NET ONLINE'
+title: '144\. spotkanie Wroc.NET ONLINE (Ivanov, Kern)'
 date: 2022-04-26
 categories: spotkania
 tags:

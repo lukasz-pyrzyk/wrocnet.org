@@ -1,6 +1,6 @@
 ---
 layout: single
-title: '47\. spotkanie Wrocławskiej Grupy .NET'
+title: '47\. spotkanie Wroc.NET (Koprowski, Łukasik)'
 categories: spotkania
 tags:
   - offline

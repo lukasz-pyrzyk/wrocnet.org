@@ -1,5 +1,5 @@
 ---
-title: '143\. spotkanie Wrocławskiej Grupy .NET ONLINE'
+title: '143\. spotkanie Wroc.NET ONLINE (Wyrodek, Korbanek)'
 date: 2022-03-22
 categories: spotkania
 tags:

@@ -1,6 +1,6 @@
 ---
 layout: single
-title: '72\. spotkanie - NoSQL, F#'
+title: '72\. spotkanie Wroc.NET - NoSQL, F# (Sawicz, Franc)'
 date: 2014-12-16
 tags:
   - offline

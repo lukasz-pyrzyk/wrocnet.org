@@ -1,6 +1,6 @@
 ---
 layout: single
-title: '102\. spotkanie - Full stack TypeScript, Mac dla .NET'
+title: '102\. spotkanie Wroc.NET - Full stack TypeScript, Mac dla .NET (Najder, Szafrański)'
 date: 2017-10-17
 tags:
   - offline

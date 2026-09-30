@@ -1,6 +1,6 @@
 ---
 layout: single
-title: '120\. spotkanie - DDD, Lambda.NET'
+title: '120\. spotkanie Wroc.NET - DDD, Lambda.NET (Grzybek, Baryliński)'
 date: 2019-10-15
 tags:
   - offline

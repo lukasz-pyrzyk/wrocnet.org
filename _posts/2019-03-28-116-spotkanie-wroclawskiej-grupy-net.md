@@ -1,6 +1,6 @@
 ---
 layout: single
-title: '116\. spotkanie - pre-WROC#'
+title: '116\. spotkanie Wroc.NET - pre-WROC# (Owsiany, Kokosa, Mękal)'
 date: 2019-03-28
 tags:
   - offline

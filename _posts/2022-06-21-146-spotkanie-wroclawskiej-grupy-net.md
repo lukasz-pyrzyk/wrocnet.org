@@ -1,5 +1,5 @@
 ---
-title: '146\. spotkanie Wrocławskiej Grupy .NET ONLINE'
+title: '146\. spotkanie Wroc.NET ONLINE (Wachulec, Abramczyk)'
 date: 2022-06-21
 categories: spotkania
 tags:

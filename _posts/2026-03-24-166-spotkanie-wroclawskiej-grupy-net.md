@@ -1,5 +1,5 @@
 ---
-title: '166\. spotkanie Wrocławskiej Grupy .NET'
+title: '166\. spotkanie Wroc.NET (Pobuta, Franc)'
 date: 2026-03-24
 categories: spotkania
 tags:

@@ -1,6 +1,6 @@
 ---
 layout: single
-title: '26\. spotkanie Wrocławskiej Grupy .NET'
+title: '26\. spotkanie Wroc.NET (Gąsior, Kobalczyk)'
 categories: spotkania
 tags:
   - offline

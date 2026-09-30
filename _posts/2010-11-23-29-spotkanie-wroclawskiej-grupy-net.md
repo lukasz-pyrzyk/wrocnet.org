@@ -1,6 +1,6 @@
 ---
 layout: single
-title: '29\. spotkanie Wrocławskiej Grupy .NET - Geeks On Tour 2'
+title: '29\. spotkanie Wroc.NET - Geeks On Tour 2 (Fraiteur)'
 categories: spotkania
 tags:
   - offline

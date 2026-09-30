@@ -1,5 +1,5 @@
 ---
-title: '145\. spotkanie Wrocławskiej Grupy .NET ONLINE'
+title: '145\. spotkanie Wroc.NET ONLINE (Dudycz, Kamizelich, Mularczyk)'
 date: 2022-05-24
 categories: spotkania
 tags:

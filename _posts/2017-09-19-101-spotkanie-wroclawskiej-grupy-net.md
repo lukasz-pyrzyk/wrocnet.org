@@ -1,6 +1,6 @@
 ---
 layout: single
-title: '101\. spotkanie - Continuous Integration, UI in F# '
+title: '101\. spotkanie Wroc.NET - Continuous Integration, UI in F#  (Skrobiranda, Tadrała)'
 date: 2017-09-19
 tags:
   - offline

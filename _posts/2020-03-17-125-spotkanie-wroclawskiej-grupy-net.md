@@ -1,5 +1,5 @@
 ---
-title: '125\. spotkanie Wrocławskiej Grupy .NET'
+title: '125\. spotkanie Wroc.NET (Wichary, Mularczyk)'
 date: 2020-03-17
 categories: spotkania
 tags:

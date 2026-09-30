@@ -1,6 +1,6 @@
 ---
 layout: single
-title: '91\. spotkanie - RevDeBug, Azure na produkcji'
+title: '91\. spotkanie Wroc.NET - RevDeBug, Azure na produkcji (Kruszewski, Kostuch)'
 date: 2016-11-22
 tags:
   - offline

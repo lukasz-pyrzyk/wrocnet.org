@@ -1,6 +1,6 @@
 ---
 layout: single
-title: '105\. spotkanie - struktury, systemy rozproszone'
+title: '105\. spotkanie Wroc.NET - struktury, systemy rozproszone (Pyrzyk, Skrobiranda)'
 date: 2018-01-16
 tags:
   - offline

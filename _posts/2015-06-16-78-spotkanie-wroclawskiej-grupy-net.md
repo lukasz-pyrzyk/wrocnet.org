@@ -1,6 +1,6 @@
 ---
 layout: single
-title: '78\. spotkanie - F# Type Providers'
+title: '78\. spotkanie Wroc.NET - F# Type Providers (Łusiak)'
 date: 2015-06-16
 tags:
   - offline

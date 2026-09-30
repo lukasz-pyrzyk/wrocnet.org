@@ -1,6 +1,6 @@
 ---
 layout: single
-title: '2\. spotkanie Wrocławskiej Grupy .NET'
+title: '2\. spotkanie Wroc.NET (Gąsior)'
 categories: spotkania
 tags:
   - offline

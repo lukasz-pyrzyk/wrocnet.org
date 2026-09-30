@@ -1,6 +1,6 @@
 ---
 layout: single
-title: '94\. spotkanie - EventSourcing, CQRS'
+title: '94\. spotkanie Wroc.NET - EventSourcing, CQRS (Dudycz)'
 date: 2017-02-21
 tags:
   - offline

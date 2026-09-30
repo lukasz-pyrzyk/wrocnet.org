@@ -1,6 +1,6 @@
 ---
 layout: single
-title: '8\. spotkanie Wrocławskiej Grupy .NET i 4. spotkanie PLSSUG'
+title: '8\. spotkanie Wroc.NET i 4. spotkanie PLSSUG (Hofman)'
 categories: spotkania
 tags:
   - offline

@@ -1,6 +1,6 @@
 ---
 layout: single
-title: '25\. spotkanie Wrocławskiej Grupy .NET'
+title: '25\. spotkanie Wroc.NET (Dudek, Gębczyk)'
 categories: spotkania
 tags:
   - offline

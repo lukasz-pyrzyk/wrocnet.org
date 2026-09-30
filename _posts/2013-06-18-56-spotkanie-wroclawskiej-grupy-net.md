@@ -1,6 +1,6 @@
 ---
 layout: single
-title: '56\. spotkanie - REST API'
+title: '56\. spotkanie Wroc.NET - REST API (Talaśka)'
 date: 2013-06-18
 tags:
   - offline

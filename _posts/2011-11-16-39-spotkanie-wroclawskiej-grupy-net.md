@@ -1,6 +1,6 @@
 ---
 layout: single
-title: '39\. spotkanie Wrocławskiej Grupy .NET'
+title: '39\. spotkanie Wroc.NET (Tadrała, Piotrowski)'
 categories: spotkania
 tags:
   - offline

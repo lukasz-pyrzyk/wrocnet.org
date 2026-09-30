@@ -1,6 +1,6 @@
 ---
 layout: single
-title: '15\. spotkanie Wrocławskiej Grupy .NET'
+title: '15\. spotkanie Wroc.NET (Jendrusz, Hofman)'
 categories: spotkania
 tags:
   - offline

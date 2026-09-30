@@ -1,6 +1,6 @@
 ---
 layout: single
-title: '62\. spotkanie - NancyFx; JavaScript'
+title: '62\. spotkanie Wroc.NET - NancyFx; JavaScript (Aniserowicz, Gutkowski)'
 date: 2014-02-18
 tags:
   - offline

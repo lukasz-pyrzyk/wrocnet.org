@@ -1,6 +1,6 @@
 ---
 layout: single
-title: '53\. spotkanie Wrocławskiej Grupy .NET'
+title: '53\. spotkanie Wroc.NET (Legiędź)'
 categories: spotkania
 tags:
   - offline

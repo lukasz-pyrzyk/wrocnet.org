@@ -1,5 +1,5 @@
 ---
-title: '168\. spotkanie Wrocławskiej Grupy .NET'
+title: '168\. spotkanie Wroc.NET (Telecki, Olbromski)'
 date: 2026-05-26
 categories: spotkania
 tags:

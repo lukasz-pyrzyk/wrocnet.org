@@ -1,6 +1,6 @@
 ---
 layout: single
-title: '17\. spotkanie Wrocławskiej Grupy .NET'
+title: '17\. spotkanie Wroc.NET (Parjaszewski, Szafraniec, Koprowski)'
 categories: spotkania
 tags:
   - offline

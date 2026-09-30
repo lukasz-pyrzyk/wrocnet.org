@@ -1,6 +1,6 @@
 ---
 layout: single
-title: '37\. spotkanie Wrocławskiej Grupy .NET'
+title: '37\. spotkanie Wroc.NET (Łukasik, Waśniewski)'
 categories: spotkania
 tags:
   - offline

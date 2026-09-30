@@ -1,6 +1,6 @@
 ---
 layout: single
-title: '23\. spotkanie Wrocławskiej Grupy .NET'
+title: '23\. spotkanie Wroc.NET (Kobalczyk, Najder)'
 categories: spotkania
 tags:
   - offline

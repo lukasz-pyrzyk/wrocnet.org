@@ -1,6 +1,6 @@
 ---
 layout: single
-title: '50\. spotkanie - Continous Delivery; Continuous Deployment'
+title: '50\. spotkanie Wroc.NET - Continous Delivery; Continuous Deployment (Jedynak, Pobiega)'
 date: 2012-12-11
 tags:
   - offline

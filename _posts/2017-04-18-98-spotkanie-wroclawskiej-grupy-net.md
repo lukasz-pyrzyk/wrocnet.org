@@ -1,6 +1,6 @@
 ---
 layout: single
-title: '98\. spotkanie - Open Source, Kinect'
+title: '98\. spotkanie Wroc.NET - Open Source, Kinect (Sitnik, Jarosch)'
 date: 2017-04-18
 tags:
   - offline

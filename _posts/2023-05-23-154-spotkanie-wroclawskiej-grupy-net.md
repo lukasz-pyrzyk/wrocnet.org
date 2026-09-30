@@ -1,5 +1,5 @@
 ---
-title: '154\. spotkanie Wrocławskiej Grupy .NET'
+title: '154\. spotkanie Wroc.NET (Stasiak)'
 date: 2023-05-23
 categories: spotkania
 tags:

@@ -1,6 +1,6 @@
 ---
 layout: single
-title: '63\. spotkanie - Windows Phone; ServiceStack'
+title: '63\. spotkanie Wroc.NET - Windows Phone; ServiceStack (Fusińska, Gąsior)'
 date: 2014-03-18
 tags:
   - offline

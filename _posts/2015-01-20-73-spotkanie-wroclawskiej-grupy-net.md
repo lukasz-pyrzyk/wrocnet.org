@@ -1,6 +1,6 @@
 ---
 layout: single
-title: '73\. spotkanie - CSRF w ASP.NET MVC, ASP.NET vNext'
+title: '73\. spotkanie Wroc.NET - CSRF w ASP.NET MVC, ASP.NET vNext (Lenar, Gąsior)'
 date: 2015-01-20
 tags:
   - offline

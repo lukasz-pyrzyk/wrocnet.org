@@ -1,5 +1,5 @@
 ---
-title: '124\. spotkanie Wrocławskiej Grupy .NET'
+title: '124\. spotkanie Wroc.NET (Moriak, Mrówczyński)'
 date: 2020-02-18
 categories: spotkania
 tags:

@@ -1,6 +1,6 @@
 ---
 layout: single
-title: '43\. spotkanie Wrocławskiej Grupy .NET'
+title: '43\. spotkanie Wroc.NET (Dudycz, Szura)'
 categories: spotkania
 tags:
   - offline

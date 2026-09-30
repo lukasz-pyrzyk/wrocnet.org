@@ -1,6 +1,6 @@
 ---
 layout: single
-title: '27\. spotkanie Wrocławskiej Grupy .NET'
+title: '27\. spotkanie Wroc.NET (Najder, Tyl)'
 categories: spotkania
 tags:
   - offline

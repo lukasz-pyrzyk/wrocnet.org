@@ -1,6 +1,6 @@
 ---
 layout: single
-title: '54\. spotkanie - F#'
+title: '54\. spotkanie Wroc.NET - F# (Bolognese)'
 date: 2013-04-24
 tags:
   - offline

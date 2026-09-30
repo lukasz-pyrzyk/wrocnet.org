@@ -1,6 +1,6 @@
 ---
 layout: single
-title: '41\. spotkanie Wrocławskiej Grupy .NET'
+title: '41\. spotkanie Wroc.NET (Łukasik, Najder)'
 categories: spotkania
 tags:
   - offline

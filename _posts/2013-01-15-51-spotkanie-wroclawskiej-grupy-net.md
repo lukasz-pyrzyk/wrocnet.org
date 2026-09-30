@@ -1,6 +1,6 @@
 ---
 layout: single
-title: '51\. spotkanie - Semantic Web'
+title: '51\. spotkanie Wroc.NET - Semantic Web (Pluskiewicz)'
 date: 2013-01-15
 tags:
   - offline

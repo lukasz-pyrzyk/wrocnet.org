@@ -1,6 +1,6 @@
 ---
 layout: single
-title: '9\. spotkanie Wrocławskiej Grupy .NET (+ spotkanie PLSSUG)'
+title: '9\. spotkanie Wroc.NET (+ spotkanie PLSSUG) (Najder)'
 categories: spotkania
 tags:
   - offline

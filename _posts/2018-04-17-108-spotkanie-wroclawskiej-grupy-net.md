@@ -1,6 +1,6 @@
 ---
 layout: single
-title: '108\. spotkanie - Reactive Extensions, Azure Service Fabric '
+title: '108\. spotkanie Wroc.NET - Reactive Extensions, Azure Service Fabric  (Owsiany, Riabov)'
 date: 2018-04-17
 tags:
   - offline

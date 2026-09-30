@@ -1,6 +1,6 @@
 ---
 layout: single
-title: '33\. spotkanie Wrocławskiej Grupy .NET'
+title: '33\. spotkanie Wroc.NET (Gąsior, Sajewicz)'
 categories: spotkania
 tags:
   - offline

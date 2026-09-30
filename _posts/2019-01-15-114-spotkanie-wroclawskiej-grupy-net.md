@@ -1,6 +1,6 @@
 ---
 layout: single
-title: '114\. spotkanie - Loosely coupled architecture, SpecFlow'
+title: '114\. spotkanie Wroc.NET - Loosely coupled architecture, SpecFlow (Maziarka, Kozar)'
 date: 2019-01-15
 tags:
   - offline

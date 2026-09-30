@@ -1,6 +1,6 @@
 ---
 layout: single
-title: '93\. spotkanie - OzCode, Stress, Nauka'
+title: '93\. spotkanie Wroc.NET - OzCode, Stress, Nauka (Kurzyniec, Stefaniak, Klimczyk)'
 date: 2017-01-17
 tags:
   - offline

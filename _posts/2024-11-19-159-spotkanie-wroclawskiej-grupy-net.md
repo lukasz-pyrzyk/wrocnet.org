@@ -1,5 +1,5 @@
 ---
-title: '159\. spotkanie Wrocławskiej Grupy .NET'
+title: '159\. spotkanie Wroc.NET (Koch, Dudycz)'
 date: 2024-11-19
 categories: spotkania
 tags:

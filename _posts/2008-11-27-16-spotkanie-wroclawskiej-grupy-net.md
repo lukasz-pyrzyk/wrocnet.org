@@ -1,6 +1,6 @@
 ---
 layout: single
-title: '16\. spotkanie Wrocławskiej Grupy .NET (+ IV spotkanie PLSSUG Wrocław)'
+title: '16\. spotkanie Wroc.NET (+ IV spotkanie PLSSUG Wrocław) (Pilecki, Gołębiowski)'
 categories: spotkania
 tags:
   - offline

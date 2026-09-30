@@ -1,6 +1,6 @@
 ---
 layout: single
-title: '32\. spotkanie Wrocławskiej Grupy .NET'
+title: '32\. spotkanie Wroc.NET (Owsiak, Najder)'
 categories: spotkania
 tags:
   - offline

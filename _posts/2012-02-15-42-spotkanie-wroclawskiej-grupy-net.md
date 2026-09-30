@@ -1,6 +1,6 @@
 ---
 layout: single
-title: '42\. spotkanie Wrocławskiej Grupy .NET'
+title: '42\. spotkanie Wroc.NET (Włodek, Pobiega)'
 categories: spotkania
 tags:
   - offline

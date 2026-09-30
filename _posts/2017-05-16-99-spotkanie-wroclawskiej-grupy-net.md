@@ -1,6 +1,6 @@
 ---
 layout: single
-title: '99\. spotkanie - Azure Simple Storage, Elm'
+title: '99\. spotkanie Wroc.NET - Azure Simple Storage, Elm (Kulec, Gąsior)'
 date: 2017-05-16
 tags:
   - offline

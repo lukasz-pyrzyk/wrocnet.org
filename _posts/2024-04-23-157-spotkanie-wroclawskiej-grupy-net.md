@@ -1,5 +1,5 @@
 ---
-title: '157\. spotkanie Wrocławskiej Grupy .NET'
+title: '157\. spotkanie Wroc.NET (Maziarka)'
 date: 2024-04-23
 categories: spotkania
 tags:

@@ -1,6 +1,6 @@
 ---
 layout: single
-title: '83\. spotkanie - Testy mutacyjne, frameworki'
+title: '83\. spotkanie Wroc.NET - Testy mutacyjne, frameworki (Sawicz, Pobiega)'
 date: 2015-12-15
 tags:
   - offline
