@@ -1,0 +1,97 @@
+---
+layout: null
+permalink: /llms.txt
+sitemap: false
+---
+{%- assign months_pl = "stycznia,lutego,marca,kwietnia,maja,czerwca,lipca,sierpnia,września,października,listopada,grudnia" | split: "," -%}
+{%- assign today_ts = 'now' | date: '%s' | plus: 0 -%}
+{%- assign current_year = 'now' | date: '%Y' | plus: 0 -%}
+{%- assign current_month_day = 'now' | date: '%m%d' | plus: 0 -%}
+{%- assign oldest_post = site.posts | last -%}
+{%- assign founding_year = oldest_post.date | date: '%Y' | plus: 0 -%}
+{%- assign founding_month_day = oldest_post.date | date: '%m%d' | plus: 0 -%}
+{%- assign community_years = current_year | minus: founding_year -%}
+{%- if current_month_day < founding_month_day -%}
+  {%- assign community_years = community_years | minus: 1 -%}
+{%- endif -%}
+{%- assign meeting_count = 0 -%}
+{%- assign additional_event_count = 0 -%}
+{%- assign total_sessions = 0 -%}
+{%- for post in site.posts -%}
+  {%- assign talk_count = post.talks | size -%}
+  {%- assign total_sessions = total_sessions | plus: talk_count -%}
+  {%- if post.path contains '-spotkanie-wroclawskiej-grupy-net' -%}
+    {%- assign filename_parts = post.path | split: '/' | last | split: '-' -%}
+    {%- assign post_meeting_number = filename_parts[3] | plus: 0 -%}
+    {%- if post_meeting_number > meeting_count -%}
+      {%- assign meeting_count = post_meeting_number -%}
+    {%- endif -%}
+  {%- else -%}
+    {%- assign additional_event_count = additional_event_count | plus: 1 -%}
+  {%- endif -%}
+{%- endfor -%}
+# {{ site.title }} - {{ site.subtitle }}
+
+> {{ site.description | strip_newlines | normalize_whitespace }}
+
+Plik wygenerowany automatycznie podczas builda strony ({{ site.time | date: "%Y-%m-%d %H:%M %z" }}), zgodny z konwencją [llms.txt](https://llmstxt.org). Zawiera aktualne dane o społeczności, wydarzeniach i prelegentach do wykorzystania przez agentów AI.
+
+## Statystyki społeczności
+
+- Lata działalności: {{ community_years }} (od {{ founding_year }} roku)
+- Liczba spotkań numerowanych: {{ meeting_count }} (+ {{ additional_event_count }} dodatkowych wydarzeń specjalnych)
+- Liczba prelegentów i prelegentek: {{ site.data.speakers | size }}
+- Liczba wygłoszonych prezentacji: {{ total_sessions }}
+
+## O grupie
+
+- [O grupie]({{ '/o-grupie/' | absolute_url }}): historia grupy, misja, poruszane tematy, kanały kontaktu
+- [Organizatorzy]({{ '/organizatorzy/' | absolute_url }}): aktualny zespół i byli organizatorzy
+- [Wystąpili u nas]({{ '/wystapili-u-nas/' | absolute_url }}): przeszukiwalna lista prelegentów i ich wystąpień
+- [Zostań prelegentem]({{ '/zostan-prelegentem/' | absolute_url }}): call for papers, warunki i formularz zgłoszeniowy
+
+## Call for Papers
+
+Szukamy prelegentów chętnych podzielić się wiedzą z ekosystemu Microsoft: .NET/C#, Azure i chmura, architektura (DDD, CQRS, mikroserwisy, event sourcing), AI/ML, DevOps oraz tematy miękkie (kariera, produktywność, praca zespołowa). Dla prelegentów spoza Wrocławia staramy się gwarantować pokrycie kosztów transportu i noclegu. Prezentacje odbywają się na żywo podczas comiesięcznych spotkań.
+
+- Formularz zgłoszeniowy: {{ site.speaker_form_url }}
+- Kontakt: kontakt@wrocnet.org
+
+## Miejsce spotkań i kontakt
+
+- Miejsce: {{ site.data.schedule.venue.name }}, {{ site.data.schedule.venue.address }} ({{ site.data.schedule.venue.maps_url }})
+- Meetup: https://www.meetup.com/wrocnet/
+{%- for link in site.author.links %}
+- {{ link.label }}: {{ link.url | absolute_url }}
+{%- endfor %}
+
+## Nadchodzące wydarzenia (sezon {{ site.data.schedule.season }})
+{%- assign has_upcoming = false -%}
+{% for meeting in site.data.schedule.dates %}{% assign meeting_ts = meeting.date | date: '%s' | plus: 0 %}{% if meeting_ts >= today_ts %}{% assign has_upcoming = true %}{% assign m_idx = meeting.date | date: "%-m" | minus: 1 %}
+- {{ meeting.date | date: "%-d" }} {{ months_pl[m_idx] }} {{ meeting.date | date: "%Y" }}, godz. {{ meeting.time | slice: 0, 5 }}: https://www.meetup.com/wrocnet/events/{% endif %}{% endfor %}
+{%- unless has_upcoming %}
+- Brak zaplanowanych dat, sprawdź https://www.meetup.com/wrocnet/events/
+{%- endunless %}
+
+## Organizatorzy
+
+{%- for person in site.data.organizers -%}
+  {%- if person.name and person.name != "" %}
+- {{ person.name }}{% if person.linkedin %} ({{ person.linkedin }}){% endif %}
+  {%- endif -%}
+{%- endfor %}
+
+{%- if site.data.former_organizers and site.data.former_organizers.size > 0 %}
+
+### Byli organizatorzy
+
+{%- for person in site.data.former_organizers %}
+- {{ person.name }}{% if person.linkedin %} ({{ person.linkedin }}){% endif %}
+{%- endfor -%}
+{%- endif %}
+
+## Wszystkie spotkania (od najnowszych)
+
+{%- for post in site.posts %}
+- {{ post.date | date: "%Y-%m-%d" }} — [{{ post.title | replace: '\.', '.' }}]({{ post.url | absolute_url }}){% if post.talks and post.talks.size > 0 %}: {% for talk in post.talks %}{{ talk.title }}{% if talk.speaker_ids %} — {% for speaker_id in talk.speaker_ids %}{% assign speaker = site.data.speakers | where: "id", speaker_id | first %}{{ speaker.imie }} {{ speaker.nazwisko }}{% unless forloop.last %}, {% endunless %}{% endfor %}{% endif %}{% unless forloop.last %}; {% endunless %}{% endfor %}{% endif %}
+{%- endfor %}
