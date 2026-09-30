@@ -89,6 +89,7 @@ markdown: kramdown
 highlighter: rouge
 encoding: utf-8
 timezone: Europe/Warsaw
+future: true
 
 permalink: /:year/:month/:day/:title/
 
