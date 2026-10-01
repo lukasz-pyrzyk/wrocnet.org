@@ -1,5 +1,5 @@
 ---
-title: '178\. spotkanie Wrocławskiej Grupy .NET'
+title: '178\. spotkanie Wroc.NET'
 date: 2027-05-18
 time: "18:30:00"
 categories: spotkania

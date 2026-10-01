@@ -1,5 +1,5 @@
 ---
-title: '172\. spotkanie Wrocławskiej Grupy .NET'
+title: '172\. spotkanie Wroc.NET'
 date: 2026-11-17
 time: "18:30:00"
 categories: spotkania
