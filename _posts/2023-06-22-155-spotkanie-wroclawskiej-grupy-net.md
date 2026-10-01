@@ -14,9 +14,12 @@ talks:
 - title: Journey from Discovery to Delivery with Event Modeling
   speaker_ids:
   - daniel-kowalski
+meetup_attendees: 36
 ---
 
 155. spotkanie Wrocławskiej Grupy .NET odbyło się 22.06.2023 r. w **Klubokawiarnia Mleczarnia, ul. Pawła Włodkowica 5, Wrocław**.
+
+{% include attendance.html %}
 
 {% include talk.html index=0 %}
 

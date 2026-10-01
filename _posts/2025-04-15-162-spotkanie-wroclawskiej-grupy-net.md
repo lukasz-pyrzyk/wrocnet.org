@@ -11,9 +11,12 @@ talks:
 - title: Zapomniana sztuka prostych rozwiązań
   speaker_ids:
   - rafal-pienkowski
+meetup_attendees: 53
 ---
 
 162. spotkanie Wrocławskiej Grupy .NET odbyło się 15.04.2025 r. w **Xebia, ul. Sucha 3, Wrocław**.
+
+{% include attendance.html %}
 
 {% include talk.html index=0 %}
 

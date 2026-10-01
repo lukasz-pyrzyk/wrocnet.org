@@ -8,9 +8,12 @@ talks:
 - title: 'F#: functional programming in .NET'
   speaker_ids:
   - luca-bolognese
+meetup_attendees: 26
 ---
 
 Miejsce: Instytut Informatyki, ul. Joliot-Curie 25, Wrocław
+
+{% include attendance.html %}
 
 [Archiwalna strona wydarzenia na Meetup](https://www.meetup.com/wrocnet/events/113319392/)
 

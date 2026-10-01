@@ -11,9 +11,12 @@ talks:
 - title: Budowanie niezawodnych aplikacji z wykorzystaniem .NET Core i Docker
   speaker_ids:
   - przemyslaw-pogorzelec
+meetup_attendees: 104
 ---
 
 [Archiwalna strona wydarzenia na Meetup](https://www.meetup.com/wrocnet/events/248674425/)
+
+{% include attendance.html %}
 
 {% include talk.html index=0 %}
 * Prezentacja: wkrótce

@@ -11,9 +11,12 @@ talks:
 - title: Tworzenie aplikacji mobilnych przy użyciu Xamarin.Forms
   speaker_ids:
   - damian-jarosch
+meetup_attendees: 97
 ---
 
 Miejsce: Wrocławski Park Technologiczny, ul. Klecińska 123, Wrocław
+
+{% include attendance.html %}
 
 [Archiwalna strona wydarzenia na Meetup](https://www.meetup.com/wrocnet/events/229734966/)
 

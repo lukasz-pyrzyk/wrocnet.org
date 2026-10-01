@@ -11,9 +11,12 @@ talks:
 - title: 'Jakub Gutkowski: ''Tak'' + ''Tak'' == false?'
   speaker_ids:
   - jakub-gutkowski
+meetup_attendees: 46
 ---
 
 Miejsce: AIP Business Link, ul. Rzeźnicza 28, Wrocław
+
+{% include attendance.html %}
 
 [Archiwalna strona wydarzenia na Meetup](https://www.meetup.com/wrocnet/events/164088072/)
 

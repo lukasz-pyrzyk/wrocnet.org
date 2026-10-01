@@ -13,9 +13,12 @@ talks:
 - title: Podstawy cybersecurity w CI/CD, czyli bezpieczeństwo bez wymówek
   speaker_ids:
   - mateusz-konicki
+meetup_attendees: 47
 ---
 
 🚀 **ZAKOŃCZENIE SEZONU!** 169. spotkanie Wroc.NET
+
+{% include attendance.html %}
 
 *Więcej informacji: [Meetup](https://www.meetup.com/wrocnet/events/315183755/)*
 

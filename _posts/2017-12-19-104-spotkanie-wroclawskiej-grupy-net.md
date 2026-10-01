@@ -11,9 +11,12 @@ talks:
 - title: Fear and awareness – human aspects of automation
   speaker_ids:
   - damian-wolan
+meetup_attendees: 51
 ---
 
 [Archiwalna strona wydarzenia na Meetup](https://www.meetup.com/wrocnet/events/245702078/)
+
+{% include attendance.html %}
 
 {% include talk.html index=0 %}
 * Prezentacja: wkrótce

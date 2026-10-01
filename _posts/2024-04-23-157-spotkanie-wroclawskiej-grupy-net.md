@@ -8,9 +8,12 @@ talks:
 - title: Szybko czy dobrze? Poproszę oba
   speaker_ids:
   - radoslaw-maziarka
+meetup_attendees: 42
 ---
 
 157. spotkanie Wrocławskiej Grupy .NET odbyło się 23.04.2024 r. w **Avanade, ul. Piotra Skargi 1, Wrocław**.
+
+{% include attendance.html %}
 
 {% include talk.html index=0 %}
 

@@ -11,9 +11,12 @@ talks:
 - title: Żyjąc na krawędzi, czyli jak wykorzystać kod .NETowy z poziomu JavaScript i przetrwać
   speaker_ids:
   - rafal-legiedz
+meetup_attendees: 49
 ---
 
 Miejsce: AIP Business Link, ul. Rzeźnicza 28, Wrocław
+
+{% include attendance.html %}
 
 [Archiwalna strona wydarzenia na Meetup](https://www.meetup.com/wrocnet/events/221823893/)
 

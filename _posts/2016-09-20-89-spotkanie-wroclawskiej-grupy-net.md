@@ -11,9 +11,12 @@ talks:
 - title: perfView
   speaker_ids:
   - michal-malecki
+meetup_attendees: 50
 ---
 
 Miejsce: Pub Wędrówki, ul. Podwale 37/38, Wrocław
+
+{% include attendance.html %}
 
 [Archiwalna strona wydarzenia na Meetup](https://www.meetup.com/wrocnet/events/232697053/)
 

@@ -5,9 +5,12 @@ categories: spotkania
 tags:
   - inne
 date: 2019-07-23
+meetup_attendees: 36
 ---
 
 Miejsce: Forma Płynna Beach Bar, Wybrzeże Stanisława Wyspiańskiego 20, Wrocław
+
+{% include attendance.html %}
 
 [Archiwalna strona wydarzenia na Meetup](https://www.meetup.com/wrocnet/events/263089107/)
 

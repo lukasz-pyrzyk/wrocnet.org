@@ -14,9 +14,12 @@ talks:
 - title: Hexagonal Architecture Explained
   speaker_ids:
   - waldemar-mekal
+meetup_attendees: 132
 ---
 
 [Archiwalna strona wydarzenia na Meetup](https://www.meetup.com/wrocnet/events/259682524/)
+
+{% include attendance.html %}
 
 {% include talk.html index=0 %}
 * Prezentacja: [ODP](/slides/IL - między piekłem a niebem.zip)

@@ -11,9 +11,12 @@ talks:
 - title: 3W of Azure Service Fabric. Why, where and when we need to use it
   speaker_ids:
   - aleksandr-riabov
+meetup_attendees: 74
 ---
 
 [Archiwalna strona wydarzenia na Meetup](https://www.meetup.com/wrocnet/events/248796910/)
+
+{% include attendance.html %}
 
 {% include talk.html index=0 %}
 * Prezentacja: wkrótce

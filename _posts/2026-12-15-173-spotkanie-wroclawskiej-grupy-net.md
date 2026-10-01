@@ -5,6 +5,7 @@ time: "18:30:00"
 categories: spotkania
 tags:
   - offline
+meetup_attendees: 0
 header:
   teaser: /assets/images/spotkania-teaser.jpg
 ---

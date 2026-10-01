@@ -11,9 +11,12 @@ talks:
 - title: Moja podróż do Krainy Ekstremalnej Współbieżności w .NET
   speaker_ids:
   - szymon-kulec
+meetup_attendees: 81
 ---
 
 Miejsce: Pub Wędrówki, ul. Podwale 37/38, Wrocław
+
+{% include attendance.html %}
 
 [Archiwalna strona wydarzenia na Meetup](https://www.meetup.com/wrocnet/events/230879605/)
 

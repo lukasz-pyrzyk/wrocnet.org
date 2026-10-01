@@ -11,9 +11,12 @@ talks:
 - title: Large scale, distributed and reliable messaging with Kafka
   speaker_ids:
   - rafal-hryniewski
+meetup_attendees: 20
 ---
 
 130. spotkanie Wrocławskiej Grupy .NET odbyło się 21.10.2020 r..
+
+{% include attendance.html %}
 
 {% include talk.html index=0 %}
 

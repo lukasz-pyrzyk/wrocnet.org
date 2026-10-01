@@ -11,9 +11,12 @@ talks:
 - title: Case study designu architektury dla prostej aplikacji
   speaker_ids:
   - piotr-wachulec
+meetup_attendees: 36
 ---
 
 153. spotkanie Wrocławskiej Grupy .NET odbyło się 25.04.2023 r. w **Avanade, ul. Piotra Skargi 1, Wrocław**.
+
+{% include attendance.html %}
 
 {% include talk.html index=0 %}
 

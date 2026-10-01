@@ -5,9 +5,12 @@ categories: spotkania
 tags:
   - inne
 date: 2014-02-04
+meetup_attendees: 12
 ---
 
 Miejsce: blt & flatbreads, ul. Ruska 58/59, Wrocław
+
+{% include attendance.html %}
 
 [Archiwalna strona wydarzenia na Meetup](https://www.meetup.com/wrocnet/events/155126242/)
 

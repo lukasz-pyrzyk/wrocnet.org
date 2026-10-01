@@ -5,9 +5,12 @@ categories: spotkania
 tags:
   - inne
 date: 2013-03-05
+meetup_attendees: 7
 ---
 
 Miejsce: Cafe Fika, Rynek 7, Wrocław
+
+{% include attendance.html %}
 
 [Archiwalna strona wydarzenia na Meetup](https://www.meetup.com/wrocnet/events/106945742/)
 

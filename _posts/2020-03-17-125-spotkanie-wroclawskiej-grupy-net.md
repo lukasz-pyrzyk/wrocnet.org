@@ -11,9 +11,12 @@ talks:
 - title: Github + Open source - takie łatwe, czy takie trudne?
   speaker_ids:
   - weronika-mularczyk
+meetup_attendees: 59
 ---
 
 125. spotkanie Wrocławskiej Grupy .NET odbyło się 17.03.2020 r. **online** - było transmitowane na żywo na kanale YouTube grupy.
+
+{% include attendance.html %}
 
 {% include talk.html index=0 %}
 

@@ -8,9 +8,12 @@ talks:
 - title: Testy metod prywatnych oraz "Chained null checks and the Maybe monad"
   speaker_ids:
   - przemyslaw-pogorzelec
+meetup_attendees: 24
 ---
 
 Miejsce: AIP Business Link, ul. Rzeźnicza 28, Wrocław
+
+{% include attendance.html %}
 
 [Archiwalna strona wydarzenia na Meetup](https://www.meetup.com/wrocnet/events/194216132/)
 

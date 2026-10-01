@@ -11,9 +11,12 @@ talks:
 - title: Get the job done
   speaker_ids:
   - miroslaw-praglowski
+meetup_attendees: 31
 ---
 
 Miejsce: AIP Business Link, ul. Rzeźnicza 28, Wrocław
+
+{% include attendance.html %}
 
 [Archiwalna strona wydarzenia na Meetup](https://www.meetup.com/wrocnet/events/186732332/)
 

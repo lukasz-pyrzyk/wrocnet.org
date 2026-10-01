@@ -11,9 +11,12 @@ talks:
 - title: Mac dla programistów .NET
   speaker_ids:
   - michal-szafranski
+meetup_attendees: 126
 ---
 
 [Archiwalna strona wydarzenia na Meetup](https://www.meetup.com/wrocnet/events/244076164/)
+
+{% include attendance.html %}
 
 {% include talk.html index=0 %}
 * Prezentacja: [PDF](/slides/ts4csharp.zip)

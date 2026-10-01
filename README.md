@@ -108,3 +108,5 @@ header:
 ```
 
 Every post must have exactly one format tag: `offline` for regular in-person meetings, `online` for regular online meetings, or `inne` for special/non-numbered events.
+
+After an event, add `meetup_attendees: N` to its front matter to preserve the attendee count shown by Meetup. The count is displayed after the opening paragraph of the post.

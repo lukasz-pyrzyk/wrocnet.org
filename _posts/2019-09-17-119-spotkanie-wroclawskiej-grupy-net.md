@@ -11,9 +11,12 @@ talks:
 - title: Anchor Modeling – maintain highly normalized data model that can be changed anytime
   speaker_ids:
   - rafal-hryniewski
+meetup_attendees: 66
 ---
 
 [Archiwalna strona wydarzenia na Meetup](https://www.meetup.com/wrocnet/events/264284277/)
+
+{% include attendance.html %}
 
 {% include talk.html index=0 %}
 * Prezentacja: [PowerPoint](/slides/OswoicLegacy.zip)

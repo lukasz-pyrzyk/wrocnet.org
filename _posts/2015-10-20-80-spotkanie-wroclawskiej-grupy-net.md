@@ -11,9 +11,12 @@ talks:
 - title: Wystartuj z GITem w następnym projekcie
   speaker_ids:
   - krzysztof-morcinek
+meetup_attendees: 48
 ---
 
 Miejsce: Zakład Usług Piwnych, ul. Ruska 34, Wrocław
+
+{% include attendance.html %}
 
 [Archiwalna strona wydarzenia na Meetup](https://www.meetup.com/wrocnet/events/226137286/)
 

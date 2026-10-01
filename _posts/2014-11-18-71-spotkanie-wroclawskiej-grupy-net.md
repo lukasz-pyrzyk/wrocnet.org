@@ -11,9 +11,12 @@ talks:
 - title: Versioning Git(Hub) projects
   speaker_ids:
   - tomasz-pluskiewicz
+meetup_attendees: 38
 ---
 
 Miejsce: AIP Business Link, ul. Rzeźnicza 28, Wrocław
+
+{% include attendance.html %}
 
 [Archiwalna strona wydarzenia na Meetup](https://www.meetup.com/wrocnet/events/218648469/)
 

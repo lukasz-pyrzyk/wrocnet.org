@@ -11,9 +11,12 @@ talks:
 - title: Performance mistakes in EF
   speaker_ids:
   - mikolaj-korbanek
+meetup_attendees: 30
 ---
 
 143. spotkanie Wrocławskiej Grupy .NET odbyło się 22.03.2022 r..
+
+{% include attendance.html %}
 
 {% include talk.html index=0 %}
 
