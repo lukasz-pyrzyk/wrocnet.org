@@ -1,5 +1,5 @@
 ---
-title: '174\. spotkanie Wrocławskiej Grupy .NET'
+title: '174\. spotkanie Wroc.NET'
 date: 2027-01-19
 time: "18:30:00"
 categories: spotkania
