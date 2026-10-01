@@ -7,10 +7,19 @@ classes: wide
 ---
 
 {% assign rendered_speaker_ids = "" | split: "" %}
+{% assign counted_speaker_ids = "" | split: "" %}
 {% assign total_sessions = 0 %}
-{% for post in site.posts %}
+{% assign current_posts = site.posts | where_exp: "post", "post.date <= site.time" %}
+{% for post in current_posts %}
   {% assign talk_count = post.talks | size %}
   {% assign total_sessions = total_sessions | plus: talk_count %}
+  {% for talk in post.talks %}
+    {% for speaker_id in talk.speaker_ids %}
+      {% unless counted_speaker_ids contains speaker_id %}
+        {% assign counted_speaker_ids = counted_speaker_ids | push: speaker_id %}
+      {% endunless %}
+    {% endfor %}
+  {% endfor %}
 {% endfor %}
 <section class="speakers-summary" aria-labelledby="speakers-summary-title">
   <div class="speakers-summary__intro">
@@ -18,7 +27,7 @@ classes: wide
     <h2 id="speakers-summary-title">Ludzie i idee, które budują naszą społeczność.</h2>
   </div>
   <div class="speakers-summary__stats">
-    <div class="speakers-summary__stat"><strong>{{ site.data.speakers.size }}</strong><span>prelegentów</span></div>
+    <div class="speakers-summary__stat"><strong>{{ counted_speaker_ids.size }}</strong><span>prelegentów</span></div>
     <div class="speakers-summary__stat"><strong>{{ total_sessions }}</strong><span>sesji</span></div>
   </div>
 </section>
@@ -54,7 +63,7 @@ classes: wide
 </div>
 
 <div class="speakers-grid">
-{% for post in site.posts %}
+{% for post in current_posts %}
   {% for talk in post.talks %}
     {% for speaker_id in talk.speaker_ids %}
       {% unless rendered_speaker_ids contains speaker_id %}
@@ -62,7 +71,7 @@ classes: wide
         {% assign speaker_appearance_count = 0 %}
         {% assign speaker_last_timestamp = 0 %}
         {% capture speaker_appearances_html %}
-        {% for appearance_post in site.posts %}
+        {% for appearance_post in current_posts %}
           {% assign appearance_timestamp = appearance_post.date | date: '%s' | plus: 0 %}
           {% for appearance_talk in appearance_post.talks %}
             {% if appearance_talk.speaker_ids contains speaker.id %}
