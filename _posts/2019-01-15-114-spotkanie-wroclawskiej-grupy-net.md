@@ -11,9 +11,12 @@ talks:
 - title: SpecFlow - testy BDD
   speaker_ids:
   - melchior-kozar
+meetup_attendees: 86
 ---
 
 [Archiwalna strona wydarzenia na Meetup](https://www.meetup.com/wrocnet/events/257779436/)
+
+{% include attendance.html %}
 
 {% include talk.html index=0 %}
 * Prezentacja: [Loosely-Coupled-Architecture.pptx](/slides/Loosely-Coupled-Architecture.zip)

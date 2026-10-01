@@ -12,9 +12,12 @@ talks:
 - title: VSCode extensions API
   speaker_ids:
   - ireneusz-patalas
+meetup_attendees: 85
 ---
 
 Miejsce: Mleczarnia, ul. Włodkowica 5, Wrocław
+
+{% include attendance.html %}
 
 [Archiwalna strona wydarzenia na Meetup](https://www.meetup.com/wrocnet/events/260971332/)
 

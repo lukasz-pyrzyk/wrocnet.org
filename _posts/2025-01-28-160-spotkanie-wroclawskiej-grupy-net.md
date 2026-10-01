@@ -11,9 +11,12 @@ talks:
 - title: Shift-left - co to w ogóle jest i czy ma sens
   speaker_ids:
   - maciej-wyrodek
+meetup_attendees: 57
 ---
 
 160. spotkanie Wrocławskiej Grupy .NET odbyło się 28.01.2025 r. w **Xebia, ul. Sucha 3, Wrocław**.
+
+{% include attendance.html %}
 
 {% include talk.html index=0 %}
 

@@ -11,9 +11,12 @@ talks:
 - title: Ty jesteś kontrolerem
   speaker_ids:
   - damian-jarosch
+meetup_attendees: 53
 ---
 
 [Archiwalna strona wydarzenia na Meetup](https://www.meetup.com/wrocnet/events/239015139/)
+
+{% include attendance.html %}
 
 {% include talk.html index=0 %}
 * Prezentacja: [pptx](/slides/OSS_Wroclaw.zip)

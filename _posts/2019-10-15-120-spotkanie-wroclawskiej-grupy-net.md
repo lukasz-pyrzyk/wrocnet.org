@@ -11,9 +11,12 @@ talks:
 - title: 'Lambda.NET: AWS Lambda + .NET Core'
   speaker_ids:
   - michal-barylinski
+meetup_attendees: 109
 ---
 
 [Archiwalna strona wydarzenia na Meetup](https://www.meetup.com/wrocnet/events/265064792/)
+
+{% include attendance.html %}
 
 {% include talk.html index=0 %}
 * Prezentacja: [PPTX](/slides/CZYSTY-MODEL-DOMENOWY.zip)

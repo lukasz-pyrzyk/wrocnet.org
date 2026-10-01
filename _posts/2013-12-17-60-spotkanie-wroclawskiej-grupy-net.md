@@ -8,9 +8,12 @@ talks:
 - title: Fody
   speaker_ids:
   - tomasz-pluskiewicz
+meetup_attendees: 18
 ---
 
 Miejsce: AIP Business Link, ul. Rzeźnicza 28, Wrocław
+
+{% include attendance.html %}
 
 [Archiwalna strona wydarzenia na Meetup](https://www.meetup.com/wrocnet/events/154376832/)
 

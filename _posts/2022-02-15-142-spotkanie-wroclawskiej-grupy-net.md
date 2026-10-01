@@ -11,9 +11,12 @@ talks:
 - title: Azure Data Explorer w zastosowaniach
   speaker_ids:
   - marek-gawryszewski
+meetup_attendees: 44
 ---
 
 142. spotkanie Wrocławskiej Grupy .NET odbyło się 15.02.2022 r..
+
+{% include attendance.html %}
 
 {% include talk.html index=0 %}
 

@@ -8,9 +8,12 @@ talks:
 - title: Python in a .NET world
   speaker_ids:
   - maciej-talaska
+meetup_attendees: 34
 ---
 
 Miejsce: AIP Business Link, ul. Rzeźnicza 28, Wrocław
+
+{% include attendance.html %}
 
 [Archiwalna strona wydarzenia na Meetup](https://www.meetup.com/wrocnet/events/174654192/)
 

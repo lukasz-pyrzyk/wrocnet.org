@@ -11,9 +11,12 @@ talks:
 - title: Cohesion & coupling - zdrowe związki, poradnik programisty
   speaker_ids:
   - kinga-gazdzinska
+meetup_attendees: 68
 ---
 
 135. spotkanie Wrocławskiej Grupy .NET odbyło się 24.03.2021 r..
+
+{% include attendance.html %}
 
 {% include talk.html index=0 %}
 

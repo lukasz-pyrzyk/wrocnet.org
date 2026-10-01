@@ -11,9 +11,12 @@ talks:
 - title: Blazor WebAssembly - inside/out
   speaker_ids:
   - konrad-kokosa
+meetup_attendees: 32
 ---
 
 137. spotkanie Wrocławskiej Grupy .NET odbyło się 18.05.2021 r..
+
+{% include attendance.html %}
 
 {% include talk.html index=0 %}
 

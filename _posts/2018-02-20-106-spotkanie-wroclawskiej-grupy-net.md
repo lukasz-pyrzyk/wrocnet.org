@@ -11,9 +11,12 @@ talks:
 - title: 7 osobowości inżyniera oprogramowania
   speaker_ids:
   - pawel-klimczyk
+meetup_attendees: 100
 ---
 
 [Archiwalna strona wydarzenia na Meetup](https://www.meetup.com/wrocnet/events/247642624/)
+
+{% include attendance.html %}
 
 {% include talk.html index=0 %}
 * Prezentacja: [PowerPoint](/slides/cqrs-in-4-steps-rmaziarka.zip)

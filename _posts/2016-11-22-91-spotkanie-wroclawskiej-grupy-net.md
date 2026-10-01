@@ -11,9 +11,12 @@ talks:
 - title: Azure na produkcji
   speaker_ids:
   - marcin-kostuch
+meetup_attendees: 79
 ---
 
 [Archiwalna strona wydarzenia na Meetup](https://www.meetup.com/wrocnet/events/234369009/)
+
+{% include attendance.html %}
 
 {% include talk.html index=0 %}
 * Prezentacja: [PDF](/slides/RevDeBug.zip)

@@ -4,6 +4,7 @@ title: '86\. spotkanie Wroc.NET - Microservices, Lightning talki (Stadnicki, Kie
 date: 2016-03-09
 tags:
   - offline
+meetup_attendees: 145
 talks:
 - title: Mikroserwisy, pierwsze kroczki
   speaker_ids:
@@ -29,6 +30,8 @@ talks:
 Miejsce: Pub Włodkowica 21, ul. Włodkowica 21, Wrocław
 
 [Archiwalna strona wydarzenia na Meetup](https://www.meetup.com/wrocnet/events/229093666/)
+
+{% include attendance.html %}
 
 Specjalne spotkanie zorganizowane z okazji konferencji WROC#, poświęcone mikroserwisom i krótkim lightning talkom.
 

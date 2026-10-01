@@ -11,9 +11,12 @@ talks:
 - title: Fuzzing bibliotek .NET — jak znaleźć prawdziwe błędy w popularnych pakietach NuGet
   speaker_ids:
   - pawel-lukasik
+meetup_attendees: 53
 ---
 
 167. spotkanie Wrocławskiej Grupy .NET odbyło się 21.04.2026 r. w **CSHARK Office, wyspa Słodowa 7, Wrocław**.
+
+{% include attendance.html %}
 
 {% include talk.html index=0 %}
 

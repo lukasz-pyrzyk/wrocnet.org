@@ -5,9 +5,12 @@ categories: spotkania
 tags:
   - inne
 date: 2013-12-03
+meetup_attendees: 12
 ---
 
 Miejsce: Restauracja Alladyn, ul. Odrzańska 23, Wrocław
+
+{% include attendance.html %}
 
 [Archiwalna strona wydarzenia na Meetup](https://www.meetup.com/wrocnet/events/149451182/)
 

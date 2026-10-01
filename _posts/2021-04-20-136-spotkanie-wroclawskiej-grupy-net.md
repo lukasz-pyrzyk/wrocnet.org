@@ -11,9 +11,12 @@ talks:
 - title: Advanced Debugging for .NET Applications Build on Docker Microservices
   speaker_ids:
   - idan-shatz
+meetup_attendees: 41
 ---
 
 136. spotkanie Wrocławskiej Grupy .NET odbyło się 20.04.2021 r..
+
+{% include attendance.html %}
 
 {% include talk.html index=0 %}
 

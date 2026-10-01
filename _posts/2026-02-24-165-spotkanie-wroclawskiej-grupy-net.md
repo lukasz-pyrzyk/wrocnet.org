@@ -11,9 +11,12 @@ talks:
 - title: Systemy rozproszone z Microsoft Orleans
   speaker_ids:
   - wojciech-warwas
+meetup_attendees: 53
 ---
 
 165. spotkanie Wrocławskiej Grupy .NET odbyło się 24.02.2026 r. w **Xebia, ul. Sucha 3, Wrocław**.
+
+{% include attendance.html %}
 
 {% include talk.html index=0 %}
 

@@ -11,9 +11,12 @@ talks:
 - title: Od LINQ do F#
   speaker_ids:
   - marcin-kern
+meetup_attendees: 35
 ---
 
 141. spotkanie Wrocławskiej Grupy .NET odbyło się 18.01.2022 r..
+
+{% include attendance.html %}
 
 {% include talk.html index=0 %}
 

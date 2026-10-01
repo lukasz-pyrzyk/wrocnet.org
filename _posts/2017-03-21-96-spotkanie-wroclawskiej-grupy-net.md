@@ -11,9 +11,12 @@ talks:
 - title: Jak zacząć swoją przygodę z Unity3D
   speaker_ids:
   - piotr-wandycz
+meetup_attendees: 106
 ---
 
 [Archiwalna strona wydarzenia na Meetup](https://www.meetup.com/wrocnet/events/238167141/)
+
+{% include attendance.html %}
 
 {% include talk.html index=0 %}
 * Prezentacja: [pptx](/slides/NET-Core-2017.zip)
