@@ -36,7 +36,7 @@
   {% assign has_countdown = true %}
 {% endif %}
 
-<div class="page__hero{% if page.header.overlay_color or page.header.overlay_image %}--overlay{% endif %}"
+<div class="page__hero{% if page.header.overlay_color or page.header.overlay_image %}--overlay{% endif %}{% if has_countdown %} page__hero--home{% endif %}"
   style="{% if page.header.overlay_color %}background-color: {{ page.header.overlay_color | default: 'transparent' }};{% endif %} {% if overlay_img_path %}background-image: {% if overlay_filter %}{{ overlay_filter }}, {% endif %}url('{{ overlay_img_path }}');{% endif %}"
 >
   {% if page.header.overlay_color or page.header.overlay_image %}
@@ -55,6 +55,35 @@
           <p class="page__lead">{{ page.excerpt | markdownify | remove: "<p>" | remove: "</p>" }}</p>
         {% endif %}
         {% include page__meta.html locale=locale %}
+        {% if has_countdown %}
+          {% for meeting in upcoming_meeting_posts %}
+            {% if meeting.talks.size > 0 %}
+              <section class="hero-program" data-meeting-index="{{ forloop.index0 }}" aria-labelledby="hero-program-heading-{{ forloop.index0 }}"{% unless forloop.first %} hidden{% endunless %}>
+                <h2 id="hero-program-heading-{{ forloop.index0 }}" class="hero-program__heading">Na najbliższym spotkaniu</h2>
+                <ul class="hero-program__talks">
+                  {% for talk in meeting.talks %}
+                    <li>
+                      <a class="hero-program__talk" href="{{ meeting.url | relative_url }}">
+                        <span class="hero-program__details">
+                          {% if talk.speaker_ids.size > 0 %}
+                            <span class="hero-program__speakers">
+                              {% for speaker_id in talk.speaker_ids %}
+                                {% assign speaker = site.data.speakers | where: "id", speaker_id | first %}
+                                {{ speaker.imie | escape }} {{ speaker.nazwisko | escape }}{% unless forloop.last %}, {% endunless %}
+                              {% endfor %}
+                            </span>
+                          {% endif %}
+                          <span class="hero-program__title">{{ talk.title | escape }}</span>
+                        </span>
+                        <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                      </a>
+                    </li>
+                  {% endfor %}
+                </ul>
+              </section>
+            {% endif %}
+          {% endfor %}
+        {% endif %}
         {% if page.header.actions %}
           <p>
           {% for action in page.header.actions %}
@@ -115,6 +144,14 @@
         return;
       }
 
+      var programs = document.querySelectorAll('.hero-program[data-meeting-index]');
+
+      function selectProgram(meetingIndex) {
+        for (var programIndex = 0; programIndex < programs.length; programIndex += 1) {
+          programs[programIndex].hidden = Number(programs[programIndex].getAttribute('data-meeting-index')) !== meetingIndex;
+        }
+      }
+
       var meetingList = [];
       var targetList = [];
       var monthNames = [];
@@ -124,11 +161,13 @@
         monthNames = JSON.parse(card.getAttribute('data-month-names') || '[]');
       } catch (e) {
         card.style.display = 'none';
+        selectProgram(-1);
         return;
       }
 
       if (!meetingList.length || meetingList.length !== targetList.length) {
         card.style.display = 'none';
+        selectProgram(-1);
         return;
       }
 
@@ -155,6 +194,7 @@
           if (targetList[i] >= afterTs) {
             return {
               meeting: meetingList[i],
+              index: i,
               targetTs: targetList[i]
             };
           }
@@ -176,10 +216,12 @@
         var nextMeeting = findNextMeeting(Date.now());
         if (!nextMeeting) {
           card.style.display = 'none';
+          selectProgram(-1);
           return false;
         }
 
         targetTs = nextMeeting.targetTs;
+        selectProgram(nextMeeting.index);
         if (dateLabel) {
           dateLabel.textContent = formatMeetingLabel(nextMeeting.meeting);
         }
