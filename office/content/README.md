@@ -2,6 +2,8 @@
 
 Scentralizowany katalog dla wszystkich treści Wroc.NET — emaile i ogłoszenia (LinkedIn, Twitter/X, newsletter, grafiki). Jeden płaski folder, typ i data w nazwie pliku (nie w strukturze folderów).
 
+Archiwizujemy tu treści komunikacji i briefy kampanii, także ich wersje robocze. Nie tworzymy osobnych plików `announcement` dla notatek pomocniczych do prezentacji: audytów danych, treści pojedynczych slajdów ani promptów do ich teł. Materiały prezentacji przechowujemy w `slides/<numer-spotkania>/`; dodatkową dokumentację zapisujemy tylko na wyraźną prośbę.
+
 ## Struktura
 
 ```
