@@ -175,6 +175,7 @@
 - id: jakub-kubrynski
   imie: Jakub
   nazwisko: Kubryński
+  photo: /assets/images/speakers/jakub-kubrynski.jpg
 - id: jaroslaw-stadnicki
   imie: Jarosław
   nazwisko: Stadnicki
@@ -270,6 +271,7 @@
 - id: lukasz-olbromski
   imie: Łukasz
   nazwisko: Olbromski
+  photo: /assets/images/organizers/lukasz-olbromski.jpg
   link: https://twitter.com/lukaszolbromski
 - id: lukasz-panusz
   imie: Łukasz
@@ -277,10 +279,12 @@
 - id: lukasz-pyrzyk
   imie: Łukasz
   nazwisko: Pyrzyk
+  photo: /assets/images/organizers/lukasz-pyrzyk.jpg
   link: https://pyrzyk.net/
 - id: maciej-aniserowicz
   imie: Maciej
   nazwisko: Aniserowicz
+  photo: /assets/images/speakers/maciej-aniserowicz.jpg
   link: http://maciejaniserowicz.com
 - id: maciej-jedrzejewski
   imie: Maciej
@@ -465,6 +469,7 @@
 - id: piotr-gankiewicz
   imie: Piotr
   nazwisko: Gankiewicz
+  photo: /assets/images/speakers/piotr-gankiewicz.jpg
   link: http://piotrgankiewicz.com/blog
 - id: piotr-kaminski
   imie: Piotr

@@ -89,6 +89,7 @@ classes: wide
         {% endcapture %}
   <div class="speaker-card" id="speaker-{{ speaker.id }}" data-speaker-name="{{ speaker.imie }} {{ speaker.nazwisko | downcase }}" data-appearance-count="{{ speaker_appearance_count }}" data-last-date="{{ speaker_last_timestamp }}">
     <div class="speaker-info">
+      <img class="speaker-photo" src="{{ speaker.photo | default: '/assets/images/speakers/placeholder.png' | relative_url }}" alt="{{ speaker.imie | escape }} {{ speaker.nazwisko | escape }}" width="96" height="96" loading="lazy">
       <h3 class="speaker-name">
         {% if speaker.link %}<a href="{{ speaker.link }}" target="_blank" rel="noopener noreferrer">{{ speaker.imie }} {{ speaker.nazwisko }}</a>{% else %}{{ speaker.imie }} {{ speaker.nazwisko }}{% endif %}
       </h3>
@@ -319,6 +320,16 @@ classes: wide
   display: flex;
   flex-direction: column;
   width: 100%;
+  min-width: 0;
+}
+.speaker-photo {
+  display: block;
+  width: 96px;
+  height: 96px;
+  flex-shrink: 0;
+  margin-bottom: 1rem;
+  border-radius: 50%;
+  object-fit: cover;
 }
 .speaker-name {
   margin: 0 0 0.5rem;
