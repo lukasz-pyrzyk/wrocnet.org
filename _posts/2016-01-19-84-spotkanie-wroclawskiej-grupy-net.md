@@ -17,9 +17,12 @@ talks:
 - title: What's new in C# 6
   speaker_ids:
   - jaroslaw-stadnicki
+meetup_attendees: 58
 ---
 
 Miejsce: AIP Business Link, ul. Rzeźnicza 28, Wrocław
+
+{% include attendance.html %}
 
 [Archiwalna strona wydarzenia na Meetup](https://www.meetup.com/wrocnet/events/228002183/)
 

@@ -11,9 +11,12 @@ talks:
 - title: Supermoce PostgreSQL w praktyce
   speaker_ids:
   - oskar-dudycz
+meetup_attendees: 57
 ---
 
 159. spotkanie Wrocławskiej Grupy .NET odbyło się 19.11.2024 r. w **Wędrówki Pub, ul. Podwale 37/38, Wrocław**.
+
+{% include attendance.html %}
 
 {% include talk.html index=0 %}
 

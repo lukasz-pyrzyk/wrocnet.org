@@ -11,9 +11,12 @@ talks:
 - title: Rendering at the edge - sposób na przyspieszenie aplikacji webowych
   speaker_ids:
   - bartek-szczepanski
+meetup_attendees: 33
 ---
 
 152. spotkanie Wrocławskiej Grupy .NET odbyło się 21.03.2023 r. w **Avanade, ul. Piotra Skargi 1, Wrocław**.
+
+{% include attendance.html %}
 
 {% include talk.html index=0 %}
 

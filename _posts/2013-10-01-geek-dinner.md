@@ -5,9 +5,12 @@ categories: spotkania
 tags:
   - inne
 date: 2013-10-01
+meetup_attendees: 7
 ---
 
 Miejsce: Bike Cafe, ul. św. Antoniego 8, Wrocław
+
+{% include attendance.html %}
 
 [Archiwalna strona wydarzenia na Meetup](https://www.meetup.com/wrocnet/events/142175462/)
 

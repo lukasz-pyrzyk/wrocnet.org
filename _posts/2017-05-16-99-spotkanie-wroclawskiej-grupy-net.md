@@ -11,9 +11,12 @@ talks:
 - title: Elm - "no runtime exceptions technology"
   speaker_ids:
   - lukasz-gasior
+meetup_attendees: 68
 ---
 
 [Archiwalna strona wydarzenia na Meetup](https://www.meetup.com/wrocnet/events/239659155/)
+
+{% include attendance.html %}
 
 {% include talk.html index=0 %}
 * Prezentacja: [http://presentations.scooletz.com/KISSS/](http://presentations.scooletz.com/KISSS/)

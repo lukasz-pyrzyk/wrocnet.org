@@ -11,9 +11,12 @@ talks:
 - title: SQL table as a queue - what could go wrong
   speaker_ids:
   - tomek-masternak
+meetup_attendees: 30
 ---
 
 138. spotkanie Wrocławskiej Grupy .NET odbyło się 23.06.2021 r..
+
+{% include attendance.html %}
 
 {% include talk.html index=0 %}
 

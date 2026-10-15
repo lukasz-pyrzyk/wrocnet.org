@@ -11,9 +11,12 @@ talks:
 - title: ServiceStack - .NET alternatywnie
   speaker_ids:
   - lukasz-gasior
+meetup_attendees: 38
 ---
 
 Miejsce: AIP Business Link, ul. Rzeźnicza 28, Wrocław
+
+{% include attendance.html %}
 
 [Archiwalna strona wydarzenia na Meetup](https://www.meetup.com/wrocnet/events/169075072/)
 

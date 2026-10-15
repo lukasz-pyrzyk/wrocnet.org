@@ -11,9 +11,12 @@ talks:
 - title: Nie palcie frameworków!
   speaker_ids:
   - szymon-pobiega
+meetup_attendees: 55
 ---
 
 Miejsce: AIP Business Link, ul. Rzeźnicza 28, Wrocław
+
+{% include attendance.html %}
 
 [Archiwalna strona wydarzenia na Meetup](https://www.meetup.com/wrocnet/events/227167161/)
 

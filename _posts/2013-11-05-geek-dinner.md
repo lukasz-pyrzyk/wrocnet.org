@@ -5,9 +5,12 @@ categories: spotkania
 tags:
   - inne
 date: 2013-11-05
+meetup_attendees: 10
 ---
 
 Miejsce: Globetrotter, ul. Garbary 5, Wrocław
+
+{% include attendance.html %}
 
 [Archiwalna strona wydarzenia na Meetup](https://www.meetup.com/wrocnet/events/144740232/)
 

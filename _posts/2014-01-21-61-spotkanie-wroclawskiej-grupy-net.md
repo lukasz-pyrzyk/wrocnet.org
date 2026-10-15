@@ -11,9 +11,12 @@ talks:
 - title: Zdalna firma
   speaker_ids:
   - andrzej-krzywda
+meetup_attendees: 33
 ---
 
 Miejsce: AIP Business Link, ul. Rzeźnicza 28, Wrocław
+
+{% include attendance.html %}
 
 [Archiwalna strona wydarzenia na Meetup](https://www.meetup.com/wrocnet/events/159200282/)
 

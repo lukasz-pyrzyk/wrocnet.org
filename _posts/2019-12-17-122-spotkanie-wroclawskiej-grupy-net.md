@@ -11,9 +11,12 @@ talks:
 - title: Polly - how to write resilient code in .NET
   speaker_ids:
   - rustam-ashurov
+meetup_attendees: 46
 ---
 
 [Archiwalna strona wydarzenia na Meetup](https://www.meetup.com/wrocnet/events/266952547/)
+
+{% include attendance.html %}
 
 {% include talk.html index=0 %}
 * Prezentacja: wkrótce

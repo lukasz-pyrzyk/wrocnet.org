@@ -8,9 +8,12 @@ talks:
 - title: Making world statically typed with F# Type Providers
   speaker_ids:
   - michal-lusiak
+meetup_attendees: 35
 ---
 
 Miejsce: AIP Business Link, ul. Rzeźnicza 28, Wrocław
+
+{% include attendance.html %}
 
 [Archiwalna strona wydarzenia na Meetup](https://www.meetup.com/wrocnet/events/223225069/)
 

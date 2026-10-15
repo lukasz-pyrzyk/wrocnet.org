@@ -9,9 +9,12 @@ talks:
 - title: Tworzenie klientów mobilnych w oparciu o Sync Framework
   speaker_ids:
   - rafal-legiedz
+meetup_attendees: 11
 ---
 
 Miejsce: Cafe Fika, Wrocław
+
+{% include attendance.html %}
 
 Spotkanie rozpoczęło się o godzinie 18:30. Wyjątkowo nie na Uniwersytecie Wrocławskim - było to pierwsze spotkanie ogłoszone przez portal Meetup, na który grupa właśnie przenosiła swoją działalność.
 

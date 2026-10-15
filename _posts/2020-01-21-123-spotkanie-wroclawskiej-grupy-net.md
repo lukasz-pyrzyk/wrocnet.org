@@ -11,9 +11,12 @@ talks:
 - title: Naukowe podstawy tworzenia kuli błota w kodzie
   speaker_ids:
   - arek-benedykt
+meetup_attendees: 79
 ---
 
 123. spotkanie Wrocławskiej Grupy .NET odbyło się 21.01.2020 r. w **Proza, Przejście Garncarskie 2, Wrocław**.
+
+{% include attendance.html %}
 
 {% include talk.html index=0 %}
 

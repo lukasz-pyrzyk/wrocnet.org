@@ -11,9 +11,12 @@ talks:
 - title: Różne style prowadzenia Code Review w twoim zespole
   speaker_ids:
   - krzysztof-morcinek
+meetup_attendees: 81
 ---
 
 131. spotkanie Wrocławskiej Grupy .NET odbyło się 24.11.2020 r..
+
+{% include attendance.html %}
 
 {% include talk.html index=0 %}
 

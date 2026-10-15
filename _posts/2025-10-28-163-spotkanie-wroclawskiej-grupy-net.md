@@ -11,9 +11,12 @@ talks:
 - title: API z pudełka — czyli czego nie musimy robić, a będzie zrobione
   speaker_ids:
   - grzegorz-wilczura
+meetup_attendees: 78
 ---
 
 163. spotkanie Wrocławskiej Grupy .NET odbyło się 28.10.2025 r. w **Xebia, ul. Sucha 3, Wrocław**.
+
+{% include attendance.html %}
 
 {% include talk.html index=0 %}
 

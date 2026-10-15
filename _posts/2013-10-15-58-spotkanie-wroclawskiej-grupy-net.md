@@ -14,9 +14,12 @@ talks:
 - title: Specification by Example
   speaker_ids:
   - weronika-labaj
+meetup_attendees: 21
 ---
 
 Miejsce: AIP Business Link, ul. Rzeźnicza 28, Wrocław
+
+{% include attendance.html %}
 
 [Archiwalna strona wydarzenia na Meetup](https://www.meetup.com/wrocnet/events/144654822/)
 

@@ -11,9 +11,12 @@ talks:
 - title: Microsoft Cognitive API "Put intelligence APIs to work"
   speaker_ids:
   - pawel-lukasik
+meetup_attendees: 61
 ---
 
 [Archiwalna strona wydarzenia na Meetup](https://www.meetup.com/wrocnet/events/238594125/)
+
+{% include attendance.html %}
 
 {% include talk.html index=0 %}
 * Prezentacja: [pptx](/slides/JSON-SQLServer2016.zip)

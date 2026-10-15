@@ -12,9 +12,12 @@ talks:
   speaker_ids:
   - adam-kamizelich
   - weronika-mularczyk
+meetup_attendees: 18
 ---
 
 145. spotkanie Wrocławskiej Grupy .NET odbyło się 24.05.2022 r..
+
+{% include attendance.html %}
 
 {% include talk.html index=0 %}
 

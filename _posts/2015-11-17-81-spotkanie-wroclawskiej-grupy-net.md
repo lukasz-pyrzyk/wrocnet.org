@@ -11,9 +11,12 @@ talks:
 - title: Własny salon SPA (Single Page Application)
   speaker_ids:
   - bartosz-lenar
+meetup_attendees: 54
 ---
 
 Miejsce: AIP Business Link, ul. Rzeźnicza 28, Wrocław
+
+{% include attendance.html %}
 
 [Archiwalna strona wydarzenia na Meetup](https://www.meetup.com/wrocnet/events/226788960/)
 

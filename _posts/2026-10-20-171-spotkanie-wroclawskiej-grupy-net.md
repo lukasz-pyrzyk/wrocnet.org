@@ -5,6 +5,7 @@ time: "18:00:00"
 categories: spotkania
 tags:
   - offline
+meetup_attendees: 0
 header:
   teaser: /assets/images/spotkania-teaser.jpg
 talks:
@@ -17,6 +18,8 @@ talks:
 ---
 
 171. spotkanie Wrocławskiej Grupy .NET odbędzie się 20.10.2026 r. w **Pubie Wędrówki, ul. Podwale 37/38, 50-040 Wrocław**.
+
+{% include attendance.html %}
 
 > **UWAGA: ZACZYNAMY O 18:00, PÓŁ GODZINY WCZEŚNIEJ NIŻ ZWYKLE!**
 

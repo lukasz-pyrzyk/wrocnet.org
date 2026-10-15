@@ -14,9 +14,12 @@ talks:
 - title: .NET, Alexa and me
   speaker_ids:
   - rafal-hryniewski
+meetup_attendees: 55
 ---
 
 [Archiwalna strona wydarzenia na Meetup](https://www.meetup.com/wrocnet/events/250296388/)
+
+{% include attendance.html %}
 
 {% include talk.html index=0 %}
 * Prezentacja: [SlideShare](https://www.slideshare.net/MarcinTyborowski1/microsoft-flow-108264021)

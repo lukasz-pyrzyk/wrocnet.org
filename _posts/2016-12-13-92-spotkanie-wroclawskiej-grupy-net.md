@@ -11,9 +11,12 @@ talks:
 - title: Is There Any News (pet project)
   speaker_ids:
   - jaroslaw-stadnicki
+meetup_attendees: 84
 ---
 
 [Archiwalna strona wydarzenia na Meetup](https://www.meetup.com/wrocnet/events/234369057/)
+
+{% include attendance.html %}
 
 {% include talk.html index=0 %}
 * Prezentacja: [.pptx](/slides/Optymalizacja_SQL.zip)

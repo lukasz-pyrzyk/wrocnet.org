@@ -14,9 +14,12 @@ talks:
 - title: Wprowadzenie do aplikacji multi-tenant w Azure
   speaker_ids:
   - kacper-swislocki
+meetup_attendees: 87
 ---
 
 [Archiwalna strona wydarzenia na Meetup](https://www.meetup.com/wrocnet/events/266004172/)
+
+{% include attendance.html %}
 
 {% include talk.html index=0 %}
 * Prezentacja: [PDF](/slides/cleanupthismessv3-191120171921.zip)

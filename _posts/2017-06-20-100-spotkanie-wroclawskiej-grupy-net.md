@@ -11,9 +11,12 @@ talks:
 - title: Pamięć w .NET - czyli nie po to kodzę w C# by się tym przejmować
   speaker_ids:
   - grzesiek-siemoniak
+meetup_attendees: 165
 ---
 
 [Archiwalna strona wydarzenia na Meetup](https://www.meetup.com/wrocnet/events/240108521/)
+
+{% include attendance.html %}
 
 {% include talk.html index=0 %}
 * Prezentacja: [slajdy](https://github.com/maklipsa/donetconfpl_tpldataflow)

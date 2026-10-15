@@ -11,9 +11,12 @@ talks:
 - title: Date & Time in C#
   speaker_ids:
   - weronika-sabiniewicz
+meetup_attendees: 35
 ---
 
 139. spotkanie Wrocławskiej Grupy .NET odbyło się 16.11.2021 r..
+
+{% include attendance.html %}
 
 {% include talk.html index=0 %}
 

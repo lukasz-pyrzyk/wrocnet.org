@@ -11,9 +11,12 @@ talks:
 - title: Co nowego w .NET 6?
   speaker_ids:
   - oleg-kyrylchuk
+meetup_attendees: 19
 ---
 
 147. spotkanie Wrocławskiej Grupy .NET odbyło się 20.09.2022 r. w **Avanade, ul. Piotra Skargi 1, Wrocław**.
+
+{% include attendance.html %}
 
 {% include talk.html index=0 %}
 

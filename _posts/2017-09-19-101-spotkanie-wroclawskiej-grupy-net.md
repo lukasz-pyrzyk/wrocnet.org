@@ -11,9 +11,12 @@ talks:
 - title: 'Eden: An F#, reactive, graph-based calculation engine framework for building UI Tools'
   speaker_ids:
   - artur-tadrala
+meetup_attendees: 71
 ---
 
 [Archiwalna strona wydarzenia na Meetup](https://www.meetup.com/wrocnet/events/242593966/)
+
+{% include attendance.html %}
 
 {% include talk.html index=0 %}
 * Wideo: {% include video id="EcWfr2gS1C8" provider="youtube" %}

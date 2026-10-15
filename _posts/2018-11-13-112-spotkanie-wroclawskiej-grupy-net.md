@@ -11,9 +11,12 @@ talks:
 - title: CI / CD – Co to? Po co? Jak?
   speaker_ids:
   - jerzy-wickowski
+meetup_attendees: 65
 ---
 
 [Archiwalna strona wydarzenia na Meetup](https://www.meetup.com/wrocnet/events/255976365/)
+
+{% include attendance.html %}
 
 {% include talk.html index=0 %}
 * Prezentacja: wkrótce

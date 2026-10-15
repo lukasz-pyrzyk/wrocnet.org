@@ -11,9 +11,12 @@ talks:
 - title: Testowanie scenariuszy wielowątkowych w .NET
   speaker_ids:
   - maciej-aniserowicz
+meetup_attendees: 139
 ---
 
 Miejsce: Instytut Informatyki Uniwersytetu Wrocławskiego, ul. Joliot-Curie 15, Wrocław
+
+{% include attendance.html %}
 
 [Archiwalna strona wydarzenia na Meetup](https://www.meetup.com/wrocnet/events/237956677/)
 

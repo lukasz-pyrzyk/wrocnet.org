@@ -8,9 +8,12 @@ talks:
 - title: Mikro-serwisy
   speaker_ids:
   - adrian-ciura
+meetup_attendees: 54
 ---
 
 Miejsce: Pub Włodkowica 21, ul. Włodkowica 21, Wrocław
+
+{% include attendance.html %}
 
 [Archiwalna strona wydarzenia na Meetup](https://www.meetup.com/wrocnet/events/222466573/)
 

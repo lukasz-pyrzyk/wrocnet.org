@@ -11,9 +11,12 @@ talks:
 - title: Domain modelling w C# i F#
   speaker_ids:
   - marcin-kern
+meetup_attendees: 27
 ---
 
 144. spotkanie Wrocławskiej Grupy .NET odbyło się 26.04.2022 r..
+
+{% include attendance.html %}
 
 {% include talk.html index=0 %}
 

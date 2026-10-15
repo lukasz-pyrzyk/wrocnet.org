@@ -5,9 +5,12 @@ categories: spotkania
 tags:
   - inne
 date: 2014-01-07
+meetup_attendees: 10
 ---
 
 Miejsce: Bike Cafe, ul. św. Antoniego 8, Wrocław
+
+{% include attendance.html %}
 
 [Archiwalna strona wydarzenia na Meetup](https://www.meetup.com/wrocnet/events/155126272/)
 

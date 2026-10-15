@@ -11,9 +11,12 @@ talks:
 - title: Code Crime Scene
   speaker_ids:
   - pawel-klimczyk
+meetup_attendees: 64
 ---
 
 [Archiwalna strona wydarzenia na Meetup](https://www.meetup.com/wrocnet/events/234445398/)
+
+{% include attendance.html %}
 
 {% include talk.html index=0 %}
 * Prezentacja: [reveal.js (zip)](/slides/graphql.zip)

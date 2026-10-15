@@ -11,9 +11,12 @@ talks:
 - title: Asynchroniczny C#, ewolucja, pułapki, mechanizmy
   speaker_ids:
   - cezary-walenciuk
+meetup_attendees: 45
 ---
 
 129. spotkanie Wrocławskiej Grupy .NET odbyło się 22.09.2020 r..
+
+{% include attendance.html %}
 
 {% include talk.html index=0 %}
 

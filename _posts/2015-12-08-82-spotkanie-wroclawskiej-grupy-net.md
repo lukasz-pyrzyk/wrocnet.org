@@ -9,9 +9,12 @@ talks:
   speaker_ids:
   - dan-hanan
   - tim-huckaby
+meetup_attendees: 46
 ---
 
 Miejsce: AIP Business Link, ul. Rzeźnicza 28, Wrocław
+
+{% include attendance.html %}
 
 [Archiwalna strona wydarzenia na Meetup](https://www.meetup.com/wrocnet/events/226699332/)
 

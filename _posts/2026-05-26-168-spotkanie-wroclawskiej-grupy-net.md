@@ -11,9 +11,12 @@ talks:
 - title: 'AI-driven SDLC: mniej pisania kodu, więcej decyzji'
   speaker_ids:
   - lukasz-olbromski
+meetup_attendees: 65
 ---
 
 168. spotkanie Wrocławskiej Grupy .NET odbyło się 26.05.2026 r. w **Sente, Budynek Quattro Forum ul. Legnicka 51-53, Wrocław**.
+
+{% include attendance.html %}
 
 {% include talk.html index=0 %}
 

@@ -11,9 +11,12 @@ talks:
 - title: Mikromonolit kontra makroserwis 2020
   speaker_ids:
   - bartosz-kuczynski
+meetup_attendees: 94
 ---
 
 127. spotkanie Wrocławskiej Grupy .NET odbyło się 19.05.2020 r..
+
+{% include attendance.html %}
 
 {% include talk.html index=0 %}
 

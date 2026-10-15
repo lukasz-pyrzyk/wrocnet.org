@@ -11,9 +11,12 @@ talks:
 - title: 'Dwa oblicza szybkości: czyli jak i dlaczego łączyć C++ z C#'
   speaker_ids:
   - zygfryd-wieszok
+meetup_attendees: 89
 ---
 
 [Archiwalna strona wydarzenia na Meetup](https://www.meetup.com/wrocnet/events/254383905/)
+
+{% include attendance.html %}
 
 {% include talk.html index=0 %}
 * Prezentacja: wkrótce

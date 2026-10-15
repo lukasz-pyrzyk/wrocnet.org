@@ -4,6 +4,7 @@ title: '75\. spotkanie Wroc.NET - CQRS w trzech odsłonach (Gutkowski, Aniserowi
 date: 2015-03-11
 tags:
   - offline
+meetup_attendees: 158
 talks:
 - title: CQRS – moje własne podejście
   speaker_ids:
@@ -19,6 +20,8 @@ talks:
 Miejsce: Pub Włodkowica 21, ul. Włodkowica 21, Wrocław
 
 [Archiwalna strona wydarzenia na Meetup](https://www.meetup.com/wrocnet/events/220582435/)
+
+{% include attendance.html %}
 
 {% include talk.html index=0 %}
 * Prezentacja: [PDF](/slides/Jakub_Gutkowski_CQRS.zip)

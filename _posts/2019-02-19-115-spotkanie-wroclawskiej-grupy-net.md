@@ -11,9 +11,12 @@ talks:
 - title: Fabryka mikroserwisów w praktyce, czyli o Azure Service Fabric
   speaker_ids:
   - krzysztof-seroka
+meetup_attendees: 92
 ---
 
 [Archiwalna strona wydarzenia na Meetup](https://www.meetup.com/wrocnet/events/258708692/)
+
+{% include attendance.html %}
 
 {% include talk.html index=0 %}
 * Prezentacja: [PDF](/slides/How_to_improve_software_development_proces_with_roslyn.zip)

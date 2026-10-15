@@ -11,9 +11,12 @@ talks:
 - title: Z OOP do Functional na przykładzie F#
   speaker_ids:
   - michal-franc
+meetup_attendees: 47
 ---
 
 Miejsce: AIP Business Link, ul. Rzeźnicza 28, Wrocław
+
+{% include attendance.html %}
 
 [Archiwalna strona wydarzenia na Meetup](https://www.meetup.com/wrocnet/events/219072860/)
 

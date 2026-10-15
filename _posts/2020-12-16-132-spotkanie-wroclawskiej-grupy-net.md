@@ -11,9 +11,12 @@ talks:
 - title: Keep calm and Serilog Elasticsearch Kibana on .NET Core
   speaker_ids:
   - maciej-szymczyk
+meetup_attendees: 45
 ---
 
 132. spotkanie Wrocławskiej Grupy .NET odbyło się 16.12.2020 r..
+
+{% include attendance.html %}
 
 {% include talk.html index=0 %}
 

@@ -11,9 +11,12 @@ talks:
 - title: Cockroach DB
   speaker_ids:
   - mateusz-abramczyk
+meetup_attendees: 20
 ---
 
 146. spotkanie Wrocławskiej Grupy .NET odbyło się 21.06.2022 r..
+
+{% include attendance.html %}
 
 {% include talk.html index=0 %}
 

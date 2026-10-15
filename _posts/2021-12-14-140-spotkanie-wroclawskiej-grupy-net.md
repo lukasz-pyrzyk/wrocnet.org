@@ -11,9 +11,12 @@ talks:
 - title: IoT + skalowanie się przez użycie N subskrypcji w Azure
   speaker_ids:
   - grzegorz-godlewski
+meetup_attendees: 53
 ---
 
 140. spotkanie Wrocławskiej Grupy .NET odbyło się 14.12.2021 r..
+
+{% include attendance.html %}
 
 {% include talk.html index=0 %}
 

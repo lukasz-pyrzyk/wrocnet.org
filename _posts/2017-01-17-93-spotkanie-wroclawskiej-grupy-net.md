@@ -14,9 +14,12 @@ talks:
 - title: Learning new language/framework
   speaker_ids:
   - pawel-klimczyk
+meetup_attendees: 63
 ---
 
 [Archiwalna strona wydarzenia na Meetup](https://www.meetup.com/wrocnet/events/236795560/)
+
+{% include attendance.html %}
 
 {% include talk.html index=0 %}
 * Prezentacja: [OzCode.pdf](/slides/OzCode.zip)

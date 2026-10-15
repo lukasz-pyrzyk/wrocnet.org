@@ -14,9 +14,12 @@ talks:
 - title: WebSharper - aplikacje webowe w F#
   speaker_ids:
   - adrian-ciura
+meetup_attendees: 44
 ---
 
 Miejsce: Szklarnia, ul. Ofiar Oświęcimskich 19, Wrocław
+
+{% include attendance.html %}
 
 [Archiwalna strona wydarzenia na Meetup](https://www.meetup.com/wrocnet/events/225266622/)
 

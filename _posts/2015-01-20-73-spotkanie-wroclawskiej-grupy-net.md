@@ -11,9 +11,12 @@ talks:
 - title: Co nowego w ASP.NET vNext
   speaker_ids:
   - lukasz-gasior
+meetup_attendees: 41
 ---
 
 Miejsce: AIP Business Link, ul. Rzeźnicza 28, Wrocław
+
+{% include attendance.html %}
 
 [Archiwalna strona wydarzenia na Meetup](https://www.meetup.com/wrocnet/events/219754815/)
 

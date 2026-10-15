@@ -11,9 +11,12 @@ talks:
 - title: Unit testing w .NET
   speaker_ids:
   - maciej-jedrzejewski
+meetup_attendees: 73
 ---
 
 Miejsce: AIP Business Link, ul. Rzeźnicza 28, Wrocław
+
+{% include attendance.html %}
 
 [Archiwalna strona wydarzenia na Meetup](https://www.meetup.com/wrocnet/events/228558857/)
 

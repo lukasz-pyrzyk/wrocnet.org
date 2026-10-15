@@ -11,9 +11,12 @@ talks:
 - title: Azure DevOps – budowanie i wdrażanie aplikacji w środowisku Azure
   speaker_ids:
   - michal-jankowski
+meetup_attendees: 53
 ---
 
 134. spotkanie Wrocławskiej Grupy .NET odbyło się 23.02.2021 r..
+
+{% include attendance.html %}
 
 {% include talk.html index=0 %}
 

@@ -11,9 +11,12 @@ talks:
 - title: Transition from Event Storming to Event Modeling
   speaker_ids:
   - daniel-kowalski
+meetup_attendees: 41
 ---
 
 158. spotkanie Wrocławskiej Grupy .NET odbyło się 28.05.2024 r. w **Avanade, ul. Piotra Skargi 1, Wrocław**.
+
+{% include attendance.html %}
 
 {% include talk.html index=0 %}
 

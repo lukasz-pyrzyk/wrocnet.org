@@ -11,9 +11,12 @@ talks:
 - title: Czy można zbudować Proof of Concept rozproszonego systemu wykonywania zadań w godzinę?
   speaker_ids:
   - marcin-skrobiranda
+meetup_attendees: 92
 ---
 
 [Archiwalna strona wydarzenia na Meetup](https://www.meetup.com/wrocnet/events/246444014/)
+
+{% include attendance.html %}
 
 {% include talk.html index=0 %}
 * Prezentacja: wkrótce
