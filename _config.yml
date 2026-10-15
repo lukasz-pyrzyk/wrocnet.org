@@ -93,8 +93,10 @@ future: true
 
 permalink: /:year/:month/:day/:title/
 
-paginate: 10
-paginate_path: /page:num/
+# NOTE: no `paginate` key on purpose. index.html is a splash page that never
+# reads `paginator`, so pagination only produced /page2/, /page3/, ... as
+# duplicates of the homepage. The full meeting list lives at /spotkania/.
+# GitHub Pages always loads jekyll-paginate; without this key it stays idle.
 
 include:
   - _pages
@@ -117,7 +119,6 @@ exclude:
   - .github
 
 plugins:
-  - jekyll-paginate
   - jekyll-sitemap
   - jekyll-gist
   - jekyll-feed
@@ -155,3 +156,8 @@ defaults:
     values:
       layout: single
       author_profile: true
+  # Archived sponsor/schedule files from 2019, kept for old links only.
+  - scope:
+      path: "assets/offer"
+    values:
+      sitemap: false
