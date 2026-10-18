@@ -434,10 +434,10 @@ s << picture(20, gankiewicz_rid, 9.20, 4.45, 0.95, 0.95, "Piotr Gankiewicz - pan
 s << picture(18, olbromski_rid, 10.30, 4.45, 0.95, 0.95, "Łukasz Olbromski - panel", round: true)
 s << picture(19, pyrzyk_rid, 11.40, 4.45, 0.95, 0.95, "Łukasz Pyrzyk - panel", round: true)
 s << text(10, "Piotr Gankiewicz", 0.78, 1.90, 8.20, 0.60, size: 29, color: COLORS[:violet], bold: true)
-s << text(11, "Temat: TBD", 0.78, 2.62, 11.50, 0.46, size: 22, color: COLORS[:muted])
+s << text(11, "Ultra-wydajność -\ngdy liczy się każda mikrosekunda", 0.78, 2.50, 8.20, 0.85, size: 22, color: COLORS[:muted])
 s << line(12, 0.78, 3.43, 12.24, 3.43)
 s << text(13, "PANEL DYSKUSYJNY", 0.78, 3.75, 11.50, 0.35, size: 13, color: COLORS[:signal], bold: true)
-s << text(14, "Przyszłość .NET, Rust i AI", 0.78, 4.28, 8.20, 0.70, size: 30, bold: true)
+s << text(14, "Kiedy .NET wystarcza,\na kiedy warto wyjść poza niego?", 0.78, 4.12, 8.20, 0.85, size: 24, bold: true)
 s << text(15, "Piotr Gankiewicz · Łukasz Olbromski\nŁukasz Pyrzyk", 0.78, 5.05, 8.20, 0.80, size: 20, color: COLORS[:violet], bold: true)
 s << text(16, "+ uczestnicy spotkania", 0.78, 5.82, 11.50, 0.43, size: 21, color: COLORS[:muted])
 slides << [slide_xml(s), slide_images]
