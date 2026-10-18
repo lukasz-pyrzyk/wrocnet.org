@@ -420,8 +420,6 @@ s << picture(25, aniserowicz_rid, 10.10, 4.55, 0.95, 0.95, "Maciej Aniserowicz -
 s << picture(26, kubrynski_rid, 11.25, 4.55, 0.95, 0.95, "Jakub Kubryński - panel", round: true)
 s << text(27, "21:00", 0.78, 5.65, 1.20, 0.45, size: 20, color: COLORS[:violet], bold: true)
 s << text(19, "After party", 2.10, 5.65, 9.90, 0.45, size: 22, color: COLORS[:violet], bold: true)
-s << text(28, "22:00+", 0.78, 6.25, 1.20, 0.45, size: 20, color: COLORS[:violet], bold: true)
-s << text(20, "After party after party ;)", 2.10, 6.25, 9.90, 0.45, size: 22, color: COLORS[:violet], bold: true)
 slides << [slide_xml(s), slide_images]
 
 s = base(14, "172. spotkanie · 17 listopada 2026 · 18:30", "Następne spotkanie Wroc.NET")
