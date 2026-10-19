@@ -66,6 +66,9 @@ Styl:
 
 Preferuj krótkie akapity i proste zdania. Nie dodawaj długiego wstępu ani komentarza, jeśli użytkownik prosi o gotową treść.
 
+- Nie używaj podwójnych spacji w tworzonych treściach, także na końcu wiersza jako znacznika łamania linii Markdown.
+- Zamiast półpauzy i pauzy używaj zwykłego łącznika `-`.
+
 ## Identyfikacja wizualna
 
 Wroc.NET powinien być kojarzony z:
