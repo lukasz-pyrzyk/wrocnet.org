@@ -2,17 +2,35 @@
 
 **Context:** Wroc.NET | rozpoznawalność we Wrocławiu | roboczy plan kontaktu z lokalnymi mediami
 **Status:** draft
-**Channel:** Email / portale lokalne / radio
+**Channel:** Email / portale lokalne / radio / telewizja / instytucje publiczne
 
 ---
 
 ## Cel i zakres
 
-Zwiększyć rozpoznawalność Wroc.NET we Wrocławiu i dotrzeć do nowych uczestników spotkań. Szukamy partnerów medialnych, a nie finansowania wydarzenia.
+Zwiększyć rozpoznawalność Wroc.NET we Wrocławiu i dotrzeć do nowych uczestników spotkań. Szukamy partnerów medialnych i instytucjonalnych oraz publikacji redakcyjnych, a nie finansowania wydarzenia. Działamy bez budżetu na płatną promocję.
 
 Punktem wyjścia do rozmowy jest patronat nad trzema kolejnymi spotkaniami, z możliwością kontynuacji. To propozycja do uzgodnienia, nie podjęte zobowiązanie. Jeśli redakcja woli zacząć od jednej zapowiedzi, traktujemy to jako pierwszy krok.
 
-Ten dokument jest wewnętrzną listą roboczą. Wszystkie sześć maili zostało wysłanych 19.10.2026 (potwierdzenie Łukasza); partnerstwa nie zostały jeszcze uzgodnione. Czekamy na odpowiedzi.
+Ten dokument jest wewnętrzną listą roboczą. Wszystkie piętnaście maili zostało wysłanych 19.10.2026 (potwierdzenie Łukasza); partnerstwa nie zostały jeszcze uzgodnione. Obie rundy wysyłek zakończone, czekamy na odpowiedzi. Zapytania do instytucji wymagających formularzy nie stanowią formalnych wniosków o patronat.
+
+## Plan na dziś - 19.10.2026
+
+Cel: przejść całą kolejkę 7-15, sprawdzić oficjalne kontakty, przygotować dopasowane wiadomości i przekazywać je Łukaszowi do wysyłki pojedynczo. Nie odkładamy instytucji publicznych na osobny etap.
+
+- [x] Wysłać pierwszych sześć propozycji.
+- [ ] Radio Wrocław / RAM - przygotować następny mail na potwierdzony adres.
+- [ ] Akademicki Wrocław / Wrocławskie Centrum Akademickie - znaleźć właściwy kontakt i zaproponować dotarcie do studentów.
+- [ ] Przedsiębiorczy Wrocław / ARAW - znaleźć kontakt do zespołu gospodarczego lub technologicznego, nie powielać maila do redakcji.
+- [ ] Echo24 i TVP3 Wrocław - sprawdzić kontakty i osobno zaproponować temat do rozmowy lub materiału.
+- [ ] Gazeta Wrocławska i Wrocław Nasze Miasto - sprawdzić kontakty oraz wspólną obsługę, jeśli występuje; nie dublować identycznego zgłoszenia.
+- [ ] Urząd Marszałkowski - ustalić kontakt do promocji / gospodarki / innowacji, wysłać propozycję współpracy promocyjnej.
+- [ ] Dolnośląski Urząd Wojewódzki - ustalić właściwy kontakt i zapytać o dostępne formy wsparcia informacyjnego.
+- [ ] Po każdej potwierdzonej wysyłce zapisać datę, adres i plik wiadomości w rejestrze.
+
+Zakończenie dzisiejszej rundy oznacza wysłane zgłoszenia lub jawnie zapisany konkretny blocker i sposób jego rozwiązania, nie uzyskane patronaty. Jeśli adresu nie da się potwierdzić, sprawdzamy oficjalny formularz lub telefon do sekretariatu; nie zgadujemy adresów.
+
+Nie prosimy o pilną promocję pełnej sali na 20 października. Rekord zapisów jest punktem zaczepienia do rozmowy o społeczności i kolejnych wydarzeniach. Piszemy o rekordzie w 18-letniej historii grupy, nie o stażu Łukasza.
 
 ## Jak pracujemy
 
@@ -34,6 +52,15 @@ Ten dokument jest wewnętrzną listą roboczą. Wszystkie sześć maili zostało
 | 4 | Radio LUZ | Wysłany | 2026-10-19 - [mail](2026-10-19-email-patronat-radio-luz.md) | Oczekujemy na odpowiedź; jeśli jej nie będzie, przypomnienie 28.10-02.11.2026 |
 | 5 | Miejsca we Wrocławiu | Wysłany | 2026-10-19 - [mail](2026-10-19-email-patronat-miejsca-we-wroclawiu.md) | Oczekujemy na odpowiedź; jeśli jej nie będzie, przypomnienie 28.10-02.11.2026 |
 | 6 | tuWrocław.com | Wysłany | 2026-10-19 - [mail](2026-10-19-email-patronat-tuwroclaw.md) | Oczekujemy na odpowiedź; jeśli jej nie będzie, przypomnienie 28.10-02.11.2026 |
+| 7 | Radio Wrocław | Wysłany | 2026-10-19 - [mail](2026-10-19-email-patronat-radio-wroclaw.md) | Oczekujemy na odpowiedź; przypomnienie przy jej braku 28.10-02.11.2026 |
+| 8 | Akademicki Wrocław / Wrocławskie Centrum Akademickie | Wysłany | 2026-10-19 - [mail](2026-10-19-email-partnerstwo-wca.md) | Oczekujemy na odpowiedź; przypomnienie przy jej braku 28.10-02.11.2026 |
+| 9 | Przedsiębiorczy Wrocław / ARAW | Wysłany | 2026-10-19 - [mail](2026-10-19-email-partnerstwo-araw.md) | Oczekujemy na odpowiedź; przypomnienie przy jej braku 28.10-02.11.2026 |
+| 10 | Echo24 | Wysłany | 2026-10-19 - [mail](2026-10-19-email-partnerstwo-echo24.md) | Oczekujemy na odpowiedź; przypomnienie przy jej braku 28.10-02.11.2026 |
+| 11 | TVP3 Wrocław | Wysłany | 2026-10-19 - [mail](2026-10-19-email-partnerstwo-tvp3-wroclaw.md) | Oczekujemy na odpowiedź na zapytanie; nie złożono formalnego wniosku |
+| 12 | Gazeta Wrocławska | Wysłany | 2026-10-19 - [mail](2026-10-19-email-partnerstwo-gazeta-wroclawska.md) | Oczekujemy na odpowiedź, w tym w sprawie Naszego Miasta |
+| 13 | Wrocław Nasze Miasto | Wysłany | 2026-10-19 - [mail](2026-10-19-email-patronat-nasze-miasto.md) | Oczekujemy na potwierdzenie dostępności bezpłatnego wariantu; kontakt: reklama.wroclaw@polskapress.pl |
+| 14 | Urząd Marszałkowski Województwa Dolnośląskiego | Wysłany | 2026-10-19 - [mail](2026-10-19-email-partnerstwo-umwd.md) | Oczekujemy na odpowiedź na zapytanie; nie złożono formalnego wniosku |
+| 15 | Dolnośląski Urząd Wojewódzki | Wysłany | 2026-10-19 - [mail](2026-10-19-email-partnerstwo-duw.md) | Oczekujemy na odpowiedź na zapytanie, w tym o zgodność formuły partnerskiej; nie złożono formalnego wniosku |
 
 Statusy do używania: do przygotowania → szkic → zaakceptowany → wysłany → rozmowa / uzgodnione / odmowa / brak odpowiedzi.
 
@@ -121,6 +148,96 @@ Stałe linki:
 - **Co przygotować:** temat interesujący mieszkańców, komplet danych spotkania, zdjęcia i osobę do wypowiedzi.
 - **Co ustalić:** właściwy kontakt redakcyjny, możliwość bezpłatnej publikacji, ewentualna osobna oferta komercyjna i wymagania patronatu.
 
+## 7. Radio Wrocław / Radio RAM
+
+- **Strona:** https://www.radiowroclaw.pl/
+- **Oficjalny Dział Promocji:** https://www.radiowroclaw.pl/articles/view/59873/Promocja
+- **Kontakt:** promocja@radiowroclaw.pl.
+- **Osoba wskazana przy patronatach:** Martyna Niewójt, martynaniewojt@radiowroclaw.pl.
+- **Stan rozpoznania, 19.10.2026:** adresy odczytane z oficjalnej strony. Dział obsługuje Radio Wrocław, Radio RAM i Radio Wrocław Kultura. Nie potwierdzono przyjęcia Wroc.NET ani bezpłatnego zakresu.
+- **Dziś:** jeden mail do promocji z pytaniem o właściwą antenę i patronat nad cyklem. Nie wysyłamy równolegle tej samej wiadomości do każdej anteny i osoby.
+- **O co prosimy:** zapowiedzi, rozmowę z Łukaszem o społeczności oraz współpracę przy kolejnych spotkaniach.
+- **Temat redakcyjny:** rekord zainteresowania bezpłatnym spotkaniem o praktycznym AI i ludzie tworzący wrocławską społeczność IT.
+- **Co przygotować:** krótki opis, agenda, aktualny stan zapisów, dostępność Łukasza do rozmowy; ewentualny udział prelegenta tylko po jego zgodzie.
+- **Co ustalić:** antena, format i terminy, zakres promocji wzajemnej, brak opłat. Rozmowa redakcyjna nie jest gwarantowaną reklamą.
+
+## 8. Akademicki Wrocław / Wrocławskie Centrum Akademickie
+
+- **Oficjalne punkty wejścia:** https://www.wroclaw.pl/akademicki-wroclaw/ oraz https://www.wroclaw.pl/akademicki-wroclaw/wroclawskie-centrum-akademickie
+- **Kontakt:** bwu@um.wroc.pl - sekretariat Biura Współpracy z Uczelniami Wyższymi, potwierdzony 19.10.2026 na oficjalnej stronie WCA.
+- **Stan rozpoznania, 19.10.2026:** potwierdzono kontakt; możliwość promocji Wroc.NET wymaga uzgodnienia.
+- **Dziś:** ustalić kontakt i wysłać propozycję dotarcia do studentów przez dostępne kanały akademickie.
+- **O co prosimy:** przekazywanie zapowiedzi uczelniom i kołom naukowym, publikacje w kanałach akademickich, wskazanie możliwości długofalowej współpracy.
+- **Co przygotować:** przystępny opis, informację o bezpłatnym udziale i poziomie konkretnych prelekcji. Nie obiecywać, że każdy temat jest dla początkujących.
+- **Co ustalić:** dostępne kanały, właściwy odbiorca, format i terminy; nie zakładać dostępu do uczelnianych mailingów.
+
+## 9. Przedsiębiorczy Wrocław / ARAW
+
+- **Oficjalny punkt wejścia:** https://www.wroclaw.pl/przedsiebiorczy-wroclaw/
+- **Kontakt:** office@invest-in-wroclaw.pl - Centrum Wspierania Biznesu, potwierdzony 19.10.2026 na https://araw.pl/kontakt. Kontakt odrębny od redakcji wroclaw.pl.
+- **Stan rozpoznania, 19.10.2026:** potwierdzono adres zespołu; możliwości promocji Wroc.NET wymagają uzgodnienia.
+- **Dziś:** znaleźć osobę zajmującą się ekosystemem technologicznym lub gospodarczym. Sprawdzić, czy zgłoszenie do redakcji wroclaw.pl nie trafiło już do tego samego odbiorcy.
+- **O co prosimy:** współpracę informacyjną i przekazywanie zapowiedzi lokalnym firmom oraz społecznościom technologicznym.
+- **Co przygotować:** opis praktycznej edukacji, wymiany wiedzy i rozwoju lokalnych kompetencji, propozycję regularnego dostarczania materiałów.
+- **Co ustalić:** właściwy zespół i dostępne kanały; nie przedstawiać tych możliwości jako istniejącej oferty partnerstwa.
+
+## 10. Echo24
+
+- **Strona i kontakt:** https://echo24.tv/ oraz https://echo24.tv/kontakt/
+- **Kontakt newsroomu:** redakcja@echo24.tv - potwierdzony 19.10.2026 na oficjalnej stronie kontaktowej.
+- **Stan rozpoznania:** kontakt potwierdzony; zasady współpracy i zainteresowanie tematem niepotwierdzone.
+- **Dziś:** sprawdzić oficjalną stronę kontaktową i wysłać propozycję rozmowy lub materiału o lokalnej społeczności IT.
+- **O co prosimy:** zainteresowanie redakcyjne, rozmowę z organizatorem, ewentualne regularne zapowiedzi lub partnerstwo.
+- **Co przygotować:** krótki temat zrozumiały poza IT, aktualne liczby zapisów, dostępność rozmówcy i zdjęcia z prawami do publikacji.
+- **Co ustalić:** zainteresowanie, format i terminy. Oddzielić bezpłatny materiał redakcyjny od komercyjnej oferty.
+
+## 11. TVP3 Wrocław
+
+- **Punkt wejścia do weryfikacji:** https://wroclaw.tvp.pl/
+- **Kontakt do patronatów:** Robert Chmielewski, robert.chmielewski@tvp.pl - potwierdzony 19.10.2026 na https://wroclaw.tvp.pl/1628017/jak-zdobyc-patronat-tvp3-wroclaw.
+- **Procedura:** pismo do dyrektora, opis wydarzenia na formularzu i oświadczenie dotyczące abonamentu RTV; komplet co najmniej cztery tygodnie przed wydarzeniem, rozpatrzenie do 10 dni roboczych.
+- **Stan rozpoznania:** kontakt i procedura potwierdzone. Najpierw pytamy o cykl i bezpłatny zakres; mail wstępny nie zastępuje formalnego wniosku.
+- **Dziś:** ustalić oficjalny kontakt do redakcji i zaproponować lokalny temat o społeczności oraz praktycznym AI.
+- **O co prosimy:** rozmowę lub materiał o ludziach z wrocławskiego IT; możliwość dalszej współpracy informacyjnej.
+- **Co przygotować:** temat, rozmówcę, fakty i materiały wizualne. Dostęp ekipy na wydarzenie wymaga ustalenia z lokalem i poszanowania preferencji uczestników.
+- **Co ustalić:** redakcję, format, terminy oraz ewentualną osobną procedurę patronatu. Nie obiecywać stacji wyłączności.
+
+## 12-13. Gazeta Wrocławska / Wrocław Nasze Miasto
+
+- **Punkty wejścia do weryfikacji:** https://gazetawroclawska.pl/ oraz https://wroclaw.naszemiasto.pl/
+- **Archiwalna strona wskazana przez Łukasza:** https://gazetawroclawska.pl/organizujesz-wydarzenie-i-szukasz-patrona-medialnego-zglos-sie-do-nas-a-wesprzemy-twoje-dzialania/ar/c15-14359375. Według Łukasza to stara strona; nie traktować jej jako potwierdzenia aktualnych warunków ani kontaktu. Próba odczytu 19.10.2026 również zakończyła się HTTP 403.
+- **Kontakt Gazety Wrocławskiej:** redakcja@gazeta.wroc.pl - potwierdzony przez Łukasza 19.10.2026 jako adres w stopce.
+- **Strona patronatu Naszego Miasta wskazana przez Łukasza:** https://wroclaw.naszemiasto.pl/organizujesz-wydarzenie-zglos-sie-do-nas-po-patronat/ar/c1-9761545. Artykuł z 26.07.2024; treść wklejona przez Łukasza 19.10.2026 po zablokowanym odczycie (403).
+- **Kontakt regionalny Naszego Miasta według artykułu:** reklama.wroclaw@polskapress.pl; koordynatorka Barbara Jura-Kadłubowska, tel. 514 800 969. Aktualność obsługi wymaga potwierdzenia.
+- **Bezpłatny wariant według artykułu:** zapowiedź na podstawie materiałów prasowych, informacja w przeglądzie wydarzeń i oznaczenie „Poleca NAM Naszemiasto.pl”. Pytamy o dostępność tej opcji; nie zamawiamy płatnych pakietów i nie zakładamy świadczeń z ich zakresu.
+- **Stan rozpoznania:** kontakt Gazety potwierdzony przez Łukasza; kontakt Naszego Miasta, wspólna obsługa i bezpłatne możliwości nadal wymagają sprawdzenia. Próby odczytu stron obu redakcji oraz kontaktu i profilu tytułu u wydawcy zakończyły się HTTP 403 (19.10.2026).
+- **Dziś:** sprawdzić kontakty obu redakcji. Jeśli obsługuje je jedna osoba, wysłać jedno dopasowane zgłoszenie z pytaniem o publikację w obu kanałach; odnotować wspólną wysyłkę w obu wierszach.
+- **O co prosimy:** materiał o lokalnej społeczności i zapowiedzi kolejnych wydarzeń, opcjonalnie patronat nad cyklem.
+- **Co przygotować:** przystępny opis, temat AI wynikający z faktycznej agendy, zdjęcia, linki i kontakt do rozmówcy.
+- **Co ustalić:** publikacje redakcyjne a oferta płatna; samo otrzymanie cennika nie oznacza uzgodnienia współpracy.
+
+## 14. Urząd Marszałkowski Województwa Dolnośląskiego
+
+- **Strona:** https://umwd.dolnyslask.pl/
+- **Oficjalna ścieżka patronatów honorowych:** https://umwd.dolnyslask.pl/urzad/dokumenty-promocyjne/patronaty-honorowe/dokumenty-do-pobrania/
+- **Kontakt ds. patronatów:** patronaty@dolnyslask.pl - potwierdzony 19.10.2026 na oficjalnej stronie.
+- **Stan rozpoznania, 19.10.2026:** potwierdzono procedurę: wniosek standardowo dwa miesiące przed wydarzeniem, w uzasadnionych przypadkach później; powiadomienie o decyzji do 30 dni od złożenia. Najpierw pytamy o cykl i właściwy zespół do promocji.
+- **Dziś:** znaleźć kontakt do promocji, gospodarki lub innowacji i wysłać propozycję współpracy informacyjnej.
+- **O co prosimy:** publikacje w regionalnych kanałach i przekazywanie zapowiedzi środowiskom technologicznym. Zapytać, czy patronat nad cyklem jest właściwą ścieżką.
+- **Co przygotować:** opis społeczności i wartości edukacyjnej, zakres cyklu, materiały i dane organizatora wymagane przez aktualną procedurę.
+- **Co ustalić:** konkretne wsparcie promocyjne, formalności i terminy. Patronat honorowy nie gwarantuje publikacji ani prawa do dowolnego użycia logo.
+
+## 15. Dolnośląski Urząd Wojewódzki
+
+- **Oficjalny punkt wejścia:** https://www.gov.pl/web/dolnoslaski-uw
+- **Kontakt:** patronat@duw.pl - potwierdzony 19.10.2026 na https://www.gov.pl/web/dolnoslaski-uw/patronat-wojewody---zasady-przyznawania.
+- **Stan rozpoznania:** kontakt i procedura potwierdzone; dopasowanie inicjatywy wymaga uzgodnienia. Wniosek minimum 30 dni przed wydarzeniem, dla przedsięwzięć cyklicznych każdorazowo. Wyjaśnić zapisy o promocji firm w kontekście obecnych partnerów Wroc.NET.
+- **Dziś:** sprawdzić oficjalny kontakt do komunikacji / biura wojewody i skierować zapytanie o właściwą formę wsparcia informacyjnego.
+- **O co prosimy:** wskazanie możliwości promocji otwartych działań edukacyjnych i warunków ewentualnego patronatu, bez zakładania pozytywnej decyzji.
+- **Co przygotować:** krótki opis rzeczywistych działań Wroc.NET, bez dopisywania projektów społecznych ani inicjatyw, których nie prowadzimy.
+- **Co ustalić:** czy inicjatywa mieści się w zakresie wsparcia, właściwy odbiorca i wymagane formalności.
+- **Ważne:** to inna instytucja niż urząd marszałkowski. Dziś kontaktujemy się z obiema, ale dostosowujemy propozycję do ich kompetencji.
+
 ## Jak oceniamy efekty
 
 - Zapisujemy linki i daty faktycznych publikacji, nie samą zgodę na umieszczenie logo.
@@ -130,4 +247,4 @@ Stałe linki:
 
 ## Najbliższy krok
 
-Czekamy na odpowiedzi wszystkich sześciu redakcji i zapisujemy ustalenia w rejestrze. Jeśli odpowiedzi nie będzie, wrócić do kontaktu 28.10-02.11.2026 (7-10 dni roboczych od wysyłki). Obecna lista wysyłek jest zakończona.
+Wysłano wszystkie piętnaście zgłoszeń 19.10.2026. Czekamy na odpowiedzi, zapisujemy warunki i konkretne świadczenia w rejestrze. Dla zgłoszeń bez odpowiedzi proponowany termin jednego przypomnienia to 28.10-02.11.2026 (7-10 dni roboczych). W przypadku TVP3, UMWD i DUW po wyjaśnieniu zasad decydujemy o formalnych wnioskach i wymaganych załącznikach; same wysłane zapytania nie zastępują tych procedur.
