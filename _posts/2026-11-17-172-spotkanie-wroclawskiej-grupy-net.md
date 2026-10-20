@@ -1,7 +1,7 @@
 ---
 title: '172\. spotkanie Wroc.NET – Ultra-wydajność i panel: kiedy .NET wystarcza?'
 date: 2026-11-17
-time: "18:30:00"
+time: "18:00:00"
 categories: spotkania
 tags:
   - offline
@@ -19,7 +19,7 @@ talks:
   - lukasz-pyrzyk
 ---
 
-172. spotkanie Wrocławskiej Grupy .NET odbędzie się 17.11.2026 r. o **18:30** w **Pubie Wędrówki, ul. Podwale 37/38, 50-040 Wrocław**.
+172. spotkanie Wrocławskiej Grupy .NET odbędzie się 17.11.2026 r. o **18:00** w **Pubie Wędrówki, ul. Podwale 37/38, 50-040 Wrocław**.
 
 {% include attendance.html %}
 

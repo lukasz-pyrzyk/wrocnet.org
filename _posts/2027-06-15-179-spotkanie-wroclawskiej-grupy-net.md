@@ -1,7 +1,7 @@
 ---
 title: '179\. spotkanie Wroc.NET'
 date: 2027-06-15
-time: "18:30:00"
+time: "18:00:00"
 categories: spotkania
 tags:
   - offline
