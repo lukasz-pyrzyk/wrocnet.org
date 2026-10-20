@@ -1,10 +1,8 @@
-# [ANNOUNCEMENT] 2026-10-19 - Plan pozyskania lokalnych patronów medialnych
+# Partnerstwa medialne i instytucjonalne Wroc.NET
 
-**Context:** Wroc.NET | rozpoznawalność we Wrocławiu | roboczy plan kontaktu z lokalnymi mediami
-**Status:** draft
-**Channel:** Email / portale lokalne / radio / telewizja / instytucje publiczne
+Wewnętrzny rejestr kontaktów, ustaleń i kolejnych działań. Treści maili pozostają w archiwum komunikacji.
 
----
+**Aktualizacja statusów:** 2026-10-20, 13:28
 
 ## Cel i zakres
 
@@ -12,7 +10,7 @@ Zwiększyć rozpoznawalność Wroc.NET we Wrocławiu i dotrzeć do nowych uczest
 
 Punktem wyjścia do rozmowy jest patronat nad trzema kolejnymi spotkaniami, z możliwością kontynuacji. To propozycja do uzgodnienia, nie podjęte zobowiązanie. Jeśli redakcja woli zacząć od jednej zapowiedzi, traktujemy to jako pierwszy krok.
 
-Ten dokument jest wewnętrzną listą roboczą. Wszystkie piętnaście maili zostało wysłanych 19.10.2026 (potwierdzenie Łukasza); partnerstwa nie zostały jeszcze uzgodnione. Obie rundy wysyłek zakończone, czekamy na odpowiedzi. Zapytania do instytucji wymagających formularzy nie stanowią formalnych wniosków o patronat.
+Wszystkie piętnaście zgłoszeń wysłano 19.10.2026. Na 20.10.2026 otrzymaliśmy dwie zgłoszone odpowiedzi: Wrocławski Portal deklaruje współpracę i publikowanie informacji, a TVP3 Wrocław prowadzi procedurę przyznania patronatu. Łukasz potwierdził wysyłkę kompletu dokumentów do TVP3 20.10.2026. Dla pozostałych trzynastu odbiorców nie zgłoszono odpowiedzi.
 
 ## Plan na dziś - 19.10.2026
 
@@ -37,32 +35,60 @@ Nie prosimy o pilną promocję pełnej sali na 20 października. Rekord zapisów
 1. Wybieramy kolejnego odbiorcę z tabeli.
 2. Sprawdzamy aktualność kontaktu i oferty na podlinkowanej stronie.
 3. Uzupełniamy potrzebne dane i piszemy jeden spersonalizowany mail.
-4. Zapisujemy zaakceptowaną treść jako osobny plik `YYYY-MM-DD-email-patronat-nazwa-medium.md` w tym katalogu, zgodnie z [workflow archiwum](README.md).
+4. Zapisujemy zaakceptowaną treść jako osobny plik `YYYY-MM-DD-email-patronat-nazwa-medium.md` w katalogu `office/content/`, zgodnie z [workflow archiwum](../content/README.md).
 5. Po faktycznym wysłaniu zapisujemy datę i link do maila w tabeli. Samo przygotowanie treści nie oznacza wysyłki.
-6. Jeśli nie ma odpowiedzi, proponowany termin jednego przypomnienia to 7–10 dni roboczych od wysyłki. To nasza organizacja pracy, nie wymóg redakcji.
+6. Jeśli nie ma odpowiedzi, proponowany termin jednego przypomnienia to 7-10 dni roboczych od wysyłki. To nasza organizacja pracy, nie wymóg redakcji.
 7. Po odpowiedzi zapisujemy zakres, terminy, koszty i zobowiązania. Nie deklarujemy wyłączności ani płatnej promocji bez osobnej zgody.
 
-## Kolejka i rejestr kontaktu
+## Aktualny rejestr kontaktów - stan na 20.10.2026
+
+Podsumowanie: **15 wysłanych zgłoszeń, 2 zgłoszone odpowiedzi, 13 bez zgłoszonej odpowiedzi, 1 potwierdzona deklaracja współpracy przy publikacjach, 0 formalnie przyznanych patronatów**. Rejestr opiera się na potwierdzeniach Łukasza, nie na bezpośrednim wglądzie do skrzynki.
 
 | Kolejność | Medium | Status | Data wysyłki / plik maila | Odpowiedź i następny krok |
 |---|---|---|---|---|
-| 1 | Kocham Wrocław | Wysłany | 2026-10-19 — [mail](2026-10-19-email-patronat-kocham-wroclaw.md) | Oczekujemy na odpowiedź; jeśli jej nie będzie, przypomnienie 28.10–02.11.2026 |
-| 2 | wroclaw.pl | Wysłany | 2026-10-19 - [mail](2026-10-19-email-patronat-wroclaw-pl.md) | Oczekujemy na odpowiedź; jeśli jej nie będzie, przypomnienie 28.10-02.11.2026 |
-| 3 | Wrocławski Portal | Wysłany | 2026-10-19 - [mail](2026-10-19-email-patronat-wroclawski-portal.md) | Oczekujemy na odpowiedź; jeśli jej nie będzie, przypomnienie 28.10-02.11.2026 |
-| 4 | Radio LUZ | Wysłany | 2026-10-19 - [mail](2026-10-19-email-patronat-radio-luz.md) | Oczekujemy na odpowiedź; jeśli jej nie będzie, przypomnienie 28.10-02.11.2026 |
-| 5 | Miejsca we Wrocławiu | Wysłany | 2026-10-19 - [mail](2026-10-19-email-patronat-miejsca-we-wroclawiu.md) | Oczekujemy na odpowiedź; jeśli jej nie będzie, przypomnienie 28.10-02.11.2026 |
-| 6 | tuWrocław.com | Wysłany | 2026-10-19 - [mail](2026-10-19-email-patronat-tuwroclaw.md) | Oczekujemy na odpowiedź; jeśli jej nie będzie, przypomnienie 28.10-02.11.2026 |
-| 7 | Radio Wrocław | Wysłany | 2026-10-19 - [mail](2026-10-19-email-patronat-radio-wroclaw.md) | Oczekujemy na odpowiedź; przypomnienie przy jej braku 28.10-02.11.2026 |
-| 8 | Akademicki Wrocław / Wrocławskie Centrum Akademickie | Wysłany | 2026-10-19 - [mail](2026-10-19-email-partnerstwo-wca.md) | Oczekujemy na odpowiedź; przypomnienie przy jej braku 28.10-02.11.2026 |
-| 9 | Przedsiębiorczy Wrocław / ARAW | Wysłany | 2026-10-19 - [mail](2026-10-19-email-partnerstwo-araw.md) | Oczekujemy na odpowiedź; przypomnienie przy jej braku 28.10-02.11.2026 |
-| 10 | Echo24 | Wysłany | 2026-10-19 - [mail](2026-10-19-email-partnerstwo-echo24.md) | Oczekujemy na odpowiedź; przypomnienie przy jej braku 28.10-02.11.2026 |
-| 11 | TVP3 Wrocław | Wysłany | 2026-10-19 - [mail](2026-10-19-email-partnerstwo-tvp3-wroclaw.md) | Oczekujemy na odpowiedź na zapytanie; nie złożono formalnego wniosku |
-| 12 | Gazeta Wrocławska | Wysłany | 2026-10-19 - [mail](2026-10-19-email-partnerstwo-gazeta-wroclawska.md) | Oczekujemy na odpowiedź, w tym w sprawie Naszego Miasta |
-| 13 | Wrocław Nasze Miasto | Wysłany | 2026-10-19 - [mail](2026-10-19-email-patronat-nasze-miasto.md) | Oczekujemy na potwierdzenie dostępności bezpłatnego wariantu; kontakt: reklama.wroclaw@polskapress.pl |
-| 14 | Urząd Marszałkowski Województwa Dolnośląskiego | Wysłany | 2026-10-19 - [mail](2026-10-19-email-partnerstwo-umwd.md) | Oczekujemy na odpowiedź na zapytanie; nie złożono formalnego wniosku |
-| 15 | Dolnośląski Urząd Wojewódzki | Wysłany | 2026-10-19 - [mail](2026-10-19-email-partnerstwo-duw.md) | Oczekujemy na odpowiedź na zapytanie, w tym o zgodność formuły partnerskiej; nie złożono formalnego wniosku |
+| 1 | Kocham Wrocław | Wysłany | 2026-10-19 - [mail](../content/2026-10-19-email-patronat-kocham-wroclaw.md) | Oczekujemy na odpowiedź; jeśli jej nie będzie, przypomnienie 28.10-02.11.2026 |
+| 2 | wroclaw.pl | Wysłany | 2026-10-19 - [mail](../content/2026-10-19-email-patronat-wroclaw-pl.md) | Oczekujemy na odpowiedź; jeśli jej nie będzie, przypomnienie 28.10-02.11.2026 |
+| 3 | Wrocławski Portal | Współpraca przy publikacjach potwierdzona | 2026-10-19 - [mail](../content/2026-10-19-email-patronat-wroclawski-portal.md); odpowiedź 20.10.2026, 13:00 | Bartosz Jaworski deklaruje publikowanie informacji. Wysyłać opis i materiał wizualny na redakcja@wroclawskiportal.pl. Formalny patronat i logo nieuzgodnione |
+| 4 | Radio LUZ | Wysłany | 2026-10-19 - [mail](../content/2026-10-19-email-patronat-radio-luz.md) | Oczekujemy na odpowiedź; jeśli jej nie będzie, przypomnienie 28.10-02.11.2026 |
+| 5 | Miejsca we Wrocławiu | Wysłany | 2026-10-19 - [mail](../content/2026-10-19-email-patronat-miejsca-we-wroclawiu.md) | Oczekujemy na odpowiedź; jeśli jej nie będzie, przypomnienie 28.10-02.11.2026 |
+| 6 | tuWrocław.com | Wysłany | 2026-10-19 - [mail](../content/2026-10-19-email-patronat-tuwroclaw.md) | Oczekujemy na odpowiedź; jeśli jej nie będzie, przypomnienie 28.10-02.11.2026 |
+| 7 | Radio Wrocław | Wysłany | 2026-10-19 - [mail](../content/2026-10-19-email-patronat-radio-wroclaw.md) | Oczekujemy na odpowiedź; przypomnienie przy jej braku 28.10-02.11.2026 |
+| 8 | Akademicki Wrocław / Wrocławskie Centrum Akademickie | Wysłany | 2026-10-19 - [mail](../content/2026-10-19-email-partnerstwo-wca.md) | Oczekujemy na odpowiedź; przypomnienie przy jej braku 28.10-02.11.2026 |
+| 9 | Przedsiębiorczy Wrocław / ARAW | Wysłany | 2026-10-19 - [mail](../content/2026-10-19-email-partnerstwo-araw.md) | Oczekujemy na odpowiedź; przypomnienie przy jej braku 28.10-02.11.2026 |
+| 10 | Echo24 | Wysłany | 2026-10-19 - [mail](../content/2026-10-19-email-partnerstwo-echo24.md) | Oczekujemy na odpowiedź; przypomnienie przy jej braku 28.10-02.11.2026 |
+| 11 | TVP3 Wrocław | Wniosek wysłany - oczekiwanie na decyzję | 2026-10-19 - [mail](../content/2026-10-19-email-partnerstwo-tvp3-wroclaw.md); odpowiedzi i komplet dokumentów 20.10.2026 | Łukasz potwierdził wysyłkę kompletu do Roberta. Czekamy na decyzję o patronacie nad cyklem 20.10.2026-30.06.2027 |
+| 12 | Gazeta Wrocławska | Wysłany | 2026-10-19 - [mail](../content/2026-10-19-email-partnerstwo-gazeta-wroclawska.md) | Oczekujemy na odpowiedź, w tym w sprawie Naszego Miasta |
+| 13 | Wrocław Nasze Miasto | Wysłany | 2026-10-19 - [mail](../content/2026-10-19-email-patronat-nasze-miasto.md) | Oczekujemy na potwierdzenie dostępności bezpłatnego wariantu; kontakt: reklama.wroclaw@polskapress.pl |
+| 14 | Urząd Marszałkowski Województwa Dolnośląskiego | Wysłany | 2026-10-19 - [mail](../content/2026-10-19-email-partnerstwo-umwd.md) | Oczekujemy na odpowiedź na zapytanie; nie złożono formalnego wniosku |
+| 15 | Dolnośląski Urząd Wojewódzki | Wysłany | 2026-10-19 - [mail](../content/2026-10-19-email-partnerstwo-duw.md) | Oczekujemy na odpowiedź na zapytanie, w tym o zgodność formuły partnerskiej; nie złożono formalnego wniosku |
 
 Statusy do używania: do przygotowania → szkic → zaakceptowany → wysłany → rozmowa / uzgodnione / odmowa / brak odpowiedzi.
+
+## Wrocławski Portal - współpraca przy publikacjach
+
+| Obszar | Ustalenie | Następny krok |
+|---|---|---|
+| Kontakt | Bartosz Jaworski, redakcja@wroclawskiportal.pl | Materiały przesyłać na ten sam adres |
+| Odpowiedź | 20.10.2026, 13:00: zainteresowanie inicjatywą, deklaracja współpracy i publikowania informacji o wydarzeniach | Podziękować i przesłać pakiet dotyczący konkretnego wydarzenia |
+| Materiały | Informacja o wydarzeniu wraz z materiałem wizualnym | Przygotować opis, datę, miejsce, link do zapisów i grafikę; format i wyprzedzenie nie zostały określone |
+| Zakres | Zgoda na współpracę przy publikacjach | Nie zakładać gwarantowanych terminów, social mediów, bannera ani relacji |
+| Patronat i logotyp | W odpowiedzi nie uzgodniono formalnego tytułu patrona ani zasad ekspozycji logo | Ustalić osobno przed dodaniem logotypu na stronie i slajdach |
+| Koszty | W odpowiedzi nie podano opłat ani warunków komercyjnych | Nie zamawiać płatnych świadczeń; warunki wyjaśnić, jeśli zostaną zaproponowane |
+
+## TVP3 Wrocław - odpowiedź i formalności
+
+| Obszar | Stan na 20.10.2026 | Następny krok |
+|---|---|---|
+| Kontakt | Robert Chmielewski, robert.chmielewski@tvp.pl | Odpowiadać w istniejącym wątku |
+| Odpowiedź | Zainteresowanie inicjatywą i prośba o formalny wniosek na cykl; następnie potwierdzenie, żeby najpierw uzyskać patronat | Nie traktować korespondencji ani przesłanych logotypów jako decyzji o przyznaniu patronatu |
+| Okres wniosku | 20.10.2026-30.06.2027, wskazany przez Łukasza | Taki sam zakres w piśmie i opisie cyklu; początek obowiązywania wymaga decyzji TVP3 |
+| Dokumenty | Komplet wysłany 20.10.2026: pismo do dyrektora, opis przedsięwzięcia i oświadczenie; wysyłkę potwierdził Łukasz | Czekać na ocenę i ewentualne uwagi. Dokumenty z danymi osobowymi pozostają poza repozytorium |
+| Mail z kompletem | Wysyłka do Roberta potwierdzona 20.10.2026 | Oczekiwać na decyzję; nie ponawiać prośby o ustalenia operacyjne przed rozpatrzeniem |
+| Promocja po przyznaniu | Wskazana możliwość informacji na stronie i wybranych publikacji w social mediach; zainteresowanie redakcji nie gwarantuje materiału na antenie | Szczegóły ustalać po decyzji |
+| Materiały do promocji | Notatka do 4000 znaków w DOC/DOCX; grafika 16:9, minimum 720 × 405 px, JPG/PNG | Przygotowywać po ustaleniu współpracy; projekty z logotypami przesyłać do akceptacji |
+| Logotypy i świadczenia | Prośba o ekspozycję TVP3, wybrane udostępnienia treści TVP3 w social mediach oraz uzgodnione materiały promocyjne w miejscu wydarzeń | Ustalić częstotliwość publikacji, ekspozycję z lokalem i potrzebę użycia przesłanego logo TVP Info |
+| Wyłączność | TVP zastrzega wyłączność na tytuł patrona medialnego spośród stacji telewizyjnych | Przed uzgodnieniem partnerstwa z Echo24 wyjaśnić zakres; nie przyjmować sprzecznych zobowiązań |
+| Koszty i termin | Według odpowiedzi współpraca niekomercyjna, bez wydatków; oferta handlowa opcjonalna. Robert wskazał elastyczność względem czterotygodniowego terminu ze strony | Nie zamawiać płatnych usług; nie traktować terminu ze strony jako automatycznej blokady |
 
 ## Materiały i decyzje przed pierwszym mailem
 
@@ -72,7 +98,7 @@ Statusy do używania: do przygotowania → szkic → zaakceptowany → wysłany 
 - [ ] Wybrać osobę do kontaktu i podpis nadawcy. Nie przypisywać automatycznie kontaktu z mediami osobie odpowiedzialnej za sponsorów.
 - [ ] Potwierdzić, czy rozważamy wyłącznie współpracę bez opłat. Nie akceptować kosztów bez uzgodnienia.
 - [ ] Ustalić, co możemy zaoferować: logo na stronie wydarzenia, plansza otwierająca, podziękowanie ze sceny, ewentualnie oznaczenia w zapowiedziach.
-- [ ] Przygotować logo, grafikę wydarzenia i 1–3 zdjęcia z prawem do przekazania mediom oraz informacją o autorstwie. Nie wysyłać zdjęć bez odpowiednich zgód.
+- [ ] Przygotować logo, grafikę wydarzenia i 1-3 zdjęcia z prawem do przekazania mediom oraz informacją o autorstwie. Nie wysyłać zdjęć bez odpowiednich zgód.
 - [ ] Jeśli używamy liczb o społeczności lub frekwencji, potwierdzić ich aktualność i źródło. Nie obiecywać zasięgów ani liczby nowych uczestników.
 
 Stałe linki:
@@ -247,4 +273,4 @@ Stałe linki:
 
 ## Najbliższy krok
 
-Wysłano wszystkie piętnaście zgłoszeń 19.10.2026. Czekamy na odpowiedzi, zapisujemy warunki i konkretne świadczenia w rejestrze. Dla zgłoszeń bez odpowiedzi proponowany termin jednego przypomnienia to 28.10-02.11.2026 (7-10 dni roboczych). W przypadku TVP3, UMWD i DUW po wyjaśnieniu zasad decydujemy o formalnych wnioskach i wymaganych załącznikach; same wysłane zapytania nie zastępują tych procedur.
+Wrocławski Portal: podziękować i przesłać informację o konkretnym wydarzeniu wraz z grafiką; osobno ustalić ewentualny patronat i logotyp. TVP3: komplet dokumentów wysłany, czekamy na decyzję; szczegóły operacyjne po przyznaniu patronatu. Dla pozostałych trzynastu kontaktów czekamy na odpowiedzi; proponowany termin jednego przypomnienia przy ich braku to 28.10-02.11.2026. Zapytania do UMWD i DUW nie zastępują formalnych wniosków. Każdą kolejną odpowiedź i decyzję zapisujemy w rejestrze.

@@ -46,4 +46,4 @@ Pozdrawiam,
 - Kontakt dotyczy patronatów; prosimy o wskazanie właściwego zespołu do wsparcia informacyjnego, nie zakładamy, że prowadzi je ta sama osoba.
 - Adaptacja [maila do TVP3](2026-10-19-email-partnerstwo-tvp3-wroclaw.md); źródła statystyk i agendy pozostają te same.
 - Wysyłkę 19.10.2026 potwierdził Łukasz. Oczekujemy na odpowiedź.
-- [Plan i rejestr kontaktów](2026-10-19-announcement-patronaty-lokalne.md).
+- [Plan i rejestr kontaktów](../partnerships/README.md).

@@ -41,4 +41,4 @@ Pozdrawiam,
 - Adaptacja [maila do Radia Wrocław](2026-10-19-email-patronat-radio-wroclaw.md); źródła statystyk i agendy pozostają te same.
 - Materiał redakcyjny i partnerstwo to osobne propozycje; nie uzależniamy publikacji od ekspozycji logo.
 - Wysyłkę 19.10.2026 potwierdził Łukasz. Oczekujemy na odpowiedź.
-- [Plan i rejestr kontaktów](2026-10-19-announcement-patronaty-lokalne.md).
+- [Plan i rejestr kontaktów](../partnerships/README.md).

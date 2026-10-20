@@ -41,4 +41,4 @@ Pozdrawiam,
 - Adaptacja [maila do Miejsc we Wrocławiu](2026-10-19-email-patronat-miejsca-we-wroclawiu.md); źródła statystyk i agendy pozostają te same.
 - Adres redakcja@tuwroclaw.com potwierdzony 19.10.2026 na https://tuwroclaw.com/kontakt, odczytany z publicznego adresu zabezpieczonego przez Cloudflare.
 - Wysyłkę 19.10.2026 potwierdził Łukasz. Oczekujemy na odpowiedź.
-- Plan i rejestr: [lokalne patronaty medialne](2026-10-19-announcement-patronaty-lokalne.md).
+- Plan i rejestr: [lokalne patronaty medialne](../partnerships/README.md).

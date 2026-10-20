@@ -42,4 +42,4 @@ Pozdrawiam,
 - Wspólna obsługa z Wrocław Nasze Miasto niepotwierdzona. Nie oznaczać obu pozycji jako wysłanych bez potwierdzenia odbiorcy i zakresu zgłoszenia.
 - Adaptacja [maila do Echo24](2026-10-19-email-partnerstwo-echo24.md); źródła statystyk i agendy pozostają te same.
 - Przy wysyłce po 19.10.2026 zaktualizować odniesienia czasowe.
-- [Plan i rejestr kontaktów](2026-10-19-announcement-patronaty-lokalne.md).
+- [Plan i rejestr kontaktów](../partnerships/README.md).

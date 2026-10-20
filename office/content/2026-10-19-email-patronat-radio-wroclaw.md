@@ -39,7 +39,7 @@ Pozdrawiam,
 
 ## Notatki robocze - nie są częścią maila
 
-- Adaptacja [maila do Radia LUZ](2026-10-19-email-patronat-radio-luz.md), z dopasowaniem do wspólnego działu promocji i drugiej rundy opisanej w [planie](2026-10-19-announcement-patronaty-lokalne.md).
+- Adaptacja [maila do Radia LUZ](2026-10-19-email-patronat-radio-luz.md), z dopasowaniem do wspólnego działu promocji i drugiej rundy opisanej w [planie](../partnerships/README.md).
 - Kontakt promocja@radiowroclaw.pl potwierdzony 19.10.2026 na https://www.radiowroclaw.pl/articles/view/59873/Promocja.
 - Liczby zapisów pochodzą z materiałów prezentacji 171. spotkania. Użyto sformułowania „odnotowaliśmy”, nie deklaracji stanu zapisów w chwili wysyłki.
 - Wysyłkę 19.10.2026 potwierdził Łukasz po doprecyzowaniu, że propozycja dotyczy Radia Wrocław, nie obu anten.

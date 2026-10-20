@@ -42,4 +42,4 @@ Pozdrawiam,
 - Kontakt i oferta: https://www.wroclawskiportal.pl/patronat-medialny/ oraz https://www.wroclawskiportal.pl/kontakt/.
 - Adres znaleziony w wynikach wyszukiwania; bezpośredni odczyt strony wcześniej blokował HTTP 403. Aktualność kontaktu wymaga potwierdzenia.
 - Wysyłkę 19.10.2026 potwierdził Łukasz. Oczekujemy na odpowiedź.
-- Plan i rejestr: [lokalne patronaty medialne](2026-10-19-announcement-patronaty-lokalne.md).
+- Plan i rejestr: [lokalne patronaty medialne](../partnerships/README.md).

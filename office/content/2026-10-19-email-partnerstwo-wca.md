@@ -40,4 +40,4 @@ Pozdrawiam,
 - Kontakt sekretariatu Biura Współpracy z Uczelniami Wyższymi potwierdzony 19.10.2026 na https://www.wroclaw.pl/akademicki-wroclaw/wroclawskie-centrum-akademickie (zapis bwu[at]um.wroc.pl).
 - Adaptacja wcześniejszych maili partnerskich, z naciskiem na współpracę informacyjną ze środowiskiem akademickim.
 - Statystyki i agenda jak w [mailu do Radia Wrocław](2026-10-19-email-patronat-radio-wroclaw.md). Przed wykorzystaniem w innym dniu zaktualizować odniesienia czasowe.
-- Wysyłkę 19.10.2026 potwierdził Łukasz. [Plan i rejestr kontaktów](2026-10-19-announcement-patronaty-lokalne.md).
+- Wysyłkę 19.10.2026 potwierdził Łukasz. [Plan i rejestr kontaktów](../partnerships/README.md).

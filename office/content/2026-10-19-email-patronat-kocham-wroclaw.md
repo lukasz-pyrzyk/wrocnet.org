@@ -35,7 +35,7 @@ Pozdrawiam,
 
 ## Notatki robocze — nie są częścią maila
 
-- Plan i rejestr kontaktów: [lokalne patronaty medialne](2026-10-19-announcement-patronaty-lokalne.md).
+- Plan i rejestr kontaktów: [lokalne patronaty medialne](../partnerships/README.md).
 - Źródło strony Łukasza: wpis `lukasz-pyrzyk` w `_data/speakers.yml`.
 - Liczebność społeczności i typowa frekwencja: `office/AGENTS.md`.
 - Agenda i data: post 171. spotkania w `_posts/`.

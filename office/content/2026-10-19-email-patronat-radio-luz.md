@@ -43,4 +43,4 @@ Pozdrawiam,
 - Adaptacja [maila do Wrocławskiego Portalu](2026-10-19-email-patronat-wroclawski-portal.md); źródła statystyk i agendy pozostają te same.
 - Adres luz@radioluz.pl potwierdzony 19.10.2026 w kodzie strony https://radioluz.pl/kontakt/. To kontakt ogólny, nie potwierdzony adres działu patronatów.
 - Wysyłkę 19.10.2026 potwierdził Łukasz. Oczekujemy na odpowiedź.
-- Plan i rejestr: [lokalne patronaty medialne](2026-10-19-announcement-patronaty-lokalne.md).
+- Plan i rejestr: [lokalne patronaty medialne](../partnerships/README.md).

@@ -44,4 +44,4 @@ Pozdrawiam,
 - Ten mail jest zapytaniem o formułę współpracy, nie kompletnym wnioskiem. Nie składamy oświadczeń o abonamencie bez danych i potwierdzenia Łukasza.
 - Adaptacja [maila do Echo24](2026-10-19-email-partnerstwo-echo24.md); źródła statystyk i agendy pozostają te same.
 - Wysyłkę 19.10.2026 potwierdził Łukasz. Oczekujemy na odpowiedź.
-- [Plan i rejestr kontaktów](2026-10-19-announcement-patronaty-lokalne.md).
+- [Plan i rejestr kontaktów](../partnerships/README.md).

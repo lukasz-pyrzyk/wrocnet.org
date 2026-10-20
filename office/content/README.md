@@ -4,7 +4,7 @@ Scentralizowany katalog dla wszystkich treści Wroc.NET — emaile i ogłoszenia
 
 Archiwizujemy tu treści komunikacji i briefy kampanii, także ich wersje robocze. Nie tworzymy osobnych plików `announcement` dla notatek pomocniczych do prezentacji: audytów danych, treści pojedynczych slajdów ani promptów do ich teł. Materiały prezentacji przechowujemy w `slides/<numer-spotkania>/`; dodatkową dokumentację zapisujemy tylko na wyraźną prośbę.
 
-Plan działań i rejestr kontaktów: [lokalne patronaty medialne](2026-10-19-announcement-patronaty-lokalne.md).
+Plan działań i rejestr kontaktów: [lokalne patronaty medialne](../partnerships/README.md).
 
 ## Struktura
 

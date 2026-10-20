@@ -40,4 +40,4 @@ Pozdrawiam,
 - Zaadaptowano [mail do Kocham Wrocław](2026-10-19-email-patronat-kocham-wroclaw.md); źródła statystyk i danych prelegentów pozostają te same.
 - Kontakt: https://www.wroclaw.pl/dla-mieszkanca/redakcja-wroclawpl.
 - Wysyłkę 19.10.2026 potwierdził Łukasz. Oczekujemy na odpowiedź.
-- Plan i rejestr kontaktów: [lokalne patronaty medialne](2026-10-19-announcement-patronaty-lokalne.md).
+- Plan i rejestr kontaktów: [lokalne patronaty medialne](../partnerships/README.md).
