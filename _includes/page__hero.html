@@ -177,6 +177,13 @@
 
       var dateLabel = card.querySelector('[data-role="meeting-date"]');
       var targetTs = 0;
+      var selectedDay = '';
+      var dayFormatter = new Intl.DateTimeFormat('en', {
+        timeZone: {{ site.timezone | jsonify }},
+        year: 'numeric',
+        month: '2-digit',
+        day: '2-digit'
+      });
 
       var units = {
         days: card.querySelector('[data-unit="days"]'),
@@ -189,9 +196,18 @@
         return String(value).padStart(2, '0');
       }
 
-      function findNextMeeting(afterTs) {
+      function calendarDay(timestamp) {
+        var parts = dayFormatter.formatToParts(new Date(timestamp));
+        var date = {};
+        for (var i = 0; i < parts.length; i += 1) {
+          date[parts[i].type] = parts[i].value;
+        }
+        return date.year + '-' + date.month + '-' + date.day;
+      }
+
+      function findNextMeeting(today) {
         for (var i = 0; i < targetList.length; i += 1) {
-          if (targetList[i] >= afterTs) {
+          if (meetingList[i].date >= today) {
             return {
               meeting: meetingList[i],
               index: i,
@@ -213,7 +229,8 @@
       }
 
       function selectCurrentMeeting() {
-        var nextMeeting = findNextMeeting(Date.now());
+        selectedDay = calendarDay(Date.now());
+        var nextMeeting = findNextMeeting(selectedDay);
         if (!nextMeeting) {
           card.style.display = 'none';
           selectProgram(-1);
@@ -230,7 +247,7 @@
       }
 
       function renderCountdown() {
-        if (!targetTs || Date.now() > targetTs) {
+        if (!targetTs || calendarDay(Date.now()) !== selectedDay) {
           if (!selectCurrentMeeting()) {
             window.clearInterval(intervalId);
             return;

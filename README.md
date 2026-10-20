@@ -116,3 +116,6 @@ The homepage calendar, hero, and `llms.txt` share upcoming-event selection in
 Events remain upcoming throughout their calendar day in the site's timezone
 (`Europe/Warsaw`), regardless of the build time or event start time. This selection
 is refreshed when the static site is rebuilt.
+The hero also applies this timezone rule in the browser: after the start time,
+the countdown stays at zero and the event's program remains visible until
+midnight, when it switches to the next event or hides if none remain.
