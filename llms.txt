@@ -63,7 +63,7 @@ Plik wygenerowany automatycznie podczas builda strony ({{ site.time | date: "%Y-
 
 ## Nadchodzące wydarzenia
 {%- assign has_upcoming = false -%}
-{%- assign upcoming_meeting_posts = site.posts | where_exp: "post", "post.date >= site.time" | sort: "date" -%}
+{%- include upcoming-meeting-posts.html -%}
 {% for post in upcoming_meeting_posts %}{% assign has_upcoming = true %}{% assign m_idx = post.date | date: "%-m" | minus: 1 %}
 - [{{ post.date | date: "%-d" }} {{ months_pl[m_idx] }} {{ post.date | date: "%Y" }}, godz. {{ post.time | default: "18:30:00" | slice: 0, 5 }}](https://www.meetup.com/wrocnet/events/){% endfor %}
 {%- unless has_upcoming %}
@@ -94,4 +94,3 @@ Plik wygenerowany automatycznie podczas builda strony ({{ site.time | date: "%Y-
 {%- for post in site.posts %}
 - {{ post.date | date: "%Y-%m-%d" }} — [{{ post.title | replace: '\.', '.' }}]({{ post.url | absolute_url }}){% if post.talks and post.talks.size > 0 %}: {% for talk in post.talks %}{{ talk.title }}{% if talk.speaker_ids %} — {% for speaker_id in talk.speaker_ids %}{% assign speaker = site.data.speakers | where: "id", speaker_id | first %}{{ speaker.imie }} {{ speaker.nazwisko }}{% unless forloop.last %}, {% endunless %}{% endfor %}{% endif %}{% unless forloop.last %}; {% endunless %}{% endfor %}{% endif %}
 {%- endfor %}
-

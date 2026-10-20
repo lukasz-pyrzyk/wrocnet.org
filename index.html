@@ -88,7 +88,7 @@ excerpt: "Wrocławska społeczność programistów .NET. Spotykamy się od 2007 
     </div>
     <ul class="schedule-list">
       {% assign upcoming_index = 0 %}
-      {% assign upcoming_meeting_posts = site.posts | where_exp: "post", "post.date >= site.time" | sort: "date" %}
+      {% include upcoming-meeting-posts.html %}
       {% for post in upcoming_meeting_posts %}
         {% assign date_str = post.date %}
         {% assign m_idx = date_str | date: "%-m" | minus: 1 %}
