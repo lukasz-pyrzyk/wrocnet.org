@@ -294,8 +294,8 @@ s << text(13, "https://devstyle.pl/", 0.78, 5.85, 5.60, 0.42, size: 16, color: C
 slides << [slide_xml(s), slide_images]
 
 s = base(8, "Sezon 2026/2027", "Spotykamy się regularnie")
-s << text(10, "Trzeci wtorek miesiąca. Dzisiaj wyjątkowo zaczynamy o 18:00.", 0.78, 1.92, 11.5, 0.48, size: 17, color: COLORS[:muted])
-dates = [["20 PAŹ", "dzisiaj · 18:00", true], ["17 LIS", "18:30", false], ["15 GRU", "18:30", false]]
+s << text(10, "Trzeci wtorek miesiąca. Zaczynamy o 18:00.", 0.78, 1.92, 11.5, 0.48, size: 17, color: COLORS[:muted])
+dates = [["20 PAŹ", "dzisiaj · 18:00", true], ["17 LIS", "18:00", false], ["15 GRU", "18:00", false]]
 s << line(11, 1.36, 3.37, 11.97, 3.37, color: COLORS[:line], width: 2)
 dates.each_with_index do |(date, label, special), index|
   x = 1.96 + index * 3.60
@@ -427,7 +427,7 @@ s << text(27, "21:00", 0.78, 5.65, 1.20, 0.45, size: 20, color: COLORS[:violet],
 s << text(19, "After party", 2.10, 5.65, 9.90, 0.45, size: 22, color: COLORS[:violet], bold: true)
 slides << [slide_xml(s), slide_images]
 
-s = base(14, "172. spotkanie · 17 listopada 2026 · 18:30", "Następne spotkanie Wroc.NET")
+s = base(14, "172. spotkanie · 17 listopada 2026 · 18:00", "Następne spotkanie Wroc.NET")
 slide_images = []
 gankiewicz_rid = add_image(images, slide_images, "assets/images/speakers/piotr-gankiewicz.jpg")
 olbromski_rid = add_image(images, slide_images, "assets/images/organizers/lukasz-olbromski.jpg")
