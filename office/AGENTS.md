@@ -86,9 +86,35 @@ Grafiki referencyjne (prefiks `brand-`) znajdują się w `office/content/images/
 - Nie upychaj pełnego opisu wydarzenia na obrazie — najważniejsze: nazwa wydarzenia, data lub jedno hasło.
 - Nie twórz generycznych stockowych grafik biznesowych.
 - Nie dodawaj logotypów ani nazw partnerów, jeśli użytkownik ich nie podał.
-- Do generacji AI: prompt zgodny z referencjami z `office/content/images/` (pliki `brand-*`), styl retro-tech/neon, kolory violet/purple, format 1920x1080 (social) lub 1200x600 (banner).
+- Do generacji AI: prompt zgodny z referencjami z `office/content/images/` (pliki `brand-*`), styl retro-tech/neon, kolory violet/purple. Domyślne formaty: 1920x1080 (social), 1200x600 (ogólny banner); dla głównego zdjęcia grupy Meetup stosuj 1200x675 (16:9), jak w sprawdzonym przykładzie poniżej. Wymagania konkretnego kanału mają pierwszeństwo.
 - 50% grafik robimy w AI (szybkie koncepty, iteracje), 50% manualnie w Figma/Canva (precyzyjny design, finalne tweaki).
 - Speaker photos: raw w `assets/images/speakers/raw/`, finalne (~400x400px, JPG/PNG) w `assets/images/speakers/`.
+
+### Sprawdzony warsztat: baner z organizatorami
+
+Przykład kompozycji: [baner Meetup z 20.10.2026](content/images/2026-10-20-meetup-organizatorzy.jpg). To wzorzec techniczny, nie stała lista osób ani potwierdzenie publikacji.
+
+- Skład, kolejność, pisownię nazwisk i ścieżki portretów odczytuj z [_data/organizers.yml](../_data/organizers.yml). Pomijaj wpisy z pustym imieniem; przy brakującym portrecie zgłoś problem zamiast pomijać osobę lub wymyślać zdjęcie. Nie kopiuj składu ze starego banera.
+- Używaj prawdziwych lokalnych portretów i [istniejącego logo](../assets/images/logo.png). Nie generuj ani nie przerabiaj twarzy przez AI. AI może przygotować tło, ale tekst, logo i portrety składaj deterministycznie.
+- Sprawdzony układ dla ośmiu osób: cztery kolumny, dwa rzędy, okrągłe portrety z cienką fioletową obwódką, imię i nazwisko w dwóch wierszach. Nagłówek: logo, Wroc.NET, Wrocławska Grupa .NET, Organizatorzy. Przy innym składzie dostosuj układ, nie usuwaj osób dla zachowania siatki.
+- Na stronie grupy Meetup prawą górną część banera zasłania logo organizacji nadrzędnej (zgłoszone przez użytkownika). Zostaw ten obszar bez tekstu, twarzy i naszego logo; napis „Organizatorzy” wyśrodkuj poziomo nad linią oddzielającą nagłówek od portretów. Dokładny rozmiar nakładki sprawdzaj na aktualnej stronie, także w widoku mobilnym - sam podgląd JPG nie potwierdza braku kolizji na Meetup.
+- Tło może bazować na [brand-panel-gradient-cover.jpg](content/images/brand-panel-gradient-cover.jpg): dopasuj kadr do formatu, przyciemnij półprzezroczystą warstwą, zachowaj delikatną sieć połączeń i fakturę retro-tech. Nie modyfikuj pliku referencyjnego.
+
+Paleta robocza użyta w tym banerze (nie zastępuje referencji marki):
+
+| Zastosowanie | Kolor |
+| --- | --- |
+| Ciemna warstwa na tle | `#100923`, krycie około 61% |
+| Wypełnienie obwódki portretu | `#302047` |
+| Kontur portretu | `#B575DD` |
+| Różowy akcent | `#E787ED` |
+| Etykiety i tekst pomocniczy | `#EEB4F4`, `#E0CBED`, `#E8D8F3` |
+| Główny tekst | `#FFFFFF` |
+
+- Do takiego kolażu wystarcza Python + Pillow; dane YAML można czytać przez PyYAML. Najpierw sprawdź dostępność narzędzi. Renderuj w 2x rozdzielczości (2400x1350), potem zmniejszaj filtrem LANCZOS. W Pillow: `ImageOps.exif_transpose` przed kadrowaniem, `ImageOps.fit` bez rozciągania proporcji, maska kołowa w trybie `L`. Obejrzyj każdy kadr: twarze nie mogą być ucięte, a ich skala powinna być zbliżona.
+- Używaj Arial / Arial Bold z obsługą polskich znaków; sprawdź dostępność fontów i szerokość podpisów. Zostaw bezpieczne marginesy, nie umieszczaj nazwisk ani twarzy przy krawędziach.
+- Eksport do Meetup: JPG w RGB, 1200x675, jakość 95, `subsampling=0`, bez zbędnych metadanych zdjęć źródłowych. Otwórz wynik i zweryfikuj wizualnie zdjęcia, podpisy, kontrast i marginesy oraz technicznie format, wymiary, wagę pliku i zgodność składu z YAML.
+- Gotowy obraz zapisuj według [konwencji katalogu images](content/images/README.md). Podglądy i pliki badawcze trzymaj poza repozytorium. Przygotowanie pliku nie oznacza podmiany na Meetup - nie deklaruj publikacji bez faktycznego wgrania i sprawdzenia.
 
 ## Tryb pracy
 
