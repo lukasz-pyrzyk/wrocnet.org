@@ -24,6 +24,7 @@ See [README.md](README.md) for install, local dev server, and CI validation comm
 - Main pages are in _pages, data-driven content is in _data.
 - Default branch is main.
 - Do not commit directly to main: create a topic branch for each task and merge via Pull Request.
+- Always create new feature/topic branches from the latest `origin/main`, never from the current feature branch: run `git fetch origin main`, then `git switch --no-track -c <branch-name> origin/main`. Preserve unrelated local changes and cherry-pick only task-specific commits when moving work. Before pushing, verify `git log origin/main..HEAD` and `git diff --stat origin/main...HEAD` contain only the intended task.
 
 ## Known Pitfalls
 - Keep aligned colons in _data/ui-text.yml. The lint config intentionally allows extra spaces before colons.
