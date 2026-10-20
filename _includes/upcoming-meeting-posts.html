@@ -1,0 +1,9 @@
+{%- assign today = site.time | date: "%Y-%m-%d" -%}
+{%- assign upcoming_meeting_posts = "" | split: "," -%}
+{%- for post in site.posts -%}
+  {%- assign meeting_day = post.date | date: "%Y-%m-%d" -%}
+  {%- if meeting_day >= today -%}
+    {%- assign upcoming_meeting_posts = upcoming_meeting_posts | push: post -%}
+  {%- endif -%}
+{%- endfor -%}
+{%- assign upcoming_meeting_posts = upcoming_meeting_posts | sort: "date" -%}

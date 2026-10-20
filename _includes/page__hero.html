@@ -21,7 +21,7 @@
 {% assign ui_text = site.data.ui-text[locale] %}
 {% assign has_countdown = false %}
 
-{% assign upcoming_meeting_posts = site.posts | where_exp: "post", "post.date >= site.time" | sort: "date" %}
+{% include upcoming-meeting-posts.html %}
 {% if page.url == "/" and upcoming_meeting_posts.size > 0 %}
   {% assign month_names_csv = ui_text.countdown_month_names | default: "January,February,March,April,May,June,July,August,September,October,November,December" %}
   {% assign month_names = month_names_csv | split: "," %}
