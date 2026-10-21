@@ -32,7 +32,7 @@ Built with [Jekyll](https://jekyllrb.com/) and the [Minimal Mistakes](https://mm
 
 ### Windows
 
-1. Install Ruby via [RubyInstaller for Windows](https://rubyinstaller.org/downloads/) (choose the **Ruby+Devkit** version ≥ 3.0). Run the `ridk install` step at the end of the installer.
+1. Install Ruby via [RubyInstaller for Windows](https://rubyinstaller.org/downloads/) (choose the **Ruby+Devkit** version ≥ 3.2, required by the pinned Bundler). Run the `ridk install` step at the end of the installer.
 
 2. Open a new Command Prompt or PowerShell window and install dependencies:
 
@@ -78,7 +78,7 @@ Prerequisite for step 1: install `yamllint` (for example: `python -m pip install
 | Path | Description |
 |---|---|
 | `_config.yml` | Main Jekyll and theme configuration |
-| `_data/` | Static data: navigation, organizers, schedule |
+| `_data/` | Static data: navigation, organizers, speakers, partners, venue |
 | `_posts/` | Meeting posts (format: `YYYY-MM-DD-NR-spotkanie-*.md`) |
 | `_pages/` | Static pages (about, organizers, etc.) |
 | `_includes/` | Overridden theme partials (masthead, hero) |
@@ -108,6 +108,8 @@ header:
 ```
 
 Every post must have exactly one format tag: `offline` for regular in-person meetings, `online` for regular online meetings, or `inne` for special/non-numbered events.
+
+For event banners (AI generation, assets, rendering, partner hierarchy, and website integration), use the [single banner workflow in office/AGENTS.md](office/AGENTS.md#zasady-dla-grafik).
 
 After an event, add or update `meetup_attendees: N` in its front matter to preserve the attendee count shown by Meetup. Also add {% raw %}`{% include attendance.html %}`{% endraw %} after the opening paragraph if it is not already present. The include displays positive counts and hides zero or missing values.
 

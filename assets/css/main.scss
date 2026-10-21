@@ -27,6 +27,18 @@
   width: auto;
 }
 
+.page__hero--meeting {
+  width: calc(100% - 2rem);
+  max-width: 800px;
+  margin: 1.5rem auto;
+}
+
+.page__hero--meeting .page__hero-image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 .hero-home {
   display: grid;
   grid-template-columns: minmax(0, 1.15fr) minmax(320px, 420px);

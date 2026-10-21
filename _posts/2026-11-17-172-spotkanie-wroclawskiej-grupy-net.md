@@ -7,7 +7,9 @@ tags:
   - offline
 meetup_attendees: 0
 header:
-  teaser: /assets/images/spotkania-teaser.jpg
+  image: /assets/images/2026-11-17-172-meetup.jpg
+  teaser: /assets/images/2026-11-17-172-meetup.jpg
+  image_description: "Baner 172. spotkania Wroc.NET — Piotr Gankiewicz oraz panel z Łukaszem Olbromskim i Łukaszem Pyrzykiem"
 talks:
 - title: 'Ultra-wydajność - gdy liczy się każda mikrosekunda'
   speaker_ids:

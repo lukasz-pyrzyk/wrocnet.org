@@ -7,7 +7,9 @@ tags:
   - offline
 meetup_attendees: 171
 header:
-  teaser: /assets/images/spotkania-teaser.jpg
+  image: /assets/images/2026-10-20-171-meetup.jpg
+  teaser: /assets/images/2026-10-20-171-meetup.jpg
+  image_description: "Baner 171. spotkania Wroc.NET — Jakub Kubryński, Maciej Aniserowicz i panel dyskusyjny"
 talks:
 - title: 'AI Retrofit: nowe możliwości, 14 lat bagażu'
   speaker_ids:
