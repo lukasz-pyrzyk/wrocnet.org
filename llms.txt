@@ -37,6 +37,8 @@ sitemap: false
 
 Plik wygenerowany automatycznie podczas builda strony ({{ site.time | date: "%Y-%m-%d %H:%M %z" }}), zgodny z konwencją [llms.txt](https://llmstxt.org). Zawiera aktualne dane o społeczności, wydarzeniach i prelegentach do wykorzystania przez agentów AI.
 
+Administratorem strony i organizatorem Wroc.NET jest [{{ site.website_organizer.name }}]({{ site.website_organizer.url }}). Społeczność współtworzy z [zespołem organizatorów]({{ '/organizatorzy/' | absolute_url }}).
+
 **Statystyki społeczności:**
 
 - Lata działalności: {{ community_years }} (od {{ founding_year }} roku)

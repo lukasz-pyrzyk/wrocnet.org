@@ -121,3 +121,16 @@ is refreshed when the static site is rebuilt.
 The hero also applies this timezone rule in the browser: after the start time,
 the countdown stays at zero and the event's program remains visible until
 midnight, when it switches to the next event or hides if none remain.
+The homepage event card uses the same program and speaker names from
+`_data/speakers.yml`, without portraits so single- and multi-speaker talks align.
+The card presents a centered countdown, the date and venue, then the program,
+with the signup button at the bottom.
+Its decorative Wrocław illustration is `assets/images/home-wroclaw.webp`.
+Keep the headline, event details, and signup link as HTML rather than embedding
+them in the background image.
+The visible homepage copy uses `hero_heading` and `hero_intro` in `index.html`,
+independently of the existing SEO `title`, `excerpt`, and site description.
+
+The administrator/organizer credit and personal website link in the footer and
+`llms.txt` share `website_organizer` in `_config.yml`. The footer credit uses
+the theme's `_includes/footer/custom.html` extension point.
