@@ -2,7 +2,7 @@
 
 Wewnętrzny rejestr kontaktów, ustaleń i kolejnych działań. Treści maili pozostają w archiwum komunikacji.
 
-**Aktualizacja statusów:** 2026-10-20, 13:28
+**Aktualizacja statusów:** 2026-10-21, 19:44
 
 ## Cel i zakres
 
@@ -10,7 +10,7 @@ Zwiększyć rozpoznawalność Wroc.NET we Wrocławiu i dotrzeć do nowych uczest
 
 Punktem wyjścia do rozmowy jest patronat nad trzema kolejnymi spotkaniami, z możliwością kontynuacji. To propozycja do uzgodnienia, nie podjęte zobowiązanie. Jeśli redakcja woli zacząć od jednej zapowiedzi, traktujemy to jako pierwszy krok.
 
-Wszystkie piętnaście zgłoszeń wysłano 19.10.2026. Na 20.10.2026 otrzymaliśmy dwie zgłoszone odpowiedzi: Wrocławski Portal deklaruje współpracę i publikowanie informacji, a TVP3 Wrocław prowadzi procedurę przyznania patronatu. Łukasz potwierdził wysyłkę kompletu dokumentów do TVP3 20.10.2026. Dla pozostałych trzynastu odbiorców nie zgłoszono odpowiedzi.
+Wszystkie piętnaście zgłoszeń wysłano 19.10.2026. Na 21.10.2026 otrzymaliśmy trzy zgłoszone odpowiedzi: Wrocławski Portal deklaruje współpracę i publikowanie informacji, TVP3 Wrocław prowadzi procedurę przyznania patronatu, a ARAW prosi o powrót do rozmowy za około dwa tygodnie. Łukasz potwierdził wysyłkę kompletu dokumentów do TVP3 20.10.2026. Dla pozostałych dwunastu odbiorców nie zgłoszono odpowiedzi.
 
 ## Plan na dziś - 19.10.2026
 
@@ -40,9 +40,9 @@ Nie prosimy o pilną promocję pełnej sali na 20 października. Rekord zapisów
 6. Jeśli nie ma odpowiedzi, proponowany termin jednego przypomnienia to 7-10 dni roboczych od wysyłki. To nasza organizacja pracy, nie wymóg redakcji.
 7. Po odpowiedzi zapisujemy zakres, terminy, koszty i zobowiązania. Nie deklarujemy wyłączności ani płatnej promocji bez osobnej zgody.
 
-## Aktualny rejestr kontaktów - stan na 20.10.2026
+## Aktualny rejestr kontaktów - stan na 21.10.2026
 
-Podsumowanie: **15 wysłanych zgłoszeń, 2 zgłoszone odpowiedzi, 13 bez zgłoszonej odpowiedzi, 1 potwierdzona deklaracja współpracy przy publikacjach, 0 formalnie przyznanych patronatów**. Rejestr opiera się na potwierdzeniach Łukasza, nie na bezpośrednim wglądzie do skrzynki.
+Podsumowanie: **15 wysłanych zgłoszeń, 3 zgłoszone odpowiedzi, 12 bez zgłoszonej odpowiedzi, 1 potwierdzona deklaracja współpracy przy publikacjach, 0 formalnie przyznanych patronatów**. Rejestr opiera się na potwierdzeniach Łukasza, nie na bezpośrednim wglądzie do skrzynki.
 
 | Kolejność | Medium | Status | Data wysyłki / plik maila | Odpowiedź i następny krok |
 |---|---|---|---|---|
@@ -54,7 +54,7 @@ Podsumowanie: **15 wysłanych zgłoszeń, 2 zgłoszone odpowiedzi, 13 bez zgłos
 | 6 | tuWrocław.com | Wysłany | 2026-10-19 - [mail](../content/2026-10-19-email-patronat-tuwroclaw.md) | Oczekujemy na odpowiedź; jeśli jej nie będzie, przypomnienie 28.10-02.11.2026 |
 | 7 | Radio Wrocław | Wysłany | 2026-10-19 - [mail](../content/2026-10-19-email-patronat-radio-wroclaw.md) | Oczekujemy na odpowiedź; przypomnienie przy jej braku 28.10-02.11.2026 |
 | 8 | Akademicki Wrocław / Wrocławskie Centrum Akademickie | Wysłany | 2026-10-19 - [mail](../content/2026-10-19-email-partnerstwo-wca.md) | Oczekujemy na odpowiedź; przypomnienie przy jej braku 28.10-02.11.2026 |
-| 9 | Przedsiębiorczy Wrocław / ARAW | Wysłany | 2026-10-19 - [mail](../content/2026-10-19-email-partnerstwo-araw.md) | Oczekujemy na odpowiedź; przypomnienie przy jej braku 28.10-02.11.2026 |
+| 9 | Przedsiębiorczy Wrocław / ARAW | Rozmowa odroczona na prośbę ARAW | 2026-10-19 - [mail](../content/2026-10-19-email-partnerstwo-araw.md); odpowiedź na LinkedIn 21.10.2026, 15:23 | Norbert Nowacki przekazał zgłoszenie Paulinie Muszyńskiej, kierowniczce StartupWrocław. Wrócić około 04.11.2026, po MADE IN WROCLAW; współpraca jeszcze nieuzgodniona |
 | 10 | Echo24 | Wysłany | 2026-10-19 - [mail](../content/2026-10-19-email-partnerstwo-echo24.md) | Oczekujemy na odpowiedź; przypomnienie przy jej braku 28.10-02.11.2026 |
 | 11 | TVP3 Wrocław | Wniosek wysłany - oczekiwanie na decyzję | 2026-10-19 - [mail](../content/2026-10-19-email-partnerstwo-tvp3-wroclaw.md); odpowiedzi i komplet dokumentów 20.10.2026 | Łukasz potwierdził wysyłkę kompletu do Roberta. Czekamy na decyzję o patronacie nad cyklem 20.10.2026-30.06.2027 |
 | 12 | Gazeta Wrocławska | Wysłany | 2026-10-19 - [mail](../content/2026-10-19-email-partnerstwo-gazeta-wroclawska.md) | Oczekujemy na odpowiedź, w tym w sprawie Naszego Miasta |
@@ -201,8 +201,9 @@ Stałe linki:
 
 - **Oficjalny punkt wejścia:** https://www.wroclaw.pl/przedsiebiorczy-wroclaw/
 - **Kontakt:** office@invest-in-wroclaw.pl - Centrum Wspierania Biznesu, potwierdzony 19.10.2026 na https://araw.pl/kontakt. Kontakt odrębny od redakcji wroclaw.pl.
-- **Stan rozpoznania, 19.10.2026:** potwierdzono adres zespołu; możliwości promocji Wroc.NET wymagają uzgodnienia.
-- **Dziś:** znaleźć osobę zajmującą się ekosystemem technologicznym lub gospodarczym. Sprawdzić, czy zgłoszenie do redakcji wroclaw.pl nie trafiło już do tego samego odbiorcy.
+- **Odpowiedź 21.10.2026, 15:23:** Norbert Nowacki z ARAW napisał na LinkedIn, że temat jest ciekawy, a zgłoszenie przekazał również Paulinie Muszyńskiej, kierowniczce StartupWrocław. Poprosił o powrót za około dwa tygodnie ze względu na zaangażowanie zespołu w MADE IN WROCLAW (27-28.10, według wiadomości).
+- **Stan rozmowy:** zainteresowanie i prośba o późniejszy kontakt, nie potwierdzenie partnerstwa.
+- **Następny kontakt:** około 04.11.2026 - proponowany termin wynikający z prośby o dwa tygodnie od 21.10, nie umówione spotkanie. Wrócić w wątku z Norbertem i ustalić dalszą rozmowę z właściwym zespołem; nie stosować wcześniejszego przypomnienia 28.10-02.11 dla tego kontaktu.
 - **O co prosimy:** współpracę informacyjną i przekazywanie zapowiedzi lokalnym firmom oraz społecznościom technologicznym.
 - **Co przygotować:** opis praktycznej edukacji, wymiany wiedzy i rozwoju lokalnych kompetencji, propozycję regularnego dostarczania materiałów.
 - **Co ustalić:** właściwy zespół i dostępne kanały; nie przedstawiać tych możliwości jako istniejącej oferty partnerstwa.
@@ -273,4 +274,4 @@ Stałe linki:
 
 ## Najbliższy krok
 
-Wrocławski Portal: podziękować i przesłać informację o konkretnym wydarzeniu wraz z grafiką; osobno ustalić ewentualny patronat i logotyp. TVP3: komplet dokumentów wysłany, czekamy na decyzję; szczegóły operacyjne po przyznaniu patronatu. Dla pozostałych trzynastu kontaktów czekamy na odpowiedzi; proponowany termin jednego przypomnienia przy ich braku to 28.10-02.11.2026. Zapytania do UMWD i DUW nie zastępują formalnych wniosków. Każdą kolejną odpowiedź i decyzję zapisujemy w rejestrze.
+Wrocławski Portal: podziękować i przesłać informację o konkretnym wydarzeniu wraz z grafiką; osobno ustalić ewentualny patronat i logotyp. TVP3: komplet dokumentów wysłany, czekamy na decyzję; szczegóły operacyjne po przyznaniu patronatu. ARAW: wrócić do Norberta Nowackiego około 04.11.2026 zgodnie z prośbą o odczekanie dwóch tygodni. Dla pozostałych dwunastu kontaktów czekamy na odpowiedzi; proponowany termin jednego przypomnienia przy ich braku to 28.10-02.11.2026. Zapytania do UMWD i DUW nie zastępują formalnych wniosków. Każdą kolejną odpowiedź i decyzję zapisujemy w rejestrze.
