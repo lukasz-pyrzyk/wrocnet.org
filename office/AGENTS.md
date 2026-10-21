@@ -42,12 +42,7 @@ Możliwe określenia:
 
 Unikaj tonu: „firma płaci za reklamę”. Podkreślaj stabilność, wspólne działania, wartość dla uczestników i naturalną obecność marki w środowisku .NET.
 
-Aktualny kontekst:
-- Devstyle jest partnerem strategicznym Wroc.NET.
-- Helion jest mniejszym partnerem — partnerem nagród (książki/kody rabatowe do losowań na spotkaniach).
-- hued.me jest mniejszym partnerem — partnerem medialnym, wspiera promocję/zasięg wydarzeń.
-- Planowana/wykorzystywana lokalizacja spotkań to Pub Wędrówki.
-- Szczegóły finansowe i terminy podawaj wyłącznie wtedy, gdy użytkownik wyraźnie je potwierdzi w bieżącym zadaniu.
+Aktualne nazwy, role i materiały partnerów odczytuj z [_data/partners.yml](../_data/partners.yml), a lokalizację z [_data/location.yml](../_data/location.yml). Nie utrzymuj drugiej listy w dokumentacji. Szczegóły finansowe i terminy podawaj wyłącznie wtedy, gdy użytkownik wyraźnie je potwierdzi w bieżącym zadaniu.
 
 ## Styl komunikacji
 
@@ -78,8 +73,12 @@ Wroc.NET powinien być kojarzony z:
 - charakterem społeczności developerów, a nie generycznym marketingiem korporacyjnym.
 
 Grafiki referencyjne (prefiks `brand-`) znajdują się w `office/content/images/`. Przed proponowaniem nowej grafiki sprawdź dostępne przykłady, jeśli narzędzia danego środowiska pozwalają na odczyt plików. Traktuj je jako źródło prawdy dla stylu, kompozycji, kolorystyki i poziomu „tech”.
+Utrzymuj 5–10 reprezentatywnych referencji zamiast dużej liczby podobnych plików.
+Nie modyfikuj grafik referencyjnych bez wyraźnej prośby.
 
 ## Zasady dla grafik
+
+To jedyne miejsce na zasady i warsztat tworzenia banerów. README mają do niego odsyłać, nie powielać instrukcji.
 
 - Jedna główna idea na grafikę.
 - Mało tekstu, czytelna hierarchia, mocny kontrast.
@@ -87,8 +86,43 @@ Grafiki referencyjne (prefiks `brand-`) znajdują się w `office/content/images/
 - Nie twórz generycznych stockowych grafik biznesowych.
 - Nie dodawaj logotypów ani nazw partnerów, jeśli użytkownik ich nie podał.
 - Do generacji AI: prompt zgodny z referencjami z `office/content/images/` (pliki `brand-*`), styl retro-tech/neon, kolory violet/purple. Domyślne formaty: 1920x1080 (social), 1200x600 (ogólny banner); dla głównego zdjęcia grupy Meetup stosuj 1200x675 (16:9), jak w sprawdzonym przykładzie poniżej. Wymagania konkretnego kanału mają pierwszeństwo.
-- 50% grafik robimy w AI (szybkie koncepty, iteracje), 50% manualnie w Figma/Canva (precyzyjny design, finalne tweaki).
+- Banery wydarzeń przygotowuj od początku do końca bez ręcznej pracy w Canva/Figma: tło może powstać w AI, a dokładny tekst, oryginalne logo i prawdziwe portrety składaj programowo. Poprawki i eksport gotowego pliku także wykonuj automatycznie.
 - Speaker photos: raw w `assets/images/speakers/raw/`, finalne (~400x400px, JPG/PNG) w `assets/images/speakers/`.
+
+### Dane i materiały do banerów wydarzeń
+
+- Najpierw odczytaj właściwy post z `_posts/`: numer, datę, godzinę, miejsce, program i `talks[].speaker_ids`. Nazwiska i ścieżki `photo` pobieraj z [_data/speakers.yml](../_data/speakers.yml) według tych identyfikatorów. Nie pytaj użytkownika ponownie o dane ani pliki, które są już w repozytorium.
+- Aktualną lokalizację sprawdzaj w [_data/location.yml](../_data/location.yml), a dostępne materiały partnerów w [_data/partners.yml](../_data/partners.yml). Sama obecność partnera w bazie nie potwierdza jego udziału w konkretnym wydarzeniu.
+- Używaj [lokalnego logo Wroc.NET](../assets/images/logo.png) i istniejących plików zdjęć/logotypów. Zgłaszaj tylko faktyczne braki; nie kopiuj programu ani prelegentów z poprzedniego spotkania. Jeśli post zapowiada ogłoszenie programu później, nie wymyślaj wystąpień ani osób.
+
+### Generowanie obrazów: Azure Foundry
+
+- Konfiguracja jest dostępna przez zmienne środowiskowe: `IMG_AI_MODEL_ENDPOINT` (adres API generowania), `IMG_AI_MODEL_APIKEY` (sekretny klucz) i `IMG_AI_MODEL_NAME` (nazwa modelu/deploymentu).
+- Odczytuj je w procesie wywołującym API; nie zapisuj wartości w kodzie, promptach, dokumentacji ani repozytorium. Nie wyświetlaj klucza w rozmowie, logach ani argumentach poleceń.
+- Przed generowaniem sprawdź dostępność zmiennych i zgodność żądania z API danego modelu. Błędy połączenia lub generacji zgłaszaj jawnie, bez ujawniania sekretów; nie deklaruj sukcesu bez odebrania i sprawdzenia obrazu.
+- Test połączenia wykonuj neutralnym promptem bez przesyłania kodu, danych osobowych ani lokalnych materiałów.
+
+### Banery wydarzeń: generowanie i publikacja
+
+- Wzorzec: [baner 172](content/images/2026-11-17-172-meetup.jpg), [zapisane tło AI](content/images/2026-11-17-172-meetup-background.png) i [generator](generate_meetup_banner.py). Tło powstało w Azure Foundry przez MAI-Image-2.5, bez przesyłania portretów i logotypów.
+- Generator składa jedną prelekcję z jednym prelegentem oraz panel trzech osób. Wymaga jednego partnera strategicznego i dwóch wspierających; inny skład wymaga dostosowania układu, nie pomijania osób ani logotypów. Kadry portretów są dopasowane do osób ze spotkania 172.
+- Partner strategiczny ma wyraźnie większe logo, wyśrodkowane w lewej części baneru; mniejsi partnerzy są pod nim w drugim rzędzie. W sprawdzonym układzie szerokości to 300 px (devstyle), 100 px (Helion) i 125 px (hued.me). Przed kolejnym wydarzeniem potwierdź udział partnerów — generator czyta bieżącą bazę, nie osobną listę dla wydarzenia.
+- Źródłowe logo Wroc.NET ma jasne pozostałości tła na samym obrysie. Funkcja `banner_logo` usuwa je lekko zwężoną, wygładzoną maską kołową. Nie zmieniaj rysunku, napisów ani współdzielonego pliku logo. Zawsze obejrzyj krawędź na ciemnym tle.
+- Generator wymaga Python 3, Pillow, PyYAML oraz Arial / Arial Bold w systemowej lokalizacji macOS. Składa obraz w 2x rozdzielczości, a wynik zapisuje jako JPG RGB 1200×675, jakość 95, bez EXIF. Sprawdź rzeczywiste wymiary tła zwróconego przez API; wynikowy baner ma zachować 16:9 bez rozciągania.
+
+Uruchom z katalogu głównego repozytorium:
+
+```bash
+python3 office/generate_meetup_banner.py \
+  _posts/2026-11-17-172-spotkanie-wroclawskiej-grupy-net.md \
+  --background office/content/images/2026-11-17-172-meetup-background.png \
+  --output office/content/images/2026-11-17-172-meetup.jpg
+```
+
+- Ponowne składanie używa zapisanego tła i nie wymaga wywołania AI. Po poprawce odśwież zarówno plik kampanii w `office/content/images/`, jak i publiczną kopię w `assets/images/` (dla 172: `assets/images/2026-11-17-172-meetup.jpg`). Pliki muszą być identyczne.
+- W poście ustaw `header.image` i `header.teaser` na lokalną publiczną kopię oraz dodaj `header.image_description` jako alt. Nie zaczynaj opisu od `172. ` — motyw przepuszcza go przez Markdown, który potraktuje to jako listę; użyj np. „Baner 172. spotkania…”.
+- Nie używaj `header.overlay_image` dla gotowego baneru z napisami i twarzami: tło jest kadrowane i przykrywane tekstem strony. Obecny styl wyświetla banery kategorii `spotkania` centralnie, maksymalnie 800 px szerokości, proporcjonalnie na telefonie, bez przycinania. Nie zmienia nagłówka strony głównej. Archiwum `/spotkania/` jest listą tekstową; miniatury są wykorzystywane w kartach siatki i podglądach udostępniania.
+- Sprawdź finalny plik, zgodność programu i osób z postem, czytelność, obrysy logo, marginesy i hierarchię partnerów. Po podłączeniu do strony uruchom walidację według [głównego README](../README.md#ci-validation-checks-local) i obejrzyj widok desktopowy oraz mobilny. Przygotowanie obrazu nie oznacza publikacji na Meetup.
 
 ### Sprawdzony warsztat: baner z organizatorami
 
@@ -114,7 +148,7 @@ Paleta robocza użyta w tym banerze (nie zastępuje referencji marki):
 - Do takiego kolażu wystarcza Python + Pillow; dane YAML można czytać przez PyYAML. Najpierw sprawdź dostępność narzędzi. Renderuj w 2x rozdzielczości (2400x1350), potem zmniejszaj filtrem LANCZOS. W Pillow: `ImageOps.exif_transpose` przed kadrowaniem, `ImageOps.fit` bez rozciągania proporcji, maska kołowa w trybie `L`. Obejrzyj każdy kadr: twarze nie mogą być ucięte, a ich skala powinna być zbliżona.
 - Używaj Arial / Arial Bold z obsługą polskich znaków; sprawdź dostępność fontów i szerokość podpisów. Zostaw bezpieczne marginesy, nie umieszczaj nazwisk ani twarzy przy krawędziach.
 - Eksport do Meetup: JPG w RGB, 1200x675, jakość 95, `subsampling=0`, bez zbędnych metadanych zdjęć źródłowych. Otwórz wynik i zweryfikuj wizualnie zdjęcia, podpisy, kontrast i marginesy oraz technicznie format, wymiary, wagę pliku i zgodność składu z YAML.
-- Gotowy obraz zapisuj według [konwencji katalogu images](content/images/README.md). Podglądy i pliki badawcze trzymaj poza repozytorium. Przygotowanie pliku nie oznacza podmiany na Meetup - nie deklaruj publikacji bez faktycznego wgrania i sprawdzenia.
+- Gotowy obraz zapisuj według [konwencji archiwum treści](content/README.md#konwencja-nazewnictwa). Podglądy i pliki badawcze trzymaj poza repozytorium. Przygotowanie pliku nie oznacza podmiany na Meetup - nie deklaruj publikacji bez faktycznego wgrania i sprawdzenia.
 
 ## Tryb pracy
 
@@ -185,21 +219,8 @@ Jeśli użytkownik poda konkretne dane w bieżącym zadaniu, traktuj je jako nad
 
 ## Integracja z Jekyll
 
-Strona wrocnet.org to Jekyll — pełne konwencje, komendy i pułapki są w głównym [AGENTS.md](../AGENTS.md) (root repozytorium). Dla postów o spotkaniach:
-- Plik: `_posts/YYYY-MM-DD-NR-spotkanie-wroclawskiej-grupy-net.md`
-- Kategoria domyślna: `spotkania`
-- Agent przygotowuje pełny plik `.md` gotowy do copy-paste do `_posts/`
+Zasady zmian i walidacji strony są w głównym [AGENTS.md](../AGENTS.md), a format postów w [README](../README.md#adding-a-new-meeting-post).
 
 ## Przechowywanie treści
 
-Cała treść (maile, posty, newslettery, briefy) żyje w Git pod `office/content/` — struktura, workflow i konwencje nazewnictwa opisane w [office/content/README.md](content/README.md).
-
-Gotowe przykłady i szablony do adaptacji: [office/content/samples/](content/samples/README.md).
-
-## Workflow dla agenta
-
-1. Sprawdź `office/content/samples/` po podobny przykład zanim zaczniesz pisać od zera.
-2. Sprawdź `office/content/images/` (pliki `brand-*`) jeśli chodzi o grafikę.
-3. Zapisuj gotową treść do odpowiedniego katalogu w `office/content/`.
-4. Nie modyfikuj grafik referencyjnych bez wyraźnej prośby.
-5. Jeśli dodajesz post Jekyll, zweryfikuj build zgodnie z głównym `AGENTS.md`.
+Przed napisaniem nowej treści sprawdź podobny przykład w [samples/](content/samples/). Zasady zapisu komunikacji, nazewnictwo i metadane są w [README archiwum treści](content/README.md).
