@@ -30,8 +30,16 @@ hero_intro: "Praktyczna wiedza, doświadczenia z projektów i rozmowy z ludźmi 
 {% assign meeting_count = 0 %}
 {% assign additional_event_count = 0 %}
 {% assign total_sessions = 0 %}
+{% assign record_signups = 0 %}
 {% for post in site.posts %}
   {% if post.date <= site.time %}
+    {% assign post_signups = post.meetup_attendees | default: 0 | plus: 0 %}
+    {% assign post_waitlist = post.meetup_waitlist | default: 0 | plus: 0 %}
+    {% assign post_total_signups = post_signups | plus: post_waitlist %}
+    {% if post_total_signups > record_signups %}
+      {% assign record_signups = post_total_signups %}
+      {% assign record_post = post %}
+    {% endif %}
     {% assign talk_count = post.talks | size %}
     {% assign total_sessions = total_sessions | plus: talk_count %}
     {% if post.tags contains 'offline' or post.tags contains 'online' %}
@@ -75,6 +83,9 @@ hero_intro: "Praktyczna wiedza, doświadczenia z projektów i rozmowy z ludźmi 
           <dd>{{ total_sessions }}</dd>
       </div>
     </dl>
+    {% if record_signups > 0 %}
+      <p class="community-record">Na <a href="{{ record_post.url | relative_url }}">nasze rekordowe spotkanie</a> chciało przyjść aż <strong>{{ record_signups }} osób</strong>, bijąc rekord zapisów utrzymujący się przez ponad 9 lat.</p>
+    {% endif %}
   </div>
 
   <aside class="season-panel" aria-labelledby="season-heading">
@@ -149,6 +160,13 @@ hero_intro: "Praktyczna wiedza, doświadczenia z projektów i rozmowy z ludźmi 
   margin: 0.5rem 0 0;
   color: #5f5568;
   font-size: 0.76rem;
+  line-height: 1.5;
+}
+.community-record {
+  grid-column: 1 / -1;
+  margin: 0;
+  color: #5f5568;
+  font-size: 0.8rem;
   line-height: 1.5;
 }
 .community-stats {
