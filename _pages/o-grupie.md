@@ -18,6 +18,8 @@ Zapraszamy wszystkich zainteresowanych do przyłączenia się oraz brania aktywn
 
 ## Historia
 
+**Rekord zapisów: 205 chętnych na jedno spotkanie.** Na [171. Wroc.NET, 20 października 2026 roku]({% post_url 2026-10-20-171-spotkanie-wroclawskiej-grupy-net %}) zapisanych było 171 osób, a kolejne 34 czekały na liście rezerwowej.
+
 Grupa działa od **2007 roku** i odbyła już ponad 169 spotkań. Przez lata prelegenci dzielili się wiedzą z dziedzin takich jak:
 
 - .NET Core / ASP.NET / C#
