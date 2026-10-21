@@ -3,7 +3,7 @@
 **Status:** template  
 **Kanały:** LinkedIn, Twitter/X, Newsletter (Meetup.com)  
 **Context:** Zaproszenie do bycia prelegentem / community building  
-**CTA Link:** [AKTUALNY LINK DO ZGŁOSZEŃ]
+**CTA Link:** https://wrocnet.org/zostan-prelegentem/
 
 Pełny przykład: [kampania z 05.09.2026](../../2026-09-05-announcement-call-for-speakers.md). Fakty i styl sprawdzaj w [office/AGENTS.md](../../../AGENTS.md), a nazewnictwo i metadane w [README archiwum](../../README.md).
 
@@ -19,7 +19,7 @@ Przed użyciem zastąp placeholdery, sprawdź aktualny formularz zgłoszeń i po
 
 [KORZYŚĆ DLA PRELEGENTA I POTWIERDZONE WSPARCIE ORGANIZATORÓW]
 
-Zgłoś temat: [LINK DO ZGŁOSZEŃ]
+Zgłoś temat: https://wrocnet.org/zostan-prelegentem/
 
 [HASHTAGI DOPASOWANE DO KAMPANII]
 
@@ -29,7 +29,7 @@ Zgłoś temat: [LINK DO ZGŁOSZEŃ]
 
 [JEDNOZDANIOWE ZAPROSZENIE + ZAKRES TEMATÓW]
 
-Zgłoś się: [LINK DO ZGŁOSZEŃ]
+Zgłoś się: https://wrocnet.org/zostan-prelegentem/
 
 ---
 
@@ -45,7 +45,7 @@ Cześć!
 
 [FORMAT WYSTĄPIENIA I POTWIERDZONE WSPARCIE ORGANIZATORÓW]
 
-Zgłoś temat: [LINK DO ZGŁOSZEŃ]
+Zgłoś temat: https://wrocnet.org/zostan-prelegentem/
 
 [JAKIE INFORMACJE PODAĆ W ZGŁOSZENIU I CO DALEJ — BEZ NIEPOTWIERDZONYCH TERMINÓW]
 
