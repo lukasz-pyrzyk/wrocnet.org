@@ -15,6 +15,10 @@ logo: "/assets/images/logo.png"
 image: "/assets/images/page.png"
 speaker_form_url: "https://forms.cloud.microsoft/e/QGBMw8zevT"
 
+website_organizer:
+  name: "Łukasz Pyrzyk"
+  url: "https://pyrzyk.net/"
+
 twitter:
   username: "wrocnet"
   site: "@wrocnet"

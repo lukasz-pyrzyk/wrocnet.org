@@ -36,30 +36,83 @@
   {% assign has_countdown = true %}
 {% endif %}
 
-<div class="page__hero{% if page.header.overlay_color or page.header.overlay_image %}--overlay{% elsif page.header.image and page.categories contains 'spotkania' %} page__hero--meeting{% endif %}{% if has_countdown %} page__hero--home{% endif %}"
+<div class="page__hero{% if page.header.overlay_color or page.header.overlay_image %}--overlay{% elsif page.header.image and page.categories contains 'spotkania' %} page__hero--meeting{% endif %}{% if page.url == "/" %} page__hero--home{% endif %}"
   style="{% if page.header.overlay_color %}background-color: {{ page.header.overlay_color | default: 'transparent' }};{% endif %} {% if overlay_img_path %}background-image: {% if overlay_filter %}{{ overlay_filter }}, {% endif %}url('{{ overlay_img_path }}');{% endif %}"
 >
   {% if page.header.overlay_color or page.header.overlay_image %}
-    <div class="wrapper{% if has_countdown %} hero-home{% endif %}">
+    <div class="wrapper{% if page.url == "/" %} hero-home{% unless has_countdown %} hero-home--empty{% endunless %}{% endif %}">
       <div class="hero-home__content">
+        {% if page.url == "/" %}
+          <p class="hero-home__eyebrow">Wroc.NET</p>
+        {% endif %}
         <h1 id="page-title" class="page__title" itemprop="headline">
           {% if paginator and site.paginate_show_page_num %}
             {{ site.title }}{% unless paginator.page == 1 %} {{ site.data.ui-text[locale].page | default: "Page" }} {{ paginator.page }}{% endunless %}
           {% else %}
-            {{ page.header.title | default: page.title | default: site.title | markdownify | remove: "<p>" | remove: "</p>" }}
+            {{ page.hero_heading | default: page.header.title | default: page.title | default: site.title | markdownify | remove: "<p>" | remove: "</p>" }}
           {% endif %}
         </h1>
-        {% if page.tagline %}
+        {% if page.hero_intro %}
+          <p class="page__lead">{{ page.hero_intro | markdownify | remove: "<p>" | remove: "</p>" }}</p>
+        {% elsif page.tagline %}
           <p class="page__lead">{{ page.tagline | markdownify | remove: "<p>" | remove: "</p>" }}</p>
         {% elsif page.header.show_overlay_excerpt != false and page.excerpt %}
           <p class="page__lead">{{ page.excerpt | markdownify | remove: "<p>" | remove: "</p>" }}</p>
         {% endif %}
         {% include page__meta.html locale=locale %}
-        {% if has_countdown %}
+        {% if page.header.actions %}
+          <p class="{% if page.url == "/" %}hero-home__actions{% endif %}">
+          {% for action in page.header.actions %}
+            {% unless has_countdown and forloop.first %}
+              <a href="{{ action.url | relative_url }}" class="{% if page.url == "/" %}hero-home__link{% else %}btn btn--light-outline btn--large{% endif %}">{{ action.label | default: site.data.ui-text[locale].more_label | default: "Learn More" }}{% if page.url == "/" %} <span aria-hidden="true">→</span>{% endif %}</a>
+            {% endunless %}
+          {% endfor %}
+          </p>
+        {% endif %}
+      </div>
+      {% if has_countdown %}
+        <aside class="next-meeting-card" data-meetings='{{ meetings_json }}' data-targets='[{{ meeting_timestamps_csv }}]' data-month-names='{{ month_names | jsonify }}' aria-label="Najbliższe spotkanie Wroc.NET">
+          <div class="next-meeting-card__countdown-panel">
+            <p class="next-meeting-card__countdown-label">{{ ui_text.countdown_eyebrow | default: "Next meeting starts in:" }}</p>
+            <div class="next-meeting-card__countdown" role="timer" aria-live="off" aria-label="{{ ui_text.countdown_aria_label | default: "Countdown to the next meeting" }}">
+              <div class="next-meeting-card__days-row">
+                <div class="next-meeting-card__unit next-meeting-card__unit--days">
+                  <span data-unit="days">00</span>
+                  <small>{{ ui_text.countdown_days_label | default: "days" }}</small>
+                </div>
+              </div>
+              <div class="next-meeting-card__time-row">
+                <div class="next-meeting-card__unit">
+                  <span data-unit="hours">00</span>
+                  <small>{{ ui_text.countdown_hours_label | default: "hours" }}</small>
+                </div>
+                <div class="next-meeting-card__separator">:</div>
+                <div class="next-meeting-card__unit">
+                  <span data-unit="minutes">00</span>
+                  <small>{{ ui_text.countdown_minutes_label | default: "minutes" }}</small>
+                </div>
+                <div class="next-meeting-card__separator">:</div>
+                <div class="next-meeting-card__unit">
+                  <span data-unit="seconds">00</span>
+                  <small>{{ ui_text.countdown_seconds_label | default: "seconds" }}</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="next-meeting-card__meta">
+            <p class="next-meeting-card__date" data-role="meeting-date">{{ first_meeting_display }}, {{ next_meeting_time_display }}</p>
+            {% if site.data.location.venue.name %}
+              <p class="next-meeting-card__venue">
+                <a href="{{ site.data.location.venue.maps_url }}">
+                  {{ site.data.location.venue.name }}, {{ site.data.location.venue.address }}
+                </a>
+              </p>
+            {% endif %}
+          </div>
           {% for meeting in upcoming_meeting_posts %}
             {% if meeting.talks.size > 0 %}
               <section class="hero-program" data-meeting-index="{{ forloop.index0 }}" aria-labelledby="hero-program-heading-{{ forloop.index0 }}"{% unless forloop.first %} hidden{% endunless %}>
-                <h2 id="hero-program-heading-{{ forloop.index0 }}" class="hero-program__heading">Na najbliższym spotkaniu</h2>
+                <h2 id="hero-program-heading-{{ forloop.index0 }}" class="hero-program__heading">W programie</h2>
                 <ul class="hero-program__talks">
                   {% for talk in meeting.talks %}
                     <li>
@@ -83,48 +136,7 @@
               </section>
             {% endif %}
           {% endfor %}
-        {% endif %}
-        {% if page.header.actions %}
-          <p>
-          {% for action in page.header.actions %}
-            <a href="{{ action.url | relative_url }}" class="btn btn--light-outline btn--large">{{ action.label | default: site.data.ui-text[locale].more_label | default: "Learn More" }}</a>
-          {% endfor %}
-          </p>
-        {% endif %}
-      </div>
-      {% if has_countdown %}
-        <aside class="next-meeting-card" data-meetings='{{ meetings_json }}' data-targets='[{{ meeting_timestamps_csv }}]' data-month-names='{{ month_names | jsonify }}'>
-          <p class="next-meeting-card__eyebrow">{{ ui_text.countdown_eyebrow | default: "Next meeting starts in:" }}</p>
-          <div class="next-meeting-card__countdown" role="timer" aria-live="polite" aria-atomic="true" aria-label="{{ ui_text.countdown_aria_label | default: "Countdown to the next meeting" }}">
-            <div class="next-meeting-card__days-row">
-              <div class="next-meeting-card__unit next-meeting-card__unit--days">
-                <span data-unit="days">00</span>
-                <small>{{ ui_text.countdown_days_label | default: "days" }}</small>
-              </div>
-            </div>
-            <div class="next-meeting-card__time-row">
-              <div class="next-meeting-card__unit">
-                <span data-unit="hours">00</span>
-                <small>{{ ui_text.countdown_hours_label | default: "hours" }}</small>
-              </div>
-              <div class="next-meeting-card__separator">:</div>
-              <div class="next-meeting-card__unit">
-                <span data-unit="minutes">00</span>
-                <small>{{ ui_text.countdown_minutes_label | default: "minutes" }}</small>
-              </div>
-              <div class="next-meeting-card__separator">:</div>
-              <div class="next-meeting-card__unit">
-                <span data-unit="seconds">00</span>
-                <small>{{ ui_text.countdown_seconds_label | default: "seconds" }}</small>
-              </div>
-            </div>
-          </div>
-          <div class="next-meeting-card__meta">
-            <p class="next-meeting-card__date" data-role="meeting-date">{{ first_meeting_display }}, {{ next_meeting_time_display }}</p>
-            {% if site.data.location.venue.name %}
-              <p class="next-meeting-card__venue">{{ site.data.location.venue.name }}</p>
-            {% endif %}
-          </div>
+          <a class="btn next-meeting-card__signup" href="https://www.meetup.com/wrocnet/events/">Zapisz się na najbliższe spotkanie <span aria-hidden="true">→</span></a>
         </aside>
       {% endif %}
     </div>
@@ -233,6 +245,7 @@
         var nextMeeting = findNextMeeting(selectedDay);
         if (!nextMeeting) {
           card.style.display = 'none';
+          card.closest('.hero-home').classList.add('hero-home--empty');
           selectProgram(-1);
           return false;
         }
