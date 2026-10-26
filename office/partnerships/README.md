@@ -2,7 +2,7 @@
 
 Wewnętrzny rejestr kontaktów, ustaleń i kolejnych działań. Treści maili pozostają w archiwum komunikacji.
 
-**Aktualizacja statusów:** 2026-10-21, 19:44
+**Aktualizacja statusów:** 2026-10-26, 13:28
 
 ## Cel i zakres
 
@@ -10,7 +10,7 @@ Zwiększyć rozpoznawalność Wroc.NET we Wrocławiu i dotrzeć do nowych uczest
 
 Punktem wyjścia do rozmowy jest patronat nad trzema kolejnymi spotkaniami, z możliwością kontynuacji. To propozycja do uzgodnienia, nie podjęte zobowiązanie. Jeśli redakcja woli zacząć od jednej zapowiedzi, traktujemy to jako pierwszy krok.
 
-Wszystkie piętnaście zgłoszeń wysłano 19.10.2026. Na 21.10.2026 otrzymaliśmy trzy zgłoszone odpowiedzi: Wrocławski Portal deklaruje współpracę i publikowanie informacji, TVP3 Wrocław prowadzi procedurę przyznania patronatu, a ARAW prosi o powrót do rozmowy za około dwa tygodnie. Łukasz potwierdził wysyłkę kompletu dokumentów do TVP3 20.10.2026. Dla pozostałych dwunastu odbiorców nie zgłoszono odpowiedzi.
+Pierwsze piętnaście zgłoszeń wysłano 19.10.2026, a kolejne cztery, do DPIN, Ministerstwa Cyfryzacji, NASK i Kancelarii Prezydenta RP, 26.10.2026. Na 26.10.2026 otrzymaliśmy cztery zgłoszone odpowiedzi: Wrocławski Portal deklaruje współpracę i publikowanie informacji, TVP3 Wrocław prowadzi procedurę przyznania patronatu, ARAW prosi o późniejszy kontakt, a Urząd Marszałkowski wskazuje DPIN jako lepszego odbiorcę propozycji. Łukasz potwierdził wysyłkę kompletu dokumentów do TVP3 20.10.2026. Dla pozostałych piętnastu odbiorców nie zgłoszono odpowiedzi. Wysyłkę do MC, NASK i KPRP Łukasz potwierdził 26.10.2026 o 13:28; były to zapytania wstępne, nie formalne wnioski o patronat.
 
 ## Plan na dziś - 19.10.2026
 
@@ -40,9 +40,9 @@ Nie prosimy o pilną promocję pełnej sali na 20 października. Rekord zapisów
 6. Jeśli nie ma odpowiedzi, proponowany termin jednego przypomnienia to 7-10 dni roboczych od wysyłki. To nasza organizacja pracy, nie wymóg redakcji.
 7. Po odpowiedzi zapisujemy zakres, terminy, koszty i zobowiązania. Nie deklarujemy wyłączności ani płatnej promocji bez osobnej zgody.
 
-## Aktualny rejestr kontaktów - stan na 21.10.2026
+## Aktualny rejestr kontaktów - stan na 26.10.2026
 
-Podsumowanie: **15 wysłanych zgłoszeń, 3 zgłoszone odpowiedzi, 12 bez zgłoszonej odpowiedzi, 1 potwierdzona deklaracja współpracy przy publikacjach, 0 formalnie przyznanych patronatów**. Rejestr opiera się na potwierdzeniach Łukasza, nie na bezpośrednim wglądzie do skrzynki.
+Podsumowanie: **19 wysłanych zgłoszeń, 4 zgłoszone odpowiedzi, 15 bez zgłoszonej odpowiedzi, 1 potwierdzona deklaracja współpracy przy publikacjach, 0 formalnie przyznanych patronatów**. Rejestr opiera się na potwierdzeniach Łukasza, nie na bezpośrednim wglądzie do skrzynki.
 
 | Kolejność | Medium | Status | Data wysyłki / plik maila | Odpowiedź i następny krok |
 |---|---|---|---|---|
@@ -59,8 +59,12 @@ Podsumowanie: **15 wysłanych zgłoszeń, 3 zgłoszone odpowiedzi, 12 bez zgłos
 | 11 | TVP3 Wrocław | Wniosek wysłany - oczekiwanie na decyzję | 2026-10-19 - [mail](../content/2026-10-19-email-partnerstwo-tvp3-wroclaw.md); odpowiedzi i komplet dokumentów 20.10.2026 | Łukasz potwierdził wysyłkę kompletu do Roberta. Czekamy na decyzję o patronacie nad cyklem 20.10.2026-30.06.2027 |
 | 12 | Gazeta Wrocławska | Wysłany | 2026-10-19 - [mail](../content/2026-10-19-email-partnerstwo-gazeta-wroclawska.md) | Oczekujemy na odpowiedź, w tym w sprawie Naszego Miasta |
 | 13 | Wrocław Nasze Miasto | Wysłany | 2026-10-19 - [mail](../content/2026-10-19-email-patronat-nasze-miasto.md) | Oczekujemy na potwierdzenie dostępności bezpłatnego wariantu; kontakt: reklama.wroclaw@polskapress.pl |
-| 14 | Urząd Marszałkowski Województwa Dolnośląskiego | Wysłany | 2026-10-19 - [mail](../content/2026-10-19-email-partnerstwo-umwd.md) | Oczekujemy na odpowiedź na zapytanie; nie złożono formalnego wniosku |
+| 14 | Urząd Marszałkowski Województwa Dolnośląskiego | Odpowiedź - rekomendacja kontaktu z DPIN | 2026-10-19 - [mail](../content/2026-10-19-email-partnerstwo-umwd.md); odpowiedź 26.10.2026, 10:48 | Paweł Aszkiełowicz wskazał DPIN jako lepszego odbiorcę. Podziękować i skierować tam propozycję; bez standardowego przypomnienia do UMWD |
 | 15 | Dolnośląski Urząd Wojewódzki | Wysłany | 2026-10-19 - [mail](../content/2026-10-19-email-partnerstwo-duw.md) | Oczekujemy na odpowiedź na zapytanie, w tym o zgodność formuły partnerskiej; nie złożono formalnego wniosku |
+| 16 | Dolnośląski Park Innowacji i Nauki S.A. (DPIN) | Wysłany | 2026-10-26 - wysyłka potwierdzona przez Łukasza | Agnieszka Kapłon-Kulig, agnieszka.kaplon@dpin.pl (Komunikacja i PR). Oczekujemy na odpowiedź; przy jej braku przypomnienie 04-09.11.2026 |
+| 17 | Ministerstwo Cyfryzacji | Zapytanie wstępne wysłane | 2026-10-26 - wysyłka potwierdzona przez Łukasza; propozycja treści w rozmowie | patronatcyfryzacja@cyfra.gov.pl. Współpraca przy kompetencjach cyfrowych i warunki patronatu; bez formalnego wniosku. Przy braku odpowiedzi przypomnienie 04-09.11.2026 |
+| 18 | NASK - Państwowy Instytut Badawczy | Zapytanie wstępne wysłane | 2026-10-26 - wysyłka potwierdzona przez Łukasza; propozycja treści w rozmowie | patronaty@nask.pl. Współpraca merytoryczna przy spotkaniu o bezpieczeństwie oprogramowania i warunki patronatu; temat nieuzgodniony. Przy braku odpowiedzi przypomnienie 04-09.11.2026 |
+| 19 | Kancelaria Prezydenta RP | Zapytanie wstępne wysłane | 2026-10-26 - wysyłka potwierdzona przez Łukasza; propozycja treści w rozmowie | listy@prezydent.pl. Pytanie o Patronat Kancelarii, nie wyłączny Patronat Honorowy Prezydenta RP; bez formalnego wniosku. Przy braku odpowiedzi przypomnienie 04-09.11.2026 |
 
 Statusy do używania: do przygotowania → szkic → zaakceptowany → wysłany → rozmowa / uzgodnione / odmowa / brak odpowiedzi.
 
@@ -248,6 +252,9 @@ Stałe linki:
 - **Strona:** https://umwd.dolnyslask.pl/
 - **Oficjalna ścieżka patronatów honorowych:** https://umwd.dolnyslask.pl/urzad/dokumenty-promocyjne/patronaty-honorowe/dokumenty-do-pobrania/
 - **Kontakt ds. patronatów:** patronaty@dolnyslask.pl - potwierdzony 19.10.2026 na oficjalnej stronie.
+- **Odpowiedź 26.10.2026, 10:48:** Paweł Aszkiełowicz (Pawel.Aszkielowicz@dolnyslask.pl) uznał urząd za nie najlepszego odbiorcę przedsięwzięcia i zaproponował skierowanie propozycji do Dolnośląskiego Parku Innowacji i Nauki S.A.
+- **Aktualny status:** rekomendacja innego odbiorcy, nie przyznanie patronatu ani potwierdzenie przekazania wiadomości do DPIN.
+- **Następny krok:** podziękować za wskazanie. Propozycję do DPIN wysłano 26.10.2026; nie wysyłać standardowego przypomnienia do UMWD.
 - **Stan rozpoznania, 19.10.2026:** potwierdzono procedurę: wniosek standardowo dwa miesiące przed wydarzeniem, w uzasadnionych przypadkach później; powiadomienie o decyzji do 30 dni od złożenia. Najpierw pytamy o cykl i właściwy zespół do promocji.
 - **Dziś:** znaleźć kontakt do promocji, gospodarki lub innowacji i wysłać propozycję współpracy informacyjnej.
 - **O co prosimy:** publikacje w regionalnych kanałach i przekazywanie zapowiedzi środowiskom technologicznym. Zapytać, czy patronat nad cyklem jest właściwą ścieżką.
@@ -265,6 +272,23 @@ Stałe linki:
 - **Co ustalić:** czy inicjatywa mieści się w zakresie wsparcia, właściwy odbiorca i wymagane formalności.
 - **Ważne:** to inna instytucja niż urząd marszałkowski. Dziś kontaktujemy się z obiema, ale dostosowujemy propozycję do ich kompetencji.
 
+## 16. Dolnośląski Park Innowacji i Nauki S.A. (DPIN)
+
+- **Źródło kontaktu:** rekomendacja Pawła Aszkiełowicza z Urzędu Marszałkowskiego, przekazana 26.10.2026.
+- **Kontakt:** Agnieszka Kapłon-Kulig, Komunikacja i PR, agnieszka.kaplon@dpin.pl - potwierdzony 26.10.2026 na https://dpin.pl/kontakt/.
+- **Stan:** propozycja współpracy wysłana 26.10.2026, co potwierdził Łukasz. W treści uwzględniono rekomendację UMWD i fakt, że spotkanie 20.10 już się odbyło.
+- **Następny krok:** czekać na odpowiedź; jeśli jej nie będzie, jedno przypomnienie 04-09.11.2026 (7-10 dni roboczych od wysyłki).
+- **O co prosimy:** pomoc w dotarciu do środowiska technologicznego i promocji bezpłatnych spotkań; możliwy zakres do uzgodnienia.
+- **Co przygotować:** aktualny opis społeczności, informację o kolejnych wydarzeniach i proponowane świadczenia wzajemne. Nie używać nieaktualnych odniesień do „jutrzejszego” spotkania 20.10.
+
+## 17-19. Ogólnopolskie instytucje publiczne
+
+- **Potwierdzenie:** Łukasz potwierdził wysyłkę do wszystkich trzech instytucji 26.10.2026 o 13:28. Propozycje wiadomości znajdują się w rozmowie; nie potwierdzono dokładnego brzmienia wysłanych maili ani nie otrzymano kopii. Adresy w tabeli to adresy przygotowane do wysyłki.
+- **Ministerstwo Cyfryzacji:** https://www.gov.pl/web/cyfryzacja/uzyskaj-patronat-ministra - kontakt i procedura sprawdzone 26.10.2026. Formalny wniosek przez system elektroniczny minimum osiem tygodni przed wydarzeniem. Zapytanie dotyczy także współpracy przy rozwoju kompetencji cyfrowych; nie oznacza zgłoszenia do konkretnego programu.
+- **NASK:** https://www.nask.pl/patronaty - kontakt i procedura sprawdzone 26.10.2026. Formalny wniosek minimum 30 dni przed wydarzeniem; patronat na jedną edycję. Wyjaśnić zgodność formuły partnerskiej z ograniczeniami reklamowymi i marketingowymi. Spotkanie o bezpieczeństwie i udział eksperta są propozycjami, nie uzgodnieniami.
+- **Kancelaria Prezydenta RP:** https://www.prezydent.pl/aktualnosci/patronaty - kontakt i procedura sprawdzone 26.10.2026. Wnioski od 120 do 60 dni przed wydarzeniem. Patronat Honorowy Prezydenta RP jest wyłączny; Patronat Kancelarii nie musi być wyłączny. Zapytanie przygotowano pod Patronat Kancelarii, bez zobowiązań dotyczących wyłączności.
+- **Następny krok:** czekać na odpowiedzi; przy ich braku jedno przypomnienie 04-09.11.2026. Przed formalnymi wnioskami ustalić podmiot organizujący, konkretne wydarzenie, program i rolę partnerów. Patronaty nie gwarantują finansowania, promocji ani obecności przedstawicieli instytucji.
+
 ## Jak oceniamy efekty
 
 - Zapisujemy linki i daty faktycznych publikacji, nie samą zgodę na umieszczenie logo.
@@ -274,4 +298,6 @@ Stałe linki:
 
 ## Najbliższy krok
 
-Wrocławski Portal: podziękować i przesłać informację o konkretnym wydarzeniu wraz z grafiką; osobno ustalić ewentualny patronat i logotyp. TVP3: komplet dokumentów wysłany, czekamy na decyzję; szczegóły operacyjne po przyznaniu patronatu. ARAW: wrócić do Norberta Nowackiego około 04.11.2026 zgodnie z prośbą o odczekanie dwóch tygodni. Dla pozostałych dwunastu kontaktów czekamy na odpowiedzi; proponowany termin jednego przypomnienia przy ich braku to 28.10-02.11.2026. Zapytania do UMWD i DUW nie zastępują formalnych wniosków. Każdą kolejną odpowiedź i decyzję zapisujemy w rejestrze.
+MC, NASK i KPRP: zapytania wysłane 26.10.2026, czekamy na odpowiedzi; przy ich braku przypomnienie 04-09.11.2026. Nie traktować maili jako formalnych wniosków.
+
+DPIN: propozycja wysłana, czekamy na odpowiedź; przy jej braku przypomnienie 04-09.11.2026. UMWD: podziękować za rekomendację, bez ponawiania wcześniejszego zapytania. Wrocławski Portal: podziękować i przesłać informację o konkretnym wydarzeniu wraz z grafiką; osobno ustalić ewentualny patronat i logotyp. TVP3: komplet dokumentów wysłany, czekamy na decyzję; szczegóły operacyjne po przyznaniu patronatu. ARAW: wrócić do Norberta Nowackiego około 04.11.2026 zgodnie z prośbą o odczekanie dwóch tygodni. Dla jedenastu kontaktów bez odpowiedzi z pierwszej rundy proponowany termin jednego przypomnienia to 28.10-02.11.2026. Zapytanie do DUW nie zastępuje formalnego wniosku. Każdą kolejną odpowiedź i decyzję zapisujemy w rejestrze.
