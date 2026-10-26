@@ -14,7 +14,7 @@ talks:
 meetup_attendees: 36
 ---
 
-153. spotkanie Wrocławskiej Grupy .NET odbyło się 25.04.2023 r. w **Avanade, ul. Piotra Skargi 1, Wrocław**.
+153\. spotkanie Wrocławskiej Grupy .NET odbyło się 25.04.2023 r. w **Avanade, ul. Piotra Skargi 1, Wrocław**.
 
 {% include attendance.html %}
 

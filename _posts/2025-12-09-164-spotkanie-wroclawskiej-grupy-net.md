@@ -11,7 +11,7 @@ talks:
 meetup_attendees: 56
 ---
 
-164. spotkanie Wrocławskiej Grupy .NET odbyło się 09.12.2025 r. w **Ultranet, ul. Strzegomska 138, Wrocław**.
+164\. spotkanie Wrocławskiej Grupy .NET odbyło się 09.12.2025 r. w **Ultranet, ul. Strzegomska 138, Wrocław**.
 
 {% include attendance.html %}
 
