@@ -22,7 +22,7 @@ talks:
   - lukasz-pyrzyk
 ---
 
-172. spotkanie Wrocławskiej Grupy .NET odbędzie się 17.11.2026 r. o **18:00** w **Pubie Wędrówki, ul. Podwale 37/38, 50-040 Wrocław**.
+172\. spotkanie Wrocławskiej Grupy .NET odbędzie się 17.11.2026 r. o **18:00** w **Pubie Wędrówki, ul. Podwale 37/38, 50-040 Wrocław**.
 
 {% include attendance.html %}
 

@@ -109,6 +109,10 @@ header:
 
 Every post must have exactly one format tag: `offline` for regular in-person meetings, `online` for regular online meetings, or `inne` for special/non-numbered events.
 
+When a title or body paragraph starts with the meeting number, escape its period
+(for example, `172\. spotkanie ...`) so Markdown does not turn it into an ordered
+list displaying `1.`. Use single-quoted YAML for such titles.
+
 For meeting registration, add `meetup_url` to the post's front matter with the
 specific event URL (not the group URL), for example
 `meetup_url: "https://www.meetup.com/wrocnet/events/317144095/"`.
