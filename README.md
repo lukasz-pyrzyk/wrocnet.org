@@ -109,6 +109,15 @@ header:
 
 Every post must have exactly one format tag: `offline` for regular in-person meetings, `online` for regular online meetings, or `inne` for special/non-numbered events.
 
+For meeting registration, add `meetup_url` to the post's front matter with the
+specific event URL (not the group URL), for example
+`meetup_url: "https://www.meetup.com/wrocnet/events/317144095/"`.
+The default `meeting` layout inherits the theme's `single` layout and displays
+a prominent “ZAPISZ SIĘ” button above and below the content for posts in
+`spotkania` with a non-empty `meetup_url`. Posts without an event URL and past
+meetings do not display signup buttons. The date check includes the entire
+event day in `Europe/Warsaw` and is refreshed when the static site is rebuilt.
+
 For event banners (AI generation, assets, rendering, partner hierarchy, and website integration), use the [single banner workflow in office/AGENTS.md](office/AGENTS.md#zasady-dla-grafik).
 
 After an event, add or update `meetup_attendees: N` in its front matter to preserve the attendee count shown by Meetup. Also add {% raw %}`{% include attendance.html %}`{% endraw %} after the opening paragraph if it is not already present. The include displays positive counts and hides zero or missing values.

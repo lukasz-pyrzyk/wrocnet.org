@@ -46,6 +46,45 @@
   height: auto;
 }
 
+.meeting-signup {
+  margin: 1.5rem 0;
+  text-align: center;
+}
+
+.page__content .meeting-signup__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  margin: 0;
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
+  background: linear-gradient(120deg, #641e78, #8e24aa);
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 800;
+  line-height: 1.4;
+  text-decoration: none;
+}
+
+.page__content .meeting-signup__button:hover,
+.page__content .meeting-signup__button:focus-visible {
+  background: #641e78;
+  color: #fff;
+}
+
+.page__content .meeting-signup__button:focus-visible {
+  outline: 3px solid #641e78;
+  outline-offset: 4px;
+}
+
+.page__content .meeting-signup__note {
+  margin: 0.5rem 0 0;
+  color: #6b5f75;
+  font-size: 0.75em;
+}
+
 .page__hero--home {
   padding: 3rem 0;
   background-position: center bottom;
