@@ -182,6 +182,10 @@ Jeśli mówi „mocniej”, zwiększ klarowność i siłę przekazu, nie dodawaj
 - Nie publikuj niepotwierdzonych informacji.
 - W komunikacji o partnerach pokazuj współpracę i korzyść dla społeczności.
 
+## Tytuły wydarzeń Meetup.com
+
+Stosuj konwencję ze [spotkania 171](../_posts/2026-10-20-171-spotkanie-wroclawskiej-grupy-net.md): `NR. spotkanie Wroc.NET - skrót tematów (Nazwisko, Nazwisko)`. Zachowuj słowo „spotkanie”, uwzględniaj prelekcję i panel, a w nawiasie podawaj nazwiska wszystkich prelegentów i panelistów, bez powtórzeń. Dane pobieraj z właściwego posta i bazy prelegentów. W tytule wklejanym na Meetup nie używaj markdownowego escapowania kropki po numerze.
+
 ## Newsletter Meetup.com
 
 Wysyłamy przed każdym spotkaniem (2-3 dni wcześniej). Zawartość: powitanie, prelekcje (tytuł, abstrakt, bio prelegenta), partner/sponsorzy, CTA z linkiem do rejestracji, zasada o zdjęciach. Ton: bliski, konkretny, bez sztywności.
