@@ -6,6 +6,7 @@ categories: spotkania
 tags:
   - offline
 meetup_attendees: 0
+meetup_url: "https://www.meetup.com/wrocnet/events/317144095/"
 header:
   image: /assets/images/2026-11-17-172-meetup.jpg
   teaser: /assets/images/2026-11-17-172-meetup.jpg

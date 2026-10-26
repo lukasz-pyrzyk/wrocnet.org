@@ -7,6 +7,7 @@ tags:
   - offline
 meetup_attendees: 171
 meetup_waitlist: 34
+meetup_url: "https://www.meetup.com/wrocnet/events/316767368/"
 header:
   image: /assets/images/2026-10-20-171-meetup.jpg
   teaser: /assets/images/2026-10-20-171-meetup.jpg
