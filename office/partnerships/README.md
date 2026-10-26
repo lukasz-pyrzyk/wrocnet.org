@@ -2,7 +2,7 @@
 
 Wewnętrzny rejestr kontaktów, ustaleń i kolejnych działań. Treści maili pozostają w archiwum komunikacji.
 
-**Aktualizacja statusów:** 2026-10-26, 13:28
+**Aktualizacja statusów:** 2026-10-26, 15:58
 
 ## Cel i zakres
 
@@ -10,7 +10,7 @@ Zwiększyć rozpoznawalność Wroc.NET we Wrocławiu i dotrzeć do nowych uczest
 
 Punktem wyjścia do rozmowy jest patronat nad trzema kolejnymi spotkaniami, z możliwością kontynuacji. To propozycja do uzgodnienia, nie podjęte zobowiązanie. Jeśli redakcja woli zacząć od jednej zapowiedzi, traktujemy to jako pierwszy krok.
 
-Pierwsze piętnaście zgłoszeń wysłano 19.10.2026, a kolejne cztery, do DPIN, Ministerstwa Cyfryzacji, NASK i Kancelarii Prezydenta RP, 26.10.2026. Na 26.10.2026 otrzymaliśmy cztery zgłoszone odpowiedzi: Wrocławski Portal deklaruje współpracę i publikowanie informacji, TVP3 Wrocław prowadzi procedurę przyznania patronatu, ARAW prosi o późniejszy kontakt, a Urząd Marszałkowski wskazuje DPIN jako lepszego odbiorcę propozycji. Łukasz potwierdził wysyłkę kompletu dokumentów do TVP3 20.10.2026. Dla pozostałych piętnastu odbiorców nie zgłoszono odpowiedzi. Wysyłkę do MC, NASK i KPRP Łukasz potwierdził 26.10.2026 o 13:28; były to zapytania wstępne, nie formalne wnioski o patronat.
+Pierwsze piętnaście zgłoszeń wysłano 19.10.2026, a kolejne cztery, do DPIN, Ministerstwa Cyfryzacji, NASK i Kancelarii Prezydenta RP, 26.10.2026. Na 26.10.2026 otrzymaliśmy pięć zgłoszonych odpowiedzi: Wrocławski Portal deklaruje współpracę i publikowanie informacji, TVP3 Wrocław prowadzi procedurę przyznania patronatu, ARAW prosi o późniejszy kontakt, Urząd Marszałkowski wskazuje DPIN jako lepszego odbiorcę propozycji, a NASK zaprasza do rozmowy z dyrektorem Pionu Inżynierii Oprogramowania przed złożeniem wniosku o patronat. Łukasz potwierdził wysyłkę kompletu dokumentów do TVP3 20.10.2026. Dla pozostałych czternastu odbiorców nie zgłoszono odpowiedzi. Wysyłkę do MC, NASK i KPRP Łukasz potwierdził 26.10.2026 o 13:28; były to zapytania wstępne, nie formalne wnioski o patronat.
 
 ## Plan na dziś - 19.10.2026
 
@@ -42,7 +42,7 @@ Nie prosimy o pilną promocję pełnej sali na 20 października. Rekord zapisów
 
 ## Aktualny rejestr kontaktów - stan na 26.10.2026
 
-Podsumowanie: **19 wysłanych zgłoszeń, 4 zgłoszone odpowiedzi, 15 bez zgłoszonej odpowiedzi, 1 potwierdzona deklaracja współpracy przy publikacjach, 0 formalnie przyznanych patronatów**. Rejestr opiera się na potwierdzeniach Łukasza, nie na bezpośrednim wglądzie do skrzynki.
+Podsumowanie: **19 wysłanych zgłoszeń, 5 zgłoszonych odpowiedzi, 14 bez zgłoszonej odpowiedzi, 1 potwierdzona deklaracja współpracy przy publikacjach, 0 formalnie przyznanych patronatów**. Rejestr opiera się na potwierdzeniach Łukasza, nie na bezpośrednim wglądzie do skrzynki.
 
 | Kolejność | Medium | Status | Data wysyłki / plik maila | Odpowiedź i następny krok |
 |---|---|---|---|---|
@@ -63,7 +63,7 @@ Podsumowanie: **19 wysłanych zgłoszeń, 4 zgłoszone odpowiedzi, 15 bez zgłos
 | 15 | Dolnośląski Urząd Wojewódzki | Wysłany | 2026-10-19 - [mail](../content/2026-10-19-email-partnerstwo-duw.md) | Oczekujemy na odpowiedź na zapytanie, w tym o zgodność formuły partnerskiej; nie złożono formalnego wniosku |
 | 16 | Dolnośląski Park Innowacji i Nauki S.A. (DPIN) | Wysłany | 2026-10-26 - wysyłka potwierdzona przez Łukasza | Agnieszka Kapłon-Kulig, agnieszka.kaplon@dpin.pl (Komunikacja i PR). Oczekujemy na odpowiedź; przy jej braku przypomnienie 04-09.11.2026 |
 | 17 | Ministerstwo Cyfryzacji | Zapytanie wstępne wysłane | 2026-10-26 - wysyłka potwierdzona przez Łukasza; propozycja treści w rozmowie | patronatcyfryzacja@cyfra.gov.pl. Współpraca przy kompetencjach cyfrowych i warunki patronatu; bez formalnego wniosku. Przy braku odpowiedzi przypomnienie 04-09.11.2026 |
-| 18 | NASK - Państwowy Instytut Badawczy | Zapytanie wstępne wysłane | 2026-10-26 - wysyłka potwierdzona przez Łukasza; propozycja treści w rozmowie | patronaty@nask.pl. Współpraca merytoryczna przy spotkaniu o bezpieczeństwie oprogramowania i warunki patronatu; temat nieuzgodniony. Przy braku odpowiedzi przypomnienie 04-09.11.2026 |
+| 18 | NASK - Państwowy Instytut Badawczy | Mail do wskazanego kontaktu wysłany - oczekiwanie na odpowiedź | 2026-10-26 - zapytanie wysłane; odpowiedź zespołu Patronaty o 15:29; wysyłka do Kamila potwierdzona przez Łukasza o 15:58 | Kamil Warpechowski, dyrektor Pionu Inżynierii Oprogramowania: kamil.warpechowski@nask.pl, tel. +48 782 170 236. Wysłano propozycję współpracy merytorycznej i pytanie o możliwość patronatu nad spotkaniem lub cyklem. Brak potwierdzonej współpracy i formalnego wniosku |
 | 19 | Kancelaria Prezydenta RP | Zapytanie wstępne wysłane | 2026-10-26 - wysyłka potwierdzona przez Łukasza; propozycja treści w rozmowie | listy@prezydent.pl. Pytanie o Patronat Kancelarii, nie wyłączny Patronat Honorowy Prezydenta RP; bez formalnego wniosku. Przy braku odpowiedzi przypomnienie 04-09.11.2026 |
 
 Statusy do używania: do przygotowania → szkic → zaakceptowany → wysłany → rozmowa / uzgodnione / odmowa / brak odpowiedzi.
@@ -287,7 +287,9 @@ Stałe linki:
 - **Ministerstwo Cyfryzacji:** https://www.gov.pl/web/cyfryzacja/uzyskaj-patronat-ministra - kontakt i procedura sprawdzone 26.10.2026. Formalny wniosek przez system elektroniczny minimum osiem tygodni przed wydarzeniem. Zapytanie dotyczy także współpracy przy rozwoju kompetencji cyfrowych; nie oznacza zgłoszenia do konkretnego programu.
 - **NASK:** https://www.nask.pl/patronaty - kontakt i procedura sprawdzone 26.10.2026. Formalny wniosek minimum 30 dni przed wydarzeniem; patronat na jedną edycję. Wyjaśnić zgodność formuły partnerskiej z ograniczeniami reklamowymi i marketingowymi. Spotkanie o bezpieczeństwie i udział eksperta są propozycjami, nie uzgodnieniami.
 - **Kancelaria Prezydenta RP:** https://www.prezydent.pl/aktualnosci/patronaty - kontakt i procedura sprawdzone 26.10.2026. Wnioski od 120 do 60 dni przed wydarzeniem. Patronat Honorowy Prezydenta RP jest wyłączny; Patronat Kancelarii nie musi być wyłączny. Zapytanie przygotowano pod Patronat Kancelarii, bez zobowiązań dotyczących wyłączności.
-- **Następny krok:** czekać na odpowiedzi; przy ich braku jedno przypomnienie 04-09.11.2026. Przed formalnymi wnioskami ustalić podmiot organizujący, konkretne wydarzenie, program i rolę partnerów. Patronaty nie gwarantują finansowania, promocji ani obecności przedstawicieli instytucji.
+- **Odpowiedź NASK 26.10.2026, 15:29:** zespół Patronaty zaprasza do kontaktu z Kamilem Warpechowskim, dyrektorem Pionu Inżynierii Oprogramowania: kamil.warpechowski@nask.pl, tel. +48 782 170 236. Po zakończeniu rozmów prosi o przesłanie wniosku zgodnie z https://www.nask.pl/patronaty. Nie potwierdzono jeszcze terminu rozmowy, udziału eksperta ani przyznania patronatu.
+- **Mail do Kamila 26.10.2026:** Łukasz potwierdził wysyłkę o 15:58 na kamil.warpechowski@nask.pl. Temat: „Wroc.NET - współpraca merytoryczna i patronat NASK”. Wiadomość zawiera propozycję spotkania o bezpieczeństwie oprogramowania lub bezpiecznym wytwarzaniu aplikacji z udziałem eksperta NASK oraz pytanie o możliwość patronatu nad spotkaniem lub cyklem. Ustalenia proponujemy prowadzić mailowo, bez propozycji rozmowy online. To kontynuacja kontaktu z NASK, nie nowe zgłoszenie do kolejnej instytucji.
+- **Następny krok:** NASK - czekać na odpowiedź Kamila i ustalić mailowo zakres ewentualnej współpracy oraz możliwość patronatu. Nie wysyłać standardowego przypomnienia o braku odpowiedzi do skrzynki patronatów. MC i KPRP - czekać na odpowiedzi; przy ich braku jedno przypomnienie 04-09.11.2026. Przed formalnymi wnioskami ustalić podmiot organizujący, konkretne wydarzenie, program i rolę partnerów. Patronaty nie gwarantują finansowania, promocji ani obecności przedstawicieli instytucji.
 
 ## Jak oceniamy efekty
 
@@ -298,6 +300,6 @@ Stałe linki:
 
 ## Najbliższy krok
 
-MC, NASK i KPRP: zapytania wysłane 26.10.2026, czekamy na odpowiedzi; przy ich braku przypomnienie 04-09.11.2026. Nie traktować maili jako formalnych wniosków.
+NASK: mail do Kamila Warpechowskiego wysłany 26.10.2026, czekamy na odpowiedź dotyczącą współpracy merytorycznej i możliwości patronatu. Najpierw ustalenia mailowe, potem formalny wniosek. MC i KPRP: zapytania wysłane 26.10.2026, czekamy na odpowiedzi; przy ich braku przypomnienie 04-09.11.2026. Nie traktować maili jako formalnych wniosków.
 
 DPIN: propozycja wysłana, czekamy na odpowiedź; przy jej braku przypomnienie 04-09.11.2026. UMWD: podziękować za rekomendację, bez ponawiania wcześniejszego zapytania. Wrocławski Portal: podziękować i przesłać informację o konkretnym wydarzeniu wraz z grafiką; osobno ustalić ewentualny patronat i logotyp. TVP3: komplet dokumentów wysłany, czekamy na decyzję; szczegóły operacyjne po przyznaniu patronatu. ARAW: wrócić do Norberta Nowackiego około 04.11.2026 zgodnie z prośbą o odczekanie dwóch tygodni. Dla jedenastu kontaktów bez odpowiedzi z pierwszej rundy proponowany termin jednego przypomnienia to 28.10-02.11.2026. Zapytanie do DUW nie zastępuje formalnego wniosku. Każdą kolejną odpowiedź i decyzję zapisujemy w rejestrze.
