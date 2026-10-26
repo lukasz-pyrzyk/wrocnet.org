@@ -17,7 +17,7 @@ talks:
 meetup_attendees: 36
 ---
 
-155. spotkanie Wrocławskiej Grupy .NET odbyło się 22.06.2023 r. w **Klubokawiarnia Mleczarnia, ul. Pawła Włodkowica 5, Wrocław**.
+155\. spotkanie Wrocławskiej Grupy .NET odbyło się 22.06.2023 r. w **Klubokawiarnia Mleczarnia, ul. Pawła Włodkowica 5, Wrocław**.
 
 {% include attendance.html %}
 

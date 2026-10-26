@@ -14,7 +14,7 @@ talks:
 meetup_attendees: 25
 ---
 
-149. spotkanie Wrocławskiej Grupy .NET odbyło się 22.11.2022 r. w **SoftServe, ul. Jaworska 11-13, Wrocław**.
+149\. spotkanie Wrocławskiej Grupy .NET odbyło się 22.11.2022 r. w **SoftServe, ul. Jaworska 11-13, Wrocław**.
 
 {% include attendance.html %}
 

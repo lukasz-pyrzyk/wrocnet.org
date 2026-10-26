@@ -14,7 +14,7 @@ talks:
 meetup_attendees: 81
 ---
 
-131. spotkanie Wrocławskiej Grupy .NET odbyło się 24.11.2020 r..
+131\. spotkanie Wrocławskiej Grupy .NET odbyło się 24.11.2020 r..
 
 {% include attendance.html %}
 

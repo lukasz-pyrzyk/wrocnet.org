@@ -21,7 +21,7 @@ talks:
   - maciej-aniserowicz
 ---
 
-171. spotkanie Wrocławskiej Grupy .NET odbędzie się 20.10.2026 r. w **Pubie Wędrówki, ul. Podwale 37/38, 50-040 Wrocław**.
+171\. spotkanie Wrocławskiej Grupy .NET odbędzie się 20.10.2026 r. w **Pubie Wędrówki, ul. Podwale 37/38, 50-040 Wrocław**.
 
 {% include attendance.html %}
 

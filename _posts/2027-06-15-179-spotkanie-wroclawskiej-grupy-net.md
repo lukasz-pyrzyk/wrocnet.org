@@ -10,7 +10,7 @@ header:
   teaser: /assets/images/spotkania-teaser.jpg
 ---
 
-179. spotkanie Wrocławskiej Grupy .NET odbędzie się 15.06.2027 r. w **Pub Wędrówki, ul. Podwale 37/38, 50-040 Wrocław**.
+179\. spotkanie Wrocławskiej Grupy .NET odbędzie się 15.06.2027 r. w **Pub Wędrówki, ul. Podwale 37/38, 50-040 Wrocław**.
 
 {% include attendance.html %}
 

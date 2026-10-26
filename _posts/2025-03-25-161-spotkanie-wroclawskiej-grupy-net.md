@@ -17,7 +17,7 @@ talks:
 meetup_attendees: 65
 ---
 
-161. spotkanie Wrocławskiej Grupy .NET odbyło się 25.03.2025 r. w **Spyrosoft, plac Nowy Targ 28, Wrocław**.
+161\. spotkanie Wrocławskiej Grupy .NET odbyło się 25.03.2025 r. w **Spyrosoft, plac Nowy Targ 28, Wrocław**.
 
 {% include attendance.html %}
 
