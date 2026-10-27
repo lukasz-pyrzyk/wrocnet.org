@@ -107,6 +107,8 @@ exclude:
   - gemfiles
   - Gemfile
   - Gemfile.lock
+  - Dockerfile
+  - run.sh
   - node_modules
   - vendor/bundle/
   - vendor/cache/

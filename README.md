@@ -6,52 +6,30 @@ Built with [Jekyll](https://jekyllrb.com/) and the [Minimal Mistakes](https://mm
 
 ## Local development
 
-### macOS
+Install and start [Docker Desktop](https://www.docker.com/products/docker-desktop/)
+or another Docker-compatible engine, then run in a POSIX shell (on Windows, use WSL):
 
-1. Install Ruby via Homebrew (the system Ruby is too old):
+```bash
+./run.sh
+```
 
-   ```bash
-   brew install ruby
-   export PATH="$(brew --prefix ruby)/bin:$PATH"
-   ```
+Open http://127.0.0.1:4001. Source edits trigger a rebuild and browser refresh.
+Stop with Ctrl+C or `docker stop wrocnet-local` before starting another instance.
+If file watching misses edits, use `./run.sh --force_polling`.
 
-   Add the `export PATH` line to your `~/.zshrc` to make it permanent.
+The script builds the latest `ruby:4-alpine` image using cached layers. Separate
+Docker volumes preserve this project's gems, generated pages and cache between
+runs. LiveReload uses port 35730. Host Ruby, Bundler and Docker Compose are not
+required.
 
-2. Install Bundler and dependencies:
-
-   ```bash
-   gem install bundler
-   bundle install
-   ```
-
-3. Start the dev server:
-
-   ```bash
-   bundle exec jekyll serve --livereload
-   ```
-
-### Windows
-
-1. Install Ruby via [RubyInstaller for Windows](https://rubyinstaller.org/downloads/) (choose the **Ruby+Devkit** version ≥ 3.2, required by the pinned Bundler). Run the `ridk install` step at the end of the installer.
-
-2. Open a new Command Prompt or PowerShell window and install dependencies:
-
-   ```powershell
-   gem install bundler
-   bundle install
-   ```
-
-3. Start the dev server:
-
-   ```powershell
-   bundle exec jekyll serve --livereload
-   ```
-
-The site will be available at [http://localhost:4000](http://localhost:4000).
+The existing local `Gemfile.lock` is used when available; it remains ignored by
+Git. A fresh checkout resolves dependencies from `Gemfile`, as before.
+CI/CD continues to build directly with Ruby and Jekyll, without Docker.
 
 ## CI validation checks (local)
 
-To run the same checks as CI before opening a PR:
+With the local preview running, use these commands to run the same checks as CI.
+Generated pages stay in the container's `wrocnet-site` volume.
 
 Prerequisite for step 1: install `yamllint` (for example: `python -m pip install yamllint`).
 
@@ -64,13 +42,13 @@ Prerequisite for step 1: install `yamllint` (for example: `python -m pip install
 2. Build Jekyll in strict front matter mode:
 
    ```bash
-   bundle exec jekyll build --strict_front_matter
+   docker exec wrocnet-local bundle exec jekyll build --strict_front_matter
    ```
 
 3. Validate generated HTML, internal links, and images:
 
    ```bash
-   bundle exec htmlproofer ./_site --disable-external --no-enforce-https
+   docker exec wrocnet-local bundle exec htmlproofer ./_site --disable-external --no-enforce-https
    ```
 
 ## Project structure
