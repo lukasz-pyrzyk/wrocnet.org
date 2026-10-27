@@ -5,11 +5,7 @@ strategic:
     role: "Partner strategiczny"
 
 supporting:
-  - name: "Helion"
-    url: "https://helion.pl/"
-    logo: "/assets/images/partners/helion.jpg"
-    role: "Partner nagród"
-  - name: "hued.me"
-    url: "https://hued.me/"
-    logo: "/assets/images/partners/hued-me.png"
+  - name: "Wrocławski Portal"
+    url: "https://www.wroclawskiportal.pl/"
+    logo: "/assets/images/partners/wroclawski-portal.png"
     role: "Partner medialny"

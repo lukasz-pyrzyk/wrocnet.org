@@ -85,6 +85,20 @@ Prerequisite for step 1: install `yamllint` (for example: `python -m pip install
 | `_sass/` | Custom color skin (`_wrocnet.scss`) |
 | `assets/` | Images, logo, presentation files (PDF/PPTX) |
 
+## Partners and media mentions
+
+Current partners are listed in [`_data/partners.yml`](_data/partners.yml) and
+rendered on the homepage. Keep partner logos locally in `assets/images/partners/`.
+
+Media coverage is collected in
+[`_pages/wspomnieli-o-nas.md`](_pages/wspomnieli-o-nas.md), linked from the main
+navigation. Add publications newest first under year headings, including the
+article link, outlet, and publication date in a compact list item, without a
+description. Mark organizer posts as `zza kulis` and archived copies as `archiwum`.
+Verify both the mention and the original publication date on the source page;
+do not substitute an event date or the page's last-updated date. Summarize in
+your own words rather than reproducing the article if context is needed elsewhere.
+
 ## Adding a new meeting post
 
 Create a file in `_posts/` following the naming convention:

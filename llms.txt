@@ -53,6 +53,7 @@ Administratorem strony i organizatorem Wroc.NET jest [{{ site.website_organizer.
 - [O grupie]({{ '/o-grupie/' | absolute_url }}): historia grupy, misja, poruszane tematy, kanały kontaktu
 - [Organizatorzy]({{ '/organizatorzy/' | absolute_url }}): aktualny zespół i byli organizatorzy
 - [Wystąpili u nas]({{ '/wystapili-u-nas/' | absolute_url }}): przeszukiwalna lista prelegentów i ich wystąpień
+- [Wspomnieli o nas]({{ '/wspomnieli-o-nas/' | absolute_url }}): publikacje i wzmianki w mediach o Wroc.NET
 - [Zostań prelegentem]({{ '/zostan-prelegentem/' | absolute_url }}): call for papers, warunki i formularz zgłoszeniowy
 
 ## Miejsce spotkań i kontakt
