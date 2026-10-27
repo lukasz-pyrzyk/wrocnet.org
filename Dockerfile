@@ -1,6 +1,6 @@
 FROM ruby:4-alpine
 
-RUN apk add --no-cache build-base git libcurl linux-headers openssl-dev \
+RUN apk add --no-cache build-base git libcurl linux-headers openssl-dev tzdata \
     && git config --global --add safe.directory /app
 
 WORKDIR /app
