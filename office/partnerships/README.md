@@ -1,13 +1,13 @@
 # Partnerstwa Wroc.NET
 
-Stan na **28.10.2026, 11:39**.
+Stan na **28.10.2026, 14:33**.
 
 ## Podsumowanie
 
-- **22 kontaktowanych odbiorców**, 8 odpowiedzi merytorycznych.
+- **22 kontaktowanych odbiorców**, 9 odpowiedzi merytorycznych.
 - **1 patron medialny:** Wrocławski Portal.
 - **2 odmowy:** TVP3 i Dolnośląski Urząd Wojewódzki.
-- **14 odbiorców bez odpowiedzi merytorycznej**, w tym wroclaw.pl z autoresponderem.
+- **13 odbiorców bez odpowiedzi merytorycznej**, w tym wroclaw.pl z autoresponderem.
 - **7 przypomnień wysłanych 28.10**. Echo24 dostało tego dnia nowe zgłoszenie, nie przypomnienie.
 
 ## Media
@@ -19,7 +19,7 @@ Deklarację współpracy przy publikacjach liczymy w tym rejestrze jako patronat
 | [Wrocławski Portal](../content/2026-10-19-email-patronat-wroclawski-portal.md) | Patron medialny | Odpowiedź 20.10 | Wysyłać opis i grafikę: redakcja@wroclawskiportal.pl. Uzgodnić użycie logo |
 | [Kocham Wrocław](../content/2026-10-19-email-patronat-kocham-wroclaw.md) | Czekamy | Przypomnienie 28.10 | Czekać na odpowiedź |
 | [wroclaw.pl](../content/2026-10-19-email-patronat-wroclaw-pl.md) | Tylko autoresponder | Przypomnienie i autoresponder 28.10 | Mariola Szczyrba poza biurem, bez daty powrotu. Czekać na odpowiedź merytoryczną |
-| [Radio LUZ](../content/2026-10-19-email-patronat-radio-luz.md) | Czekamy | Przypomnienie 28.10 | Czekać na odpowiedź |
+| [Radio LUZ](../content/2026-10-19-email-patronat-radio-luz.md) | Zainteresowanie, kontakt do newsroomu | Odpowiedź Martyny Dziakowicz 28.10, 13:24 | Jakub Dworzecki (jdworzecki@radioluz.pl) jest w CC. Krótka odpowiedź wszystkim z pytaniem o potrzeby i formę współpracy przygotowana, wysyłka niepotwierdzona. Bez proponowania udziału w audycji; patronat nieuzgodniony |
 | [Miejsca we Wrocławiu](../content/2026-10-19-email-patronat-miejsca-we-wroclawiu.md) | Czekamy | Przypomnienie 28.10 | Czekać na odpowiedź |
 | [tuWrocław.com](../content/2026-10-19-email-patronat-tuwroclaw.md) | Czekamy | Przypomnienie 28.10 | Czekać na odpowiedź |
 | [Radio Wrocław](../content/2026-10-19-email-patronat-radio-wroclaw.md) | Czekamy | Przypomnienie 28.10 | Wysłano na promocja@radiowroclaw.pl; czekać na odpowiedź |
@@ -50,9 +50,11 @@ Deklarację współpracy przy publikacjach liczymy w tym rejestrze jako patronat
 2. Potwierdzić wysyłkę przygotowanych odpowiedzi do **NASK i DPIN**.
 3. Wyjaśnić adres **Naszego Miasta**. DUW zamknięte po odmowie; WCA pomijamy.
 4. Wrócić do **ARAW około 4 listopada**. Pozostałe terminy przypomnień są w tabeli.
+5. Odpowiedzieć **Radiu LUZ**, zachowując Jakuba Dworzeckiego w wątku; zapytać o potrzeby i formę współpracy.
 
 ## Kontakty pomocnicze i dokumenty
 
+- **Do rozważenia, bez wysyłki:** [Patronat Honorowy Prezydenta Wrocławia](https://bip.um.wroc.pl/sprawa-do-zalatwienia/8793/patronat-honorowy-prezydenta-wroclawia). Wniosek na kancelaria.prezydenta@um.wroc.pl co najmniej 30 dni przed wydarzeniem; może wystąpić osoba fizyczna. Termin dla 17.11 już minął; 15.12 spełnia wymóg przy złożeniu wniosku teraz. Nie wliczamy do kontaktowanych odbiorców.
 - Biuro Rozwoju Gospodarczego UM Wrocławia: tel. 71 777 71 74; Dział Wspierania Przedsiębiorczości, kierownik Katarzyna Kulska, tel. 71 777 75 46. [Kontakt i kompetencje w BIP](https://bip.um.wroc.pl/artykul/672/3215/biuro-rozwoju-gospodarczego), sprawdzone 28.10.2026.
 
 - wroclaw.pl: w pilnych sprawach autoresponder wskazuje bartosz.senderek@araw.pl lub bartosz.moch@araw.pl. Nie wysyłano im osobnej wiadomości.
