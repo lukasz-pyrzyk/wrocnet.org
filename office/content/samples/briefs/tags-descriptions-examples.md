@@ -1,5 +1,10 @@
 # [BRIEFS] Krótkie Hasła, Tagi, Opisy do Grafik
 
+Bank historycznych pomysłów, nie obowiązująca identyfikacja ani aktualne dane.
+Przy adaptacji sprawdzaj [styl i fakty](../../../AGENTS.md), a grafikę wykonuj
+według [bieżącego warsztatu](../../../WORKFLOWS.md#zasady-dla-grafik).
+Nie przenoś automatycznie nazw partnerów, liczb ani dawnych instrukcji narzędziowych.
+
 ## Taglines for Meetup Announcements
 
 **Zakończenie sezonu:**

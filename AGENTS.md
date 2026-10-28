@@ -1,60 +1,12 @@
-# AGENTS.md
+# Agent guidance for wrocnet.org
 
-Agent guidance for wrocnet.org (Jekyll + Minimal Mistakes).
+## Start here
+- For website work, follow [Website Admin](.github/agents/wrocnet-website-admin.agent.md): development, content/data conventions, safeguards and validation.
+- For communication, follow [office/AGENTS.md](office/AGENTS.md). Read its technical workflows only for graphics or presentations.
 
-## Purpose
-- Keep changes small, content-safe, and compatible with the current Jekyll site structure.
-- Prefer updating existing files and patterns over introducing new architecture.
-
-## First Read
-- Main project guide: [README.md](README.md)
-- Jekyll config and site defaults: [_config.yml](_config.yml)
-- CI validation pipeline: [.github/workflows/validate.yml](.github/workflows/validate.yml)
-- YAML lint rules: [.yamllint](.yamllint)
-- Navigation/content data: [_data/navigation.yml](_data/navigation.yml), [_data/location.yml](_data/location.yml), [_data/organizers.yml](_data/organizers.yml)
-
-## Core Commands
-
-See [README.md](README.md) for install, local dev server, and CI validation commands (yamllint, jekyll build, htmlproofer).
-
-## Repository Conventions
-- Site uses remote theme mmistakes/minimal-mistakes@4.28.0 and custom skin wrocnet.
-- No custom _layouts directory: rely on theme layouts and local overrides in _includes.
-- Default post category is spotkania via _config.yml defaults (post naming pattern and front matter: see [README.md](README.md#adding-a-new-meeting-post)).
-- Main pages are in _pages, data-driven content is in _data.
-- Default branch is main.
-- Do not commit directly to main: create a topic branch for each task and merge via Pull Request.
-- Always create new feature/topic branches from the latest `origin/main`, never from the current feature branch: run `git fetch origin main`, then `git switch --no-track -c <branch-name> origin/main`. Preserve unrelated local changes and cherry-pick only task-specific commits when moving work. Before pushing, verify `git log origin/main..HEAD` and `git diff --stat origin/main...HEAD` contain only the intended task.
-
-## Known Pitfalls
-- Keep aligned colons in _data/ui-text.yml. The lint config intentionally allows extra spaces before colons.
-- If adding links/images in old posts, avoid empty markdown links and missing local assets because htmlproofer runs in CI.
-- Prefer preserving Polish content style and existing URL/permalink patterns.
-- **Generating numbered post titles and introductions**: Markdown interprets a leading `9. Meeting` as an ordered-list item and may display `1. Meeting`, including in Minimal Mistakes archive titles. Always generate single-quoted YAML titles with the first period escaped, for example `title: '9\. Meeting'`, and escape the period in body paragraphs beginning with the meeting number, for example `9\. spotkanie ...`. Preserve existing escapes and genuine numbered lists. Verify the generated HTML shows the actual meeting number as text, not a list item. See [README.md](README.md#adding-a-new-meeting-post). Titles pasted into Meetup are plain text and must not contain Markdown escapes.
-- **Post format tags**: Every post must have exactly one format tag: `offline` for regular in-person meetings, `online` for regular online meetings, or `inne` for special/non-numbered events. Do not use `.NET` as a tag; every event on the site is already .NET-related.
-- **Historical posts** (pre-2012, archival data): see [.github/instructions/historical-posts.instructions.md](.github/instructions/historical-posts.instructions.md) for anonymization and formatting rules.
-- **Wayback Machine rate limits**: archive.org may return HTTP 429 while researching historical posts. Do not retry immediately; record the URL and return to it later.
-- **Local build environment (macOS)**: system Ruby (2.6.x) is too old for the `bundler` version pinned in `Gemfile.lock` (requires Ruby >= 3.2). Fix: `brew install ruby@3.2`, then prefix commands with `export PATH="/opt/homebrew/opt/ruby@3.2/bin:$PATH"` before running `gem install bundler:<version>` and `bundle install`/`bundle exec jekyll ...`. This is a one-time environment fix, not a repo issue.
-- **New meeting date/venue/number**: meeting dates live as posts in `_posts/` (create the post directly, no separate schedule file); check [_data/location.yml](_data/location.yml) for the current venue. The meeting number is the previous post's number + 1 (check the latest file in `_posts/`).
-- **Homepage community stats**: derive figures from repository data instead of hardcoding them. Meeting count is the highest number in a numbered `YYYY-MM-DD-NR-spotkanie-*.md` filename (do not count post files because the historical archive has gaps); years are calculated from the oldest post's date; speaker count comes from `_data/speakers.yml`; presentation count is the sum of all `talks` entries in post front matter. Display them in this order: years, meetings, speakers, presentations.
-- **Homepage calendar**: upcoming dates are derived from `_posts/`; venue comes from [_data/location.yml](_data/location.yml). Show only current/future posts, highlight the nearest one, and link date tiles to Meetup. On mobile, render dates as a single-column list that flows naturally down the page; do not add nested horizontal or vertical scrolling.
-- **Existing speakers**: check [_data/speakers.yml](_data/speakers.yml) for an existing `id` before adding a new speaker entry; reuse it in front matter `speaker_ids` and in body via `{% include speaker.html id="..." %}`.
-- **Multiple speakers per talk**: `speaker_ids` in a talk's front matter accepts a list; [_includes/talk.html](_includes/talk.html) renders all of them comma-separated automatically — no extra template work needed.
-- **Profile photos**: use local JPG/PNG portraits, about 400x400px, never external image URLs. Organizer photos belong in `assets/images/organizers/`; speaker originals in `assets/images/speakers/raw/` and resized portraits in `assets/images/speakers/`. Set the optional `photo` path in [_data/speakers.yml](_data/speakers.yml), reusing organizer images for speakers who are also organizers instead of duplicating files. [_pages/wystapili-u-nas.md](_pages/wystapili-u-nas.md) uses `/assets/images/speakers/placeholder.png` when `photo` is missing; keep this asset available. The archive intentionally lists only past appearances, so a future first-time speaker may have a photo in the data without a visible card yet.
-- **Missing organizer photo**: [_pages/organizatorzy.md](_pages/organizatorzy.md) falls back to `/assets/images/organizers/placeholder.png` via Liquid's `default` filter when `photo` is `""`. That asset must exist locally (create with e.g. `sips` or Pillow) or htmlproofer fails the build. Omit the `linkedin` key entirely (don't set it to `""`) when unknown — Liquid treats empty strings as truthy, so {% raw %}`{% if person.linkedin %}`{% endraw %} would render a broken empty link.
-- **Running locally**: `future: true` in `_config.yml` makes `bundle exec jekyll serve`/`build` publish posts dated after the current date (e.g. next month's meeting) without needing the `--future` flag.
-- **Root `.md` files without front matter (e.g. `AGENTS.md`, `README.md`)**: the local Gemfile (`jekyll` gem) treats them as static files and never runs Liquid, but the real GitHub Pages deploy uses the `github-pages` gem, which loads `jekyll-optional-front-matter` and *does* render them through Liquid — literal `{% ... %}` snippets (even inside backticks) will break the deploy build even though local `jekyll build` and CI pass. Wrap literal Liquid syntax in `{% raw %}...{% endraw %}`, or add the file to `exclude:` in [_config.yml](_config.yml) if it shouldn't be published at all. `.github/workflows/validate.yml` has a "production parity" step using the same `actions/jekyll-build-pages` action to catch this in PRs.
-- **Terminal PATH reset (macOS)**: opening a GUI app from the same terminal session (e.g. `open -a "Google Chrome"` or `open -a Keynote`) can strip the shell's `PATH` for subsequent commands, making `ruby`, `unzip`, etc. "command not found". Prefix the next command with `export PATH="/usr/bin:/bin:/usr/sbin:/sbin"` (or re-export your full PATH) before running anything else in that terminal.
-
-## Change Strategy For Agents
-- Link, do not duplicate: if details exist in README or workflow files, reference them.
-- Do not modify `_includes/masthead.html`. Keep it compatible with theme updates; implement navigation and header changes through `_data/navigation.yml`, configuration, or local styles. If that is not feasible, discuss the trade-off before editing the include.
-- Verify with lint/build/proofer when changing content, data files, or templates.
-- Avoid broad formatting rewrites in historical posts unless explicitly requested.
-- Keep includes and data schema changes backward-compatible with existing pages.
-
-## Where To Start For Typical Tasks
-- Add/update meeting post: see [README.md](README.md#adding-a-new-meeting-post); optional assets under assets/images or slides.
-- Update organizer or schedule info: files in _data and related page under _pages.
-- Navigation or labels: _data/navigation.yml and _data/ui-text.yml.
-- Theme/header behavior: _includes and _sass/minimal-mistakes/skins/_wrocnet.scss.
+## Changes and Git
+- Keep changes small, content-safe and compatible with existing data schemas, URLs and Polish content style.
+- Link to existing documentation instead of duplicating rules. Do not turn task-specific workarounds into permanent global instructions.
+- Never commit directly to main. Run `git fetch origin main`, then `git switch --no-track -c <branch-name> origin/main` for each task.
+- Preserve unrelated local changes; cherry-pick only task-specific commits when moving work.
+- Before pushing, verify `git log origin/main..HEAD` and `git diff --stat origin/main...HEAD` contain only the intended task. Merge via Pull Request.

@@ -1,5 +1,9 @@
 # [NEWSLETTER] Meetup.com Newsletter Templates
 
+Szablon uzupełniaj danymi właściwego posta i potwierdzonymi partnerami.
+Przykład wysłanej wiadomości poniżej jest archiwalny; nie kopiuj z niego
+aktualnych faktów. Obowiązują [zasady komunikacji](../../../AGENTS.md).
+
 ## Template: Pre-Meetup Newsletter (Standard)
 
 **Status:** template (customizable)  
@@ -17,7 +21,7 @@ Już za [X dni] spotykamy się na [NR]. spotkaniu Wrocławskiej Grupy .NET. Czek
 
 [KRÓTKI ABSTRAKT — 2-3 ZDANIA]
 
-To będzie całkowicie praktyczne — wyjdziesz z konkretnymi wskazówkami, które możesz zastosować następnego dnia w swoim projekcie.
+[POTWIERDZONA WARTOŚĆ PRELEKCJI DLA UCZESTNIKA]
 
 **Prelegent:** [IMIĘ NAZWISKO]  
 [KRÓTKIE BIO — 2-3 LINIJKI]
@@ -33,18 +37,19 @@ To będzie całkowicie praktyczne — wyjdziesz z konkretnymi wskazówkami, któ
 
 ## 📋 Szczegóły
 
-**📅 Kiedy:** [DATA], godz. 18:30  
-**📍 Gdzie:** Pub Wędrówki, [ADRES]  
+**📅 Kiedy:** [DATA], godz. [GODZINA Z POSTA]
+
+**📍 Gdzie:** [MIEJSCE I ADRES]
+
 **🔗 Rejestracja:** [LINK DO MEETUP]
 
 ## Partnerzy
 
-**Partner strategiczny:** Devstyle  
-**Sponsor nagród:** Helion (Księgarnia internetowa)
+[POTWIERDZENI PARTNERZY TEGO WYDARZENIA I ICH ROLE]
 
 ---
 
-Na spotkaniu zawsze robimy kilka zdjęć na nasze social media – biorąc udział, akceptujesz, że możesz się na nich znaleźć 📸
+[AKTUALNA INFORMACJA ORGANIZATORÓW O WYKONYWANIU I PUBLIKACJI ZDJĘĆ]
 
 Do zobaczenia! 🚀
 

@@ -1,5 +1,9 @@
 # [EMAILS] Email Templates for Community
 
+Uzupełnij placeholdery na podstawie aktualnych danych. Wsparcie organizacyjne,
+format wystąpienia i warunki współpracy potwierdź przed wysłaniem; obowiązują
+[zasady komunikacji](../../../AGENTS.md).
+
 ## Template: Speaker Outreach
 
 **Status:** template  
@@ -14,17 +18,17 @@
 
 Cześć [Name]!
 
-Znamy Twoją pracę w [area], i uważamy, że wiele osób w naszej społeczności czeka właśnie na takie perspektywy.
+[KONKRETNY POWÓD ZAPROSZENIA TEJ OSOBY, OPARTY NA JEJ PRACY]
 
-Wroc.NET to regularny meetup ~100 ludzi z branży .NET we Wrocławiu. Zapraszamy Cię do podzielenia się doświadczeniem na temat [Topic] na jednym z naszych spotkań.
+Wroc.NET to regularny meetup społeczności .NET we Wrocławiu. Zapraszamy Cię do podzielenia się doświadczeniem na temat [Topic] na jednym z naszych spotkań.
 
 Szczegóły:
-- **Format:** 45-60 minut prezentacji + dyskusja
-- **Odbiorcy:** Junior-Senior poziom, praktykę- focused
+- **Format:** [UZGODNIONY FORMAT I CZAS]
+- **Odbiorcy:** [ODBIORCY I POZIOM ZAAWANSOWANIA]
 - **Kiedy:** [FLEXIBLE DATE OPTIONS]
-- **Gdzie:** Pub Wędrówki (nasze stałe miejsce, bardzo wygodne)
+- **Gdzie:** [POTWIERDZONA LOKALIZACJA]
 
-Wszystko jest zorganizowane — my zajmiemy się promocją, logistyką, audio-video.
+[POTWIERDZONE WSPARCIE ORGANIZATORÓW]
 
 Zainteresowany? Odpisz i rozmawiamy!
 
@@ -40,13 +44,15 @@ Zainteresowany? Odpisz i rozmawiamy!
 
 ---
 
-**Subject:** Dziękujesz za wczorajsze spotkanie! 🙏
+**Subject:** Dziękujemy za wczorajsze spotkanie!
 
 ---
 
 Cześć [Speaker Name]!
 
-Chciałem Ci osobiście podziękować za wczorajszy wieczór. Zazwyczaj wiem, jak to będzie, ale Twoja prezentacja o [Topic] zaliczyła niesamowity routing — ludzie pytali, debatowali, a potem jeszcze przez godzinę stali i rozmawiali.
+Chciałem Ci osobiście podziękować za wczorajszy wieczór i prezentację o [Topic].
+
+[KONKRETNA OBSERWACJA LUB POTWIERDZONY FEEDBACK UCZESTNIKÓW]
 
 To jest dokładnie to, czego szukamy w Wroc.NET.
 
@@ -55,9 +61,9 @@ To jest dokładnie to, czego szukamy w Wroc.NET.
 - [Y] osób przyszło
 - [Z] pytań podczas Q&A
 
-Materiały/slajdy od Ciebie będzie dla nas asset — czy mogę poprosić o link?
+Czy możesz podesłać link do materiałów lub slajdów, które możemy udostępnić uczestnikom?
 
-Dziękuję raz jeszcze. Zapraszam na kolejne spotkanie, albo jeśli chcesz poprowadzić workshop na inny temat — zawsze otwarte drzwi.
+Dziękuję raz jeszcze i zapraszam na kolejne spotkanie.
 
 Łukasz
 
@@ -77,19 +83,15 @@ Dziękuję raz jeszcze. Zapraszam na kolejne spotkanie, albo jeśli chcesz popro
 
 Cześć [Name]!
 
-Wroc.NET to społeczność 2400+ developerów .NET we Wrocławiu. Co miesiąc organizujemy meetup, gdzie ~100 ludzi przychodzi na prelekcje, rozmowy i networking.
+Wroc.NET to społeczność .NET we Wrocławiu. Regularnie organizujemy spotkania z prelekcjami i przestrzenią do rozmów.
 
 Myślimy, że [Company] i Wroc.NET moglibyśmy razem zrobić coś fajnego.
 
 **Co oferujemy partnerom:**
-- Lokalizacja na stałe (stabilna, zaplanowana, bez chaosu)
-- Prestiż w branży lokalnej — Wroc.NET to znana marka
-- Naturalny dostęp do talentów w branży
-- Coś więcej niż "reklama" — to wspólna budowa społeczności
+[POTWIERDZONY ZAKRES WSPÓŁPRACY I KONKRETNA KORZYŚĆ DLA SPOŁECZNOŚCI]
 
 **Co szukamy:**
-- Partner, który rozumie wartość społeczności (nie tylko marketing)
-- Elastyczność — odsyła się do nas, a nie agresywnie promuje
+[KONKRETNA POTRZEBA ORGANIZATORÓW I PROPOZYCJA WSPÓLNEGO DZIAŁANIA]
 
 Chciałbyś porozmawiać?
 
