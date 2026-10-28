@@ -1,0 +1,11 @@
+{% assign meetup_url = page.meetup_url | default: "" | strip %}
+{% assign meeting_day = page.date | date: "%Y-%m-%d" %}
+{% assign today = site.time | date: "%Y-%m-%d" %}
+{% if page.categories contains "spotkania" and meetup_url != "" and meeting_day >= today %}
+  <div class="meeting-signup">
+    <a class="btn meeting-signup__button" href="{{ meetup_url | escape }}">
+      ZAPISZ SIĘ <span aria-hidden="true">→</span>
+    </a>
+    <p class="meeting-signup__note">Rejestracja na to spotkanie w Meetup</p>
+  </div>
+{% endif %}

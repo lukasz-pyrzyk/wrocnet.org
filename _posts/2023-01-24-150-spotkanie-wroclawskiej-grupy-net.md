@@ -14,7 +14,7 @@ talks:
 meetup_attendees: 35
 ---
 
-150. spotkanie Wrocławskiej Grupy .NET odbyło się 24.01.2023 r. w **Sii Polska, ul. Na Ostatnim Groszu 3, Wrocław**.
+150\. spotkanie Wrocławskiej Grupy .NET odbyło się 24.01.2023 r. w **Sii Polska, ul. Na Ostatnim Groszu 3, Wrocław**.
 
 {% include attendance.html %}
 

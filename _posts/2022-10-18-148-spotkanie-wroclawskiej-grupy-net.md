@@ -14,7 +14,7 @@ talks:
 meetup_attendees: 30
 ---
 
-148. spotkanie Wrocławskiej Grupy .NET odbyło się 18.10.2022 r. w **Avanade, ul. Piotra Skargi 1, Wrocław**.
+148\. spotkanie Wrocławskiej Grupy .NET odbyło się 18.10.2022 r. w **Avanade, ul. Piotra Skargi 1, Wrocław**.
 
 {% include attendance.html %}
 

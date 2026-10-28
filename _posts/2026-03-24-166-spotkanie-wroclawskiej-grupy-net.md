@@ -14,7 +14,7 @@ talks:
 meetup_attendees: 66
 ---
 
-166. spotkanie Wrocławskiej Grupy .NET odbyło się 24.03.2026 r. w **Ultranet, ul. Strzegomska 138, Wrocław**.
+166\. spotkanie Wrocławskiej Grupy .NET odbyło się 24.03.2026 r. w **Ultranet, ul. Strzegomska 138, Wrocław**.
 
 {% include attendance.html %}
 

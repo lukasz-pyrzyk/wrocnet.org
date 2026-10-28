@@ -1,13 +1,16 @@
 ---
 title: '172\. spotkanie Wroc.NET – Ultra-wydajność i panel: kiedy .NET wystarcza?'
 date: 2026-11-17
-time: "18:30:00"
+time: "18:00:00"
 categories: spotkania
 tags:
   - offline
 meetup_attendees: 0
+meetup_url: "https://www.meetup.com/wrocnet/events/317144095/"
 header:
-  teaser: /assets/images/spotkania-teaser.jpg
+  image: /assets/images/2026-11-17-172-meetup.jpg
+  teaser: /assets/images/2026-11-17-172-meetup.jpg
+  image_description: "Baner 172. spotkania Wroc.NET — Piotr Gankiewicz oraz panel z Łukaszem Olbromskim i Łukaszem Pyrzykiem"
 talks:
 - title: 'Ultra-wydajność - gdy liczy się każda mikrosekunda'
   speaker_ids:
@@ -19,7 +22,7 @@ talks:
   - lukasz-pyrzyk
 ---
 
-172. spotkanie Wrocławskiej Grupy .NET odbędzie się 17.11.2026 r. o **18:30** w **Pubie Wędrówki, ul. Podwale 37/38, 50-040 Wrocław**.
+172\. spotkanie Wrocławskiej Grupy .NET odbędzie się 17.11.2026 r. o **18:00** w **Pubie Wędrówki, ul. Podwale 37/38, 50-040 Wrocław**.
 
 {% include attendance.html %}
 

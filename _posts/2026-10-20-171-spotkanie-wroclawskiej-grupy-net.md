@@ -5,9 +5,13 @@ time: "18:00:00"
 categories: spotkania
 tags:
   - offline
-meetup_attendees: 0
+meetup_attendees: 171
+meetup_waitlist: 34
+meetup_url: "https://www.meetup.com/wrocnet/events/316767368/"
 header:
-  teaser: /assets/images/spotkania-teaser.jpg
+  image: /assets/images/2026-10-20-171-meetup.jpg
+  teaser: /assets/images/2026-10-20-171-meetup.jpg
+  image_description: "Baner 171. spotkania Wroc.NET — Jakub Kubryński, Maciej Aniserowicz i panel dyskusyjny"
 talks:
 - title: 'AI Retrofit: nowe możliwości, 14 lat bagażu'
   speaker_ids:
@@ -17,7 +21,7 @@ talks:
   - maciej-aniserowicz
 ---
 
-171. spotkanie Wrocławskiej Grupy .NET odbędzie się 20.10.2026 r. w **Pubie Wędrówki, ul. Podwale 37/38, 50-040 Wrocław**.
+171\. spotkanie Wrocławskiej Grupy .NET odbędzie się 20.10.2026 r. w **Pubie Wędrówki, ul. Podwale 37/38, 50-040 Wrocław**.
 
 {% include attendance.html %}
 

@@ -3,8 +3,9 @@ layout: splash
 title: "Wroc.NET - Wrocławska Grupa .NET"
 header:
   title: "Wroc.NET"
-  overlay_color: "#641e78"
-  overlay_filter: 0.5
+  overlay_color: "#100923"
+  overlay_image: "/assets/images/home-wroclaw.webp"
+  overlay_filter: "linear-gradient(90deg, rgba(16, 9, 35, 0.75), rgba(16, 9, 35, 0.25))"
   teaser: "/assets/images/page.png"
   actions:
     - label: "Dołącz do nas na Meetup"
@@ -12,6 +13,8 @@ header:
     - label: "Zobacz spotkania"
       url: "/spotkania/"
 excerpt: "Wrocławska społeczność programistów .NET. Spotykamy się od 2007 roku, żeby dzielić się wiedzą i doświadczeniami z ekosystemu Microsoft."
+hero_heading: "Wrocławska Grupa .NET"
+hero_intro: "Praktyczna wiedza, doświadczenia z projektów i rozmowy z ludźmi z branży. Otwarte, bezpłatne spotkania — od 2007 roku."
 ---
 
 {% assign months_pl = "stycznia,lutego,marca,kwietnia,maja,czerwca,lipca,sierpnia,września,października,listopada,grudnia" | split: "," %}
@@ -27,8 +30,16 @@ excerpt: "Wrocławska społeczność programistów .NET. Spotykamy się od 2007 
 {% assign meeting_count = 0 %}
 {% assign additional_event_count = 0 %}
 {% assign total_sessions = 0 %}
+{% assign record_signups = 0 %}
 {% for post in site.posts %}
   {% if post.date <= site.time %}
+    {% assign post_signups = post.meetup_attendees | default: 0 | plus: 0 %}
+    {% assign post_waitlist = post.meetup_waitlist | default: 0 | plus: 0 %}
+    {% assign post_total_signups = post_signups | plus: post_waitlist %}
+    {% if post_total_signups > record_signups %}
+      {% assign record_signups = post_total_signups %}
+      {% assign record_post = post %}
+    {% endif %}
     {% assign talk_count = post.talks | size %}
     {% assign total_sessions = total_sessions | plus: talk_count %}
     {% if post.tags contains 'offline' or post.tags contains 'online' %}
@@ -72,6 +83,9 @@ excerpt: "Wrocławska społeczność programistów .NET. Spotykamy się od 2007 
           <dd>{{ total_sessions }}</dd>
       </div>
     </dl>
+    {% if record_signups > 0 %}
+      <p class="community-record">Na <a href="{{ record_post.url | relative_url }}">nasze rekordowe spotkanie</a> chciało przyjść aż <strong>{{ record_signups }} osób</strong>, bijąc rekord zapisów utrzymujący się przez ponad 9 lat.</p>
+    {% endif %}
   </div>
 
   <aside class="season-panel" aria-labelledby="season-heading">
@@ -88,7 +102,7 @@ excerpt: "Wrocławska społeczność programistów .NET. Spotykamy się od 2007 
     </div>
     <ul class="schedule-list">
       {% assign upcoming_index = 0 %}
-      {% assign upcoming_meeting_posts = site.posts | where_exp: "post", "post.date >= site.time" | sort: "date" %}
+      {% include upcoming-meeting-posts.html %}
       {% for post in upcoming_meeting_posts %}
         {% assign date_str = post.date %}
         {% assign m_idx = date_str | date: "%-m" | minus: 1 %}
@@ -146,6 +160,13 @@ excerpt: "Wrocławska społeczność programistów .NET. Spotykamy się od 2007 
   margin: 0.5rem 0 0;
   color: #5f5568;
   font-size: 0.76rem;
+  line-height: 1.5;
+}
+.community-record {
+  grid-column: 1 / -1;
+  margin: 0;
+  color: #5f5568;
+  font-size: 0.8rem;
   line-height: 1.5;
 }
 .community-stats {
@@ -494,7 +515,7 @@ excerpt: "Wrocławska społeczność programistów .NET. Spotykamy się od 2007 
     </div>
 
     <div class="partners-supporting">
-      <span class="partner-group-label">Partnerzy wspierający</span>
+      <span class="partner-group-label">Partnerzy medialni</span>
       {% for p in site.data.partners.supporting %}
         <a href="{{ p.url }}" target="_blank" rel="noopener noreferrer" class="partner-supporting-link" title="{{ p.name }}">
           <span class="partner-supporting-logo">

@@ -14,7 +14,7 @@ talks:
 meetup_attendees: 65
 ---
 
-168. spotkanie Wrocławskiej Grupy .NET odbyło się 26.05.2026 r. w **Sente, Budynek Quattro Forum ul. Legnicka 51-53, Wrocław**.
+168\. spotkanie Wrocławskiej Grupy .NET odbyło się 26.05.2026 r. w **Sente, Budynek Quattro Forum ul. Legnicka 51-53, Wrocław**.
 
 {% include attendance.html %}
 

@@ -14,7 +14,7 @@ talks:
 meetup_attendees: 59
 ---
 
-125. spotkanie Wrocławskiej Grupy .NET odbyło się 17.03.2020 r. **online** - było transmitowane na żywo na kanale YouTube grupy.
+125\. spotkanie Wrocławskiej Grupy .NET odbyło się 17.03.2020 r. **online** - było transmitowane na żywo na kanale YouTube grupy.
 
 {% include attendance.html %}
 

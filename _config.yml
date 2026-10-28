@@ -15,6 +15,10 @@ logo: "/assets/images/logo.png"
 image: "/assets/images/page.png"
 speaker_form_url: "https://forms.cloud.microsoft/e/QGBMw8zevT"
 
+website_organizer:
+  name: "Łukasz Pyrzyk"
+  url: "https://pyrzyk.net/"
+
 twitter:
   username: "wrocnet"
   site: "@wrocnet"
@@ -52,9 +56,6 @@ author:
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
       url: "https://www.linkedin.com/company/wroc%C5%82aw-net-user-group/"
-    - label: "WhatsApp"
-      icon: "fab fa-fw fa-whatsapp"
-      url: "/whatsapp/"
     - label: "Facebook"
       icon: "fab fa-fw fa-facebook"
       url: "https://www.facebook.com/WrocNET"
@@ -77,9 +78,6 @@ footer:
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
       url: "https://www.linkedin.com/company/wroc%C5%82aw-net-user-group/"
-    - label: "WhatsApp"
-      icon: "fab fa-fw fa-whatsapp"
-      url: "/whatsapp/"
     - label: "Facebook"
       icon: "fab fa-fw fa-facebook"
       url: "https://www.facebook.com/WrocNET"
@@ -109,6 +107,8 @@ exclude:
   - gemfiles
   - Gemfile
   - Gemfile.lock
+  - Dockerfile
+  - run.sh
   - node_modules
   - vendor/bundle/
   - vendor/cache/
@@ -143,7 +143,7 @@ defaults:
       path: ""
       type: posts
     values:
-      layout: single
+      layout: meeting
       author_profile: true
       show_date: true
       read_time: true

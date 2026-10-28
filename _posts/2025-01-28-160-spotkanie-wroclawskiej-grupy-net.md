@@ -14,7 +14,7 @@ talks:
 meetup_attendees: 57
 ---
 
-160. spotkanie Wrocławskiej Grupy .NET odbyło się 28.01.2025 r. w **Xebia, ul. Sucha 3, Wrocław**.
+160\. spotkanie Wrocławskiej Grupy .NET odbyło się 28.01.2025 r. w **Xebia, ul. Sucha 3, Wrocław**.
 
 {% include attendance.html %}
 

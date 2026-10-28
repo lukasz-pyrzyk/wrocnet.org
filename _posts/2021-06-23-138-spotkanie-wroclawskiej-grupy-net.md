@@ -14,7 +14,7 @@ talks:
 meetup_attendees: 30
 ---
 
-138. spotkanie Wrocławskiej Grupy .NET odbyło się 23.06.2021 r..
+138\. spotkanie Wrocławskiej Grupy .NET odbyło się 23.06.2021 r..
 
 {% include attendance.html %}
 

@@ -1,43 +1,22 @@
 ---
 description: "Use when tworzenie lub czyszczenie postów historycznych (sprzed 2012) w _posts/ na podstawie niekompletnych źródeł archiwalnych — anonimizacja danych, front matter, formatowanie agendy i prelekcji."
-applyTo: "_posts/**"
+applyTo: "_posts/200[0-9]-*.md,_posts/201[01]-*.md"
 ---
 # Tworzenie postów historycznych (Spotkania Wroc.NET)
 
-Instrukcja dla agentów AI dotycząca procesowania archiwalnych danych spotkań i konferencji.
+Zasady odtwarzania postów sprzed 2012 roku z niepełnych źródeł archiwalnych. Nie stosuj ich do współczesnych zapowiedzi.
 
-## Cel
-Standaryzacja starych postów (sprzed 2012 roku), które są często odzyskiwane z niekompletnych źródeł, przy zachowaniu spójności z obecnym systemem Jekyll.
+Nazewnictwo plików, front matter i tagi są opisane w [README](../../README.md#adding-a-new-meeting-post), a ogólne zasady edycji i walidacji w [AGENTS.md](../../AGENTS.md).
 
-## 1. Konwencja nazewnictwa plików
-- Jeśli to regularne spotkanie z numerem: `YYYY-MM-DD-NR-spotkanie-wroclawskiej-grupy-net.md`
-- Jeśli to wydarzenie specjalne/konferencja: `YYYY-MM-DD-nazwa-wydarzenia.md`
-- Data musi być w formacie ISO: `YYYY-MM-DD`.
-
-## 2. Front Matter (YAML)
-Zawsze używamy layoutu `single` i kategorii `spotkania`.
-
-```yaml
----
-layout: single
-title: 'NR. spotkanie Wrocławskiej Grupy .NET' # lub nazwa eventu
-categories: spotkania
-tags:
-  - offline # online dla spotkania zdalnego, inne dla wydarzenia specjalnego
-date: YYYY-MM-DD
----
-```
-
-Każdy post musi mieć dokładnie jeden tag formatu: `offline` dla regularnego spotkania stacjonarnego, `online` dla regularnego spotkania zdalnego albo `inne` dla wydarzenia specjalnego bez numeru. Nie używamy tagu `.NET`.
-
-## 3. Czyszczenie treści (Kluczowe)
+## Czyszczenie źródeł
 Podczas przenoszenia tekstu z plików tekstowych/maili:
 - **Anonimizacja**: Absolutnie usuwamy wszystkie adresy e-mail (np. `[xyz@gmail.com](mailto:xyz@gmail.com)`). Zostawiamy tylko imiona i nazwiska.
 - **Produkty**: Pogrubiamy nazwy kluczowych technologii przy pierwszym wystąpieniu (np. **Visual Studio 2008**, **SQL Server**).
 - **Linki**: Usuwamy niedziałające linki do starych grafik (np. `x-apple-ql-id...`). Jeśli link jest zewnętrzny i niepewny, oznaczamy go jako tekst lub usuwamy.
 - **Znaki specjalne**: Upewnij się, że symbole takie jak `™`, `®` są poprawnie zakodowane w UTF-8 (lub usuń je, jeśli psują czytelność).
 
-## 4. Formatowanie struktury
+## Formatowanie archiwalnej treści
+- **Wydarzenia specjalne**: bez numeru spotkania, z nazwą pliku `YYYY-MM-DD-nazwa-wydarzenia.md`.
 - **Miejsce**: Zawsze na początku posta w formacie: `Miejsce: Nazwa Miejsca, Adres, Miasto`.
 - **Agenda**: Jeśli w źródle jest lista godzinowa, zamień ją na tabelę Markdown dla lepszej czytelności:
   ```markdown
@@ -45,9 +24,9 @@ Podczas przenoszenia tekstu z plików tekstowych/maili:
   | :--- | :--- |
   | 18:00 | Początek |
   ```
-- **Prelekcje**: Tytuły prelekcji oznaczamy jako nagłówki `####` z nazwiskiem prelegenta po pauzie `—` (em-dash).
+- **Prelekcje**: Korzystaj z `talks`, `speaker_ids` i wspólnego [include talk.html](../../_includes/talk.html), zamiast ręcznych nagłówków. Wzór: [spotkanie 35](../../_posts/2011-05-17-35-spotkanie-wroclawskiej-grupy-net.md).
 
-## 5. Walidacja przed zapisem
+## Kontrola odtworzonego posta
 - Sprawdź, czy w tekście nie ma "śmieci" z konwersji (np. `[]()`, podwójne spacje, urwane zdania).
 - Upewnij się, że data w nazwie pliku zgadza się z `date` w Front Matter.
 - Jeśli post ma numer, sprawdź czy nie dubluje się z istniejącymi w `_posts/`.

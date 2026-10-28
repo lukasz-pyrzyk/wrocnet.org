@@ -15,7 +15,7 @@ talks:
 meetup_attendees: 51
 ---
 
-156. spotkanie Wrocławskiej Grupy .NET odbyło się 26.03.2024 r. w **Avanade, ul. Piotra Skargi 1, Wrocław**.
+156\. spotkanie Wrocławskiej Grupy .NET odbyło się 26.03.2024 r. w **Avanade, ul. Piotra Skargi 1, Wrocław**.
 
 {% include attendance.html %}
 

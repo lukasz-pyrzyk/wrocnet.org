@@ -10,5 +10,7 @@ main:
     url: /zostan-prelegentem/
   - title: "Wystąpili u nas"
     url: /wystapili-u-nas/
+  - title: "Wspomnieli o nas"
+    url: /wspomnieli-o-nas/
   - title: "O grupie"
     url: /o-grupie/

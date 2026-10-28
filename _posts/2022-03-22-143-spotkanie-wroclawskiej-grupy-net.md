@@ -14,7 +14,7 @@ talks:
 meetup_attendees: 30
 ---
 
-143. spotkanie Wrocławskiej Grupy .NET odbyło się 22.03.2022 r..
+143\. spotkanie Wrocławskiej Grupy .NET odbyło się 22.03.2022 r..
 
 {% include attendance.html %}
 
