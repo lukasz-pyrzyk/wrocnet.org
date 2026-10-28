@@ -1,13 +1,13 @@
 # Partnerstwa Wroc.NET
 
-Stan na **28.10.2026, 15:21**.
+Stan na **28.10.2026, 17:40**.
 
 ## Podsumowanie
 
-- **23 kontaktowanych odbiorców**, 9 odpowiedzi merytorycznych.
+- **27 kontaktowanych odbiorców**, 9 odpowiedzi merytorycznych.
 - **1 patron medialny:** Wrocławski Portal.
 - **2 odmowy:** TVP3 i Dolnośląski Urząd Wojewódzki.
-- **14 odbiorców bez odpowiedzi merytorycznej**, w tym wroclaw.pl z autoresponderem.
+- **18 odbiorców bez odpowiedzi merytorycznej**, w tym wroclaw.pl z autoresponderem.
 - **7 przypomnień wysłanych 28.10**. Echo24 dostało tego dnia nowe zgłoszenie, nie przypomnienie.
 
 ## Media
@@ -27,6 +27,8 @@ Deklarację współpracy przy publikacjach liczymy w tym rejestrze jako patronat
 | [Gazeta Wrocławska](../content/2026-10-19-email-partnerstwo-gazeta-wroclawska.md) | Czekamy | Przypomnienie 28.10 | Zapytano też o wspólną obsługę Naszego Miasta |
 | [Wrocław Nasze Miasto](../content/2026-10-19-email-patronat-nasze-miasto.md) | Przypomnienie wstrzymane | Wysyłka 19.10 | Wyjaśnić adres: wysłano na reklamawroclaw@polskapress.pl, szkic wskazywał reklama.wroclaw@polskapress.pl. Nie wysyłać w ciemno |
 | [TVP3 Wrocław](../content/2026-10-19-email-partnerstwo-tvp3-wroclaw.md) | Odmowa - zamknięte | Odmowa i odpowiedź Łukasza 27.10 | Bez dalszych przypomnień i bez ekspozycji logo jako patrona |
+| Fakty Wrocław | Czekamy | Wysyłka 28.10, potwierdzona o 17:31 | patronat@serwisylokalne.pl. Propozycja patronatu medialnego nad cyklem; czekać na odpowiedź |
+| dlaStudenta.pl | Czekamy | Wysyłka 28.10, potwierdzona o 17:31 | patronat@dlastudenta.pl. Propozycja patronatu medialnego nad cyklem; czekać na odpowiedź |
 
 ## Instytucje i organizacje
 
@@ -41,6 +43,8 @@ Deklarację współpracy przy publikacjach liczymy w tym rejestrze jako patronat
 | [Wrocławskie Centrum Akademickie](../content/2026-10-19-email-partnerstwo-wca.md) | Wstrzymane | Wysyłka zgłoszona 19.10 | Na prośbę Łukasza pomijamy dalszy kontakt po pomyłce treści z Echo24 |
 | Biuro Rozwoju Gospodarczego UM Wrocławia | Czekamy | Wysyłka 28.10, potwierdzona o 10:38 | Wysłano na brg@um.wroc.pl propozycję współpracy informacyjnej i partnerstwa. Czekać na odpowiedź |
 | Prezydent Wrocławia | Podpisany wniosek wysłany | Wysyłka 28.10, potwierdzona o 15:21 | kancelaria.prezydenta@um.wroc.pl. Czekać na ocenę patronatu nad cyklem ośmiu spotkań 17.11.2026-15.06.2027; ewentualnie siedmiu od 15.12.2026. Patronat nieprzyznany |
+| Przewodniczący Sejmiku Województwa Dolnośląskiego | Zapytanie wysłane | Wysyłka 28.10, potwierdzona o 17:34 | zuzanna.wilgosiewicz@dolnyslask.pl - adres wybrany przez Łukasza, niepotwierdzony w oficjalnym źródle. Zapytano o patronat nad cyklem i wymagane dokumenty; czekać na odpowiedź |
+| Rektor Politechniki Wrocławskiej | Wniosek wysłany | Wysyłka 28.10, potwierdzona o 17:40 | biuro.rektora@pwr.edu.pl. Wniosek z harmonogramem i uzasadnieniem na cykl 17.11.2026-15.06.2027, ewentualnie od grudnia. Czekać na ocenę; patronat nieprzyznany |
 | Ministerstwo Cyfryzacji | Czekamy | Zapytanie 26.10 | patronatcyfryzacja@cyfra.gov.pl. Przy braku odpowiedzi przypomnienie **04-09.11**; formalnego wniosku nie złożono |
 | [Dolnośląski Urząd Wojewódzki](../content/2026-10-19-email-partnerstwo-duw.md) | Odmowa - zamknięte | Odpowiedź Katarzyny Wachowiak 28.10, 11:28 | Brak podstaw do patronatu nad cyklicznymi spotkaniami branżowymi. Bez dalszych przypomnień |
 | [Urząd Marszałkowski](../content/2026-10-19-email-partnerstwo-umwd.md) | Skierowali do DPIN | Odpowiedź 26.10 | Dalszy kontakt przez DPIN, bez przypominania do UMWD |
@@ -61,6 +65,7 @@ Deklarację współpracy przy publikacjach liczymy w tym rejestrze jako patronat
 - wroclaw.pl: w pilnych sprawach autoresponder wskazuje bartosz.senderek@araw.pl lub bartosz.moch@araw.pl. Nie wysyłano im osobnej wiadomości.
 - Nasze Miasto: [oficjalna informacja o patronatach](https://wroclaw.naszemiasto.pl/organizujesz-wydarzenie-zglos-sie-do-nas-po-patronat/ar/c1-9761545) wskazuje Barbarę Jurę-Kadłubowską, tel. 514 800 969. Poprawność obu wariantów e-maila nierozstrzygnięta.
 - KPRP: podpisany PDF z programem i informacjami o partnerach pozostaje poza repozytorium. Wysłanie wniosku nie oznacza przyznania patronatu.
+- [Paczka Fakty Wrocław / dlaStudenta / Sejmik](../content/2026-10-28-email-patronaty-fakty-dlastudenta-sejmik.json) jest archiwalna, nie uruchamiać ponownie. Wysyłki potwierdził Łukasz; Sejmik dostał osobną, ręcznie przygotowaną wiadomość do Zuzanny Wilgosiewicz. Wniosek PWr pozostaje poza repozytorium.
 - [Archiwum komunikacji](../content/README.md) i [pakiet przypomnień z 28.10](../content/2026-10-28-email-przypomnienia-media.json). Pakiet zawiera przygotowane treści; faktyczne wysyłki wskazano powyżej.
 
 Nie ponawiamy automatycznie siedmiu przypomnień wysłanych 28.10.
