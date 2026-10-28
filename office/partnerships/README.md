@@ -1,13 +1,13 @@
 # Partnerstwa Wroc.NET
 
-Stan na **28.10.2026, 14:33**.
+Stan na **28.10.2026, 15:21**.
 
 ## Podsumowanie
 
-- **22 kontaktowanych odbiorców**, 9 odpowiedzi merytorycznych.
+- **23 kontaktowanych odbiorców**, 9 odpowiedzi merytorycznych.
 - **1 patron medialny:** Wrocławski Portal.
 - **2 odmowy:** TVP3 i Dolnośląski Urząd Wojewódzki.
-- **13 odbiorców bez odpowiedzi merytorycznej**, w tym wroclaw.pl z autoresponderem.
+- **14 odbiorców bez odpowiedzi merytorycznej**, w tym wroclaw.pl z autoresponderem.
 - **7 przypomnień wysłanych 28.10**. Echo24 dostało tego dnia nowe zgłoszenie, nie przypomnienie.
 
 ## Media
@@ -40,6 +40,7 @@ Deklarację współpracy przy publikacjach liczymy w tym rejestrze jako patronat
 | [PTI - Oddział Dolnośląski](../content/2026-10-27-email-partnerstwo-pti-dolnoslaskie.md) | Czekamy | Wysyłka 27.10 | wroclaw@pti.org.pl. Przy braku odpowiedzi przypomnienie **05-10.11** |
 | [Wrocławskie Centrum Akademickie](../content/2026-10-19-email-partnerstwo-wca.md) | Wstrzymane | Wysyłka zgłoszona 19.10 | Na prośbę Łukasza pomijamy dalszy kontakt po pomyłce treści z Echo24 |
 | Biuro Rozwoju Gospodarczego UM Wrocławia | Czekamy | Wysyłka 28.10, potwierdzona o 10:38 | Wysłano na brg@um.wroc.pl propozycję współpracy informacyjnej i partnerstwa. Czekać na odpowiedź |
+| Prezydent Wrocławia | Podpisany wniosek wysłany | Wysyłka 28.10, potwierdzona o 15:21 | kancelaria.prezydenta@um.wroc.pl. Czekać na ocenę patronatu nad cyklem ośmiu spotkań 17.11.2026-15.06.2027; ewentualnie siedmiu od 15.12.2026. Patronat nieprzyznany |
 | Ministerstwo Cyfryzacji | Czekamy | Zapytanie 26.10 | patronatcyfryzacja@cyfra.gov.pl. Przy braku odpowiedzi przypomnienie **04-09.11**; formalnego wniosku nie złożono |
 | [Dolnośląski Urząd Wojewódzki](../content/2026-10-19-email-partnerstwo-duw.md) | Odmowa - zamknięte | Odpowiedź Katarzyny Wachowiak 28.10, 11:28 | Brak podstaw do patronatu nad cyklicznymi spotkaniami branżowymi. Bez dalszych przypomnień |
 | [Urząd Marszałkowski](../content/2026-10-19-email-partnerstwo-umwd.md) | Skierowali do DPIN | Odpowiedź 26.10 | Dalszy kontakt przez DPIN, bez przypominania do UMWD |
@@ -54,7 +55,7 @@ Deklarację współpracy przy publikacjach liczymy w tym rejestrze jako patronat
 
 ## Kontakty pomocnicze i dokumenty
 
-- **Do rozważenia, bez wysyłki:** [Patronat Honorowy Prezydenta Wrocławia](https://bip.um.wroc.pl/sprawa-do-zalatwienia/8793/patronat-honorowy-prezydenta-wroclawia). Wniosek na kancelaria.prezydenta@um.wroc.pl co najmniej 30 dni przed wydarzeniem; może wystąpić osoba fizyczna. Termin dla 17.11 już minął; 15.12 spełnia wymóg przy złożeniu wniosku teraz. Nie wliczamy do kontaktowanych odbiorców.
+- [Patronat Honorowy Prezydenta Wrocławia - procedura](https://bip.um.wroc.pl/sprawa-do-zalatwienia/8793/patronat-honorowy-prezydenta-wroclawia): minimum 30 dni przed wydarzeniem. Wysłany wniosek zawiera prośbę o rozważenie cyklu od listopada mimo krótszego terminu, ewentualnie od grudnia. Podpisany PDF z załącznikami pozostaje poza repozytorium.
 - Biuro Rozwoju Gospodarczego UM Wrocławia: tel. 71 777 71 74; Dział Wspierania Przedsiębiorczości, kierownik Katarzyna Kulska, tel. 71 777 75 46. [Kontakt i kompetencje w BIP](https://bip.um.wroc.pl/artykul/672/3215/biuro-rozwoju-gospodarczego), sprawdzone 28.10.2026.
 
 - wroclaw.pl: w pilnych sprawach autoresponder wskazuje bartosz.senderek@araw.pl lub bartosz.moch@araw.pl. Nie wysyłano im osobnej wiadomości.
