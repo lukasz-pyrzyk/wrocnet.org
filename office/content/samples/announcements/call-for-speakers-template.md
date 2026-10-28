@@ -62,4 +62,4 @@ Wroc.NET
 - **Prompt tła:** [PROMPT ZGODNY Z REFERENCJAMI MARKI]
 - **Wyniki:** [ŚCIEŻKI GOTOWYCH GRAFIK]
 
-Generowanie, składanie i kontrolę grafiki wykonuj według [wspólnego warsztatu](../../../AGENTS.md#zasady-dla-grafik), zamiast kopiować stare instrukcje narzędziowe z kampanii.
+Generowanie, składanie i kontrolę grafiki wykonuj według [wspólnego warsztatu](../../../WORKFLOWS.md#zasady-dla-grafik), zamiast kopiować stare instrukcje narzędziowe z kampanii.

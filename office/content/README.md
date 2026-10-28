@@ -14,7 +14,12 @@ office/content/
 └── samples/                 # przykłady maili, ogłoszeń i briefów
 ```
 
-Wzory do adaptacji: [maile](samples/emails/), [ogłoszenia i newslettery](samples/announcements/), [briefy](samples/briefs/). Zasady tworzenia grafik są w [office/AGENTS.md](../AGENTS.md#zasady-dla-grafik).
+Wzory do adaptacji: [maile](samples/emails/), [ogłoszenia i newslettery](samples/announcements/), [briefy](samples/briefs/). Styl i fakty sprawdzaj w [zasadach komunikacji](../AGENTS.md), a technikę grafik w [warsztacie](../WORKFLOWS.md#zasady-dla-grafik).
+
+Sekcje oznaczone `template` są wzorami do uzupełnienia. Sekcje `sent` i datowane
+kampanie są materiałem historycznym, nie źródłem aktualnych danych ani procedur.
+Nie kopiuj z nich statystyk, partnerów, terminów lub obietnic bez potwierdzenia.
+Przy rozbieżnościach obowiązują bieżące zasady komunikacji i warsztat.
 
 ## Konwencja nazewnictwa
 

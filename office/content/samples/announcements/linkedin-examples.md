@@ -1,5 +1,10 @@
 # [POST] LinkedIn Post Examples
 
+Archiwalne publikacje z 2026 roku, zachowane jako przykłady, nie aktualne szablony.
+Nazwy, liczby, linki i deklaracje wymagają ponownego potwierdzenia. Przy adaptacji
+stosuj [bieżący styl komunikacji](../../../AGENTS.md), także gdy oryginał używa
+dziś odradzanych zwrotów, np. „z ogromną dumą”.
+
 ## Post-Meetup Celebration
 
 **Status:** sent (after 169. Wroc.NET)  

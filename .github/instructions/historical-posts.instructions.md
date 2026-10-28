@@ -6,7 +6,7 @@ applyTo: "_posts/200[0-9]-*.md,_posts/201[01]-*.md"
 
 Zasady odtwarzania postów sprzed 2012 roku z niepełnych źródeł archiwalnych. Nie stosuj ich do współczesnych zapowiedzi.
 
-Nazewnictwo plików, front matter i tagi są opisane w [README](../../README.md#adding-a-new-meeting-post), a ogólne zasady edycji i walidacji w [AGENTS.md](../../AGENTS.md).
+Nazewnictwo plików, front matter, tagi i walidacja są opisane w [Website Admin](../agents/wrocnet-website-admin.agent.md#adding-a-new-meeting-post), a ogólne zasady pracy w [AGENTS.md](../../AGENTS.md).
 
 ## Czyszczenie źródeł
 Podczas przenoszenia tekstu z plików tekstowych/maili:
