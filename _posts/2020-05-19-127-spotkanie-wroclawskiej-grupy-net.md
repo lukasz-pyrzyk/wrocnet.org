@@ -12,6 +12,9 @@ talks:
   speaker_ids:
   - bartosz-kuczynski
 meetup_attendees: 94
+header:
+  og_image: /assets/images/2020-05-19-127-meetup.jpg
+  og_image_alt: "Baner 127. spotkania Wroc.NET"
 ---
 
 127\. spotkanie Wrocławskiej Grupy .NET odbyło się 19.05.2020 r..

@@ -12,6 +12,9 @@ talks:
   speaker_ids:
   - idan-shatz
 meetup_attendees: 41
+header:
+  og_image: /assets/images/2021-04-20-136-meetup.jpg
+  og_image_alt: "Baner 136. spotkania Wroc.NET"
 ---
 
 136\. spotkanie Wrocławskiej Grupy .NET odbyło się 20.04.2021 r..

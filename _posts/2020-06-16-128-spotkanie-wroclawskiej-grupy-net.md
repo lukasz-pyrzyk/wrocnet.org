@@ -9,6 +9,9 @@ talks:
   speaker_ids:
   - patryk-lotzwi
 meetup_attendees: 39
+header:
+  og_image: /assets/images/2020-06-16-128-meetup.jpg
+  og_image_alt: "Baner 128. spotkania Wroc.NET"
 ---
 
 128\. spotkanie Wrocławskiej Grupy .NET odbyło się 16.06.2020 r..

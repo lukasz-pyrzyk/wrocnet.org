@@ -12,6 +12,9 @@ talks:
   speaker_ids:
   - mikolaj-korbanek
 meetup_attendees: 30
+header:
+  og_image: /assets/images/2022-03-22-143-meetup.jpg
+  og_image_alt: "Baner 143. spotkania Wroc.NET"
 ---
 
 143\. spotkanie Wrocławskiej Grupy .NET odbyło się 22.03.2022 r..

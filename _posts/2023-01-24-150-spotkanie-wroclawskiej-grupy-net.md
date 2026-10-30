@@ -12,6 +12,9 @@ talks:
   speaker_ids:
   - marcin-giemza
 meetup_attendees: 35
+header:
+  og_image: /assets/images/2023-01-24-150-meetup.jpg
+  og_image_alt: "Baner 150. spotkania Wroc.NET"
 ---
 
 150\. spotkanie Wrocławskiej Grupy .NET odbyło się 24.01.2023 r. w **Sii Polska, ul. Na Ostatnim Groszu 3, Wrocław**.

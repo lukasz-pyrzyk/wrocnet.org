@@ -12,6 +12,9 @@ talks:
   speaker_ids:
   - zygfryd-wieszok
 meetup_attendees: 89
+header:
+  og_image: /assets/images/2018-09-18-110-meetup.jpg
+  og_image_alt: "Baner 110. spotkania Wroc.NET"
 ---
 
 [Archiwalna strona wydarzenia na Meetup](https://www.meetup.com/wrocnet/events/254383905/)

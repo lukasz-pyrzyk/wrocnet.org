@@ -12,6 +12,9 @@ talks:
   speaker_ids:
   - weronika-sabiniewicz
 meetup_attendees: 35
+header:
+  og_image: /assets/images/2021-11-16-139-meetup.jpg
+  og_image_alt: "Baner 139. spotkania Wroc.NET"
 ---
 
 139\. spotkanie Wrocławskiej Grupy .NET odbyło się 16.11.2021 r..

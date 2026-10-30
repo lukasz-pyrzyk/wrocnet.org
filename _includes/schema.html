@@ -1,0 +1,45 @@
+{%- comment -%}
+  Overrides the theme's schema.html (homepage only, see the theme's seo.html).
+  The theme prints site.og_image as the Organization logo, which would make the
+  1200x630 share image our logo, and it omits the name. WhatsApp is left out of
+  sameAs because an invite link is not a profile.
+{%- endcomment -%}
+{%- assign oldest_post = site.posts | last -%}
+{%- assign same_as = "" | split: "" -%}
+{%- for link in site.social.links -%}
+  {%- unless link contains "chat.whatsapp.com" -%}
+    {%- assign same_as = same_as | push: link -%}
+  {%- endunless -%}
+{%- endfor -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": {{ '/#organization' | absolute_url | jsonify }},
+      "name": {{ site.name | jsonify }},
+      "alternateName": [{{ site.subtitle | jsonify }}, {{ site.social.name | jsonify }}],
+      "url": {{ '/' | absolute_url | jsonify }},
+      "logo": {{ site.logo | absolute_url | jsonify }},
+      "email": "kontakt@wrocnet.org",
+      "foundingDate": {{ oldest_post.date | date: '%Y' | jsonify }},
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Wrocław",
+        "addressCountry": "PL"
+      },
+      "sameAs": {{ same_as | jsonify }}
+    },
+    {
+      "@type": "WebSite",
+      "@id": {{ '/#website' | absolute_url | jsonify }},
+      "name": {{ site.name | jsonify }},
+      "alternateName": {{ site.subtitle | jsonify }},
+      "url": {{ '/' | absolute_url | jsonify }},
+      "inLanguage": "pl",
+      "publisher": { "@id": {{ '/#organization' | absolute_url | jsonify }} }
+    }
+  ]
+}
+</script>

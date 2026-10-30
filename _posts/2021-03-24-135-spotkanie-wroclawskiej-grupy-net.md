@@ -12,6 +12,9 @@ talks:
   speaker_ids:
   - kinga-gazdzinska
 meetup_attendees: 68
+header:
+  og_image: /assets/images/2021-03-24-135-meetup.jpg
+  og_image_alt: "Baner 135. spotkania Wroc.NET"
 ---
 
 135\. spotkanie Wrocławskiej Grupy .NET odbyło się 24.03.2021 r..

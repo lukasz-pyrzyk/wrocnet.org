@@ -9,6 +9,9 @@ talks:
   speaker_ids:
   - kasper-stasiak
 meetup_attendees: 49
+header:
+  og_image: /assets/images/2023-05-23-154-meetup.jpg
+  og_image_alt: "Baner 154. spotkania Wroc.NET"
 ---
 
 154\. spotkanie Wrocławskiej Grupy .NET odbyło się 23.05.2023 r. w **Avanade, ul. Piotra Skargi 1, Wrocław**.

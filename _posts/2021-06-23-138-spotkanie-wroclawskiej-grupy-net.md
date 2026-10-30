@@ -12,6 +12,9 @@ talks:
   speaker_ids:
   - tomek-masternak
 meetup_attendees: 30
+header:
+  og_image: /assets/images/2021-06-23-138-meetup.jpg
+  og_image_alt: "Baner 138. spotkania Wroc.NET"
 ---
 
 138\. spotkanie Wrocławskiej Grupy .NET odbyło się 23.06.2021 r..

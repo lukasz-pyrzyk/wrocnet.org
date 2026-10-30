@@ -6,6 +6,9 @@ tags:
   - inne
 date: 2022-07-26
 meetup_attendees: 19
+header:
+  og_image: /assets/images/2022-07-26-9-plazowe-spotkanie-grupy-net-meetup.jpg
+  og_image_alt: "Baner wydarzenia 9. Plażowe spotkanie grupy .NET"
 ---
 
 Miejsce: Forma Płynna Beach Bar, Wybrzeże Stanisława Wyspiańskiego 20, Wrocław

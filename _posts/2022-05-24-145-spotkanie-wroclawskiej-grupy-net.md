@@ -13,6 +13,9 @@ talks:
   - adam-kamizelich
   - weronika-mularczyk
 meetup_attendees: 18
+header:
+  og_image: /assets/images/2022-05-24-145-meetup.jpg
+  og_image_alt: "Baner 145. spotkania Wroc.NET"
 ---
 
 145\. spotkanie Wrocławskiej Grupy .NET odbyło się 24.05.2022 r..

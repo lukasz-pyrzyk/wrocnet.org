@@ -12,6 +12,9 @@ talks:
   speaker_ids:
   - oleg-kyrylchuk
 meetup_attendees: 19
+header:
+  og_image: /assets/images/2022-09-20-147-meetup.jpg
+  og_image_alt: "Baner 147. spotkania Wroc.NET"
 ---
 
 147\. spotkanie Wrocławskiej Grupy .NET odbyło się 20.09.2022 r. w **Avanade, ul. Piotra Skargi 1, Wrocław**.

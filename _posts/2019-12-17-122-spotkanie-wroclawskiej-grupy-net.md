@@ -12,6 +12,9 @@ talks:
   speaker_ids:
   - rustam-ashurov
 meetup_attendees: 46
+header:
+  og_image: /assets/images/2019-12-17-122-meetup.jpg
+  og_image_alt: "Baner 122. spotkania Wroc.NET"
 ---
 
 [Archiwalna strona wydarzenia na Meetup](https://www.meetup.com/wrocnet/events/266952547/)

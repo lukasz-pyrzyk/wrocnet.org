@@ -12,6 +12,9 @@ talks:
   speaker_ids:
   - michal-barylinski
 meetup_attendees: 109
+header:
+  og_image: /assets/images/2019-10-15-120-meetup.jpg
+  og_image_alt: "Baner 120. spotkania Wroc.NET"
 ---
 
 [Archiwalna strona wydarzenia na Meetup](https://www.meetup.com/wrocnet/events/265064792/)

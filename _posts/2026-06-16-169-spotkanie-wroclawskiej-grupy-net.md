@@ -6,6 +6,8 @@ tags:
   - offline
 header:
   teaser: /assets/images/spotkania-teaser.jpg
+  og_image: /assets/images/2026-06-16-169-meetup.jpg
+  og_image_alt: "Baner 169. spotkania Wroc.NET"
 talks:
 - title: Nie strzel sobie w stopę.
   speaker_ids:

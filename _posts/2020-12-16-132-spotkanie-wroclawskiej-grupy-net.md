@@ -12,6 +12,9 @@ talks:
   speaker_ids:
   - maciej-szymczyk
 meetup_attendees: 45
+header:
+  og_image: /assets/images/2020-12-16-132-meetup.jpg
+  og_image_alt: "Baner 132. spotkania Wroc.NET"
 ---
 
 132\. spotkanie Wrocławskiej Grupy .NET odbyło się 16.12.2020 r..

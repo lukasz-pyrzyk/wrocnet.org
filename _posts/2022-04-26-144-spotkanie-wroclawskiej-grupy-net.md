@@ -12,6 +12,9 @@ talks:
   speaker_ids:
   - marcin-kern
 meetup_attendees: 27
+header:
+  og_image: /assets/images/2022-04-26-144-meetup.jpg
+  og_image_alt: "Baner 144. spotkania Wroc.NET"
 ---
 
 144\. spotkanie Wrocławskiej Grupy .NET odbyło się 26.04.2022 r..

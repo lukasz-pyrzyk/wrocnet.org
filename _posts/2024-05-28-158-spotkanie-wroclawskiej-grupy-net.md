@@ -12,6 +12,9 @@ talks:
   speaker_ids:
   - daniel-kowalski
 meetup_attendees: 41
+header:
+  og_image: /assets/images/2024-05-28-158-meetup.jpg
+  og_image_alt: "Baner 158. spotkania Wroc.NET"
 ---
 
 158\. spotkanie Wrocławskiej Grupy .NET odbyło się 28.05.2024 r. w **Avanade, ul. Piotra Skargi 1, Wrocław**.

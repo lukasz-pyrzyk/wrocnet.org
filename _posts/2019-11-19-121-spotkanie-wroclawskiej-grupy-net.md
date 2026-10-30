@@ -15,6 +15,9 @@ talks:
   speaker_ids:
   - kacper-swislocki
 meetup_attendees: 87
+header:
+  og_image: /assets/images/2019-11-19-121-meetup.jpg
+  og_image_alt: "Baner 121. spotkania Wroc.NET"
 ---
 
 [Archiwalna strona wydarzenia na Meetup](https://www.meetup.com/wrocnet/events/266004172/)

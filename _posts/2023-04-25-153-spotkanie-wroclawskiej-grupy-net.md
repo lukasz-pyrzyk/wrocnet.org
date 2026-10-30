@@ -12,6 +12,9 @@ talks:
   speaker_ids:
   - piotr-wachulec
 meetup_attendees: 36
+header:
+  og_image: /assets/images/2023-04-25-153-meetup.jpg
+  og_image_alt: "Baner 153. spotkania Wroc.NET"
 ---
 
 153\. spotkanie Wrocławskiej Grupy .NET odbyło się 25.04.2023 r. w **Avanade, ul. Piotra Skargi 1, Wrocław**.

@@ -12,6 +12,9 @@ talks:
   speaker_ids:
   - krzysztof-zawistowski
 meetup_attendees: 108
+header:
+  og_image: /assets/images/2018-12-11-113-meetup.jpg
+  og_image_alt: "Baner 113. spotkania Wroc.NET"
 ---
 
 [Archiwalna strona wydarzenia na Meetup](https://www.meetup.com/wrocnet/events/256817837/)

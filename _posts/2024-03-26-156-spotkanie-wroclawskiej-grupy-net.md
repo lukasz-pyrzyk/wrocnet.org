@@ -13,6 +13,9 @@ talks:
   - bartosz-dudek
   - piotr-klys
 meetup_attendees: 51
+header:
+  og_image: /assets/images/2024-03-26-156-meetup.jpg
+  og_image_alt: "Baner 156. spotkania Wroc.NET"
 ---
 
 156\. spotkanie Wrocławskiej Grupy .NET odbyło się 26.03.2024 r. w **Avanade, ul. Piotra Skargi 1, Wrocław**.

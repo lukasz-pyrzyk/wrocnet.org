@@ -12,6 +12,9 @@ talks:
   speaker_ids:
   - rafal-hryniewski
 meetup_attendees: 66
+header:
+  og_image: /assets/images/2019-09-17-119-meetup.jpg
+  og_image_alt: "Baner 119. spotkania Wroc.NET"
 ---
 
 [Archiwalna strona wydarzenia na Meetup](https://www.meetup.com/wrocnet/events/264284277/)

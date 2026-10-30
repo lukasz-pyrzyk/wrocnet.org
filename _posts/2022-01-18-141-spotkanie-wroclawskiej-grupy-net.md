@@ -12,6 +12,9 @@ talks:
   speaker_ids:
   - marcin-kern
 meetup_attendees: 35
+header:
+  og_image: /assets/images/2022-01-18-141-meetup.jpg
+  og_image_alt: "Baner 141. spotkania Wroc.NET"
 ---
 
 141\. spotkanie Wrocławskiej Grupy .NET odbyło się 18.01.2022 r..

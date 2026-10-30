@@ -12,6 +12,9 @@ talks:
   speaker_ids:
   - cezary-walenciuk
 meetup_attendees: 45
+header:
+  og_image: /assets/images/2020-09-22-129-meetup.jpg
+  og_image_alt: "Baner 129. spotkania Wroc.NET"
 ---
 
 129\. spotkanie Wrocławskiej Grupy .NET odbyło się 22.09.2020 r..

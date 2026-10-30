@@ -12,6 +12,9 @@ talks:
   speaker_ids:
   - jerzy-wickowski
 meetup_attendees: 65
+header:
+  og_image: /assets/images/2018-11-13-112-meetup.jpg
+  og_image_alt: "Baner 112. spotkania Wroc.NET"
 ---
 
 [Archiwalna strona wydarzenia na Meetup](https://www.meetup.com/wrocnet/events/255976365/)

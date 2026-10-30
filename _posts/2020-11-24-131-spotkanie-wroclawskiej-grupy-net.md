@@ -12,6 +12,9 @@ talks:
   speaker_ids:
   - krzysztof-morcinek
 meetup_attendees: 81
+header:
+  og_image: /assets/images/2020-11-24-131-meetup.jpg
+  og_image_alt: "Baner 131. spotkania Wroc.NET"
 ---
 
 131\. spotkanie Wrocławskiej Grupy .NET odbyło się 24.11.2020 r..

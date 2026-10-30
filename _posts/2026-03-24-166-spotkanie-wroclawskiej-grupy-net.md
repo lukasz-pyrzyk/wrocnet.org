@@ -12,6 +12,9 @@ talks:
   speaker_ids:
   - michal-franc
 meetup_attendees: 66
+header:
+  og_image: /assets/images/2026-03-24-166-meetup.jpg
+  og_image_alt: "Baner 166. spotkania Wroc.NET"
 ---
 
 166\. spotkanie Wrocławskiej Grupy .NET odbyło się 24.03.2026 r. w **Ultranet, ul. Strzegomska 138, Wrocław**.

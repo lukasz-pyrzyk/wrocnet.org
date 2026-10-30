@@ -12,6 +12,9 @@ talks:
   speaker_ids:
   - grzegorz-wilczura
 meetup_attendees: 78
+header:
+  og_image: /assets/images/2025-10-28-163-meetup.jpg
+  og_image_alt: "Baner 163. spotkania Wroc.NET"
 ---
 
 163\. spotkanie Wrocławskiej Grupy .NET odbyło się 28.10.2025 r. w **Xebia, ul. Sucha 3, Wrocław**.

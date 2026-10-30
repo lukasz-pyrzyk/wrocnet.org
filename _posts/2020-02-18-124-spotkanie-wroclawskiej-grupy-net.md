@@ -12,6 +12,9 @@ talks:
   speaker_ids:
   - pawel-mrowczynski
 meetup_attendees: 94
+header:
+  og_image: /assets/images/2020-02-18-124-meetup.jpg
+  og_image_alt: "Baner 124. spotkania Wroc.NET"
 ---
 
 124\. spotkanie Wrocławskiej Grupy .NET odbyło się 18.02.2020 r. w **Klubokawiarnia Mleczarnia, ul. Pawła Włodkowica 5, Wrocław**.

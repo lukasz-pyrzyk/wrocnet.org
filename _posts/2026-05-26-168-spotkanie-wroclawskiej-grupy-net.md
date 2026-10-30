@@ -12,6 +12,9 @@ talks:
   speaker_ids:
   - lukasz-olbromski
 meetup_attendees: 65
+header:
+  og_image: /assets/images/2026-05-26-168-meetup.jpg
+  og_image_alt: "Baner 168. spotkania Wroc.NET"
 ---
 
 168\. spotkanie Wrocławskiej Grupy .NET odbyło się 26.05.2026 r. w **Sente, Budynek Quattro Forum ul. Legnicka 51-53, Wrocław**.
