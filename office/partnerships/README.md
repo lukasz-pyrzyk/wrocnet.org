@@ -1,13 +1,14 @@
 # Partnerstwa Wroc.NET
 
-Stan na **30.10.2026, 11:35**.
+Stan na **30.10.2026, 13:42**.
 
 ## Podsumowanie
 
-- **27 kontaktowanych odbiorców**, 10 odpowiedzi merytorycznych.
+- **28 kontaktowanych odbiorców**, 11 odpowiedzi merytorycznych.
 - **2 patronów medialnych:** Wrocławski Portal i Fakty Wrocław.
 - **2 odmowy:** TVP3 i Dolnośląski Urząd Wojewódzki.
 - **17 odbiorców bez odpowiedzi merytorycznej**, w tym wroclaw.pl z autoresponderem.
+- **Osobna ścieżka współpracy merytorycznej z CRKC rozpoczęta:** propozycja wysłana 30.10; ujęta w powyższych statystykach, niezależna od patronatu MC.
 - **7 przypomnień wysłanych 28.10**. Echo24 dostało tego dnia nowe zgłoszenie, nie przypomnienie.
 
 ## Media
@@ -45,7 +46,8 @@ Deklarację współpracy przy publikacjach liczymy w tym rejestrze jako patronat
 | Prezydent Wrocławia | Podpisany wniosek wysłany | Wysyłka 28.10, potwierdzona o 15:21 | kancelaria.prezydenta@um.wroc.pl. Czekać na ocenę patronatu nad cyklem ośmiu spotkań 17.11.2026-15.06.2027; ewentualnie siedmiu od 15.12.2026. Patronat nieprzyznany |
 | Przewodniczący Sejmiku Województwa Dolnośląskiego | Zapytanie wysłane | Wysyłka 28.10, potwierdzona o 17:34 | zuzanna.wilgosiewicz@dolnyslask.pl - adres wybrany przez Łukasza, niepotwierdzony w oficjalnym źródle. Zapytano o patronat nad cyklem i wymagane dokumenty; czekać na odpowiedź |
 | Rektor Politechniki Wrocławskiej | Wniosek wysłany | Wysyłka 28.10, potwierdzona o 17:40 | biuro.rektora@pwr.edu.pl. Wniosek z harmonogramem i uzasadnieniem na cykl 17.11.2026-15.06.2027, ewentualnie od grudnia. Czekać na ocenę; patronat nieprzyznany |
-| Ministerstwo Cyfryzacji | Czekamy | Zapytanie 26.10 | patronatcyfryzacja@cyfra.gov.pl. Przy braku odpowiedzi przypomnienie **04-09.11**; formalnego wniosku nie złożono |
+| Ministerstwo Cyfryzacji | Wniosek o patronat honorowy i mail potwierdzający wysłane | Wysyłka formularza i maila potwierdzona przez Łukasza 30.10 do 13:41 | Cykl ośmiu spotkań 17.11.2026-15.06.2027. Czekać na decyzję; patronat nieprzyznany. Współpraca z CRKC prowadzona osobną ścieżką. Nie ponawiać wcześniejszego przypomnienia 04-09.11 |
+| [Centrum Rozwoju Kompetencji Cyfrowych (CRKC)](https://www.gov.pl/web/cyfryzacja/centrum-rozwoju-kompetencji-cyfrowych) | Propozycja współpracy merytorycznej wysłana | Wysyłka potwierdzona przez Łukasza 30.10, 13:42 | Wysłano na sekretariat.CRKC@cyfra.gov.pl, powołując się na skierowanie z Biura Ministra. Zaproponowano prelekcję lub dyskusję ekspercką, np. o dostępności cyfrowej lub kompetencjach cyfrowych. Czekać na odpowiedź; partnerstwo nieuzgodnione. Osobna ścieżka, niezależna od patronatu MC |
 | [Dolnośląski Urząd Wojewódzki](../content/2026-10-19-email-partnerstwo-duw.md) | Odmowa - zamknięte | Odpowiedź Katarzyny Wachowiak 28.10, 11:28 | Brak podstaw do patronatu nad cyklicznymi spotkaniami branżowymi. Bez dalszych przypomnień |
 | [Urząd Marszałkowski](../content/2026-10-19-email-partnerstwo-umwd.md) | Skierowali do DPIN | Odpowiedź 26.10 | Dalszy kontakt przez DPIN, bez przypominania do UMWD |
 
@@ -56,6 +58,8 @@ Deklarację współpracy przy publikacjach liczymy w tym rejestrze jako patronat
 3. Wyjaśnić adres **Naszego Miasta**. DUW zamknięte po odmowie; WCA pomijamy.
 4. Wrócić do **ARAW około 4 listopada**. Pozostałe terminy przypomnień są w tabeli.
 5. Odpowiedzieć **Radiu LUZ**, zachowując Jakuba Dworzeckiego w wątku; zapytać o potrzeby i formę współpracy.
+6. **Ministerstwo Cyfryzacji:** wniosek online i mail informujący o jego złożeniu wysłane; czekać na decyzję.
+7. **CRKC:** propozycja współpracy merytorycznej wysłana; czekać na odpowiedź. Skierowanie z MC nie oznacza potwierdzenia zainteresowania Centrum.
 
 ## Kontakty pomocnicze i dokumenty
 
