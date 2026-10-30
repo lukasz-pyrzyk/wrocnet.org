@@ -3,3 +3,11 @@
   <a href="{{ site.website_organizer.url }}">{{ site.website_organizer.name | escape }}</a>
   oraz <a href="{{ '/organizatorzy/' | relative_url }}">zespół organizatorów</a>.
 </p>
+{% if site.analytics.provider == "custom" and page.analytics != false %}
+  <button type="button" class="cookie-preferences" data-cc="show-preferencesModal" id="cookie-preferences" hidden>
+    Ustawienia prywatności
+  </button>
+  {% unless jekyll.environment == "production" %}
+    {% include cookie-consent.html %}
+  {% endunless %}
+{% endif %}
