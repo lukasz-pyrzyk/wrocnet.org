@@ -1,13 +1,13 @@
 # Partnerstwa Wroc.NET
 
-Stan na **28.10.2026, 17:40**.
+Stan na **30.10.2026, 11:35**.
 
 ## Podsumowanie
 
-- **27 kontaktowanych odbiorców**, 9 odpowiedzi merytorycznych.
-- **1 patron medialny:** Wrocławski Portal.
+- **27 kontaktowanych odbiorców**, 10 odpowiedzi merytorycznych.
+- **2 patronów medialnych:** Wrocławski Portal i Fakty Wrocław.
 - **2 odmowy:** TVP3 i Dolnośląski Urząd Wojewódzki.
-- **18 odbiorców bez odpowiedzi merytorycznej**, w tym wroclaw.pl z autoresponderem.
+- **17 odbiorców bez odpowiedzi merytorycznej**, w tym wroclaw.pl z autoresponderem.
 - **7 przypomnień wysłanych 28.10**. Echo24 dostało tego dnia nowe zgłoszenie, nie przypomnienie.
 
 ## Media
@@ -16,7 +16,7 @@ Deklarację współpracy przy publikacjach liczymy w tym rejestrze jako patronat
 
 | Medium | Status | Ostatni kontakt | Następny krok |
 |---|---|---|---|
-| [Wrocławski Portal](../content/2026-10-19-email-patronat-wroclawski-portal.md) | Patron medialny | Odpowiedź 20.10 | Wysyłać opis i grafikę: redakcja@wroclawskiportal.pl. Uzgodnić użycie logo |
+| [Wrocławski Portal](../content/2026-10-19-email-patronat-wroclawski-portal.md) | Patron medialny, artykuł opublikowany | Paczka wysłana 27.10, 11:08; publikacja 27.10 | [Relacja z rekordowego spotkania i zapowiedź listopada](https://www.wroclawskiportal.pl/rekordowa-frekwencja-na-wroc-net-przy-ul-podwale-kolejne-spotkanie-wroclawskich-programistow-w-listopadzie/). Kolejne materiały: redakcja@wroclawskiportal.pl. Uzgodnić użycie logo |
 | [Kocham Wrocław](../content/2026-10-19-email-patronat-kocham-wroclaw.md) | Czekamy | Przypomnienie 28.10 | Czekać na odpowiedź |
 | [wroclaw.pl](../content/2026-10-19-email-patronat-wroclaw-pl.md) | Tylko autoresponder | Przypomnienie i autoresponder 28.10 | Mariola Szczyrba poza biurem, bez daty powrotu. Czekać na odpowiedź merytoryczną |
 | [Radio LUZ](../content/2026-10-19-email-patronat-radio-luz.md) | Zainteresowanie, kontakt do newsroomu | Odpowiedź Martyny Dziakowicz 28.10, 13:24 | Jakub Dworzecki (jdworzecki@radioluz.pl) jest w CC. Krótka odpowiedź wszystkim z pytaniem o potrzeby i formę współpracy przygotowana, wysyłka niepotwierdzona. Bez proponowania udziału w audycji; patronat nieuzgodniony |
@@ -27,7 +27,7 @@ Deklarację współpracy przy publikacjach liczymy w tym rejestrze jako patronat
 | [Gazeta Wrocławska](../content/2026-10-19-email-partnerstwo-gazeta-wroclawska.md) | Czekamy | Przypomnienie 28.10 | Zapytano też o wspólną obsługę Naszego Miasta |
 | [Wrocław Nasze Miasto](../content/2026-10-19-email-patronat-nasze-miasto.md) | Przypomnienie wstrzymane | Wysyłka 19.10 | Wyjaśnić adres: wysłano na reklamawroclaw@polskapress.pl, szkic wskazywał reklama.wroclaw@polskapress.pl. Nie wysyłać w ciemno |
 | [TVP3 Wrocław](../content/2026-10-19-email-partnerstwo-tvp3-wroclaw.md) | Odmowa - zamknięte | Odmowa i odpowiedź Łukasza 27.10 | Bez dalszych przypomnień i bez ekspozycji logo jako patrona |
-| Fakty Wrocław | Czekamy | Wysyłka 28.10, potwierdzona o 17:31 | patronat@serwisylokalne.pl. Propozycja patronatu medialnego nad cyklem; czekać na odpowiedź |
+| Fakty Wrocław / serwisylokalne.pl | Patron medialny najbliższego i kolejnych spotkań | Akceptacja patronatu 29.10, 17:38 | Odpowiedzieć w wątku: paczka DOCX/ZIP i mail przygotowane 30.10, wysyłka niepotwierdzona. Poprosić o logo Fakty Wrocław jako patrona medialnego; wydarzenia na Meetup, nie Facebooku, linki w materiałach. Oferty rabatowe i afiliacja nieuzgodnione. [Skill obsługi portalu](../../.github/skills/fakty-wroclaw/SKILL.md) |
 | dlaStudenta.pl | Czekamy | Wysyłka 28.10, potwierdzona o 17:31 | patronat@dlastudenta.pl. Propozycja patronatu medialnego nad cyklem; czekać na odpowiedź |
 
 ## Instytucje i organizacje
@@ -51,7 +51,7 @@ Deklarację współpracy przy publikacjach liczymy w tym rejestrze jako patronat
 
 ## Najbliższe działania
 
-1. Wysłać Wrocławskiemu Portalowi pakiet o spotkaniu **17 listopada**.
+1. Odpowiedzieć **Fakty Wrocław** z przygotowaną paczką o rekordowym październiku i spotkaniu **17 listopada**; poprosić o logotyp. Wysyłka odpowiedzi niepotwierdzona. Wrocławski Portal opublikował już relację i zapowiedź listopada.
 2. Potwierdzić wysyłkę przygotowanych odpowiedzi do **NASK i DPIN**.
 3. Wyjaśnić adres **Naszego Miasta**. DUW zamknięte po odmowie; WCA pomijamy.
 4. Wrócić do **ARAW około 4 listopada**. Pozostałe terminy przypomnień są w tabeli.
