@@ -1,0 +1,7 @@
+<script
+  type="module"
+  id="wrocnet-cookie-consent"
+  src="{{ '/assets/js/cookie-consent.js' | relative_url }}"
+  data-tracking-id="{{ site.analytics.google.tracking_id | escape }}"
+  data-analytics-enabled="{% if jekyll.environment == 'production' %}true{% else %}false{% endif %}"
+></script>
