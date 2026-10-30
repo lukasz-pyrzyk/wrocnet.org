@@ -12,7 +12,10 @@ url: "https://wrocnet.org"
 baseurl: ""
 repository: "lukasz-pyrzyk/wrocnet.org"
 logo: "/assets/images/logo.png"
-image: "/assets/images/page.png"
+# Share image for pages without their own banner (office/generate_og_image.py).
+# The theme also prints og_image as the Organization logo; _includes/schema.html
+# overrides that with the square `logo` above.
+og_image: "/assets/images/og-default.jpg"
 speaker_form_url: "https://forms.cloud.microsoft/e/QGBMw8zevT"
 
 website_organizer:

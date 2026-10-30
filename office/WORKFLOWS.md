@@ -91,6 +91,12 @@ Paleta robocza użyta w tym banerze (nie zastępuje referencji marki):
 - Eksport do Meetup: JPG w RGB, 1200x675, jakość 95, `subsampling=0`, bez zbędnych metadanych zdjęć źródłowych. Otwórz wynik i zweryfikuj wizualnie zdjęcia, podpisy, kontrast i marginesy oraz technicznie format, wymiary, wagę pliku i zgodność składu z YAML.
 - Gotowy obraz zapisuj według [konwencji archiwum treści](content/README.md#konwencja-nazewnictwa). Podglądy i pliki badawcze trzymaj poza repozytorium. Przygotowanie pliku nie oznacza podmiany na Meetup - nie deklaruj publikacji bez faktycznego wgrania i sprawdzenia.
 
+### Domyślny obraz udostępniania (og:image)
+
+- [og-default.jpg](../assets/images/og-default.jpg) (1200x630) pokazują linki do stron bez własnego baneru, w tym strona główna. Składa go [generator](generate_og_image.py) z tła strony głównej, logo (przez `banner_logo`) i tekstu w Arialu: `python3 office/generate_og_image.py`.
+- Logo, nazwa i hasło stoją na środku, bo WhatsApp i część podglądów przycina obraz do kwadratu 630x630. Generator przerywa pracę, jeśli tekst nie mieści się w tym kwadracie.
+- Ścieżkę ustawia `og_image` w [_config.yml](../_config.yml). Motyw wstawia tę wartość także jako logo organizacji w danych strukturalnych, dlatego [_includes/schema.html](../_includes/schema.html) nadpisuje ten blok i używa kwadratowego `logo`.
+
 ## Prezentacje (PowerPoint)
 
 - Pliki prezentacji na dane spotkanie żyją w `slides/<numer-spotkania>/` (np. `slides/170/`) — generator, wynikowy `.pptx` i obrazy specyficzne dla tej prezentacji trzymamy razem w jednym folderze, żeby były samowystarczalne.
