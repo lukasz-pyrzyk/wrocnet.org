@@ -1,12 +1,12 @@
 # Partnerstwa Wroc.NET
 
-Stan na **30.10.2026, 13:42**.
+Stan na **30.10.2026, 18:53**.
 
 ## Podsumowanie
 
 - **28 kontaktowanych odbiorców**, 11 odpowiedzi merytorycznych.
 - **2 patronów medialnych:** Wrocławski Portal i Fakty Wrocław.
-- **2 odmowy:** TVP3 i Dolnośląski Urząd Wojewódzki.
+- **3 odmowy:** TVP3, Dolnośląski Urząd Wojewódzki i DPIN (brak współpracy na ten moment).
 - **17 odbiorców bez odpowiedzi merytorycznej**, w tym wroclaw.pl z autoresponderem.
 - **Osobna ścieżka współpracy merytorycznej z CRKC rozpoczęta:** propozycja wysłana 30.10; ujęta w powyższych statystykach, niezależna od patronatu MC.
 - **7 przypomnień wysłanych 28.10**. Echo24 dostało tego dnia nowe zgłoszenie, nie przypomnienie.
@@ -37,7 +37,7 @@ Deklarację współpracy przy publikacjach liczymy w tym rejestrze jako patronat
 |---|---|---|---|
 | NASK | Zainteresowanie, propozycje prelekcji | Odpowiedź Kamila 27.10 | Odpowiedzieć z roadmapą; szkic gotowy, wysyłka niepotwierdzona. Kamil Warpechowski: kamil.warpechowski@nask.pl. Patronat i finansowanie nieuzgodnione |
 | [ARAW / StartupWrocław](../content/2026-10-19-email-partnerstwo-araw.md) | Rozmowa odroczona na ich prośbę | LinkedIn od Norberta Nowackiego 21.10 | Wrócić około **04.11**. Propozycja przekazana Paulinie Muszyńskiej |
-| DPIN | Konsultacja wewnętrzna | Odpowiedź Agnieszki Kapłon-Kulig 28.10 | Czekać na rozmowy z zespołem druku 3D. agnieszka.kaplon@dpin.pl. Podziękowanie przygotowane, wysyłka niepotwierdzona |
+| DPIN | Odmowa na ten moment - ścieżka zamknięta | Odmowa 30.10, 18:29; wysyłka podziękowania potwierdzona przez Łukasza o 18:53 | Po konsultacji z koordynatorami DPIN skupia się na innych działaniach. Deklarują kontakt w razie zmiany strategii. Podziękowanie wysłane; bez dalszych przypomnień. agnieszka.kaplon@dpin.pl |
 | Kancelaria Prezydenta RP | Podpisany wniosek wysłany | Uzupełnienie 27.10 | Czekać na ocenę. Anna Końska: anna.konska@prezydent.pl. Zakres: sześć spotkań 19.01-15.06.2027 |
 | [WPT](../content/2026-10-27-email-partnerstwo-wpt.md) | Czekamy | Wysyłka 27.10 | wpt@technologpark.pl. Przy braku odpowiedzi przypomnienie **05-10.11** |
 | [PTI - Oddział Dolnośląski](../content/2026-10-27-email-partnerstwo-pti-dolnoslaskie.md) | Czekamy | Wysyłka 27.10 | wroclaw@pti.org.pl. Przy braku odpowiedzi przypomnienie **05-10.11** |
@@ -49,12 +49,12 @@ Deklarację współpracy przy publikacjach liczymy w tym rejestrze jako patronat
 | Ministerstwo Cyfryzacji | Wniosek o patronat honorowy i mail potwierdzający wysłane | Wysyłka formularza i maila potwierdzona przez Łukasza 30.10 do 13:41 | Cykl ośmiu spotkań 17.11.2026-15.06.2027. Czekać na decyzję; patronat nieprzyznany. Współpraca z CRKC prowadzona osobną ścieżką. Nie ponawiać wcześniejszego przypomnienia 04-09.11 |
 | [Centrum Rozwoju Kompetencji Cyfrowych (CRKC)](https://www.gov.pl/web/cyfryzacja/centrum-rozwoju-kompetencji-cyfrowych) | Propozycja współpracy merytorycznej wysłana | Wysyłka potwierdzona przez Łukasza 30.10, 13:42 | Wysłano na sekretariat.CRKC@cyfra.gov.pl, powołując się na skierowanie z Biura Ministra. Zaproponowano prelekcję lub dyskusję ekspercką, np. o dostępności cyfrowej lub kompetencjach cyfrowych. Czekać na odpowiedź; partnerstwo nieuzgodnione. Osobna ścieżka, niezależna od patronatu MC |
 | [Dolnośląski Urząd Wojewódzki](../content/2026-10-19-email-partnerstwo-duw.md) | Odmowa - zamknięte | Odpowiedź Katarzyny Wachowiak 28.10, 11:28 | Brak podstaw do patronatu nad cyklicznymi spotkaniami branżowymi. Bez dalszych przypomnień |
-| [Urząd Marszałkowski](../content/2026-10-19-email-partnerstwo-umwd.md) | Skierowali do DPIN | Odpowiedź 26.10 | Dalszy kontakt przez DPIN, bez przypominania do UMWD |
+| [Urząd Marszałkowski](../content/2026-10-19-email-partnerstwo-umwd.md) | Skierowali do DPIN | Odpowiedź 26.10 | Ścieżka przez DPIN zamknięta po odmowie 30.10. Bez przypominania do UMWD |
 
 ## Najbliższe działania
 
 1. Odpowiedzieć **Fakty Wrocław** z przygotowaną paczką o rekordowym październiku i spotkaniu **17 listopada**; poprosić o logotyp. Wysyłka odpowiedzi niepotwierdzona. Wrocławski Portal opublikował już relację i zapowiedź listopada.
-2. Potwierdzić wysyłkę przygotowanych odpowiedzi do **NASK i DPIN**.
+2. Potwierdzić wysyłkę przygotowanej odpowiedzi do **NASK**. **DPIN** zamknięte po odmowie 30.10; podziękowanie wysłane, bez dalszych działań.
 3. Wyjaśnić adres **Naszego Miasta**. DUW zamknięte po odmowie; WCA pomijamy.
 4. Wrócić do **ARAW około 4 listopada**. Pozostałe terminy przypomnień są w tabeli.
 5. Odpowiedzieć **Radiu LUZ**, zachowując Jakuba Dworzeckiego w wątku; zapytać o potrzeby i formę współpracy.
