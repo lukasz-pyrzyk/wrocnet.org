@@ -12,6 +12,9 @@ talks:
   speaker_ids:
   - pawel-lukasik
 meetup_attendees: 53
+header:
+  og_image: /assets/images/2026-04-21-167-meetup.jpg
+  og_image_alt: "Baner 167. spotkania Wroc.NET"
 ---
 
 167\. spotkanie Wrocławskiej Grupy .NET odbyło się 21.04.2026 r. w **CSHARK Office, wyspa Słodowa 7, Wrocław**.

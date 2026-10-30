@@ -12,6 +12,9 @@ talks:
   speaker_ids:
   - tomasz-pluskiewicz
 meetup_attendees: 90
+header:
+  og_image: /assets/images/2019-04-16-117-meetup.jpg
+  og_image_alt: "Baner 117. spotkania Wroc.NET"
 ---
 
 [Archiwalna strona wydarzenia na Meetup](https://www.meetup.com/wrocnet/events/260253723/)

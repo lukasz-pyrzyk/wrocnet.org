@@ -12,6 +12,9 @@ talks:
   speaker_ids:
   - bartek-szczepanski
 meetup_attendees: 33
+header:
+  og_image: /assets/images/2023-03-21-152-meetup.jpg
+  og_image_alt: "Baner 152. spotkania Wroc.NET"
 ---
 
 152\. spotkanie Wrocławskiej Grupy .NET odbyło się 21.03.2023 r. w **Avanade, ul. Piotra Skargi 1, Wrocław**.

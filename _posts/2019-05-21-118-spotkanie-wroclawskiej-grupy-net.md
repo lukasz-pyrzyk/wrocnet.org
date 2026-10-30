@@ -13,6 +13,9 @@ talks:
   speaker_ids:
   - ireneusz-patalas
 meetup_attendees: 85
+header:
+  og_image: /assets/images/2019-05-21-118-meetup.jpg
+  og_image_alt: "Baner 118. spotkania Wroc.NET"
 ---
 
 Miejsce: Mleczarnia, ul. Włodkowica 5, Wrocław

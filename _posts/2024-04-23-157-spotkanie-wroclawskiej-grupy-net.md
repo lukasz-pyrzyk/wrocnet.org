@@ -9,6 +9,9 @@ talks:
   speaker_ids:
   - radoslaw-maziarka
 meetup_attendees: 42
+header:
+  og_image: /assets/images/2024-04-23-157-meetup.jpg
+  og_image_alt: "Baner 157. spotkania Wroc.NET"
 ---
 
 157\. spotkanie Wrocławskiej Grupy .NET odbyło się 23.04.2024 r. w **Avanade, ul. Piotra Skargi 1, Wrocław**.

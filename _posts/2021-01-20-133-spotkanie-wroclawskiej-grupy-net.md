@@ -12,6 +12,9 @@ talks:
   speaker_ids:
   - kamil-grzybek
 meetup_attendees: 47
+header:
+  og_image: /assets/images/2021-01-20-133-meetup.jpg
+  og_image_alt: "Baner 133. spotkania Wroc.NET"
 ---
 
 133\. spotkanie Wrocławskiej Grupy .NET odbyło się 20.01.2021 r..

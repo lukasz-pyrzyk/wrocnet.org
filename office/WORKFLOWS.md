@@ -95,6 +95,7 @@ Paleta robocza użyta w tym banerze (nie zastępuje referencji marki):
 
 - [og-default.jpg](../assets/images/og-default.jpg) (1200x630) pokazują linki do stron bez własnego baneru, w tym strona główna. Składa go [generator](generate_og_image.py) z tła strony głównej, logo (przez `banner_logo`) i tekstu w Arialu: `python3 office/generate_og_image.py`.
 - Logo, nazwa i hasło stoją na środku, bo WhatsApp i część podglądów przycina obraz do kwadratu 630x630. Generator przerywa pracę, jeśli tekst nie mieści się w tym kwadracie.
+- Spotkania 110-170, Plażowe spotkania 7-10 i Pre-WROC# 2020 udostępniają własny baner pobrany z wydarzenia na Meetup: `header.og_image` wskazuje `assets/images/YYYY-MM-DD-NR-meetup.jpg` (maks. 1200 px szerokości). To zmienia tylko podgląd linku, nie wygląd strony. Pre-WROC# 2018 i spotkanie 116 mają na Meetup samo logo WROC# na białym tle, więc zostają przy obrazie domyślnym. Nowe banery spotkań podpinaj przez `header.image`, jak opisano wyżej.
 - Ścieżkę ustawia `og_image` w [_config.yml](../_config.yml). Motyw wstawia tę wartość także jako logo organizacji w danych strukturalnych, dlatego [_includes/schema.html](../_includes/schema.html) nadpisuje ten blok i używa kwadratowego `logo`.
 
 ## Prezentacje (PowerPoint)

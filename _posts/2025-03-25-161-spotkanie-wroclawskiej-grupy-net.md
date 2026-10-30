@@ -15,6 +15,9 @@ talks:
   speaker_ids:
   - rafal-zieba
 meetup_attendees: 65
+header:
+  og_image: /assets/images/2025-03-25-161-meetup.jpg
+  og_image_alt: "Baner 161. spotkania Wroc.NET"
 ---
 
 161\. spotkanie Wrocławskiej Grupy .NET odbyło się 25.03.2025 r. w **Spyrosoft, plac Nowy Targ 28, Wrocław**.

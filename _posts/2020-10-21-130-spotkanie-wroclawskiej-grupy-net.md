@@ -12,6 +12,9 @@ talks:
   speaker_ids:
   - rafal-hryniewski
 meetup_attendees: 20
+header:
+  og_image: /assets/images/2020-10-21-130-meetup.jpg
+  og_image_alt: "Baner 130. spotkania Wroc.NET"
 ---
 
 130\. spotkanie Wrocławskiej Grupy .NET odbyło się 21.10.2020 r..

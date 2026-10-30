@@ -12,6 +12,9 @@ talks:
   speaker_ids:
   - maciej-wyrodek
 meetup_attendees: 57
+header:
+  og_image: /assets/images/2025-01-28-160-meetup.jpg
+  og_image_alt: "Baner 160. spotkania Wroc.NET"
 ---
 
 160\. spotkanie Wrocławskiej Grupy .NET odbyło się 28.01.2025 r. w **Xebia, ul. Sucha 3, Wrocław**.

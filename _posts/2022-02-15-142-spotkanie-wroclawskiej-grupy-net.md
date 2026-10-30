@@ -12,6 +12,9 @@ talks:
   speaker_ids:
   - marek-gawryszewski
 meetup_attendees: 44
+header:
+  og_image: /assets/images/2022-02-15-142-meetup.jpg
+  og_image_alt: "Baner 142. spotkania Wroc.NET"
 ---
 
 142\. spotkanie Wrocławskiej Grupy .NET odbyło się 15.02.2022 r..

@@ -12,6 +12,9 @@ talks:
   speaker_ids:
   - radoslaw-maziarka
 meetup_attendees: 25
+header:
+  og_image: /assets/images/2022-11-22-149-meetup.jpg
+  og_image_alt: "Baner 149. spotkania Wroc.NET"
 ---
 
 149\. spotkanie Wrocławskiej Grupy .NET odbyło się 22.11.2022 r. w **SoftServe, ul. Jaworska 11-13, Wrocław**.

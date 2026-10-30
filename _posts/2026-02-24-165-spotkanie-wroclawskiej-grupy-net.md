@@ -12,6 +12,9 @@ talks:
   speaker_ids:
   - wojciech-warwas
 meetup_attendees: 53
+header:
+  og_image: /assets/images/2026-02-24-165-meetup.jpg
+  og_image_alt: "Baner 165. spotkania Wroc.NET"
 ---
 
 165\. spotkanie Wrocławskiej Grupy .NET odbyło się 24.02.2026 r. w **Xebia, ul. Sucha 3, Wrocław**.

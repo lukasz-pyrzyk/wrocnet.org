@@ -12,6 +12,9 @@ talks:
   speaker_ids:
   - konrad-kokosa
 meetup_attendees: 32
+header:
+  og_image: /assets/images/2021-05-18-137-meetup.jpg
+  og_image_alt: "Baner 137. spotkania Wroc.NET"
 ---
 
 137\. spotkanie Wrocławskiej Grupy .NET odbyło się 18.05.2021 r..

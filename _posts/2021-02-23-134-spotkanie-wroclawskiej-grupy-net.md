@@ -12,6 +12,9 @@ talks:
   speaker_ids:
   - michal-jankowski
 meetup_attendees: 53
+header:
+  og_image: /assets/images/2021-02-23-134-meetup.jpg
+  og_image_alt: "Baner 134. spotkania Wroc.NET"
 ---
 
 134\. spotkanie Wrocławskiej Grupy .NET odbyło się 23.02.2021 r..

@@ -8,6 +8,8 @@ tags:
 meetup_attendees: 44
 header:
   teaser: /assets/images/spotkania-teaser.jpg
+  og_image: /assets/images/2026-09-22-170-meetup.jpg
+  og_image_alt: "Baner 170. spotkania Wroc.NET"
 talks:
 - title: Otwarcie sezonu 2026-2027, wiadomości organizacyjne i więcej!
   speaker_ids:

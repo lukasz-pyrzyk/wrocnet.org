@@ -12,6 +12,9 @@ talks:
   speaker_ids:
   - oskar-dudycz
 meetup_attendees: 57
+header:
+  og_image: /assets/images/2024-11-19-159-meetup.jpg
+  og_image_alt: "Baner 159. spotkania Wroc.NET"
 ---
 
 159\. spotkanie Wrocławskiej Grupy .NET odbyło się 19.11.2024 r. w **Wędrówki Pub, ul. Podwale 37/38, Wrocław**.

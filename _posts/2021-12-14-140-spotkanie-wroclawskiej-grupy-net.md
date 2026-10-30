@@ -12,6 +12,9 @@ talks:
   speaker_ids:
   - grzegorz-godlewski
 meetup_attendees: 53
+header:
+  og_image: /assets/images/2021-12-14-140-meetup.jpg
+  og_image_alt: "Baner 140. spotkania Wroc.NET"
 ---
 
 140\. spotkanie Wrocławskiej Grupy .NET odbyło się 14.12.2021 r..

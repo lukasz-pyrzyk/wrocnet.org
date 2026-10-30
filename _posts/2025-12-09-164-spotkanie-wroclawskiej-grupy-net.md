@@ -9,6 +9,9 @@ talks:
   speaker_ids:
   - radoslaw-maziarka
 meetup_attendees: 56
+header:
+  og_image: /assets/images/2025-12-09-164-meetup.jpg
+  og_image_alt: "Baner 164. spotkania Wroc.NET"
 ---
 
 164\. spotkanie Wrocławskiej Grupy .NET odbyło się 09.12.2025 r. w **Ultranet, ul. Strzegomska 138, Wrocław**.

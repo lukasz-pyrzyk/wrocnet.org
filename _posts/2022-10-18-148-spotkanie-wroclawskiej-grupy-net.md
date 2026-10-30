@@ -12,6 +12,9 @@ talks:
   speaker_ids:
   - maciej-mokrzycki
 meetup_attendees: 30
+header:
+  og_image: /assets/images/2022-10-18-148-meetup.jpg
+  og_image_alt: "Baner 148. spotkania Wroc.NET"
 ---
 
 148\. spotkanie Wrocławskiej Grupy .NET odbyło się 18.10.2022 r. w **Avanade, ul. Piotra Skargi 1, Wrocław**.

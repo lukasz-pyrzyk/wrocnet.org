@@ -12,6 +12,9 @@ talks:
   speaker_ids:
   - arek-benedykt
 meetup_attendees: 79
+header:
+  og_image: /assets/images/2020-01-21-123-meetup.jpg
+  og_image_alt: "Baner 123. spotkania Wroc.NET"
 ---
 
 123\. spotkanie Wrocławskiej Grupy .NET odbyło się 21.01.2020 r. w **Proza, Przejście Garncarskie 2, Wrocław**.

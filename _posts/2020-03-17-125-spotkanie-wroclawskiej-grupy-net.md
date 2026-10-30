@@ -12,6 +12,9 @@ talks:
   speaker_ids:
   - weronika-mularczyk
 meetup_attendees: 59
+header:
+  og_image: /assets/images/2020-03-17-125-meetup.jpg
+  og_image_alt: "Baner 125. spotkania Wroc.NET"
 ---
 
 125\. spotkanie Wrocławskiej Grupy .NET odbyło się 17.03.2020 r. **online** - było transmitowane na żywo na kanale YouTube grupy.

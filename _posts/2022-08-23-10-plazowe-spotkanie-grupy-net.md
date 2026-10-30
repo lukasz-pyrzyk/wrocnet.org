@@ -6,6 +6,9 @@ tags:
   - inne
 date: 2022-08-23
 meetup_attendees: 16
+header:
+  og_image: /assets/images/2022-08-23-10-plazowe-spotkanie-grupy-net-meetup.jpg
+  og_image_alt: "Baner wydarzenia 10. Plażowe spotkanie grupy .NET"
 ---
 
 Miejsce: Targowa - Craft Beer and Food, ul. Piaskowa 17, Wrocław

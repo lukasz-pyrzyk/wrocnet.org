@@ -12,6 +12,9 @@ talks:
   speaker_ids:
   - krzysztof-seroka
 meetup_attendees: 92
+header:
+  og_image: /assets/images/2019-02-19-115-meetup.jpg
+  og_image_alt: "Baner 115. spotkania Wroc.NET"
 ---
 
 [Archiwalna strona wydarzenia na Meetup](https://www.meetup.com/wrocnet/events/258708692/)
