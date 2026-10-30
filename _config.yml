@@ -43,7 +43,7 @@ social:
 search: true
 
 analytics:
-  provider: "google-gtag"
+  provider: "custom"
   google:
     tracking_id: "G-5ZVBJZCG0S"
 
