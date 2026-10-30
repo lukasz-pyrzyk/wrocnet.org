@@ -42,6 +42,11 @@ social:
 
 search: true
 
+analytics:
+  provider: "google-gtag"
+  google:
+    tracking_id: "G-5ZVBJZCG0S"
+
 author:
   name: "Wroc.NET"
   avatar: "/assets/images/logo.png"
