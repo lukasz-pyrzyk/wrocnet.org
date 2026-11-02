@@ -68,7 +68,7 @@ Administratorem strony i organizatorem Wroc.NET jest [{{ site.website_organizer.
 {%- assign has_upcoming = false -%}
 {%- include upcoming-meeting-posts.html -%}
 {% for post in upcoming_meeting_posts %}{% assign has_upcoming = true %}{% assign m_idx = post.date | date: "%-m" | minus: 1 %}
-- [{{ post.date | date: "%-d" }} {{ months_pl[m_idx] }} {{ post.date | date: "%Y" }}, godz. {{ post.time | default: "18:30:00" | slice: 0, 5 }}](https://www.meetup.com/wrocnet/events/){% endfor %}
+- [{{ post.date | date: "%-d" }} {{ months_pl[m_idx] }} {{ post.date | date: "%Y" }}, godz. {{ post.time | default: "18:30:00" | slice: 0, 5 }}]({{ post.meetup_url | default: "https://www.meetup.com/wrocnet/events/" | strip }}){% endfor %}
 {%- unless has_upcoming %}
 - [Brak zaplanowanych dat — sprawdź terminarz na Meetup](https://www.meetup.com/wrocnet/events/)
 {%- endunless %}

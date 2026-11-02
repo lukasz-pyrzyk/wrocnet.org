@@ -25,12 +25,14 @@
 {% if page.url == "/" and upcoming_meeting_posts.size > 0 %}
   {% assign month_names_csv = ui_text.countdown_month_names | default: "January,February,March,April,May,June,July,August,September,October,November,December" %}
   {% assign month_names = month_names_csv | split: "," %}
-  {% capture meetings_json %}[{% for post in upcoming_meeting_posts %}{"date":"{{ post.date | date: '%Y-%m-%d' }}","time":"{{ post.time | default: '18:30:00' }}"}{% unless forloop.last %},{% endunless %}{% endfor %}]{% endcapture %}
+  {% assign meetup_events_url = "https://www.meetup.com/wrocnet/events/" %}
+  {% capture meetings_json %}[{% for post in upcoming_meeting_posts %}{"date":"{{ post.date | date: '%Y-%m-%d' }}","time":"{{ post.time | default: '18:30:00' }}","signup":{{ post.meetup_url | default: meetup_events_url | strip | jsonify }}}{% unless forloop.last %},{% endunless %}{% endfor %}]{% endcapture %}
   {% capture meeting_timestamps_csv %}{% for post in upcoming_meeting_posts %}{% capture meeting_at %}{{ post.date | date: '%Y-%m-%d' }} {{ post.time | default: '18:30:00' }}{% endcapture %}{{ meeting_at | date: '%s' }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
   {% assign meeting_timestamps_csv = meeting_timestamps_csv | strip_newlines | strip %}
   {% assign first_meeting = upcoming_meeting_posts | first %}
   {% assign first_meeting_date = first_meeting.date %}
   {% assign next_meeting_time_display = first_meeting.time | default: '18:30:00' | slice: 0, 5 %}
+  {% assign first_meeting_signup = first_meeting.meetup_url | default: meetup_events_url | strip %}
   {% assign first_month_idx = first_meeting_date | date: "%-m" | minus: 1 %}
   {% capture first_meeting_display %}{{ first_meeting_date | date: "%-d" }} {{ month_names[first_month_idx] }} {{ first_meeting_date | date: "%Y" }}{% endcapture %}
   {% assign has_countdown = true %}
@@ -136,7 +138,7 @@
               </section>
             {% endif %}
           {% endfor %}
-          <a class="btn next-meeting-card__signup" href="https://www.meetup.com/wrocnet/events/">Zapisz się na najbliższe spotkanie <span aria-hidden="true">→</span></a>
+          <a class="btn next-meeting-card__signup" href="{{ first_meeting_signup | escape }}" data-role="meeting-signup">Zapisz się na najbliższe spotkanie <span aria-hidden="true">→</span></a>
         </aside>
       {% endif %}
     </div>
@@ -188,6 +190,7 @@
       }
 
       var dateLabel = card.querySelector('[data-role="meeting-date"]');
+      var signupLink = card.querySelector('[data-role="meeting-signup"]');
       var targetTs = 0;
       var selectedDay = '';
       var dayFormatter = new Intl.DateTimeFormat('en', {
@@ -254,6 +257,9 @@
         selectProgram(nextMeeting.index);
         if (dateLabel) {
           dateLabel.textContent = formatMeetingLabel(nextMeeting.meeting);
+        }
+        if (signupLink && nextMeeting.meeting.signup) {
+          signupLink.href = nextMeeting.meeting.signup;
         }
 
         return true;

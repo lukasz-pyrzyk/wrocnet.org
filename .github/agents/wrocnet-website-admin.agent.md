@@ -51,7 +51,7 @@ tags:
 - Exactly one format tag: `offline`, `online`, or `inne` for special/non-numbered events; never `.NET`.
 - Escape the first period in numbered titles and opening paragraphs; use single-quoted YAML. Preserve existing escapes and genuine lists. Verify the actual number renders as text in HTML, not a list item. Meetup titles are plain text without escapes.
 - Reuse `talks[].speaker_ids` and the shared `talk.html` / `speaker.html` includes instead of duplicating speaker data. A talk accepts multiple IDs.
-- `meetup_url` must link to the specific event. Signup buttons and upcoming status last through the whole event day in `Europe/Warsaw`, refreshed on rebuild.
+- `meetup_url` must link to the specific event. Add it as soon as the event is on Meetup: the post's signup button, the homepage hero button, the calendar tile and `llms.txt` all use it, and fall back to the Meetup events list without it. Signup buttons and upcoming status last through the whole event day in `Europe/Warsaw`, refreshed on rebuild.
 - After the event record `meetup_attendees: N` and add {% raw %}`{% include attendance.html %}`{% endraw %} after the opening paragraph if missing; zero/missing counts stay hidden.
 
 ## People and profile photos

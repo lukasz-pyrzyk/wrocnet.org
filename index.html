@@ -108,8 +108,9 @@ hero_intro: "Praktyczna wiedza, doświadczenia z projektów i rozmowy z ludźmi 
         {% assign m_idx = date_str | date: "%-m" | minus: 1 %}
         {% assign day = date_str | date: "%-d" %}
         {% assign year = date_str | date: "%Y" %}
+        {% assign meetup_url = post.meetup_url | default: "" | strip %}
         <li class="schedule-item{% if upcoming_index == 0 %} schedule-item--next{% endif %}">
-          <a href="https://www.meetup.com/wrocnet/events/" target="_blank" rel="noopener noreferrer" class="schedule-link" aria-label="{{ day }} {{ months_pl[m_idx] }} {{ year }} — wydarzenia Wroc.NET na Meetup">
+          <a href="{% if meetup_url != "" %}{{ meetup_url | escape }}{% else %}https://www.meetup.com/wrocnet/events/{% endif %}" target="_blank" rel="noopener noreferrer" class="schedule-link" aria-label="{{ day }} {{ months_pl[m_idx] }} {{ year }} — {% if meetup_url != "" %}zapisy na to spotkanie na Meetup{% else %}wydarzenia Wroc.NET na Meetup{% endif %}">
             <span>
               {% if upcoming_index == 0 %}<small>Najbliższe</small>{% endif %}
               <strong>{{ day }} {{ months_pl[m_idx] }}</strong>
