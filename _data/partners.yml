@@ -13,3 +13,7 @@ supporting:
     url: "https://pti.org.pl/oddzialy-i-sekcje/oddzial-dolnoslaski/"
     logo: "/assets/images/partners/ods-pti.jpg"
     role: "Patron medialny"
+  - name: "dlaStudenta.pl"
+    url: "https://dlastudenta.pl/"
+    logo: "/assets/images/partners/dlastudenta.png"
+    role: "Patron medialny"
