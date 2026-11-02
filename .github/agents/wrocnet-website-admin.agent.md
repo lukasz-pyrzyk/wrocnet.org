@@ -62,6 +62,7 @@ tags:
 
 ## Partners and media mentions
 - Partners: [_data/partners.yml](../../_data/partners.yml), local logos in `assets/images/partners/`. Confirm participation in the specific event.
+- The supporting group includes partners and patrons; keep its heading neutral and use each entry's `role` for the agreed relationship. A PTI branch's patronage is not patronage of the whole association.
 - Media: [_pages/wspomnieli-o-nas.md](../../_pages/wspomnieli-o-nas.md), newest first under years; compact link, outlet and verified original publication date, no description. Mark organizer posts `zza kulis`, archived copies `archiwum`; do not substitute event/update dates.
 
 ## Homepage behavior
