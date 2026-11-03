@@ -8,6 +8,8 @@ Publikacje, relacje i historie zza kulis Wroc.NET.
 
 ## 2026
 
+- [Wroc.NET pobił rekord w październiku. Listopadowe spotkanie o wydajności powtórzy sukces?](https://faktywroclaw.pl/20261102317868/wrocnet-pobil-rekord-w-pazdzierniku-listopadowe-spotkanie-o-wydajnosci-powtorzy-sukces) - Fakty Wrocław, 02.11.2026
+- [172. spotkanie Wroc.NET we Wrocławiu. Ultra-wydajność systemów, Apache Iggy i granice .NET](https://faktywroclaw.pl/wydarzenie/172-spotkanie-wrocnet-we-wroclawiu-ultra-wydajnosc-systemow-apache-iggy-i-granice-net) - Fakty Wrocław, 02.11.2026
 - [Rekordowa frekwencja na Wroc.NET przy ul. Podwale. Kolejne spotkanie wrocławskich programistów w listopadzie](https://www.wroclawskiportal.pl/rekordowa-frekwencja-na-wroc-net-przy-ul-podwale-kolejne-spotkanie-wroclawskich-programistow-w-listopadzie/) - Wrocławski Portal, 27.10.2026
 - [How I organised a record-breaking .NET meetup in Wrocław](https://pyrzyk.net/how-i-organised-wrocnets-record-breaking-meetup/) - Łukasz Pyrzyk, 22.10.2026 · zza kulis
 - [A new Wroc.NET season with more room for discussion](https://pyrzyk.net/a-new-wrocnet-season-with-more-room-for-discussion/) - Łukasz Pyrzyk, 05.10.2026 · zza kulis
