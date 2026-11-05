@@ -8,6 +8,8 @@ Publikacje, relacje i historie zza kulis Wroc.NET.
 
 ## 2026
 
+- [Wroc.NET z rekordem zapisów i frekwencji. Następne spotkanie programistów już 17 listopada](https://wroclaw.dlastudenta.pl/wiadomosci/artykul/wroc-net-z-rekordem-zapisow-i-frekwencji-nastepne-spotkanie-programistow-juz-17-listopada,161448.html) - dlaStudenta.pl, 05.11.2026
+- [172. spotkanie Wroc.NET](https://wroclaw.dlastudenta.pl/studia/wydarzenie/kursy-i-szkolenia,172-spotkanie-wroc-net,206721.html) - dlaStudenta.pl · data publikacji niepodana
 - [Wroc.NET pobił rekord w październiku. Listopadowe spotkanie o wydajności powtórzy sukces?](https://faktywroclaw.pl/20261102317868/wrocnet-pobil-rekord-w-pazdzierniku-listopadowe-spotkanie-o-wydajnosci-powtorzy-sukces) - Fakty Wrocław, 02.11.2026
 - [172. spotkanie Wroc.NET we Wrocławiu. Ultra-wydajność systemów, Apache Iggy i granice .NET](https://faktywroclaw.pl/wydarzenie/172-spotkanie-wrocnet-we-wroclawiu-ultra-wydajnosc-systemow-apache-iggy-i-granice-net) - Fakty Wrocław, 02.11.2026
 - [Rekordowa frekwencja na Wroc.NET przy ul. Podwale. Kolejne spotkanie wrocławskich programistów w listopadzie](https://www.wroclawskiportal.pl/rekordowa-frekwencja-na-wroc-net-przy-ul-podwale-kolejne-spotkanie-wroclawskich-programistow-w-listopadzie/) - Wrocławski Portal, 27.10.2026
