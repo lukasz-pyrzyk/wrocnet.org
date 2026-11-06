@@ -21,3 +21,7 @@ supporting:
     url: "https://dlastudenta.pl/"
     logo: "/assets/images/partners/dlastudenta.png"
     role: "Patron medialny"
+  - name: "Magazyn Programista"
+    url: "https://programistamag.pl/"
+    logo: "/assets/images/partners/programista.png"
+    role: "Patron medialny"
