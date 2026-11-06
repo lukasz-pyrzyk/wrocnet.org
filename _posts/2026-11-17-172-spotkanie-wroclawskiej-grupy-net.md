@@ -47,3 +47,15 @@ W poprzednim etapie spędziłem ponad dekadę z C# i .NET-em, pracując m.in. na
 Czy problemem jest technologia, architektura, czy sposób, w jaki z nich korzystamy? **Piotr Gankiewicz, Łukasz Olbromski i Łukasz Pyrzyk** porozmawiają o granicach wydajności .NET, powodach sięgania po Rust oraz kosztach takich decyzji. Od optymalizacji istniejącego systemu po stworzenie własnego narzędzia open source: kiedy to uzasadniony krok, a kiedy niepotrzebna komplikacja?
 
 Zapraszamy uczestników spotkania do zadawania pytań i dzielenia się własnymi doświadczeniami.
+
+**{% include speaker.html id="lukasz-olbromski" %}**
+
+Architekt rozwiązań, Fractional CTO i lider inżynierii z 15-letnim doświadczeniem, zdobywanym m.in. w Microsoft, Credit Suisse i EY. Projektuje wieloagentowe architektury chmurowe i wdraża systemy AI w obszarach, w których błędy wiążą się z wysokimi kosztami.
+
+Jako praktykujący coach Gestalt pomaga zespołom pokonywać obawy związane ze zmianą i efektywniej korzystać z AI. W centrum jego podejścia są zrozumienie biznesu, dobra architektura i ludzie — kod pozostaje narzędziem.
+
+**{% include speaker.html id="lukasz-pyrzyk" %}**
+
+.NET Technical Lead w Sonova Group, ośmiokrotny Microsoft MVP i organizator Wroc.NET. Ma ponad dekadę doświadczenia w tworzeniu systemów produkcyjnych, zdobywanego m.in. w Sonova, Ryanair, Credit Suisse i Volvo. Zajmuje się architekturą ASP.NET Core, wydajnością, diagnostyką problemów produkcyjnych i przywództwem technicznym.
+
+W codziennej pracy wykorzystuje AI do przeglądu kodu i analizy zagadnień technicznych, stawiając na weryfikację źródeł i ocenę wyników przez człowieka. Współzałożyciel [Dotnetos](https://dotnetos.org) (2018–2025), współautor kursów Async Expert i .NET Diagnostics Expert. Dzieli się praktycznym doświadczeniem podczas konferencji, meetupów, kursów i na blogu.
