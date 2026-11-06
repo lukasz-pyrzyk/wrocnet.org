@@ -17,6 +17,10 @@ Maintain the Jekyll + Minimal Mistakes website. Commands run from the repository
 - Graphics must follow the [full graphics workflow](../../office/WORKFLOWS.md#identyfikacja-wizualna), including references, generation, composition and visual checks. Do not replace it with a shortcut.
 
 ## Local development
+Before starting `./run.sh` or trusting `http://127.0.0.1:4001`, check whether a background Docker container already publishes port 4001:
+`docker ps --filter publish=4001 --format '{{.ID}} {{.Image}} {{.Names}} {{.Ports}}'`.
+Inspect any match with `docker inspect` and verify its bind mount points to this checkout; a responding Wroc.NET page may be a different image or worktree. Do not stop or reuse an unidentified container. If another instance owns the port, leave it running and use an unused port or build-only validation.
+
 Start a Docker-compatible engine, then run `./run.sh` in a POSIX shell (WSL on Windows).
 Open http://127.0.0.1:4001. Stop with Ctrl+C or `docker stop wrocnet-local` before restarting.
 Use `./run.sh --force_polling` if edits are not detected. Host Ruby/Bundler are unnecessary.
