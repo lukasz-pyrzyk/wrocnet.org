@@ -380,6 +380,7 @@ hero_intro: "Praktyczna wiedza, doświadczenia z projektów i rozmowy z ludźmi 
 }
 .partners-heading {
   margin-bottom: 1.75rem;
+  text-align: center;
 }
 .partners-heading h2 {
   margin: 0 0 0.35rem;
@@ -393,64 +394,70 @@ hero_intro: "Praktyczna wiedza, doświadczenia z projektów i rozmowy z ludźmi 
 }
 .partners-layout {
   display: grid;
-  grid-template-columns: minmax(18rem, 1.2fr) minmax(20rem, 1fr);
-  gap: 2.5rem;
-  align-items: start;
+  gap: 2rem;
 }
 .partner-group-label {
-  display: block;
-  margin-bottom: 0.75rem;
+  margin: 0 0 0.85rem;
   color: #776c7d;
   font-size: 0.72rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.06em;
+  text-align: center;
 }
-.partners-strategic {
-  min-width: 0;
-}
-.partner-strategic-link {
-  display: grid;
-  grid-template-columns: 15rem 1fr;
-  width: min(100%, 30rem);
-  gap: 1.25rem;
-  align-items: center;
-  padding: 0.65rem 0;
-  color: #1e1428;
-  text-decoration: none;
-}
-.partner-strategic-link:hover {
-  color: #641e78;
-  text-decoration: none;
-}
-.partner-strategic-link img {
-  width: 15rem;
-  height: 8.5rem;
-  max-width: 100%;
-  object-fit: contain;
-}
+.partners-strategic,
 .partners-supporting {
   min-width: 0;
 }
-.partner-supporting-link {
+.partner-grid {
   display: grid;
-  grid-template-columns: 10rem 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 10rem), 1fr));
   gap: 1rem;
+}
+.partner-grid--strategic {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 24rem), 1fr));
+}
+.partner-strategic-link,
+.partner-supporting-link {
+  display: flex;
   align-items: center;
-  padding: 0.65rem 0;
-  color: #1e1428;
+  justify-content: center;
+  min-width: 0;
   text-decoration: none;
 }
-.partner-supporting-link + .partner-supporting-link {
-  border-top: 1px solid #eee7f1;
+.partner-strategic-link {
+  justify-self: center;
+  width: fit-content;
+  max-width: 100%;
+  padding: 1.5rem 1rem;
 }
+.partner-strategic-link:hover,
 .partner-supporting-link:hover {
-  color: #641e78;
+  opacity: 0.8;
   text-decoration: none;
+}
+.partners-section a img,
+.partners-section a:not(.btn):hover img {
+  box-shadow: none;
+}
+.partner-strategic-link:focus-visible,
+.partner-supporting-link:focus-visible {
+  outline: 3px solid #641e78;
+  outline-offset: 4px;
+}
+.partner-strategic-link img {
+  width: 22rem;
+  height: auto;
+  max-width: 100%;
+  object-fit: contain;
+}
+.partner-supporting-link {
+  padding: 1.25rem 0.85rem;
 }
 .partner-supporting-logo {
   display: flex;
-  width: 10rem;
+  width: 100%;
+  max-width: 10rem;
   height: 4.5rem;
   align-items: center;
   justify-content: center;
@@ -462,38 +469,18 @@ hero_intro: "Praktyczna wiedza, doświadczenia z projektów i rozmowy z ludźmi 
   max-height: 100%;
   object-fit: contain;
 }
-.partner-name,
-.partner-role { display: block; }
-.partner-name {
-  margin-bottom: 0.2rem;
-  font-size: 0.9rem;
-  font-weight: 700;
-  line-height: 1.3;
-}
-.partner-role {
-  color: #776c7d;
-  font-size: 0.75rem;
-  line-height: 1.4;
-}
 @media (max-width: 720px) {
-  .partners-layout {
-    grid-template-columns: 1fr;
-    gap: 2rem;
+  .partner-grid:not(.partner-grid--strategic) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
-  .partner-strategic-link {
-    grid-template-columns: 13rem 1fr;
-    width: min(100%, 28rem);
-  }
-  .partner-strategic-link img { width: 13rem; }
 }
-@media (max-width: 420px) {
-  .partner-strategic-link { grid-template-columns: 10rem 1fr; }
+@media (max-width: 520px) {
   .partner-strategic-link img {
-    width: 10rem;
-    height: 6rem;
+    width: 13rem;
   }
-  .partner-supporting-link { grid-template-columns: 8rem 1fr; }
-  .partner-supporting-logo { width: 8rem; }
+  .partner-grid { gap: 0.75rem; }
+  .partner-supporting-link { padding: 1rem 0.65rem; }
+  .partner-supporting-logo { height: 3.5rem; }
 }
 </style>
 
@@ -504,32 +491,29 @@ hero_intro: "Praktyczna wiedza, doświadczenia z projektów i rozmowy z ludźmi 
   </header>
 
   <div class="partners-layout">
-    <div class="partners-strategic">
-      <span class="partner-group-label">Partner strategiczny</span>
-      {% for p in site.data.partners.strategic %}
-        <a href="{{ p.url }}" target="_blank" rel="noopener noreferrer" class="partner-strategic-link" title="{{ p.name }}">
-          <img src="{{ p.logo }}" alt="">
-          <span>
-            <span class="partner-name">{{ p.name }}</span>
-            <span class="partner-role">{{ p.role }}</span>
-          </span>
-        </a>
-      {% endfor %}
-    </div>
+    <section class="partners-strategic" aria-labelledby="partners-strategic-title">
+      <h3 id="partners-strategic-title" class="partner-group-label">Partner strategiczny</h3>
+      <div class="partner-grid partner-grid--strategic">
+        {% for p in site.data.partners.strategic %}
+          <a href="{{ p.url }}" target="_blank" rel="noopener noreferrer" class="partner-strategic-link">
+            <img src="{{ p.logo }}" alt="{{ p.name | escape }} — {{ p.role | escape }}">
+          </a>
+        {% endfor %}
+      </div>
+    </section>
 
-    <div class="partners-supporting">
-      <span class="partner-group-label">Patroni</span>
-      {% for p in site.data.partners.supporting %}
-        <a href="{{ p.url }}" target="_blank" rel="noopener noreferrer" class="partner-supporting-link" title="{{ p.name }}">
-          <span class="partner-supporting-logo">
-            <img src="{{ p.logo }}" alt="{{ p.name }}">
-          </span>
-          <span>
-            <span class="partner-name">{{ p.name }}</span>
-            <span class="partner-role">{{ p.role }}</span>
-          </span>
-        </a>
-      {% endfor %}
-    </div>
+    <section class="partners-supporting" aria-labelledby="partners-supporting-title">
+      {% assign media_partners = site.data.partners.supporting | where: "role", "Patron medialny" %}
+      <h3 id="partners-supporting-title" class="partner-group-label">{% if media_partners.size == site.data.partners.supporting.size %}Patroni medialni{% else %}Partnerzy i patroni{% endif %}</h3>
+      <div class="partner-grid">
+        {% for p in site.data.partners.supporting %}
+          <a href="{{ p.url }}" target="_blank" rel="noopener noreferrer" class="partner-supporting-link">
+            <span class="partner-supporting-logo">
+              <img src="{{ p.logo }}" alt="{{ p.name | escape }} — {{ p.role | escape }}">
+            </span>
+          </a>
+        {% endfor %}
+      </div>
+    </section>
   </div>
 </section>

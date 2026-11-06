@@ -8,3 +8,6 @@ Google Analytics 4 jest skonfigurowane w [_config.yml](_config.yml). [CookieCons
 - [Content](https://github.com/lukasz-pyrzyk/wrocnet.org/blob/main/.github/agents/wrocnet-content.agent.md) — komunikacja, newslettery i materiały społeczności.
 - [Archiwum komunikacji](https://github.com/lukasz-pyrzyk/wrocnet.org/blob/main/office/content/README.md) — zapis treści i przykłady.
 - [Zasady pracy w repozytorium](https://github.com/lukasz-pyrzyk/wrocnet.org/blob/main/AGENTS.md).
+
+Sekcja partnerów na stronie głównej ma dwie poziome sekcje: wyróżnionych partnerów strategicznych oraz responsywną siatkę partnerów i patronów. Kolejne wpisy w [_data/partners.yml](_data/partners.yml) automatycznie tworzą nowe rzędy, bez zmian w szablonie. Gdy wszystkie wpisy `supporting` mają rolę „Patron medialny”, druga sekcja nosi nazwę „Patroni medialni”; przy innych rolach używa neutralnego nagłówka „Partnerzy i patroni”.
+Nagłówki i logotypy są wyśrodkowane. Logotypy nie mają ramek ani widocznych podpisów; nazwa i rola każdego partnera znajdują się w tekście alternatywnym (`alt`), który nadaje też dostępną nazwę linkowi.
