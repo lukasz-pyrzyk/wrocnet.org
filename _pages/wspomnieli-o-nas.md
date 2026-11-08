@@ -8,6 +8,7 @@ Publikacje, relacje i historie zza kulis Wroc.NET.
 
 ## 2026
 
+- [Patronat PTI: Wroc.NET po rekordowym październiku. 17 listopada o wydajności i Rust](https://wroclaw.pti.org.pl/patronat-pti-wroc-net-po-rekordowym-pazdzierniku-17-listopada-o-wydajnosci-i-rust/) - Polskie Towarzystwo Informatyczne, Oddział Dolnośląski, 08.11.2026
 - [171 zapisów i 34 oczekujących. Wroc.NET zaprasza na spotkanie o wydajności](https://programistamag.pl/171-zapisow-i-34-oczekujacych-wroc-net-zaprasza-na-spotkanie-o-wydajnosci/) - Programista, 06.11.2026
 - [Wroc.NET z rekordem zapisów i frekwencji. Następne spotkanie programistów już 17 listopada](https://wroclaw.dlastudenta.pl/wiadomosci/artykul/wroc-net-z-rekordem-zapisow-i-frekwencji-nastepne-spotkanie-programistow-juz-17-listopada,161448.html) - dlaStudenta.pl, 05.11.2026
 - [172. spotkanie Wroc.NET](https://wroclaw.dlastudenta.pl/studia/wydarzenie/kursy-i-szkolenia,172-spotkanie-wroc-net,206721.html) - dlaStudenta.pl · data publikacji niepodana
