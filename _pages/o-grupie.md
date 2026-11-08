@@ -8,6 +8,9 @@ excerpt: "Wrocławska Grupa .NET to inicjatywa pasjonatów technologii Microsoft
 
 **Wroc.NET (Wrocławska Grupa .NET, ang. Wrocław .NET User Group) to społeczność programistów i pasjonatów technologii .NET działająca we Wrocławiu i okolicach.**
 
+<link rel="stylesheet" href="{{ '/assets/css/community-photos.css' | relative_url }}">
+{% include about-community-photos.html %}
+
 ## Wrocławska Grupa .NET
 
 Wrocławska Grupa .NET jest inicjatywą pasjonatów technologii .NET z Wrocławia i okolic. Celem grupy jest pogłębienie szeroko pojętego rozwoju własnej osoby poprzez wymianę doświadczeń, zdobywanie nowej wiedzy jak i umocnienie tej już istniejącej związanej z technologiami firmy Microsoft.

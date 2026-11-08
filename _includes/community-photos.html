@@ -1,0 +1,19 @@
+<section class="community-photos community-photos--mosaic" aria-labelledby="community-photos-title">
+  <div class="community-photos__intro">
+    <p class="section-eyebrow">Wiedza. Ludzie. Rozmowy.</p>
+    <h2 id="community-photos-title">Dobra wiedza.<br>Jeszcze lepsze towarzystwo.</h2>
+    <p class="community-photos__copy">Pełna sala, pytania do prelegentów i rozmowy o tym, jak naprawdę budujemy oprogramowanie. Tak spotykamy się we Wrocławiu.</p>
+    {% if record_signups > 0 %}
+      <p class="community-photos__record"><strong>{{ record_signups }}</strong> chętnych na <a href="{{ record_post.url | relative_url }}">rekordowe spotkanie</a> — pobiliśmy rekord zapisów utrzymujący się przez ponad 9 lat.</p>
+    {% endif %}
+    <a class="community-photos__link" href="{{ '/o-grupie/' | relative_url }}">Poznaj naszą społeczność <span aria-hidden="true">→</span></a>
+  </div>
+  <figure class="community-photos__figure">
+    <div class="community-photos__grid">
+      <img class="community-photos__main" src="{{ '/assets/images/community/sala.webp' | relative_url }}" width="1800" height="1200" loading="lazy" alt="Pełna sala uczestników 171. spotkania Wroc.NET, widok w kierunku sceny.">
+      <img src="{{ '/assets/images/community/panel.webp' | relative_url }}" width="1200" height="800" loading="lazy" alt="Prelegenci podczas panelu dyskusyjnego Wroc.NET.">
+      <img src="{{ '/assets/images/community/zespol.webp' | relative_url }}" width="1200" height="800" loading="lazy" alt="Wspólne zdjęcie zespołu i prelegentów na scenie 171. spotkania Wroc.NET.">
+    </div>
+    <figcaption>171. spotkanie Wroc.NET · 20 października 2026 · Pub Wędrówki</figcaption>
+  </figure>
+</section>

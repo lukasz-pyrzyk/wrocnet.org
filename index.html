@@ -54,6 +54,9 @@ hero_intro: "Praktyczna wiedza, doświadczenia z projektów i rozmowy z ludźmi 
   {% endif %}
 {% endfor %}
 
+<link rel="stylesheet" href="{{ '/assets/css/community-photos.css' | relative_url }}">
+{% include community-photos.html %}
+
 <section class="home-overview" aria-labelledby="community-heading">
   <div class="community-summary">
     <div class="community-summary__intro">
@@ -83,9 +86,6 @@ hero_intro: "Praktyczna wiedza, doświadczenia z projektów i rozmowy z ludźmi 
           <dd>{{ total_sessions }}</dd>
       </div>
     </dl>
-    {% if record_signups > 0 %}
-      <p class="community-record">Na <a href="{{ record_post.url | relative_url }}">nasze rekordowe spotkanie</a> chciało przyjść aż <strong>{{ record_signups }} osób</strong>, bijąc rekord zapisów utrzymujący się przez ponad 9 lat.</p>
-    {% endif %}
   </div>
 
   <aside class="season-panel" aria-labelledby="season-heading">
@@ -161,13 +161,6 @@ hero_intro: "Praktyczna wiedza, doświadczenia z projektów i rozmowy z ludźmi 
   margin: 0.5rem 0 0;
   color: #5f5568;
   font-size: 0.76rem;
-  line-height: 1.5;
-}
-.community-record {
-  grid-column: 1 / -1;
-  margin: 0;
-  color: #5f5568;
-  font-size: 0.8rem;
   line-height: 1.5;
 }
 .community-stats {
