@@ -58,7 +58,8 @@
   font-size: 0.75rem;
   line-height: 1.6;
 }
-.community-photos__link {
+.community-photos__link,
+.community-photos__link:visited {
   display: inline-block;
   flex-shrink: 0;
   padding: 0.65rem 1rem;
