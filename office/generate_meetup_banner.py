@@ -61,8 +61,8 @@ def render(post_path, background_path, output_path):
     venue = load_yaml(ROOT / "_data/location.yml")["venue"]
     partners = load_yaml(ROOT / "_data/partners.yml")
     partner_list = partners["strategic"] + partners["supporting"]
-    if len(partners["strategic"]) != 1 or len(partners["supporting"]) != 2:
-        raise ValueError("This layout requires one strategic and two supporting partner logos")
+    if len(partners["strategic"]) != 1 or len(partners["supporting"]) != 5:
+        raise ValueError("This layout requires one strategic and five supporting partner logos")
     date = post["date"]
     if not isinstance(date, datetime.date):
         date = datetime.date.fromisoformat(date)
@@ -159,18 +159,31 @@ def render(post_path, background_path, output_path):
             width = draw.textlength(value, font=font(20, True)) / SCALE
             text(value, x + 75 - width / 2, 598 + line_index * 25, 20, bold=True, max_width=160)
 
-    partner_positions = ((341, 538, 300, 64), (263, 610, 100, 36), (407, 610, 125, 36))
+    partner_positions = (
+        (341, 506, 300, 58),
+        (180, 600, 96, 96),
+        (320, 571, 137, 38),
+        (481, 571, 137, 38),
+        (320, 629, 137, 38),
+        (481, 629, 137, 38),
+    )
     for partner, (center_x, center_y, width, height) in zip(partner_list, partner_positions):
         logo = local_image(partner["logo"])
-        if partner["name"] == "devstyle":
+        if partner in partners["strategic"]:
             white_logo = Image.new("RGBA", logo.size, WHITE)
             white_logo.putalpha(logo.getchannel("A"))
             logo = white_logo
-        if partner["name"] == "hued.me":
-            # This PNG has opaque, near-black padding rather than transparency.
-            background = Image.new("RGB", logo.size, logo.getpixel((0, 0))[:3])
-            difference = ImageChops.difference(logo.convert("RGB"), background).convert("L")
-            logo.putalpha(difference.point(lambda value: 255 if value > 3 else 0))
+        else:
+            draw.rounded_rectangle(
+                (
+                    (center_x - width / 2 - 6) * SCALE,
+                    (center_y - height / 2 - 6) * SCALE,
+                    (center_x + width / 2 + 6) * SCALE,
+                    (center_y + height / 2 + 6) * SCALE,
+                ),
+                radius=4 * SCALE,
+                fill=WHITE,
+            )
         bounds = logo.getbbox()
         if bounds is None:
             raise ValueError(f'Empty partner logo: {partner["name"]}')
