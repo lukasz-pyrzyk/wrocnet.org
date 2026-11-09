@@ -84,6 +84,40 @@ class SlidesTest(unittest.TestCase):
                 self.assertLessEqual(x + w, width + 1, index)
                 self.assertLessEqual(y + h, height + 1, index)
 
+    def test_layout_ids_and_view_properties(self):
+        master = ET.fromstring(self.archive.read("ppt/slideMasters/slideMaster1.xml"))
+        layouts = master.findall("p:sldLayoutIdLst/p:sldLayoutId", NS)
+        self.assertTrue(layouts)
+        for layout in layouts:
+            self.assertGreaterEqual(int(layout.get("id")), 2147483648)
+            self.assertLessEqual(int(layout.get("id")), 4294967295)
+        view = ET.fromstring(self.archive.read("ppt/viewProps.xml"))
+        for optional in ("normalViewPr", "slideViewPr", "notesTextViewPr"):
+            self.assertIsNone(view.find(f"p:{optional}", NS))
+        self.assertIsNotNone(view.find("p:gridSpacing", NS))
+
+    def test_cover_labels_do_not_overlap_portraits(self):
+        cover = self.slides[0]
+
+        def bounds(shape):
+            transform = shape.find("p:spPr/a:xfrm", NS)
+            offset, extent = transform.find("a:off", NS), transform.find("a:ext", NS)
+            x, y = int(offset.get("x")), int(offset.get("y"))
+            return x, y, x + int(extent.get("cx")), y + int(extent.get("cy"))
+
+        for picture in cover.findall(".//p:pic", NS):
+            if picture.find("p:spPr/a:prstGeom", NS).get("prst") != "ellipse":
+                continue
+            left, top, right, bottom = bounds(picture)
+            for shape in cover.findall(".//p:sp", NS):
+                if shape.find("p:txBody", NS) is None:
+                    continue
+                x1, y1, x2, y2 = bounds(shape)
+                self.assertFalse(
+                    max(left, x1) < min(right, x2) and max(top, y1) < min(bottom, y2),
+                    slide_text(shape),
+                )
+
     def test_slide_order_and_numbering(self):
         markers = [
             "172. SPOTKANIE WROC.NET",
@@ -192,7 +226,9 @@ class SlidesTest(unittest.TestCase):
             "Zawadzki", "Dłubak", "Pulka", "Wojnarowski",
         ]:
             self.assertIn(surname, organizers)
-        self.assertIn("Pierwsze 80 napojów", slide_text(self.slides[5]))
+        for slide in self.slides:
+            self.assertNotIn("80 napojów", slide_text(slide))
+            self.assertNotIn("na koszt sponsora", slide_text(slide))
         for value in ["18:15", "19:15", "20:15"]:
             self.assertIn(value, slide_text(self.slides[12]))
 
