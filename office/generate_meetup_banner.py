@@ -5,7 +5,14 @@ logos). Only the right column changes with the talk layout, and the script
 detects which layout a post uses:
 
 - ``solo_panel`` - talks[0] has one speaker, talks[1] has three (the 172 shape).
-- ``duo_solo``   - talks[0] has two speakers, talks[1] has one (the 173 shape).
+- ``two_talks`` - one solo talk and one two-speaker talk, in either order (173).
+
+The two_talks layout preserves the post's order, with equal title sizes and
+equal-height regions for both talks. Sessions sit directly on the shared
+background, without rectangular frames or solid panels, as in banner 172.
+All text must remain at least 10 px at a 358 px preview width. Missing portraits
+use a text-only speaker block, never a placeholder silhouette. The legacy
+solo_panel composition is preserved.
 
 Anything else raises rather than guessing. Portraits are cropped per speaker
 where a manual crop is registered in PORTRAIT_CROPS; square headshots need none
@@ -29,6 +36,8 @@ SIZE = (1200, 675)
 WHITE = "#FFFFFF"
 MUTED = "#E0CBED"
 ACCENT = "#B575DD"
+PREVIEW_WIDTH = 358
+MIN_PREVIEW_FONT = 10
 
 # Arial where it exists (macOS, as the 172 banner was made); Liberation Sans
 # otherwise. The two are metric-compatible, so the composition is unchanged.
@@ -98,12 +107,21 @@ def detect_layout(talks):
     second = len(talks[1]["speaker_ids"])
     if first == 1 and second == 3:
         return "solo_panel"
-    if first == 2 and second == 1:
-        return "duo_solo"
+    if (first, second) in ((1, 2), (2, 1)):
+        return "two_talks"
     raise ValueError(
         "Unsupported talk layout: expected one solo talk plus a three-person "
-        f"panel, or a two-speaker talk plus a solo talk (got {first} and {second})"
+        f"panel, or a solo and a two-speaker talk in either order (got {first} and {second})"
     )
+
+
+def validate_mobile_text(size):
+    preview_size = size * PREVIEW_WIDTH / SIZE[0]
+    if preview_size < MIN_PREVIEW_FONT:
+        raise ValueError(
+            f"Text would render at {preview_size:.1f} px in a {PREVIEW_WIDTH} px "
+            f"preview; minimum is {MIN_PREVIEW_FONT} px. Change the layout, not the font size."
+        )
 
 
 def render(post_path, background_path, output_path):
@@ -143,6 +161,8 @@ def render(post_path, background_path, output_path):
         return ImageFont.truetype(str(resolve_font(bold)), size * SCALE)
 
     def text(value, x, y, size, fill=WHITE, bold=False, max_width=None):
+        if layout == "two_talks":
+            validate_mobile_text(size)
         face = font(size, bold)
         bounds = draw.textbbox((0, 0), value, font=face, anchor="lt")
         width = bounds[2] - bounds[0]
@@ -176,8 +196,8 @@ def render(post_path, background_path, output_path):
 
     def portrait(speaker_id, x, y, diameter):
         person = speakers[speaker_id]
-        if not person.get("photo"):
-            raise ValueError(f"Missing photo for {speaker_id}")
+        if not person.get("photo") or Path(person["photo"]).stem == "placeholder":
+            raise ValueError(f"No real portrait for {speaker_id}; use a text-only speaker block")
         image = local_image(person["photo"])
         crop = PORTRAIT_CROPS.get(speaker_id)
         if crop is not None:
@@ -192,21 +212,20 @@ def render(post_path, background_path, output_path):
         )
         canvas.alpha_composite(image, (x * SCALE, y * SCALE))
 
-    def caption_under(speaker_id, centre_x, y, size, slot):
-        """Centre a speaker's full name under a portrait.
-
-        The caption may be wider than the portrait, so it is allowed to spill
-        sideways, but it must not reach into the neighbouring slot: that is what
-        made "Hleb Sukrystsik" and "Lukasz Halas" overlap before.
-        """
+    def speaker_block(speaker_id, x, y, width, split_name=False):
         person = speakers[speaker_id]
-        value = f'{person["imie"]} {person["nazwisko"]}'
-        width = draw.textlength(value, font=font(size, True)) / SCALE
-        if width > slot:
-            raise ValueError(
-                f"Caption too wide for its {slot} px slot: {value} ({width:.0f} px)"
-            )
-        text(value, centre_x - width / 2, y, size, bold=True, max_width=slot)
+        photo = person.get("photo")
+        if photo and Path(photo).stem != "placeholder":
+            portrait(speaker_id, x, y, 76)
+            x += 92
+            width -= 92
+        else:
+            print(f"No portrait for {speaker_id}; rendering a text-only speaker block")
+        if split_name:
+            text(person["imie"], x, y + 4, 34, MUTED, max_width=width)
+            text(person["nazwisko"], x, y + 45, 34, MUTED, max_width=width)
+        else:
+            paragraph(f'{person["imie"]} {person["nazwisko"]}', x, y + 18, 34, width, 2, fill=MUTED)
 
     # Left column: issue number, date, venue.
     paste(banner_logo(), 42, 62, 185, 185)
@@ -214,9 +233,15 @@ def render(post_path, background_path, output_path):
     text(number, 144, 269, 57, bold=True, max_width=112)
     text("spotkanie", 282, 251, 42, max_width=290)
     text("Wroc.NET", 282, 300, 42, max_width=290)
-    text(f"{date:%d.%m.%Y} | {time:%H:%M}", 126, 372, 27, max_width=435)
+    text(f"{date:%d.%m.%Y} | {time:%H:%M}", 126, 372, 34 if layout == "two_talks" else 27, max_width=435)
     draw.line((126 * SCALE, 420 * SCALE, 556 * SCALE, 420 * SCALE), fill="#7542AA", width=2 * SCALE)
-    text(f'{venue["name"]}, Wrocław', 126, 442, 25, max_width=435)
+    text(
+        f'{venue["name"]}, Wrocław',
+        126,
+        432 if layout == "two_talks" else 442,
+        34 if layout == "two_talks" else 25,
+        max_width=435,
+    )
 
     if layout == "solo_panel":
         solo_id = talks[0]["speaker_ids"][0]
@@ -235,21 +260,14 @@ def render(post_path, background_path, output_path):
                 width = draw.textlength(value, font=font(20, True)) / SCALE
                 text(value, x + 75 - width / 2, 598 + line_index * 25, 20, bold=True, max_width=160)
     else:
-        # duo_solo: two speakers headline the right column, one solo talk below.
-        # The slot must clear the widest name ("Hleb Sukrystsik", ~150 px at
-        # size 20) or neighbouring captions collide.
-        duo_slot = 205
-        for index, speaker_id in enumerate(talks[0]["speaker_ids"]):
-            slot_x = 620 + index * duo_slot
-            portrait(speaker_id, slot_x, 80, 132)
-            caption_under(speaker_id, slot_x + 66, 224, 20, duo_slot)
-        paragraph(talks[0]["title"], 622, 262, 27, 540, 3, bold=True)
-
-        solo_id = talks[1]["speaker_ids"][0]
-        solo = speakers[solo_id]
-        portrait(solo_id, 622, 420, 110)
-        text(f'{solo["imie"]} {solo["nazwisko"]}', 748, 432, 24, bold=True, max_width=400)
-        paragraph(talks[1]["title"], 748, 468, 22, 415, 3)
+        for talk, top in zip(talks, (56, 346)):
+            paragraph(talk["title"], 622, top + 24, 34, 530, 2, bold=True)
+            ids = talk["speaker_ids"]
+            if len(ids) == 2:
+                for index, speaker_id in enumerate(ids):
+                    speaker_block(speaker_id, 622 + index * 274, top + 144, 256, split_name=True)
+            else:
+                speaker_block(ids[0], 622, top + 144, 530)
 
     for partner, (center_x, center_y, width, height) in zip(partner_list, PARTNER_POSITIONS):
         logo = local_image(partner["logo"])

@@ -46,24 +46,29 @@ To jedyne miejsce na zasady i warsztat tworzenia banerów. Pozostałe dokumenty 
 ### Banery wydarzeń: generowanie i publikacja
 
 - Wzorzec: [baner 172](content/images/2026-11-17-172-meetup.jpg), [zapisane tło AI](content/images/2026-11-17-172-meetup-background.png) i [generator](generate_meetup_banner.py). Tło powstało w Azure Foundry przez MAI-Image-2.5, bez przesyłania portretów i logotypów.
-- Generator składa jedną prelekcję z jednym prelegentem oraz panel trzech osób. Wymaga jednego partnera strategicznego i pięciu wspierających; inny skład wymaga dostosowania układu, nie pomijania osób ani logotypów. Kadry portretów są dopasowane do osób ze spotkania 172.
+- Jeden wspólny generator rozpoznaje układ z `talks[].speaker_ids`: `solo_panel` to prelekcja jednej osoby i panel trzech osób (172), a `two_talks` to prelekcja jednej osoby oraz prelekcja dwóch osób w dowolnej kolejności (173). Generator zachowuje kolejność `talks` z posta. Po jej zmianie przestaw także opisy i bio w treści posta, tematy i nazwiska w tytule oraz alt baneru, a następnie odśwież obie kopie grafiki. Inne układy kończą się błędem. Rozszerzaj ten generator, nie twórz kopii dla kolejnego numeru spotkania. Wymagany jest jeden partner strategiczny i pięciu wspierających; inny skład wymaga dostosowania układu, nie pomijania osób ani logotypów. Kadry portretów są przypisane do identyfikatorów osób, nie numerów spotkań.
+- W `two_talks` obie prelekcje mają równorzędne, jednakowej wysokości bloki oraz tytuły tej samej wielkości i grubości. Sesje umieszczaj bezpośrednio na wspólnym tle, bez prostokątnych ramek i jednolitych paneli, jak na banerze 172; rozdzielaj je odstępem. Nie dotyczy to ramki numeru spotkania ani białych pól logotypów partnerów. Nie wyróżniaj pierwszej jako głównej bez potwierdzonego powodu. Generator wymaga minimum 10 px dla każdego napisu przy podglądzie szerokości 358 px (baner na ekranie 390 px), czyli obecnie fontu co najmniej 34 px w pliku 1200 px. Długi tytuł lub nazwisko ma zakończyć generowanie błędem, zamiast wymuszać pomniejszenie tekstu. Logo partnera to obraz, nie tekst objęty tą kontrolą. Historyczny układ 172 pozostaje bez zmian; jego poprawny eksport nie dowodzi czytelności nowych układów.
+- Nie pokazuj szarej sylwetki jako portretu na finalnym banerze. W `two_talks` brak `photo` lub wskazanie `placeholder` daje jawny komunikat i blok tekstowy z nazwiskiem, bez wymyślania twarzy. Błędna ścieżka do rzeczywistego zdjęcia nadal przerywa generowanie; nie jest traktowana jak potwierdzony brak portretu.
 - Partner strategiczny ma wyraźnie większe logo (do 300 px szerokości), wyśrodkowane w lewej części baneru. Pod nim logotypy patronów są na białych polach: pionowy znak Wrocławskiego Portalu po lewej, a pozostałe cztery w siatce 2×2. Zachowuj oryginalne kolory patronów i oznaczenie Oddziału Dolnośląskiego PTI. Przed kolejnym wydarzeniem potwierdź udział partnerów — generator czyta bieżącą bazę, nie osobną listę dla wydarzenia.
 - Źródłowe logo Wroc.NET ma jasne pozostałości tła na samym obrysie. Funkcja `banner_logo` usuwa je lekko zwężoną, wygładzoną maską kołową. Nie zmieniaj rysunku, napisów ani współdzielonego pliku logo. Zawsze obejrzyj krawędź na ciemnym tle.
-- Generator wymaga Python 3, Pillow, PyYAML oraz Arial / Arial Bold w systemowej lokalizacji macOS. Składa obraz w 2x rozdzielczości, a wynik zapisuje jako JPG RGB 1200×675, jakość 95, bez EXIF. Sprawdź rzeczywiste wymiary tła zwróconego przez API; wynikowy baner ma zachować 16:9 bez rozciągania.
+- Generator wymaga Python 3, Pillow, PyYAML oraz Arial / Arial Bold albo Liberation Sans Regular / Bold. Ścieżki wyszukiwania są w `FONT_CANDIDATES`; brak fontu przerywa generowanie. Składa obraz w 2x rozdzielczości, a wynik zapisuje jako JPG RGB 1200×675, jakość 95, bez EXIF. Sprawdź rzeczywiste wymiary tła zwróconego przez API; wynikowy baner ma zachować 16:9 bez rozciągania.
 
 Uruchom z katalogu głównego repozytorium:
 
 ```bash
 python3 office/generate_meetup_banner.py \
-  _posts/2026-11-17-172-spotkanie-wroclawskiej-grupy-net.md \
-  --background office/content/images/2026-11-17-172-meetup-background.png \
-  --output office/content/images/2026-11-17-172-meetup.jpg
+  _posts/2026-12-15-173-spotkanie-wroclawskiej-grupy-net.md \
+  --background office/content/images/2026-12-15-173-meetup-background.png \
+  --output office/content/images/2026-12-15-173-meetup.jpg
+cp office/content/images/2026-12-15-173-meetup.jpg assets/images/2026-12-15-173-meetup.jpg
+
+python3 -m unittest discover -s office -p 'test_generate_meetup_banner.py'
 ```
 
 - Ponowne składanie używa zapisanego tła i nie wymaga wywołania AI. Po poprawce odśwież zarówno plik kampanii w `office/content/images/`, jak i publiczną kopię w `assets/images/` (dla 172: `assets/images/2026-11-17-172-meetup.jpg`). Pliki muszą być identyczne.
 - W poście ustaw `header.image` i `header.teaser` na lokalną publiczną kopię oraz dodaj `header.image_description` jako alt. Nie zaczynaj opisu od `172. ` — motyw przepuszcza go przez Markdown, który potraktuje to jako listę; użyj np. „Baner 172. spotkania…”.
 - Nie używaj `header.overlay_image` dla gotowego baneru z napisami i twarzami: tło jest kadrowane i przykrywane tekstem strony. Obecny styl wyświetla banery kategorii `spotkania` centralnie, maksymalnie 800 px szerokości, proporcjonalnie na telefonie, bez przycinania. Nie zmienia nagłówka strony głównej. Archiwum `/spotkania/` jest listą tekstową; miniatury są wykorzystywane w kartach siatki i podglądach udostępniania.
-- Sprawdź finalny plik, zgodność programu i osób z postem, czytelność, obrysy logo, marginesy i hierarchię partnerów. Po podłączeniu do strony uruchom [walidację Website Admin](../.github/agents/wrocnet-website-admin.agent.md#ci-validation-checks-local) i obejrzyj widok desktopowy oraz mobilny. Przygotowanie obrazu nie oznacza publikacji na Meetup.
+- Sprawdź finalny plik, zgodność programu i osób z postem, czytelność, obrysy logo, marginesy i hierarchię partnerów. Obejrzyj także miniaturę szerokości 358 px: oba tematy mają być czytelne i równorzędne, bez kolizji nazwisk i placeholderów. Sam brak błędu generatora nie zastępuje oceny wizualnej. Po podłączeniu do strony uruchom [walidację Website Admin](../.github/agents/wrocnet-website-admin.agent.md#ci-validation-checks-local) i obejrzyj widok desktopowy oraz mobilny. Przygotowanie obrazu nie oznacza publikacji na Meetup.
 
 ### Sprawdzony warsztat: baner z organizatorami
 
