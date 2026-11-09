@@ -1,0 +1,619 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+require "fileutils"
+require "digest"
+require "time"
+require "zlib"
+require "date"
+require "yaml"
+
+ROOT = File.expand_path("../..", __dir__)
+OUTPUT = File.expand_path(ARGV.fetch(0, File.join(__dir__, "2026-11-17-172-spotkanie.pptx")))
+IMAGE_SIZES = {}
+
+SLIDE_W = 40.0 / 3
+SLIDE_H = 7.5
+EMU = 914_400
+
+COLORS = {
+  background: "160E22",
+  ink: "FFFFFF",
+  panel: "291A35",
+  feature: "4A1B57",
+  violet: "E9A4F4",
+  purple: "D9B7E8",
+  pink: "D51A96",
+  signal: "F13BB8",
+  white: "FFFFFF",
+  muted: "DACCE0",
+  line: "49314F",
+  green: "25D366"
+}.freeze
+
+def esc(value)
+  value.to_s.gsub("&", "&amp;").gsub("<", "&lt;").gsub(">", "&gt;").gsub('"', "&quot;")
+end
+
+def emu(value)
+  (value * EMU).round
+end
+
+def rect(id, x, y, w, h, fill:, radius: false, line: nil, transparency: 0, shadow: false)
+  geometry = radius ? "roundRect" : "rect"
+  alpha = transparency.positive? ? %(<a:alpha val="#{100_000 - transparency * 1_000}"/>) : ""
+  outline = line ? %(<a:ln w="12700"><a:solidFill><a:srgbClr val="#{line}"/></a:solidFill></a:ln>) : %(<a:ln><a:noFill/></a:ln>)
+  effect = shadow ? %(<a:effectLst><a:outerShdw blurRad="90000" dist="38000" dir="5400000" rotWithShape="0"><a:srgbClr val="000000"><a:alpha val="35000"/></a:srgbClr></a:outerShdw></a:effectLst>) : ""
+  <<~XML
+    <p:sp>
+      <p:nvSpPr><p:cNvPr id="#{id}" name="Shape #{id}"/><p:cNvSpPr/><p:nvPr/></p:nvSpPr>
+      <p:spPr>
+        <a:xfrm><a:off x="#{emu(x)}" y="#{emu(y)}"/><a:ext cx="#{emu(w)}" cy="#{emu(h)}"/></a:xfrm>
+        <a:prstGeom prst="#{geometry}"><a:avLst/></a:prstGeom>
+        <a:solidFill><a:srgbClr val="#{fill}">#{alpha}</a:srgbClr></a:solidFill>#{outline}#{effect}
+      </p:spPr>
+    </p:sp>
+  XML
+end
+
+# stops: array of [position 0-100, hex, alpha 0-100 (optional)]
+def gradient_rect(id, x, y, w, h, stops:, angle: 5400000)
+  gs_list = stops.map do |pos, hex, alpha|
+    alpha_xml = alpha ? %(<a:alpha val="#{(alpha * 1000).round}"/>) : ""
+    %(<a:gs pos="#{(pos * 1000).round}"><a:srgbClr val="#{hex}">#{alpha_xml}</a:srgbClr></a:gs>)
+  end.join
+  <<~XML
+    <p:sp>
+      <p:nvSpPr><p:cNvPr id="#{id}" name="Gradient #{id}"/><p:cNvSpPr/><p:nvPr/></p:nvSpPr>
+      <p:spPr>
+        <a:xfrm><a:off x="#{emu(x)}" y="#{emu(y)}"/><a:ext cx="#{emu(w)}" cy="#{emu(h)}"/></a:xfrm>
+        <a:prstGeom prst="rect"><a:avLst/></a:prstGeom>
+        <a:gradFill rotWithShape="1"><a:gsLst>#{gs_list}</a:gsLst><a:lin ang="#{angle}" scaled="1"/></a:gradFill>
+        <a:ln><a:noFill/></a:ln>
+      </p:spPr>
+    </p:sp>
+  XML
+end
+
+def ellipse(id, x, y, w, h, fill:, line: nil)
+  outline = line ? %(<a:ln w="19050"><a:solidFill><a:srgbClr val="#{line}"/></a:solidFill></a:ln>) : %(<a:ln><a:noFill/></a:ln>)
+  <<~XML
+    <p:sp>
+      <p:nvSpPr><p:cNvPr id="#{id}" name="Circle #{id}"/><p:cNvSpPr/><p:nvPr/></p:nvSpPr>
+      <p:spPr>
+        <a:xfrm><a:off x="#{emu(x)}" y="#{emu(y)}"/><a:ext cx="#{emu(w)}" cy="#{emu(h)}"/></a:xfrm>
+        <a:prstGeom prst="ellipse"><a:avLst/></a:prstGeom>
+        <a:solidFill><a:srgbClr val="#{fill}"/></a:solidFill>#{outline}
+      </p:spPr>
+    </p:sp>
+  XML
+end
+
+def text(id, value, x, y, w, h, size: 24, color: COLORS[:ink], bold: false, align: "l", valign: "ctr", font: "Arial", margin: 0)
+  alignment = { "l" => "l", "c" => "ctr", "r" => "r" }.fetch(align)
+  paragraphs = value.to_s.split("\n", -1).map do |line|
+    %(<a:p><a:pPr algn="#{alignment}"/><a:r><a:rPr lang="pl-PL" sz="#{size * 100}" b="#{bold ? 1 : 0}"><a:solidFill><a:srgbClr val="#{color}"/></a:solidFill><a:latin typeface="#{font}"/></a:rPr><a:t>#{esc(line)}</a:t></a:r><a:endParaRPr lang="pl-PL" sz="#{size * 100}"/></a:p>)
+  end.join
+  <<~XML
+    <p:sp>
+      <p:nvSpPr><p:cNvPr id="#{id}" name="Text #{id}"/><p:cNvSpPr txBox="1"/><p:nvPr/></p:nvSpPr>
+      <p:spPr><a:xfrm><a:off x="#{emu(x)}" y="#{emu(y)}"/><a:ext cx="#{emu(w)}" cy="#{emu(h)}"/></a:xfrm><a:prstGeom prst="rect"><a:avLst/></a:prstGeom><a:noFill/><a:ln><a:noFill/></a:ln></p:spPr>
+      <p:txBody><a:bodyPr anchor="#{valign}" lIns="#{emu(margin)}" rIns="#{emu(margin)}" tIns="#{emu(margin)}" bIns="#{emu(margin)}"/><a:lstStyle/>#{paragraphs}</p:txBody>
+    </p:sp>
+  XML
+end
+
+def line(id, x1, y1, x2, y2, color: COLORS[:line], width: 1.5)
+  <<~XML
+    <p:sp>
+      <p:nvSpPr><p:cNvPr id="#{id}" name="Line #{id}"/><p:cNvSpPr/><p:nvPr/></p:nvSpPr>
+      <p:spPr><a:xfrm><a:off x="#{emu(x1)}" y="#{emu(y1)}"/><a:ext cx="#{emu(x2 - x1)}" cy="#{emu(y2 - y1)}"/></a:xfrm><a:prstGeom prst="line"><a:avLst/></a:prstGeom><a:ln w="#{(width * 12_700).round}"><a:solidFill><a:srgbClr val="#{color}"/></a:solidFill></a:ln></p:spPr>
+    </p:sp>
+  XML
+end
+
+def picture(id, relationship_id, x, y, w, h, name = "Image", round: false, fit: :contain, crop: nil)
+  source_w, source_h = IMAGE_SIZES.fetch(relationship_id)
+  left, top, right, bottom = crop || [0, 0, source_w, source_h]
+  full_w, full_h = source_w, source_h
+  source_w, source_h = right - left, bottom - top
+  scale = fit == :cover || round ? [w / source_w, h / source_h].max : [w / source_w, h / source_h].min
+  if fit == :cover || round
+    horizontal = (source_w - w / scale) / 2
+    vertical = (source_h - h / scale) / 2
+    left += horizontal
+    right -= horizontal
+    top += vertical
+    bottom -= vertical
+  else
+    fitted_w = source_w * scale
+    fitted_h = source_h * scale
+    x += (w - fitted_w) / 2
+    y += (h - fitted_h) / 2
+    w, h = fitted_w, fitted_h
+  end
+  crop_xml = %(<a:srcRect l="#{(left * 100_000.0 / full_w).round}" r="#{((full_w - right) * 100_000.0 / full_w).round}" t="#{(top * 100_000.0 / full_h).round}" b="#{((full_h - bottom) * 100_000.0 / full_h).round}"/>)
+  <<~XML
+    <p:pic>
+      <p:nvPicPr><p:cNvPr id="#{id}" name="#{esc(name)}"/><p:cNvPicPr><a:picLocks noChangeAspect="1"/></p:cNvPicPr><p:nvPr/></p:nvPicPr>
+      <p:blipFill><a:blip r:embed="#{relationship_id}"/>#{crop_xml}<a:stretch><a:fillRect/></a:stretch></p:blipFill>
+      <p:spPr><a:xfrm><a:off x="#{emu(x)}" y="#{emu(y)}"/><a:ext cx="#{emu(w)}" cy="#{emu(h)}"/></a:xfrm><a:prstGeom prst="#{round ? 'ellipse' : 'rect'}"><a:avLst/></a:prstGeom><a:ln><a:noFill/></a:ln></p:spPr>
+    </p:pic>
+  XML
+end
+
+def base(kicker, title)
+  shapes = []
+  shapes << rect(2, 0, 0, SLIDE_W, SLIDE_H, fill: COLORS[:background])
+  shapes << gradient_rect(3, 0, 0, SLIDE_W, 0.05, stops: [[0, COLORS[:signal], 100], [100, COLORS[:feature], 100]], angle: 0)
+  shapes << text(5, kicker.upcase, 0.78, 0.40, 10.0, 0.30, size: 11, color: COLORS[:violet], bold: true)
+  shapes << text(6, title, 0.78, 0.88, 10.8, 0.76, size: 32, bold: true)
+  shapes << text(7, "SLIDE_NUMBER", 11.52, 0.43, 0.95, 0.62, size: 24, color: COLORS[:purple], bold: true, align: "r")
+  shapes << line(8, 0.78, 6.91, 12.53, 6.91, color: COLORS[:line], width: 1)
+  shapes << text(9, "Łukasz Pyrzyk  ·  Wroc.NET", 0.78, 7.05, 4.3, 0.20, size: 9, color: COLORS[:muted])
+  shapes
+end
+
+def slide_xml(shapes)
+  shape_id = 1
+  content = shapes.join.gsub(/<p:cNvPr id="\d+"/) { %(<p:cNvPr id="#{shape_id += 1}") }
+  <<~XML
+    <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+    <p:sld xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" xmlns:p="http://schemas.openxmlformats.org/presentationml/2006/main">
+      <p:cSld><p:spTree>
+        <p:nvGrpSpPr><p:cNvPr id="1" name=""/><p:cNvGrpSpPr/><p:nvPr/></p:nvGrpSpPr>
+        <p:grpSpPr><a:xfrm><a:off x="0" y="0"/><a:ext cx="0" cy="0"/><a:chOff x="0" y="0"/><a:chExt cx="0" cy="0"/></a:xfrm></p:grpSpPr>
+        #{content}
+      </p:spTree></p:cSld>
+      <p:clrMapOvr><a:masterClrMapping/></p:clrMapOvr>
+    </p:sld>
+  XML
+end
+
+slides = []
+images = {}
+
+def image_size(path)
+  data = File.binread(path)
+  return data[16, 8].unpack("NN") if data.start_with?("\x89PNG\r\n\x1A\n".b)
+
+  if data.start_with?("\xFF\xD8".b)
+    offset = 2
+    while offset < data.bytesize
+      raise "Invalid JPEG marker: #{path}" unless data.getbyte(offset) == 0xFF
+
+      offset += 1 while data.getbyte(offset) == 0xFF
+      marker = data.getbyte(offset)
+      offset += 1
+      break if marker == 0xDA || marker == 0xD9
+
+      length = data[offset, 2].unpack1("n")
+      if [0xC0, 0xC1, 0xC2].include?(marker)
+        height, width = data[offset + 3, 4].unpack("nn")
+        return [width, height]
+      end
+      raise "Invalid JPEG segment: #{path}" if length < 2
+
+      offset += length
+    end
+  end
+  raise "Unsupported image dimensions: #{path}"
+end
+
+def add_image(images, slide_images, path)
+  absolute = File.join(ROOT, path)
+  raise "Missing image: #{absolute}" unless File.file?(absolute)
+
+  media = images[path] ||= begin
+    extension = File.extname(path).downcase.delete_prefix(".")
+    extension = "jpg" if extension == "jpeg"
+    stem = File.basename(path, File.extname(path)).gsub(/[^a-zA-Z0-9_-]/, "-")
+    fingerprint = Digest::SHA256.file(absolute).hexdigest[0, 8]
+    { name: "#{stem}-#{fingerprint}.#{extension}", path: absolute }
+  end
+  relationship_id = "rId#{100 + images.keys.index(path)}"
+  IMAGE_SIZES[relationship_id] ||= image_size(absolute)
+  slide_images << [relationship_id, media]
+  relationship_id
+end
+
+# 1. Welcome
+slide_images = []
+panel_bg_rid = add_image(images, slide_images, "slides/172/assets/images/panel-gradient-cover.jpg")
+logo_rid = add_image(images, slide_images, "assets/images/logo.png")
+s = []
+s << rect(2, 0, 0, SLIDE_W, SLIDE_H, fill: "160E22")
+s << gradient_rect(3, 0, 0, SLIDE_W, 0.07, stops: [[0, "000000", 22], [100, "000000", 0]])
+s << picture(4, panel_bg_rid, 8.56, 0, 4.77, 7.50, "Grafika panelu", fit: :cover)
+s << text(6, "172. SPOTKANIE WROC.NET", 0.82, 0.55, 6.8, 0.34, size: 11, color: COLORS[:signal], bold: true)
+s << text(7, "ULTRA-WYDAJNOŚĆ", 0.78, 1.18, 7.25, 0.90, size: 43, color: COLORS[:white], bold: true)
+s << text(8, "Gdy liczy się każda\nmikrosekunda", 0.82, 2.24, 6.80, 1.10, size: 26, color: COLORS[:signal], bold: true)
+s << text(10, "PANEL DYSKUSYJNY", 0.82, 4.30, 6.80, 0.34, size: 12, color: COLORS[:signal], bold: true)
+s << text(11, "Kiedy .NET wystarcza,\na kiedy warto wyjść poza niego?", 0.82, 4.70, 7.10, 1.05, size: 24, color: COLORS[:white], bold: true)
+s << text(12, "17 LISTOPADA 2026  ·  18:00  ·  PUB WĘDRÓWKI", 0.82, 6.62, 7.20, 0.34, size: 12, color: COLORS[:white], bold: true)
+s << text(13, "Łukasz Pyrzyk", 0.82, 7.10, 3.1, 0.20, size: 9, color: COLORS[:muted])
+s << picture(14, logo_rid, 10.39, 0.52, 1.10, 1.10, "Wroc.NET logo")
+gankiewicz_cover_rid = add_image(images, slide_images, "assets/images/speakers/piotr-gankiewicz.jpg")
+olbromski_cover_rid = add_image(images, slide_images, "assets/images/organizers/lukasz-olbromski.jpg")
+pyrzyk_cover_rid = add_image(images, slide_images, "assets/images/organizers/lukasz-pyrzyk.jpg")
+# Gankiewicz is the headline speaker: bigger portrait, centred above the panel row.
+s << picture(15, gankiewicz_cover_rid, 9.89, 1.72, 2.10, 2.10, "Piotr Gankiewicz", round: true)
+s << text(19, "Piotr Gankiewicz", 8.94, 3.86, 3.95, 0.40, size: 19, color: COLORS[:white], bold: true, align: "c")
+s << text(22, "PRELEKCJA  ·  PANEL", 8.94, 4.26, 3.95, 0.30, size: 11, color: COLORS[:signal], bold: true, align: "c")
+s << picture(16, olbromski_cover_rid, 8.86, 4.74, 1.62, 1.62, "Łukasz Olbromski", round: true)
+s << picture(17, pyrzyk_cover_rid, 11.03, 4.74, 1.62, 1.62, "Łukasz Pyrzyk", round: true)
+s << text(20, "Łukasz\nOlbromski", 8.76, 6.42, 1.82, 0.62, size: 14, color: COLORS[:muted], bold: true, align: "c")
+s << text(21, "Łukasz\nPyrzyk", 10.93, 6.42, 1.82, 0.62, size: 14, color: COLORS[:muted], bold: true, align: "c")
+slides << [slide_xml(s), slide_images]
+
+stats_date = Date.iso8601(File.basename(__FILE__)[0, 10])
+posts = Dir.glob(File.join(ROOT, "_posts/*.md")).map do |path|
+  metadata = YAML.safe_load(File.read(path).split(/^---\s*$/, 3)[1], permitted_classes: [Date, Time], aliases: true)
+  { path: path, date: Date.parse(metadata.fetch("date").to_s), metadata: metadata }
+end
+past_posts = posts.select { |post| post[:date] <= stats_date }
+oldest_date = posts.map { |post| post[:date] }.min
+community_years = stats_date.year - oldest_date.year
+community_years -= 1 if stats_date.strftime("%m%d") < oldest_date.strftime("%m%d")
+meeting_count = past_posts.filter_map do |post|
+  tags = Array(post[:metadata]["tags"])
+  File.basename(post[:path]).split("-")[3].to_i if (tags & %w[offline online]).any?
+end.max
+speaker_count = past_posts.flat_map do |post|
+  Array(post[:metadata]["talks"]).flat_map { |talk| Array(talk["speaker_ids"]) }
+end.compact.uniq.size
+presentation_count = past_posts.sum { |post| Array(post[:metadata]["talks"]).size }
+additional_event_count = past_posts.count { |post| Array(post[:metadata]["tags"]).include?("inne") }
+
+slide_images = []
+community_rid = add_image(images, slide_images, "slides/172/assets/images/community-wroclaw.jpeg")
+s = []
+s << picture(2, community_rid, 0, 0, SLIDE_W, SLIDE_H, "Wrocław połączony społecznością Wroc.NET", fit: :cover)
+s << text(5, "OD #{oldest_date.year} ROKU", 0.78, 0.40, 8.60, 0.30, size: 10, color: "F13BB8", bold: true)
+s << text(6, "O grupie · Wroc.NET w liczbach", 0.78, 0.88, 9.00, 0.76, size: 30, color: COLORS[:white], bold: true)
+s << text(7, "SLIDE_NUMBER", 11.52, 0.43, 0.95, 0.62, size: 24, color: COLORS[:white], bold: true, align: "r")
+s << text(9, "Łukasz Pyrzyk · Wroc.NET", 0.78, 7.05, 5.30, 0.20, size: 9, color: "DACCE0")
+s << text(10, "Wrocławska społeczność programistów .NET", 0.78, 1.90, 8.60, 0.50, size: 21, color: COLORS[:white], bold: true)
+[[community_years, "lat społeczności"], [meeting_count, "spotkań"], [speaker_count, "prelegentów i prelegentek"], [presentation_count, "prezentacji"]].each_with_index do |(value, label), index|
+  x = 0.78 + index * 2.15
+  s << text(20 + index * 2, value, x, 2.82, 2.05, 0.90, size: 46, color: COLORS[:white], bold: true)
+  s << text(21 + index * 2, label, x, 3.83, 2.05, 0.70, size: 14, color: "DACCE0", valign: "t")
+end
+s << line(30, 0.78, 4.72, 9.05, 4.72, color: "5E3B69")
+s << text(31, "2400+", 0.78, 5.05, 3.50, 0.80, size: 40, color: "F13BB8", bold: true)
+s << text(32, "członków społeczności", 0.78, 5.98, 4.00, 0.40, size: 17, color: "DACCE0")
+s << text(33, "+ #{additional_event_count}", 5.15, 5.05, 3.50, 0.80, size: 40, color: "F13BB8", bold: true)
+s << text(34, "dodatkowe wydarzenia", 5.15, 5.98, 4.00, 0.40, size: 17, color: "DACCE0")
+slides << [slide_xml(s), slide_images]
+
+s = base("Partner strategiczny", "Wspiera nas Devstyle")
+s << text(10, "DZIĘKUJEMY ZA WSPARCIE\nWROC.NET", 0.78, 1.72, 5.60, 0.86, size: 24, color: COLORS[:violet], bold: true, valign: "t")
+s << text(11, "Devstyle jest partnerem strategicznym\nnaszej społeczności.", 0.78, 2.72, 5.72, 0.78, size: 16, color: COLORS[:ink], valign: "t")
+s << rect(14, 6.62, 1.66, 6.00, 1.94, fill: COLORS[:white])
+slide_images = []
+devstyle_rid = add_image(images, slide_images, "assets/images/partners/devstyle.png")
+s << picture(15, devstyle_rid, 6.86, 2.24, 5.52, 0.78, "Logo Devstyle")
+s << text(16, "PATRONI MEDIALNI", 0.78, 3.74, 11.75, 0.30, size: 11, color: COLORS[:muted], bold: true)
+# Logos have very different aspect ratios (1.13 to 6.22), so each sits on its own
+# white panel and is fitted inside it instead of being stretched.
+gap_partners = [
+  [17, "assets/images/partners/wroclawski-portal.png", "Wrocławski Portal",       0.78, 4.14, 2.14, 1.78],
+  [19, "assets/images/partners/logo-faktywroclaw.png", "Fakty Wrocław",          3.18, 4.14, 2.14, 1.78],
+  [21, "assets/images/partners/ods-pti.jpg",           "PTI Oddział Dolnośląski", 5.58, 4.14, 2.14, 1.78],
+  [23, "assets/images/partners/dlastudenta.png",       "dlaStudenta.pl",         7.98, 4.14, 2.14, 1.78],
+  [25, "assets/images/partners/programista.png",       "Magazyn Programista",   10.38, 4.14, 2.14, 1.78],
+]
+gap_partners.each do |id, path, name, x, y, w, h|
+  rid = add_image(images, slide_images, path)
+  s << rect(id - 1, x, y, w, h, fill: COLORS[:white])
+  s << picture(id, rid, x + 0.10, y + 0.10, w - 0.20, h - 0.20, "Logo #{name}")
+  s << text(id + 1, name, x, y + h + 0.04, w, 0.30, size: 10, color: COLORS[:muted], bold: true, align: "c")
+end
+s << text(13, "https://devstyle.pl/", 0.78, 6.34, 5.60, 0.36, size: 15, color: COLORS[:violet], bold: true)
+slides << [slide_xml(s), slide_images]
+
+s = []
+slide_images = []
+magazine_rid = add_image(images, slide_images, "slides/172/assets/images/programistamagokladka.jpg")
+s << rect(2, 0, 0, SLIDE_W, SLIDE_H, fill: COLORS[:background])
+s << gradient_rect(3, 0, 0, SLIDE_W, 0.05, stops: [[0, COLORS[:signal], 100], [100, COLORS[:feature], 100]], angle: 0)
+s << text(5, "PATRON MEDIALNY · NOWY NUMER", 0.78, 0.40, 6.30, 0.30, size: 11, color: COLORS[:violet], bold: true)
+s << text(6, "Programista", 0.78, 0.96, 6.30, 0.76, size: 38, bold: true)
+s << text(10, "4/2026 (125)", 0.78, 2.10, 6.30, 0.58, size: 30, color: COLORS[:violet], bold: true)
+s << text(11, "ESP-NOW", 0.78, 3.18, 6.30, 0.72, size: 38, bold: true)
+s << text(12, "Protokół komunikacyjny\ndla drona", 0.78, 4.02, 6.30, 1.10, size: 28, color: COLORS[:muted], valign: "t")
+s << text(13, "programistamag.pl", 0.78, 5.94, 6.30, 0.46, size: 23, color: COLORS[:violet], bold: true)
+s << picture(14, magazine_rid, 7.70, 0.40, 4.83, 6.45, "Okładka Programista 4/2026 (125)")
+s << line(8, 0.78, 6.91, 12.53, 6.91, color: COLORS[:line], width: 1)
+s << text(9, "Łukasz Pyrzyk · Wroc.NET", 0.78, 7.05, 4.30, 0.20, size: 9, color: COLORS[:muted])
+s << text(7, "SLIDE_NUMBER", 11.52, 7.02, 0.95, 0.26, size: 11, color: COLORS[:purple], bold: true, align: "r")
+slides << [slide_xml(s), slide_images]
+
+s = base("Sezon 2026/2027", "Spotykamy się regularnie")
+s << text(10, "Trzeci wtorek miesiąca. Zaczynamy o 18:00.", 0.78, 1.92, 11.5, 0.48, size: 17, color: COLORS[:muted])
+dates = [["17 LIS", "dzisiaj · 18:00", true], ["15 GRU", "18:00", false], ["19 STY", "18:00", false]]
+s << line(11, 1.36, 3.37, 11.97, 3.37, color: COLORS[:line], width: 2)
+dates.each_with_index do |(date, label, special), index|
+  x = 1.96 + index * 3.60
+  dot_fill = special ? COLORS[:signal] : COLORS[:violet]
+  s << ellipse(20 + index * 3, x + 0.77, 3.13, 0.48, 0.48, fill: dot_fill, line: COLORS[:white])
+  s << text(21 + index * 3, date, x, 2.45, 2.02, 0.48, size: 25, color: special ? COLORS[:signal] : COLORS[:ink], bold: true, align: "c")
+  s << text(22 + index * 3, label, x, 3.88, 2.02, 0.34, size: 12, color: COLORS[:muted], bold: special, align: "c")
+end
+s << rect(40, 2.02, 5.07, 9.28, 0.88, fill: COLORS[:panel])
+s << text(41, "PUB WĘDRÓWKI  ·  UL. PODWALE 37/38", 2.25, 5.27, 8.82, 0.42, size: 16, color: COLORS[:violet], bold: true, align: "c")
+slides << [slide_xml(s), []]
+
+s = base("Nasze miejsce", "Pub Wędrówki")
+s << text(11, "Nie ma pizzy.", 0.78, 2.70, 8.20, 0.78, size: 37, color: COLORS[:ink], bold: true)
+s << text(12, "Bar działa.", 0.78, 3.54, 8.20, 0.78, size: 37, color: COLORS[:violet], bold: true)
+s << rect(13, 9.54, 2.66, 2.63, 2.14, fill: COLORS[:feature])
+s << text(14, "PIWO\nI NAPOJE", 9.82, 3.08, 2.07, 1.20, size: 21, color: COLORS[:white], bold: true, align: "c")
+s << text(16, "Na miejscu nie zamówimy jedzenia.", 0.78, 5.10, 10.65, 0.43, size: 16, color: COLORS[:muted])
+s << text(18, "Po części oficjalnej zostajemy na rozmowy.", 0.78, 6.22, 10.65, 0.35, size: 16, color: COLORS[:ink], bold: true)
+slides << [slide_xml(s), []]
+
+# 6. Website overview
+s = base("Nowość", "Nowe wrocnet.org")
+slide_images = []
+home_rid = add_image(images, slide_images, "slides/172/assets/images/wrocnet-home.png")
+s << rect(10, 0.72, 1.95, 8.12, 4.73, fill: COLORS[:panel], line: COLORS[:line])
+s << picture(11, home_rid, 0.78, 2.01, 8.00, 4.61, "Strona główna wrocnet.org")
+s << rect(12, 9.10, 2.02, 3.14, 4.24, fill: COLORS[:panel])
+s << text(13, "PROŚCIEJ", 9.42, 2.40, 2.52, 0.46, size: 20, color: COLORS[:signal], bold: true)
+s << text(14, "Spotkania,\nludzie i historia\nw jednym\nmiejscu.", 9.42, 3.10, 2.48, 1.82, size: 22, bold: true, valign: "t")
+s << text(16, "wrocnet.org", 9.42, 5.46, 2.48, 0.40, size: 16, color: COLORS[:violet], bold: true)
+slides << [slide_xml(s), slide_images]
+
+# 7. Become a speaker
+s = base("wrocnet.org", "Masz temat? Zostań prelegentem")
+slide_images = []
+speaker_page_rid = add_image(images, slide_images, "slides/172/assets/images/wrocnet-zostan-prelegentem.png")
+speaker_panel_rid = add_image(images, slide_images, "slides/172/assets/images/panel-speaker.jpg")
+s << rect(10, 0.72, 1.95, 8.12, 4.73, fill: COLORS[:panel], line: COLORS[:line])
+s << picture(11, speaker_page_rid, 0.78, 2.01, 8.00, 4.61, "Strona Zostań prelegentem")
+s << picture(12, speaker_panel_rid, 9.10, 2.02, 3.14, 4.24, "Grafika mikrofonu", fit: :cover)
+s << rect(16, 9.10, 2.02, 3.14, 4.24, fill: COLORS[:background], transparency: 20)
+s << text(13, "MASZ POMYSŁ?", 9.42, 2.42, 2.52, 0.46, size: 18, color: COLORS[:signal], bold: true)
+s << text(14, "Nie musisz mieć\ngotowej\nprezentacji.", 9.42, 3.10, 2.50, 1.30, size: 21, color: COLORS[:white], bold: true, valign: "t")
+s << text(15, "Zgłoś temat.\nPomożemy dalej.", 9.42, 4.53, 2.48, 0.82, size: 16, color: COLORS[:white], valign: "t")
+s << text(17, "wrocnet.org/zostan-prelegentem/", 9.30, 5.73, 2.70, 0.30, size: 11, color: COLORS[:violet], bold: true)
+slides << [slide_xml(s), slide_images]
+
+# 8. Organizers
+s = base("wrocnet.org", "Poznaj organizatorów")
+slide_images = []
+organizers = YAML.safe_load_file(File.join(ROOT, "_data/organizers.yml")).reject { |person| person["name"].to_s.strip.empty? }
+organizers.each_with_index do |person, index|
+  x = 0.86 + (index % 4) * 2.92
+  y = 1.90 + (index / 4) * 2.30
+  photo = person["photo"].to_s
+  photo = "/assets/images/organizers/placeholder.png" if photo.empty?
+  portrait_rid = add_image(images, slide_images, photo.delete_prefix("/"))
+  s << picture(20 + index * 2, portrait_rid, x + 0.65, y, 1.50, 1.50, person["name"], round: true)
+  s << text(21 + index * 2, person["name"].split(" ", 2).join("\n"), x, y + 1.53, 2.80, 0.64, size: 18, bold: true, align: "c")
+end
+s << text(10, "wrocnet.org/organizatorzy/", 0.78, 6.48, 11.75, 0.30, size: 13, color: COLORS[:violet], align: "c")
+slides << [slide_xml(s), slide_images]
+
+# 9. WhatsApp
+s = base("Bądźmy w kontakcie", "Dołącz do społeczności na WhatsAppie")
+slide_images = []
+qr_rid = add_image(images, slide_images, "slides/172/assets/images/whatsappgrupa.jpeg")
+whatsapp_panel_rid = add_image(images, slide_images, "slides/172/assets/images/panel-whatsapp.jpg")
+s << rect(10, 0.78, 2.01, 4.33, 4.33, fill: COLORS[:white])
+s << picture(11, qr_rid, 0.92, 2.15, 4.05, 4.05, "Kod QR społeczności WhatsApp", crop: [227, 381, 883, 1037])
+s << picture(12, whatsapp_panel_rid, 5.42, 2.01, 6.82, 4.33, "Grafika panelu", fit: :cover)
+s << text(13, "ZESKANUJ KOD", 5.86, 2.48, 5.90, 0.46, size: 16, color: COLORS[:signal], bold: true)
+s << text(14, "Wrocławska\nGrupa .NET", 5.86, 3.10, 5.74, 1.20, size: 35, color: COLORS[:white], bold: true)
+s << text(15, "Ogłoszenia, rozmowy i kontakt między spotkaniami.", 5.86, 4.69, 5.52, 0.82, size: 18, color: COLORS[:white], valign: "t")
+s << text(17, "wrocnet.org/whatsapp", 5.86, 5.82, 5.52, 0.34, size: 13, color: COLORS[:signal], bold: true)
+slides << [slide_xml(s), slide_images]
+
+# 10. After party
+s = base("Po części oficjalnej", "Zostajemy. Bo tak trzeba.")
+s << text(10, "Piwo. Rozmowy. Networking.", 0.78, 2.00, 10.9, 0.60, size: 30, color: COLORS[:ink], bold: true)
+s << text(11, "A czasem, całkiem serio, nowa praca.", 0.78, 2.78, 10.9, 0.55, size: 23, color: COLORS[:violet], bold: true)
+s << rect(12, 0.78, 3.68, 10.90, 1.85, fill: COLORS[:feature])
+s << text(13, "PONOĆ NAJWIĘKSZE KARIERY ZACZYNAJĄ SIĘ\nPRZY BARZE, NIE NA LINKEDIN", 1.10, 3.95, 10.30, 0.95, size: 24, color: COLORS[:white], bold: true, valign: "t")
+s << text(14, "(przynajmniej tak mówią ci, którzy zostali dłużej)", 1.10, 4.95, 10.30, 0.42, size: 14, color: COLORS[:signal], bold: true, valign: "t")
+s << text(15, "Zostań chwilę dłużej - może właśnie tu jest Twoja następna okazja.", 0.78, 5.85, 10.9, 0.45, size: 18, color: COLORS[:muted])
+slides << [slide_xml(s), []]
+
+s = base("173. spotkanie · 15 grudnia 2026 · 18:00", "Następne spotkanie Wroc.NET")
+next_meeting = posts.find { |post| File.basename(post[:path]).start_with?("2026-12-15-173-") }.fetch(:metadata)
+speakers = YAML.safe_load_file(File.join(ROOT, "_data/speakers.yml")).to_h { |person| [person.fetch("id"), person] }
+next_meeting.fetch("talks").each_with_index do |talk, index|
+  x = 0.78 + index * 6.00
+  names = talk.fetch("speaker_ids").map do |id|
+    person = speakers.fetch(id)
+    "#{person.fetch('imie')} #{person.fetch('nazwisko')}"
+  end
+  s << rect(20 + index * 4, x, 2.00, 5.75, 3.78, fill: COLORS[:panel])
+  s << text(21 + index * 4, format("PRELEKCJA %02d", index + 1), x + 0.30, 2.30, 5.15, 0.30, size: 12, color: COLORS[:signal], bold: true)
+  s << text(22 + index * 4, talk.fetch("title"), x + 0.30, 2.92, 5.15, 1.55, size: 28, bold: true, valign: "t")
+  s << text(23 + index * 4, names.join("\n"), x + 0.30, 4.76, 5.15, 0.72, size: 20, color: COLORS[:violet], bold: true)
+end
+s << text(30, "PUB WĘDRÓWKI · PODWALE 37/38 · WSTĘP BEZPŁATNY", 0.78, 6.12, 11.75, 0.40, size: 17, color: COLORS[:muted], align: "c")
+slides << [slide_xml(s), []]
+
+s = base("172. spotkanie · godziny orientacyjne", "Plan dzisiejszego spotkania")
+slide_images = []
+gankiewicz_rid = add_image(images, slide_images, "assets/images/speakers/piotr-gankiewicz.jpg")
+olbromski_rid = add_image(images, slide_images, "assets/images/organizers/lukasz-olbromski.jpg")
+pyrzyk_rid = add_image(images, slide_images, "assets/images/organizers/lukasz-pyrzyk.jpg")
+s << picture(15, gankiewicz_rid, 10.55, 1.85, 1.15, 1.15, "Piotr Gankiewicz", round: true)
+s << text(21, "18:15", 0.78, 1.85, 1.20, 0.45, size: 20, color: COLORS[:violet], bold: true)
+s << text(10, "Piotr Gankiewicz", 2.10, 1.85, 7.90, 0.45, size: 23, color: COLORS[:violet], bold: true)
+s << text(11, "Ultra-wydajność - gdy liczy się\nkażda mikrosekunda", 2.10, 2.38, 7.90, 0.80, size: 22, bold: true, valign: "t")
+s << line(12, 0.78, 3.25, 12.24, 3.25)
+s << text(22, "19:15", 0.78, 3.37, 1.20, 0.45, size: 20, color: COLORS[:violet], bold: true)
+s << text(13, "Panel dyskusyjny", 2.10, 3.37, 7.90, 0.45, size: 23, color: COLORS[:violet], bold: true)
+s << text(14, "Kiedy .NET wystarcza,\na kiedy warto wyjść poza niego?", 2.10, 3.94, 6.65, 0.80, size: 22, bold: true, valign: "t")
+s << text(24, "Gankiewicz · Olbromski · Pyrzyk", 2.10, 4.82, 7.90, 0.35, size: 16, color: COLORS[:muted])
+s << picture(25, gankiewicz_rid, 9.35, 3.37, 0.95, 0.95, "Piotr Gankiewicz - panel", round: true)
+s << picture(26, olbromski_rid, 10.45, 3.37, 0.95, 0.95, "Łukasz Olbromski - panel", round: true)
+s << picture(27, pyrzyk_rid, 11.55, 3.37, 0.95, 0.95, "Łukasz Pyrzyk - panel", round: true)
+s << line(29, 0.78, 5.44, 12.24, 5.44)
+s << text(28, "20:15", 0.78, 5.70, 1.20, 0.45, size: 20, color: COLORS[:violet], bold: true)
+s << text(19, "After party", 2.10, 5.70, 9.90, 0.45, size: 22, color: COLORS[:violet], bold: true)
+slides << [slide_xml(s), slide_images]
+
+slide_images = []
+start_rid = add_image(images, slide_images, "slides/172/assets/images/community-wroclaw.jpeg")
+s = []
+s << picture(2, start_rid, 0, 0, SLIDE_W, SLIDE_H, "Wrocław i społeczność Wroc.NET", fit: :cover)
+s << rect(3, 0, 0, SLIDE_W, SLIDE_H, fill: COLORS[:background], transparency: 25)
+s << text(5, "PIOTR GANKIEWICZ", 0.78, 1.96, 11.75, 0.50, size: 23, color: COLORS[:signal], bold: true, align: "c")
+s << text(6, "ULTRA-WYDAJNOŚĆ", 0.55, 2.85, 12.23, 1.35, size: 60, color: COLORS[:white], bold: true, align: "c")
+s << text(7, "SLIDE_NUMBER", 11.52, 0.43, 0.95, 0.62, size: 24, color: COLORS[:white], bold: true, align: "r")
+s << text(10, "Gdy liczy się każda mikrosekunda", 0.78, 4.45, 11.75, 0.65, size: 30, color: COLORS[:muted], align: "c")
+slides << [slide_xml(s), slide_images]
+
+# Keep the panel last so it can stay on screen throughout the discussion.
+slide_images = []
+gap_gankiewicz_rid = add_image(images, slide_images, "assets/images/speakers/piotr-gankiewicz.jpg")
+gap_olbromski_rid = add_image(images, slide_images, "assets/images/organizers/lukasz-olbromski.jpg")
+gap_pyrzyk_rid = add_image(images, slide_images, "assets/images/organizers/lukasz-pyrzyk.jpg")
+gap_bg_rid = add_image(images, slide_images, "slides/172/assets/images/community-wroclaw.jpeg")
+s = []
+s << picture(2, gap_bg_rid, 0, 0, SLIDE_W, SLIDE_H, "Wrocław i społeczność Wroc.NET", fit: :cover)
+s << rect(3, 0, 0, SLIDE_W, SLIDE_H, fill: COLORS[:background], transparency: 30)
+s << text(5, "PANEL DYSKUSYJNY", 0.78, 0.52, 11.75, 0.40, size: 15, color: COLORS[:signal], bold: true, align: "c")
+s << text(6, "Kiedy .NET wystarcza,\na kiedy warto wyjść poza niego?", 0.78, 1.06, 11.75, 1.10, size: 34, color: COLORS[:white], bold: true, align: "c")
+gap_panelists = [
+  [gap_olbromski_rid, "ŁUKASZ\nOLBROMSKI"],
+  [gap_gankiewicz_rid, "PIOTR\nGANKIEWICZ"],
+  [gap_pyrzyk_rid, "ŁUKASZ\nPYRZYK"]
+]
+gap_panelists.each_with_index do |(rid, name), index|
+  x = 1.78 + index * 4.00
+  s << ellipse(10 + index * 3, x - 0.05, 2.85, 1.87, 1.87, fill: COLORS[:violet])
+  s << picture(11 + index * 3, rid, x, 2.90, 1.77, 1.77, name.tr("\n", " "), round: true)
+  s << text(12 + index * 3, name, x - 0.70, 4.88, 3.17, 0.72, size: 21, bold: true, align: "c")
+end
+s << line(30, 1.20, 5.86, 12.13, 5.86, color: COLORS[:line], width: 1)
+s << text(31, "Zadawajcie pytania. Panel jest dla Was.", 0.78, 6.06, 11.75, 0.48, size: 23, color: COLORS[:violet], bold: true, align: "c")
+s << text(32, "Pub Wędrówki · 17 listopada 2026", 0.78, 6.66, 11.75, 0.34, size: 14, color: COLORS[:muted], align: "c")
+s << text(33, "Łukasz Pyrzyk  ·  Wroc.NET", 0.78, 7.10, 4.3, 0.20, size: 9, color: COLORS[:muted])
+slides << [slide_xml(s), slide_images]
+
+slides.each_with_index do |(xml, _), index|
+  xml.gsub!("SLIDE_NUMBER", format("%02d", index + 1))
+end
+
+files = {}
+
+files["[Content_Types].xml"] = <<~XML
+  <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+  <Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types">
+    <Default Extension="rels" ContentType="application/vnd.openxmlformats-package.relationships+xml"/>
+    <Default Extension="xml" ContentType="application/xml"/>
+    <Default Extension="png" ContentType="image/png"/>
+    <Default Extension="jpg" ContentType="image/jpeg"/>
+    <Override PartName="/ppt/presentation.xml" ContentType="application/vnd.openxmlformats-officedocument.presentationml.presentation.main+xml"/>
+    <Override PartName="/ppt/slideMasters/slideMaster1.xml" ContentType="application/vnd.openxmlformats-officedocument.presentationml.slideMaster+xml"/>
+    <Override PartName="/ppt/slideLayouts/slideLayout1.xml" ContentType="application/vnd.openxmlformats-officedocument.presentationml.slideLayout+xml"/>
+    <Override PartName="/ppt/theme/theme1.xml" ContentType="application/vnd.openxmlformats-officedocument.theme+xml"/>
+    <Override PartName="/ppt/presProps.xml" ContentType="application/vnd.openxmlformats-officedocument.presentationml.presProps+xml"/>
+    <Override PartName="/ppt/viewProps.xml" ContentType="application/vnd.openxmlformats-officedocument.presentationml.viewProps+xml"/>
+    <Override PartName="/ppt/tableStyles.xml" ContentType="application/vnd.openxmlformats-officedocument.presentationml.tableStyles+xml"/>
+    <Override PartName="/docProps/core.xml" ContentType="application/vnd.openxmlformats-package.core-properties+xml"/>
+    <Override PartName="/docProps/app.xml" ContentType="application/vnd.openxmlformats-officedocument.extended-properties+xml"/>
+    #{slides.each_index.map { |index| %(<Override PartName="/ppt/slides/slide#{index + 1}.xml" ContentType="application/vnd.openxmlformats-officedocument.presentationml.slide+xml"/>) }.join("\n  ")}
+  </Types>
+XML
+
+files["_rels/.rels"] = <<~XML
+  <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+  <Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships">
+    <Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument" Target="ppt/presentation.xml"/>
+    <Relationship Id="rId2" Type="http://schemas.openxmlformats.org/package/2006/relationships/metadata/core-properties" Target="docProps/core.xml"/>
+    <Relationship Id="rId3" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/extended-properties" Target="docProps/app.xml"/>
+  </Relationships>
+XML
+
+files["docProps/core.xml"] = <<~XML
+  <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+  <cp:coreProperties xmlns:cp="http://schemas.openxmlformats.org/package/2006/metadata/core-properties" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <dc:title>172. spotkanie Wroc.NET</dc:title><dc:creator>Łukasz Pyrzyk</dc:creator><cp:lastModifiedBy>Łukasz Pyrzyk</cp:lastModifiedBy><dcterms:created xsi:type="dcterms:W3CDTF">2026-11-10T12:00:00Z</dcterms:created><dcterms:modified xsi:type="dcterms:W3CDTF">2026-11-10T12:00:00Z</dcterms:modified>
+  </cp:coreProperties>
+XML
+
+files["docProps/app.xml"] = <<~XML
+  <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+  <Properties xmlns="http://schemas.openxmlformats.org/officeDocument/2006/extended-properties" xmlns:vt="http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes"><Application>Microsoft Office PowerPoint</Application><PresentationFormat>Widescreen</PresentationFormat><Slides>#{slides.length}</Slides><Notes>0</Notes><HiddenSlides>0</HiddenSlides><Company>Wroc.NET</Company><AppVersion>16.0000</AppVersion></Properties>
+XML
+
+slide_ids = slides.each_index.map { |index| %(<p:sldId id="#{256 + index}" r:id="rId#{index + 2}"/>) }.join
+files["ppt/presentation.xml"] = <<~XML
+  <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+  <p:presentation xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" xmlns:p="http://schemas.openxmlformats.org/presentationml/2006/main"><p:sldMasterIdLst><p:sldMasterId id="2147483648" r:id="rId1"/></p:sldMasterIdLst><p:sldIdLst>#{slide_ids}</p:sldIdLst><p:sldSz cx="#{emu(SLIDE_W)}" cy="#{emu(SLIDE_H)}" type="screen16x9"/><p:notesSz cx="6858000" cy="9144000"/><p:defaultTextStyle/></p:presentation>
+XML
+
+presentation_rels = [%(<Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/slideMaster" Target="slideMasters/slideMaster1.xml"/>)]
+slides.each_index { |index| presentation_rels << %(<Relationship Id="rId#{index + 2}" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/slide" Target="slides/slide#{index + 1}.xml"/>) }
+presentation_rels << %(<Relationship Id="rId#{slides.length + 2}" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/presProps" Target="presProps.xml"/>)
+presentation_rels << %(<Relationship Id="rId#{slides.length + 3}" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/viewProps" Target="viewProps.xml"/>)
+presentation_rels << %(<Relationship Id="rId#{slides.length + 4}" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/tableStyles" Target="tableStyles.xml"/>)
+files["ppt/_rels/presentation.xml.rels"] = %(<?xml version="1.0" encoding="UTF-8" standalone="yes"?><Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships">#{presentation_rels.join}</Relationships>)
+
+files["ppt/slideMasters/slideMaster1.xml"] = <<~XML
+  <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+  <p:sldMaster xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" xmlns:p="http://schemas.openxmlformats.org/presentationml/2006/main"><p:cSld name="Wroc.NET"><p:spTree><p:nvGrpSpPr><p:cNvPr id="1" name=""/><p:cNvGrpSpPr/><p:nvPr/></p:nvGrpSpPr><p:grpSpPr><a:xfrm><a:off x="0" y="0"/><a:ext cx="0" cy="0"/><a:chOff x="0" y="0"/><a:chExt cx="0" cy="0"/></a:xfrm></p:grpSpPr></p:spTree></p:cSld><p:clrMap accent1="accent1" accent2="accent2" accent3="accent3" accent4="accent4" accent5="accent5" accent6="accent6" bg1="lt1" bg2="lt2" folHlink="folHlink" hlink="hlink" tx1="dk1" tx2="dk2"/><p:sldLayoutIdLst><p:sldLayoutId id="2147483649" r:id="rId1"/></p:sldLayoutIdLst><p:txStyles><p:titleStyle/><p:bodyStyle/><p:otherStyle/></p:txStyles></p:sldMaster>
+XML
+files["ppt/slideMasters/_rels/slideMaster1.xml.rels"] = %(<?xml version="1.0" encoding="UTF-8" standalone="yes"?><Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"><Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/slideLayout" Target="../slideLayouts/slideLayout1.xml"/><Relationship Id="rId2" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/theme" Target="../theme/theme1.xml"/></Relationships>)
+files["ppt/slideLayouts/slideLayout1.xml"] = %(<?xml version="1.0" encoding="UTF-8" standalone="yes"?><p:sldLayout xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" xmlns:p="http://schemas.openxmlformats.org/presentationml/2006/main" type="blank"><p:cSld name="Blank"><p:spTree><p:nvGrpSpPr><p:cNvPr id="1" name=""/><p:cNvGrpSpPr/><p:nvPr/></p:nvGrpSpPr><p:grpSpPr><a:xfrm><a:off x="0" y="0"/><a:ext cx="0" cy="0"/><a:chOff x="0" y="0"/><a:chExt cx="0" cy="0"/></a:xfrm></p:grpSpPr></p:spTree></p:cSld><p:clrMapOvr><a:masterClrMapping/></p:clrMapOvr></p:sldLayout>)
+files["ppt/slideLayouts/_rels/slideLayout1.xml.rels"] = %(<?xml version="1.0" encoding="UTF-8" standalone="yes"?><Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"><Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/slideMaster" Target="../slideMasters/slideMaster1.xml"/></Relationships>)
+
+files["ppt/theme/theme1.xml"] = <<~XML
+  <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+  <a:theme xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main" name="Wroc.NET"><a:themeElements><a:clrScheme name="Wroc.NET"><a:dk1><a:srgbClr val="160E22"/></a:dk1><a:lt1><a:srgbClr val="FFFFFF"/></a:lt1><a:dk2><a:srgbClr val="23152F"/></a:dk2><a:lt2><a:srgbClr val="F7F3F8"/></a:lt2><a:accent1><a:srgbClr val="641E78"/></a:accent1><a:accent2><a:srgbClr val="F13BB8"/></a:accent2><a:accent3><a:srgbClr val="8B2BBE"/></a:accent3><a:accent4><a:srgbClr val="25D366"/></a:accent4><a:accent5><a:srgbClr val="B9ADBF"/></a:accent5><a:accent6><a:srgbClr val="6E347E"/></a:accent6><a:hlink><a:srgbClr val="F13BB8"/></a:hlink><a:folHlink><a:srgbClr val="8B2BBE"/></a:folHlink></a:clrScheme><a:fontScheme name="Wroc.NET"><a:majorFont><a:latin typeface="Arial"/><a:ea typeface=""/><a:cs typeface=""/></a:majorFont><a:minorFont><a:latin typeface="Arial"/><a:ea typeface=""/><a:cs typeface=""/></a:minorFont></a:fontScheme><a:fmtScheme name="Wroc.NET"><a:fillStyleLst><a:solidFill><a:schemeClr val="phClr"/></a:solidFill><a:solidFill><a:schemeClr val="accent1"/></a:solidFill><a:solidFill><a:schemeClr val="accent2"/></a:solidFill></a:fillStyleLst><a:lnStyleLst><a:ln w="6350"><a:solidFill><a:schemeClr val="phClr"/></a:solidFill></a:ln><a:ln w="12700"><a:solidFill><a:schemeClr val="phClr"/></a:solidFill></a:ln><a:ln w="19050"><a:solidFill><a:schemeClr val="phClr"/></a:solidFill></a:ln></a:lnStyleLst><a:effectStyleLst><a:effectStyle><a:effectLst/></a:effectStyle><a:effectStyle><a:effectLst/></a:effectStyle><a:effectStyle><a:effectLst/></a:effectStyle></a:effectStyleLst><a:bgFillStyleLst><a:solidFill><a:schemeClr val="phClr"/></a:solidFill><a:solidFill><a:schemeClr val="phClr"/></a:solidFill><a:solidFill><a:schemeClr val="phClr"/></a:solidFill></a:bgFillStyleLst></a:fmtScheme></a:themeElements></a:theme>
+XML
+files["ppt/presProps.xml"] = %(<?xml version="1.0" encoding="UTF-8" standalone="yes"?><p:presentationPr xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" xmlns:p="http://schemas.openxmlformats.org/presentationml/2006/main"/>)
+files["ppt/viewProps.xml"] = %(<?xml version="1.0" encoding="UTF-8" standalone="yes"?><p:viewPr xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" xmlns:p="http://schemas.openxmlformats.org/presentationml/2006/main"><p:gridSpacing cx="72008" cy="72008"/></p:viewPr>)
+files["ppt/tableStyles.xml"] = %(<?xml version="1.0" encoding="UTF-8" standalone="yes"?><a:tblStyleLst xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main" def="{5C22544A-7EE6-4342-B048-85BDC9FD1C3A}"/>)
+
+slides.each_with_index do |(xml, slide_images), index|
+  files["ppt/slides/slide#{index + 1}.xml"] = xml
+  relationships = [%(<Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/slideLayout" Target="../slideLayouts/slideLayout1.xml"/>)]
+  slide_images.each do |relationship_id, media|
+    relationships << %(<Relationship Id="#{relationship_id}" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/image" Target="../media/#{media[:name]}"/>)
+  end
+  files["ppt/slides/_rels/slide#{index + 1}.xml.rels"] = %(<?xml version="1.0" encoding="UTF-8" standalone="yes"?><Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships">#{relationships.join}</Relationships>)
+end
+
+images.each_value { |media| files["ppt/media/#{media[:name]}"] = File.binread(media[:path]) }
+
+def dos_time(time)
+  (time.hour << 11) | (time.min << 5) | (time.sec / 2)
+end
+
+def dos_date(time)
+  ((time.year - 1980) << 9) | (time.month << 5) | time.day
+end
+
+timestamp = Time.local(2026, 11, 10, 12, 0, 0)
+archive = +"".b
+central = +"".b
+entries = 0
+
+files.each do |name, content|
+  filename = name.encode(Encoding::UTF_8).b
+  data = content.b
+  checksum = Zlib.crc32(data)
+  offset = archive.bytesize
+  archive << [0x04034b50, 20, 0x0800, 0, dos_time(timestamp), dos_date(timestamp), checksum, data.bytesize, data.bytesize, filename.bytesize, 0].pack("VvvvvvVVVvv")
+  archive << filename << data
+  central << [0x02014b50, 20, 20, 0x0800, 0, dos_time(timestamp), dos_date(timestamp), checksum, data.bytesize, data.bytesize, filename.bytesize, 0, 0, 0, 0, 0, offset].pack("VvvvvvvVVVvvvvvVV")
+  central << filename
+  entries += 1
+end
+
+central_offset = archive.bytesize
+archive << central
+archive << [0x06054b50, 0, 0, entries, entries, central.bytesize, central_offset, 0].pack("VvvvvVVv")
+
+FileUtils.mkdir_p(File.dirname(OUTPUT))
+File.binwrite(OUTPUT, archive)
+puts "Created #{OUTPUT} (#{slides.length} slides)"
