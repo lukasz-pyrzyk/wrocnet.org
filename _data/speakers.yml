@@ -158,6 +158,7 @@
   imie: Hleb
   nazwisko: Sukrystsik
   link: https://www.linkedin.com/in/hsukrystsik/
+  photo: /assets/images/speakers/hleb-sukrystsik.jpg
 - id: idan-shatz
   imie: Idan
   nazwisko: Shatz
@@ -261,6 +262,7 @@
   imie: Łukasz
   nazwisko: Hałas
   link: https://www.linkedin.com/in/%C5%82ukasz-ha%C5%82as-8a64b4166/
+  photo: /assets/images/speakers/lukasz-halas.jpg
 - id: lukasz-kaluzny
   imie: Łukasz
   nazwisko: Kałużny
@@ -363,6 +365,7 @@
   imie: Melchior
   nazwisko: Kozar
   link: https://github.com/melchiork
+  photo: /assets/images/speakers/placeholder.png
 - id: michal-barylinski
   imie: Michał
   nazwisko: Baryliński
