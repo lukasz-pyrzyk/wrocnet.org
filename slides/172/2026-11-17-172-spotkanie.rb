@@ -312,6 +312,23 @@ end
 s << text(13, "https://devstyle.pl/", 0.78, 6.34, 5.60, 0.36, size: 15, color: COLORS[:violet], bold: true)
 slides << [slide_xml(s), slide_images]
 
+s = []
+slide_images = []
+magazine_rid = add_image(images, slide_images, "slides/172/assets/images/programistamagokladka.jpg")
+s << rect(2, 0, 0, SLIDE_W, SLIDE_H, fill: COLORS[:background])
+s << gradient_rect(3, 0, 0, SLIDE_W, 0.05, stops: [[0, COLORS[:signal], 100], [100, COLORS[:feature], 100]], angle: 0)
+s << text(5, "PATRON MEDIALNY · NOWY NUMER", 0.78, 0.40, 6.30, 0.30, size: 11, color: COLORS[:violet], bold: true)
+s << text(6, "Programista", 0.78, 0.96, 6.30, 0.76, size: 38, bold: true)
+s << text(10, "4/2026 (125)", 0.78, 2.10, 6.30, 0.58, size: 30, color: COLORS[:violet], bold: true)
+s << text(11, "ESP-NOW", 0.78, 3.18, 6.30, 0.72, size: 38, bold: true)
+s << text(12, "Protokół komunikacyjny\ndla drona", 0.78, 4.02, 6.30, 1.10, size: 28, color: COLORS[:muted], valign: "t")
+s << text(13, "programistamag.pl", 0.78, 5.94, 6.30, 0.46, size: 23, color: COLORS[:violet], bold: true)
+s << picture(14, magazine_rid, 7.70, 0.40, 4.83, 6.45, "Okładka Programista 4/2026 (125)")
+s << line(8, 0.78, 6.91, 12.53, 6.91, color: COLORS[:line], width: 1)
+s << text(9, "Łukasz Pyrzyk · Wroc.NET", 0.78, 7.05, 4.30, 0.20, size: 9, color: COLORS[:muted])
+s << text(7, "SLIDE_NUMBER", 11.52, 7.02, 0.95, 0.26, size: 11, color: COLORS[:purple], bold: true, align: "r")
+slides << [slide_xml(s), slide_images]
+
 s = base("Sezon 2026/2027", "Spotykamy się regularnie")
 s << text(10, "Trzeci wtorek miesiąca. Zaczynamy o 18:00.", 0.78, 1.92, 11.5, 0.48, size: 17, color: COLORS[:muted])
 dates = [["17 LIS", "dzisiaj · 18:00", true], ["15 GRU", "18:00", false], ["19 STY", "18:00", false]]
