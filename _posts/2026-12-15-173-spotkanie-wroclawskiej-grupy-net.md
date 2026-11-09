@@ -7,7 +7,9 @@ tags:
   - offline
 meetup_attendees: 0
 header:
-  teaser: /assets/images/spotkania-teaser.jpg
+  image: /assets/images/2026-12-15-173-meetup.jpg
+  teaser: /assets/images/2026-12-15-173-meetup.jpg
+  image_description: "Baner 173. spotkania Wroc.NET — Hleb Sukrystsik i Łukasz Hałas oraz Melchior Kozar"
 talks:
 - title: 'AI Software Engineering Workflows w praktyce'
   speaker_ids:
