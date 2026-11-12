@@ -515,7 +515,8 @@ hero_intro: "Praktyczna wiedza, doświadczenia z projektów i rozmowy z ludźmi 
       </div>
     </section>
 
-    {% assign supporting_partners = site.data.partners.supporting | where_exp: "partner", "partner.role != 'Patron medialny' and partner.role != 'Patron honorowy'" %}
+    {% assign supporting_partners = site.data.partners.supporting | where_exp: "partner", "partner.role != 'Patron medialny'" %}
+    {% assign supporting_partners = supporting_partners | where_exp: "partner", "partner.role != 'Patron honorowy'" %}
     {% assign honorary_partners = site.data.partners.supporting | where: "role", "Patron honorowy" %}
     {% assign media_partners = site.data.partners.supporting | where: "role", "Patron medialny" %}
     {% if supporting_partners.size > 0 %}
