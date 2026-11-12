@@ -9,5 +9,19 @@ Google Analytics 4 jest skonfigurowane w [_config.yml](_config.yml). [CookieCons
 - [Archiwum komunikacji](https://github.com/lukasz-pyrzyk/wrocnet.org/blob/main/office/content/README.md) — zapis treści i przykłady.
 - [Zasady pracy w repozytorium](https://github.com/lukasz-pyrzyk/wrocnet.org/blob/main/AGENTS.md).
 
-Sekcja partnerów na stronie głównej ma dwie poziome sekcje: wyróżnionych partnerów strategicznych oraz responsywną siatkę partnerów i patronów. Kolejne wpisy w [_data/partners.yml](_data/partners.yml) automatycznie tworzą nowe rzędy, bez zmian w szablonie. Gdy wszystkie wpisy `supporting` mają rolę „Patron medialny”, druga sekcja nosi nazwę „Patroni medialni”; przy innych rolach używa neutralnego nagłówka „Partnerzy i patroni”.
+## Lokalny podgląd
+
+Uruchom Docker, a następnie `./run.sh` i otwórz http://127.0.0.1:4001.
+Skrypt po udanym zbudowaniu obrazu zatrzymuje poprzednie lokalne kontenery strony
+(także z innych checkoutów), a następnie uruchamia jedną instancję `wrocnet-local`.
+Rozpoznaje je po etykiecie `org.wrocnet.local=true` lub starszej nazwie obrazu
+`wrocnet-local` (z dowolnym tagiem). Nie zatrzymuje innych aplikacji: jeśli obcy
+kontener publikuje port TCP hosta 4001 lub 35730 albo zajmuje nazwę `wrocnet-local`, zgłasza błąd.
+Kontenery usunięte w trakcie uruchamiania są pomijane z komunikatem; pozostałe błędy Dockera przerywają start.
+Nie uruchamiaj dodatkowych podglądów ręcznym `docker run`; używaj tego skryptu.
+Zatrzymanie: Ctrl+C lub `docker stop wrocnet-local`.
+
+## Partnerzy i patroni
+
+Sekcja na stronie głównej pokazuje obok siebie grupy „Partner strategiczny” (większe logo) i „Wspierają nas”, a poniżej oddzielny rząd „Patroni medialni”. Na telefonie grupy układają się jedna pod drugą. Wpisy `supporting` w [_data/partners.yml](_data/partners.yml) z rolą „Patron medialny” trafiają do grupy medialnej, a pozostałe do „Wspierają nas”. Kolejność w pliku wyznacza kolejność w każdej grupie; puste grupy są ukrywane. Logotypy są wyśrodkowane, a nowe wpisy automatycznie zawijają się do kolejnych rzędów.
 Nagłówki i logotypy są wyśrodkowane. Logotypy nie mają ramek ani widocznych podpisów; nazwa i rola każdego partnera znajdują się w tekście alternatywnym (`alt`), który nadaje też dostępną nazwę linkowi.
