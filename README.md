@@ -16,7 +16,8 @@ Skrypt po udanym zbudowaniu obrazu zatrzymuje poprzednie lokalne kontenery stron
 (także z innych checkoutów), a następnie uruchamia jedną instancję `wrocnet-local`.
 Rozpoznaje je po etykiecie `org.wrocnet.local=true` lub starszej nazwie obrazu
 `wrocnet-local` (z dowolnym tagiem). Nie zatrzymuje innych aplikacji: jeśli obcy
-kontener zajmuje port 4001 lub 35730 albo nazwę `wrocnet-local`, zgłasza błąd.
+kontener publikuje port TCP hosta 4001 lub 35730 albo zajmuje nazwę `wrocnet-local`, zgłasza błąd.
+Kontenery usunięte w trakcie uruchamiania są pomijane z komunikatem; pozostałe błędy Dockera przerywają start.
 Nie uruchamiaj dodatkowych podglądów ręcznym `docker run`; używaj tego skryptu.
 Zatrzymanie: Ctrl+C lub `docker stop wrocnet-local`.
 

@@ -20,13 +20,28 @@ scenario = json.loads(os.environ["DOCKER_SCENARIO"])
 if args == ["ps", "-aq"]:
     print("\\n".join(scenario.get("containers", {})))
 elif args[0] == "inspect":
-    print(scenario["containers"][args[-1]])
-elif args[0] == "ps" and "publish=4001" in args:
-    print("\\n".join(scenario.get("ports", [])))
+    container_id = args[-1]
+    if container_id in scenario.get("inspect_errors", []):
+        print("Inspection failed", file=sys.stderr)
+        sys.exit(7)
+    if ".NetworkSettings.Ports" in args[2]:
+        bindings = scenario.get("bindings", {}).get(container_id, {})
+        print(" ".join(
+            f"{port}:{binding['HostPort']}"
+            for port, values in bindings.items() for binding in values
+        ))
+    else:
+        print(scenario["containers"][container_id])
 elif args[0] == "ps":
+    if scenario.get("presence_error"):
+        print("Docker daemon unavailable", file=sys.stderr)
+        sys.exit(8)
     print(scenario.get("remaining", ""))
 elif args[0] == "build":
     sys.exit(scenario.get("build_exit", 0))
+elif args[0] == "stop" and args[-1] in scenario.get("stop_errors", []):
+    print("Stop failed", file=sys.stderr)
+    sys.exit(9)
 """
 
 
@@ -59,7 +74,6 @@ class RunScriptTests(unittest.TestCase):
                 "current": "custom-image|true|/wrocnet-local",
                 "other": "postgres:17|<no value>|/database",
             },
-            "ports": ["legacy", "current"],
         })
         self.assertEqual(result.returncode, 0, result.stderr)
         stops = [call for call in calls if call[0] == "stop"]
@@ -82,7 +96,14 @@ class RunScriptTests(unittest.TestCase):
 
     def test_refuses_unrecognized_port_or_name_owners(self):
         for scenario in [
-            {"ports": ["foreign"]},
+            {
+                "containers": {"foreign": "nginx|<no value>|/web"},
+                "bindings": {"foreign": {"80/tcp": [{"HostPort": "4001"}]}},
+            },
+            {
+                "containers": {"foreign": "nginx|<no value>|/web"},
+                "bindings": {"foreign": {"80/tcp": [{"HostPort": "35730"}]}},
+            },
             {"containers": {"foreign": "nginx|<no value>|/wrocnet-local"}},
         ]:
             with self.subTest(scenario=scenario):
@@ -92,6 +113,60 @@ class RunScriptTests(unittest.TestCase):
                 self.assertFalse(any(
                     call[0] in {"build", "stop", "rm", "run"} for call in calls
                 ))
+
+    def test_allows_other_host_ports_and_udp_bindings(self):
+        result, calls = self.run_script({
+            "containers": {"foreign": "nginx|<no value>|/web"},
+            "bindings": {"foreign": {
+                "4001/tcp": [{"HostPort": "5000"}],
+                "80/udp": [{"HostPort": "4001"}],
+            }},
+        })
+        self.assertEqual(result.returncode, 0, result.stderr)
+        self.assertFalse(any(call[0] == "stop" for call in calls))
+        self.assertEqual(calls[-1][0], "run")
+
+    def test_skips_containers_removed_before_inspection_or_stop(self):
+        for scenario in [
+            {
+                "containers": {"gone": "nginx|<no value>|/job"},
+                "inspect_errors": ["gone"],
+            },
+            {
+                "containers": {"gone": "wrocnet-local|true|/wrocnet-local"},
+                "stop_errors": ["gone"],
+            },
+        ]:
+            with self.subTest(scenario=scenario):
+                result, calls = self.run_script(scenario)
+                self.assertEqual(result.returncode, 0, result.stderr)
+                self.assertIn("was removed; skipping", result.stderr)
+                self.assertEqual(calls[-1][0], "run")
+
+    def test_preserves_errors_for_containers_that_still_exist(self):
+        for operation, status, message in [
+            ("inspect", 7, "Inspection failed"),
+            ("stop", 9, "Stop failed"),
+        ]:
+            with self.subTest(operation=operation):
+                result, calls = self.run_script({
+                    "containers": {"existing": "wrocnet-local|true|/wrocnet-local"},
+                    f"{operation}_errors": ["existing"],
+                    "remaining": "existing",
+                })
+                self.assertEqual(result.returncode, status)
+                self.assertIn(message, result.stderr)
+                self.assertFalse(any(call[0] == "run" for call in calls))
+
+    def test_preserves_daemon_errors_when_checking_container_presence(self):
+        result, calls = self.run_script({
+            "containers": {"existing": "nginx|<no value>|/job"},
+            "inspect_errors": ["existing"],
+            "presence_error": True,
+        })
+        self.assertEqual(result.returncode, 8)
+        self.assertIn("Docker daemon unavailable", result.stderr)
+        self.assertFalse(any(call[0] == "run" for call in calls))
 
     def test_failed_build_preserves_running_preview(self):
         result, calls = self.run_script({
