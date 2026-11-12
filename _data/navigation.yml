@@ -12,5 +12,7 @@ main:
     url: /wystapili-u-nas/
   - title: "Wspomnieli o nas"
     url: /wspomnieli-o-nas/
+  - title: "Współpraca"
+    url: /wspolpraca/
   - title: "O grupie"
     url: /o-grupie/

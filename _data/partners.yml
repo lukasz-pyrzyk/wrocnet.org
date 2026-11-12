@@ -4,6 +4,12 @@ strategic:
     logo: "/assets/images/partners/devstyle.png"
     role: "Partner strategiczny"
 
+honorary:
+  - name: "Przewodniczący Sejmiku Województwa Dolnośląskiego Jerzy Pokój"
+    url: "https://umwd.dolnyslask.pl/sejmik/"
+    logo: "/assets/images/partners/dolny-slask-patronat.png"
+    role: "Patronat honorowy"
+
 supporting:
   - name: "JetBrains"
     url: "https://www.jetbrains.com/"

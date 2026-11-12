@@ -23,5 +23,14 @@ Zatrzymanie: Ctrl+C lub `docker stop wrocnet-local`.
 
 ## Partnerzy i patroni
 
-Sekcja na stronie głównej pokazuje obok siebie grupy „Partner strategiczny” (większe logo) i „Wspierają nas”, a poniżej oddzielny rząd „Patroni medialni”. Na telefonie grupy układają się jedna pod drugą. Wpisy `supporting` w [_data/partners.yml](_data/partners.yml) z rolą „Patron medialny” trafiają do grupy medialnej, a pozostałe do „Wspierają nas”. Kolejność w pliku wyznacza kolejność w każdej grupie; puste grupy są ukrywane. Logotypy są wyśrodkowane, a nowe wpisy automatycznie zawijają się do kolejnych rzędów.
+Sekcja na stronie głównej pokazuje obok siebie grupy „Partner strategiczny” (większe logo) i „Wspierają nas”, a poniżej oddzielne rzędy „Patronat honorowy” (wpisy `honorary`) i „Patroni medialni”. Na telefonie grupy układają się jedna pod drugą. Wpisy `supporting` w [_data/partners.yml](_data/partners.yml) z rolą „Patron medialny” trafiają do grupy medialnej, a pozostałe do „Wspierają nas”. Kolejność w pliku wyznacza kolejność w każdej grupie; puste grupy są ukrywane. Logotypy są wyśrodkowane, a nowe wpisy automatycznie zawijają się do kolejnych rzędów.
 Nagłówki i logotypy są wyśrodkowane. Logotypy nie mają ramek ani widocznych podpisów; nazwa i rola każdego partnera znajdują się w tekście alternatywnym (`alt`), który nadaje też dostępną nazwę linkowi.
+Sekcja jest współdzielona ([_includes/partners-section.html](_includes/partners-section.html), style w [assets/css/partners.css](assets/css/partners.css)) przez stronę główną i stronę [Współpraca](_pages/wspolpraca.html) (`/wspolpraca/`).
+
+## Oferta sponsorska
+
+Strona `/wspolpraca/` prezentuje ofertę współpracy i linkuje do PDF [assets/offer/Oferta-WrocNET.pdf](assets/offer/Oferta-WrocNET.pdf). Źródłem PDF jest [assets/offer/Oferta-WrocNET.html](assets/offer/Oferta-WrocNET.html) (slajdy 1920×1080, zdjęcia w `assets/offer/photos/`); wyłączone z publikacji w `_config.yml` są tylko HTML i zdjęcia, a PDF jest publikowany. Zdjęcia w `photos/_web/` są zmniejszone i skompresowane (cel: PDF poniżej 3 MB), więc nowe dodawaj w podobnym rozmiarze. Po zmianie HTML wyeksportuj PDF ponownie, np. Edge/Chrome headless:
+`msedge --headless=new --no-pdf-header-footer --virtual-time-budget=15000 --print-to-pdf=assets/offer/Oferta-WrocNET.pdf file:///<ścieżka>/assets/offer/Oferta-WrocNET.html`
+
+Wersję dla sponsorów (z numerem telefonu, wysyłaną mailem) eksportuj poza repozytorium, podając numer w adresie, żeby nie trafił do repo: `--print-to-pdf=<katalog poza repo>\Oferta-WrocNET-sponsorzy.pdf "file:///<ścieżka>/assets/offer/Oferta-WrocNET.html?tel=%2B48%20XXX%20XXX%20XXX"`.
+Statystyki na stronie liczy [_includes/community-stats-data.html](_includes/community-stats-data.html) (wspólne ze stroną główną i `llms.txt`).
