@@ -9,7 +9,7 @@ header:
   overlay_color: "#100923"
   overlay_image: "/assets/images/wspolpraca/hero.webp"
   overlay_filter: "linear-gradient(90deg, rgba(16, 9, 35, 0.88), rgba(16, 9, 35, 0.35))"
-  og_image: "/assets/images/wspolpraca/hero.webp"
+  og_image: "/assets/images/wspolpraca/og.jpg"
   image_description: "Pełna sala uczestników spotkania Wroc.NET z podniesionymi rękami."
   actions:
     - label: "Pobierz ofertę"
@@ -48,7 +48,7 @@ header:
         {% assign signups_noun = "osób" %}
         {% if signups_mod10 >= 2 and signups_mod10 <= 4 %}{% assign signups_noun = "osoby" %}{% endif %}
         {% if signups_mod100 >= 12 and signups_mod100 <= 14 %}{% assign signups_noun = "osób" %}{% endif %}
-        <p>Na każde spotkanie zapisuje się średnio <strong>ponad 70 osób</strong>, a&nbsp;na <a href="{{ record_post.url | relative_url }}">rekordowe spotkanie</a> zapisało się <strong>{{ record_signups }} {{ signups_noun }}</strong>.</p>
+        <p>Od lutego do października 2026 roku na spotkanie zapisywało się średnio <strong>ponad 70 osób</strong>, a&nbsp;<a href="{{ record_post.url | relative_url }}">rekordowe spotkanie</a> zainteresowało <strong>{{ record_signups }} {{ signups_noun }}</strong>.</p>
       {% endif %}
     </div>
     <img class="offer-photo" src="{{ '/assets/images/wspolpraca/spolecznosc.webp' | relative_url }}" width="1200" height="800" loading="lazy" alt="Uczestnicy spotkania Wroc.NET na sali.">
@@ -67,7 +67,11 @@ header:
           {% assign name_parts = person.name | split: ' ' %}
           <li class="offer-ring__person" style="--i: {{ forloop.index0 }}">
             <span class="offer-ring__card">
-              <img src="{{ person.photo | relative_url }}" width="400" height="400" loading="lazy" alt="">
+              {% assign photo = person.photo %}
+              {% assign offer_photo = person.photo | split: '/' | last | prepend: '/assets/offer/photos/web/' %}
+              {% assign optimized_photo = site.static_files | where: "path", offer_photo | first %}
+              {% if optimized_photo %}{% assign photo = offer_photo %}{% endif %}
+              <img src="{{ photo | relative_url }}" width="400" height="400" loading="lazy" alt="">
               <span class="offer-ring__name">{{ name_parts[0] }}<br>{{ name_parts | shift | join: ' ' }}</span>
             </span>
           </li>

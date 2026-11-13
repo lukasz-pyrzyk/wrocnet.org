@@ -34,5 +34,5 @@ Strona `/wspolpraca/` prezentuje ofertę współpracy i linkuje do PDF [assets/o
 Po zmianie oferty, organizatorów lub partnerów uruchom lokalny podgląd (`./run.sh`) i wyeksportuj PDF ponownie, np. Edge/Chrome headless:
 `msedge --headless=new --no-pdf-header-footer --virtual-time-budget=15000 --print-to-pdf=assets/offer/Oferta-WrocNET.pdf http://127.0.0.1:4001/assets/offer/Oferta-WrocNET.html`
 
-Wersję dla sponsorów (z numerem telefonu, wysyłaną mailem) eksportuj poza repozytorium, podając numer w adresie, żeby nie trafił do repo: `--print-to-pdf=<katalog poza repo>\Oferta-WrocNET-sponsorzy.pdf "http://127.0.0.1:4001/assets/offer/Oferta-WrocNET.html?tel=%2B48%20XXX%20XXX%20XXX"`.
+Wersję dla sponsorów (z numerem telefonu, wysyłaną mailem) eksportuj poza repozytorium, podając numer w adresie, żeby nie trafił do repo: `--print-to-pdf=<katalog poza repo>\Oferta-WrocNET-sponsorzy.pdf "http://127.0.0.1:4001/assets/offer/Oferta-WrocNET.html?tel=%2B48%20XXX%20XXX%20XXX"`. Parametr `tel` działa tylko na `localhost`/`127.0.0.1`, więc spreparowany link na wrocnet.org nie podmieni numeru.
 Statystyki na stronie liczy [_includes/community-stats-data.html](_includes/community-stats-data.html) (wspólne ze stroną główną i `llms.txt`).

@@ -3,6 +3,7 @@ layout: null
 permalink: /assets/offer/Oferta-WrocNET.html
 ---
 {%- include offer-people.html -%}
+{%- include community-stats-data.html -%}
 <!doctype html>
 <html lang="pl">
 <head>
@@ -164,7 +165,7 @@ permalink: /assets/offer/Oferta-WrocNET.html
     <p>Jesteśmy społecznością skupioną wokół <span class="hl">technologii i&nbsp;produktów Microsoft</span>. Spotykamy się we Wrocławiu od <span class="hl">prawie 20&nbsp;lat</span>; pierwsze spotkanie odbyło się w&nbsp;listopadzie 2007 roku.</p>
     <p>Nie ograniczamy się do .NET. Rozmawiamy o&nbsp;chmurze, AI, architekturze i&nbsp;pracy w&nbsp;zespole, dlatego przychodzą do nas <span class="hl">programiści różnych technologii</span>. Spotkania odbywają się co miesiąc i&nbsp;są zawsze bezpłatne.</p>
     <div class="stats">
-      <div class="stat"><div class="num">171</div><div class="lbl">spotkań</div></div>
+      <div class="stat"><div class="num">{{ meeting_count }}</div><div class="lbl">spotkań</div></div>
       <div class="stat"><div class="num">2400+</div><div class="lbl">zapisanych gości</div></div>
       <div class="stat"><div class="num">300+</div><div class="lbl">prelekcji</div></div>
     </div>
@@ -179,10 +180,17 @@ permalink: /assets/offer/Oferta-WrocNET.html
   <div class="text">
     <h2>Społeczność</h2>
     <p>Tworzymy stale rosnącą społeczność, w&nbsp;której eksperci z&nbsp;ogromnym doświadczeniem spotykają się z&nbsp;osobami dopiero zaczynającymi przygodę z&nbsp;IT.</p>
-    <p>Na każde spotkanie zapisuje się średnio <span class="hl">ponad 70&nbsp;osób</span>. Rekord padł na 171. spotkaniu: zapisało się <span class="hl">ponad 200&nbsp;osób</span>, a&nbsp;frekwencja wyniosła <span class="hl">niemal 150&nbsp;osób</span>.</p>
+    {%- assign record_parts = record_post.path | split: '/' | last | split: '-' %}
+    {%- assign record_meeting_number = record_parts[3] %}
+    {%- assign signups_mod10 = record_signups | modulo: 10 %}
+    {%- assign signups_mod100 = record_signups | modulo: 100 %}
+    {%- assign signups_noun = "osób" %}
+    {%- if signups_mod10 >= 2 and signups_mod10 <= 4 %}{% assign signups_noun = "osoby" %}{% endif %}
+    {%- if signups_mod100 >= 12 and signups_mod100 <= 14 %}{% assign signups_noun = "osób" %}{% endif %}
+    <p>Od lutego do października 2026 roku na spotkanie zapisywało się średnio <span class="hl">ponad 70&nbsp;osób</span>. Rekordowe, {{ record_meeting_number }}. spotkanie zainteresowało <span class="hl">{{ record_signups }}&nbsp;{{ signups_noun }}</span>, a&nbsp;frekwencja wyniosła <span class="hl">niemal 150&nbsp;osób</span>.</p>
     <div class="stats">
       <div class="stat"><div class="num">70+</div><div class="lbl">średnio zapisanych</div></div>
-      <div class="stat"><div class="num">200+</div><div class="lbl">rekord zapisów</div></div>
+      <div class="stat"><div class="num">{{ record_signups }}</div><div class="lbl">rekord zainteresowania</div></div>
     </div>
   </div>
   <img class="logo logo-small" src="../images/logo.png" alt="">
@@ -318,8 +326,9 @@ permalink: /assets/offer/Oferta-WrocNET.html
 
 <script>
   // Phone is passed only at export time (?tel=...) so it never lives in the repo or the public PDF.
+  // Accepted only on the local preview, so a crafted link cannot show another number on wrocnet.org.
   const tel = new URLSearchParams(location.search).get("tel");
-  if (tel) {
+  if (tel && ["localhost", "127.0.0.1"].includes(location.hostname)) {
     const phone = document.getElementById("phone");
     const link = document.createElement("a");
     link.href = "tel:" + tel.replace(/\s/g, "");
