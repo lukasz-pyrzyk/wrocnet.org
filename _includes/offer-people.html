@@ -1,0 +1,11 @@
+{%- comment -%}
+  Shared by the partnership page and the offer PDF source.
+  Sets contact_person and people (organizers ring: contact person at the top, then _data/organizers.yml order).
+{%- endcomment -%}
+{%- assign contact_person = site.data.organizers | where: "name", "Tomasz Zawadzki" | first -%}
+{%- assign people = "" | split: "" | push: contact_person -%}
+{%- for person in site.data.organizers -%}
+  {%- if person.name != "" and person.photo != "" and person.name != contact_person.name -%}
+    {%- assign people = people | push: person -%}
+  {%- endif -%}
+{%- endfor -%}

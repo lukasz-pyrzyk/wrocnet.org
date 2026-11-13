@@ -125,9 +125,6 @@ exclude:
   - AGENTS.md
   - office
   - .github
-  # Source of the sponsorship PDF; only the exported PDF is published.
-  - assets/offer/Oferta-WrocNET.html
-  - assets/offer/photos
 
 plugins:
   - jekyll-sitemap

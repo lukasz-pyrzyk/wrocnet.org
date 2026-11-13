@@ -16,31 +16,9 @@ header:
       url: "/assets/offer/Oferta-WrocNET.pdf"
     - label: "Kontakt"
       url: "/wspolpraca/#kontakt"
-# Order of the organizers ring, starting at the top; anyone not listed follows.
-ring_order:
-  - "Tomasz Zawadzki"
-  - "Łukasz Pyrzyk"
-  - "Łukasz Olbromski"
-  - "Adam Dłubak"
-  - "Szymon Pulka"
-  - "Konrad Trochim"
-  - "Daniel Kowalski"
-  - "Beata Trawińska"
-  - "Tymoteusz Wojnarowski"
-  - "Jakub Woszczyna"
 ---
 {% include community-stats-data.html %}
-{% assign contact_person = site.data.organizers | where: "name", "Tomasz Zawadzki" | first %}
-{% assign people = "" | split: "" %}
-{% for name in page.ring_order %}
-  {% assign person = site.data.organizers | where: "name", name | first %}
-  {% if person %}{% assign people = people | push: person %}{% endif %}
-{% endfor %}
-{% for person in site.data.organizers %}
-  {% if person.name != "" and person.photo != "" %}
-    {% unless page.ring_order contains person.name %}{% assign people = people | push: person %}{% endunless %}
-  {% endif %}
-{% endfor %}
+{% include offer-people.html %}
 <link rel="stylesheet" href="{{ '/assets/css/partners.css' | relative_url }}">
 <link rel="stylesheet" href="{{ '/assets/css/wspolpraca.css' | relative_url }}">
 
