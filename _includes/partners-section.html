@@ -1,0 +1,79 @@
+{%- comment -%}
+  Partner logos from _data/partners.yml.
+  Params: title and intro (optional overrides), hide_intro=true drops the intro line, cta=true shows a link to the partnership page.
+{%- endcomment -%}
+<section class="partners-section" aria-labelledby="partners-title">
+  <header class="partners-heading">
+    <h2 id="partners-title">{{ include.title | default: "Wspierają Wroc.NET" }}</h2>
+    {% unless include.hide_intro %}<p>{{ include.intro | default: "Dzięki nim możemy regularnie spotykać się i rozwijać wrocławską społeczność .NET." }}</p>{% endunless %}
+  </header>
+
+  <div class="partners-layout">
+    <section class="partners-strategic" aria-labelledby="partners-strategic-title">
+      <h3 id="partners-strategic-title" class="partner-group-label">Partner strategiczny</h3>
+      <div class="partner-grid partner-grid--strategic">
+        {% for p in site.data.partners.strategic %}
+          <a href="{{ p.url }}" target="_blank" rel="noopener noreferrer" class="partner-strategic-link">
+            <img src="{{ p.logo }}" alt="{{ p.name | escape }} — {{ p.role | escape }}">
+          </a>
+        {% endfor %}
+      </div>
+    </section>
+
+    {% assign supporting_partners = site.data.partners.supporting | where_exp: "partner", "partner.role != 'Patron medialny'" %}
+    {% assign supporting_partners = supporting_partners | where_exp: "partner", "partner.role != 'Patron honorowy'" %}
+    {% assign honorary_partners = site.data.partners.supporting | where: "role", "Patron honorowy" %}
+    {% assign media_partners = site.data.partners.supporting | where: "role", "Patron medialny" %}
+    {% if supporting_partners.size > 0 %}
+    <section class="partners-supporting" aria-labelledby="partners-supporting-title">
+      <h3 id="partners-supporting-title" class="partner-group-label">Wspierają nas</h3>
+      <div class="partner-grid">
+        {% for p in supporting_partners %}
+          <a href="{{ p.url }}" target="_blank" rel="noopener noreferrer" class="partner-supporting-link">
+            <span class="partner-supporting-logo">
+              <img src="{{ p.logo }}" alt="{{ p.name | escape }} — {{ p.role | escape }}">
+            </span>
+          </a>
+        {% endfor %}
+      </div>
+    </section>
+    {% endif %}
+
+    {% if honorary_partners.size > 0 %}
+    <section class="partners-supporting partners-honorary" aria-labelledby="partners-honorary-title">
+      <h3 id="partners-honorary-title" class="partner-group-label">Patronat honorowy</h3>
+      <div class="partner-grid">
+        {% for p in honorary_partners %}
+          <a href="{{ p.url }}" target="_blank" rel="noopener noreferrer" class="partner-supporting-link">
+            <span class="partner-supporting-logo">
+              <img src="{{ p.logo }}" alt="{{ p.name | escape }} — {{ p.role | escape }}">
+            </span>
+          </a>
+        {% endfor %}
+      </div>
+    </section>
+    {% endif %}
+
+    {% if media_partners.size > 0 %}
+    <section class="partners-supporting partners-media" aria-labelledby="partners-media-title">
+      <h3 id="partners-media-title" class="partner-group-label">Patroni medialni</h3>
+      <div class="partner-grid">
+        {% for p in media_partners %}
+          <a href="{{ p.url }}" target="_blank" rel="noopener noreferrer" class="partner-supporting-link">
+            <span class="partner-supporting-logo">
+              <img src="{{ p.logo }}" alt="{{ p.name | escape }} — {{ p.role | escape }}">
+            </span>
+          </a>
+        {% endfor %}
+      </div>
+    </section>
+    {% endif %}
+  </div>
+
+  {% if include.cta %}
+  <p class="partners-cta">
+    Chcecie wspierać społeczność razem z nami?
+    <a href="{{ '/wspolpraca/' | relative_url }}">Zobaczcie ofertę współpracy <span aria-hidden="true">→</span></a>
+  </p>
+  {% endif %}
+</section>

@@ -1,0 +1,122 @@
+---
+title: "Współpraca z Wroc.NET"
+layout: splash
+permalink: /wspolpraca/
+author_profile: false
+excerpt: "Wroc.NET to bezpłatne spotkania społeczności .NET we Wrocławiu. Jesteśmy otwarci na współpracę i patronaty — zobacz ofertę i napisz do nas."
+hero_intro: "Jesteśmy otwarci na współprace i patronaty. Zapraszamy do kontaktu."
+header:
+  overlay_color: "#100923"
+  overlay_image: "/assets/images/wspolpraca/hero.webp"
+  overlay_filter: "linear-gradient(90deg, rgba(16, 9, 35, 0.88), rgba(16, 9, 35, 0.35))"
+  og_image: "/assets/images/wspolpraca/og.jpg"
+  image_description: "Pełna sala uczestników spotkania Wroc.NET z podniesionymi rękami."
+  actions:
+    - label: "Pobierz ofertę"
+      url: "/assets/offer/Oferta-WrocNET.pdf"
+    - label: "Kontakt"
+      url: "/wspolpraca/#kontakt"
+---
+{% include community-stats-data.html %}
+{% include offer-people.html %}
+<link rel="stylesheet" href="{{ '/assets/css/partners.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/css/wspolpraca.css' | relative_url }}">
+
+<div class="offer">
+
+  <section class="offer-slide" aria-labelledby="offer-about-title">
+    <div class="offer-slide__text">
+      <h2 id="offer-about-title">O nas</h2>
+      <p>Jesteśmy społecznością skupioną wokół <strong>technologii i&nbsp;produktów Microsoft</strong>. Spotykamy się we Wrocławiu od <strong>{{ founding_year }} roku</strong>.</p>
+      <p>Nie ograniczamy się do .NET. Rozmawiamy o&nbsp;chmurze, AI, architekturze i&nbsp;pracy w&nbsp;zespole, dlatego przychodzą do nas programiści różnych technologii. Spotkania odbywają się co miesiąc i&nbsp;są zawsze bezpłatne.</p>
+      <dl class="offer-stats">
+        <div><dt>lat społeczności</dt><dd>{{ community_years }}</dd></div>
+        <div><dt>spotkań</dt><dd>{{ meeting_count }}</dd></div>
+        <div><dt>prezentacji</dt><dd>{{ total_sessions }}</dd></div>
+      </dl>
+    </div>
+    <img class="offer-photo" src="{{ '/assets/images/community/sala.webp' | relative_url }}" width="1800" height="1200" loading="lazy" alt="Pełna sala uczestników spotkania Wroc.NET.">
+  </section>
+
+  <section class="offer-slide offer-slide--reverse" aria-labelledby="offer-community-title">
+    <div class="offer-slide__text">
+      <h2 id="offer-community-title">Społeczność</h2>
+      <p>Tworzymy stale rosnącą społeczność, w&nbsp;której eksperci z&nbsp;dużym doświadczeniem spotykają się z&nbsp;osobami dopiero zaczynającymi przygodę z&nbsp;IT.</p>
+      {% if record_signups > 0 %}
+        {% assign signups_mod10 = record_signups | modulo: 10 %}
+        {% assign signups_mod100 = record_signups | modulo: 100 %}
+        {% assign signups_noun = "osób" %}
+        {% if signups_mod10 >= 2 and signups_mod10 <= 4 %}{% assign signups_noun = "osoby" %}{% endif %}
+        {% if signups_mod100 >= 12 and signups_mod100 <= 14 %}{% assign signups_noun = "osób" %}{% endif %}
+        <p>Od lutego do października 2026 roku na spotkanie zapisywało się średnio <strong>ponad 70 osób</strong>, a&nbsp;<a href="{{ record_post.url | relative_url }}">rekordowe spotkanie</a> zainteresowało <strong>{{ record_signups }} {{ signups_noun }}</strong>.</p>
+      {% endif %}
+    </div>
+    <img class="offer-photo" src="{{ '/assets/images/wspolpraca/spolecznosc.webp' | relative_url }}" width="1200" height="800" loading="lazy" alt="Uczestnicy spotkania Wroc.NET na sali.">
+  </section>
+
+  <section class="offer-slide" aria-labelledby="offer-org-title">
+    <div class="offer-slide__text">
+      <h2 id="offer-org-title">Organizacja</h2>
+      <p>Każde z&nbsp;nas pracuje gdzie indziej, ale łączy nas pasja i&nbsp;chęć tworzenia miejsca do rozmów o&nbsp;technologii. Grupę organizujemy po godzinach, całkowicie <strong>pro bono</strong>.</p>
+      <p><a href="{{ '/organizatorzy/' | relative_url }}">Poznaj organizatorów <span aria-hidden="true">→</span></a></p>
+    </div>
+    <div class="offer-ring-wrap">
+      <ul class="offer-ring" style="--n: {{ people.size }}">
+        <li class="offer-ring__logo" aria-hidden="true"><img src="{{ '/assets/images/logo.png' | relative_url }}" width="225" height="225" loading="lazy" alt=""></li>
+        {% for person in people %}
+          {% assign name_parts = person.name | split: ' ' %}
+          <li class="offer-ring__person" style="--i: {{ forloop.index0 }}">
+            <span class="offer-ring__card">
+              {% assign photo = person.photo %}
+              {% assign offer_photo = person.photo | split: '/' | last | prepend: '/assets/offer/photos/web/' %}
+              {% assign optimized_photo = site.static_files | where: "path", offer_photo | first %}
+              {% if optimized_photo %}{% assign photo = offer_photo %}{% endif %}
+              <img src="{{ photo | relative_url }}" width="400" height="400" loading="lazy" alt="">
+              <span class="offer-ring__name">{{ name_parts[0] }}<br>{{ name_parts | shift | join: ' ' }}</span>
+            </span>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </section>
+
+  <section class="offer-slide offer-slide--reverse" aria-labelledby="offer-speakers-title">
+    <div class="offer-slide__text">
+      <h2 id="offer-speakers-title">Prelegenci</h2>
+      <p>Mocno stawiamy na <strong>merytorykę i&nbsp;jakość</strong> spotkań. Zapraszamy prelegentów z&nbsp;całej Polski: praktyków, twórców open source i&nbsp;ekspertów rozpoznawalnych w&nbsp;branży.</p>
+      <p>Duży nacisk kładziemy na <strong>sztuczną inteligencję</strong>. Gościmy osoby, które dzielą się doświadczeniami z&nbsp;wdrażania AI w&nbsp;prawdziwych projektach.</p>
+      <dl class="offer-stats">
+        <div><dt>prelegentów i prelegentek</dt><dd>{{ site.data.speakers | size }}</dd></div>
+        <div><dt>prezentacji</dt><dd>{{ total_sessions }}</dd></div>
+      </dl>
+    </div>
+    <img class="offer-photo" src="{{ '/assets/images/wspolpraca/prelegent.webp' | relative_url }}" width="1200" height="800" loading="lazy" alt="Prelegent podczas wystąpienia na spotkaniu Wroc.NET.">
+  </section>
+
+  <section class="offer-slide" aria-labelledby="offer-support-title">
+    <div class="offer-slide__text">
+      <h2 id="offer-support-title">Wsparcie</h2>
+      <p>Żeby co miesiąc gościć we Wrocławiu ekspertów z&nbsp;całej Polski, potrzebujemy wsparcia. Środki od partnerów przeznaczamy na:</p>
+      <ul class="offer-needs">
+        <li>transport prelegentów spoza Wrocławia,</li>
+        <li>nocleg dla zaproszonych gości.</li>
+      </ul>
+      <p>Dzięki temu spotkania pozostają bezpłatne, a&nbsp;ich poziom merytoryczny stale rośnie.</p>
+    </div>
+    <img class="offer-photo" src="{{ '/assets/images/wspolpraca/marka.webp' | relative_url }}" width="1200" height="800" loading="lazy" alt="Osoby w koszulkach partnera devstyle na spotkaniu Wroc.NET.">
+  </section>
+
+  {% include partners-section.html title="Współpracują z nami" hide_intro=true %}
+
+  <section class="offer-contact" id="kontakt" aria-labelledby="offer-contact-title">
+    <img class="offer-contact__photo" src="{{ contact_person.photo | relative_url }}" width="400" height="400" loading="lazy" alt="{{ contact_person.name }}">
+    <h2 id="offer-contact-title">Kontakt</h2>
+    <p class="offer-contact__name">{{ contact_person.name }}</p>
+    <p class="offer-contact__role">w imieniu organizatorów Wroc.NET</p>
+    <div class="offer-contact__actions">
+      <a class="btn btn--primary" href="mailto:tomasz.zawadzki@wrocnet.org"><i class="fas fa-envelope" aria-hidden="true"></i> tomasz.zawadzki@wrocnet.org</a>
+      <a class="btn btn--primary" href="{{ contact_person.linkedin }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin" aria-hidden="true"></i> LinkedIn</a>
+    </div>
+  </section>
+
+</div>

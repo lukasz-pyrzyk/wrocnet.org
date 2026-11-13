@@ -1,0 +1,3 @@
+{%- comment -%} One partner logo in the offer PDF; the pl--<logo file name> class allows per-logo size tweaks. {%- endcomment -%}
+{%- assign logo_key = include.partner.logo | split: "/" | last | split: "." | first %}
+      <span class="pl pl--{{ logo_key }}"><img src="{{ include.partner.logo | relative_url }}" alt="{{ include.partner.name | escape }}"></span>
