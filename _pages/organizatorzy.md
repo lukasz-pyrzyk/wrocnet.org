@@ -44,12 +44,14 @@ classes: wide
 
 <style>
 .organizers-grid {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 2rem;
   margin-top: 1.5rem;
 }
 .organizer-card {
+  flex: 0 0 calc((100% - 3 * 2rem) / 4);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -107,18 +109,19 @@ classes: wide
 
 @media (max-width: 1024px) {
   .organizers-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 1.25rem;
+  }
+  .organizer-card {
+    flex-basis: calc((100% - 1.25rem) / 2);
   }
 }
 
 @media (max-width: 640px) {
   .organizers-grid {
-    grid-template-columns: 1fr;
     gap: 1rem;
   }
-
   .organizer-card {
+    flex-basis: 100%;
     padding: 1rem;
   }
 
