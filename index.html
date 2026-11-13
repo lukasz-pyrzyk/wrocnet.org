@@ -412,7 +412,8 @@ hero_intro: "Praktyczna wiedza, doświadczenia z projektów i rozmowy z ludźmi 
   justify-content: center;
   gap: 0.75rem;
 }
-.partners-media {
+.partners-media,
+.partners-honorary {
   grid-column: 1 / -1;
   padding-top: 1.5rem;
   border-top: 1px solid #eee8f2;
@@ -473,6 +474,14 @@ hero_intro: "Praktyczna wiedza, doświadczenia z projektów i rozmowy z ludźmi 
 .partners-media .partner-supporting-logo {
   height: 3.25rem;
 }
+.partners-honorary .partner-supporting-link {
+  width: 20rem;
+  max-width: 100%;
+}
+.partners-honorary .partner-supporting-logo {
+  max-width: 20rem;
+  height: 8rem;
+}
 @media (max-width: 720px) {
   .partners-layout {
     grid-template-columns: minmax(0, 1fr);
@@ -507,12 +516,29 @@ hero_intro: "Praktyczna wiedza, doświadczenia z projektów i rozmowy z ludźmi 
     </section>
 
     {% assign supporting_partners = site.data.partners.supporting | where_exp: "partner", "partner.role != 'Patron medialny'" %}
+    {% assign supporting_partners = supporting_partners | where_exp: "partner", "partner.role != 'Patron honorowy'" %}
+    {% assign honorary_partners = site.data.partners.supporting | where: "role", "Patron honorowy" %}
     {% assign media_partners = site.data.partners.supporting | where: "role", "Patron medialny" %}
     {% if supporting_partners.size > 0 %}
     <section class="partners-supporting" aria-labelledby="partners-supporting-title">
       <h3 id="partners-supporting-title" class="partner-group-label">Wspierają nas</h3>
       <div class="partner-grid">
         {% for p in supporting_partners %}
+          <a href="{{ p.url }}" target="_blank" rel="noopener noreferrer" class="partner-supporting-link">
+            <span class="partner-supporting-logo">
+              <img src="{{ p.logo }}" alt="{{ p.name | escape }} — {{ p.role | escape }}">
+            </span>
+          </a>
+        {% endfor %}
+      </div>
+    </section>
+    {% endif %}
+
+    {% if honorary_partners.size > 0 %}
+    <section class="partners-supporting partners-honorary" aria-labelledby="partners-honorary-title">
+      <h3 id="partners-honorary-title" class="partner-group-label">Patronat honorowy</h3>
+      <div class="partner-grid">
+        {% for p in honorary_partners %}
           <a href="{{ p.url }}" target="_blank" rel="noopener noreferrer" class="partner-supporting-link">
             <span class="partner-supporting-logo">
               <img src="{{ p.logo }}" alt="{{ p.name | escape }} — {{ p.role | escape }}">
