@@ -110,21 +110,13 @@
   padding-top: 1.5rem;
   border-top: 1px solid #eee8f2;
 }
-.partner-honorary-link {
-  display: block;
-  width: 14rem;
+.partners-honorary .partner-supporting-link {
+  width: 20rem;
   max-width: 100%;
-  padding: 0.5rem;
 }
-.partner-honorary-link:hover { opacity: 0.8; }
-.partner-honorary-link:focus-visible {
-  outline: 3px solid #641e78;
-  outline-offset: 4px;
-}
-.partner-honorary-link img {
-  display: block;
-  width: 100%;
-  height: auto;
+.partners-honorary .partner-supporting-logo {
+  max-width: 20rem;
+  height: 8rem;
 }
 .partners-section .partners-cta {
   margin: 2.25rem 0 0;
