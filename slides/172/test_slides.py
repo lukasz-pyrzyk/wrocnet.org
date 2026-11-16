@@ -1,4 +1,5 @@
 import os
+import io
 from pathlib import Path
 import posixpath
 import subprocess
@@ -6,6 +7,8 @@ import tempfile
 import unittest
 import xml.etree.ElementTree as ET
 import zipfile
+
+from PIL import Image
 
 
 DIRECTORY = Path(__file__).resolve().parent
@@ -26,6 +29,8 @@ class SlidesTest(unittest.TestCase):
         cls.temporary = tempfile.TemporaryDirectory()
         cls.addClassCleanup(cls.temporary.cleanup)
         cls.output = Path(cls.temporary.name) / "slides.pptx"
+        environment = os.environ.copy()
+        environment["TMPDIR"] = cls.temporary.name
         subprocess.run(
             [
                 os.environ.get("RUBY", "ruby"),
@@ -35,12 +40,13 @@ class SlidesTest(unittest.TestCase):
             check=True,
             capture_output=True,
             text=True,
+            env=environment,
         )
         cls.archive = zipfile.ZipFile(cls.output)
         cls.addClassCleanup(cls.archive.close)
         cls.slides = [
             ET.fromstring(cls.archive.read(f"ppt/slides/slide{index}.xml"))
-            for index in range(1, 16)
+            for index in range(1, 17)
         ]
 
     def test_package_xml_and_relationships(self):
@@ -60,7 +66,7 @@ class SlidesTest(unittest.TestCase):
                             )
                             self.assertIn(target, names, (name, target))
         presentation = ET.fromstring(self.archive.read("ppt/presentation.xml"))
-        self.assertEqual(len(presentation.findall("p:sldIdLst/p:sldId", NS)), 15)
+        self.assertEqual(len(presentation.findall("p:sldIdLst/p:sldId", NS)), 16)
 
     def test_shape_ids_alignment_and_bounds(self):
         presentation = ET.fromstring(self.archive.read("ppt/presentation.xml"))
@@ -106,7 +112,7 @@ class SlidesTest(unittest.TestCase):
             return x, y, x + int(extent.get("cx")), y + int(extent.get("cy"))
 
         for picture in cover.findall(".//p:pic", NS):
-            if picture.find("p:spPr/a:prstGeom", NS).get("prst") != "ellipse":
+            if not picture.find("p:nvPicPr/p:cNvPr", NS).get("descr", "").startswith("Okrągły portret:"):
                 continue
             left, top, right, bottom = bounds(picture)
             for shape in cover.findall(".//p:sp", NS):
@@ -122,7 +128,8 @@ class SlidesTest(unittest.TestCase):
         markers = [
             "172. SPOTKANIE WROC.NET",
             "O grupie",
-            "Wspiera nas Devstyle",
+            "Dziękujemy za wsparcie Wroc.NET",
+            "Pomagają nam dotrzeć do Was",
             "Programista",
             "Spotykamy się regularnie",
             "Pub Wędrówki",
@@ -140,12 +147,12 @@ class SlidesTest(unittest.TestCase):
             text = slide_text(slide)
             self.assertIn(marker, text)
             self.assertNotIn("SLIDE_NUMBER", text)
-            if 2 <= index <= 14:
+            if 2 <= index <= 15:
                 self.assertIn(f"{index:02}", text.splitlines())
         self.assertNotIn("ZACZYNAMY O 18:00", slide_text(self.slides[0]))
 
     def test_magazine_cover_follows_partners_without_cropping(self):
-        slide = self.slides[3]
+        slide = self.slides[4]
         text = slide_text(slide)
         for value in ["Programista", "4/2026 (125)", "ESP-NOW", "programistamag.pl"]:
             self.assertIn(value, text)
@@ -166,10 +173,13 @@ class SlidesTest(unittest.TestCase):
 
     def test_partner_logos_and_screenshots_keep_proportions(self):
         expected = {
-            "Logo Devstyle": (600, 120),
+            "Logo devstyle": (600, 120),
+            "Logo Przewodniczący Sejmiku Województwa Dolnośląskiego Jerzy Pokój": (1279, 604),
+            "Logo JetBrains": (800, 487),
+            "Logo .NET Foundation": (400, 400),
             "Logo Wrocławski Portal": (600, 532),
             "Logo Fakty Wrocław": (983, 158),
-            "Logo PTI Oddział Dolnośląski": (457, 187),
+            "Logo Polskie Towarzystwo Informatyczne - Oddział Dolnośląski": (457, 187),
             "Logo dlaStudenta.pl": (2049, 473),
             "Logo Magazyn Programista": (2362, 459),
             "Strona główna wrocnet.org": (1440, 830),
@@ -181,6 +191,10 @@ class SlidesTest(unittest.TestCase):
                 name = picture.find("p:nvPicPr/p:cNvPr", NS).get("name")
                 if name in expected:
                     found.add(name)
+                    crop = picture.find("p:blipFill/a:srcRect", NS)
+                    self.assertTrue(
+                        all(int(value) == 0 for value in crop.attrib.values()), name
+                    )
                     extent = picture.find("p:spPr/a:xfrm/a:ext", NS)
                     width, height = expected[name]
                     self.assertAlmostEqual(
@@ -191,17 +205,35 @@ class SlidesTest(unittest.TestCase):
                     )
         self.assertEqual(found, set(expected))
 
+    def test_partner_roles_and_no_beer_references(self):
+        primary = slide_text(self.slides[2])
+        for role in ["PARTNER STRATEGICZNY", "PATRON HONOROWY", "PARTNER"]:
+            self.assertIn(role, primary)
+        self.assertIn("PATRONI MEDIALNI", slide_text(self.slides[3]))
+        for slide in self.slides:
+            self.assertNotRegex(slide_text(slide).lower(), r"piw|🍺")
+        self.assertIn("NAPOJE", slide_text(self.slides[6]))
+        self.assertIn("Napoje. Rozmowy. Networking.", slide_text(self.slides[11]))
+
     def test_panel_portraits_and_centering(self):
         panel = self.slides[-1]
         portraits = [
             picture for picture in panel.findall(".//p:pic", NS)
-            if picture.find("p:spPr/a:prstGeom", NS).get("prst") == "ellipse"
+            if picture.find("p:nvPicPr/p:cNvPr", NS).get("descr", "").startswith("Okrągły portret:")
         ]
         self.assertEqual(len(portraits), 3)
         extents = [
             picture.find("p:spPr/a:xfrm/a:ext", NS).attrib for picture in portraits
         ]
         self.assertTrue(all(extent == extents[0] for extent in extents))
+        ordered = sorted(
+            portraits,
+            key=lambda picture: int(picture.find("p:spPr/a:xfrm/a:off", NS).get("x")),
+        )
+        self.assertEqual(
+            [picture.find("p:nvPicPr/p:cNvPr", NS).get("name") for picture in ordered],
+            ["ŁUKASZ PYRZYK", "PIOTR GANKIEWICZ", "ŁUKASZ OLBROMSKI"],
+        )
         for shape in panel.findall(".//p:sp", NS):
             if shape.find("p:txBody", NS) is not None:
                 text = slide_text(shape)
@@ -209,8 +241,56 @@ class SlidesTest(unittest.TestCase):
                     for paragraph in shape.findall(".//a:pPr", NS):
                         self.assertEqual(paragraph.get("algn"), "ctr")
 
+    def test_portraits_have_baked_masks_without_decorative_lines_or_circles(self):
+        portraits = 0
+        for index, slide in enumerate(self.slides, 1):
+            relationships = ET.fromstring(
+                self.archive.read(f"ppt/slides/_rels/slide{index}.xml.rels")
+            )
+            targets = {
+                relation.get("Id"): posixpath.normpath(
+                    posixpath.join("ppt/slides", relation.get("Target"))
+                )
+                for relation in relationships
+            }
+            for geometry in slide.findall(".//a:prstGeom", NS):
+                self.assertNotIn(geometry.get("prst"), {"line", "ellipse"})
+            for picture in slide.findall(".//p:pic", NS):
+                if not picture.find("p:nvPicPr/p:cNvPr", NS).get("descr", "").startswith("Okrągły portret:"):
+                    continue
+                portraits += 1
+                relationship = picture.find("p:blipFill/a:blip", NS).get(f"{{{NS['r']}}}embed")
+                with Image.open(io.BytesIO(self.archive.read(targets[relationship]))) as image:
+                    self.assertEqual(image.mode, "RGBA")
+                    alpha = image.getchannel("A")
+                    self.assertEqual(alpha.getpixel((0, 0)), 0)
+                    self.assertEqual(alpha.getpixel((image.width - 1, image.height - 1)), 0)
+                    self.assertEqual(alpha.getpixel((image.width // 2, image.height // 2)), 255)
+        self.assertEqual(portraits, 20)
+
+    def test_partner_cards_use_dark_surfaces(self):
+        for slide, expected_cards in zip(self.slides[2:4], [4, 5]):
+            white_area = 0
+            dark_cards = 0
+            for shape in slide.findall(".//p:sp", NS):
+                fill = shape.find("p:spPr/a:solidFill/a:srgbClr", NS)
+                if fill is not None:
+                    if fill.get("val") == "FFFFFF":
+                        extent = shape.find("p:spPr/a:xfrm/a:ext", NS)
+                        white_area += int(extent.get("cx")) * int(extent.get("cy"))
+                    if fill.get("val") == "291A35":
+                        dark_cards += 1
+            self.assertEqual(dark_cards, expected_cards)
+            self.assertLess(white_area / (914400 ** 2), 21)
+
+    def test_prepared_portraits_are_cleaned_up_after_generation(self):
+        self.assertEqual(
+            list(Path(self.temporary.name).glob("wrocnet-172-portraits-*")),
+            [],
+        )
+
     def test_next_meetup_and_preserved_content(self):
-        next_meetup = slide_text(self.slides[11])
+        next_meetup = slide_text(self.slides[12])
         for value in [
             "Czy Result Pattern daje rezultaty?",
             "AI Software Engineering Workflows w praktyce",
@@ -220,20 +300,21 @@ class SlidesTest(unittest.TestCase):
         ]:
             self.assertIn(value, next_meetup)
         self.assertNotIn("Program ogłosimy wkrótce", next_meetup)
-        organizers = slide_text(self.slides[8])
+        organizers = slide_text(self.slides[9])
         for surname in [
             "Pyrzyk", "Olbromski", "Kowalski", "Trawińska",
             "Zawadzki", "Dłubak", "Pulka", "Wojnarowski",
+            "Woszczyna", "Trochim",
         ]:
             self.assertIn(surname, organizers)
         for slide in self.slides:
             self.assertNotIn("80 napojów", slide_text(slide))
             self.assertNotIn("na koszt sponsora", slide_text(slide))
         for value in ["18:15", "19:15", "20:15"]:
-            self.assertIn(value, slide_text(self.slides[12]))
+            self.assertIn(value, slide_text(self.slides[13]))
 
     def test_qr_crop_and_readable_type(self):
-        whatsapp = self.slides[9]
+        whatsapp = self.slides[10]
         picture = next(
             picture for picture in whatsapp.findall(".//p:pic", NS)
             if picture.find("p:nvPicPr/p:cNvPr", NS).get("name").startswith("Kod QR")
@@ -247,7 +328,7 @@ class SlidesTest(unittest.TestCase):
             for run in slide.findall(".//a:rPr", NS)
         }
         self.assertEqual(fonts, {"Arial"})
-        self.assertNotIn("🍺", slide_text(self.slides[10]))
+        self.assertNotIn("🍺", slide_text(self.slides[11]))
 
 
 if __name__ == "__main__":
