@@ -7,10 +7,13 @@ require "time"
 require "zlib"
 require "date"
 require "yaml"
+require "tmpdir"
 
 ROOT = File.expand_path("../..", __dir__)
 OUTPUT = File.expand_path(ARGV.fetch(0, File.join(__dir__, "2026-11-17-172-spotkanie.pptx")))
 IMAGE_SIZES = {}
+PORTRAIT_DIRECTORY = Dir.mktmpdir("wrocnet-172-portraits-")
+at_exit { FileUtils.remove_entry(PORTRAIT_DIRECTORY) }
 
 SLIDE_W = 40.0 / 3
 SLIDE_H = 7.5
@@ -75,20 +78,6 @@ def gradient_rect(id, x, y, w, h, stops:, angle: 5400000)
   XML
 end
 
-def ellipse(id, x, y, w, h, fill:, line: nil)
-  outline = line ? %(<a:ln w="19050"><a:solidFill><a:srgbClr val="#{line}"/></a:solidFill></a:ln>) : %(<a:ln><a:noFill/></a:ln>)
-  <<~XML
-    <p:sp>
-      <p:nvSpPr><p:cNvPr id="#{id}" name="Circle #{id}"/><p:cNvSpPr/><p:nvPr/></p:nvSpPr>
-      <p:spPr>
-        <a:xfrm><a:off x="#{emu(x)}" y="#{emu(y)}"/><a:ext cx="#{emu(w)}" cy="#{emu(h)}"/></a:xfrm>
-        <a:prstGeom prst="ellipse"><a:avLst/></a:prstGeom>
-        <a:solidFill><a:srgbClr val="#{fill}"/></a:solidFill>#{outline}
-      </p:spPr>
-    </p:sp>
-  XML
-end
-
 def text(id, value, x, y, w, h, size: 24, color: COLORS[:ink], bold: false, align: "l", valign: "ctr", font: "Arial", margin: 0)
   alignment = { "l" => "l", "c" => "ctr", "r" => "r" }.fetch(align)
   paragraphs = value.to_s.split("\n", -1).map do |line|
@@ -99,15 +88,6 @@ def text(id, value, x, y, w, h, size: 24, color: COLORS[:ink], bold: false, alig
       <p:nvSpPr><p:cNvPr id="#{id}" name="Text #{id}"/><p:cNvSpPr txBox="1"/><p:nvPr/></p:nvSpPr>
       <p:spPr><a:xfrm><a:off x="#{emu(x)}" y="#{emu(y)}"/><a:ext cx="#{emu(w)}" cy="#{emu(h)}"/></a:xfrm><a:prstGeom prst="rect"><a:avLst/></a:prstGeom><a:noFill/><a:ln><a:noFill/></a:ln></p:spPr>
       <p:txBody><a:bodyPr anchor="#{valign}" lIns="#{emu(margin)}" rIns="#{emu(margin)}" tIns="#{emu(margin)}" bIns="#{emu(margin)}"/><a:lstStyle/>#{paragraphs}</p:txBody>
-    </p:sp>
-  XML
-end
-
-def line(id, x1, y1, x2, y2, color: COLORS[:line], width: 1.5)
-  <<~XML
-    <p:sp>
-      <p:nvSpPr><p:cNvPr id="#{id}" name="Line #{id}"/><p:cNvSpPr/><p:nvPr/></p:nvSpPr>
-      <p:spPr><a:xfrm><a:off x="#{emu(x1)}" y="#{emu(y1)}"/><a:ext cx="#{emu(x2 - x1)}" cy="#{emu(y2 - y1)}"/></a:xfrm><a:prstGeom prst="line"><a:avLst/></a:prstGeom><a:ln w="#{(width * 12_700).round}"><a:solidFill><a:srgbClr val="#{color}"/></a:solidFill></a:ln></p:spPr>
     </p:sp>
   XML
 end
@@ -135,11 +115,20 @@ def picture(id, relationship_id, x, y, w, h, name = "Image", round: false, fit: 
   crop_xml = %(<a:srcRect l="#{(left * 100_000.0 / full_w).round}" r="#{((full_w - right) * 100_000.0 / full_w).round}" t="#{(top * 100_000.0 / full_h).round}" b="#{((full_h - bottom) * 100_000.0 / full_h).round}"/>)
   <<~XML
     <p:pic>
-      <p:nvPicPr><p:cNvPr id="#{id}" name="#{esc(name)}"/><p:cNvPicPr><a:picLocks noChangeAspect="1"/></p:cNvPicPr><p:nvPr/></p:nvPicPr>
+      <p:nvPicPr><p:cNvPr id="#{id}" name="#{esc(name)}" descr="#{esc(round ? "Okrągły portret: #{name}" : name)}"/><p:cNvPicPr><a:picLocks noChangeAspect="1"/></p:cNvPicPr><p:nvPr/></p:nvPicPr>
       <p:blipFill><a:blip r:embed="#{relationship_id}"/>#{crop_xml}<a:stretch><a:fillRect/></a:stretch></p:blipFill>
-      <p:spPr><a:xfrm><a:off x="#{emu(x)}" y="#{emu(y)}"/><a:ext cx="#{emu(w)}" cy="#{emu(h)}"/></a:xfrm><a:prstGeom prst="#{round ? 'ellipse' : 'rect'}"><a:avLst/></a:prstGeom><a:ln><a:noFill/></a:ln></p:spPr>
+      <p:spPr><a:xfrm><a:off x="#{emu(x)}" y="#{emu(y)}"/><a:ext cx="#{emu(w)}" cy="#{emu(h)}"/></a:xfrm><a:prstGeom prst="rect"><a:avLst/></a:prstGeom><a:ln><a:noFill/></a:ln></p:spPr>
     </p:pic>
   XML
+end
+
+def partner_logo(id, relationship_id, x, y, w, h, name)
+  source_w, source_h = IMAGE_SIZES.fetch(relationship_id)
+  scale = [w / source_w, h / source_h].min
+  fitted_w, fitted_h = source_w * scale, source_h * scale
+  left, top = x + (w - fitted_w) / 2, y + (h - fitted_h) / 2
+  rect(id, left - 0.12, top - 0.12, fitted_w + 0.24, fitted_h + 0.24, fill: COLORS[:white], radius: true) +
+    picture(id + 1, relationship_id, x, y, w, h, "Logo #{name}")
 end
 
 def base(kicker, title)
@@ -149,7 +138,6 @@ def base(kicker, title)
   shapes << text(5, kicker.upcase, 0.78, 0.40, 10.0, 0.30, size: 11, color: COLORS[:violet], bold: true)
   shapes << text(6, title, 0.78, 0.88, 10.8, 0.76, size: 32, bold: true)
   shapes << text(7, "SLIDE_NUMBER", 11.52, 0.43, 0.95, 0.62, size: 24, color: COLORS[:purple], bold: true, align: "r")
-  shapes << line(8, 0.78, 6.91, 12.53, 6.91, color: COLORS[:line], width: 1)
   shapes << text(9, "Łukasz Pyrzyk  ·  Wroc.NET", 0.78, 7.05, 4.3, 0.20, size: 9, color: COLORS[:muted])
   shapes
 end
@@ -203,6 +191,15 @@ end
 def add_image(images, slide_images, path)
   absolute = File.join(ROOT, path)
   raise "Missing image: #{absolute}" unless File.file?(absolute)
+
+  if path.start_with?("assets/images/speakers/", "assets/images/organizers/")
+    prepared_absolute = File.join(PORTRAIT_DIRECTORY, "#{File.basename(path, '.*')}-round.png")
+    script = File.join(__dir__, "prepare_portrait.py")
+    unless File.file?(prepared_absolute)
+      system("python3", script, absolute, prepared_absolute, exception: true)
+    end
+    path, absolute = prepared_absolute, prepared_absolute
+  end
 
   media = images[path] ||= begin
     extension = File.extname(path).downcase.delete_prefix(".")
@@ -279,37 +276,69 @@ s << text(10, "Wrocławska społeczność programistów .NET", 0.78, 1.90, 8.60,
   s << text(20 + index * 2, value, x, 2.82, 2.05, 0.90, size: 46, color: COLORS[:white], bold: true)
   s << text(21 + index * 2, label, x, 3.83, 2.05, 0.70, size: 14, color: "DACCE0", valign: "t")
 end
-s << line(30, 0.78, 4.72, 9.05, 4.72, color: "5E3B69")
 s << text(31, "2400+", 0.78, 5.05, 3.50, 0.80, size: 40, color: "F13BB8", bold: true)
 s << text(32, "członków społeczności", 0.78, 5.98, 4.00, 0.40, size: 17, color: "DACCE0")
 s << text(33, "+ #{additional_event_count}", 5.15, 5.05, 3.50, 0.80, size: 40, color: "F13BB8", bold: true)
 s << text(34, "dodatkowe wydarzenia", 5.15, 5.98, 4.00, 0.40, size: 17, color: "DACCE0")
 slides << [slide_xml(s), slide_images]
 
-s = base("Partner strategiczny", "Wspiera nas Devstyle")
-s << text(10, "DZIĘKUJEMY ZA WSPARCIE\nWROC.NET", 0.78, 1.72, 5.60, 0.86, size: 24, color: COLORS[:violet], bold: true, valign: "t")
-s << text(11, "Devstyle jest partnerem strategicznym\nnaszej społeczności.", 0.78, 2.72, 5.72, 0.78, size: 16, color: COLORS[:ink], valign: "t")
-s << rect(14, 6.62, 1.66, 6.00, 1.94, fill: COLORS[:white])
 slide_images = []
-devstyle_rid = add_image(images, slide_images, "assets/images/partners/devstyle.png")
-s << picture(15, devstyle_rid, 6.86, 2.24, 5.52, 0.78, "Logo Devstyle")
-s << text(16, "PATRONI MEDIALNI", 0.78, 3.74, 11.75, 0.30, size: 11, color: COLORS[:muted], bold: true)
-# Logos have very different aspect ratios (1.13 to 6.22), so each sits on its own
-# white panel and is fitted inside it instead of being stretched.
-gap_partners = [
-  [17, "assets/images/partners/wroclawski-portal.png", "Wrocławski Portal",       0.78, 4.14, 2.14, 1.78],
-  [19, "assets/images/partners/logo-faktywroclaw.png", "Fakty Wrocław",          3.18, 4.14, 2.14, 1.78],
-  [21, "assets/images/partners/ods-pti.jpg",           "PTI Oddział Dolnośląski", 5.58, 4.14, 2.14, 1.78],
-  [23, "assets/images/partners/dlastudenta.png",       "dlaStudenta.pl",         7.98, 4.14, 2.14, 1.78],
-  [25, "assets/images/partners/programista.png",       "Magazyn Programista",   10.38, 4.14, 2.14, 1.78],
-]
-gap_partners.each do |id, path, name, x, y, w, h|
-  rid = add_image(images, slide_images, path)
-  s << rect(id - 1, x, y, w, h, fill: COLORS[:white])
-  s << picture(id, rid, x + 0.10, y + 0.10, w - 0.20, h - 0.20, "Logo #{name}")
-  s << text(id + 1, name, x, y + h + 0.04, w, 0.30, size: 10, color: COLORS[:muted], bold: true, align: "c")
+record_rid = add_image(images, slide_images, "slides/172/assets/images/community-wroclaw.jpeg")
+s = []
+s << picture(2, record_rid, 0, 0, SLIDE_W, SLIDE_H, "Wrocław i społeczność Wroc.NET", fit: :cover)
+s << rect(3, 0, 0, SLIDE_W, SLIDE_H, fill: COLORS[:background], transparency: 20)
+s << text(5, "KOLEJNE MOCNE SPOTKANIE WROC.NET", 0.78, 0.40, 10.00, 0.30, size: 11, color: COLORS[:signal], bold: true)
+s << text(6, "Dzięki, że jesteście z nami!", 0.78, 0.98, 11.75, 0.76, size: 34, bold: true)
+s << text(7, "SLIDE_NUMBER", 11.52, 0.43, 0.95, 0.62, size: 24, color: COLORS[:purple], bold: true, align: "r")
+s << text(10, "96", 0.78, 2.00, 3.40, 1.50, size: 100, color: COLORS[:signal], bold: true)
+s << text(11, "zapisanych na Meetup", 0.85, 3.68, 4.60, 0.45, size: 21, bold: true)
+s << text(12, "Najwięcej zapisów\nod ponad 7 lat*", 5.20, 2.12, 7.30, 1.65, size: 38, bold: true)
+s << text(13, "* Z wyjątkiem spotkania 171.\nPorównujemy wyłącznie spotkania stacjonarne.", 5.24, 4.02, 7.10, 0.90, size: 18, color: COLORS[:muted])
+s << rect(14, 0.78, 5.42, 11.75, 0.90, fill: COLORS[:panel], radius: true)
+s << text(15, "Wcześniejszy wyższy wynik: 109 zapisów · 120. spotkanie · 15.10.2019", 1.02, 5.60, 11.27, 0.48, size: 18, color: COLORS[:violet], bold: true, align: "c")
+s << text(16, "Stan zapisów: 17.11.2026, rano. Zapisy nie oznaczają potwierdzonej obecności.", 0.78, 6.56, 11.75, 0.32, size: 11, color: COLORS[:muted])
+s << text(17, "Łukasz Pyrzyk · Wroc.NET", 0.78, 7.05, 5.30, 0.20, size: 9, color: COLORS[:muted])
+slides << [slide_xml(s), slide_images]
+
+partners = YAML.safe_load_file(File.join(ROOT, "_data/partners.yml"))
+s = base("Partnerzy i patronat", "Dziękujemy za wsparcie Wroc.NET")
+slide_images = []
+primary_partners = partners.fetch("strategic") + partners.fetch("supporting").reject { |partner| partner.fetch("role") == "Patron medialny" }
+raise "Partner slide requires four partners" unless primary_partners.length == 4
+
+primary_partners.each_with_index do |partner, index|
+  x = 0.78 + (index % 2) * 6.00
+  y = index < 2 ? 2.12 : 4.80
+  h = index < 2 ? 2.00 : 1.84
+  id = 20 + index * 4
+  rid = add_image(images, slide_images, partner.fetch("logo").delete_prefix("/"))
+  label = partner.fetch("role")
+  label += " · #{partner.fetch('name')}" if index >= 2
+  s << text(id, label.upcase, x, y - 0.44, 5.65, 0.30, size: 12, color: COLORS[:violet], bold: true)
+  s << rect(id + 1, x, y, 5.65, h, fill: COLORS[:panel], radius: true)
+  logo_w, logo_h = [[4.25, 1.00], [3.70, 1.75], [2.55, 1.35], [1.32, 1.32]].fetch(index)
+  s << partner_logo(id + 2, rid, x + (5.65 - logo_w) / 2, y + (h - logo_h) / 2, logo_w, logo_h, partner.fetch("name"))
 end
-s << text(13, "https://devstyle.pl/", 0.78, 6.34, 5.60, 0.36, size: 15, color: COLORS[:violet], bold: true)
+slides << [slide_xml(s), slide_images]
+
+s = base("Patroni medialni", "Pomagają nam dotrzeć do Was")
+slide_images = []
+media_partners = partners.fetch("supporting").select { |partner| partner.fetch("role") == "Patron medialny" }
+raise "Media slide requires five patrons" unless media_partners.length == 5
+
+media_partners.each_with_index do |partner, index|
+  if index < 3
+    x, y, w, h = 0.78 + index * 4.00, 2.02, 3.65, 1.60
+  else
+    x, y, w, h = 2.78 + (index - 3) * 4.00, 4.38, 3.65, 1.60
+  end
+  id = 20 + index * 4
+  rid = add_image(images, slide_images, partner.fetch("logo").delete_prefix("/"))
+  s << rect(id, x, y, w, h, fill: COLORS[:panel], radius: true)
+  s << partner_logo(id + 1, rid, x + 0.40, y + 0.24, w - 0.80, h - 0.48, partner.fetch("name"))
+  label = partner.fetch("name").sub(" - ", "\n")
+  s << text(id + 2, label, x - 0.08, y + h + 0.08, w + 0.16, 0.55, size: 13, color: COLORS[:muted], bold: true, align: "c")
+end
 slides << [slide_xml(s), slide_images]
 
 s = []
@@ -324,7 +353,6 @@ s << text(11, "ESP-NOW", 0.78, 3.18, 6.30, 0.72, size: 38, bold: true)
 s << text(12, "Protokół komunikacyjny\ndla drona", 0.78, 4.02, 6.30, 1.10, size: 28, color: COLORS[:muted], valign: "t")
 s << text(13, "programistamag.pl", 0.78, 5.94, 6.30, 0.46, size: 23, color: COLORS[:violet], bold: true)
 s << picture(14, magazine_rid, 7.70, 0.40, 4.83, 6.45, "Okładka Programista 4/2026 (125)")
-s << line(8, 0.78, 6.91, 12.53, 6.91, color: COLORS[:line], width: 1)
 s << text(9, "Łukasz Pyrzyk · Wroc.NET", 0.78, 7.05, 4.30, 0.20, size: 9, color: COLORS[:muted])
 s << text(7, "SLIDE_NUMBER", 11.52, 7.02, 0.95, 0.26, size: 11, color: COLORS[:purple], bold: true, align: "r")
 slides << [slide_xml(s), slide_images]
@@ -332,11 +360,8 @@ slides << [slide_xml(s), slide_images]
 s = base("Sezon 2026/2027", "Spotykamy się regularnie")
 s << text(10, "Trzeci wtorek miesiąca. Zaczynamy o 18:00.", 0.78, 1.92, 11.5, 0.48, size: 17, color: COLORS[:muted])
 dates = [["17 LIS", "dzisiaj · 18:00", true], ["15 GRU", "18:00", false], ["19 STY", "18:00", false]]
-s << line(11, 1.36, 3.37, 11.97, 3.37, color: COLORS[:line], width: 2)
 dates.each_with_index do |(date, label, special), index|
   x = 1.96 + index * 3.60
-  dot_fill = special ? COLORS[:signal] : COLORS[:violet]
-  s << ellipse(20 + index * 3, x + 0.77, 3.13, 0.48, 0.48, fill: dot_fill, line: COLORS[:white])
   s << text(21 + index * 3, date, x, 2.45, 2.02, 0.48, size: 25, color: special ? COLORS[:signal] : COLORS[:ink], bold: true, align: "c")
   s << text(22 + index * 3, label, x, 3.88, 2.02, 0.34, size: 12, color: COLORS[:muted], bold: special, align: "c")
 end
@@ -346,9 +371,9 @@ slides << [slide_xml(s), []]
 
 s = base("Nasze miejsce", "Pub Wędrówki")
 s << text(11, "Nie ma pizzy.", 0.78, 2.70, 8.20, 0.78, size: 37, color: COLORS[:ink], bold: true)
-s << text(12, "Bar działa.", 0.78, 3.54, 8.20, 0.78, size: 37, color: COLORS[:violet], bold: true)
+s << text(12, "Napoje na miejscu.", 0.78, 3.54, 8.20, 0.78, size: 37, color: COLORS[:violet], bold: true)
 s << rect(13, 9.54, 2.66, 2.63, 2.14, fill: COLORS[:feature])
-s << text(14, "PIWO\nI NAPOJE", 9.82, 3.08, 2.07, 1.20, size: 21, color: COLORS[:white], bold: true, align: "c")
+s << text(14, "NAPOJE", 9.82, 3.08, 2.07, 1.20, size: 21, color: COLORS[:white], bold: true, align: "c")
 s << text(16, "Na miejscu nie zamówimy jedzenia.", 0.78, 5.10, 10.65, 0.43, size: 16, color: COLORS[:muted])
 s << text(18, "Po części oficjalnej zostajemy na rozmowy.", 0.78, 6.22, 10.65, 0.35, size: 16, color: COLORS[:ink], bold: true)
 slides << [slide_xml(s), []]
@@ -384,14 +409,16 @@ slides << [slide_xml(s), slide_images]
 s = base("wrocnet.org", "Poznaj organizatorów")
 slide_images = []
 organizers = YAML.safe_load_file(File.join(ROOT, "_data/organizers.yml")).reject { |person| person["name"].to_s.strip.empty? }
+organizer_columns = [4, (organizers.length / 2.0).ceil].max
+organizer_cell_width = 11.75 / organizer_columns
 organizers.each_with_index do |person, index|
-  x = 0.86 + (index % 4) * 2.92
-  y = 1.90 + (index / 4) * 2.30
+  x = 0.78 + (index % organizer_columns) * organizer_cell_width
+  y = 1.90 + (index / organizer_columns) * 2.30
   photo = person["photo"].to_s
   photo = "/assets/images/organizers/placeholder.png" if photo.empty?
   portrait_rid = add_image(images, slide_images, photo.delete_prefix("/"))
-  s << picture(20 + index * 2, portrait_rid, x + 0.65, y, 1.50, 1.50, person["name"], round: true)
-  s << text(21 + index * 2, person["name"].split(" ", 2).join("\n"), x, y + 1.53, 2.80, 0.64, size: 18, bold: true, align: "c")
+  s << picture(20 + index * 2, portrait_rid, x + (organizer_cell_width - 1.50) / 2, y, 1.50, 1.50, person["name"], round: true)
+  s << text(21 + index * 2, person["name"].split(" ", 2).join("\n"), x, y + 1.53, organizer_cell_width, 0.64, size: organizer_columns > 4 ? 16 : 18, bold: true, align: "c")
 end
 s << text(10, "wrocnet.org/organizatorzy/", 0.78, 6.48, 11.75, 0.30, size: 13, color: COLORS[:violet], align: "c")
 slides << [slide_xml(s), slide_images]
@@ -412,10 +439,10 @@ slides << [slide_xml(s), slide_images]
 
 # 10. After party
 s = base("Po części oficjalnej", "Zostajemy. Bo tak trzeba.")
-s << text(10, "Piwo. Rozmowy. Networking.", 0.78, 2.00, 10.9, 0.60, size: 30, color: COLORS[:ink], bold: true)
+s << text(10, "Napoje. Rozmowy. Networking.", 0.78, 2.00, 10.9, 0.60, size: 30, color: COLORS[:ink], bold: true)
 s << text(11, "A czasem, całkiem serio, nowa praca.", 0.78, 2.78, 10.9, 0.55, size: 23, color: COLORS[:violet], bold: true)
 s << rect(12, 0.78, 3.68, 10.90, 1.85, fill: COLORS[:feature])
-s << text(13, "PONOĆ NAJWIĘKSZE KARIERY ZACZYNAJĄ SIĘ\nPRZY BARZE, NIE NA LINKEDIN", 1.10, 3.95, 10.30, 0.95, size: 24, color: COLORS[:white], bold: true, valign: "t")
+s << text(13, "PONOĆ NAJWIĘKSZE KARIERY ZACZYNAJĄ SIĘ\nPRZY WSPÓLNYM STOLE, NIE NA LINKEDIN", 1.10, 3.95, 10.30, 0.95, size: 24, color: COLORS[:white], bold: true, valign: "t")
 s << text(14, "(przynajmniej tak mówią ci, którzy zostali dłużej)", 1.10, 4.95, 10.30, 0.42, size: 14, color: COLORS[:signal], bold: true, valign: "t")
 s << text(15, "Zostań chwilę dłużej - może właśnie tu jest Twoja następna okazja.", 0.78, 5.85, 10.9, 0.45, size: 18, color: COLORS[:muted])
 slides << [slide_xml(s), []]
@@ -446,7 +473,6 @@ s << picture(15, gankiewicz_rid, 10.55, 1.85, 1.15, 1.15, "Piotr Gankiewicz", ro
 s << text(21, "18:15", 0.78, 1.85, 1.20, 0.45, size: 20, color: COLORS[:violet], bold: true)
 s << text(10, "Piotr Gankiewicz", 2.10, 1.85, 7.90, 0.45, size: 23, color: COLORS[:violet], bold: true)
 s << text(11, "Ultra-wydajność - gdy liczy się\nkażda mikrosekunda", 2.10, 2.38, 7.90, 0.80, size: 22, bold: true, valign: "t")
-s << line(12, 0.78, 3.25, 12.24, 3.25)
 s << text(22, "19:15", 0.78, 3.37, 1.20, 0.45, size: 20, color: COLORS[:violet], bold: true)
 s << text(13, "Panel dyskusyjny", 2.10, 3.37, 7.90, 0.45, size: 23, color: COLORS[:violet], bold: true)
 s << text(14, "Kiedy .NET wystarcza,\na kiedy warto wyjść poza niego?", 2.10, 3.94, 6.65, 0.80, size: 22, bold: true, valign: "t")
@@ -454,7 +480,6 @@ s << text(24, "Gankiewicz · Olbromski · Pyrzyk", 2.10, 4.82, 7.90, 0.35, size:
 s << picture(25, gankiewicz_rid, 9.35, 3.37, 0.95, 0.95, "Piotr Gankiewicz - panel", round: true)
 s << picture(26, olbromski_rid, 10.45, 3.37, 0.95, 0.95, "Łukasz Olbromski - panel", round: true)
 s << picture(27, pyrzyk_rid, 11.55, 3.37, 0.95, 0.95, "Łukasz Pyrzyk - panel", round: true)
-s << line(29, 0.78, 5.44, 12.24, 5.44)
 s << text(28, "20:15", 0.78, 5.70, 1.20, 0.45, size: 20, color: COLORS[:violet], bold: true)
 s << text(19, "After party", 2.10, 5.70, 9.90, 0.45, size: 22, color: COLORS[:violet], bold: true)
 slides << [slide_xml(s), slide_images]
@@ -482,17 +507,15 @@ s << rect(3, 0, 0, SLIDE_W, SLIDE_H, fill: COLORS[:background], transparency: 30
 s << text(5, "PANEL DYSKUSYJNY", 0.78, 0.52, 11.75, 0.40, size: 15, color: COLORS[:signal], bold: true, align: "c")
 s << text(6, "Kiedy .NET wystarcza,\na kiedy warto wyjść poza niego?", 0.78, 1.06, 11.75, 1.10, size: 34, color: COLORS[:white], bold: true, align: "c")
 gap_panelists = [
-  [gap_olbromski_rid, "ŁUKASZ\nOLBROMSKI"],
+  [gap_pyrzyk_rid, "ŁUKASZ\nPYRZYK"],
   [gap_gankiewicz_rid, "PIOTR\nGANKIEWICZ"],
-  [gap_pyrzyk_rid, "ŁUKASZ\nPYRZYK"]
+  [gap_olbromski_rid, "ŁUKASZ\nOLBROMSKI"]
 ]
 gap_panelists.each_with_index do |(rid, name), index|
   x = 1.78 + index * 4.00
-  s << ellipse(10 + index * 3, x - 0.05, 2.85, 1.87, 1.87, fill: COLORS[:violet])
   s << picture(11 + index * 3, rid, x, 2.90, 1.77, 1.77, name.tr("\n", " "), round: true)
   s << text(12 + index * 3, name, x - 0.70, 4.88, 3.17, 0.72, size: 21, bold: true, align: "c")
 end
-s << line(30, 1.20, 5.86, 12.13, 5.86, color: COLORS[:line], width: 1)
 s << text(31, "Zadawajcie pytania. Panel jest dla Was.", 0.78, 6.06, 11.75, 0.48, size: 23, color: COLORS[:violet], bold: true, align: "c")
 s << text(32, "Pub Wędrówki · 17 listopada 2026", 0.78, 6.66, 11.75, 0.34, size: 14, color: COLORS[:muted], align: "c")
 s << text(33, "Łukasz Pyrzyk  ·  Wroc.NET", 0.78, 7.10, 4.3, 0.20, size: 9, color: COLORS[:muted])
