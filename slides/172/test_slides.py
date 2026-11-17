@@ -46,7 +46,7 @@ class SlidesTest(unittest.TestCase):
         cls.addClassCleanup(cls.archive.close)
         cls.slides = [
             ET.fromstring(cls.archive.read(f"ppt/slides/slide{index}.xml"))
-            for index in range(1, 17)
+            for index in range(1, 18)
         ]
 
     def test_package_xml_and_relationships(self):
@@ -66,7 +66,7 @@ class SlidesTest(unittest.TestCase):
                             )
                             self.assertIn(target, names, (name, target))
         presentation = ET.fromstring(self.archive.read("ppt/presentation.xml"))
-        self.assertEqual(len(presentation.findall("p:sldIdLst/p:sldId", NS)), 16)
+        self.assertEqual(len(presentation.findall("p:sldIdLst/p:sldId", NS)), 17)
 
     def test_shape_ids_alignment_and_bounds(self):
         presentation = ET.fromstring(self.archive.read("ppt/presentation.xml"))
@@ -128,6 +128,7 @@ class SlidesTest(unittest.TestCase):
         markers = [
             "172. SPOTKANIE WROC.NET",
             "O grupie",
+            "Dzięki, że jesteście z nami!",
             "Dziękujemy za wsparcie Wroc.NET",
             "Pomagają nam dotrzeć do Was",
             "Programista",
@@ -147,12 +148,12 @@ class SlidesTest(unittest.TestCase):
             text = slide_text(slide)
             self.assertIn(marker, text)
             self.assertNotIn("SLIDE_NUMBER", text)
-            if 2 <= index <= 15:
+            if 2 <= index <= 16:
                 self.assertIn(f"{index:02}", text.splitlines())
         self.assertNotIn("ZACZYNAMY O 18:00", slide_text(self.slides[0]))
 
     def test_magazine_cover_follows_partners_without_cropping(self):
-        slide = self.slides[4]
+        slide = self.slides[5]
         text = slide_text(slide)
         for value in ["Programista", "4/2026 (125)", "ESP-NOW", "programistamag.pl"]:
             self.assertIn(value, text)
@@ -206,14 +207,24 @@ class SlidesTest(unittest.TestCase):
         self.assertEqual(found, set(expected))
 
     def test_partner_roles_and_no_beer_references(self):
-        primary = slide_text(self.slides[2])
+        primary = slide_text(self.slides[3])
         for role in ["PARTNER STRATEGICZNY", "PATRON HONOROWY", "PARTNER"]:
             self.assertIn(role, primary)
-        self.assertIn("PATRONI MEDIALNI", slide_text(self.slides[3]))
+        self.assertIn("PATRONI MEDIALNI", slide_text(self.slides[4]))
         for slide in self.slides:
             self.assertNotRegex(slide_text(slide).lower(), r"piw|🍺")
-        self.assertIn("NAPOJE", slide_text(self.slides[6]))
-        self.assertIn("Napoje. Rozmowy. Networking.", slide_text(self.slides[11]))
+        self.assertIn("NAPOJE", slide_text(self.slides[7]))
+        self.assertIn("Napoje. Rozmowy. Networking.", slide_text(self.slides[12]))
+
+    def test_attendance_milestone_is_qualified_as_offline_signups(self):
+        milestone = slide_text(self.slides[2])
+        for value in [
+            "96", "zapisanych na Meetup", "od ponad 7 lat",
+            "Z wyjątkiem spotkania 171", "wyłącznie spotkania stacjonarne",
+            "109 zapisów", "120. spotkanie", "15.10.2019",
+            "Zapisy nie oznaczają potwierdzonej obecności",
+        ]:
+            self.assertIn(value, milestone)
 
     def test_panel_portraits_and_centering(self):
         panel = self.slides[-1]
@@ -269,7 +280,7 @@ class SlidesTest(unittest.TestCase):
         self.assertEqual(portraits, 20)
 
     def test_partner_cards_use_dark_surfaces(self):
-        for slide, expected_cards in zip(self.slides[2:4], [4, 5]):
+        for slide, expected_cards in zip(self.slides[3:5], [4, 5]):
             white_area = 0
             dark_cards = 0
             for shape in slide.findall(".//p:sp", NS):
@@ -290,7 +301,7 @@ class SlidesTest(unittest.TestCase):
         )
 
     def test_next_meetup_and_preserved_content(self):
-        next_meetup = slide_text(self.slides[12])
+        next_meetup = slide_text(self.slides[13])
         for value in [
             "Czy Result Pattern daje rezultaty?",
             "AI Software Engineering Workflows w praktyce",
@@ -300,7 +311,7 @@ class SlidesTest(unittest.TestCase):
         ]:
             self.assertIn(value, next_meetup)
         self.assertNotIn("Program ogłosimy wkrótce", next_meetup)
-        organizers = slide_text(self.slides[9])
+        organizers = slide_text(self.slides[10])
         for surname in [
             "Pyrzyk", "Olbromski", "Kowalski", "Trawińska",
             "Zawadzki", "Dłubak", "Pulka", "Wojnarowski",
@@ -311,10 +322,10 @@ class SlidesTest(unittest.TestCase):
             self.assertNotIn("80 napojów", slide_text(slide))
             self.assertNotIn("na koszt sponsora", slide_text(slide))
         for value in ["18:15", "19:15", "20:15"]:
-            self.assertIn(value, slide_text(self.slides[13]))
+            self.assertIn(value, slide_text(self.slides[14]))
 
     def test_qr_crop_and_readable_type(self):
-        whatsapp = self.slides[10]
+        whatsapp = self.slides[11]
         picture = next(
             picture for picture in whatsapp.findall(".//p:pic", NS)
             if picture.find("p:nvPicPr/p:cNvPr", NS).get("name").startswith("Kod QR")
@@ -328,7 +339,7 @@ class SlidesTest(unittest.TestCase):
             for run in slide.findall(".//a:rPr", NS)
         }
         self.assertEqual(fonts, {"Arial"})
-        self.assertNotIn("🍺", slide_text(self.slides[11]))
+        self.assertNotIn("🍺", slide_text(self.slides[12]))
 
 
 if __name__ == "__main__":

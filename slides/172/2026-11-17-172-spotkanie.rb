@@ -282,6 +282,24 @@ s << text(33, "+ #{additional_event_count}", 5.15, 5.05, 3.50, 0.80, size: 40, c
 s << text(34, "dodatkowe wydarzenia", 5.15, 5.98, 4.00, 0.40, size: 17, color: "DACCE0")
 slides << [slide_xml(s), slide_images]
 
+slide_images = []
+record_rid = add_image(images, slide_images, "slides/172/assets/images/community-wroclaw.jpeg")
+s = []
+s << picture(2, record_rid, 0, 0, SLIDE_W, SLIDE_H, "Wrocław i społeczność Wroc.NET", fit: :cover)
+s << rect(3, 0, 0, SLIDE_W, SLIDE_H, fill: COLORS[:background], transparency: 20)
+s << text(5, "KOLEJNE MOCNE SPOTKANIE WROC.NET", 0.78, 0.40, 10.00, 0.30, size: 11, color: COLORS[:signal], bold: true)
+s << text(6, "Dzięki, że jesteście z nami!", 0.78, 0.98, 11.75, 0.76, size: 34, bold: true)
+s << text(7, "SLIDE_NUMBER", 11.52, 0.43, 0.95, 0.62, size: 24, color: COLORS[:purple], bold: true, align: "r")
+s << text(10, "96", 0.78, 2.00, 3.40, 1.50, size: 100, color: COLORS[:signal], bold: true)
+s << text(11, "zapisanych na Meetup", 0.85, 3.68, 4.60, 0.45, size: 21, bold: true)
+s << text(12, "Najwięcej zapisów\nod ponad 7 lat*", 5.20, 2.12, 7.30, 1.65, size: 38, bold: true)
+s << text(13, "* Z wyjątkiem spotkania 171.\nPorównujemy wyłącznie spotkania stacjonarne.", 5.24, 4.02, 7.10, 0.90, size: 18, color: COLORS[:muted])
+s << rect(14, 0.78, 5.42, 11.75, 0.90, fill: COLORS[:panel], radius: true)
+s << text(15, "Wcześniejszy wyższy wynik: 109 zapisów · 120. spotkanie · 15.10.2019", 1.02, 5.60, 11.27, 0.48, size: 18, color: COLORS[:violet], bold: true, align: "c")
+s << text(16, "Stan zapisów: 17.11.2026, rano. Zapisy nie oznaczają potwierdzonej obecności.", 0.78, 6.56, 11.75, 0.32, size: 11, color: COLORS[:muted])
+s << text(17, "Łukasz Pyrzyk · Wroc.NET", 0.78, 7.05, 5.30, 0.20, size: 9, color: COLORS[:muted])
+slides << [slide_xml(s), slide_images]
+
 partners = YAML.safe_load_file(File.join(ROOT, "_data/partners.yml"))
 s = base("Partnerzy i patronat", "Dziękujemy za wsparcie Wroc.NET")
 slide_images = []
