@@ -343,6 +343,12 @@ slides << [slide_xml(s), slide_images]
 
 s = []
 slide_images = []
+article_rid = add_image(images, slide_images, "slides/172/assets/images/wroclaw-pl-wrocnet.png")
+s << picture(2, article_rid, 0, 0, SLIDE_W, SLIDE_H, "Artykuł o Wroc.NET na wroclaw.pl")
+slides << [slide_xml(s), slide_images]
+
+s = []
+slide_images = []
 magazine_rid = add_image(images, slide_images, "slides/172/assets/images/programistamagokladka.jpg")
 s << rect(2, 0, 0, SLIDE_W, SLIDE_H, fill: COLORS[:background])
 s << gradient_rect(3, 0, 0, SLIDE_W, 0.05, stops: [[0, COLORS[:signal], 100], [100, COLORS[:feature], 100]], angle: 0)

@@ -46,7 +46,7 @@ class SlidesTest(unittest.TestCase):
         cls.addClassCleanup(cls.archive.close)
         cls.slides = [
             ET.fromstring(cls.archive.read(f"ppt/slides/slide{index}.xml"))
-            for index in range(1, 18)
+            for index in range(1, 19)
         ]
 
     def test_package_xml_and_relationships(self):
@@ -66,7 +66,7 @@ class SlidesTest(unittest.TestCase):
                             )
                             self.assertIn(target, names, (name, target))
         presentation = ET.fromstring(self.archive.read("ppt/presentation.xml"))
-        self.assertEqual(len(presentation.findall("p:sldIdLst/p:sldId", NS)), 17)
+        self.assertEqual(len(presentation.findall("p:sldIdLst/p:sldId", NS)), 18)
 
     def test_shape_ids_alignment_and_bounds(self):
         presentation = ET.fromstring(self.archive.read("ppt/presentation.xml"))
@@ -131,6 +131,7 @@ class SlidesTest(unittest.TestCase):
             "Dzięki, że jesteście z nami!",
             "Dziękujemy za wsparcie Wroc.NET",
             "Pomagają nam dotrzeć do Was",
+            "",
             "Programista",
             "Spotykamy się regularnie",
             "Pub Wędrówki",
@@ -148,12 +149,34 @@ class SlidesTest(unittest.TestCase):
             text = slide_text(slide)
             self.assertIn(marker, text)
             self.assertNotIn("SLIDE_NUMBER", text)
-            if 2 <= index <= 16:
+            if 2 <= index <= 17 and index != 6:
                 self.assertIn(f"{index:02}", text.splitlines())
         self.assertNotIn("ZACZYNAMY O 18:00", slide_text(self.slides[0]))
 
-    def test_magazine_cover_follows_partners_without_cropping(self):
+    def test_article_screenshot_fills_slide_before_magazine_without_added_text(self):
         slide = self.slides[5]
+        self.assertEqual(slide_text(slide), "")
+        self.assertEqual(slide.findall(".//p:sp", NS), [])
+        pictures = slide.findall(".//p:pic", NS)
+        self.assertEqual(len(pictures), 1)
+        picture = pictures[0]
+        self.assertEqual(
+            picture.find("p:nvPicPr/p:cNvPr", NS).get("name"),
+            "Artykuł o Wroc.NET na wroclaw.pl",
+        )
+        transform = picture.find("p:spPr/a:xfrm", NS)
+        self.assertEqual(transform.find("a:off", NS).attrib, {"x": "0", "y": "0"})
+        presentation = ET.fromstring(self.archive.read("ppt/presentation.xml"))
+        size = presentation.find("p:sldSz", NS)
+        self.assertEqual(
+            transform.find("a:ext", NS).attrib,
+            {"cx": size.get("cx"), "cy": size.get("cy")},
+        )
+        crop = picture.find("p:blipFill/a:srcRect", NS)
+        self.assertTrue(all(int(value) == 0 for value in crop.attrib.values()))
+
+    def test_magazine_cover_follows_article_without_cropping(self):
+        slide = self.slides[6]
         text = slide_text(slide)
         for value in ["Programista", "4/2026 (125)", "ESP-NOW", "programistamag.pl"]:
             self.assertIn(value, text)
@@ -185,6 +208,7 @@ class SlidesTest(unittest.TestCase):
             "Logo Magazyn Programista": (2362, 459),
             "Strona główna wrocnet.org": (1440, 830),
             "Strona Zostań prelegentem": (1440, 830),
+            "Artykuł o Wroc.NET na wroclaw.pl": (1920, 1080),
         }
         found = set()
         for slide in self.slides:
@@ -213,8 +237,8 @@ class SlidesTest(unittest.TestCase):
         self.assertIn("PATRONI MEDIALNI", slide_text(self.slides[4]))
         for slide in self.slides:
             self.assertNotRegex(slide_text(slide).lower(), r"piw|🍺")
-        self.assertIn("NAPOJE", slide_text(self.slides[7]))
-        self.assertIn("Napoje. Rozmowy. Networking.", slide_text(self.slides[12]))
+        self.assertIn("NAPOJE", slide_text(self.slides[8]))
+        self.assertIn("Napoje. Rozmowy. Networking.", slide_text(self.slides[13]))
 
     def test_attendance_milestone_is_qualified_as_offline_signups(self):
         milestone = slide_text(self.slides[2])
@@ -301,7 +325,7 @@ class SlidesTest(unittest.TestCase):
         )
 
     def test_next_meetup_and_preserved_content(self):
-        next_meetup = slide_text(self.slides[13])
+        next_meetup = slide_text(self.slides[14])
         for value in [
             "Czy Result Pattern daje rezultaty?",
             "AI Software Engineering Workflows w praktyce",
@@ -311,7 +335,7 @@ class SlidesTest(unittest.TestCase):
         ]:
             self.assertIn(value, next_meetup)
         self.assertNotIn("Program ogłosimy wkrótce", next_meetup)
-        organizers = slide_text(self.slides[10])
+        organizers = slide_text(self.slides[11])
         for surname in [
             "Pyrzyk", "Olbromski", "Kowalski", "Trawińska",
             "Zawadzki", "Dłubak", "Pulka", "Wojnarowski",
@@ -322,10 +346,10 @@ class SlidesTest(unittest.TestCase):
             self.assertNotIn("80 napojów", slide_text(slide))
             self.assertNotIn("na koszt sponsora", slide_text(slide))
         for value in ["18:15", "19:15", "20:15"]:
-            self.assertIn(value, slide_text(self.slides[14]))
+            self.assertIn(value, slide_text(self.slides[15]))
 
     def test_qr_crop_and_readable_type(self):
-        whatsapp = self.slides[11]
+        whatsapp = self.slides[12]
         picture = next(
             picture for picture in whatsapp.findall(".//p:pic", NS)
             if picture.find("p:nvPicPr/p:cNvPr", NS).get("name").startswith("Kod QR")
@@ -339,7 +363,7 @@ class SlidesTest(unittest.TestCase):
             for run in slide.findall(".//a:rPr", NS)
         }
         self.assertEqual(fonts, {"Arial"})
-        self.assertNotIn("🍺", slide_text(self.slides[12]))
+        self.assertNotIn("🍺", slide_text(self.slides[13]))
 
 
 if __name__ == "__main__":
