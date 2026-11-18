@@ -42,6 +42,8 @@ Współzałożyciel i CTO startupu LaserData, oryginalny twórca Apache Iggy, cz
 
 W poprzednim etapie spędziłem ponad dekadę z C# i .NET-em, pracując m.in. nad systemami wymagającymi wysokiej wydajności oraz efektywnego przetwarzania komunikatów w architekturze rozproszonej.
 
+* Prezentacja: [HTML](/slides/ultra-wydajnosc-gankiewicz.zip)
+
 {% include talk.html index=1 %}
 
 Czy problemem jest technologia, architektura, czy sposób, w jaki z nich korzystamy? **Piotr Gankiewicz, Łukasz Olbromski i Łukasz Pyrzyk** porozmawiają o granicach wydajności .NET, powodach sięgania po Rust oraz kosztach takich decyzji. Od optymalizacji istniejącego systemu po stworzenie własnego narzędzia open source: kiedy to uzasadniony krok, a kiedy niepotrzebna komplikacja?
