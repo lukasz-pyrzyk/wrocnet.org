@@ -5,9 +5,9 @@ logos). Only the right column changes with the talk layout, and the script
 detects which layout a post uses:
 
 - ``solo_panel`` - talks[0] has one speaker, talks[1] has three (the 172 shape).
-- ``two_talks`` - one solo talk and one two-speaker talk, in either order (173).
+- ``two_talks`` - two solo talks, or a solo and a two-speaker talk in either order (173).
 
-The two_talks layout preserves the post's order, with equal title sizes and
+The two_talks layout preserves the post's order, with equal title sizes (an optional ``banner_title`` on a talk replaces a title too long for two lines) and
 equal-height regions for both talks. Sessions sit directly on the shared
 background, without rectangular frames or solid panels, as in banner 172.
 All text must remain at least 10 px at a 358 px preview width. Missing portraits
@@ -60,6 +60,8 @@ PORTRAIT_CROPS = {
     "lukasz-pyrzyk": (0.10, 0, 0.80, 0.70),
 }
 
+# Legacy composition for exactly five supporting partners (banners 172 and the
+# first 173): a tall Wroc.NET-style mark on the left plus a 2x2 grid.
 PARTNER_POSITIONS = (
     (341, 506, 300, 58),
     (180, 600, 96, 96),
@@ -68,6 +70,35 @@ PARTNER_POSITIONS = (
     (320, 629, 137, 38),
     (481, 629, 137, 38),
 )
+
+# Any other number of supporting partners goes into a grid of equal white
+# boxes under a smaller strategic logo.
+GRID_COLUMNS = 3
+GRID_LEFT, GRID_RIGHT = 50, 576
+GRID_TOP, GRID_BOTTOM = 526, 662
+GRID_GAP = 7
+MAX_SUPPORTING = 12
+MEDIA_ROLE = "Patron medialny"
+
+
+def partner_positions(supporting_count):
+    """Return (center_x, center_y, width, height) for strategic + supporting logos."""
+    if supporting_count == 5:
+        return PARTNER_POSITIONS
+    if not 1 <= supporting_count <= MAX_SUPPORTING:
+        raise ValueError(f"Cannot lay out {supporting_count} supporting partners")
+    rows = -(-supporting_count // GRID_COLUMNS)
+    box_w = (GRID_RIGHT - GRID_LEFT - GRID_GAP * (GRID_COLUMNS - 1)) / GRID_COLUMNS
+    box_h = (GRID_BOTTOM - GRID_TOP - GRID_GAP * (rows - 1)) / rows
+    positions = [(313, 494, 280, 44)]
+    for index in range(supporting_count):
+        row, col = divmod(index, GRID_COLUMNS)
+        in_row = min(GRID_COLUMNS, supporting_count - row * GRID_COLUMNS)
+        row_left = GRID_LEFT + (GRID_RIGHT - GRID_LEFT - in_row * box_w - (in_row - 1) * GRID_GAP) / 2
+        x = row_left + col * (box_w + GRID_GAP) + box_w / 2
+        y = GRID_TOP + row * (box_h + GRID_GAP) + box_h / 2
+        positions.append((round(x), round(y), round(box_w - 12), round(box_h - 12)))
+    return tuple(positions)
 
 
 def resolve_font(bold):
@@ -99,6 +130,30 @@ def banner_logo():
     return logo
 
 
+BAND_TOP, BAND_BOTTOM = 498, 654
+BAND_GRID_LEFT, BAND_GRID_RIGHT = 410, 1158
+BAND_GAP = 8
+
+
+def band_positions(supporting_count):
+    """Bottom band for two_talks: strategic logo left, supporting logos in two rows."""
+    if not 1 <= supporting_count <= 12:
+        raise ValueError(f"Cannot lay out {supporting_count} supporting partners")
+    columns = -(-supporting_count // 2)
+    box_w = (BAND_GRID_RIGHT - BAND_GRID_LEFT - BAND_GAP * (columns - 1)) / columns
+    rows = 1 if supporting_count == 1 else 2
+    box_h = (BAND_BOTTOM - BAND_TOP - BAND_GAP * (rows - 1)) / rows
+    positions = [(226, (BAND_TOP + BAND_BOTTOM) // 2, 300, 66)]
+    for index in range(supporting_count):
+        row, col = divmod(index, columns)
+        in_row = min(columns, supporting_count - row * columns)
+        row_left = BAND_GRID_LEFT + (BAND_GRID_RIGHT - BAND_GRID_LEFT - in_row * box_w - (in_row - 1) * BAND_GAP) / 2
+        x = row_left + col * (box_w + BAND_GAP) + box_w / 2
+        y = BAND_TOP + row * (box_h + BAND_GAP) + box_h / 2
+        positions.append((round(x), round(y), round(box_w - 12), round(box_h - 12)))
+    return tuple(positions)
+
+
 def detect_layout(talks):
     """Return the layout name for a post's talks, or raise if unsupported."""
     if len(talks) != 2:
@@ -107,11 +162,11 @@ def detect_layout(talks):
     second = len(talks[1]["speaker_ids"])
     if first == 1 and second == 3:
         return "solo_panel"
-    if (first, second) in ((1, 2), (2, 1)):
+    if (first, second) in ((1, 1), (1, 2), (2, 1)):
         return "two_talks"
     raise ValueError(
         "Unsupported talk layout: expected one solo talk plus a three-person "
-        f"panel, or a solo and a two-speaker talk in either order (got {first} and {second})"
+        f"panel, or two talks of one or two speakers each, not both two (got {first} and {second})"
     )
 
 
@@ -138,13 +193,21 @@ def render(post_path, background_path, output_path):
     speakers = {person["id"]: person for person in load_yaml(ROOT / "_data/speakers.yml")}
     venue = load_yaml(ROOT / "_data/location.yml")["venue"]
     partners = load_yaml(ROOT / "_data/partners.yml")
+    # Media patrons are left off the banner; they stay on the website and in the announcement.
+    partners["supporting"] = [p for p in partners["supporting"] if p.get("role") != MEDIA_ROLE]
     partner_list = partners["strategic"] + partners["supporting"]
-    if len(partners["strategic"]) != 1 or len(partners["supporting"]) != 5:
-        raise ValueError("This layout requires one strategic and five supporting partner logos")
+    if len(partners["strategic"]) != 1:
+        raise ValueError("This layout requires exactly one strategic partner logo")
     date = post["date"]
     if not isinstance(date, datetime.date):
         date = datetime.date.fromisoformat(date)
     time = datetime.time.fromisoformat(post["time"])
+
+    positions = (
+        band_positions(len(partners["supporting"]))
+        if layout == "two_talks"
+        else partner_positions(len(partners["supporting"]))
+    )
 
     with Image.open(background_path) as background:
         canvas = ImageOps.fit(
@@ -228,20 +291,24 @@ def render(post_path, background_path, output_path):
             paragraph(f'{person["imie"]} {person["nazwisko"]}', x, y + 18, 34, width, 2, fill=MUTED)
 
     # Left column: issue number, date, venue.
-    paste(banner_logo(), 42, 62, 185, 185)
-    draw.rectangle((126 * SCALE, 252 * SCALE, 263 * SCALE, 340 * SCALE), outline="#7542AA", width=3 * SCALE)
-    text(number, 144, 269, 57, bold=True, max_width=112)
-    text("spotkanie", 282, 251, 42, max_width=290)
-    text("Wroc.NET", 282, 300, 42, max_width=290)
-    text(f"{date:%d.%m.%Y} | {time:%H:%M}", 126, 372, 34 if layout == "two_talks" else 27, max_width=435)
-    draw.line((126 * SCALE, 420 * SCALE, 556 * SCALE, 420 * SCALE), fill="#7542AA", width=2 * SCALE)
-    text(
-        f'{venue["name"]}, Wrocław',
-        126,
-        432 if layout == "two_talks" else 442,
-        34 if layout == "two_talks" else 25,
-        max_width=435,
-    )
+    if layout == "two_talks":
+        paste(banner_logo(), 42, 40, 170, 170)
+        draw.rectangle((236 * SCALE, 52 * SCALE, 373 * SCALE, 136 * SCALE), outline="#7542AA", width=3 * SCALE)
+        text(number, 252, 63, 57, bold=True, max_width=112)
+        text("spotkanie", 392, 46, 42, max_width=220)
+        text("Wroc.NET", 392, 94, 42, max_width=220)
+        text(f"{date:%d.%m.%Y} | {time:%H:%M}", 236, 176, 40, max_width=370)
+        draw.line((236 * SCALE, 238 * SCALE, 600 * SCALE, 238 * SCALE), fill="#7542AA", width=2 * SCALE)
+        paragraph(f'{venue["name"]}, Wrocław', 236, 256, 36, 370, 2)
+    else:
+        paste(banner_logo(), 42, 62, 185, 185)
+        draw.rectangle((126 * SCALE, 252 * SCALE, 263 * SCALE, 340 * SCALE), outline="#7542AA", width=3 * SCALE)
+        text(number, 144, 269, 57, bold=True, max_width=112)
+        text("spotkanie", 282, 251, 42, max_width=290)
+        text("Wroc.NET", 282, 300, 42, max_width=290)
+        text(f"{date:%d.%m.%Y} | {time:%H:%M}", 126, 372, 27, max_width=435)
+        draw.line((126 * SCALE, 420 * SCALE, 556 * SCALE, 420 * SCALE), fill="#7542AA", width=2 * SCALE)
+        text(f'{venue["name"]}, Wrocław', 126, 442, 25, max_width=435)
 
     if layout == "solo_panel":
         solo_id = talks[0]["speaker_ids"][0]
@@ -260,16 +327,16 @@ def render(post_path, background_path, output_path):
                 width = draw.textlength(value, font=font(20, True)) / SCALE
                 text(value, x + 75 - width / 2, 598 + line_index * 25, 20, bold=True, max_width=160)
     else:
-        for talk, top in zip(talks, (56, 346)):
-            paragraph(talk["title"], 622, top + 24, 34, 530, 2, bold=True)
+        for talk, top in zip(talks, (40, 278)):
+            paragraph(talk.get("banner_title", talk["title"]), 622, top, 38, 530, 2, bold=True)
             ids = talk["speaker_ids"]
             if len(ids) == 2:
                 for index, speaker_id in enumerate(ids):
-                    speaker_block(speaker_id, 622 + index * 274, top + 144, 256, split_name=True)
+                    speaker_block(speaker_id, 622 + index * 274, top + 110, 256, split_name=True)
             else:
-                speaker_block(ids[0], 622, top + 144, 530)
+                speaker_block(ids[0], 622, top + 110, 530)
 
-    for partner, (center_x, center_y, width, height) in zip(partner_list, PARTNER_POSITIONS):
+    for partner, (center_x, center_y, width, height) in zip(partner_list, positions):
         logo = local_image(partner["logo"])
         if partner in partners["strategic"]:
             white_logo = Image.new("RGBA", logo.size, WHITE)

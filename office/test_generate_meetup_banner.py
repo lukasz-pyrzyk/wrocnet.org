@@ -30,6 +30,7 @@ class BannerTests(unittest.TestCase):
     def test_supported_layouts(self):
         for counts, expected in [
             ((1, 3), "solo_panel"),
+            ((1, 1), "two_talks"),
             ((1, 2), "two_talks"),
             ((2, 1), "two_talks"),
         ]:
@@ -38,9 +39,31 @@ class BannerTests(unittest.TestCase):
                 self.assertEqual(banner.detect_layout(talks), expected)
 
     def test_unsupported_layouts(self):
-        for counts in [(), (1,), (1, 1), (2, 2), (3, 1), (1, 3, 1)]:
+        for counts in [(), (1,), (2, 2), (3, 1), (1, 3, 1)]:
             with self.subTest(counts=counts), self.assertRaises(ValueError):
                 banner.detect_layout([{"speaker_ids": ["person"] * count} for count in counts])
+
+    def test_partner_grid_fits_banner(self):
+        for count in (1, 5, 9, 12):
+            with self.subTest(count=count):
+                positions = banner.partner_positions(count)
+                self.assertEqual(len(positions), count + 1)
+                for x, y, width, height in positions:
+                    self.assertGreaterEqual(x - width / 2, 0)
+                    self.assertLessEqual(x + width / 2, 600)
+                    self.assertLessEqual(y + height / 2, banner.SIZE[1])
+        for count in (0, 13):
+            with self.subTest(count=count), self.assertRaises(ValueError):
+                banner.partner_positions(count)
+
+    def test_band_positions_fit_banner(self):
+        for count in (1, 5, 9):
+            positions = banner.band_positions(count)
+            self.assertEqual(len(positions), count + 1)
+            for x, y, width, height in positions:
+                self.assertGreaterEqual(x - width / 2, 0)
+                self.assertLessEqual(x + width / 2, banner.SIZE[0])
+                self.assertLessEqual(y + height / 2, banner.SIZE[1])
 
     def test_mobile_font_threshold(self):
         banner.validate_mobile_text(34)
