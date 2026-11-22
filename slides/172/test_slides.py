@@ -328,10 +328,9 @@ class SlidesTest(unittest.TestCase):
         next_meetup = slide_text(self.slides[14])
         for value in [
             "Czy Result Pattern daje rezultaty?",
-            "AI Software Engineering Workflows w praktyce",
+            "AI w Dużej Organizacji: Co Działa, Co Nie, i Jak To Mierzymy",
             "Melchior Kozar",
             "Hleb Sukrystsik",
-            "Łukasz Hałas",
         ]:
             self.assertIn(value, next_meetup)
         self.assertNotIn("Program ogłosimy wkrótce", next_meetup)
