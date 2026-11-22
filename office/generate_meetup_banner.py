@@ -71,8 +71,9 @@ PARTNER_POSITIONS = (
     (481, 629, 137, 38),
 )
 
-# Any other number of supporting partners goes into a grid of equal white
-# boxes under a smaller strategic logo.
+# solo_panel only: any number of supporting partners other than five goes into
+# a grid of equal white boxes under a smaller strategic logo. two_talks uses
+# band_positions instead.
 GRID_COLUMNS = 3
 GRID_LEFT, GRID_RIGHT = 50, 576
 GRID_TOP, GRID_BOTTOM = 526, 662
@@ -137,7 +138,7 @@ BAND_GAP = 8
 
 def band_positions(supporting_count):
     """Bottom band for two_talks: strategic logo left, supporting logos in two rows."""
-    if not 1 <= supporting_count <= 12:
+    if not 1 <= supporting_count <= MAX_SUPPORTING:
         raise ValueError(f"Cannot lay out {supporting_count} supporting partners")
     columns = -(-supporting_count // 2)
     box_w = (BAND_GRID_RIGHT - BAND_GRID_LEFT - BAND_GAP * (columns - 1)) / columns
@@ -195,6 +196,8 @@ def render(post_path, background_path, output_path):
     partners = load_yaml(ROOT / "_data/partners.yml")
     # Media patrons are left off the banner; they stay on the website and in the announcement.
     partners["supporting"] = [p for p in partners["supporting"] if p.get("role") != MEDIA_ROLE]
+    if not partners["supporting"]:
+        raise ValueError(f'No supporting partners left after skipping role "{MEDIA_ROLE}"')
     partner_list = partners["strategic"] + partners["supporting"]
     if len(partners["strategic"]) != 1:
         raise ValueError("This layout requires exactly one strategic partner logo")
