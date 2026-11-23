@@ -45,7 +45,7 @@ To jedyne miejsce na zasady i warsztat tworzenia banerów. Pozostałe dokumenty 
 
 ### Banery wydarzeń: generowanie i publikacja
 
-- Wzorzec: [baner 172](content/images/2026-11-17-172-meetup.jpg), [zapisane tło AI](content/images/2026-11-17-172-meetup-background.png) i [generator](generate_meetup_banner.py). Tło powstało w Azure Foundry przez MAI-Image-2.5, bez przesyłania portretów i logotypów.
+- Wzorzec: [baner 172](../assets/images/2026-11-17-172-meetup.jpg), [zapisane tło AI](content/images/2026-11-17-172-meetup-background.png) i [generator](generate_meetup_banner.py). Tło powstało w Azure Foundry przez MAI-Image-2.5, bez przesyłania portretów i logotypów.
 - Jeden wspólny generator rozpoznaje układ z `talks[].speaker_ids`: `solo_panel` to prelekcja jednej osoby i panel trzech osób (172), a `two_talks` to dwie prelekcje jednoosobowe albo prelekcja jednej osoby oraz prelekcja dwóch osób w dowolnej kolejności (173). Generator zachowuje kolejność `talks` z posta. Po jej zmianie przestaw także opisy i bio w treści posta, tematy i nazwiska w tytule oraz alt baneru, a następnie odśwież obie kopie grafiki. Inne układy kończą się błędem. Rozszerzaj ten generator, nie twórz kopii dla kolejnego numeru spotkania. Wymagany jest jeden partner strategiczny; wspierających może być od 1 do 12 (po pominięciu patronów medialnych, patrz niżej). W `solo_panel` dla dokładnie pięciu zachowany jest układ historyczny, w pozostałych przypadkach (`partner_positions`) logotypy trafiają do siatki 3 kolumn pod mniejszym logo strategicznym. Poza patronami medialnymi nie pomijaj logotypów ani osób. Kadry portretów są przypisane do identyfikatorów osób, nie numerów spotkań.
 - W `two_talks` obie prelekcje mają równorzędne, jednakowej wysokości bloki oraz tytuły tej samej wielkości i grubości. Sesje umieszczaj bezpośrednio na wspólnym tle, bez prostokątnych ramek i jednolitych paneli, jak na banerze 172; rozdzielaj je odstępem. Nie dotyczy to ramki numeru spotkania ani białych pól logotypów partnerów. Nie wyróżniaj pierwszej jako głównej bez potwierdzonego powodu. Generator wymaga minimum 10 px dla każdego napisu przy podglądzie szerokości 358 px (baner na ekranie 390 px), czyli obecnie fontu co najmniej 34 px w pliku 1200 px. Długi tytuł lub nazwisko ma zakończyć generowanie błędem, zamiast wymuszać pomniejszenie tekstu. Logo partnera to obraz, nie tekst objęty tą kontrolą. Historyczny układ 172 pozostaje bez zmian; jego poprawny eksport nie dowodzi czytelności nowych układów.
 - Nie pokazuj szarej sylwetki jako portretu na finalnym banerze. W `two_talks` brak `photo` lub wskazanie `placeholder` daje jawny komunikat i blok tekstowy z nazwiskiem, bez wymyślania twarzy. Błędna ścieżka do rzeczywistego zdjęcia nadal przerywa generowanie; nie jest traktowana jak potwierdzony brak portretu.
@@ -56,16 +56,13 @@ To jedyne miejsce na zasady i warsztat tworzenia banerów. Pozostałe dokumenty 
 Uruchom z katalogu głównego repozytorium:
 
 ```bash
-python3 office/generate_meetup_banner.py \
-  _posts/2026-12-15-173-spotkanie-wroclawskiej-grupy-net.md \
-  --background office/content/images/2026-12-15-173-meetup-background.png \
-  --output office/content/images/2026-12-15-173-meetup.jpg
-cp office/content/images/2026-12-15-173-meetup.jpg assets/images/2026-12-15-173-meetup.jpg
+python3 office/generate_meetup_banner.py _posts/2026-12-15-173-spotkanie-wroclawskiej-grupy-net.md
 
 python3 -m unittest discover -s office -p 'test_generate_meetup_banner.py'
 ```
 
-- Ponowne składanie używa zapisanego tła i nie wymaga wywołania AI. Po poprawce odśwież zarówno plik kampanii w `office/content/images/`, jak i publiczną kopię w `assets/images/` (dla 172: `assets/images/2026-11-17-172-meetup.jpg`). Pliki muszą być identyczne.
+- Nowe tło generuje ten sam skrypt: dodaj `--generate-background` (nadpisuje zapisane tło; wymaga zmiennych `IMG_AI_MODEL_*`). Prompt i korekta koloru (przesunięcie barwy w stronę fioletu, przyciemnienie poświaty) są stałymi w skrypcie, więc zapisany PNG jest już po korekcie. Kolejne generowanie daje inny obraz, dlatego zwykle używaj zapisanego tła.
+- Ponowne składanie używa zapisanego tła i nie wymaga wywołania AI. Generator zapisuje jeden plik w `assets/images/` (dla 172: `assets/images/2026-11-17-172-meetup.jpg`), którego używają strona i Meetup; osobnej kopii w `office/content/images/` nie ma. W `office/content/images/` zostaje tylko zapisane tło.
 - W poście ustaw `header.image` i `header.teaser` na lokalną publiczną kopię oraz dodaj `header.image_description` jako alt. Nie zaczynaj opisu od `172. ` — motyw przepuszcza go przez Markdown, który potraktuje to jako listę; użyj np. „Baner 172. spotkania…”.
 - Nie używaj `header.overlay_image` dla gotowego baneru z napisami i twarzami: tło jest kadrowane i przykrywane tekstem strony. Obecny styl wyświetla banery kategorii `spotkania` centralnie, maksymalnie 800 px szerokości, proporcjonalnie na telefonie, bez przycinania. Nie zmienia nagłówka strony głównej. Archiwum `/spotkania/` jest listą tekstową; miniatury są wykorzystywane w kartach siatki i podglądach udostępniania.
 - Sprawdź finalny plik, zgodność programu i osób z postem, czytelność, obrysy logo, marginesy i hierarchię partnerów. Obejrzyj także miniaturę szerokości 358 px: oba tematy mają być czytelne i równorzędne, bez kolizji nazwisk i placeholderów. Sam brak błędu generatora nie zastępuje oceny wizualnej. Po podłączeniu do strony uruchom [walidację Website Admin](../.github/agents/wrocnet-website-admin.agent.md#ci-validation-checks-local) i obejrzyj widok desktopowy oraz mobilny. Przygotowanie obrazu nie oznacza publikacji na Meetup.
