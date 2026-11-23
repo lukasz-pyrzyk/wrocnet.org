@@ -18,12 +18,24 @@ Anything else raises rather than guessing. Portraits are cropped per speaker
 where a manual crop is registered in PORTRAIT_CROPS; square headshots need none
 because ImageOps.fit centres them.
 
+Usage: ``generate_meetup_banner.py _posts/<post>.md``. It reads the saved background
+from office/content/images/ and writes a single banner to assets/images/, which
+the website and Meetup both use. ``--generate-background`` creates the background
+first (Azure Foundry image model, credentials only from IMG_AI_MODEL_* variables). Normally reuse the saved file instead: a new
+generation gives a different image. The saved PNG already includes the tone
+correction in ``tone_background``.
+
 Requires Python 3, Pillow and PyYAML.
 """
 
 import argparse
+import base64
 import datetime
+import io
+import json
+import os
 import re
+import urllib.request
 from pathlib import Path
 
 import yaml
@@ -53,6 +65,19 @@ FONT_CANDIDATES = {
         Path("/usr/share/fonts/truetype/liberation/LiberationSans-Bold.ttf"),
     ],
 }
+
+# Prompt sent to the image model: no text, people or logos, so no personal data
+# or local materials leave the machine.
+BACKGROUND_PROMPT = (
+    "Abstract widescreen 16:9 background for a tech meetup banner, dark and moody. Color palette: very dark "
+    "navy blue at the left edge, rich deep purple through the middle, no pink and no magenta. The right half "
+    "shows a softly blurred out-of-focus laptop keyboard with subtle warm copper-orange highlights on the keys, "
+    "low contrast, fading into dark violet. Smooth, calm and minimal, with large uncluttered areas so text "
+    "can be placed on top. No text, no letters, no logos, no people, no UI."
+)
+BACKGROUND_SIZE = "1536x1024"
+# Light correction of the raw model output: nudge the hue away from pink and dim it slightly.
+HUE_SHIFT, VALUE_SCALE, SATURATION_SCALE = -4, 0.9, 1.0
 
 PORTRAIT_CROPS = {
     "piotr-gankiewicz": (0.10, 0, 0.90, 0.80),
@@ -100,6 +125,39 @@ def partner_positions(supporting_count):
         y = GRID_TOP + row * (box_h + GRID_GAP) + box_h / 2
         positions.append((round(x), round(y), round(box_w - 12), round(box_h - 12)))
     return tuple(positions)
+
+
+def tone_background(image):
+    """Nudge the raw model output away from pink and dim it slightly."""
+    hue, saturation, value = image.convert("RGB").convert("HSV").split()
+    hue = hue.point(lambda x: (x + HUE_SHIFT) % 256)
+    saturation = saturation.point(lambda x: min(255, int(x * SATURATION_SCALE)))
+    value = value.point(lambda x: int(x * VALUE_SCALE))
+    return Image.merge("HSV", (hue, saturation, value)).convert("RGB")
+
+
+def generate_background(output_path):
+    """Generate a background with the image model and save it, toned, to output_path."""
+    try:
+        endpoint = os.environ["IMG_AI_MODEL_ENDPOINT"]
+        key = os.environ["IMG_AI_MODEL_APIKEY"]
+        model = os.environ["IMG_AI_MODEL_NAME"]
+    except KeyError as error:
+        raise RuntimeError(f"Missing environment variable {error.args[0]}") from None
+    body = json.dumps(
+        {"model": model, "prompt": BACKGROUND_PROMPT, "size": BACKGROUND_SIZE, "n": 1, "quality": "medium"}
+    ).encode()
+    request = urllib.request.Request(
+        endpoint, body, {"Content-Type": "application/json", "api-key": key}
+    )
+    with urllib.request.urlopen(request, timeout=300) as response:
+        data = json.load(response)["data"][0]
+    raw = base64.b64decode(data["b64_json"])
+    with Image.open(io.BytesIO(raw)) as image:
+        toned = tone_background(image)
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    toned.save(output_path, format="PNG")
+    print(f"Saved {output_path} ({toned.width}x{toned.height})")
 
 
 def resolve_font(bold):
@@ -297,7 +355,16 @@ def render(post_path, background_path, output_path):
     if layout == "two_talks":
         paste(banner_logo(), 42, 40, 170, 170)
         draw.rectangle((236 * SCALE, 52 * SCALE, 373 * SCALE, 136 * SCALE), outline="#7542AA", width=3 * SCALE)
-        text(number, 252, 63, 57, bold=True, max_width=112)
+        number_box = (236, 52, 373, 136)
+        number_bounds = draw.textbbox((0, 0), number, font=font(57, True), anchor="lt")
+        text(
+            number,
+            (number_box[0] + number_box[2]) / 2 - (number_bounds[0] + number_bounds[2]) / 2 / SCALE,
+            (number_box[1] + number_box[3]) / 2 - (number_bounds[1] + number_bounds[3]) / 2 / SCALE,
+            57,
+            bold=True,
+            max_width=112,
+        )
         text("spotkanie", 392, 46, 42, max_width=220)
         text("Wroc.NET", 392, 94, 42, max_width=220)
         text(f"{date:%d.%m.%Y} | {time:%H:%M}", 236, 176, 40, max_width=370)
@@ -373,10 +440,25 @@ def render(post_path, background_path, output_path):
     print(f"Saved {output_path} ({SIZE[0]}x{SIZE[1]}, JPEG RGB, {layout})")
 
 
+def paths_for(post_path):
+    """Return (background, output) for a post: one banner file, served on the website and used on Meetup."""
+    stem = "-".join(post_path.name.split("-")[:4])
+    return (
+        ROOT / f"office/content/images/{stem}-meetup-background.png",
+        ROOT / f"assets/images/{stem}-meetup.jpg",
+    )
+
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("post", type=Path)
-    parser.add_argument("--background", required=True, type=Path)
-    parser.add_argument("--output", required=True, type=Path)
+    parser.add_argument(
+        "--generate-background",
+        action="store_true",
+        help="generate a new background first (overwrites the saved one; needs IMG_AI_MODEL_* variables)",
+    )
     args = parser.parse_args()
-    render(args.post, args.background, args.output)
+    background, output = paths_for(args.post)
+    if args.generate_background:
+        generate_background(background)
+    render(args.post, background, output)

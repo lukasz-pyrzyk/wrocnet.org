@@ -1,5 +1,8 @@
+import base64
 import contextlib
 import io
+import json
+import os
 import tempfile
 import unittest
 from pathlib import Path
@@ -9,6 +12,33 @@ import yaml
 from PIL import Image
 
 import generate_meetup_banner as banner
+
+
+class BackgroundTests(unittest.TestCase):
+    def fake_response(self):
+        buffer = io.BytesIO()
+        Image.new("RGB", (64, 48), (150, 60, 220)).save(buffer, format="PNG")
+        payload = json.dumps({"data": [{"b64_json": base64.b64encode(buffer.getvalue()).decode()}]})
+        return io.BytesIO(payload.encode())
+
+    def test_missing_credentials_raise_without_network(self):
+        with patch.dict(os.environ, {}, clear=True), patch("urllib.request.urlopen") as urlopen:
+            with self.assertRaisesRegex(RuntimeError, "IMG_AI_MODEL_ENDPOINT"):
+                banner.generate_background(Path("unused.png"))
+        urlopen.assert_not_called()
+
+    def test_generates_toned_background(self):
+        env = {"IMG_AI_MODEL_ENDPOINT": "https://example.test/v1", "IMG_AI_MODEL_APIKEY": "secret", "IMG_AI_MODEL_NAME": "m"}
+        with tempfile.TemporaryDirectory() as directory, patch.dict(os.environ, env), patch(
+            "urllib.request.urlopen", return_value=self.fake_response()
+        ) as urlopen, contextlib.redirect_stdout(io.StringIO()):
+            output = Path(directory) / "bg.png"
+            banner.generate_background(output)
+            with Image.open(output) as image:
+                self.assertEqual(image.size, (64, 48))
+                self.assertLess(max(image.getpixel((0, 0))), 220)  # dimmed from the 220 input
+        sent = urlopen.call_args.args[0]
+        self.assertEqual(json.loads(sent.data)["prompt"], banner.BACKGROUND_PROMPT)
 
 
 class BannerTests(unittest.TestCase):
