@@ -9,6 +9,7 @@ import xml.etree.ElementTree as ET
 import zipfile
 
 from PIL import Image
+import yaml
 
 
 DIRECTORY = Path(__file__).resolve().parent
@@ -205,6 +206,7 @@ class SlidesTest(unittest.TestCase):
             "Logo Fakty Wrocław": (983, 158),
             "Logo Polskie Towarzystwo Informatyczne - Oddział Dolnośląski": (457, 187),
             "Logo dlaStudenta.pl": (2049, 473),
+            "Logo Uniwersytet DSW Ideis": (717, 192),
             "Logo Magazyn Programista": (2362, 459),
             "Strona główna wrocnet.org": (1440, 830),
             "Strona Zostań prelegentem": (1440, 830),
@@ -304,7 +306,10 @@ class SlidesTest(unittest.TestCase):
         self.assertEqual(portraits, 20)
 
     def test_partner_cards_use_dark_surfaces(self):
-        for slide, expected_cards in zip(self.slides[3:5], [4, 5]):
+        partners = yaml.safe_load((DIRECTORY.parent.parent / "_data/partners.yml").read_text(encoding="utf-8"))
+        media = [p for p in partners["supporting"] if p["role"] == "Patron medialny"]
+        primary = len(partners["strategic"]) + len(partners["supporting"]) - len(media)
+        for slide, expected_cards in zip(self.slides[3:5], [primary, len(media)]):
             white_area = 0
             dark_cards = 0
             for shape in slide.findall(".//p:sp", NS):

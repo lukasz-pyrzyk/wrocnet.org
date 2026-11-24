@@ -304,34 +304,44 @@ partners = YAML.safe_load_file(File.join(ROOT, "_data/partners.yml"))
 s = base("Partnerzy i patronat", "Dziękujemy za wsparcie Wroc.NET")
 slide_images = []
 primary_partners = partners.fetch("strategic") + partners.fetch("supporting").reject { |partner| partner.fetch("role") == "Patron medialny" }
-raise "Partner slide requires four partners" unless primary_partners.length == 4
+raise "Partner slide needs a strategic partner and 1-6 others" unless (2..7).cover?(primary_partners.length)
 
+# Strategic partner on a full-width card, the others in a grid below it
+# (one row up to four, otherwise rows of three).
+others = primary_partners.length - 1
+columns = others <= 4 ? others : 3
+rows = (others / columns.to_f).ceil
+gap = 0.25
+card_w = (11.75 - gap * (columns - 1)) / columns
+strategic_y, strategic_h = rows == 1 ? [2.12, 1.70] : [2.10, 1.25]
+grid_y, card_h, row_step = rows == 1 ? [4.60, 1.95, 0] : [4.00, 1.15, 1.72]
 primary_partners.each_with_index do |partner, index|
-  x = 0.78 + (index % 2) * 6.00
-  y = index < 2 ? 2.12 : 4.80
-  h = index < 2 ? 2.00 : 1.84
+  strategic = index.zero?
+  row, col = (index - 1).divmod(columns)
+  x = strategic ? 0.78 : 0.78 + col * (card_w + gap)
+  y = strategic ? strategic_y : grid_y + row * row_step
+  w = strategic ? 11.75 : card_w
+  h = strategic ? strategic_h : card_h
   id = 20 + index * 4
   rid = add_image(images, slide_images, partner.fetch("logo").delete_prefix("/"))
-  label = partner.fetch("role")
-  label += " · #{partner.fetch('name')}" if index >= 2
-  s << text(id, label.upcase, x, y - 0.44, 5.65, 0.30, size: 12, color: COLORS[:violet], bold: true)
-  s << rect(id + 1, x, y, 5.65, h, fill: COLORS[:panel], radius: true)
-  logo_w, logo_h = [[4.25, 1.00], [3.70, 1.75], [2.55, 1.35], [1.32, 1.32]].fetch(index)
-  s << partner_logo(id + 2, rid, x + (5.65 - logo_w) / 2, y + (h - logo_h) / 2, logo_w, logo_h, partner.fetch("name"))
+  s << text(id, partner.fetch("role").upcase, x, y - 0.40, w, 0.30, size: 12, color: COLORS[:violet], bold: true)
+  s << rect(id + 1, x, y, w, h, fill: COLORS[:panel], radius: true)
+  logo_w, logo_h = strategic ? [5.00, [strategic_h - 0.25, 1.00].min] : [w - 0.70, h - 0.40]
+  s << partner_logo(id + 2, rid, x + (w - logo_w) / 2, y + (h - logo_h) / 2, logo_w, logo_h, partner.fetch("name"))
 end
 slides << [slide_xml(s), slide_images]
 
 s = base("Patroni medialni", "Pomagają nam dotrzeć do Was")
 slide_images = []
 media_partners = partners.fetch("supporting").select { |partner| partner.fetch("role") == "Patron medialny" }
-raise "Media slide requires five patrons" unless media_partners.length == 5
+raise "Media slide needs 1-6 patrons" unless (1..6).cover?(media_partners.length)
 
 media_partners.each_with_index do |partner, index|
-  if index < 3
-    x, y, w, h = 0.78 + index * 4.00, 2.02, 3.65, 1.60
-  else
-    x, y, w, h = 2.78 + (index - 3) * 4.00, 4.38, 3.65, 1.60
-  end
+  # Rows of up to three cards, the last row centered.
+  row, col = index.divmod(3)
+  in_row = [media_partners.length - row * 3, 3].min
+  x = 0.78 + (11.75 - (in_row * 3.65 + (in_row - 1) * 0.35)) / 2 + col * 4.00
+  y, w, h = (row.zero? ? 2.02 : 4.38), 3.65, 1.60
   id = 20 + index * 4
   rid = add_image(images, slide_images, partner.fetch("logo").delete_prefix("/"))
   s << rect(id, x, y, w, h, fill: COLORS[:panel], radius: true)
