@@ -18,8 +18,9 @@ Anything else raises rather than guessing. Portraits are cropped per speaker
 where a manual crop is registered in PORTRAIT_CROPS; square headshots need none
 because ImageOps.fit centres them.
 
-Usage: ``generate_meetup_banner.py _posts/<post>.md``. It reads the saved background
-from office/content/images/ and writes a single banner to assets/images/, which
+Usage: ``generate_meetup_banner.py _posts/<post>.md``. It reads the shared background
+(office/content/images/meetup-background.png, or the event's own ``<date>-<nr>-meetup-background.png``
+if one exists) and writes a single banner to assets/images/, which
 the website and Meetup both use. ``--generate-background`` creates the background
 first (Azure Foundry image model, credentials only from IMG_AI_MODEL_* variables). Normally reuse the saved file instead: a new
 generation gives a different image. The saved PNG already includes the tone
@@ -75,6 +76,7 @@ BACKGROUND_PROMPT = (
     "low contrast, fading into dark violet. Smooth, calm and minimal, with large uncluttered areas so text "
     "can be placed on top. No text, no letters, no logos, no people, no UI."
 )
+SHARED_BACKGROUND = "meetup-background.png"
 BACKGROUND_SIZE = "1536x1024"
 # Light correction of the raw model output: nudge the hue away from pink and dim it slightly.
 HUE_SHIFT, VALUE_SCALE, SATURATION_SCALE = -4, 0.9, 1.0
@@ -440,13 +442,14 @@ def render(post_path, background_path, output_path):
     print(f"Saved {output_path} ({SIZE[0]}x{SIZE[1]}, JPEG RGB, {layout})")
 
 
-def paths_for(post_path):
+def paths_for(post_path, generating=False):
     """Return (background, output) for a post: one banner file, served on the website and used on Meetup."""
     stem = "-".join(post_path.name.split("-")[:4])
-    return (
-        ROOT / f"office/content/images/{stem}-meetup-background.png",
-        ROOT / f"assets/images/{stem}-meetup.jpg",
-    )
+    images = ROOT / "office/content/images"
+    event_background = images / f"{stem}-meetup-background.png"
+    # Banners 172 and 173 keep their own backgrounds; every newer one reuses the shared file.
+    background = event_background if event_background.exists() or generating else images / SHARED_BACKGROUND
+    return background, ROOT / f"assets/images/{stem}-meetup.jpg"
 
 
 if __name__ == "__main__":
@@ -458,7 +461,7 @@ if __name__ == "__main__":
         help="generate a new background first (overwrites the saved one; needs IMG_AI_MODEL_* variables)",
     )
     args = parser.parse_args()
-    background, output = paths_for(args.post)
+    background, output = paths_for(args.post, args.generate_background)
     if args.generate_background:
         generate_background(background)
     render(args.post, background, output)
