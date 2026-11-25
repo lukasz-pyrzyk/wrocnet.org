@@ -1,5 +1,5 @@
 ---
-title: '178\. spotkanie Wroc.NET'
+title: '178\. spotkanie Wroc.NET (Kokosa, Rogowski)'
 date: 2027-05-18
 time: "18:00:00"
 categories: spotkania
@@ -9,10 +9,10 @@ meetup_attendees: 0
 header:
   teaser: /assets/images/spotkania-teaser.jpg
 talks:
-- title: 'TBD'
+- title: 'TBA'
   speaker_ids:
   - konrad-kokosa
-- title: 'TBD'
+- title: 'TBA'
   speaker_ids:
   - karol-rogowski
 ---
