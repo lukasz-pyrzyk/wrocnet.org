@@ -20,7 +20,7 @@ talks:
   - lukasz-olbromski
 ---
 
-🚀 **OTWARCIE SEZONU 2026/2027!** 170. spotkanie Wroc.NET odbędzie się w **Pub Wędrówki, ul. Podwale 37/38, 50-040 Wrocław**.
+🚀 **OTWARCIE SEZONU 2026/2027!** 170. spotkanie Wroc.NET odbędzie się w **Wędrówkach, ul. Podwale 37/38, 50-040 Wrocław**.
 
 *Więcej informacji: [Meetup](https://www.meetup.com/wrocnet/events/316514489/)*
 

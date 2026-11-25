@@ -21,7 +21,7 @@ talks:
   - hleb-sukrystsik
 ---
 
-173\. spotkanie Wrocławskiej Grupy .NET odbędzie się 15.12.2026 r. o **18:00** w **Pubie Wędrówki, ul. Podwale 37/38, 50-040 Wrocław**.
+173\. spotkanie Wrocławskiej Grupy .NET odbędzie się 15.12.2026 r. o **18:00** w **Wędrówkach, ul. Podwale 37/38, 50-040 Wrocław**.
 
 {% include attendance.html %}
 

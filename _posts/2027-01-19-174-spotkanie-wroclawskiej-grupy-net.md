@@ -20,7 +20,7 @@ talks:
   - szymon-warda
 ---
 
-174\. spotkanie Wrocławskiej Grupy .NET odbędzie się 19.01.2027 r. o **18:00** w **Pubie Wędrówki, ul. Podwale 37/38, 50-040 Wrocław**.
+174\. spotkanie Wrocławskiej Grupy .NET odbędzie się 19.01.2027 r. o **18:00** w **Wędrówkach, ul. Podwale 37/38, 50-040 Wrocław**.
 
 {% include attendance.html %}
 

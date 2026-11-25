@@ -24,7 +24,7 @@ meetup_attendees: 47
 
 *Więcej informacji: [Meetup](https://www.meetup.com/wrocnet/events/315183755/)*
 
-**Nowa lokalizacja, która zostanie z nami na kolejny sezon:** ⚡**Pub Wędrówki.**
+**Nowa lokalizacja, która zostanie z nami na kolejny sezon:** ⚡**Wędrówki.**
 
 Domykamy sezon spotkań Wrocławskiej Grupy .NET nieco inaczej niż zwykle – dostaniecie **preview formuły, która będzie z nami w kolejnym sezonie**. Wroc.NET wraca do korzeni i wchodzi na wyższy poziom!
 

@@ -89,7 +89,7 @@ Architekt oprogramowania. Specjalista Azure/AWS. Med-tech to jego specjalność.
 ## 📋 Szczegóły
 
 **📅 Kiedy:** 16 czerwca 2026, godz. 18:30  
-**📍 Gdzie:** Pub Wędrówki, Wrocław  
+**📍 Gdzie:** Wędrówki, Wrocław  
 **🔗 Rejestracja:** https://www.meetup.com/wroclaw-net-user-group/
 
 ## Partnerzy

@@ -5,6 +5,7 @@
 - For communication, follow [office/AGENTS.md](office/AGENTS.md). Read its technical workflows only for graphics or presentations.
 
 ## Changes and Git
+- Venue name: always "Wędrówki" (in Polish prose "w Wędrówkach"), never "Pub Wędrówki" — the word "pub" puts off sponsors and partners. Keep this in posts (including historical ones), data, banners, new slides and communication; do not edit existing, already presented decks in `slides/`.
 - Keep changes small, content-safe and compatible with existing data schemas, URLs and Polish content style.
 - Link to existing documentation instead of duplicating rules. Do not turn task-specific workarounds into permanent global instructions.
 - Never commit directly to main. Run `git fetch origin main`, then `git switch --no-track -c <branch-name> origin/main` for each task.

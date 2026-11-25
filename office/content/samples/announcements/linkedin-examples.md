@@ -17,7 +17,7 @@ Zamknęliśmy sezon – i kurczę, aż szkoda, że to już.
 
 Dzięki, że byliście z nami na tym meetupie. Czuć było, że coś się zmieniło – więcej luzu, więcej rozmów, nie tylko słuchania. Wasza energia i zaangażowanie zrobiły mega klimat i pokazały, że ta nowa/stara formuła sprawdza się świetnie. 🔥 
 
-Do tego Pub Wędrówki – strzał w dziesiątkę. Bardzo się cieszymy, że zostajemy tam na dłużej, a to dzięki naszemu stałemu, strategicznemu partnerowi devstyle. Mamy już dograne daty na kolejny sezon, więc jest gdzie wracać! 
+Do tego Wędrówki – strzał w dziesiątkę. Bardzo się cieszymy, że zostajemy tam na dłużej, a to dzięki naszemu stałemu, strategicznemu partnerowi devstyle. Mamy już dograne daty na kolejny sezon, więc jest gdzie wracać! 
 
 Ogromne podziękowania dla naszych prelegentów Karol Rogowski i Mateusz Konicki, którzy dostarczyli masę cennych spostrzeżeń. 
 
@@ -46,7 +46,7 @@ Czasem to „coś" jest trudne do uchwycenia – dopóki ktoś nie pokaże Ci, j
 🔥 Zarejestruj się: https://www.meetup.com/wroclaw-net-user-group/
 
 📅 Kiedy: 16 czerwca 2026, godz. 18:30
-📍 Gdzie: Pub Wędrówki (nowa, stała lokalizacja)
+📍 Gdzie: Wędrówki (nowa, stała lokalizacja)
 
 🔊 Nie strzel sobie w stopę.
 Czy planujesz rozmowę kwalifikacyjną na nowe stanowisko? W tej prezentacji Karol Rogowski pokaże Ci błędy, które rzeczywiście decydują o wyniku — nie błędy w wiedzy technicznej, ale te trudne do uchwycenia elementy rozmowy kwalifikacyjnej.
@@ -81,7 +81,7 @@ Co to oznacza dla naszej społeczności?
 🔹 Planowanie – zamiast organizowania meetupów "z miesiąca na miesiąc", mamy rozpisany cały nadchodzący sezon. 
 🔹 Większy kaliber – przestrzeń i zasoby na realizację projektów, o jakich wcześniej tylko rozmawialiśmy.
 
-Wracamy też do korzeni! 📍 Naszym nowym domem staje się Pub Wędrówki we Wrocławiu — miejsce kultowe, które starsi bywalcy Wroc.NET na pewno doskonale pamiętają.
+Wracamy też do korzeni! 📍 Naszym nowym domem staje się Wędrówki we Wrocławiu — miejsce kultowe, które starsi bywalcy Wroc.NET na pewno doskonale pamiętają.
 
 Ogromne podziękowania dla Maćka Aniserowicza i całego zespołu devstyle za zaufanie. Maciek występował u nas lata temu jako prelegent... Może czas na mały powrót na scenę? 😉 
 
