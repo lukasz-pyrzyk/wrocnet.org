@@ -1,5 +1,5 @@
 ---
-title: '179\. spotkanie Wroc.NET'
+title: '179\. spotkanie Wroc.NET (Sitnik, TBA)'
 date: 2027-06-15
 time: "18:00:00"
 categories: spotkania
@@ -9,10 +9,10 @@ meetup_attendees: 0
 header:
   teaser: /assets/images/spotkania-teaser.jpg
 talks:
-- title: 'TBD'
+- title: 'TBA'
   speaker_ids:
   - adam-sitnik
-- title: 'TBD — TBD'
+- title: 'TBA'
 ---
 
 179\. spotkanie Wrocławskiej Grupy .NET odbędzie się 15.06.2027 r. w **Wędrówkach, ul. Podwale 37/38, 50-040 Wrocław**.
@@ -23,4 +23,4 @@ talks:
 
 {% include talk.html index=1 %}
 
-Tytuły i opisy prezentacji zostaną ogłoszone wkrótce.
+Tytuły i opisy prezentacji oraz drugi prelegent zostaną ogłoszeni wkrótce.
