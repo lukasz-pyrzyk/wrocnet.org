@@ -56,7 +56,7 @@ Nie przenoś automatycznie nazw partnerów, liczb ani dawnych instrukcji narzęd
 - Devstyle logo + Wroc.NET logo (side by side)
 - Text: "Strategic Partner" (large), "Stable location. Planned season. Growing community." (small)
 - Visual: Network lines, subtle code symbols
-- Location badge: "Pub Wędrówki"
+- Location badge: "Wędrówki"
 
 **Dimensions:** 1200x600px  
 **File:** partnership-announcement-devstyle.png

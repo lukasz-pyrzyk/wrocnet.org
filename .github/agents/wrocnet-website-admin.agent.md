@@ -60,7 +60,7 @@ tags:
 
 ## People and profile photos
 - Reuse IDs and portraits from [_data/speakers.yml](../../_data/speakers.yml). Speaker cards list past appearances only.
-- Local JPG/PNG portraits, about 400x400px: organizer photos in `assets/images/organizers/`, speaker originals in `assets/images/speakers/raw/`, resized in `assets/images/speakers/`. Reuse organizer images for speakers who organize.
+- Local JPG/PNG portraits, about 400x400px: organizer photos in `assets/images/organizers/`, speaker portraits resized in `assets/images/speakers/` (originals are not stored in the repository). Reuse organizer images for speakers who organize.
 - Keep `placeholder.png` in both portrait directories. Omit unknown `linkedin` keys: an empty string is truthy in Liquid and creates a broken link.
 - [_data/former_organizers.yml](../../_data/former_organizers.yml): `name`, `photo`, optional `linkedin`; sort by surname and verify names/photos/links on the organizers page.
 

@@ -28,7 +28,7 @@ To jedyne miejsce na zasady i warsztat tworzenia banerów. Pozostałe dokumenty 
 - Nie dodawaj logotypów ani nazw partnerów, jeśli użytkownik ich nie podał.
 - Do generacji AI: prompt zgodny z referencjami z `office/content/images/` (pliki `brand-*`), styl retro-tech/neon, kolory violet/purple. Domyślne formaty: 1920x1080 (social), 1200x600 (ogólny banner); dla głównego zdjęcia grupy Meetup stosuj 1200x675 (16:9), jak w sprawdzonym przykładzie poniżej. Wymagania konkretnego kanału mają pierwszeństwo.
 - Banery wydarzeń przygotowuj od początku do końca bez ręcznej pracy w Canva/Figma: tło może powstać w AI, a dokładny tekst, oryginalne logo i prawdziwe portrety składaj programowo. Poprawki i eksport gotowego pliku także wykonuj automatycznie.
-- Speaker photos: raw w `assets/images/speakers/raw/`, finalne (~400x400px, JPG/PNG) w `assets/images/speakers/`.
+- Speaker photos: finalne (~400x400px, JPG/PNG) w `assets/images/speakers/`; oryginałów nie przechowujemy w repozytorium.
 
 ### Dane i materiały do banerów wydarzeń
 
@@ -61,6 +61,7 @@ python3 office/generate_meetup_banner.py _posts/2026-12-15-173-spotkanie-wroclaw
 python3 -m unittest discover -s office -p 'test_generate_meetup_banner.py'
 ```
 
+- Od spotkania 174 wszystkie banery używają wspólnego tła [meetup-background.png](content/images/meetup-background.png); nie generuj nowego dla każdego wydarzenia. Własne tło (`<data>-<nr>-meetup-background.png`) mają tylko 172 i 173 i ma ono pierwszeństwo, jeśli istnieje.
 - Nowe tło generuje ten sam skrypt: dodaj `--generate-background` (nadpisuje zapisane tło; wymaga zmiennych `IMG_AI_MODEL_*`). Prompt i korekta koloru (przesunięcie barwy w stronę fioletu, przyciemnienie poświaty) są stałymi w skrypcie, więc zapisany PNG jest już po korekcie. Kolejne generowanie daje inny obraz, dlatego zwykle używaj zapisanego tła.
 - Ponowne składanie używa zapisanego tła i nie wymaga wywołania AI. Generator zapisuje jeden plik w `assets/images/` (dla 172: `assets/images/2026-11-17-172-meetup.jpg`), którego używają strona i Meetup; osobnej kopii w `office/content/images/` nie ma. W `office/content/images/` zostaje tylko zapisane tło.
 - W poście ustaw `header.image` i `header.teaser` na lokalną publiczną kopię oraz dodaj `header.image_description` jako alt. Nie zaczynaj opisu od `172. ` — motyw przepuszcza go przez Markdown, który potraktuje to jako listę; użyj np. „Baner 172. spotkania…”.

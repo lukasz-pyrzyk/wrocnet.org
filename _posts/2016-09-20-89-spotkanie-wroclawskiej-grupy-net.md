@@ -14,7 +14,7 @@ talks:
 meetup_attendees: 50
 ---
 
-Miejsce: Pub Wędrówki, ul. Podwale 37/38, Wrocław
+Miejsce: Wędrówki, ul. Podwale 37/38, Wrocław
 
 {% include attendance.html %}
 
