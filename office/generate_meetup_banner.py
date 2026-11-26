@@ -249,7 +249,8 @@ def render(post_path, background_path, output_path):
     if len(sections) != 3 or sections[0].strip():
         raise ValueError("Post must start with YAML front matter")
     post = yaml.safe_load(sections[1])
-    talks = post["talks"]
+    # Sessions without speakers (e.g. an open discussion) stay in the post but not on the banner.
+    talks = [talk for talk in post["talks"] if talk.get("speaker_ids")]
     layout = detect_layout(talks)
     speakers = {person["id"]: person for person in load_yaml(ROOT / "_data/speakers.yml")}
     venue = load_yaml(ROOT / "_data/location.yml")["venue"]
